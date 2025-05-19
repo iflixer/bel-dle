@@ -1,0 +1,32 @@
+
+services:
+  php:
+    build: .
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      - db
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html
+      - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+
+  db:
+    image: mysql/mysql-server:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dle
+      MYSQL_USER: dleuser
+      MYSQL_PASSWORD: dlepass
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

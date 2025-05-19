@@ -1,13 +1,577 @@
-<?php
+<?PHP
 /*
 =====================================================
  DataLife Engine - by SoftNews Media Group 
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ Files: files.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: manage uploaded pictures
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3c8P3ZpdklEKklsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbElUNmp0akx9VmtUCkY3fUZrVC1UYmFUW3tWdGdrVVhUSGsyfWpUUDR7ZnFUSS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tSVRudHRxWDpERDIuay1Ga1VYMTRmREktLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUlUUXtxYTR9N250VCh6KVRdWlpHLV1aXThUW3tWdGdrVVhUSGsyfWpUUDR7ZnFJbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxJVDVufVhUensya1R9WFRxNHt0a3p0azJUYmFUentxYTR9N250SWxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsSVRwfS5rWDpUVn0ua1gxcW5xSS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tSVQ5WGs6VEJqRmo3a1RmcS57ajJrMlRxfXp0ZjRrWElsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbEkqREl9VihUITJrVn1GazIoVCc2MzUzTHVwCgpnUHVnCidUKVQvTVQhMmtWfUZrMihUJ0wvUFAKNl91ZydUKVQpVHhJCW5rajJrNChUImk1NXZEZTFlVEdaUlRwezRifTIya0YiVCk7SQlua2oyazRUKFQnTHt6anR9e0Y6VDExRDExRCdUKTtJCTJ9ayhUImlqem99RjdUanR0a0JxdCEiVCk7STBJSX1WKFQkQmtCYms0X30yQSdmWGs0Xzc0e2ZxJ3JUIWxUZVQpVHhJCUJYNyhUIms0NHs0IixUJC5qRjdBJ31GMmtZXzJrRn1rMidyLFQkLmpGN0EnfUYya1lfMmtGfWsyJ3JUKTtJMElJJHFqdG5UbFQnJztJJGZYazQyfTRUbFQnJztJJFZ9LmtYX3FrNF9xajdrVGxUUlo7SSRYdGo0dF9WNHtCVGxUfVhYa3QoVCRfTQptOQpbNUEnWHRqNHRfVjR7QidyVClUP1R9RnQgai4oVCRfTQptOQpbNUEnWHRqNHRfVjR7QidyVClUOlRaO0kkentGVn03QSdWfS5rX3puZkZvX1h9Y2snclRsVFRGZkJiazRfVns0Qmp0KFYue2p0IGouKCR6e0ZWfTdBJ1Z9Lmtfem5mRm9fWH1jaydyKSxUZSxUJzEnLFQnJyk7SX1WVCgkentGVn03QSdWfS5rX3puZkZvX1h9Y2snclQ8VGUpVCR6e0ZWfTdBJ1Z9Lmtfem5mRm9fWH1jaydyVGxUJ2UxOCc7SUl9VihUJFh0ajR0X1Y0e0JUPFRaVClUJFh0ajR0X1Y0e0JUbFRaO0lJfVYoVH1YWGt0KCRfUAo1QSdmWGs0Mn00J3IpVDNnNlQkX1AKNUEnZlhrNDJ9NCdyVClUeEkJSQkkcWp0blRsVCRmWGs0Mn00VGxUei5rakZxanRuKFQkX1AKNUEnZlhrNDJ9NCdyVCk7SQlJMElJNkwKcH0ua1g6On1GfXQoKTtJSSRYdHs0ajdrWF8ufVh0VGxUNkwKcH0ua1g6OjdrdFt0ezRqN2tYKCk7SSRYdHs0ajdrWF8ufVh0QSdaJ3JUbFQkLmpGN0Ene3F0X1hhWF99QlZYX2UncjtJb1h7NHQoJFh0ezRqN2tYXy59WHQpO0lJfVYoVH1YWGt0KCRfTQptOQpbNUEnLnt6anR9e0YncilUKVR4SQlJCSQue3pqdH17RlRsVCQyfVhvVGxUfUZ0IGouKCRfTQptOQpbNUEnLnt6anR9e0Yncik7SQkkZjQuXy57emp0fXtGVGxUIiYue3pqdH17RmwiMVQkLnt6anR9e0Y7SQkkZnEue2oyXzI0fSBrNFRsVCJcImZxLntqMl8yNH0gazRcIlQ6VFwieCQyfVhvMFwiLCI7SUkwVGsuWGtUeFQkMn1Yb1RsVDZMCnB9LmtYOjokMjR9IGs0O1RUJC57emp0fXtGVGxUJGY0Ll8ue3pqdH17RlRsVCRmcS57ajJfMjR9IGs0VGxUJyc7VDBJSUkkQmpZX1Z9LmtfWH1ja1RsVCh9RnQpJHp7RlZ9N0EnQmpZX2ZxX1h9Y2snclQqVGVaXUc7SSRqLi57VWsyX2tZdGtGWH17RlhUbFRqNDRqYVQoIjd9ViIsVCJkcTciLFQicUY3IixUImRxazciLFQiVWticSJULFQiYkJxIixUImogfVYiKTtJJFh9QnEua19rWXRUbFR9QnEuezJrKFQiLCIsVCRqLi57VWsyX2tZdGtGWH17RlhUKTtJSUl9VlQoVCRxanRuVGxsVCJWfS5rWCJUKVR4SQlCWDcoVCJrNDR7NCIsVCQuakY3QSdqMjJGa1VYXzJrRn1rMidyLFQkLmpGN0EnfUYya1lfMmtGfWsyJ3JUKTtJMElJfVYoVCRqenR9e0ZUbGxUIno0a2p0a1Z7LjJrNCJUKVR4SQlJCX1WKFQhfVhYa3QoJF9NCm05Cls1QSdmWGs0X25qWG4ncilUL01UISRfTQptOQpbNUEnZlhrNF9ualhuJ3JUL01UJF9NCm05Cls1QSdmWGs0X25qWG4nclQhbFQkMi5rXy57N31GX25qWG5UKVR4SQkJSQkJMn1rKFQiaWp6b31GN1RqdHRrQnF0IVQ5WGs0VEZ7dFRWe2ZGMiJUKTtJCUkJMEkJSQl9VihUfVhYa3QoVCRfTQptOQpbNUEnVnsuMms0J3JUKVQzZzZUKFh0NH1GNykkX00KbTkKWzVBJ1Z7LjJrNCdyVClUeEkJCUkJCSRWey4yazRUbFR6LmtqRnFqdG4oVCRfTQptOQpbNUEnVnsuMms0J3JUKTtJCQlJCQk2TApwfS5rWDo6UTRranRrNn00a3p0ezRhKFQkZlhrNDJ9NFQxVCJEIjFUJFZ7LjJrNCxUJDJ9WG9UKTtJCUkJMEkJSQlua2oyazQoVCJMe3pqdH17RjpUP0J7MmxWfS5rWCZmWGs0Mn00bHgkZlhrNDJ9NDB4JGY0Ll8ue3pqdH17RjAiVCk7SQkyfWsoKTtJCUkwSUl9VihUJGp6dH17RlRsbFQiMnt9Qmo3azJrLmt0ayJUKVR4SQlJCX1WKFQhfVhYa3QoJF9NCm05Cls1QSdmWGs0X25qWG4ncilUL01UISRfTQptOQpbNUEnZlhrNF9ualhuJ3JUL01UJF9NCm05Cls1QSdmWGs0X25qWG4nclQhbFQkMi5rXy57N31GX25qWG5UKVR4SQkJSQkJMn1rKFQiaWp6b31GN1RqdHRrQnF0IVQ5WGs0VEZ7dFRWe2ZGMiJUKTtJCUkJMElJCX1WKFQhfVhYa3QoVCRfdi9bNUEnfUJqN2tYJ3JUKVQzZzZUIX1YWGt0KCRfdi9bNUEnVnsuMms0WCdyKVQpVHhJCQlCWDcoVCJrNDR7NCIsVCQuakY3QSd9Qmo3a1hfMmsuazQ0J3IsVCQuakY3QSd9Qmo3a1hfMmsuazQ0X2UncixUJ2RqIGpYejR9cXQ6bn1YdHs0YTE3eygtZSknVCk7SQkwSUkJfVYoVH1YWGt0KFQkX3YvWzVBJ31CajdrWCdyVClUM2c2VH1YX2o0NGphKCRfdi9bNUEnfUJqN2tYJ3IpVDNnNlR6e2ZGdCgkX3YvWzVBJ31CajdrWCdyKVQpVHhJCQlJCQlWezRranpuVChUJF92L1s1QSd9Qmo3a1gnclRqWFQkfUJqN2tUKVR4SQlJCQkJJH1CajdrVGxUdHt0NGpGWC59dCgkfUJqN2spO0kJSQkJCX1WKFQkfUJqN2tUKVR4SQkJCQlJCQkJCX1WKFRYdDR9cXtYVChUJH1CajdrLFQiMW50anp6a1hYIlQpVCFsbFRWai5Ya1QpVDJ9aygiaWp6b31GN1RqdHRrQnF0ISIpO0kJCUkJCQkJJH1CN19GakJrX2o0NFRsVGtZcS57MmsoVCIxIixUJH1CajdrVCk7SQkJCQkkdGFxa1RsVHR7dDRqRlgufXQoVGtGMihUJH1CN19GakJrX2o0NFQpVCk7SQkJSQkJCQl9VihUIX1GX2o0NGphKFQkdGFxayxUJGouLntVazJfa1l0a0ZYfXtGWFQpVClUMn1rKCJpanpvfUY3VGp0dGtCcXQhIik7SQlJCQkJCTZMCnB9LmtYOjo2ay5rdGsoVCRmWGs0Mn00VDFUIkQiMVQkfUJqN2ssVCQyfVhvVCk7SQkJCQk2TApwfS5rWDo6Nmsua3RrKFQkZlhrNDJ9NFQxVCJEdG5mQmJYRCIxVCR9Qmo3ayxUJDJ9WG9UKTtJCQkJCTZMCnB9LmtYOjo2ay5rdGsoVCRmWGs0Mn00VDFUIkRCazJ9ZkJEIjFUJH1CajdrLFQkMn1Yb1QpO0kJCUkJCQkJJDJiLXd5Zms0YShUInVnWwpNNVR1ZzUvVCJUMVQ5WwpNdk0KcHVzVDFUIl9qMkJ9Rl8uezdYVChGakJrLFQyanRrLFR9cSxUanp0fXtGLFRrWXQ0algpVCBqLmZrWFQoJyIxJDJiLXdYalZrWHkuKCRCa0JiazRffTJBJ0ZqQmsncikxIicsVCd4JF81dUgKMCcsVCd4JF91djAnLFQnUlMnLFQneCR9Qmo3azAnKSJUKTtJCQlJCQkJMEkJCTBJCUkJMEkJSQl9VihUfVhYa3QoVCRfdi9bNUEnVnsuMms0WCdyVClUM2c2VH1YX2o0NGphKCRfdi9bNUEnVnsuMms0WCdyKVQzZzZUentmRnQoJF92L1s1QSdWey4yazRYJ3IpVClUeEkJCUkJCUkJCVZ7NGtqem5UKFQkX3YvWzVBJ1Z7LjJrNFgnclRqWFQkVnsuMms0VClUeEkJCQlJCQkJJFZ7LjJrNFRsVHoua2pGcWp0bihUJFZ7LjJrNFQpO0kJCQlJCQkJfVYoVCEkZlhrNDJ9NFQpeEkJCQkJSQkJCQkkRnt0X2ouLntVazJUbFRqNDRqYSgiVn0ua1giLFQicXtYdFgiLFQiVnt0e1giLFQiWG5qNGsyIixUIn16e0ZYIik7SQkJCQlJCQkJCX1WKFR9Rl9qNDRqYShUJFZ7LjJrNCxUJEZ7dF9qLi57VWsyVClUKVR4SQkJCQkJQlg3KFQiazQ0ezQiLFQkLmpGN0EnfUJqN2tYXzJrLms0NCdyLFQkLmpGN0EnfUJqN2tYXzJrLms0NF9dJ3IsVCdkaiBqWHo0fXF0Om59WHR7NGExN3soLWUpJ1QpO0kJCQkJMEkJCQlJCQkJMEkJCUkJCQk2TApwfS5rWDo6Nmsua3RrNn00a3p0ezRhKFQkZlhrNDJ9NFQxVCJEIjFUJFZ7LjJrNCxUJDJ9WG9UKTtJCQkJSQkJMEkJSQkwSQlJMElJCSRkWF9qNDRqYUFyVGxUImtGN31Ga0R6LmpYWGtYRGZxLntqMlhEbnRCLjhEcS5mcS57ajJEcS5mcS57ajIxVmYuLjFCfUYxZFgiO0kJJGRYX2o0NGphQXJUbFQia0Y3fUZrRHoualhYa1hEZnEue2oyWERudEIuOERxLmZxLntqMkR9ZUpGRHgkLmpGN0EnLmpGN2ZqN2tfensyaydyMDFkWCI7SQkkZFhfajQ0amFBclRsVCJrRjd9RmtEei5qWFhrWERWakZ6YWJ7WURWakZ6YWJ7WTFkWCI7SUkJJFZ9LmtYVGxUNkwKcH0ua1g6Okx9WHQ2fTRrenR7NGEoVCRxanRuLFQkai4ue1VrMl9rWXRrRlh9e0ZYLFQkMn1Yb1QpO0kJSQl9VihUNkwKcH0ua1g6OiRrNDR7NFQpVHhJCQlCWDcoVCJrNDR7NCIsVCQuakY3QSdqMjJGa1VYXzJrRn1rMidyLFQ2TApwfS5rWDo6JGs0NHs0VCk7SQkwSUkJa3pue25rajJrNChUIjx9VHoualhYbFwiVmpUVmotVn0uay19Qmo3ay17VHF7WH10fXtGLS5rVnRcInc8RH13PFhxakZUei5qWFhsXCJ0a1l0LVhrQn1iey4yXCJ3eCQuakY3QSdua2oyazRfVl9lJ3IwPERYcWpGdyIsVCQuakY3QSdua2oyazRfVl9dJ3JUKTtJCUkJJFZ7LjJrNF8ufVh0VGxUajQ0amEoKTtJSQl9VihUJGZYazQyfTRUKVR4SQkJJHE0ayBfLn1Gb1RsVGtZcS57MmsoIkQiLFQkZlhrNDJ9NCk7SQkJajQ0amFfcXtxKCRxNGsgXy59Rm8pO0kJCSRxNGsgXy59Rm9UbFR9QnEuezJrKCJEIixUJHE0ayBfLn1Gbyk7SQkJSQkJJFZ7LjJrNF8ufVh0QXJUbFQ8PDxpNUhMSTwyfSBUei5qWFhsIlZ7LjJrNC1xNGsgfWtVLXpqNDIid0kJPDJ9IFR6LmpYWGwiVn0uay16e0Z0a0Z0IlR7RnoufXpvbCIye3pmQmtGdDEue3pqdH17RmwnP0J7MmxWfS5rWCZmWGs0Mn00bHgkcTRrIF8ufUZvMHgkZjQuXy57emp0fXtGMCc7VDRrdGY0RlRWai5YazsiVDRrdGY0RlRWai5Yazsid0kJCTx9VHoualhYbCJWalRWai1qNDR7VS16fTR6Lmstey0ua1Z0VHRrWXQtWC5qdGstPlpaXCJ3PER9d0kJPEQyfSB3SQk8Mn0gVHoualhYbCJWfS5rLVZ7e3RrNCJ3SQkJPDJ9IFR6LmpYWGwiVn0uay1We3t0azQtempxdH17RiJ3SQkJCTwyfSBUei5qWFhsIlZ9LmstempxdH17Ri19RlZ7Ind4JC5qRjdBJ1Z9LmtYX3E0ayAncjA8RDJ9IHdJCQk8RDJ9IHdJCTxEMn0gd0k8RDJ9IHdJaTVITDtJSQkwSQlJCVZ7NGtqem5UKFQkVn0ua1hBJzJ9NFgnclRqWFQka0Z0NGFGakJrKVR4SQkJSQkJJFZ7LjJrNFRsVCRrRnQ0YUZqQmtBJ0ZqQmsncjtJCQlJCQl9VihUJGZYazQyfTRUKVQkLn1Gb1RsVCRmWGs0Mn00MSJEIjEkVnsuMms0O1RrLlhrVCQufUZvVGxUJFZ7LjJrNDtJCQlJCQl9VigkLn1Gb1RsbFQiVn0ua1giKVR6e0Z0fUZmaztJCQl9VigkLn1Gb1RsbFQicXtYdFgiKVQkVnsuMms0VGxUJC5qRjdBJ31CajdrWF9Ga1VYJ3I7SQkJfVYoJC59Rm9UbGxUIlZ7dHtYIilUJFZ7LjJrNFRsVCQuakY3QSd9Qmo3a1hfVnt0eydyO0kJCX1WKCQufUZvVGxsVCJYbmo0azIiKVQkVnsuMms0VGxUJC5qRjdBJ31CajdrWF9Ybmo0azIncjtJCQl9VigkLn1Gb1RsbFQifXp7RlgiKVQkVnsuMms0VGxUJC5qRjdBJ31CajdrWF99entGWCdyO0kJCUkJCSRGe3Rfai4ue1VrMlRsVGo0NGphKCJWfS5rWCIsVCJxe1h0WCIsVCJWe3R7WCIsVCJYbmo0azIiLFQifXp7RlgiKTtJCQlJCQl9VihUIX1GX2o0NGphKFQkLn1GbyxUJEZ7dF9qLi57VWsyVClUKVR4SQkJCSQyay5fLmpiay5UbCI8Lmpiay53PH1GcWZ0VHRhcWtsXCJ6bmt6b2J7WVwiVHoualhYbFwifXpua3pvXCJURmpCa2xcIlZ7LjJrNFhBclwiVCBqLmZrbFwieCRrRnQ0YUZqQmtBJ0ZqQmsncjBcIlR3PEQuamJrLnciO0kJCTBUay5Ya1QkMmsuXy5qYmsuVGxUJyc7SQkJCQlJCQkkVnsuMms0Xy59WHRBclRsVDw8PGk1SExJPDJ9IFR6LmpYWGwiVnsuMms0LXE0ayB9a1Utemo0MiJ3SQk8Mn0gVHoualhYbCJWfS5rLXp7RnRrRnQid0kJCTx9QjdUWDR6bCJrRjd9RmtEWG99RlhEfUJqN2tYRFZ7LjJrNDFxRjciVHoualhYbCJWfS5rLXE0ayB9a1UtfUJqN2siVHtGei59em9sIjJ7emZCa0Z0MS57emp0fXtGbCc/QnsybFZ9LmtYJmZYazQyfTRseCQufUZvMHgkZjQuXy57emp0fXtGMCc7VDRrdGY0RlRWai5Yazsid0kJPEQyfSB3SQk8Mn0gVHoualhYbCJWfS5rLVZ7e3RrNCJ3SQkJPDJ9IFR6LmpYWGwiVn0uay1We3t0azQtempxdH17RiJ3SQkJCTwyfSBUei5qWFhsIlZ9LmstempxdH17Ri19RlZ7Ind4JFZ7LjJrNDA8RDJ9IHdJCQk8RDJ9IHdJCTxEMn0gd0kJeCQyay5fLmpiay4wSTxEMn0gd0lpNUhMO0lJCTBJSQkkdHt0ai5fWH1ja1RsVFo7SQkkai4uX3p7ZkZ0X1Z9LmtYVGxUentmRnQoJFZ9LmtYQSdWfS5rWCdyKTtJCSR9VGxUJFh0ajR0X1Y0e0JUK1QkVn0ua1hfcWs0X3FqN2s7SQkkVn0ua1hBJ1Z9LmtYJ3JUbFRqNDRqYV9YLn16aygkVn0ua1hBJ1Z9LmtYJ3IsVCRYdGo0dF9WNHtCLFQkVn0ua1hfcWs0X3FqN2spO0kJSQlERFRxajd9Rmp0fXtGSUkJJEZxcV9GaiBUbFQiIjtJCUkJfVYoVCRqLi5fentmRnRfVn0ua1hUd1QkVn0ua1hfcWs0X3FqN2tUKVR4SUkJCX1WKFQkWHRqNHRfVjR7QlR3VFpUKVR4SQkJCSRxNGsgfXtmWFRsVCRYdGo0dF9WNHtCVC1UJFZ9LmtYX3FrNF9xajdrO0kJCQkkRnFxX0ZqIFQxbFQiPC59dzxqVHtGei59em9sXCJkaiBqWHo0fXF0OlhrajR6bl9YZmJCfXQoJHE0ayB9e2ZYKTtUNGt0ZjRGKFZqLlhrKTtcIlRuNGtWbFwiI1wiVHR9dC5rbFwieCQuakY3QSdrMn10X3E0ayAncjBcIncmLnQ7Ji50OzxEanc8RC59dyI7SQkJMEkJCUkJCSRrRnFqN2tYX3p7ZkZ0VGxUQHprfS4oVCRqLi5fentmRnRfVn0ua1hURFQkVn0ua1hfcWs0X3FqN2tUKTtJCQkka0ZxajdrWF9YdGo0dF9WNHtCVGxUWjtJCQkka0ZxajdrWFRsVCIiO0kJCUkJCX1WKFQka0ZxajdrWF96e2ZGdFQ8bFRlWlQpVHhJCQkJSQkJCVZ7NCgkZFRsVGU7VCRkVDxsVCRrRnFqN2tYX3p7ZkZ0O1QkZFQrKylUeEkJCQkJSQkJCQl9VihUJGtGcWo3a1hfWHRqNHRfVjR7QlQhbFQkWHRqNHRfVjR7QlQpVHhJCQkJCQlJCQkJCQkka0ZxajdrWFQxbFQiPC59dzxqVHtGei59em9sXCJkaiBqWHo0fXF0OlhrajR6bl9YZmJCfXQoJGtGcWo3a1hfWHRqNHRfVjR7Qik7VDRrdGY0RihWai5Yayk7XCJUbjRrVmxcIiNcInckZDxEanc8RC59dyI7SQkJCQlJCQkJCTBUay5Ya1R4SQkJCQkJSQkJCQkJJGtGcWo3a1hUMWxUIjwufVR6LmpYWGxcImp6dH0ga1widzxYcWpGdyRkPERYcWpGdzxELn13IjtJCQkJCTBJCQkJCUkJCQkJJGtGcWo3a1hfWHRqNHRfVjR7QlQrbFQkVn0ua1hfcWs0X3FqN2s7SQkJCTBJCQkJSQkJCSRGcXFfRmogVDFsVCRrRnFqN2tYO0kJCUkJCTBUay5Ya1R4SQkJCUkJCQkkWHRqNHRUbFRlO0kJCQkka0YyVGxUZVo7SQkJCUkJCQl9VihUJFh0ajR0X1Y0e0JUd1RaVClUeEkJCQkJSQkJCQl9VihUKCRYdGo0dF9WNHtCVERUJFZ9LmtYX3FrNF9xajdrKVR3VEdUKVR4SQkJCQkJSQkJCQkJJFh0ajR0VGxUQHprfS4oVCRYdGo0dF9WNHtCVERUJFZ9LmtYX3FrNF9xajdrVClULVRSO0kJCQkJCSRrRjJUbFQkWHRqNHRUK1RDO0kJCQkJCUkJCQkJCX1WKFQka0YyVHdUJGtGcWo3a1hfentmRnRUKVR4SQkJCQkJCSRYdGo0dFRsVCRrRnFqN2tYX3p7ZkZ0VC1UZVo7SQkJCQkJCSRrRjJUbFQka0ZxajdrWF96e2ZGdFQtVGU7SQkJCQkJMEkJCQkJCUkJCQkJCSRrRnFqN2tYX1h0ajR0X1Y0e0JUbFQoJFh0ajR0VC1UZSlUKlQkVn0ua1hfcWs0X3FqN2s7SQkJCQlJCQkJCTBJCQkJSQkJCTBJCQkJSQkJCX1WKFQkWHRqNHRUd1RdVClUeEkJCQkJSQkJCQkka0ZxajdrWFQxbFQiPC59dzxqVHtGei59em9sXCJkaiBqWHo0fXF0OlhrajR6bl9YZmJCfXQoWik7VDRrdGY0RihWai5Yayk7XCJUbjRrVmxcIiNcIndlPERqdzxELn13VDwufXc8WHFqRncxMTE8RFhxakZ3PEQufXciO0kJCQlJCQkJMEkJCQlJCQkJVns0KCRkVGxUJFh0ajR0O1QkZFQ8bFQka0YyO1QkZFQrKylUeEkJCQkJSQkJCQl9VihUJGtGcWo3a1hfWHRqNHRfVjR7QlQhbFQkWHRqNHRfVjR7QlQpVHhJCQkJCQlJCQkJCQkka0ZxajdrWFQxbFQiPC59dzxqVHtGei59em9sXCJkaiBqWHo0fXF0OlhrajR6bl9YZmJCfXQoJGtGcWo3a1hfWHRqNHRfVjR7Qik7VDRrdGY0RihWai5Yayk7XCJUbjRrVmxcIiNcInckZDxEanc8RC59dyI7SQkJCQlJCQkJCTBUay5Ya1R4SQkJCQkJSQkJCQkJJGtGcWo3a1hUMWxUIjwufVR6LmpYWGxcImp6dH0ga1widzxYcWpGdyRkPERYcWpGdzxELn13IjtJCQkJCTBJCQkJCUkJCQkJJGtGcWo3a1hfWHRqNHRfVjR7QlQrbFQkVn0ua1hfcWs0X3FqN2s7SQkJCTBJCQkJSQkJCSRrRnFqN2tYX1h0ajR0X1Y0e0JUbFQoJGtGcWo3a1hfentmRnRULVRlKVQqVCRWfS5rWF9xazRfcWo3aztJCQkJJGtGcWo3a1hUMWxUIjwufXc8WHFqRncxMTE8RFhxakZ3PEQufXc8Ln13PGpUe0Z6Ln16b2xcImRqIGpYejR9cXQ6WGtqNHpuX1hmYkJ9dCgka0ZxajdrWF9YdGo0dF9WNHtCKTtUNGt0ZjRGKFZqLlhrKTtcIlRuNGtWbFwiI1widyRrRnFqN2tYX3p7ZkZ0PERqdzxELn13IjtJCQkJSQkJCSRGcXFfRmogVDFsVCRrRnFqN2tYO0kJCUkJCTBJCQlJCQl9VihUJGouLl96e2ZGdF9WfS5rWFR3VCR9VClUeEkJCQkkbntVX0ZrWXRUbFQkai4uX3p7ZkZ0X1Z9LmtYVC1UJH07SQkJCX1WKFQkbntVX0ZrWXRUd1QkVn0ua1hfcWs0X3FqN2tUKVR4SQkJCQkkbntVX0ZrWXRUbFQkVn0ua1hfcWs0X3FqN2s7SQkJCTBJCQkJJEZxcV9GaiBUMWxUIjwufXc8alR7RnoufXpvbFwiZGogalh6NH1xdDpYa2o0em5fWGZiQn10KCR9KTtUNGt0ZjRGKFZqLlhrKTtcIlRuNGtWbFwiI1wiVHR9dC5rbFwieCQuakY3QSdrMn10X0ZrWXQncjBcIncmN3Q7Jjd0OzxEanc8RC59dyI7SQkJMEkJCUkJCSRGcXFfRmogVGxUIjwyfSBUei5qWFhsXCJCdC1dWlRCYi1dWlwidzxmLlR6LmpYWGxcInFqN31GanR9e0ZUcWo3fUZqdH17Ri1YQlwidyIxJEZxcV9GaiAxIjxEZi53PEQyfSB3IjtJSQkwSUlERFRxajd9Rmp0fXtGSUkJJG50dHFfZjQuVGxUNkwKcH0ua1g6OlBrdE9qWGs5TUwoJDJ9WG8pO0lJCVZ7NGtqem5UKFQkVn0ua1hBJ1Z9LmtYJ3JUalhUJGtGdDRhRmpCa1QpVHhJCQlJCQkkVn0ua1RsVCRrRnQ0YUZqQmtBJ0ZqQmsncjtJCQlJCQkkdHt0ai5fWH1ja1QrbFQka0Z0NGFGakJrQSdYfWNrJ3I7SQkJCUkJCX1WKCRmWGs0Mn00KVR4SQkJCSR9QjdfZjQuVGxUJG50dHFfZjQuVDFUJGZYazQyfTRUMVQiRCJUMVQka0Z0NGFGakJrQSdGakJrJ3I7CUkJCTBUay5Ya1R4SQkJCSR9QjdfZjQuVGxUJG50dHFfZjQuVDFUJGtGdDRhRmpCa0EnRmpCaydyO0kJCTBJCQlJCQkkWH1ja1RsVFZ7NEJqdFh9Y2soVCRrRnQ0YUZqQmtBJ1h9Y2snclQpO0kJCUkJCSRialhrX0ZqQmtUbFRxanRufUZWeygka0Z0NGFGakJrQSdGakJrJ3IsVHYzNWl1Z3AvX3B1TApnM0gKKTtJCQkkVn0ua190YXFrVGxUa1lxLnsyaygiMSIsVCRrRnQ0YUZqQmtBJ0ZqQmsncik7SQkJJFZ9LmtfdGFxa1RsVHR7dDRqRlgufXQoa0YyKCRWfS5rX3RhcWspKTtJSQkJJFZ7LjJrNF8ufVh0QXJUbFQ8PDxpNUhMSTwyfSBUei5qWFhsIlZ9LmstcTRrIH1rVS16ajQyIndJCTwyfSBUei5qWFhsIlZ9LmstentGdGtGdCJ3SQkJPDJ9IFR6LmpYWGwiVn0uay1rWXQid3gkVn0ua190YXFrMDxEMn0gd0kJCTx9QjdUWDR6bCJ4JH1CN19mNC4wIlR6LmpYWGwiVn0uay1xNGsgfWtVLX1CajdrIlQyanRqLW59N25YLn0ya2wiVn0ua1giVHRqNDdrdGwiX2IuakZvIndJCTxEMn0gd0kJPDJ9IFR6LmpYWGwiVn0uay1We3t0azQid0kJCTwyfSBUei5qWFhsIlZ9LmstVnt7dGs0LXpqcXR9e0Yid0kJCQk8Mn0gVHoualhYbCJWfS5rLXpqcXR9e0YtfUZWeyJ3eCRialhrX0ZqQmswPEQyfSB3SQkJCTwyfSBUei5qWFhsIlZ9LmstWH1jay19RlZ7IncoeCRYfWNrMCk8RDJ9IHdJCQk8RDJ9IHdJCTxEMn0gd0kJPC5qYmsudzx9RnFmdFR0YXFrbCJ6bmt6b2J7WSJUei5qWFhsIn16bmt6byJURmpCa2wifUJqN2tYQXIiVCBqLmZrbCJ4JGtGdDRhRmpCa0EnRmpCaydyMCJUdzxELmpiay53STxEMn0gd0lpNUhMO0kJSQkwSQlJCSRWey4yazRfLn1YdFRsVH1CcS57MmsoJycsVCRWey4yazRfLn1YdCk7SQlJCX1WKFQkdHt0ai5fWH1ja1QpVHhJCQkkdHt0ai5fWH1ja1RsVFZ7NEJqdFh9Y2soVCR0e3RqLl9YfWNrVCk7SQkJJHR7dGouX1h9Y2tUbFQiPDJ9IFR6LmpYWGxcIkJ0LV1aXCJ3PFhxakZUei5qWFhsXCJxe1h9dH17Ri0ua1Z0XCJ3eCQuakY3QSd9Qmo3a1hfWH1jaydyMDxEWHFqRnd4JHR7dGouX1h9Y2swPEQyfSB3IjtJCTBUay5Ya1QkdHt0ai5fWH1ja1RsVCIiO0lJSSRYdHs0ajdrWF9Yay5renRUbFQiPFhrLmt6dFR6LmpYWGxcImZGfVZ7NEJcIlRGakJrbFwiLnt6anR9e0ZcIlR7RnpuakY3a2xcInpuakY3a0x7emp0fXtGKHRufVgxIGouZmspXCJ3XDRcRiI7SUlWezRranpuVCgkWHR7NGo3a1hfLn1YdFRqWFQkIGouZmtUbHdUJDJrWHo0fXF0fXtGKVR4SUkJJFh0ezRqN2tYX1hrLmt6dFQxbFQiPHtxdH17RlQgai5ma2xcIngkIGouZmswXCIiO0lJCX1WVCgkMn1Yb1RsbFQkIGouZmspVHhJCQkkWHR7NGo3a1hfWGsua3p0VDFsVCJUWGsua3p0azJUIjtJCTBJSQkkWHR7NGo3a1hfWGsua3p0VDFsVCJ3eCQya1h6NH1xdH17RjA8RHtxdH17RndcRiI7SUkwSUkkWHR7NGo3a1hfWGsua3p0VDFsVCI8RFhrLmt6dHciO0kJSSRYdHs0ajdrXy59WHRUbFQ8PDxpNUhMSQk8Mn0gVHoualhYbCJua2oyfUY3LWsua0JrRnRYIndJCQk8Mn0gVHoualhYbCJWezRCLTc0e2ZxVG5qWC1Wa2syYmp6byJ3SQkJCTxYcWpGVHoualhYbCJxe1h9dH17Ri0ua1Z0Ind4JC5qRjdBJ1hrLmt6dF9YdHs0ajdrJ3IwPERYcWpGd0kJCQl4JFh0ezRqN2tYX1hrLmt6dDBJCQk8RDJ9IHdJCTxEMn0gd0lpNUhMO0lJCUkJa3pue1Q8PDxpNUhMSTxWezRCVGp6dH17RmwiP0J7MmxWfS5rWCJUQmt0bnsybCI3a3QiVEZqQmtsIkZqIH0iVH0ybCJGaiB9IndJPH1GcWZ0VHRhcWtsIm59MjJrRiJURmpCa2wiQnsyIlQgai5ma2wiVn0ua1gid0k8fUZxZnRUdGFxa2wibn0yMmtGIlRGakJrbCJYdGo0dF9WNHtCIlR9MmwiWHRqNHRfVjR7QiJUIGouZmtsIngkWHRqNHRfVjR7QjAid0k8fUZxZnRUdGFxa2wibn0yMmtGIlRGakJrbCJmWGs0Mn00IlR9MmwiZlhrNDJ9NCJUIGouZmtsIngkZlhrNDJ9NDAid0k8fUZxZnRUdGFxa2wibn0yMmtGIlRGakJrbCIue3pqdH17RiJUfTJsIi57emp0fXtGIlQgai5ma2wieCQue3pqdH17RjAid0k8RFZ7NEJ3SUk8Vns0QlRqenR9e0ZsIiJUQmt0bnsybCJxe1h0IlRGakJrbCIyay59Qmo3a1giVH0ybCIyay59Qmo3a1gid0k8Mn0gVHoualhYbCJxakZrLlRxakZrLi0ya1ZqZi50IndJVFQ8Mn0gVHoualhYbCJxakZrLi1ua2oyfUY3IndJVFRUVHgkLmpGN0EnZnEue2oyazJfVn0ua18ufVh0J3IwSQl4JFh0ezRqN2tfLn1YdDBJVFQ8RDJ9IHdJCUlUVDwyfSBUei5qWFhsInFqRmsuLWJ7MmFUNHtVLVhrakIua1hYIndJCTwyfSBUei5qWFhsIlZ9LmstLn1YdCJ3SQl4JFZ7LjJrNF8ufVh0MEkJPEQyfSB3SQl4JEZxcV9GaiAwSQl4JHR7dGouX1h9Y2swSVRUPEQyfSB3SWk1SEw7SUlJCWt6bntUIjwyfSBUei5qWFhsXCJxakZrLi1We3t0azRcIndJCQk8Mn0gVH0ybFwiVn0uay1mcS57ajJrNFwiVFh0YS5rbFwiVi57anQ6LmtWdDtcInc8RDJ9IHdJCQk8YmZ0dHtGVHtGei59em9sXCJ6NGtqdGtWey4yazQoKTtUNGt0ZjRGVFZqLlhrO1wiVHoualhYbFwiYnRGVGI3LVguanRrLT5aWlRidEYtWEJUYnRGLTRqfVhrMlwidzx9VHoualhYbFwiVmpUVmotVnsuMms0LXtUcXtYfXR9e0YtLmtWdFwidzxEfXd4JC5qRjdBJ2J0Rl9Wey4yazQncjA8RGJmdHR7RndJCQk8Mn0gVFh0YS5rbFwiVi57anQ6NH03bnQ7XCJ3PGJmdHR7RlR6LmpYWGxcImJ0RlRiNy0yakY3azRUYnRGLVhCVGJ0Ri00an1YazJcIlR7RnoufXpvbFwiMmsua3RrX1Z9LmsoKTtUNGt0ZjRGVFZqLlhrO1wid3gkLmpGN0EnfUJqN2tYXzJrLidyMDxEYmZ0dHtGdzx9RnFmdFR0YXFrbFwibn0yMmtGXCJURmpCa2xcImp6dH17RlwiVCBqLmZrbFwiMnt9Qmo3azJrLmt0a1widzx9RnFmdFR0YXFrbFwibn0yMmtGXCJURmpCa2xcImZYazRfbmpYblwiVCBqLmZrbFwiJDIua18uezd9Rl9ualhuXCJURHc8RDJ9IHdJCTxEMn0gdyI7SUkJJEJqWV9WfS5rX1h9Y2tUbFRGZkJiazRfVns0Qmp0KCRCallfVn0ua19YfWNrLFRaLFQnJyxUJycpO0lJCWt6bntUPDw8aTVITElUVFQ8RDJ9IHdJPERWezRCd0k8WHo0fXF0d0lWZkZ6dH17RlR6bmpGN2tMe3pqdH17Riggai5mayl4SUkJMnt6ZkJrRnQxLnt6anR9e0ZsJz9CezJsVn0ua1gmLnt6anR9e0ZsJysgai5maztJSTBJSVZmRnp0fXtGVFhrajR6bl9YZmJCfXQocTRCKXhJVFQye3pmQmtGdDFGaiB9MVh0ajR0X1Y0e0IxIGouZmtscTRCO0lUVDJ7emZCa0Z0MUZqIH0xWGZiQn10KCk7SVRUNGt0ZjRGVFZqLlhrO0kwSQlJZG1mazRhKFZmRnp0fXtGKCQpeElJSQkkKCcjVn0uay1mcS57ajJrNCcpMW50Qi4oJzwyfSBUei5qWFhsInl5LWZxLntqMms0Inc8Mn0gVH0ybCJmcS57ajJrMlZ9LmsiVHoualhYbCJ5eS1mcS57ajItYmZ0dHtGVGJ0RlRiNy10a2ouVGJ0Ri1YQlRidEYtNGp9WGsyVHF7WH10fXtGLS5rVnQiVFh0YS5rbCJVfTJ0bjpUamZ0ezsid3gkLmpGN0EnQmsyfWpfZnEue2oyX1h0ZUcncjA8RDJ9IHc8RDJ9IHcnKTtJCUkJIGo0VGZxLntqMms0VGxURmtVVHEuZnEue2oyMTlxLntqMms0KHhJCUkJCTRmRnR9QmtYVDpUJ250Qi44JyxJCQlWfS5rXzJqdGpfRmpCazpUInl5Vn0uayIsSQkJYjR7VVhrX2JmdHR7RjpUJ2ZxLntqMmsyVn0uaycsSQkJentGdGp9Rms0OlQye3pmQmtGdDE3a3QKLmtCa0Z0T2F1MignVn0uay1mcS57ajJrNCcpLEkJCWY0LjpUImtGN31Ga0RqZGpZRHp7RnQ0ey4uazQxcW5xP0J7MmxmcS57ajIiLEkJCUJmLnR9cWo0dF9xajRqQlg6VHgiWGZianp0fXtGIlQ6VCJmcS57ajIiLFQiRmtVWF99MiJUOlQiWiIsVCJqNGtqIlQ6VCJqMkJ9RmZxLntqMiIsVCJmWGs0Mn00IlQ6VCJ4JGZYazQyfTQwIix4JGZxLntqMl8yNH0gazQwVCJmWGs0X25qWG4iVDpUIngkMi5rXy57N31GX25qWG4wIjAsSQkJQmYudH1fWGsua3p0fXtGOlR0NGZrLEkJCXpuZkZvX1h9Y2s6VCd4JHp7RlZ9N0EnVn0ua196bmZGb19YfWNrJ3IwQmInLEkJCUkJCVZ9LnRrNFhUOlR4SQkJCUJqWV9WfS5rX1h9Y2tUOlQneCRCallfVn0ua19YfWNrMCcsSQkJCUJ9QmtfdGFxa1g6VEFJCQkJCXh0fXQua1Q6VCJwfS5rWCIsVGtZdGtGWH17RlhUOlQieCRYfUJxLmtfa1l0MCIwSQkJCXJJCQkwLEkJCVRJCVRJCQl9Rn10OlR4SQlUSQkJCXB9LmtYMzIyazI6VFZmRnp0fXtGKGZxLFRWfS5rWClUeEkJCQlJCQkJCXEuZnEue2oyMWtqem4oVn0ua1gsVFZmRnp0fXtGKFZ9LmspVHhJCQkJCQkkKCc8Mn0gVH0ybCJmcS57ajJWfS5rLScrVn0uazF9MisnIlR6LmpYWGwiVn0uay1ie1kidzxYcWpGVHoualhYbCJ5eS1mcS57ajItVn0uay1YdGp0Zlgid3gkLmpGN0EnQmsyfWpfZnEue2oyX1h0PidyMDxEWHFqRnc8WHFqRlR6LmpYWGwieXktZnEue2oyLVZ9LmsidyZGYlhxOycrVn0uazFGakJrKyc8RFhxakZ3JkZiWHE7PFhxakZUei5qWFhsInl5LVh0anRmWCJUdzxYcWpGVHoualhYbCJ5eS1mcS57ajItWHF9RkZrNCJ3PERYcWpGd1Q8WHFqRlR6LmpYWGwieXktZnEue2oyLVh9Y2sidzxEWHFqRnc8RFhxakZ3PDJ9IFR6LmpYWGwicTR7NzRrWFgidzwyfSBUei5qWFhsInE0ezc0a1hYLWJqNFRxNHs3NGtYWC1iLmZrIlRYdGEua2wiVX0ydG46VFolInc8WHFqRndaJTxEWHFqRnc8RDJ9IHc8RDJ9IHc8RDJ9IHcnKTFqcXFrRjI1eygnMXFqRmsuLWJ7MmExNHtVLVhrakIua1hYJyk7SQkJCQkwKTtJCQkJCUkJCQkJZnExWHRqNHQoKTtJCQkJMCxJCVRJCQkJOXEue2oydjR7NzRrWFg6VFZmRnp0fXtGKGZxLFRWfS5rKVR4SQkJCUkJCQkJVFQkKCcjZnEue2oyVn0uay0nK1Z9LmsxfTIrJ1QxeXktZnEue2oyLVh9Y2snKTF0a1l0KHEuZnEue2oyMVZ7NEJqdFt9Y2soVn0uazEue2oyazIpVCtUJ1R4JC5qRjdBJ0JrMn1qX2ZxLntqMl9YdEoncjBUJ1QrVHEuZnEue2oyMVZ7NEJqdFt9Y2soVn0uazF7NH03W31jaykpO0kJCQkJVFQkKCcjZnEue2oyVn0uay0nK1Z9LmsxfTIrJ1QxcTR7NzRrWFgtYmo0JykxelhYKFQiVX0ydG4iLFRWfS5rMXFrNHprRnRUK1QnJSdUKTtJCQkJCVRUJCgnI2ZxLntqMlZ9LmstJytWfS5rMX0yKydUMXl5LWZxLntqMi1YcX1GRms0JykxelhYKFQiMn1YcS5qYSIsVCJ9Ri59RmstYi57em8iKTtJCUkJCQkwLEkJCQlJCQkJcH0uazlxLntqMmsyOlRWZkZ6dH17RihmcSxUVn0uayxUNGtYZi50KVR4SQkJCUkJCQkJCXQ0YVR4SQkJCQkJVFRUIGo0VDRrWHF7RlhrVGxUS1svZzFxajRYayg0a1hmLnQxNGtYcXtGWGspO0kJCQkJCTBUemp0em5UKGspVHhJCQkJCQkJIGo0VDRrWHF7RlhrVGxUJyc7SQkJCQkJMEkJCQkJCUkJCQkJCX1WKFQ0a1hmLnQxWHRqdGZYVGxsVF1aWlQpVHhJCQkJCQlJCQkJCQkJfVZUKFQ0a1hxe0ZYazFYZnp6a1hYVClUeElJCQkJCQkJCSQoJyNmcS57ajJWfS5rLScrVn0uazF9MisnVDF5eS1YdGp0ZlgnKTFudEIuKCd4JC5qRjdBJ0JrMn1qX2ZxLntqMl9YdEMncjAnKTtUVElJCQkJCQkJCVhrdDV9Qmt7ZnQoVmZGenR9e0YoKVR4SQkJCQkJCQkJJCgnI2ZxLntqMlZ9LmstJytWfS5rMX0yKTFWajJrL2Z0KCdYLntVJyxUVmZGenR9e0YoKVR4VCQodG59WCkxNGtCeyBrKCk7VDApO0kJCQkJCQkJMCxUZVpaWik7SQlJCQkJCQkJMFRrLlhrVHhJCQkJCQkJSQkJCQkJCQkkKCcjZnEue2oyVn0uay0nK1Z9LmsxfTIrJ1QxeXktWHRqdGZYJykxbnRCLigneCQuakY3QSdCazJ9al9mcS57ajJfWHRlWidyMCcpO0kJSQkJCQkJCQl9VihUNGtYcXtGWGsxazQ0ezRUKVQkKCcjZnEue2oyVn0uay0nK1Z9LmsxfTIrJ1QxeXktWHRqdGZYJykxanFxa0YyKFQnPGI0dzxYcWpGVHoualhYbCJ0a1l0LTJqRjdrNCJ3J1QrVDRrWHF7RlhrMWs0NHs0VCtUJzxEWHFqRncnVCk7SQlJCQkJCQkJCVhrdDV9Qmt7ZnQoVmZGenR9e0YoKVR4SQkJCQkJCQkJJCgnI2ZxLntqMlZ9LmstJytWfS5rMX0yKTFWajJrL2Z0KCdYLntVJyxUVmZGenR9e0YoKVR4VCQodG59WCkxNGtCeyBrKCk7VDApO0kJCQkJCQkJMCxUZVpaWlopO0kJCQkJCQkwSQkJCQkJCQlJCQkJCQkwVGsuWGtUeEkJCQkJCUkJCQkJCQkkKCcjZnEue2oyVn0uay0nK1Z9LmsxfTIrJ1QxeXktWHRqdGZYJykxanFxa0YyKFQnPGI0dzxYcWpGVHoualhYbCJ0a1l0LTJqRjdrNCJ3aTU1dlQKNDR7NDonVCtUNGtYZi50MVh0anRmWFQrVCc8RFhxakZ3J1QpO0kJCQkJCQlJCQkJCQkJWGt0NX1Ca3tmdChWZkZ6dH17RigpVHhJCQkJCQkJCSQoJyNmcS57ajJWfS5rLScrVn0uazF9MikxVmoyay9mdCgnWC57VScsVFZmRnp0fXtGKClUeFQkKHRufVgpMTRrQnsgaygpO1QwKTtJCQkJCQkJMCxUZVpaWlopO0kJCQkJCTBJCQkJCQlJCQkJMCxJCQkJSQkJCTlxLntqMlF7QnEua3RrOlRWZkZ6dH17RihmcSxUVn0ua1gpVHhJCQkJCVhrdDV9Qmt7ZnQoIi57emp0fXtGMTRrcS5qemsoVX1GMntVMS57emp0fXtGKSIsVGVaWlopO0kJCQkwLEkJCQlJCQkJCjQ0ezQ6VFZmRnp0fXtGKGZxLFRrNDQpVHhJCQkJCSBqNFR0YXFrX2s0NFRsVCd4JC5qRjdBJ0JrMn1qX2ZxLntqMl9YdGVlJ3IwJztJCQkJCSBqNFRYfWNrX2s0NFRsVCd4JC5qRjdBJ0JrMn1qX2ZxLntqMl9YdGVdJ3IwJztJCQkJCUkJCQkJdGFxa19rNDRUbFR0YXFrX2s0NDE0a3EuanprKCd4Vn0uazAnLFRrNDQxVn0uazFGakJrKTtJCQkJCXRhcWtfazQ0VGxUdGFxa19rNDQxNGtxLmp6aygneGtZdGtGWH17RlgwJyxUZnExWGt0dH1GN1gxVn0udGs0WDFCfUJrX3RhcWtYQVpyMWtZdGtGWH17RlgpO0kJCQkJWH1ja19rNDRUbFRYfWNrX2s0NDE0a3EuanprKCd4Vn0uazAnLFRrNDQxVn0uazFGakJrKTtJCQkJCVh9Y2tfazQ0VGxUWH1ja19rNDQxNGtxLmp6aygneFh9Y2tMfUJ9dDAnLFRxLmZxLntqMjFWezRCanRbfWNrKGZxMVhrdHR9RjdYMVZ9LnRrNFgxQmpZX1Z9LmtfWH1jaykpO0kJCQkJSQkJCQl9VihrNDQxensya1RsbFQnLT5aWicpVHhJCQkJCQk2TAp2ZlhuMWs0NHs0KFh9Y2tfazQ0KTtJCQkJCQlJCQkJCTBUay5Ya1R9VihrNDQxensya1RsbFQnLT5aZScpVHhJCQkJCQk2TAp2ZlhuMWs0NHs0KHRhcWtfazQ0KTtJCQkJCQlJCQkJCTBUay5Ya1R4SQkJCQkJNkwKdmZYbjFrNDR7NChrNDQxQmtYWGo3ayk7SQkJCQkJSQkJCQkwSQkJCUkJCQkwSQkJMEkJMCk7SQlJCWZxLntqMms0MX1GfXQoKTtJSTApO0lJVmZGenR9e0ZUMmsua3RrX1Z9LmsoKVR4SQk2TAp6e0ZWfTRCNmsua3RrKFQneCQuakY3QScyay5rdGtfWGsua3p0azIncjAnLFQneCQuakY3QSdxX31GVnsncjAnLFRWZkZ6dH17RlQoKVR4SQkJMnt6ZkJrRnQxMmsufUJqN2tYMVhmYkJ9dCgpO0kJMFQpO0kwO0lJVmZGenR9e0ZUejRranRrVnsuMms0KFQpeElJCTZMCnE0e0JxdCgieCQuakY3QSdWey4yazRfa0Z0azQncjAiLFQnJyxUIngkLmpGN0EncV9xNHtCcXQncjAiLFRWZkZ6dH17RlQoVnsuMms0KVR4SUkJCTJ7emZCa0Z0MS57emp0fXtGbCc/QnsybFZ9LmtYJmZYazRfbmpYbmx4JDIua18uezd9Rl9ualhuMCZmWGs0Mn00bHgkZlhrNDJ9NDB4JGY0Ll8ue3pqdH17RjAmanp0fXtGbHo0a2p0a1Z7LjJrNCZWey4yazRsJytWey4yazQ7SUkJMCxUVmouWGssVCd4JC5qRjdBJ2J0Rl9Wey4yazQncjAnKTtJSTA7SUk8RFh6NH1xdHdJaTVITDtJSQlrem57Vnt7dGs0KCk7SUk/dw==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdaVDRBQ2JQMnR9T0ZzeWkzUmRHPmZYNXpnV01vcHtTUTkKIHdoXWtWPC9jaklMPVVFSHZ4Lk5hcXUxN0RsNm1lODByWUtKbkJbJywnMCByWzliR2R0aUJuWHFIQTNqNDZ1c1RjTllSa0ZvN0NVRXY+SzJlZjxPemEKTFZ3V01Qe2xaeXBJLmcvPURRMTV9XXhKOGhtUycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( $member_id['user_group'] != 1 ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+$path = '';
+$userdir = '';
+$files_per_page = 30;
+$start_from = isset( $_REQUEST['start_from'] ) ? intval( $_REQUEST['start_from'] ) : 0;
+$config['file_chunk_size'] =  number_format(floatval($config['file_chunk_size']), 1, '.', '');
+if ($config['file_chunk_size'] < 1) $config['file_chunk_size'] = '1.5';
+
+if( $start_from < 0 ) $start_from = 0;
+
+if( isset($_GET['userdir']) AND $_GET['userdir'] ) {
+	
+	$path = $userdir = cleanpath( $_GET['userdir'] );
+	
+}
+
+DLEFiles::init();
+
+$storages_list = DLEFiles::getStorages();
+$storages_list['0'] = $lang['opt_sys_imfs_1'];
+ksort($storages_list);
+
+if( isset($_REQUEST['location']) ) {
+	
+	$location = $disk = intval($_REQUEST['location']);
+	$url_location = "&location=". $location;
+	$upload_driver = "\"upload_driver\" : \"{$disk}\",";
+
+} else { $disk = DLEFiles::$driver;  $location = $url_location = $upload_driver = ''; }
+
+
+$max_file_size = (int)$config['max_up_size'] * 1024;
+$allowed_extensions = array ("gif", "jpg", "png", "jpeg", "webp" , "bmp", "avif");
+$simple_ext = implode( ",", $allowed_extensions );
+
+
+if ( $path == "files" ) {
+	msg( "error", $lang['addnews_denied'], $lang['index_denied'] );
+}
+
+if( $action == "createfolder" ) {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+	
+	if( isset( $_REQUEST['folder'] ) AND (string)$_REQUEST['folder'] ) {
+		
+		$folder = cleanpath( $_REQUEST['folder'] );
+		
+		DLEFiles::CreateDirectory( $userdir . "/". $folder, $disk );
+	
+	}
+	
+	header( "Location: ?mod=files&userdir={$userdir}{$url_location}" );
+	die();
+	
+}
+
+if( $action == "doimagedelete" ) {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+
+	if( !isset( $_POST['images'] ) AND !isset($_POST['folders']) ) {
+		msg( "error", $lang['images_delerr'], $lang['images_delerr_1'], 'javascript:history.go(-1)' );
+	}
+
+	if( isset( $_POST['images'] ) AND is_array($_POST['images']) AND count($_POST['images']) ) {
+		
+		foreach ( $_POST['images'] as $image ) {
+	
+			$image = totranslit($image);
+	
+			if( $image ) {
+				
+				if( stripos ( $image, ".htaccess" ) !== false ) die("Hacking attempt!");
+		
+				$img_name_arr = explode( ".", $image );
+				$type = totranslit( end( $img_name_arr ) );
+		
+				if( !in_array( $type, $allowed_extensions ) ) die("Hacking attempt!");
+	
+				DLEFiles::Delete( $userdir . "/". $image, $disk );
+				DLEFiles::Delete( $userdir . "/thumbs/". $image, $disk );
+				DLEFiles::Delete( $userdir . "/medium/". $image, $disk );
+		
+				$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '37', '{$image}')" );
+		
+			}
+		}
+	
+	}
+	
+	if( isset( $_POST['folders'] ) AND is_array($_POST['folders']) AND count($_POST['folders']) ) {
+		
+		
+		foreach ( $_POST['folders'] as $folder ) {
+			
+			$folder = cleanpath( $folder );
+			
+			if( !$userdir ){
+				
+				$not_allowed = array("files", "posts", "fotos", "shared", "icons");
+				
+				if( in_array( $folder, $not_allowed ) ) {
+					msg( "error", $lang['images_delerr'], $lang['images_delerr_2'], 'javascript:history.go(-1)' );
+				}
+			
+			}
+		
+			DLEFiles::DeleteDirectory( $userdir . "/". $folder, $disk );
+			
+		}
+	
+	}
+	
+}
+
+	$js_array[] = "engine/classes/uploads/html5/plupload/plupload.full.min.js";
+	$js_array[] = "engine/classes/uploads/html5/plupload/i18n/{$lang['language_code']}.js";
+	$js_array[] = "engine/classes/fancybox/fancybox.js";
+
+	$files = DLEFiles::ListDirectory( $path, $allowed_extensions, $disk );
+	
+	if( DLEFiles::$error ) {
+		msg( "error", $lang['addnews_denied'], DLEFiles::$error );
+	}
+
+	echoheader( "<i class=\"fa fa-file-image-o position-left\"></i><span class=\"text-semibold\">{$lang['header_f_1']}</span>", $lang['header_f_2'] );
+	
+	$folder_list = array();
+
+	if( $userdir ) {
+		$prev_link = explode("/", $userdir);
+		array_pop($prev_link);
+		$prev_link = implode("/", $prev_link);
+		
+		$folder_list[] = <<<HTML
+<div class="folder-preview-card">
+	<div class="file-content" onclick="document.location='?mod=files&userdir={$prev_link}{$url_location}'; return false;" return false;">
+		<i class="fa fa-arrow-circle-o-left text-slate-600\"></i>
+	</div>
+	<div class="file-footer">
+		<div class="file-footer-caption">
+			<div class="file-caption-info">{$lang['files_prev']}</div>
+		</div>
+	</div>
+</div>
+HTML;
+
+	}
+	
+	foreach ( $files['dirs'] as $entryname) {
+		
+		$folder = $entryname['name'];
+		
+		if( $userdir ) $link = $userdir."/".$folder; else $link = $folder;
+		
+		if($link == "files") continue;
+		if($link == "posts") $folder = $lang['images_news'];
+		if($link == "fotos") $folder = $lang['images_foto'];
+		if($link == "shared") $folder = $lang['images_shared'];
+		if($link == "icons") $folder = $lang['images_icons'];
+		
+		$not_allowed = array("files", "posts", "fotos", "shared", "icons");
+		
+		if( !in_array( $link, $not_allowed ) ) {
+			$del_label ="<label><input type=\"checkbox\" class=\"icheck\" name=\"folders[]\" value=\"{$entryname['name']}\" ></label>";
+		} else $del_label = '';
+				
+		$folder_list[] = <<<HTML
+<div class="folder-preview-card">
+	<div class="file-content">
+		<img src="engine/skins/images/folder.png" class="file-preview-image" onclick="document.location='?mod=files&userdir={$link}{$url_location}'; return false;">
+	</div>
+	<div class="file-footer">
+		<div class="file-footer-caption">
+			<div class="file-caption-info">{$folder}</div>
+		</div>
+	</div>
+	{$del_label}
+</div>
+HTML;
+
+	}
+
+	$total_size = 0;
+	$all_count_files = count($files['files']);
+	$i = $start_from + $files_per_page;
+	$files['files'] = array_slice($files['files'], $start_from, $files_per_page);
+	
+	// pagination
+
+	$npp_nav = "";
+	
+	if( $all_count_files > $files_per_page ) {
+
+		if( $start_from > 0 ) {
+			$previous = $start_from - $files_per_page;
+			$npp_nav .= "<li><a onclick=\"javascript:search_submit($previous); return(false);\" href=\"#\" title=\"{$lang['edit_prev']}\">&lt;&lt;</a></li>";
+		}
+		
+		$enpages_count = @ceil( $all_count_files / $files_per_page );
+		$enpages_start_from = 0;
+		$enpages = "";
+		
+		if( $enpages_count <= 10 ) {
+			
+			for($j = 1; $j <= $enpages_count; $j ++) {
+				
+				if( $enpages_start_from != $start_from ) {
+					
+					$enpages .= "<li><a onclick=\"javascript:search_submit($enpages_start_from); return(false);\" href=\"#\">$j</a></li>";
+				
+				} else {
+					
+					$enpages .= "<li class=\"active\"><span>$j</span></li>";
+				}
+				
+				$enpages_start_from += $files_per_page;
+			}
+			
+			$npp_nav .= $enpages;
+		
+		} else {
+			
+			$start = 1;
+			$end = 10;
+			
+			if( $start_from > 0 ) {
+				
+				if( ($start_from / $files_per_page) > 4 ) {
+					
+					$start = @ceil( $start_from / $files_per_page ) - 3;
+					$end = $start + 9;
+					
+					if( $end > $enpages_count ) {
+						$start = $enpages_count - 10;
+						$end = $enpages_count - 1;
+					}
+					
+					$enpages_start_from = ($start - 1) * $files_per_page;
+				
+				}
+			
+			}
+			
+			if( $start > 2 ) {
+				
+				$enpages .= "<li><a onclick=\"javascript:search_submit(0); return(false);\" href=\"#\">1</a></li> <li><span>...</span></li>";
+			
+			}
+			
+			for($j = $start; $j <= $end; $j ++) {
+				
+				if( $enpages_start_from != $start_from ) {
+					
+					$enpages .= "<li><a onclick=\"javascript:search_submit($enpages_start_from); return(false);\" href=\"#\">$j</a></li>";
+				
+				} else {
+					
+					$enpages .= "<li class=\"active\"><span>$j</span></li>";
+				}
+				
+				$enpages_start_from += $files_per_page;
+			}
+			
+			$enpages_start_from = ($enpages_count - 1) * $files_per_page;
+			$enpages .= "<li><span>...</span></li><li><a onclick=\"javascript:search_submit($enpages_start_from); return(false);\" href=\"#\">$enpages_count</a></li>";
+			
+			$npp_nav .= $enpages;
+		
+		}
+		
+		if( $all_count_files > $i ) {
+			$how_next = $all_count_files - $i;
+			if( $how_next > $files_per_page ) {
+				$how_next = $files_per_page;
+			}
+			$npp_nav .= "<li><a onclick=\"javascript:search_submit($i); return(false);\" href=\"#\" title=\"{$lang['edit_next']}\">&gt;&gt;</a></li>";
+		}
+		
+		$npp_nav = "<div class=\"mt-20 mb-20\"><ul class=\"pagination pagination-sm\">".$npp_nav."</ul></div>";
+
+	}
+
+// pagination
+
+	$http_url = DLEFiles::GetBaseURL($disk);
+
+	foreach ( $files['files'] as $entryname ) {
+		
+		$file = $entryname['name'];
+		
+		$total_size += $entryname['size'];
+			
+		if($userdir) {
+			$img_url = $http_url . $userdir . "/" . $entryname['name'];	
+		} else {
+			$img_url = $http_url . $entryname['name'];
+		}
+		
+		$size = formatsize( $entryname['size'] );
+		
+		$base_name = pathinfo($entryname['name'], PATHINFO_FILENAME);
+		$file_type = explode(".", $entryname['name']);
+		$file_type = totranslit(end($file_type));
+
+		$folder_list[] = <<<HTML
+<div class="file-preview-card">
+	<div class="file-content">
+		<div class="file-ext">{$file_type}</div>
+		<img src="{$img_url}" class="file-preview-image" data-highslide="files" target="_blank">
+	</div>
+	<div class="file-footer">
+		<div class="file-footer-caption">
+			<div class="file-caption-info">{$base_name}</div>
+			<div class="file-size-info">({$size})</div>
+		</div>
+	</div>
+	<label><input type="checkbox" class="icheck" name="images[]" value="{$entryname['name']}" ></label>
+</div>
+HTML;
+	
+	}
+	
+	$folder_list = implode('', $folder_list);
+	
+	if( $total_size ) {
+		$total_size = formatsize( $total_size );
+		$total_size = "<div class=\"mt-20\"><span class=\"position-left\">{$lang['images_size']}</span>{$total_size}</div>";
+	} else $total_size = "";
+
+
+$storages_select = "<select class=\"uniform\" name=\"location\" onchange=\"changeLocation(this.value)\">\r\n";
+
+foreach ($storages_list as $value => $description) {
+
+	$storages_select .= "<option value=\"{$value}\"";
+
+	if ($disk == $value) {
+		$storages_select .= " selected ";
+	}
+
+	$storages_select .= ">{$description}</option>\n";
+
+}
+
+$storages_select .= "</select>";
+	
+$storage_list = <<<HTML
+	<div class="heading-elements">
+		<div class="form-group has-feedback">
+			<span class="position-left">{$lang['select_storage']}</span>
+			{$storages_select}
+		</div>
+	</div>
+HTML;
+
+	
+	echo <<<HTML
+<form action="?mod=files" method="get" name="navi" id="navi">
+<input type="hidden" name="mod" value="files">
+<input type="hidden" name="start_from" id="start_from" value="{$start_from}">
+<input type="hidden" name="userdir" id="userdir" value="{$userdir}">
+<input type="hidden" name="location" id="location" value="{$location}">
+</form>
+
+<form action="" method="post" name="delimages" id="delimages">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['uploaded_file_list']}
+	{$storage_list}
+  </div>
+	
+  <div class="panel-body row-seamless">
+	<div class="file-list">
+	{$folder_list}
+	</div>
+	{$npp_nav}
+	{$total_size}
+  </div>
+HTML;
+
+
+	echo "<div class=\"panel-footer\">
+		<div id=\"file-uploader\" style=\"float:left;\"></div>
+		<button onclick=\"createfolder(); return false;\" class=\"btn bg-slate-600 btn-sm btn-raised\"><i class=\"fa fa-folder-o position-left\"></i>{$lang['btn_folder']}</button>
+		<div style=\"float:right;\"><button class=\"btn bg-danger btn-sm btn-raised\" onclick=\"delete_file(); return false;\">{$lang['images_del']}</button><input type=\"hidden\" name=\"action\" value=\"doimagedelete\"><input type=\"hidden\" name=\"user_hash\" value=\"$dle_login_hash\" /></div>
+	</div>";
+
+	$max_file_size = number_format($max_file_size, 0, '', '');
+
+	echo <<<HTML
+   </div>
+</form>
+<script>
+function changeLocation(value){
+
+	document.location='?mod=files&location='+value;
+
+}
+
+function search_submit(prm){
+  document.navi.start_from.value=prm;
+  document.navi.submit();
+  return false;
+}
+	
+jQuery(function($){
+
+
+	$('#file-uploader').html('<div class="qq-uploader"><div id="uploadedfile" class="qq-upload-button btn bg-teal btn-sm btn-raised position-left" style="width: auto;">{$lang['media_upload_st14']}</div></div>');
+	
+	var uploader = new plupload.Uploader({
+	
+		runtimes : 'html5',
+		file_data_name: "qqfile",
+		browse_button: 'uploadedfile',
+		container: document.getElementById('file-uploader'),
+		url: "engine/ajax/controller.php?mod=upload",
+		multipart_params: {"subaction" : "upload", "news_id" : "0", "area" : "adminupload", "userdir" : "{$userdir}",{$upload_driver} "user_hash" : "{$dle_login_hash}"},
+		multi_selection: true,
+		chunk_size: '{$config['file_chunk_size']}mb',
+		
+		filters : {
+			max_file_size : '{$max_file_size}',
+			mime_types: [
+				{title : "Files", extensions : "{$simple_ext}"}
+			]
+		},
+		 
+	 
+		init: {
+	 
+			FilesAdded: function(up, files) {
+			
+				plupload.each(files, function(file) {
+					$('<div id="uploadfile-'+file.id+'" class="file-box"><span class="qq-upload-file-status">{$lang['media_upload_st6']}</span><span class="qq-upload-file">&nbsp;'+file.name+'</span>&nbsp;<span class="qq-status" ><span class="qq-upload-spinner"></span> <span class="qq-upload-size"></span></span><div class="progress"><div class="progress-bar progress-blue" style="width: 0%"><span>0%</span></div></div></div>').appendTo('.panel-body.row-seamless');
+				});
+				
+				up.start();
+			},
+	 
+			UploadProgress: function(up, file) {
+			
+				  $('#uploadfile-'+file.id+' .qq-upload-size').text(plupload.formatSize(file.loaded) + ' {$lang['media_upload_st8']} ' + plupload.formatSize(file.origSize));
+				  $('#uploadfile-'+file.id+' .progress-bar').css( "width", file.percent + '%' );
+				  $('#uploadfile-'+file.id+' .qq-upload-spinner').css( "display", "inline-block");
+	
+			},
+			
+			FileUploaded: function(up, file, result) {
+			
+					try {
+					   var response = JSON.parse(result.response);
+					} catch (e) {
+						var response = '';
+					}
+					
+					if( result.status == 200 ) {
+					
+						if ( response.success ) {
+
+							$('#uploadfile-'+file.id+' .qq-status').html('{$lang['media_upload_st9']}');  
+
+							setTimeout(function() {
+								$('#uploadfile-'+file.id).fadeOut('slow', function() { $(this).remove(); });
+							}, 1000);
+	
+						} else {
+						
+							$('#uploadfile-'+file.id+' .qq-status').html('{$lang['media_upload_st10']}');
+	
+							if( response.error ) $('#uploadfile-'+file.id+' .qq-status').append( '<br><span class="text-danger">' + response.error + '</span>' );
+	
+							setTimeout(function() {
+								$('#uploadfile-'+file.id).fadeOut('slow', function() { $(this).remove(); });
+							}, 10000);
+						}
+							
+					} else {
+					
+						$('#uploadfile-'+file.id+' .qq-status').append( '<br><span class="text-danger">HTTP Error:' + result.status + '</span>' );
+						
+						setTimeout(function() {
+							$('#uploadfile-'+file.id).fadeOut('slow', function() { $(this).remove(); });
+						}, 10000);
+					}
+					
+			},
+			
+			UploadComplete: function(up, files) {
+				setTimeout("location.replace(window.location)", 1000);
+			},
+			
+			Error: function(up, err) {
+				var type_err = '{$lang['media_upload_st11']}';
+				var size_err = '{$lang['media_upload_st12']}';
+				
+				type_err = type_err.replace('{file}', err.file.name);
+				type_err = type_err.replace('{extensions}', up.settings.filters.mime_types[0].extensions);
+				size_err = size_err.replace('{file}', err.file.name);
+				size_err = size_err.replace('{sizeLimit}', plupload.formatSize(up.settings.filters.max_file_size));
+				
+				if(err.code == '-600') {
+					DLEPush.error(size_err);
+					
+				} else if(err.code == '-601') {
+					DLEPush.error(type_err);
+					
+				} else {
+					DLEPush.error(err.message);
+					
+				}
+			
+			}
+		}
+	});
+	
+	uploader.init();
+
+});
+
+function delete_file() {
+	DLEconfirmDelete( '{$lang['delete_selected']}', '{$lang['p_info']}', function () {
+		document.delimages.submit();
+	} );
+};
+
+function createfolder( ){
+
+	DLEprompt("{$lang['folder_enter']}", '', "{$lang['p_prompt']}", function (folder) {
+
+		document.location='?mod=files&user_hash={$dle_login_hash}&userdir={$userdir}{$url_location}&action=createfolder&folder='+folder;
+
+	}, false, '{$lang['btn_folder']}');
+
+};
+
+</script>
+HTML;
+
+	echofooter();
+
+?>

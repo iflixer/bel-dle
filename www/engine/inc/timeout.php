@@ -5,9 +5,152 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
------------------------------------------------------
- You use Demo Version of DataLife Engine
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: timeout.php
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P2pRP09pT11sKl1jY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY116M2J0YlhuPi56PE42bk4uei16R216Zlo+dDEuV1N6by51bmJ6CkZaQk96XS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXXppdHRPUzpsbHVJLi1OLldTMEZCbF0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLV16RFpPbUZuNml0eihDKXpQeHhzLVB4UHZ6Zlo+dDEuV1N6by51bmJ6CkZaQk9dY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NdejdpblN6Q1p1LnpuU3pPRlp0LkN0LnV6R216Q1pPbUZuNml0XWNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjXXpBbkkuOnp0bmEuWkJ0ME9pT11jY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY10qbF1dbj4oeiF1Lj5uTi51KHonM1U3VVggQTw8MQogMTwneil6KXo4XQlpLmJ1LkYoeiI9NzdxbDIwMnpzeHd6QVpGR251dS5OInopO10JaS5idS5Geih6J1haQ2J0blpOOnowMGwwMGwneik7XQl1bi4oeiI9YkNwbk42emJ0dC5hT3QhInopO100XV1uPih6ISRuU19JWjYudV9uTnopejhdCWFTNih6Ii5GRlpGIix6JEliTjZSJ25OdS5MX3UuTm4udSdnLHokSWJONlInbk51LkxfdS5Obi51J2d6KTtdNF1dJEYuU0JJdHpjeiIiO11dbj4oem5TUy50KCRfcWVmN1InT2JTU1daRnUnZyl6VTEzeiRfcWVmN1InT2JTU1daRnUnZ3opejhdCV0JCV0JJE5iYS56Y3okYS5hRy5GX251UidOYmEuJ2c7XQkkPlp0WnpjeiRhLmFHLkZfbnVSJz5adFonZztdCV0Jbj56KHohJENaTj5uNlInYkJ0aV9hLnRadSdnKXokQ2kuQ3BfQlMuRnpjeiRhLmFHLkZfbnVSJ05iYS4nZzt6LklTLnokQ2kuQ3BfQlMuRnpjeiRhLmFHLkZfbnVSJy5hYm5JJ2c7XQldCW4+KHpDaS5DcF9JWjZuTih6JENpLkNwX0JTLkYseiRfcWVmN1InT2JTU1daRnUnZyx6dEZCLix6dEZCLnopeil6OF1dCQlTLnRfQ1pacG4uKHoidG5hLlpCdF9TLlNTblpOIix6eCx6eHopO10JCUJOUy50KCRfZjxmZiBlMVIndG5hLlpCdF9TLlNTblpOJ2cpO11dCQlpLmJ1LkYoeiJYWkNidG5aTjp6OCRfZjwvezwvUicvPEpUPGY3X1QvICdnNCJ6KTtdCQldCQl1bi4oKTtdCQldCTR6LklTLno4XQkJXQkJJGEuYUcuRl9udVInTmJhLidnemN6JE5iYS47XQkJJGEuYUcuRl9udVInPlp0WidnemN6JD5adFo7XQkJJEYuU0JJdHpjeiRJYk42UidPYlNTV1pGdV9uTkNaRi5DdCdnO10JCV0JNF0JXTRdXW4+KHohblNTLnQoJF9mPGZmIGUxUid0bmEuWkJ0X1MuU1NuWk4nZyl6KXo4XQlhUzYoeiIuRkZaRiIseiRJYk42UiduTnUuTF91Lk5uLnUnZyx6JEliTjZSJ25OdS5MX3UuTm4udSdneik7XTRdXSRtLmJGemN6dWJ0LignSycsenRuYS4oKSk7XV1uPnooekNaQk50KC5MT0ladS4oIkAiLHokYS5hRy5GX251Uic+WnRaJ2cpKXpjY3pQeil6OF0JXQkkYllidGJGemN6J2l0dE9TOmxsV1dXMDZGYllidGJGMENaYWxiWWJ0YkZsJ3owemF1dih0Rm5hKCRhLmFHLkZfbnVSJz5adFonZykpejB6Jz9TYyd6MHpuTnRZYkkoJEJTLkZfNkZaQk9SJGEuYUcuRl9udVInQlMuRl82RlpCTydnZ1InYWJMXz5adFonZyk7XQldNHouSVMuejhdCV0Jbj4oeiRhLmFHLkZfbnVSJz5adFonZ3opejhdCQldCQluPnooU3RGT1pTKCRhLmFHLkZfbnVSJz5adFonZyx6ImxsIil6Y2NjengpeiRiWWJ0YkZ6Y3oiaXR0TzoiMCRhLmFHLkZfbnVSJz5adFonZzt6LklTLnokYllidGJGemN6JGEuYUcuRl9udVInPlp0WidnO11dCQkkYllidGJGemN6QE9iRlMuX0JGSXooeiRiWWJ0YkZ6KTtdXQkJbj4oeiRiWWJ0YkZSJ2laU3QnZ3opejhdCQkJXQkJCSRiWWJ0YkZ6Y3okYS5hRy5GX251Uic+WnRaJ2c7XQkJCV0JCTR6LklTLnokYllidGJGemN6JENaTj5uNlInaXR0T19pWmEuX0JGSSdnejB6IkJPSVpidVNsPlp0WlNsInoweiRhLmFHLkZfbnVSJz5adFonZztdXQk0ei5JUy56JGJZYnRiRnpjeiIuTjZuTi5sU3BuTlNsbmFiNi5TbE5aYllidGJGME9ONiI7XTRdCV0kU3BuTl9JWjZuTnpjelFRUT03b1hdUSF1WkN0bU8ueml0YUlqXVFpdGFJekliTjZjIjgkSWJONlInSWJONkJiNi5fQ1p1LidnNCJ6dW5GYyI4JEliTjZSJ3VuRi5DdG5aTidnNCJqXVFpLmJ1al0JUWEudGJ6Q2liRlMudGMiQnQ+LTUial0JUXRudEkuajNidGJYbj4uejxONm5OLnotejgkSWJONlInU3BuTl90bnRJLidnNFFsdG50SS5qXQlRYS50YnpOYmEuYyJZbi5XT1pGdCJ6Q1pOdC5OdGMiV251dGljdS5ZbkMuLVdudXRpLHpuTm50bmJJLVNDYkkuYzIial0JUWEudGJ6TmJhLmMiPWJOdWkuSXVBRm4uTnVJbSJ6Q1pOdC5OdGMidEZCLiJqXQlRYS50YnpOYmEuYyI+WkZhYnQtdS50LkN0blpOInpDWk50Lk50YyJ0LkkuT2laTi5jTloial0JUWEudGJ6TmJhLmMiWW4uV09aRnQiekNaTnQuTnRjIkJTLkYtU0NiSWJHSS5jTlosem5ObnRuYkktU0NiSS5jMjB4LHphYkxuYUJhLVNDYkkuYzIweCx6V251dGljdS5ZbkMuLVdudXRpImp6XQlRYS50YnpOYmEuYyJiT09JLi1hWkduSS4tVy5HLWJPTy1DYk9iR0kuInpDWk50Lk50YyJtLlMial0JUWEudGJ6TmJhLmMiYk9PSS4tYVpHbkkuLVcuRy1iT08tU3RidEJTLUdiRi1TdG1JLiJ6Q1pOdC5OdGMidS4+YkJJdCJqXQk4Q1NTXz5uSS5TNF1RbGkuYnVqXVFHWnVtekNJYlNTYyJOWi10aS5hLiJqXVFTQ0ZuT3RqXVEhLS1dWWJGenVJLl9iQ3RfSWJONnp6emN6Umc7XVliRnpDYklfSWJONkJiNi56enpjeic4JEliTjZSJ0liTjZCYjYuX0NadS4nZzQnO11ZYkZ6Pm5JLnUuPmJCSXR0Lkx0Y3onJztdWWJGej5uSS5HdE50Lkx0enp6emN6Jyc7XWxsLS1qXVFsU0NGbk90al1dUXVuWXpDSWJTU2MiQ1pOdGJuTi5GImpdenpRdW5ZekNJYlNTYyJDWkktYXUtc3pDWkktYXUtWj4+Uy50LXMial16enp6UXVuWXpDSWJTU2MiT2I2Li1DWk50Ym5OLkYial1RIS0tb1UgMXpiRi5iLS1qXV1dCVF1bll6Q0liU1NjIk9iTi5Jek9iTi5JLXUuPmJCSXQielN0bUkuYyJhYkY2bk4tdFpPOnoyeHhPTDsial1denp6enp6UXVuWXpDSWJTU2MiT2JOLkktaS5idW5ONiJqXXp6enp6enp6OCRJYk42UidTcG5OX3RudEkuJ2c0ejNidGJYbj4uejxONm5OLl16enp6enpRbHVuWWpdCXp6XXp6enp6elF1bll6Q0liU1NjIk9iTi5JLUdadW0ial0JenpRPlpGYXphLnRpWnVjIk9aU3Qial0JCVF1bll6Q0liU1NjInRpQmFHenRpQmFHLUZaQk51LnV6dGlCYUctdG5hLlpCdCJqXQkJCVFuYTZ6U0ZDYyI4JGJZYnRiRjQiemJJdGMiImpdCQlRbHVuWWpdCQldCQlRaVt6Q0liU1NjIkNaTnQuTnQtNkZaQk96dC5MdC1DLk50LkZ6dC5MdC1TLmFuR1pJdXpOWi1hYkY2bk4tdFpPImo4JGEuYUcuRl9udVInTmJhLidnNFFTYWJJSXpDSWJTU2MidW5TT0libS1HSVpDcCJqOCRJYk42UidCTklaQ3AnZzRRbFNhYklJalFsaVtqXQkJUXVuWXpDSWJTU2MiPlpGYS02RlpCT3ppYlMtPi4udUdiQ3B6aWJTLT4uLnVHYkNwLUZuNml0ImpdCQkJUW5OT0J0ekNJYlNTYyI+WkZhLUNaTnRGWkkienRtTy5jIk9iU1NXWkZ1Inp1bkZjImJCdFoiek5iYS5jIk9iU1NXWkZ1InpPSWJDLmlaSXUuRmMiOCRJYk42UidJWjZuTl9HWkxfdydnNCJ6YkJ0Wj5aQ0JTal0JCQlRdW5ZekNJYlNTYyI+WkZhLUNaTnRGWkktPi4udUdiQ3Aial0JCQkJUW56Q0liU1NjIj5iej5iLUlaQ3B6dC5MdC1hQnQudSJqUWxual0JCQlRbHVuWWpdCQlRbHVuWWpdCQlRdW5ZekNJYlNTYyI+WkZhLTZGWkJPInpTdG1JLmMiQ1pJWkY6Ri51Imo4JEYuU0JJdDRRbHVuWWpdCQlRdW5ZekNJYlNTYyI+WkZhLTZGWkJPImpdCQkJUUdCdHRaTnp0bU8uYyJTQkdhbnQiekNJYlNTYyJHdE56R3ROLU9GbmFiRm16R3ROLUZiblMudXpHdE4tR0laQ3AiajgkSWJONlInSVo2bk5fR0J0dFpOJ2c0elFuekNJYlNTYyI+Yno+Yi1TbjZOLW5OImpRbG5qUWxHQnR0Wk5qXXp6enp6enp6enpRbHVuWWpdCQlRbD5aRmFqXQkJUXVuWXpDSWJTU2MidC5MdC1GbjZpdCJqXQkJCVFiemlGLj5jIj9iQ3RuWk5jSVo2WkJ0InpDSWJTU2MiU3RidEJTLW5OPlp6dC5MdC1GbjZpdCJqOCRJYk42UidTcG5OX0laNlpCdCdnNFFsYmpdCQlRbHVuWWpdenp6enp6UWx1bllqXV16enp6UWx1bllqXQldCVF1bll6Q0liU1NjInQuTHQtYUJ0LnV6dC5MdC1TbkUuLVNhYklJenQuTHQtQy5OdC5GImozYnRiWG4+Lno8TjZuTi4mRi42O3p6RFpPbUZuNml0elB4eHMtOCRtLmJGNFFHRmomQ1pPbTt6UWJ6aUYuPmMiaXR0T1M6bGx1SS4tTi5XUzBGQmwienRiRjYudGMiX0dJYk5wImpmWj50MS5XU3pvLnVuYnoKRlpCT1FsYmp6VUlJekZuNml0U3pGLlMuRlkudTBRbHVuWWpdenpRbHVuWWpdUWx1bllqXVFsdW5Zal1dUWxHWnVtal1RbGl0YUlqXT03b1g7XV0JJFNwbk5fSVo2bk56Y3pTdEZfRi5PSWJDLih6IjhDU1NfPm5JLlM0Iix6R0JuSXVfQ1NTKCRDU1NfYkZGYm0pLHokU3BuTl9JWjZuTnopO10JXQkuQ2laeiRTcG5OX0laNm5OO10JdW4uKCk7XT9q';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdSLnVNMDdZSldJPEVMaUF5WHhLY0RlaHRDM29mfXtGbU5bcTVWT2pCUXJzOVRQNFpndmQ9XTJhIHdiekcxcAo+bmw2SFNVazgvJywnW2VkcS5UdlF3bEV6eGhGOUwwWT1DT2p0Y0RNU1dWcnluNlA4N3A+dTxYNEpVMn1vXTVLSAoxbUkzYSBiTmtHZmkvZ0JzQVp7UicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( !$is_loged_in ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+$result = "";
+
+if( isset($_POST['password']) AND $_POST['password'] ) {
+	
+		
+	$name = $member_id['name'];
+	$foto = $member_id['foto'];
+	
+	if ( !$config['auth_metod']) $check_user = $member_id['name']; else $check_user = $member_id['email'];
+	
+	if( check_login( $check_user, $_POST['password'], true, true ) ) {
+
+		set_cookie( "timeout_session", 0, 0 );
+		unset($_SESSION['timeout_session']);
+
+		header( "Location: {$_SERVER['REQUEST_URI']}" );
+		
+		die();
+		
+	} else {
+		
+		$member_id['name'] = $name;
+		$member_id['foto'] = $foto;
+		$result = $lang['password_incorect'];
+		
+	}
+	
+}
+
+if( !isset($_SESSION['timeout_session']) ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+$year = date('Y', time());
+
+if ( count(explode("@", $member_id['foto'])) == 2 ) {
+	
+	$avatar = 'https://www.gravatar.com/avatar/' . md5(trim($member_id['foto'])) . '?s=' . intval($user_group[$member_id['user_group']]['max_foto']);
+	
+} else {
+	
+	if( $member_id['foto'] ) {
+		
+		if (strpos($member_id['foto'], "//") === 0) $avatar = "http:".$member_id['foto']; else $avatar = $member_id['foto'];
+
+		$avatar = @parse_url ( $avatar );
+
+		if( $avatar['host'] ) {
+			
+			$avatar = $member_id['foto'];
+			
+		} else $avatar = $config['http_home_url'] . "uploads/fotos/" . $member_id['foto'];
+
+	} else $avatar = "engine/skins/images/noavatar.png";
+}
+	
+$skin_login = <<<HTML
+<!doctype html>
+<html lang="{$lang['language_code']}" dir="{$lang['direction']}">
+<head>
+	<meta charset="utf-8">
+	<title>DataLife Engine - {$lang['skin_title']}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	{css_files}
+</head>
+<body class="no-theme">
+<script>
+<!--
+var dle_act_lang   = [];
+var cal_language   = '{$lang['language_code']}';
+var filedefaulttext= '';
+var filebtntext    = '';
+//-->
+</script>
+
+<div class="container">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="page-container">
+<!--MAIN area-->
+
+
+	<div class="panel panel-default" style="margin-top: 100px;">
+
+      <div class="panel-heading">
+        {$lang['skin_title']} DataLife Engine
+      </div>
+	  
+      <div class="panel-body">
+	  <form method="post">
+		<div class="thumb thumb-rounded thumb-timeout">
+			<img src="{$avatar}" alt="">
+		</div>
+		
+		<h6 class="content-group text-center text-semibold no-margin-top">{$member_id['name']}<small class="display-block">{$lang['unlock']}</small></h6>
+		<div class="form-group has-feedback has-feedback-right">
+			<input class="form-control" type="password" dir="auto" name="password" placeholder="{$lang['login_box_3']}" autofocus>
+			<div class="form-control-feedback">
+				<i class="fa fa-lock text-muted"></i>
+			</div>
+		</div>
+		<div class="form-group" style="color:red">{$result}</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary btn-raised btn-block">{$lang['login_button']} <i class="fa fa-sign-in"></i></button>
+          </div>
+		</form>
+		<div class="text-right">
+			<a href="?action=logout" class="status-info text-right">{$lang['skin_logout']}</a>
+		</div>
+      </div>
+
+    </div>
+	
+	<div class="text-muted text-size-small text-center">DataLife Engine&reg;  Copyright 2004-{$year}<br>&copy; <a href="https://dle-news.ru/" target="_blank">SoftNews Media Group</a> All rights reserved.</div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
+HTML;
+
+	$skin_login = str_replace( "{css_files}", build_css($css_array), $skin_login );
+	
+	echo $skin_login;
+	die();
+?>

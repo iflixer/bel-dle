@@ -5,9 +5,126 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: banned.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Banned users
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1ldP1RTVDRkKjRHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHRzRmV01YTVFCcUVmRls2QltFZi1mLkpmfVpxWE5Fc3tmN0VlQk1mdGpaYVRmNC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tNGZTWFhUezpkZGUxRS1bRXN7PmphZDQtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTRmZ1pUSmpCNlNYZihpKWZueHhELW54bgpmfVpxWE5Fc3tmN0VlQk1mdGpaYVQ0R0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0c0ZklTQntmaVplRWZCe2ZUalpYRWlYRWVmLkpmaVpUSmpCNlNYNEdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHNGZWQjFFOmYuTVtbRWU+VFNUNC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tNGY5e0U6ZlJNW1tFZWZhe0VqezRHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHRzQqZDQ0QnEoZiFlRXFCW0VlKCdXcElwUWtWRkZOdGtORicpZilmLzQJU0VNZUVqKGYiVUlJNWR1PnVmRHhMZlZaai5CZWVFWyJmKTs0CVNFTWVFamYoZidRWmlNWEJaWzpmPj5kPj5kJ2YpOzQJZUJFKGYiVU1pMkJbNmZNWFhFeVRYISJmKTs0IDQ0JFhTQntfWEJ5RWZHZlhCeUUoKTs0JGVFMWZHZnFNMXtFOzQkLjFaaTJFZWZHZnFNMXtFOzQkLk1bW0VlX3FqWnlmR2YnJzs0NEJxZihCe3tFWCgkLjFaaTJfaVphW1hqSilmcE5XZiQuMVppMl9pWmFbWGpKKWYvNAk0CSQuMVppMkVlZkdmWGphRTs0NAlCcShmWGpCeSgkaVpbcUI2OCdpWmFbWGpKX2VFaTFCW0VfakVNe1pbJzMpZilmLzQJCSRlRXtpamZHZlhqQnkoU1h5MV9FW1hCWEpfZUVpWmVFKCRpWltxQjY4J2laYVtYakpfZUVpMUJbRV9qRU17WlsnMyxmRk5JX1A5MElGfWZ8ZkZOSV9VSTdRCixmJ2FYcS1BJylmKTs0CSBmRTF7RWYkZUV7aWpmR2YkMU1bNjgnaVphW1hqSl9lRWkxQltFZSczOzQ0CSRFW2UuTVtmR2YkMU1bNjgnLk1bW0VlX0JbcVonMzs0CTQJQnEoJGlaW3FCNjgnLjFaaTJfelRbJzMpZi80NAkJQnFmKEJ7e0VYKCRfZzAwcmtGOCdlMUVfVFp7e0IuMUVfelRbJzMpKWYvNAkJCSRlMUVfVFp7e0IuMUVfelRbZkdmT3taW19lRWlaZUUoJF9nMDBya0Y4J2UxRV9UWnt7Qi4xRV96VFsnMyxmWGphRSk7NDQJCQlCcWYoIUJ7X01qak1KKCRlMUVfVFp7e0IuMUVfelRbKSlmJGUxRV9UWnt7Qi4xRV96VFtmR2ZNampNSigpOzQ0CQkJJGUxRV9UWnt7Qi4xRV96VFs4J3tCWEUnM2ZHZnU7NDQJCSBmRTF7RWYvZiRlMUVfVFp7e0IuMUVfelRbZkdmTWpqTUooKTtmJGUxRV9UWnt7Qi4xRV96VFs4J3tCWEUnM2ZHZnU7ZiA0NAkJe0VYX2laWjJCRSgiZTFFX1Rae3tCLjFFX3pUWyIsZk97WltfRVtpWmVFKCRlMUVfVFp7e0IuMUVfelRbLGY9fTBOXzlORn1ncDVGV185TmtnMFdGZnxmPX0wTl85TkZ9Z3A1RldffVFwfVVGfSlmLGZ1KTs0CSA0NCBmRTF7RWYvNDQJJHtFMV8uTVtbRWVmR2YkZS4tWW9hRWpKKCJ9RlFGZ0lmYXtFantfQmVmVmgwN2YiZj5mOX1GaDVoRlZrd2Y+ZiJfLk1bW0VlZktVRmhGZmVNSntmIUdmJ3gnZnBOV2ZlTVhFZl1mJy8kWFNCe19YQnlFICciKTs0NAlzU0IxRWYoJGpac2ZHZiRlLi1ZNkVYX2pacygke0UxXy5NW1tFZSkpZi80CQkkZUUxZkdmWGphRTs0NAkJQnFmKCRqWnM4J2F7RWp7X0JlJzMpZiRlLi1Zb2FFakooIjk1V3BJRmYiZj5mOX1GaDVoRlZrd2Y+ZiJfYXtFantmfUZJZi5NW1tFZUcnJ2ZLVUZoRmZhe0VqX0JlZkdmJy8kalpzOCdhe0Vqe19CZSczICciKTs0CSA0NAkkZS4tWXFqRUUoJHtFMV8uTVtbRWUpOzQ0CUJxZigkZUUxKWYvNDQJCSRlLi1Zb2FFakooIldGUUZJRmZWaDA3ZiJmPmY5fUZoNWhGVmt3Zj5mIl8uTVtbRWVmS1VGaEZmZU1Ke2YhR2YneCdmcE5XZmVNWEVmXWYnLyRYU0J7X1hCeUUgJyIpOzQJCUBhWzFCWzIoRk50a05GX1draGY+ZidkaU1pU0Vke0p7WEV5ZC5NW1tFZT5Pe1pbJyk7NAkgNDQJQnFmKEJ7e0VYKCQuMVppMkJUKWZNW2VmJC4xWmkyQlQpZi80NAkJJC4xWmkyRWVmR2ZYamFFOzQ0CQlCcWYoJC5NW1tFZV9CW3FaOCdCVCczOCQuMVppMkJUMzgnZU1YRSczKWYvNDQJCQlCcWYoJC5NW1tFZV9CW3FaOCdCVCczOCQuMVppMkJUMzgnZU1YRSczZllmJFhTQntfWEJ5RSlmJEVbZS5NW2ZHZjFNWzZlTVhFKCJPZlZmbGZVOkIiLGYkLk1bW0VlX0JbcVo4J0JUJzM4JC4xWmkyQlQzOCdlTVhFJzMsZlhqYUUpOzQJCQlFMXtFZiQuMVppMkVlZkdmcU0xe0U7NAkJIGZFMXtFZiRFW2UuTVtmR2YkMU1bNjgnLk1bW0VlX0JbcVonMzs0NAkJJGVFe2lqZkdmJDFNWzY4J0JUXy4xWmkyJzNmPmYiXS5qWV0ualkiZj5mJC5NW1tFZV9CW3FaOCdCVCczOCQuMVppMkJUMzgnZUV7aWonMzs0CQkkLk1bW0VlX3FqWnlmR2ZCe3tFWCgkLk1bW0VlX0JbcVo4J0JUJzM4JC4xWmkyQlQzOCcuTVtbRWVfcWpaeSczKWY/ZiQuTVtbRWVfQltxWjgnQlQnMzgkLjFaaTJCVDM4Jy5NW1tFZV9xalp5JzNmOmYnJzs0NAkgZkUxe0VCcWYoQnt7RVgoJC5NW1tFZV9CW3FaOCdhe0Vqe19CZSczOCR5RXkuRWpfQmU4J2F7RWpfQmUnMzM4J2F7RWp7X0JlJzMpZnBOV2YkLk1bW0VlX0JbcVo4J2F7RWp7X0JlJzM4JHlFeS5Fal9CZTgnYXtFal9CZSczMzgnYXtFantfQmUnMylmLzQ0CQkkLjFaaTJFZWZHZlhqYUU7NDQJCUJxZigkLk1bW0VlX0JbcVo4J2F7RWp7X0JlJzM4JHlFeS5Fal9CZTgnYXtFal9CZSczMzgnZU1YRSczKWYvNDQJCQlCcWYoJC5NW1tFZV9CW3FaOCdhe0Vqe19CZSczOCR5RXkuRWpfQmU4J2F7RWpfQmUnMzM4J2VNWEUnM2ZZZiRYU0J7X1hCeUUpZiRFW2UuTVtmR2YxTVs2ZU1YRSgiT2ZWZmxmVTpCIixmJC5NW1tFZV9CW3FaOCdhe0Vqe19CZSczOCR5RXkuRWpfQmU4J2F7RWpfQmUnMzM4J2VNWEUnMyxmWGphRSk7NAkJCUUxe0VmJC4xWmkyRWVmR2ZxTTF7RTs0CQkgZkUxe0VmJEVbZS5NW2ZHZiQxTVs2OCcuTVtbRWVfQltxWiczOzQ0CQkkZUV7aWpmR2YkLk1bW0VlX0JbcVo4J2F7RWp7X0JlJzM4JHlFeS5Fal9CZTgnYXtFal9CZSczMzgnZUV7aWonMzs0CQkkLk1bW0VlX3FqWnlmR2ZCe3tFWCgkLk1bW0VlX0JbcVo4J2F7RWp7X0JlJzM4JHlFeS5Fal9CZTgnYXtFal9CZSczMzgnLk1bW0VlX3FqWnknMylmP2YkLk1bW0VlX0JbcVo4J2F7RWp7X0JlJzM4JHlFeS5Fal9CZTgnYXtFal9CZSczMzgnLk1bW0VlX3FqWnknM2Y6ZicnOzQJIDQ0IDQ0QnEoZiQuMVppMkVlZilmLzQJNAkkWFQxLVllQmpmR2ZoMDBJX1draGY+ZidkWEV5VDFNWEV7Jzs0CTQJJFhUMS1ZMVpNZV9YRXlUMU1YRShmJy5NW1tFZT5YVDEnZik7NAkkWFQxLVl7RVgoZicvZUV7aWpCVFhCWlsgJyxmJGVFe2lqZik7NAkkWFQxLVl7RVgoZicvRVtlICcsZiRFW2UuTVtmKTs0CTQJQnEoJC5NW1tFZV9xalp5KWYvNDQJCSRYVDEtWXtFWCgnOC5NW1tFZS1xalp5MycsZiIiKTs0CQkkWFQxLVl7RVgoJzhkLk1bW0VlLXFqWnkzJyxmIiIpOzQJCSRYVDEtWXtFWCgnLy5NW1tFZS1xalp5ICcsZiQuTVtbRWVfcWpaeSk7NDQJIGZFMXtFZi80NAkJJFhUMS1Ze0VYXy4xWmkyKCInXFw4Lk1bW0VlLXFqWnlcXDMoPio/KVxcOGQuTVtbRWUtcWpaeVxcMyd7QiIsZiIiKTs0CQkkWFQxLVl7RVgoJy8uTVtbRWUtcWpaeSAnLGYnJyk7NDQJIDQ0CSRYVDEtWWlaeVRCMUUoZidpWltYRVtYJ2YpOzQ0CVNFTWVFaignVUlJNWR1PnVmCnhMZn1FanpCaUVmSUV5VFpqTWpCMUpmOVtNek1CMU0uMUUnKTs0CVNFTWVFaignfVhNWGF7OmYKeExmfUVqekJpRWZJRXlUWmpNakIxSmY5W016TUIxTS4xRScpOwk0CVNFTWVFaigiZ1pbWEVbWC1YSlRFOmZYRTxYZFNYeTE7ZmlTTWp7RVhHYVhxLUEiKTs0CUVpU1pmJFhUMS1ZakV7YTFYOCdpWltYRVtYJzM7NAllQkUoKTs0NCA0P1k=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCcyQnFXfXhjeTVBM1pQQ1ZiYTFzPFJ0RVhUe3plbWoKTkp1b0g3PWh2SUc+U0w2d1FdL1VEMC4gbmlya2Y4T2RZZ01GNFtLOWxwJywna2lmRFMwOW1QOF1vUXpGNnVsd3hCR2V0cHN2ZDdyNU55MXFWTUpSWlQ9LmgzZ1hMPHtINE9ifTJjS0kgW2ovPkNhRQpuV1VZQScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$this_time = time();
+$del = false;
+$blocked = false;
+$banned_from = '';
+
+if (isset($block_country) AND $block_country) {
+	
+	$blocked = true;
+
+	if( trim($config['country_decline_reason']) ) {
+		$descr = trim(html_entity_decode($config['country_decline_reason'], ENT_QUOTES | ENT_HTML5, 'utf-8') );
+	} else $descr = $lang['country_declined'];
+
+	$endban = $lang['banned_info'];
+	
+	if($config['block_vpn']) {
+
+		if (isset($_COOKIE['dle_possible_vpn'])) {
+			$dle_possible_vpn = json_decode($_COOKIE['dle_possible_vpn'], true);
+
+			if (!is_array($dle_possible_vpn)) $dle_possible_vpn = array();
+
+			$dle_possible_vpn['site'] = 1;
+
+		} else { $dle_possible_vpn = array(); $dle_possible_vpn['site'] = 1; }
+
+		set_cookie("dle_possible_vpn", json_encode($dle_possible_vpn, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) , 1);
+	}
+
+} else {
+
+	$sel_banned = $db->query("SELECT users_id FROM " . USERPREFIX . "_banned WHERE days != '0' AND date < '{$this_time}'");
+
+	while ($row = $db->get_row($sel_banned)) {
+		$del = true;
+
+		if ($row['users_id']) $db->query("UPDATE " . USERPREFIX . "_users SET banned='' WHERE user_id = '{$row['users_id']}'");
+	}
+
+	$db->free($sel_banned);
+
+	if ($del) {
+
+		$db->query("DELETE FROM " . USERPREFIX . "_banned WHERE days != '0' AND date < '{$this_time}'");
+		@unlink(ENGINE_DIR . '/cache/system/banned.json');
+	}
+
+	if (isset($blockip) and $blockip) {
+
+		$blocked = true;
+
+		if ($banned_info['ip'][$blockip]['date']) {
+
+			if ($banned_info['ip'][$blockip]['date'] > $this_time) $endban = langdate("j F Y H:i", $banned_info['ip'][$blockip]['date'], true);
+			else $blocked = false;
+		} else $endban = $lang['banned_info'];
+
+		$descr = $lang['ip_block'] . "<br><br>" . $banned_info['ip'][$blockip]['descr'];
+		$banned_from = isset($banned_info['ip'][$blockip]['banned_from']) ? $banned_info['ip'][$blockip]['banned_from'] : '';
+
+	} elseif (isset($banned_info['users_id'][$member_id['user_id']]['users_id']) AND $banned_info['users_id'][$member_id['user_id']]['users_id']) {
+
+		$blocked = true;
+
+		if ($banned_info['users_id'][$member_id['user_id']]['date']) {
+
+			if ($banned_info['users_id'][$member_id['user_id']]['date'] > $this_time) $endban = langdate("j F Y H:i", $banned_info['users_id'][$member_id['user_id']]['date'], true);
+			else $blocked = false;
+		} else $endban = $lang['banned_info'];
+
+		$descr = $banned_info['users_id'][$member_id['user_id']]['descr'];
+		$banned_from = isset($banned_info['users_id'][$member_id['user_id']]['banned_from']) ? $banned_info['users_id'][$member_id['user_id']]['banned_from'] : '';
+	}
+
+}
+
+if( $blocked ) {
+	
+	$tpl->dir = ROOT_DIR . '/templates';
+	
+	$tpl->load_template( 'banned.tpl' );
+	$tpl->set( '{description}', $descr );
+	$tpl->set( '{end}', $endban );
+	
+	if($banned_from) {
+
+		$tpl->set('[banned-from]', "");
+		$tpl->set('[/banned-from]', "");
+		$tpl->set('{banned-from}', $banned_from);
+
+	} else {
+
+		$tpl->set_block("'\\[banned-from\\](.*?)\\[/banned-from\\]'si", "");
+		$tpl->set('{banned-from}', '');
+
+	}
+
+	$tpl->compile( 'content' );
+
+	header('HTTP/1.1 503 Service Temporarily Unavailable');
+	header('Status: 503 Service Temporarily Unavailable');	
+	header("Content-type: text/html; charset=utf-8");
+	echo $tpl->result['content'];
+	die();
+
+}
+?>

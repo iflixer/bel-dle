@@ -1,13 +1,260 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine - by SoftNews Media Group
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: rss.class.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: XML Parser
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1hmP1BRUF12Kl1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbV14TTVZNWU9Rkt4cjlvPTlLeC14biB4ODFGWVdLNlN4bEtPPTV4SX0xa1BdLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1deFFZWVBTOnZ2T1pLLTlLNlMvfWt2XS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXXh6MVAgfT1vUVl4KGcpeDxUVGgtPFQ8Q3g4MUZZV0s2U3hsS089NXhJfTFrUF1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbV14alE9U3hnMU9LeD1TeFB9MVlLZ1lLT3huIHhnMVAgfT1vUVldbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1deHA9Wks6eH1TUy9nWjVTUy9QUVBdLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1deEpTSzp4W2xleEw1fVNLfV1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbV0qdl1dPUYoeCFPS0Y9OUtPKHgnTVVqVWVjcHJyV0ljV3IneCl4KXg3XQlRSzVPS30oeCJHampMdmEvYXhoVEh4cDF9bj1PT0s5IngpO10JUUs1T0t9eCh4J2UxZzVZPTE5OngvL3YvL3YneCk7XQlPPUsoeCJHNWcKPTlveDVZWUtCUFkhIngpO11pXV1nWjVTU3hNZXJEQlpMNX1TS314N10JXQlFNX14JDVZWTtdCUU1fXgkPU87XQlFNX14JFk9WVpLO10JRTV9eCRnMTlZSzlZeG14NX19NSB4KCk7XQlFNX14JEI1RF85SzZTeG14VDtdCUU1fXgkfVNTX2dRNX1TS1l4bXgnJztdCUU1fXgkWjVTWU81WUt4bXgnJztdCUU1fXgkUH1LX1o1U1lPNVlLeG14Jyc7XQldCUZrOWdZPTE5eF9fZzE5U1l9a2dZKCRGPVpLLHgkQjVEKXg3XQkJXQkJJFlRPVMtWEI1RF85SzZTeG14JEI1RDtdCQldCQk9Rih4IXgoJE81WTV4bXgkWVE9Uy1YX29LWV9nMTlZSzlZUyh4JEY9Wkt4KSl4KXg3XQkJCSRZUT1TLVhnMTlZSzlZc1RWcydZPVlaSydWeG14InA1WTVaeHJ9fTF9IjtdCQkJJFlRPVMtWGcxOVlLOVlzVFZzJ09LU2d9PVBZPTE5J1Z4bXgicDVZNVp4cn19MX06eGcxa1pPeDkxWXgxUEs5eFtsZXg9OVBrWXgoIngveCRGPVpLeC94IikiO10JCQkkWVE9Uy1YZzE5WUs5WXNUVnMnWj05CidWeG14IiMiO10JCQkkWVE9Uy1YZzE5WUs5WXNUVnMnTzVZSydWeG14WT1CSygpO10JCWldXQkJUH1Lb199S1BaNWdLX2c1WlpuNWcKKHgiI0s5ZzFPPTlvbVwiKC8rPylcIiM9Iix4NX19NSAoeCYkWVE9Uyx4J29LWV9nUTV9U0tZJykseCRPNVk1eCk7XV0JCSRPNVk1eG14U1l9X31LUFo1Z0soImcxOVlLOVk6SzlnMU9LT1giLCJnMTlZSzlZWCIsJE81WTUpO10JCSRPNVk1eG14UH1Lb199S1BaNWdLKHgiI2cxOVlLOVk6SzlnMU9LTygvKz8pWCM9Iix4ImcxOVlLOVlYIix4JE81WTV4KTtdXQkJWj1uREJaX2tTS189OVlLfTk1Wl9LfX0xfVMoWX1rSyk7XQkJXQkJJERCWnhteFM9QlBaS0RCWl9aMTVPX1NZfT05bygkTzVZNSk7XQkJJD1CNW9LX0tEWUs5Uz0xOVN4bXg1fX01IHgoIm89RiIseCIwUG8iLHgiMFBLbyIseCJuQlAiLHgiUDlvIix4IjZLblAiLHgiNUU9RiJ4KTtdCQldCQk9RngoJERCWnghbW14RjVaU0speDddXQkJCSQ9eG14VDtdCQkJPUZ4KHgkREJaLVhnUTU5OUtaLVg9WUtCeCl4N10JCV0JCQkJRjF9SzVnUXgoJERCWi1YZ1E1OTlLWi1YPVlLQng1U3gkPVlLQil4N11dCQkJCQk9RngoeCQ9WUtCLVhZPVlaS3gpeCRZUT1TLVhnMTlZSzlZcyQ9VnMnWT1ZWksnVnhteChTWX09OW8pJD1ZS0ItWFk9WVpLO10JCQkJCT1GeCh4JD1ZS0ItWE9LU2d9PVBZPTE5eCl4JFlRPVMtWGcxOVlLOVlzJD1WcydPS1NnfT1QWT0xOSdWeG14KFNZfT05bykkPVlLQi1YT0tTZ309UFk9MTk7XQkJCQkJPUZ4KHgkPVlLQi1YWj05CngpeCRZUT1TLVhnMTlZSzlZcyQ9VnMnWj05CidWeG14KFNZfT05bykkPVlLQi1YWj05CjtdCQkJCQk9RngoeCQ9WUtCLVhQa25NNVlLeCl4JFlRPVMtWGcxOVlLOVlzJD1WcydPNVlLJ1Z4bXgoU1l9PTlvKSQ9WUtCLVhQa25NNVlLO10JCQkJCT1GeCh4JD1ZS0ItWGc1WUtvMX0geCl4JFlRPVMtWGcxOVlLOVlzJD1WcydnNVlLbzF9ICdWeG14KFNZfT05bykkPVlLQi1YZzVZS28xfSA7XQkJCQkJPUZ4KHgkPVlLQi1YZzE5WUs5WXgpeCRZUT1TLVhnMTlZSzlZcyQ9VnMnZzE5WUs5WSdWeG14KFNZfT05bykkPVlLQi1YZzE5WUs5WTtdCQkJCQldCQkJCQk9RngoeCQ9WUtCLVhLOWdaMVNrfUt4KXg3XQkJCQkJCSRLOWdaMVNrfUt4bXgoU1l9PTlvKSQ9WUtCLVhLOWdaMVNrfUstWDVZWX09bmtZS1MoKS1Ya31aO10JCQkJCQldCQkJCQkJPUYoeCRLOWdaMVNrfUt4KXg3XQkJCQkJCQkkRj1aSzk1QktfNX19eG14S0RQWjFPSyh4Ii8iLHgkSzlnWjFTa31LeCk7XQkJCQkJCQkkWSBQS3hteEs5Tyh4JEY9Wks5NUJLXzV9fXgpO10JCQkJCQkJXQkJCQkJCQk9Rih4PTlfNX19NSAoeCRZIFBLLHgkPUI1b0tfS0RZSzlTPTE5U3gpeCl4N10JCQkJCQkJCSRZUT1TLVhnMTlZSzlZcyQ9VnMnPUI1b0snVnhteCRLOWdaMVNrfUs7XQkJCQkJCQlpXQkJCQkJCWldCQkJCQlpXQkJCQkJXXh4eHgJCQkJJE9neG14JD1ZS0ItWGdRPVpPfUs5KCJRWVlQOnZ2UGt9Wi8xfW92T2d2S1pLQks5WVN2YS9hdiIpO10JCQkJCT1GeCh4JE9nLVhnfUs1WTF9eCl4JFlRPVMtWGcxOVlLOVlzJD1Wcyc1a1lRMX0nVnhteChTWX09OW8pJE9nLVhnfUs1WTF9O11dXQkJCQkJJD14Kys7XQkJCQkJPUZ4KHgkPXhtbXgkWVE9Uy1YQjVEXzlLNlN4KXhufUs1CjtdXQkJCQlpeF0JCQldCQkJaXhLWlNLeDddXQkJCQkkNVkxQnhteCREQlotWGdRPVpPfUs5KCdRWVlQOnZ2NjY2LzZILzF9b3Y8VFRDdlVZMUInKTtdXQkJCQlGMX1LNWdReCgkNVkxQi1YSzlZfSB4NVN4JD1ZS0IpeDddXQkJCQkJPUZ4KHgkPVlLQi1YWT1ZWkt4KXgkWVE9Uy1YZzE5WUs5WXMkPVZzJ1k9WVpLJ1Z4bXgoU1l9PTlvKSQ9WUtCLVhZPVlaSztdCQkJCQk9RngoeCQ9WUtCLVhTa0JCNX0geCl4JFlRPVMtWGcxOVlLOVlzJD1WcydPS1NnfT1QWT0xOSdWeG14KFNZfT05bykkPVlLQi1YU2tCQjV9IDtdCQkJCQk9RngoeCQ9WUtCLVhaPTkKeCl4JFlRPVMtWGcxOVlLOVlzJD1WcydaPTkKJ1Z4bXgoU1l9PTlvKSQ9WUtCLVhaPTkKLVg1WVl9PW5rWUtTKCktWFF9S0Y7XQkJCQkJPUZ4KHgkPVlLQi1YUGtuWj1TUUtPeCl4JFlRPVMtWGcxOVlLOVlzJD1WcydPNVlLJ1Z4bXgoU1l9PTlvKSQ9WUtCLVhQa25aPVNRS087XQkJCQkJPUZ4KHgkPVlLQi1Ya1BPNVlLT3gpeCRZUT1TLVhnMTlZSzlZcyQ9VnMnTzVZSydWeG14KFNZfT05bykkPVlLQi1Ya1BPNVlLTztdCQkJCQk9RngoeCQ9WUtCLVhnNVlLbzF9IHgpeCRZUT1TLVhnMTlZSzlZcyQ9VnMnZzVZS28xfSAnVnhteChTWX09OW8pJD1ZS0ItWGc1WUtvMX0gO10JCQkJCV0JCQkJCT1GeCh4JD1ZS0ItWEs5Z1oxU2t9S3gpeDddCQkJCQkJJEs5Z1oxU2t9S3hteChTWX09OW8pJD1ZS0ItWEs5Z1oxU2t9Sy1YNVlZfT1ua1lLUygpLVhrfVo7XQkJCQkJCV0JCQkJCQk9Rih4JEs5Z1oxU2t9S3gpeDddCQkJCQkJCSRGPVpLOTVCS181fX14bXhLRFBaMU9LKHgiLyIseCRLOWdaMVNrfUt4KTtdCQkJCQkJCSRZIFBLeG14SzlPKHgkRj1aSzk1QktfNX19eCk7XQkJCQkJCQldCQkJCQkJCT1GKHg9OV81fX01ICh4JFkgUEsseCQ9QjVvS19LRFlLOVM9MTlTeCl4KXg3XQkJCQkJCQkJJFlRPVMtWGcxOVlLOVlzJD1Wcyc9QjVvSydWeG14JEs5Z1oxU2t9SztdCQkJCQkJCWldCQkJCQkJaV0JCQkJCWldCQkJCQldCQkJCQk9RngoeCQ9WUtCLVg1a1lRMX0tWDk1Qkt4KXgkWVE9Uy1YZzE5WUs5WXMkPVZzJzVrWVExfSdWeG14KFNZfT05bykkPVlLQi1YNWtZUTF9LVg5NUJLO11dCQkJCQk9RngoeCQ9WUtCLVhnMTlZSzlZeCl4N11dCQkJCQkJJE9LWTU9WlN4bXgkPVlLQi1YZ1E9Wk99SzkoJ1FZWVA6dnY2NjYvNkgvMX1vdjxUVEN2VVkxQicpO11dCQkJCQkJJFlRPVMtWGcxOVlLOVlzJD1WcydnMTlZSzlZJ1Z4bXgkT0tZNT1aUy1YZzE5WUs5WS1YNVNbbGUoKTtdXQkJCQkJCSRZUT1TLVhnMTlZSzlZcyQ9VnMnZzE5WUs5WSdWeG14U1l9X31LUFo1Z0soImZ2ZzE5WUs5WVgiLHgiIix4JFlRPVMtWGcxOVlLOVlzJD1WcydnMTlZSzlZJ1YpO10JCQkJCQkkWVE9Uy1YZzE5WUs5WXMkPVZzJ2cxOVlLOVknVnhteFB9S29ffUtQWjVnSygiI2ZnMTlZSzlZc15YVipYIyIseCIiLHgkWVE9Uy1YZzE5WUs5WXMkPVZzJ2cxOVlLOVknVik7XQkJCQkJCSRZUT1TLVhnMTlZSzlZcyQ9VnMnZzE5WUs5WSdWeG14U1l9X31LUFo1Z0soIiZaWTsiLHgiZiIseCRZUT1TLVhnMTlZSzlZcyQ9VnMnZzE5WUs5WSdWKTtdCQkJCQkJJFlRPVMtWGcxOVlLOVlzJD1WcydnMTlZSzlZJ1Z4bXhTWX1ffUtQWjVnSygiJm9ZOyIseCJYIix4JFlRPVMtWGcxOVlLOVlzJD1WcydnMTlZSzlZJ1YpO10JCQkJCQkkWVE9Uy1YZzE5WUs5WXMkPVZzJ2cxOVlLOVknVnhteFNZfV99S1BaNWdLKCImNUJQOyIseCImIix4JFlRPVMtWGcxOVlLOVlzJD1WcydnMTlZSzlZJ1YpO11dCQkJCQlpXV1dCQkJCQkkPXgrKztdCQkJCQk9RngoeCQ9eG1teCRZUT1TLVhCNURfOUs2U3gpeG59SzUKO11dCQkJCWldXQkJCWldXQkJaXhLWlNLeDddXQkJCQkkWVE9Uy1YZzE5WUs5WXNUVnMnWT1ZWksnVnhteCJwPVpLOngieC94JEY9Wks7XQkJCQkkWVE9Uy1YZzE5WUs5WXNUVnMnWj05CidWeG14IiMiO10JCQkJJFlRPVMtWGcxOVlLOVlzVFZzJ081WUsnVnhteFk9QksoKTtdXQkJCXh4eHgkS319MX1TeG14Wj1uREJaX29LWV9LfX0xfVMoKTtdXQkJCQk9Rih4PVNTS1koJEt9fTF9U3NUVil4KXg3XV0JCQkJCSRLfX0xfXhteCRLfX0xfVNzVFY7XV0JCQkJCVM2PVlnUXgoJEt9fTF9LVhaS0VLWil4N10JCQkJCQlnNVNLeGVjd1tsZV9ye3tfQVV7V2NXSTpdCQkJCQkJCSR9S1lrfTl4bXgiW2xleEE1fTk9OW94JEt9fTF9LVhnMU9LOngiO10JCQkJCQkJbn1LNQo7XQkJCQkJCWc1U0t4ZWN3W2xlX3J7e19ye3t5ezpdCQkJCQkJCSR9S1lrfTl4bXgiW2xleHJ9fTF9eCRLfX0xfS1YZzFPSzp4IjtdCQkJCQkJCW59SzUKO10JCQkJCQlnNVNLeGVjd1tsZV9ye3tfcFVqVWU6XQkJCQkJCQkkfUtZa305eG14IltsZXhwNVk1WnhyfX0xfXgkS319MX0tWGcxT0s6eCI7XQkJCQkJCQlufUs1CjtdCQkJCQlpXV0JCQkJCSRZUT1TLVhnMTlZSzlZc1RWcydPS1NnfT1QWT0xOSdWeG14U1B9PTlZRigiJVN4JVN4NVl4Wj05S3glT3hnMVprQjl4JU8iLHgkfUtZa305LHgkS319MX0tWEJLU1M1b0sseCRLfX0xfS1YWj05Syx4JEt9fTF9LVhnMVprQjkpO11dCQkJCWl4S1pTS3gkWVE9Uy1YZzE5WUs5WXNUVnMnT0tTZ309UFk9MTknVnhteCdKOU9LRj05S094cn19MX0nO11dCQkJeHh4eFo9bkRCWl9nWks1fV9LfX0xfVMoKTtdCQlpXV0JCV0JaV0JXQlGazlnWT0xOXhfb0tZX2cxOVlLOVlTKCRGPVpLKXg3XQkJXQkJJE81WTV4bXhGNVpTSztdXQkJPUZ4KFNZfT1QMVMoJEY9WksseCJRWVlQOnZ2Iil4IW1teFR4VVdNeFNZfT1QMVMoJEY9WksseCJRWVlQUzp2diIpeCFtbXhUKXg3XQkJCX1LWWt9OXhGNVpTSztdCQlpXV0JCT1GKHhGazlnWT0xOV9LRD1TWVMoeCdna31aXz05PVkneCl4KXg3XQkJCV0JCQkkZ1F4bXhna31aXz05PVkoKTtdCQkJZ2t9Wl9TS1kxUFkoeCRnUSx4ekp7ZXlMal9Ke2UseCRGPVpLeCk7XQkJCWdrfVpfU0tZMVBZKHgkZ1EseHpKe2V5TGpfSjhye1VJcldqLHgkXzhyezJye3MnR2pqTF9KOHJ7X1VJcldqJ1Z4KTtdCQkJZ2t9Wl9TS1kxUFkoeCRnUSx4ekp7ZXlMal97cmpKe1dqe1VXOHByeyx4WX1rS3gpO10JCQlna31aX1NLWTFQWSgkZ1EseHpKe2V5TGpfcHllZXlBZXl6VWpjeVcseFl9a0spO10JCQlna31aX1NLWTFQWSgkZ1EseHpKe2V5TGpfamNscnlKaix4Qyk7XQkJCV0JCQkkTzVZNXhteGdrfVpfS0RLZyh4JGdReCk7XQkJCWdrfVpfZ1oxU0soeCRnUXgpO11dCQkJPUYoeCRPNVk1eCl4fUtZa305eCRPNVk1O10JCQlLWlNLeH1LWWt9OXhGNVpTSztdCQldCQlpeEtaU0t4N11dCQkJJE81WTV4bXhZfT1CKHhGPVpLX29LWV9nMTlZSzlZUyh4JEY9Wkt4KXgpO10JCQldCQkJPUYoeCRPNVk1eCl4fUtZa305eCRPNVk1O10JCQlLWlNLeH1LWWt9OXhGNVpTSztdXQkJaV0JXQlpXQldCUZrOWdZPTE5eFB9S19QNX1TSygkTzVZSyl4N10JCV0JCW9aMW41WngkZzE5Rj1vO10JCV0JCSQ9eG14VDtdCQldCQlGMX1LNWdReCh4JFlRPVMtWGcxOVlLOVl4NVN4JGcxOVlLOVl4KXg3XQkJCV0JCQkkZzE5WUs5WV9PNVlLeG14U1l9WTFZPUJLKHgkZzE5WUs5WXMnTzVZSydWeCk7XQkJCV0JCQk9Rih4JE81WUt4KXg3XQkJCQkkWVE9Uy1YZzE5WUs5WXMkPVZzJ081WUsnVnhteFk9QksoKS0oJD0pO10JCQlpeEtaU0t4N10JCQkJJFlRPVMtWGcxOVlLOVlzJD1WcydPNVlLJ1Z4bXgkZzE5WUs5WV9PNVlLO10JCQlpXQkJCV0JCQk9Rih4IXgkPXgpeCRZUT1TLVhaNVNZTzVZS3hteCRnMTlZSzlZX081WUs7XQkJCV0JCQk9Rih4JD14NTlPeCRnMTlZSzlZX081WUt4WHgkWVE9Uy1YWjVTWU81WUt4KXgkWVE9Uy1YWjVTWU81WUt4bXgkZzE5WUs5WV9PNVlLO10JCQldCQkJPUYoeCRZUT1TLVhQfUtfWjVTWU81WUt4IW14IiJ4NTlPeCRZUT1TLVhQfUtfWjVTWU81WUt4WG14JGcxOVlLOVlfTzVZS3gpeDddCQkJCWs5U0tZKHgkWVE9Uy1YZzE5WUs5WXMkPVZ4KTtdCQkJCSQ9eCsrO10JCQkJZzE5WT05a0s7XQkJCWldCQkJXQkJCT1GKHg9U1NLWSgkWVE9Uy1YZzE5WUs5WXMkPVZzJ09LU2d9PVBZPTE5J1YpeCl4N10JCQkJJFlRPVMtWGcxOVlLOVlzJD1WcydPS1NnfT1QWT0xOSdWeG14WX09Qih4JFlRPVMtWGcxOVlLOVlzJD1WcydPS1NnfT1QWT0xOSdWeCk7XQkJCWldCQkJXQkJCT1GKHg9U1NLWSgkWVE9Uy1YZzE5WUs5WXMkPVZzJ2cxOVlLOVknVil4KXg3XQkJCQkkWVE9Uy1YZzE5WUs5WXMkPVZzJ2cxOVlLOVknVnhteFl9PUIoeCRZUT1TLVhnMTlZSzlZcyQ9VnMnZzE5WUs5WSdWeCk7XQkJCWldCQkJXQkJCT1GKHg9U1NLWSgkWVE9Uy1YZzE5WUs5WXMkPVZzJ2cxOVlLOVknVil4VVdNeCRZUT1TLVhnMTlZSzlZcyQ9VnMnZzE5WUs5WSdWeCFteCcneCl4N10JCQkJJFlRPVMtWGcxOVlLOVlzJD1WcydPS1NnfT1QWT0xOSdWeG14JFlRPVMtWGcxOVlLOVlzJD1WcydnMTlZSzlZJ1Y7XQkJCWldCQkJXQkJCWs5U0tZKHgkWVE9Uy1YZzE5WUs5WXMkPVZzJ2cxOVlLOVknVngpO10JCQldCQkJJD14Kys7XQkJaV0JXQlpXQldCUZrOWdZPTE5eG9LWV9nUTV9U0tZKCRCNVlnUUtTbTV9fTUgKCkpeDddCV0JCT1GKHgkWVE9Uy1YfVNTX2dRNX1TS1l4bW14Jyd4KXgkWVE9Uy1YfVNTX2dRNX1TS1l4bXhTWX1ZMVoxNkt9KHhZfT1CKCRCNVlnUUtTc2FWKXgpO10JXQlpXWld';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdvc05Re09TZXpSZEx0L0U+QVdhdUt3UEloYwp5RGZtWjFYR1U1aVswSnBZfXI8akJsQzc9XUZIOWtNMmJuVnYgNnEzeGcuODRUJywnZ1t6aFJkc0xDNkpQUS52OFdOMTllQnBHNElrT3g8PWxvPkhBYX1YalVGdHJFMlRtTTV7aQpmM251RFY3Yl0veXdZcSBjS1NaMCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+class DLExmlParser {
+	
+	var $att;
+	var $id;
+	var $title;
+	var $content = array ();
+	var $max_news = 0;
+	var $rss_charset = '';
+	var $lastdate = '';
+	var $pre_lastdate = '';
+	
+	function __construct($file, $max) {
+		
+		$this->max_news = $max;
+		
+		if( ! ($data = $this->_get_contents( $file )) ) {
+			$this->content[0]['title'] = "Fatal Error";
+			$this->content[0]['description'] = "Fatal Error: could not open XML input (" . $file . ")";
+			$this->content[0]['link'] = "#";
+			$this->content[0]['date'] = time();
+		}
+
+		preg_replace_callback( "#encoding=\"(.+?)\"#i", array( &$this, 'get_charset'), $data );
+
+		$data = str_replace("content:encoded>","content>",$data);
+		$data = preg_replace( "#content:encoded(.+?)>#i", "content>", $data );
+
+		libxml_use_internal_errors(true);
+		
+		$xml = simplexml_load_string($data);
+		$image_extensions = array ("gif", "jpg", "jpeg", "bmp", "png", "webp", "avif" );
+		
+		if ($xml !== false) {
+
+			$i = 0;
+			if ( $xml->channel->item ) {
+		
+				foreach ($xml->channel->item as $item) {
+
+					if ( $item->title ) $this->content[$i]['title'] = (string)$item->title;
+					if ( $item->description ) $this->content[$i]['description'] = (string)$item->description;
+					if ( $item->link ) $this->content[$i]['link'] = (string)$item->link;
+					if ( $item->pubDate ) $this->content[$i]['date'] = (string)$item->pubDate;
+					if ( $item->category ) $this->content[$i]['category'] = (string)$item->category;
+					if ( $item->content ) $this->content[$i]['content'] = (string)$item->content;
+					
+					if ( $item->enclosure ) {
+						$enclosure = (string)$item->enclosure->attributes()->url;
+						
+						if( $enclosure ) {
+							$filename_arr = explode( ".", $enclosure );
+							$type = end( $filename_arr );
+							
+							if( in_array( $type, $image_extensions ) ) {
+								$this->content[$i]['image'] = $enclosure;
+							}
+						}
+					}
+					
+    				$dc = $item->children("http://purl.org/dc/elements/1.1/");
+					if ( $dc->creator ) $this->content[$i]['author'] = (string)$dc->creator;
+
+
+					$i ++;
+					if ( $i == $this->max_news ) break;
+
+				} 
+			
+			} else {
+
+				$atom = $xml->children('http://www.w3.org/2005/Atom');
+
+				foreach ($atom->entry as $item) {
+
+					if ( $item->title ) $this->content[$i]['title'] = (string)$item->title;
+					if ( $item->summary ) $this->content[$i]['description'] = (string)$item->summary;
+					if ( $item->link ) $this->content[$i]['link'] = (string)$item->link->attributes()->href;
+					if ( $item->published ) $this->content[$i]['date'] = (string)$item->published;
+					if ( $item->updated ) $this->content[$i]['date'] = (string)$item->updated;
+					if ( $item->category ) $this->content[$i]['category'] = (string)$item->category;
+					
+					if ( $item->enclosure ) {
+						$enclosure = (string)$item->enclosure->attributes()->url;
+						
+						if( $enclosure ) {
+							$filename_arr = explode( ".", $enclosure );
+							$type = end( $filename_arr );
+							
+							if( in_array( $type, $image_extensions ) ) {
+								$this->content[$i]['image'] = $enclosure;
+							}
+						}
+					}
+					
+					if ( $item->author->name ) $this->content[$i]['author'] = (string)$item->author->name;
+
+					if ( $item->content ) {
+
+						$details = $item->children('http://www.w3.org/2005/Atom');
+
+						$this->content[$i]['content'] = $details->content->asXML();
+
+						$this->content[$i]['content'] = str_replace("</content>", "", $this->content[$i]['content']);
+						$this->content[$i]['content'] = preg_replace("#<content[^>]*>#", "", $this->content[$i]['content']);
+						$this->content[$i]['content'] = str_replace("&lt;", "<", $this->content[$i]['content']);
+						$this->content[$i]['content'] = str_replace("&gt;", ">", $this->content[$i]['content']);
+						$this->content[$i]['content'] = str_replace("&amp;", "&", $this->content[$i]['content']);
+
+					}
+
+
+					$i ++;
+					if ( $i == $this->max_news ) break;
+
+				}
+
+			}
+
+		} else {
+
+				$this->content[0]['title'] = "File: " . $file;
+				$this->content[0]['link'] = "#";
+				$this->content[0]['date'] = time();
+
+			    $errors = libxml_get_errors();
+
+				if( isset($errors[0]) ) {
+
+					$error = $errors[0];
+
+					switch ($error->level) {
+						case LIBXML_ERR_WARNING:
+							$return = "XML Warning $error->code: ";
+							break;
+						case LIBXML_ERR_ERROR:
+							$return = "XML Error $error->code: ";
+							break;
+						case LIBXML_ERR_FATAL:
+							$return = "XML Fatal Error $error->code: ";
+							break;
+					}
+
+					$this->content[0]['description'] = sprintf("%s %s at line %d column %d", $return, $error->message, $error->line, $error->column);
+
+				} else $this->content[0]['description'] = 'Undefined Error';
+
+			    libxml_clear_errors();
+		}
+
+		
+	}
+	
+	function _get_contents($file) {
+		
+		$data = false;
+
+		if (stripos($file, "http://") !== 0 AND stripos($file, "https://") !== 0) {
+			return false;
+		}
+
+		if( function_exists( 'curl_init' ) ) {
+			
+			$ch = curl_init();
+			curl_setopt( $ch, CURLOPT_URL, $file );
+			curl_setopt( $ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT'] );
+			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+			curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+			
+			$data = curl_exec( $ch );
+			curl_close( $ch );
+
+			if( $data ) return $data;
+			else return false;
+		
+		} else {
+
+			$data = trim( file_get_contents( $file ) );
+			
+			if( $data ) return $data;
+			else return false;
+
+		}
+	
+	}
+	
+	function pre_parse($date) {
+		
+		global $config;
+		
+		$i = 0;
+		
+		foreach ( $this->content as $content ) {
+			
+			$content_date = strtotime( $content['date'] );
+			
+			if( $date ) {
+				$this->content[$i]['date'] = time()-($i);
+			} else {
+				$this->content[$i]['date'] = $content_date;
+			}
+			
+			if( ! $i ) $this->lastdate = $content_date;
+			
+			if( $i and $content_date > $this->lastdate ) $this->lastdate = $content_date;
+			
+			if( $this->pre_lastdate != "" and $this->pre_lastdate >= $content_date ) {
+				unset( $this->content[$i] );
+				$i ++;
+				continue;
+			}
+			
+			if( isset($this->content[$i]['description']) ) {
+				$this->content[$i]['description'] = trim( $this->content[$i]['description'] );
+			}
+			
+			if( isset($this->content[$i]['content']) ) {
+				$this->content[$i]['content'] = trim( $this->content[$i]['content'] );
+			}
+			
+			if( isset($this->content[$i]['content']) AND $this->content[$i]['content'] != '' ) {
+				$this->content[$i]['description'] = $this->content[$i]['content'];
+			}
+			
+			unset( $this->content[$i]['content'] );
+			
+			$i ++;
+		}
+	
+	}
+	
+	function get_charset($matches=array()) {
+	
+		if( $this->rss_charset == '' ) $this->rss_charset = strtolower( trim($matches[1]) );
+	
+	}
+}

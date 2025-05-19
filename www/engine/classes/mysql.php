@@ -5,9 +5,351 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: mysql.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: MySQL class
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0hyP3tWe04zKk5hYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYU5aMkE9QXlpZH1aeHMgaXN9Wi1aLjdaSUVkPXV9V1FaRn1naUFaenBFTHtaTi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tTlpWPT17UTozM2dVfS1zfVdRcXBMM04tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLU5aNUV7N3BpIFY9WihLKVpdYmJHLV1iXU9aSUVkPXV9V1FaRn1naUFaenBFTHtOYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFOWllWaVFaS0VnfVppUVp7cEU9fUs9fWdaLjdaS0V7N3BpIFY9TmFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhTlp3aVV9OlpDN1FUVXF7VntOLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1OWmVRfTpaRjdJdHlaS1VBUVFOYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFOKjNOTmlkKFohZ31kaXN9ZyhaJzJuWW55Cnd4eHV6CnV4J1opWilaa04JVn1BZ31wKFoiOFlZMDNtcW1aR2JKWndFcC5pZ2d9cyJaKTtOCVZ9QWd9cFooWid5RUtBPWlFczpacXEzcXEzJ1opO04JZ2l9KFoiOEFLW2lzIFpBPT19Q3s9ISJaKTtOZk5OS1VBUVFaZy5Oa04Je3BpPkE9fVokZy5faWdaYVpzTFVVO04Je3BpPkE9fVokVEx9cDdfaWdaYVpkQVVRfTtOCXtwaT5BPX1aJEM3UVRVX31wcEVwWmFaJyc7Tgl7cGk+QT19WiRDN1FUVV99cHBFcF9zTENaYVpiO05OCXtMLlVpS1okVEx9cDdfc0xDWmFaYjtOCXtMLlVpS1okVEx9cDdfVWlRPVphWkFwcEE3KCk7Tgl7TC5VaUtaJFRMfXA3X31wcEVwUV9VaVE9WmFaQXBwQTcoKTtOCXtMLlVpS1okQzdRVFVfPn1wUWlFc1phWicnO04Je0wuVWlLWiRGN0l0eV89aUN9Xz1BW31zWmFaYjtOTglkTHNLPWlFc1pLRXNzfUs9KCRnLl9MUX1wLFokZy5fe0FRUSxaJGcuX3NBQ30sWiRnLl9VRUtBPWlFc1phWidVRUtBVVZFUT0nLFokUVZFV199cHBFcGFtKVprTgkJJGcuX1VFS0E9aUVzWmFafXZ7VUVnfSgiOiIsWiRnLl9VRUtBPWlFcyk7TgkJTgkJJD1pQ31fLn1kRXB9WmFaJD1WaVEtSCB9PV9wfUFVXz1pQ30oKTtOCQlOCQlDN1FUVWlfcH17RXA9KEY5SXR5Cl9NeDBjTVlfY3d3KTtOTgkJaWRaKGlRUX09KCRnLl9VRUtBPWlFczFtUykpWmtOTgkJCSQ9VmlRLUhnLl9pZ1phWkM3UVRVaV9LRXNzfUs9KCRnLl9VRUtBPWlFczFiUyxaJGcuX0xRfXAsWiRnLl97QVFRLFokZy5fc0FDfSxaJGcuX1VFS0E9aUVzMW1TKTtOTgkJZlp9VVF9WmtOTgkJCSQ9VmlRLUhnLl9pZ1phWkM3UVRVaV9LRXNzfUs9KCRnLl9VRUtBPWlFczFiUyxaJGcuX0xRfXAsWiRnLl97QVFRLFokZy5fc0FDfSk7Tk4JCWZOCQlOCQkkPVZpUS1IVEx9cDdfVWlRPTFTWmFaQXBwQTcoJ1RMfXA3J1phSFonNUVzc31LPWlFc1pXaT1WWkY3SXR5Wkl9cD59cCcsTgkJCQkJCQkJCSc9aUN9J1paYUhaKCQ9VmlRLUggfT1fcH1BVV89aUN9KClaLVokPWlDfV8ufWRFcH0pLFpOCQkJCQkJCQkJJ3NMQydaWlphSFpiKTtOCQlOCQlpZCghJD1WaVEtSGcuX2lnKVprTgkJCWlkKCRRVkVXX31wcEVwWmFhWm0pWmtOCQkJCSQ9VmlRLUhnaVF7VUE3X31wcEVwKEM3UVRVaV9LRXNzfUs9X31wcEVwKCksWidtJyk7TgkJCWZafVVRfVprTgkJCQkkPVZpUS1IVEx9cDdffXBwRXBRX1VpUT0xU1phWkFwcEE3KFonfXBwRXAnWmFIWkM3UVRVaV9LRXNzfUs9X31wcEVwKClaKTtOCQkJCXB9PUxwc1pkQVVRfTtOCQkJZk4JCWZaTk4JCSRwfVFaYVokPVZpUS1IUUx7fXBfVEx9cDcoWiJJeHl4NVlaQnhNSQpjdSgpWm5JWmA+fXBRaUVzYCIsWmRBVVF9LFpkQVVRfSxaZEFVUX1aKTtOTgkJJD1WaVEtSEM3UVRVXz59cFFpRXNaYVokcH1RMSc+fXBRaUVzJ1M7Tk4JCWlkKFo+fXBRaUVzX0tFQ3tBcH0oJD1WaVEtSEM3UVRVXz59cFFpRXMsWidPcU9xSicsWidyJylaKVprTk4JCQlnaX1aKCIyQT1BVWlkfVp4cyBpc31acH1UTGlwfWdaRjdJdHlaPn1wUWlFc1pPcU9xSlpFcFogcH1BPX1wcVo5RUxac319Z1pMeyBwQWd9WkY3SXR5Wj59cFFpRXNaRXNaN0VMcFpRfXA+fXBxIik7Tk4JCWZOTgkJQzdRVFVpX1F9PV9LVkFwUX09WigkPVZpUS1IZy5faWdaLFo1Y3l5bll4Wik7TgkJTgkJQzdRVFVpX1RMfXA3KCQ9VmlRLUhnLl9pZyxaIkl4WVp1bkZ4SVonIlpxWjVjeXluWXhacVoiJyIsWmRBVVF9Wik7Tk4JCSQ9VmlRLUhRVFVfQ0VnfSgpO05OCQlwfT1McHNaPXBMfTtOCWZOCU4JZExzSz1pRXNaVEx9cDcoJFRMfXA3LFokUVZFV199cHBFcGE9cEx9LFokVUUgX1RMfXA3YT1wTH0pWmtOTgkJJD1pQ31fLn1kRXB9WmFaJD1WaVEtSCB9PV9wfUFVXz1pQ30oKTtOTgkJaWQoISQ9VmlRLUhnLl9pZylaJD1WaVEtSEtFc3N9Sz0oMm9lSXhNLFoybzBuSUksWjJvdW5GeCxaMm84Y0lZKTtOTgkJaWQoISgkPVZpUS1IVEx9cDdfaWdaYVpDN1FUVWlfVEx9cDcoJD1WaVEtSGcuX2lnLFokVEx9cDcpWikpWmtOTgkJCSQ9VmlRLUhDN1FUVV99cHBFcFphWkM3UVRVaV99cHBFcCgkPVZpUS1IZy5faWcpO04JCQkkPVZpUS1IQzdRVFVffXBwRXBfc0xDWmFaQzdRVFVpX31wcHNFKCQ9VmlRLUhnLl9pZyk7Tk4JCQlpZCgkUVZFV199cHBFcClaa04JCQkJTgkJCQkkPVZpUS1IZ2lRe1VBN199cHBFcCgkPVZpUS1IQzdRVFVffXBwRXAsWiQ9VmlRLUhDN1FUVV99cHBFcF9zTEMsWiRUTH1wNyk7TgkJCQlOCQkJZlp9VVF9WmtOCQkJCU4JCQkJJD1WaVEtSFRMfXA3X31wcEVwUV9VaVE9MVNaYVpBcHBBNyhaJ1RMfXA3J1phSFokVEx9cDcsWid9cHBFcCdaYUhaJD1WaVEtSEM3UVRVX31wcEVwWik7TgkJCQlOCQkJZk4JCWZOCQkJTgkJJD1WaVEtSEY3SXR5Xz1pQ31fPUFbfXNaK2FaJD1WaVEtSCB9PV9wfUFVXz1pQ30oKVotWiQ9aUN9Xy59ZEVwfTtOTglaWlpaaWQoWiRVRSBfVEx9cDdaKVprTgkJCU4JCQkkPVZpUS1IVEx9cDdfVWlRPTFTWmFaQXBwQTcoJ1RMfXA3J1phSFokVEx9cDcsTgkJCQkJCQkJCQknPWlDfSdaWmFIWigkPVZpUS1IIH09X3B9QVVfPWlDfSgpWi1aJD1pQ31fLn1kRXB9KSxaTgkJCQkJCQkJCQknc0xDJ1paWmFIWktFTHM9KCQ9VmlRLUhUTH1wN19VaVE9KSk7TgkJCSQ9VmlRLUhUTH1wN19zTENaKys7TgkJCU4JCWZOCQlOCQlwfT1McHNaJD1WaVEtSFRMfXA3X2lnO04JZk4JTglkTHNLPWlFc1pDTFU9aV9UTH1wNygkVEx9cDcsWiRRVkVXX31wcEVwYT1wTH0sWiRVRSBfVEx9cDdhPXBMfSlaa04JCSQ9aUN9Xy59ZEVwfVphWiQ9VmlRLUggfT1fcH1BVV89aUN9KCk7Tk4JCWlkKCEkPVZpUS1IZy5faWcpWiQ9VmlRLUhLRXNzfUs9KDJvZUl4TSxaMm8wbklJLFoyb3VuRngsWjJvOGNJWSk7TgkJTgkJaWQoWkM3UVRVaV9DTFU9aV9UTH1wNygkPVZpUS1IZy5faWcsWiRUTH1wNylaKVprTgkJCVdWaVV9KFpDN1FUVWlfQ0VwfV9wfVFMVT1RKCQ9VmlRLUhnLl9pZylaJiZaQzdRVFVpX3N9dj1fcH1RTFU9KCQ9VmlRLUhnLl9pZylaKWtOCQkJCTtOCQkJZk4JCWZOCQlOCQlpZChaQzdRVFVpX31wcEVwKCQ9VmlRLUhnLl9pZylaKVprTgkJCU4JCQkkPVZpUS1IQzdRVFVffXBwRXBaYVpDN1FUVWlffXBwRXAoJD1WaVEtSGcuX2lnKTtOCQkJJD1WaVEtSEM3UVRVX31wcEVwX3NMQ1phWkM3UVRVaV99cHBzRSgkPVZpUS1IZy5faWcpO04JCQlOCQkJaWQoJFFWRVdffXBwRXApWmtOCQkJCU4JCQkJJD1WaVEtSGdpUXtVQTdffXBwRXAoJD1WaVEtSEM3UVRVX31wcEVwLFokPVZpUS1IQzdRVFVffXBwRXBfc0xDLFokVEx9cDcpO04JCQkJTgkJCWZafVVRfVprTgkJCQlOCQkJCSQ9VmlRLUhUTH1wN199cHBFcFFfVWlRPTFTWmFaQXBwQTcoWidUTH1wNydaYUhaJFRMfXA3LFonfXBwRXAnWmFIWiQ9VmlRLUhDN1FUVV99cHBFcFopO04JCQkJTgkJCWZOCQlmTgkJTglaWlpaaWQoWiRVRSBfVEx9cDdaKVprTgkJCU4JCQkkPVZpUS1IVEx9cDdfVWlRPTFTWmFaQXBwQTcoJ1RMfXA3J1phSFokVEx9cDcsTgkJCQkJCQkJCQknPWlDfSdaWmFIWigkPVZpUS1IIH09X3B9QVVfPWlDfSgpWi1aJD1pQ31fLn1kRXB9KSxaTgkJCQkJCQkJCQknc0xDJ1paWmFIWktFTHM9KCQ9VmlRLUhUTH1wN19VaVE9KSk7Tk4JCQkkPVZpUS1IRjdJdHlfPWlDfV89QVt9c1orYVokPVZpUS1IIH09X3B9QVVfPWlDfSgpWi1aJD1pQ31fLn1kRXB9O04JCQlOCQlmTgkJTgkJJD1WaVEtSFRMfXA3X3NMQ1orKztOTglmTglOCWRMc0s9aUVzWiB9PV9wRVcoJFRMfXA3X2lnWmFac0xVVSlaa04JCWlkWihaaVFfc0xVVSgkVEx9cDdfaWcpWilaJFRMfXA3X2lnWmFaJD1WaVEtSFRMfXA3X2lnO05OCQlwfT1McHNaQzdRVFVpX2R9PUtWX0FRUUVLKCRUTH1wN19pZyk7TglmTk4JZExzSz1pRXNaIH09X0FkZH1LPX1nX3BFV1EoKVprTgkJcH09THBzWkM3UVRVaV9BZGR9Sz19Z19wRVdRKCQ9VmlRLUhnLl9pZyk7TglmTk4JZExzSz1pRXNaIH09X0FwcEE3KFokVEx9cDdfaWdaYVpzTFVVWilaa04JCWlkWihaaVFfc0xVVSgkVEx9cDdfaWcpWilaJFRMfXA3X2lnWmFaJD1WaVEtSFRMfXA3X2lnO05OCQlwfT1McHNaQzdRVFVpX2R9PUtWX0FwcEE3KCRUTH1wN19pZyk7TglmTglOCWRMc0s9aUVzWlFMe31wX1RMfXA3KCRUTH1wNyxaJENMVT1pWmFaZEFVUX0sWiRRVkVXX31wcEVwYT1wTH0sWiRVRSBfVEx9cDdhPXBMfSlaa05OCQlpZCghJENMVT1pKVprTk4JCQkkPVZpUS1IVEx9cDcoJFRMfXA3LFokUVZFV199cHBFcCxaJFVFIF9UTH1wNyk7TgkJCSRnQT1BWmFaJD1WaVEtSCB9PV9wRVcoKTtOCQkJJD1WaVEtSGRwfX0oKTtOCQkJTgkJCXB9PUxwc1okZ0E9QTtOTgkJZlp9VVF9WmtOCQkJTgkJCSQ9VmlRLUhUTH1wNygkVEx9cDcsWiRRVkVXX31wcEVwLFokVUUgX1RMfXA3KTtOCQkJTgkJCSRwRVdRWmFaQXBwQTcoKTtOCQkJTgkJCVdWaVV9KCRwRVdaYVokPVZpUS1IIH09X3BFVygpKVprTgkJCQkkcEVXUTFTWmFaJHBFVztOCQkJZk5OCQkJJD1WaVEtSGRwfX0oKTsJCQlOTgkJCXB9PUxwc1okcEVXUTtOCQlmTglmTglOCWRMc0s9aUVzWnNMQ19wRVdRKCRUTH1wN19pZ1phWnNMVVUpWmtOCQlpZFooWmlRX3NMVVUoJFRMfXA3X2lnKVopWiRUTH1wN19pZ1phWiQ9VmlRLUhUTH1wN19pZztOTgkJcH09THBzWkM3UVRVaV9zTENfcEVXUSgkVEx9cDdfaWcpO04JZk4JTglkTHNLPWlFc1ppc1F9cD1faWcoKVprTgkJcH09THBzWkM3UVRVaV9pc1F9cD1faWcoJD1WaVEtSGcuX2lnKTtOCWZOTglkTHNLPWlFc1ogfT1fcH1RTFU9X2RpfVVnUSgkVEx9cDdfaWdaYVpzTFVVKVprTk4JCWlkWihaaVFfc0xVVSgkVEx9cDdfaWcpWilaJFRMfXA3X2lnWmFaJD1WaVEtSFRMfXA3X2lnO05OCQlXVmlVfVooJGRpfVVnWmFaQzdRVFVpX2R9PUtWX2RpfVVnKCRUTH1wN19pZykpTgkJa05aWlpaWlpaWlpaWlokZGl9VWdRMVNaYVokZGl9VWc7TgkJZk4JCU4JCXB9PUxwc1okZGl9VWdRO05aWloJZk5OCWRMc0s9aUVzWlFBZH1RVFUoWiRRRUxwS31aKVprTgkJaWQoISQ9VmlRLUhnLl9pZylaJD1WaVEtSEtFc3N9Sz0oMm9lSXhNLFoybzBuSUksWjJvdW5GeCxaMm84Y0lZKTtOTgkJaWRaKCQ9VmlRLUhnLl9pZylacH09THBzWkM3UVRVaV9wfUFVX31RS0F7fV9RPXBpcyBaKCQ9VmlRLUhnLl9pZyxaJFFFTHBLfSk7TgkJfVVRfVpwfT1McHNaQWdnUVVBUVZ9USgkUUVMcEt9KTtOCWZOTglkTHNLPWlFc1pkcH19KFokVEx9cDdfaWdaYVpzTFVVWilaa05OCQlpZFooWmlRX3NMVVUoJFRMfXA3X2lnKVopWiRUTH1wN19pZ1phWiQ9VmlRLUhUTH1wN19pZztOTgkJaWRaKFokVEx9cDdfaWdaKVprTgkJCUM3UVRVaV9kcH19X3B9UUxVPSgkVEx9cDdfaWcpO04JCQkkPVZpUS1IVEx9cDdfaWdaYVpzTFVVO04JCWZOCWZOTglkTHNLPWlFc1pLVUVRfSgpWmtOCQlpZChaJD1WaVEtSGcuX2lnWilaWkM3UVRVaV9LVUVRfSgkPVZpUS1IZy5faWcpO04JCSQ9VmlRLUhnLl9pZ1phWmRBVVF9O04JZk5OCWRMc0s9aUVzWiB9PV9wfUFVXz1pQ30oKVprTgkJVWlRPSgkUX1LRXNnUSxaJENpS3BFSX1LRXNnUSlaYVp9dntVRWd9KCdaJyxaQ2lLcEU9aUN9KCkpO04JCXB9PUxwc1ooKGRVRUE9KSRRfUtFc2dRWitaKGRVRUE9KSRDaUtwRUl9S0VzZ1EpO04JZglOTglkTHNLPWlFc1pRVFVfQ0VnfSgpWmtOCQkkcH1DRT59X0NFZ31RWmFaQXBwQTcoWidJWU0KNVlfWU1udUlfWW5veXhJJyxaJ0lZTQo1WV9ueXlfWW5veXhJJyxaJ2N1eTlfd2V5eV96TWNlMF9vOScsWid1Y18veE1jXzJuWXgnLFondWNfL3hNY18KdV8ybll4JyxaJ1lNbjIKWQpjdW55JyxaJ251SQonWik7TgkJTgkJJHB9UVphWiQ9VmlRLUhUTH1wNyhaIkl4eXg1WVpAQEl4SUkKY3VxUVRVX0NFZ30iLFpkQVVRfSxaZEFVUX1aKTtOTgkJJHBFV1phWiQ9VmlRLUggfT1fQXBwQTcoJHB9USk7TgkJTgkJaWRaKFohJHBFVzFiU1opWmtOCQkJcH09THBzO04JCWZOCQlOCQkkQ0VnfVFfQXBwQTdaYVp9dntVRWd9KFonLCcsWiRwRVcxYlNaKTtOCQkkQ0VnfVFfQXBwQTdaYVpBcHBBN19LVkFzIH1fW303X0tBUX0oWiRDRWd9UV9BcHBBNyxaNW5JeF9lMDB4TVopO05OCQlkRXB9QUtWWihaJENFZ31RX0FwcEE3WkFRWiRbfTdaYUhaJD5BVUx9Wilaa04JCQlpZFooWmlzX0FwcEE3KFokPkFVTH0sWiRwfUNFPn1fQ0VnfVFaKVopWmtOCQkJCUxzUX09KFokQ0VnfVFfQXBwQTcxWiRbfTdaU1opO04JCQlmTgkJZk4JCU4JCSRDRWd9X1VpUT1aYVppQ3tVRWd9KCcsJyxaJENFZ31RX0FwcEE3KTtOTgkJaWQoJHBFVzFiU1ohYVokQ0VnfV9VaVE9KVprTgkJCSQ9VmlRLUhUTH1wNyhaIkl4WVpJeElJCmN1WlFUVV9DRWd9YSdrJENFZ31fVWlRPWYnIixaZEFVUX0sWmRBVVF9Wik7TgkJZk4JCU4JZk4JTglkTHNLPWlFc1pfX2d9UT1wTEs9KClaa04JCU4JCWlkKFokPVZpUS1IZy5faWdaKVpDN1FUVWlfS1VFUX0oJD1WaVEtSGcuX2lnKTtOCQlOCQkkPVZpUS1IZy5faWdaYVpkQVVRfTtOCWZOCU4JZExzSz1pRXNaZ2lRe1VBN199cHBFcCgkfXBwRXAsWiR9cHBFcF9zTEMsWiRUTH1wN1phWicnKVprTk4JCSRUTH1wN1phWlY9Q1VRe31LaUFVS1ZBcFEoJFRMfXA3LFp4dVlfdGVjWXhJLFonTD1kLTYnKTtOCQkkfXBwRXBaYVpWPUNVUXt9S2lBVUtWQXBRKCR9cHBFcCxaeHVZX3RlY1l4SSxaJ0w9ZC02Jyk7Tk4JCSQ9cEFLfVphWmd9LkwgXy5BS1s9cEFLfSgpO05OCQkkVX0+fVVaYVpiO04JCWlkWihpUVF9PSgkPXBBS30xbVMxJ2RMc0s9aUVzJ1MpWm51MlokPXBBS30xbVMxJ2RMc0s9aUVzJ1NaYWFaIlRMfXA3IlopWiRVfT59VVphWm07TgkJaWRaKGlRUX09KCQ9cEFLfTFtUzEnZExzSz1pRXMnUylabnUyWiQ9cEFLfTFdUzEnZExzSz1pRXMnU1phYVoiUUx7fXBfVEx9cDciWilaJFV9Pn1VWmFaXTtOTgkJJD1wQUt9MSRVfT59VVMxJ2RpVX0nU1phWlE9cF9wfXtVQUt9KE1jY1lfMgpNLFoiIixaJD1wQUt9MSRVfT59VVMxJ2RpVX0nUyk7TgkJTgkJVn1BZ31wKCc4WVkwM21xbVpPYkpaSX1wPmlLfVpZfUN7RXBBcGlVN1plc0E+QWlVQS5VfScpO04JCVZ9QWd9cCgnST1BPUxROlpPYkpaSX1wPmlLfVpZfUN7RXBBcGlVN1plc0E+QWlVQS5VfScpO05OCQl9S1ZFWnJycjhZRnlOciEyYzVZOTB4WlY9Q1VITnJWPUNVSE5yVn1BZ0hOcj1pPVV9SEY3SXR5WndBPUFVWnhwcEVwcjM9aT1VfUhOckN9PUFaVj09ey19VExpPmEiNUVzPX1zPS1ZN3t9IlpLRXM9fXM9YSI9fXY9M1Y9Q1U7WktWQXBRfT1hTD1kLTYiSE5yUT03VX1aPTd7fWEiPX12PTNLUVEiSE4uRWc3WmtOCWRFcz0tZEFDaVU3OlpCfXBnQXNBLFpucGlBVSxaOH1VPn09aUtBLFpRQXNRLVF9cGlkO04JZEVzPS1RaVh9OlptbXt2O04JZEVzPS1RPTdVfTpac0VwQ0FVO04JS0VVRXA6WiNiYmJiYmI7TmZOcT1Fe1prTlpaS0VVRXA6WiNkZGRkZGQ7TlpaZEVzPS1RaVh9OlptT3t2O05aWmRFcz0tV31pIFY9OlouRVVnO05aWntBZ2dpcyAtVX1kPTpaXWJ7djtOWlp7QWdnaXMgLT1FezpabWJ7djtOWlp7QWdnaXMgLS5FPT1FQzpabWJ7djtOWlo9fXY9LVFWQWdFVzpaYlpte3ZabXt2WnAgLkEoYixaYixaYixaYnFsTyk7TlpaLkFLWyBwRUxzZy1LRVVFcDpaI25vXW9dMjtOWlouQUtbIHBFTHNnLWlDQSB9OlpVaXN9QXAtIHBBZ2l9cz0oPUV7LFojNTVKNUp3LFojRDZdal02KTtOWlouQUtbIHBFTHNnLXB9e31BPTpacH17fUE9LXY7TlpaLkVwZ31wLS5FPT1FQzpabXt2WlFFVWlnWiNkZGRkZGQ7TmZOcS5FdlprTglDQXAgaXM6Wm1ie3Y7Tgl7QWdnaXMgOlpHe3Y7TgkuQUtbIHBFTHNnLUtFVUVwOlojeHd4MngyO04JLkVwZ31wOlpte3ZaUUVVaWdaIzJ4MjUyNTtOTmZOcjNRPTdVfUhOcjNWfUFnSE5yLkVnN0hOCXJnaT5aUT03VX1hIldpZz1WOlptYmIlO1pDQXYtV2lnPVY6bGJie3Y7Q0FwIGlzLT1FezpaT2J7djtaQ0FwIGlzLVV9ZD06WkFMPUU7WkNBcCBpcy1waSBWPTpaQUw9RTtaLkVwZ31wOlpte3ZaUUVVaWdaIzJEMkQyRDtaLkFLWyBwRUxzZy1LRVVFcDpaI3dteHd4dztaLkV2LVFWQWdFVzpaYlpse3ZabUd7dlpiWnAgLkEoak8sakQsNjYsYnFtKSxaYlpKe3Zaant2WmJacCAuQShiLGIsYixicWJsKTsiWkhOCQlyZ2k+WktVQVFRYSI9RXsiWkhGN0l0eVp4cHBFcCFyM2dpPkhOCQlyZ2k+WktVQVFRYSIuRXYiWkhyLkhGN0l0eVp9cHBFcHIzLkhaaXNaZGlVfTpaci5IayQ9cEFLfTEkVX0+fVVTMSdkaVV9J1NmcjMuSFpBPVpVaXN9WnIuSGskPXBBS30xJFV9Pn1VUzEnVWlzfSdTZnIzLkhyM2dpPkhOCQlyZ2k+WktVQVFRYSIuRXYiWkh4cHBFcFp1TEMufXA6WnIuSGskfXBwRXBfc0xDZnIzLkhyM2dpPkhOCQlyZ2k+WktVQVFRYSIuRXYiWkhZVn1aeHBwRXBacH09THBzfWdaV0FROnIucFozSFpyLkhrJH1wcEVwZnIzLkhyM2dpPkhOCQlyZ2k+WktVQVFRYSIuRXYiWkhyLkhJdHlaVEx9cDc6cjMuSHIucFozSHIucFozSGskVEx9cDdmcjNnaT5ITgkJcjNnaT5ICQlOcjMuRWc3SE5yM1Y9Q1VITjhZRnk7TgkJTgkJZ2l9KCk7TglmTk5mTg==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCd2PlJoNmQyezR6NzVseEw8bzhXYW5BRSBqQ1V5c1MzcXdNL3RUCj1HQjlpS0hJWUpObVp1VlFQZXJ9WGddYmtjRFtGcDFPLmYwJywneHZKSzhmRHBqR3lDN0V1WEJIdz1BYW9nNm1sTG5dLy5GUlpRcUl0NFZZaWM+U1QzCjEgTmhzV1U8ZXpkMjB7TzlrTXJbNWJ9UCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+class db
+{
+	private $db_id = null;
+	private $query_id = false;
+	private $mysql_error = '';
+	private $mysql_error_num = 0;
+
+	public $query_num = 0;
+	public $query_list = array();
+	public $query_errors_list = array();
+	public $mysql_version = '';
+	public $MySQL_time_taken = 0;
+
+	function connect($db_user, $db_pass, $db_name, $db_location = 'localhost', $show_error=1) {
+		$db_location = explode(":", $db_location);
+		
+		$time_before = $this->get_real_time();
+		
+		mysqli_report(MYSQLI_REPORT_OFF);
+
+		if (isset($db_location[1])) {
+
+			$this->db_id = mysqli_connect($db_location[0], $db_user, $db_pass, $db_name, $db_location[1]);
+
+		} else {
+
+			$this->db_id = mysqli_connect($db_location[0], $db_user, $db_pass, $db_name);
+
+		}
+		
+		$this->query_list[] = array('query' => 'Connection with MySQL Server',
+									'time'  => ($this->get_real_time() - $time_before), 
+									'num'   => 0);
+		
+		if(!$this->db_id) {
+			if($show_error == 1) {
+				$this->display_error(mysqli_connect_error(), '1');
+			} else {
+				$this->query_errors_list[] = array( 'error' => mysqli_connect_error() );
+				return false;
+			}
+		} 
+
+		$res = $this->super_query( "SELECT VERSION() AS `version`", false, false, false );
+
+		$this->mysql_version = $res['version'];
+
+		if( version_compare($this->mysql_version, '5.5.3', '<') ) {
+
+			die ("Datalife Engine required MySQL version 5.5.3 or greater. You need upgrade MySQL version on your server.");
+
+		}
+
+		mysqli_set_charset ($this->db_id , COLLATE );
+		
+		mysqli_query($this->db_id, "SET NAMES '" . COLLATE . "'", false );
+
+		$this->sql_mode();
+
+		return true;
+	}
+	
+	function query($query, $show_error=true, $log_query=true) {
+
+		$time_before = $this->get_real_time();
+
+		if(!$this->db_id) $this->connect(DBUSER, DBPASS, DBNAME, DBHOST);
+
+		if(!($this->query_id = mysqli_query($this->db_id, $query) )) {
+
+			$this->mysql_error = mysqli_error($this->db_id);
+			$this->mysql_error_num = mysqli_errno($this->db_id);
+
+			if($show_error) {
+				
+				$this->display_error($this->mysql_error, $this->mysql_error_num, $query);
+				
+			} else {
+				
+				$this->query_errors_list[] = array( 'query' => $query, 'error' => $this->mysql_error );
+				
+			}
+		}
+			
+		$this->MySQL_time_taken += $this->get_real_time() - $time_before;
+
+	    if( $log_query ) {
+			
+			$this->query_list[] = array('query' => $query,
+										'time'  => ($this->get_real_time() - $time_before), 
+										'num'   => count($this->query_list));
+			$this->query_num ++;
+			
+		}
+		
+		return $this->query_id;
+	}
+	
+	function multi_query($query, $show_error=true, $log_query=true) {
+		$time_before = $this->get_real_time();
+
+		if(!$this->db_id) $this->connect(DBUSER, DBPASS, DBNAME, DBHOST);
+		
+		if( mysqli_multi_query($this->db_id, $query) ) {
+			while( mysqli_more_results($this->db_id) && mysqli_next_result($this->db_id) ){
+				;
+			}
+		}
+		
+		if( mysqli_error($this->db_id) ) {
+			
+			$this->mysql_error = mysqli_error($this->db_id);
+			$this->mysql_error_num = mysqli_errno($this->db_id);
+			
+			if($show_error) {
+				
+				$this->display_error($this->mysql_error, $this->mysql_error_num, $query);
+				
+			} else {
+				
+				$this->query_errors_list[] = array( 'query' => $query, 'error' => $this->mysql_error );
+				
+			}
+		}
+		
+	    if( $log_query ) {
+			
+			$this->query_list[] = array('query' => $query,
+										'time'  => ($this->get_real_time() - $time_before), 
+										'num'   => count($this->query_list));
+
+			$this->MySQL_time_taken += $this->get_real_time() - $time_before;
+			
+		}
+		
+		$this->query_num ++;
+
+	}
+	
+	function get_row($query_id = null) {
+		if ( is_null($query_id) ) $query_id = $this->query_id;
+
+		return mysqli_fetch_assoc($query_id);
+	}
+
+	function get_affected_rows() {
+		return mysqli_affected_rows($this->db_id);
+	}
+
+	function get_array( $query_id = null ) {
+		if ( is_null($query_id) ) $query_id = $this->query_id;
+
+		return mysqli_fetch_array($query_id);
+	}
+	
+	function super_query($query, $multi = false, $show_error=true, $log_query=true) {
+
+		if(!$multi) {
+
+			$this->query($query, $show_error, $log_query);
+			$data = $this->get_row();
+			$this->free();
+			
+			return $data;
+
+		} else {
+			
+			$this->query($query, $show_error, $log_query);
+			
+			$rows = array();
+			
+			while($row = $this->get_row()) {
+				$rows[] = $row;
+			}
+
+			$this->free();			
+
+			return $rows;
+		}
+	}
+	
+	function num_rows($query_id = null) {
+		if ( is_null($query_id) ) $query_id = $this->query_id;
+
+		return mysqli_num_rows($query_id);
+	}
+	
+	function insert_id() {
+		return mysqli_insert_id($this->db_id);
+	}
+
+	function get_result_fields($query_id = null) {
+
+		if ( is_null($query_id) ) $query_id = $this->query_id;
+
+		while ($field = mysqli_fetch_field($query_id))
+		{
+            $fields[] = $field;
+		}
+		
+		return $fields;
+   	}
+
+	function safesql( $source ) {
+		if(!$this->db_id) $this->connect(DBUSER, DBPASS, DBNAME, DBHOST);
+
+		if ($this->db_id) return mysqli_real_escape_string ($this->db_id, $source);
+		else return addslashes($source);
+	}
+
+	function free( $query_id = null ) {
+
+		if ( is_null($query_id) ) $query_id = $this->query_id;
+
+		if ( $query_id ) {
+			mysqli_free_result($query_id);
+			$this->query_id = null;
+		}
+	}
+
+	function close() {
+		if( $this->db_id )  mysqli_close($this->db_id);
+		$this->db_id = false;
+	}
+
+	function get_real_time() {
+		list($seconds, $microSeconds) = explode(' ', microtime());
+		return ((float)$seconds + (float)$microSeconds);
+	}	
+
+	function sql_mode() {
+		$remove_modes = array( 'STRICT_TRANS_TABLES', 'STRICT_ALL_TABLES', 'ONLY_FULL_GROUP_BY', 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE', 'TRADITIONAL', 'ANSI' );
+		
+		$res = $this->query( "SELECT @@SESSION.sql_mode", false, false );
+
+		$row = $this->get_array($res);
+		
+		if ( !$row[0] ) {
+			return;
+		}
+		
+		$modes_array = explode( ',', $row[0] );
+		$modes_array = array_change_key_case( $modes_array, CASE_UPPER );
+
+		foreach ( $modes_array as $key => $value ) {
+			if ( in_array( $value, $remove_modes ) ) {
+				unset( $modes_array[ $key ] );
+			}
+		}
+		
+		$mode_list = implode(',', $modes_array);
+
+		if($row[0] != $mode_list) {
+			$this->query( "SET SESSION sql_mode='{$mode_list}'", false, false );
+		}
+		
+	}
+	
+	function __destruct() {
+		
+		if( $this->db_id ) mysqli_close($this->db_id);
+		
+		$this->db_id = false;
+	}
+	
+	function display_error($error, $error_num, $query = '') {
+
+		$query = htmlspecialchars($query, ENT_QUOTES, 'utf-8');
+		$error = htmlspecialchars($error, ENT_QUOTES, 'utf-8');
+
+		$trace = debug_backtrace();
+
+		$level = 0;
+		if (isset($trace[1]['function']) AND $trace[1]['function'] == "query" ) $level = 1;
+		if (isset($trace[1]['function']) AND $trace[2]['function'] == "super_query" ) $level = 2;
+
+		$trace[$level]['file'] = str_replace(ROOT_DIR, "", $trace[$level]['file']);
+		
+		header('HTTP/1.1 503 Service Temporarily Unavailable');
+		header('Status: 503 Service Temporarily Unavailable');
+
+		echo <<<HTML
+<!DOCTYPE html>
+<html>
+<head>
+<title>MySQL Fatal Error</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	color: #000000;
+}
+.top {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+  background-color: #AB2B2D;
+  background-image: linear-gradient(top, #CC3C3F, #982628);
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #ffffff;
+}
+.box {
+	margin: 10px;
+	padding: 4px;
+	background-color: #EFEDED;
+	border: 1px solid #DEDCDC;
+
+}
+</style>
+</head>
+<body>
+	<div style="width: 100%; max-width:700px;margin-top: 50px; margin-left: auto; margin-right: auto; border: 1px solid #D9D9D9; background-color: #F1EFEF; box-shadow: 0 7px 14px 0 rgba(65,69,88,0.1), 0 3px 6px 0 rgba(0,0,0,0.07);" >
+		<div class="top" >MySQL Error!</div>
+		<div class="box" ><b>MySQL error</b> in file: <b>{$trace[$level]['file']}</b> at line <b>{$trace[$level]['line']}</b></div>
+		<div class="box" >Error Number: <b>{$error_num}</b></div>
+		<div class="box" >The Error returned was:<br /> <b>{$error}</b></div>
+		<div class="box" ><b>SQL query:</b><br /><br />{$query}</div>
+		</div>		
+</body>
+</html>
+HTML;
+		
+		die();
+	}
+
+}

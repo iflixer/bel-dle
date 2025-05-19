@@ -5,9 +5,274 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: addcomments.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: AJAX for comments
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PzNhP21abWJ5KmJmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmI0VjBvMHFPdU00QkRjT0RNNC00QTU0NlN1b0ZNXUw0N01FTzA0OW5TSm00Yi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tYjRab29tTDp5eUUuTS1ETV1MWG5KeWItLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWI0L1NtNW5PY1pvNChIKTRzODhkLXM4c3g0NlN1b0ZNXUw0N01FTzA0OW5TSm1iZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZiNFtaT0w0SFNFTTRPTDRtblNvTUhvTUU0QTU0SFNtNW5PY1pvYmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmYjR3Ty5NOjQwRUVIUyAgTURvTFhtWm1iLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1iNEdMTTo0Un1SZTR1U240SFMgIE1Eb0xiZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZiKnliYk91KCFFTXVPRE1FKCdWUltScXJ3QkJGOXJGQicpKTRLYglFT00oNCJQMEhRT0RjNDBvb00gbW8hIjQpO2JUYmIkb20uNGY0RE1dNEUuTV9vTSBtLjBvTSg0KTtiJG9tLi0zRU9uNGY0CllZW19Wcgo0WDQneW9NIG0uMG9NTHknNFg0JEhTRHVPY2cnTFFPRCdOO2JFTXVPRE0oNCdbQjd0cVJbQl9WcgonLDQkb20uLTNFT240KTtiYiQwQzA9XzBFRUw0ZjRvbkpNO2Jibk0xSk9uTV9TREhNNChWcUJ0LkpjT0RMOjovWk1IUShCRjlyRkJfVnIKNFg0J3kgU0VKLk1MeTBFRUhTICBNRG9MWG1abScpKTtiYk91KDQhJC9GX1BScVs0KTRLYmIJT3U0KDQhRU11T0RNRSgnV1JGRkIKNicpNCk0S2IJCU91NCgkSFNEdU9jZycwLi5TXV9BMERETW4nTik0T0RILkpFTV9TREhNNChWcUJ0LkpjT0RMOjovWk1IUShCRjlyRkJfVnIKNFg0J3kgU0VKLk1MeUEwRERNbkxYbVptJykpO2IJVGJiCSRIUyAgTURvTDRmNERNXTRWcUJfL1MgIE1Eb0woNCRFQSw0eyw0ezQpO2IJJEhTICBNRG9MLTNPRG9NbkRfSFNKRG80ZjQteztiCU91KCRtMG5NRG8pNCRIUyAgTURvTC0zT0RFTURvNGY0JE9ERU1Ebyt7O2IJYgkkSFMgIE1Eb0wtMzFKTW41NGY0IjZCcUIvWzQiNFg0dApCd3JlNFg0Il9IUyAgTURvTFhPRSw0bVNMb19PRSw0IjRYNHQKQndyZTRYNCJfSFMgIE1Eb0xYSkxNbl9PRSw0RTBvTSw0MEpvU240MEw0YzBMb19EMCBNLDQiNFg0dApCd3JlNFg0Il9IUyAgTURvTFhNIDBPLjQwTDRjMExvX00gME8uLDRvTT1vLDRPbSw0T0xfbk1jT0xvTW4sNCI0WDR0CkJ3cmU0WDQiX0hTICBNRG9MWG4wb09EYyw0IjRYNHQKQndyZTRYNCJfSFMgIE1Eb0xYcFNvTV9ESiAsNEQwIE0sNCI0WDRHNkIKdApCd3JlNFg0Il9KTE1uTFhNIDBPLiw0RE1dTF9ESiAsNEhTICBfREogLDRKTE1uX2NuU0ptLDQuMExvRTBvTSw0bk1jX0Uwb00sNEEwRERNRSw0TE9jRDBvSm5NLDR1U29TLDR1Si4uRDAgTSw0LjBERSw0PXVPTS5FTDR3Clk3NCI0WDR0CkJ3cmU0WDQiX0hTICBNRG9MNHFCd1s0fVlyRjQiNFg0RzZCCnQKQndyZTRYNCJfSkxNbkw0WUY0IjRYNHQKQndyZTRYNCJfSFMgIE1Eb0xYSkxNbl9PRWYiNFg0RzZCCnQKQndyZTRYNCJfSkxNbkxYSkxNbl9PRTRsUEIKQjQiNFg0dApCd3JlNFg0Il9IUyAgTURvTFhPRTRmNCdLJDBFRU1FX0hTICBNRG9MX09FVCciO2IJJEhTICBNRG9MLTNBSk8uRV9IUyAgTURvTCgnSFMgIE1Eb0xYb20uJyw0JzBDMD0nNCk7YmJUYmJPdSg0JF90WTZbZydNRU9vU25fIFNFTSdONGZmNCJdNUxPXTVjIjQpNEtiYgkkSC5NMG5fcDAuSk00ZjQib09ENTcvQlgwSG9PcE1CRU9vU25YTE1vL1NEb01EbygnJyk7IjtiYlQ0TS5MTTRLYgliCSRILk0wbl9wMC5KTTRmNCJ1U24gWEhTICBNRG9MWHAwLkpNNGY0Jyc7IjtiYlRiYiRILk0wbl9wMC5KTTRYZjRhYWFQWzdxYgliT3UoNCQoJyNIUyAgTURvTC1PIDBjTS1KbS5TMEVNbicpWEUwbzAoJ3VPLk1MJyk0ZmY0J0ptLlMwRU1FJzQpNEtiCSQoJyNIUyAgTURvTC1PIDBjTS1KbS5TMEVNbicpWG0uSm0uUzBFKCdILk0wbjxKTUpNJyk7YgkkKCdYbS5KbS5TMEVfSFNEbzBPRE1uJylYbk0gU3BNLy4wTEwoJ20uSm0uUzBFX3VPLk1MX0xNLk1Ib01FJyk7YlRiYlBbN3E7YmJPdSg0JEpMTW5fY25TSm1nJCBNIEFNbl9PRWcnSkxNbl9jblNKbSdOTmcnSFMgIE1Eb0xfMUpNTG9PU0QnTjQpNEtiCSQxTDRmNCRFQS0zTEptTW5fMUpNbjUoIjZCcUIvWzRPRSw0MUpNTG9PU0Q0dwpZNzQiNFg0dApCd3JlNFg0Il8xSk1Mb09TRDRZClZCCjRXaDQKUkZWKCk0cXI3cls0eyIpO2IJJDFMZycxSk1Mb09TRCdONGY0Wm8gLkxtTUhPMC5IWjBuTCg0TG9uT21MLjBMWk1MKDQkMUxnJzFKTUxvT1NEJ040KSw0QkZbXzxHWVtCNiw0J0dbdy1JJzQpO2IJJF82QjY2cllGZycxSk1Mb09TRCdONGY0JDFMZydPRSdOO2JUNE0uTE00JDFMNGY0MG5uMDUoJzFKTUxvT1NEJzRmMzQnJyk7YmJPdSg0JC9GX1BScVs0KTRLYgliCSRMb1NtNGY0TyBtLlNFTSg0J2FBbjNhQW4zJyw0JExvU200KTtiYglPdSgkbTBuTURvKTRLYmIJCSRuTW0uNUguTTBuZiIiO2IJCWIJCU91KCRKTE1uX2NuU0ptZyQgTSBBTW5fT0VnJ0pMTW5fY25TSm0nTk5nJ0hTICBNRG9MXzFKTUxvT1NEJ04pNEtiCQkJYgkJCQkkbk1tLjVILk0wbjRYZjRhYWFQWzdxYgliCQlDPEpNbjUoJyNFLk0tMUpNTG9PU0RLJG0wbk1Eb1QnKVhvTT1vKCdLJDFMZycxSk1Mb09TRCdOVCcpO2IJCUM8Sk1uNSgnIzFKTUxvT1NEXzBETF1NbkskbTBuTURvVCcpWHAwLignJyk7YmJQWzdxO2IJYgkJVGIJYgkJT3UoNCRKTE1uX2NuU0ptZyQgTSBBTW5fT0VnJ0pMTW5fY25TSm0nTk5nJ0gwbW9IWjAnTjRSRlY0JEhTRHVPY2cnMC4uU11fbk1IMG1vSFowJ040KTRLYmIJCQkJJG5NbS41SC5NMG40WGY0YWFhUFs3cWIJCQlPdTQoNEUuTV9IMG1vSFowX281bU00ZmY0InsiNCk0S2IJCQkJT3U0KDRvNW1NU3U0Y25NSDBtb0haMDQhZjQiSkRFTXVPRE1FIjQ0KTRLYgkJCQljbk1IMG1vSFowWG5NTE1vKG5NSDBtb0haMF9dT0VjTW8pO2IJCQkJVGIJCQlUNE0uTE00T3U0KEUuTV9IMG1vSFowX281bU00ZmY0InMiKTRLO2IJCQkJJCgnI0hTICBNRG9MLW5NSDBtb0haMC1uTUxtU0RMTUskbTBuTURvVCcpWHAwLignJyk7YgkJCVQ0TS5MTTRPdTQoRS5NX0gwbW9IWjBfbzVtTTRmZjQieiIpNEtiCQkJCU91NCg0bzVtTVN1NFpIMG1vSFowNCFmNCJKREVNdU9ETUUiNDQpNEtiCQkJCVpIMG1vSFowWG5NTE1vKG5NSDBtb0haMF9dT0VjTW8pO2IJCQkJVGIJCQlUNE0uTE00T3U0KEUuTV9IMG1vSFowX281bU00ZmY0ImQiKTRLYgkJCQlPdTQoNG81bU1TdTRvSm5ETG9PLk00IWY0IkpERU11T0RNRSI0NCk0S2IJCQkJb0puRExvTy5NWG5NTE1vKG5NSDBtb0haMF9dT0VjTW8pO2IJCQkJVGIJCQlUYlBbN3E7YgkJCWIJCVRiYgkJT3UoNCRKTE1uX2NuU0ptZyQgTSBBTW5fT0VnJ0pMTW5fY25TSm0nTk5nJ0gwbW9IWjAnTjRSRlY0ISRIU0R1T2NnJzAuLlNdX25NSDBtb0haMCdONCk0S2JiCQkJCSRuTW0uNUguTTBuNFhmNGFhYVBbN3FiCWIJCQluTS5TMEVLJG0wbk1Eb1Q0KCk7YgkJYlBbN3E7YgkJCWIJCVRiCQliCVQ0TS5MTTQ0S2JiCQkkbk1tLjVILk0wbjRmNGFhYVBbN3FiCWIJCU91NCg0RS5NX0gwbW9IWjBfbzVtTTRmZjQieyI0KTRLYgkJCU91NCg0bzVtTVN1NGNuTUgwbW9IWjA0IWY0IkpERU11T0RNRSI0NCk0S2IJCQljbk1IMG1vSFowWG5NTE1vKCk7YgkJCVRiCQlUNE0uTE00T3U0KEUuTV9IMG1vSFowX281bU00ZmY0InoiKTRLYgkJCU91NCg0bzVtTVN1NFpIMG1vSFowNCFmNCJKREVNdU9ETUUiNDQpNEtiCQkJWkgwbW9IWjBYbk1MTW8oKTtiCQkJVGIJCVQ0TS5MTTRPdTQoRS5NX0gwbW9IWjBfbzVtTTRmZjQiZCIpNEtiCQkJT3U0KDRvNW1NU3U0b0puRExvTy5NNCFmNCJKREVNdU9ETUUiNDQpNEtiCQkJb0puRExvTy5NWG5NTE1vKCk7YgkJCVRiCQlUYmIJCU91NCg0dVNuIFgxSk1Mb09TRF8wRExdTW40KTRLYmIJCXVTbiBYMUpNTG9PU0RfMERMXU1uWHAwLkpNNGYnJztiCQlDPEpNbjUoJyNFLk0tMUpNTG9PU0QnKVhvTT1vKCdLJDFMZycxSk1Mb09TRCdOVCcpO2IJCVRiYgkJT3U0KDRFU0hKIE1Eb1hjTW9CLk0gTURvVzVyRSgnRS5NLUgwbW9IWjAnKTQpNEtiCQkJdVNuIFhMTUhfSFNFTVhwMC5KTTRmNCcnO2IJCQlFU0hKIE1Eb1hjTW9CLk0gTURvVzVyRSgnRS5NLUgwbW9IWjAnKVhPRERNblBbN3E0ZjQnYU8gYzRMbkhmIic0KzRFLk1fblNTbzQrNCdNRGNPRE15IFNFSi5NTHkwRG9PQVNveTBEb09BU29YbVptP24wREVmJzQrNG9PIE1wMC40KzQnIjRdT0VvWmYie3Y4IjRaTU9jWm9mIkk4IjQwLm9mIiIzJztiCQlUYgkJYlBbN3E7YgkJYglUNGIJYgkkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTjRmNCJhTEhuT21vM1xEcDBuNHVTbiA0ZjRFU0hKIE1Eb1hjTW9CLk0gTURvVzVyRSgnRS5NLUhTICBNRG9MLXVTbiAnKTtcRCI7YgliCU91KDQhJF1aTW5NXzBtbW5TcE00KTRLYgkJJG9tLi0zbk1MSi5vZydIU0RvTURvJ040WGY0IlxESyRILk0wbl9wMC5KTVRcRCI7YgkJYgkJT3UoJG0wbk1Ebyk0JG9tLi0zbk1MSi5vZydIU0RvTURvJ040WGY0IlxENEM8Sk1uNSgnI0UuTW5NbS41bVNtSm0nKVhuTSBTcE0oKTs0QzxKTW41KCcjRS5NdTBMb25NbS41SFMgIE1Eb0wnKVhuTSBTcE0oKTs0XEQiO2JiCQkkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTjRYZjQiXEQ0VnFCdEpMWlhdMG5ET0RjKCciNFg0JExvU200WDQiJyk7XEQiO2JiCVQ0TS5MTTQkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTjRYZjQiXEQ0VnFCdEpMWlhNbm5TbignIjRYNCRMb1NtNFg0IicpO1xEIjtiCWIJJG9tLi0zbk1MSi5vZydIU0RvTURvJ040WGY0InAwbjRvTyBNcDAuNGY0RE1dNFYwb00oKVhjTW9bTyBNKCk7XERiYglLJG5NbS41SC5NMG5UXEQ0YXlMSG5PbW8zIjtiYlQ0TS5MTTRLYgliCSRDTF9MSG5PbW80ZjRhYWFQWzdxYglwMG40b08gTXAwLjRmNERNXTRWMG9NKClYY01vW08gTSgpO2IJYglPdSg0RVNISiBNRG9YY01vQi5NIE1Eb1c1ckUoJ0UuTS1IUyAgTURvTC11U24gJyk0KTRLYgliCQlwMG40dVNuIDRmNEVTSEogTURvWGNNb0IuTSBNRG9XNXJFKCdFLk0tSFMgIE1Eb0wtdVNuICcpO2IJCWIJCU91NCg0dVNuIFgxSk1Mb09TRF8wRExdTW40KTRLYgliCQk0NDR1U24gWDFKTUxvT1NEXzBETF1NblhwMC5KTTRmJyc7YgkJNDQ0QzxKTW41KCcjRS5NLTFKTUxvT1NEJylYb009bygnSyQxTGcnMUpNTG9PU0QnTlQnKTtiCWIJCVRiCQliCQlLJEguTTBuX3AwLkpNVGIJVGJQWzdxO2JiCU91KDRMb25tU0w0KDQkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTiw0IkUuTW0uNW5tLjA1TW4iNCk0IWZmNHUwLkxNNCk0S2IJCWIJCU91KDRMb25tU0w0KDQkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTiw0IlggekpJIjQpNCFmZjR1MC5MTTQpNEtiCQkJJC5TMEVfIFNuTTRmNCJcJFhjTW8vMEhaTUU2SG5PbW8oNEUuTV9uU1NvNCs0J01EY09ETXlILjBMTE1MeVpvIC54bS4wNU1ueW0uNW5YQ0w/cGZLJEhTRHVPY2cnSDBIWk1fT0UnTlQnKTsiO2IJCQkkQ0xfRDAgTTRmNCJaLkxYQ0wiOzRiCQlUNE0uTE00S2IJCQkkLlMwRV8gU25NNGY0IiI7YgkJCSRDTF9EMCBNNGY0Im0uNW5YQ0wiOzRiCQlUYgkJYgkJJENMX0xIbk9tbzRYZjRhYWFQWzdxYgkJYgkJCU91NChvNW1NU3U0VnFCdC4wNU1uNGZmNCJKREVNdU9ETUUiKTRLYmIJCQkJcDBuNFpNMEUuT0RRNGY0NCQoIlpNMEUiKVh1T0RFKCIuT0RRZ25NLmYnTG81Lk1MWk1NbydOIik7YgkJCQlwMG40Lk9EUUIuTSBNRG80ZjQiYS5PRFE0Wm5NdWYnIjQrNEUuTV9uU1NvNCsiTURjT0RNeUguMExMTUx5Wm8gLnhtLjA1TW55bS41blhITEwnNG5NLmYnTG81Lk1MWk1Nbyc0bzVtTWYnb009b3lITEwnMyI7YmIJCQkJT3U0KFpNMEUuT0RRWC5NRGNvWilLYgkJCQkJWk0wRS5PRFFYdU9uTG8oKVhBTXVTbk0oLk9EUUIuTSBNRG8pYgkJCQlUYgkJCQlNLkxNNEtiCQkJCQkkKCJaTTBFIilYMG1tTURFKC5PRFFCLk0gTURvKTtiCQkJCVRiCQkJCTQ0YgkJCQkkWGNNby8wSFpNRTZIbk9tbyg0RS5NX25TU280KzQnTURjT0RNeUguMExMTUx5Wm8gLnhtLjA1TW55SyRDTF9EMCBNVD9wZkskSFNEdU9jZydIMEhaTV9PRSdOVCcpWEVTRE0odUpESG9PU0QoKTRLYgkJCQk0NEskLlMwRV8gU25NVDRiCQkJCVQpO2IJCQkJYgkJCVQ0TS5MTTRLYgkJCWIJCQkJcDBuNEhTRG8wT0RNbkw0ZjRFU0hKIE1Eb1gxSk1uNTZNLk1Ib1NuUi4uKCIjSFMgIC1PRS1LJDBFRU1FX0hTICBNRG9MX09FVDRYRS5NbS41bm0uMDVNbiIpO1JubjA1WHVuUyAoSFNEbzBPRE1uTClYdVNuQjBIWih1SkRIb09TRDQoSFNEbzBPRE1uKTRLRE1dNFZxQnQuMDVNbihIU0RvME9ETW4pO1QpO2IJCQkJYgkJCVRiUFs3cTtiYglUYmIJT3UoNExvbm1TTDQoNCRvbS4tM25NTEoub2cnSFNEb01EbydOLDQnWk9jWkwuT0VNJzQpNCFmZjR1MC5MTTQpNEtiCQliCQkkQ0xfTEhuT21vNFhmNGFhYVBbN3FiCQliCQkJT3U0KG81bU1TdTR3MERINUFTPTRmZjQiSkRFTXVPRE1FIjQpNEtiCQkJCSRYY01vLzBIWk1FNkhuT21vKDRFLk1fblNTbzQrNCdNRGNPRE15SC4wTExNTHl1MERINUFTPXl1MERINUFTPVhDTD9wZkskSFNEdU9jZydIMEhaTV9PRSdOVCcpO2IJCQlUYgkJYlBbN3E7YgkJYglUYmIJJERNTUVdbjBtNGY0T0xMTW8oJF90WTZbZydETU1FXW4wbSdOKTQ/NE9Eb3AwLigkX3RZNltnJ0RNTUVdbjBtJ04pNDo0ODQ7YgliCU91NCg0JEhTRHVPY2cnb25NTV9IUyAgTURvTCdONCk0S2IJCWIJCU91NCghJG0wbk1Ebyk0JEguMExMNGY0JzRBLk9ERS0wRE8gMG9PU0QnO2IJCU0uTE00JEguMExMNGY0Jyc7YgkJYgkJT3U0KCRIU0R1T2NnJ29uTU1fSFMgIE1Eb0xfLk1wTS4nTjRSRlY0JE9ERU1EbzQzZjQkSFNEdU9jZydvbk1NX0hTICBNRG9MXy5NcE0uJ040KTRLYgkJCWIJCQkkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTjRmNCJhRU9wNE9FZlwiSFMgIE1Eb0wtb25NTS1Pb00gLUskMEVFTUVfSFMgIE1Eb0xfT0VUXCI0TG81Lk1mXCJFT0xtLjA1OkRTRE1cIjRILjBMTGZcIkhTICBNRG9MLW9uTU0tT29NIEskSC4wTExUXCI0MyJYJG9tLi0zbk1MSi5vZydIU0RvTURvJ05YImF5RU9wMyI7YgkJCWIJCVQ0TS5MTTRLYgkJCWIJCQkkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTjRmNCJhLk80T0VmXCJIUyAgTURvTC1vbk1NLU9vTSAtSyQwRUVNRV9IUyAgTURvTF9PRVRcIjRMbzUuTWZcIkVPTG0uMDU6RFNETVwiNEguMExMZlwiSFMgIE1Eb0wtb25NTS1Pb00gSyRILjBMTFRcIjQzIlgkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTlgiYXkuTzMiO2IJCQliCQkJT3UoJERNTUVdbjBtNFkKNCEkbTBuTURvKTRLYgkJCQkkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTjRmNCJhUy40SC4wTExmXCJIUyAgTURvTC1vbk1NLS5PTG9cIjMiWCRvbS4tM25NTEoub2cnSFNEb01EbydOWCJheVMuMyI7YgkJCVRiCQkJYgkJVGJiCVQ0TS5MTTRLYmIJCSRvbS4tM25NTEoub2cnSFNEb01EbydONGY0ImFFT3A0T0VmXCJBLk9ERS0wRE8gMG9PU0QtSyQwRUVNRV9IUyAgTURvTF9PRVRcIjRMbzUuTWZcIkVPTG0uMDU6RFNETVwiMyJYJG9tLi0zbk1MSi5vZydIU0RvTURvJ05YImFFT3AzIjtiCVRiCWJUYmIkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTjRmNExvbl9uTW0uMEhNKDQnS1tQQjdCVCcsNCRfCllZW19WcUJfRwpxNFg0J29NIG0uMG9NTHknNFg0JEhTRHVPY2cnTFFPRCdOLDQkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTjQpO2JiT3U0KCQvRl9QUnFbKTRLYmIJTUhaUzRDTFNEX01ESFNFTSgwbm4wNSgiTW5uU24iNGYzNG9uSk0sNCJIU0RvTURvIjRmMzQkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTjQpLDR9NllGX0dGQjYvUnRCVl9HRnIvWVZCNHw0fTZZRl9HRkI2L1J0QlZfNnFSNlBCNjQpO2JiVDRNLkxNNEtiCWIJTUhaUzRDTFNEX01ESFNFTSgwbm4wNSgiTEpISE1MTCI0ZjM0b25KTSw0Ik9FIjRmMzQkMEVFTUVfSFMgIE1Eb0xfT0UsNCJIU0RvTURvIjRmMzQkb20uLTNuTUxKLm9nJ0hTRG9NRG8nTiw0IkxIbk9tb0wiNGYzNCRDTF9MSG5PbW8pLDR9NllGX0dGQjYvUnRCVl9HRnIvWVZCNHw0fTZZRl9HRkI2L1J0QlZfNnFSNlBCNjQpO2IJYlRiYj8z';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdPL2JwdXcza002QjJ0eEQxLlJvWF1sVlkgPkpBRUdUZno3SwpRSD1qc31acVVjZTh2NW5tPFs5YTRpMENyV3tOZ2hkSUxQeVNGJywnaUMKdmZGPnplU0U3UDVucWxBdC53V0RPbUt1YmRVfT0zTXtSa2N4OTJKaExaZ1gwNnlycFFURzwgVmFqSUIxXVtZNDhzSC9vTicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	die( "Hacking attempt!" );
+}
+
+$tpl = new dle_template( );
+$tpl->dir = ROOT_DIR . '/templates/' . $config['skin'];
+define( 'TEMPLATE_DIR', $tpl->dir );
+
+$ajax_adds = true;
+
+require_once (DLEPlugins::Check(ENGINE_DIR . '/modules/addcomments.php'));
+
+if( !$CN_HALT ) {
+
+	if ( !defined('BANNERS') ) {
+		if ($config['allow_banner']) include_once (DLEPlugins::Check(ENGINE_DIR . '/modules/banners.php'));
+	}
+
+	$comments = new DLE_Comments( $db, 1, 1 );
+	$comments->intern_count = -1;
+	if($parent) $comments->indent = $indent+1;
+	
+	$comments->query = "SELECT " . PREFIX . "_comments.id, post_id, " . PREFIX . "_comments.user_id, date, autor as gast_name, " . PREFIX . "_comments.email as gast_email, text, ip, is_register, " . PREFIX . "_comments.rating, " . PREFIX . "_comments.vote_num, name, " . USERPREFIX . "_users.email, news_num, comm_num, user_group, lastdate, reg_date, banned, signature, foto, fullname, land, xfields FROM " . PREFIX . "_comments LEFT JOIN " . USERPREFIX . "_users ON " . PREFIX . "_comments.user_id=" . USERPREFIX . "_users.user_id WHERE " . PREFIX . "_comments.id = '{$added_comments_id}'";
+	$comments->build_comments('comments.tpl', 'ajax' );
+
+}
+
+if( $_POST['editor_mode'] == "wysiwyg" ) {
+
+	$clear_value = "tinyMCE.activeEditor.setContent('');";
+
+} else {
+	
+	$clear_value = "form.comments.value = '';";
+
+}
+
+$clear_value .= <<<HTML
+	
+if( $('#comments-image-uploader').data('files') == 'uploaded' ) {
+	$('#comments-image-uploader').plupload('clearQueue');
+	$('.plupload_container').removeClass('plupload_files_selected');
+}
+
+HTML;
+
+if( $user_group[$member_id['user_group']]['comments_question'] ) {
+	$qs = $db->super_query("SELECT id, question FROM " . PREFIX . "_question ORDER BY RAND() LIMIT 1");
+	$qs['question'] = htmlspecialchars( stripslashes( $qs['question'] ), ENT_QUOTES, 'UTF-8' );
+	$_SESSION['question'] = $qs['id'];
+} else $qs = array('question' => '');
+
+if( $CN_HALT ) {
+	
+	$stop = implode( '<br><br>', $stop );
+
+	if($parent) {
+
+		$replyclear="";
+		
+		if($user_group[$member_id['user_group']]['comments_question']) {
+			
+				$replyclear .= <<<HTML
+	
+		jQuery('#dle-question{$parent}').text('{$qs['question']}');
+		jQuery('#question_answer{$parent}').val('');
+
+HTML;
+	
+		}
+	
+		if( $user_group[$member_id['user_group']]['captcha'] AND $config['allow_recaptcha'] ) {
+
+				$replyclear .= <<<HTML
+			if ( dle_captcha_type == "1" ) {
+				if ( typeof grecaptcha != "undefined"  ) {
+				grecaptcha.reset(recaptcha_widget);
+				}
+			} else if (dle_captcha_type == "2") {;
+				$('#comments-recaptcha-response{$parent}').val('');
+			} else if (dle_captcha_type == "3") {
+				if ( typeof hcaptcha != "undefined"  ) {
+				hcaptcha.reset(recaptcha_widget);
+				}
+			} else if (dle_captcha_type == "4") {
+				if ( typeof turnstile != "undefined"  ) {
+				turnstile.reset(recaptcha_widget);
+				}
+			}
+HTML;
+			
+		}
+
+		if( $user_group[$member_id['user_group']]['captcha'] AND !$config['allow_recaptcha'] ) {
+
+				$replyclear .= <<<HTML
+	
+			reload{$parent} ();
+		
+HTML;
+			
+		}
+		
+	} else  {
+
+		$replyclear = <<<HTML
+	
+		if ( dle_captcha_type == "1" ) {
+			if ( typeof grecaptcha != "undefined"  ) {
+			grecaptcha.reset();
+			}
+		} else if (dle_captcha_type == "3") {
+			if ( typeof hcaptcha != "undefined"  ) {
+			hcaptcha.reset();
+			}
+		} else if (dle_captcha_type == "4") {
+			if ( typeof turnstile != "undefined"  ) {
+			turnstile.reset();
+			}
+		}
+
+		if ( form.question_answer ) {
+
+		form.question_answer.value ='';
+		jQuery('#dle-question').text('{$qs['question']}');
+		}
+
+		if ( document.getElementById('dle-captcha') ) {
+			form.sec_code.value = '';
+			document.getElementById('dle-captcha').innerHTML = '<img src="' + dle_root + 'engine/modules/antibot/antibot.php?rand=' + timeval + '" width="160" height="80" alt="">';
+		}
+		
+HTML;
+		
+	} 
+	
+	$tpl->result['content'] = "<script>\nvar form = document.getElementById('dle-comments-form');\n";
+	
+	if( !$where_approve ) {
+		$tpl->result['content'] .= "\n{$clear_value}\n";
+		
+		if($parent) $tpl->result['content'] .= "\n jQuery('#dlereplypopup').remove(); jQuery('#dlefastreplycomments').remove(); \n";
+
+		$tpl->result['content'] .= "\n DLEPush.warning('" . $stop . "');\n";
+
+	} else $tpl->result['content'] .= "\n DLEPush.error('" . $stop . "');\n";
+	
+	$tpl->result['content'] .= "var timeval = new Date().getTime();\n
+
+	{$replyclear}\n </script>";
+
+} else {
+	
+	$js_script = <<<HTML
+	var timeval = new Date().getTime();
+	
+	if( document.getElementById('dle-comments-form') ) {
+	
+		var form = document.getElementById('dle-comments-form');
+		
+		if ( form.question_answer ) {
+	
+		   form.question_answer.value ='';
+		   jQuery('#dle-question').text('{$qs['question']}');
+	
+		}
+		
+		{$clear_value}
+	}
+HTML;
+
+	if( strpos ( $tpl->result['content'], "dleplyrplayer" ) !== false ) {
+		
+		if( strpos ( $tpl->result['content'], ".m3u8" ) !== false ) {
+			$load_more = "\$.getCachedScript( dle_root + 'engine/classes/html5player/plyr.js?v={$config['cache_id']}');";
+			$js_name = "hls.js"; 
+		} else {
+			$load_more = "";
+			$js_name = "plyr.js"; 
+		}
+		
+		$js_script .= <<<HTML
+		
+			if (typeof DLEPlayer == "undefined") {
+
+				var headlink =  $("head").find("link[rel='stylesheet']");
+				var linkElement = "<link href='" + dle_root +"engine/classes/html5player/plyr.css' rel='stylesheet' type='text/css'>";
+
+				if (headlink.length){
+					headlink.first().before(linkElement)
+				}
+				else {
+					$("head").append(linkElement);
+				}
+				  
+				$.getCachedScript( dle_root + 'engine/classes/html5player/{$js_name}?v={$config['cache_id']}').done(function() {
+				  {$load_more} 
+				});
+				
+			} else {
+			
+				var containers = document.querySelectorAll("#comm-id-{$added_comments_id} .dleplyrplayer");Array.from(containers).forEach(function (container) {new DLEPlayer(container);});
+				
+			}
+HTML;
+
+	}
+
+	if( strpos ( $tpl->result['content'], 'highslide' ) !== false ) {
+		
+		$js_script .= <<<HTML
+		
+			if (typeof Fancybox == "undefined" ) {
+				$.getCachedScript( dle_root + 'engine/classes/fancybox/fancybox.js?v={$config['cache_id']}');
+			}
+		
+HTML;
+		
+	}
+
+	$needwrap = isset($_POST['needwrap']) ? intval($_POST['needwrap']) : 0 ;
+	
+	if ( $config['tree_comments'] ) {
+		
+		if (!$parent) $class = ' blind-animation';
+		else $class = '';
+		
+		if ($config['tree_comments_level'] AND $indent >= $config['tree_comments_level'] ) {
+			
+			$tpl->result['content'] = "<div id=\"comments-tree-item-{$added_comments_id}\" style=\"display:none\" class=\"comments-tree-item{$class}\" >".$tpl->result['content']."</div>";
+			
+		} else {
+			
+			$tpl->result['content'] = "<li id=\"comments-tree-item-{$added_comments_id}\" style=\"display:none\" class=\"comments-tree-item{$class}\" >".$tpl->result['content']."</li>";
+			
+			if($needwrap OR !$parent) {
+				$tpl->result['content'] = "<ol class=\"comments-tree-list\">".$tpl->result['content']."</ol>";
+			}
+			
+		}
+
+	} else {
+
+		$tpl->result['content'] = "<div id=\"blind-animation-{$added_comments_id}\" style=\"display:none\">".$tpl->result['content']."<div>";
+	}
+	
+}
+
+$tpl->result['content'] = str_replace( '{THEME}', $_ROOT_DLE_URL . 'templates/' . $config['skin'], $tpl->result['content'] );
+
+if ($CN_HALT) {
+
+	echo json_encode(array("error" => true, "content" => $tpl->result['content'] ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES );
+
+} else {
+	
+	echo json_encode(array("success" => true, "id" => $added_comments_id, "content" => $tpl->result['content'], "scripts" => $js_script), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES );
+	
+}
+
+?>

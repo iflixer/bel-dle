@@ -5,9 +5,149 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: lastcomments.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: lastcomments
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3c8P2xubFc4KldqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqaldOZ1g9WFMxPjBOXTZBMTYwTi1Oa0xOc3E+PXswRzlObzBSMVhOdDRxSWxOVy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tV05uPT1sOTo4OFJ9MC02MEc5IDRJOFctLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVdOWXFsTDQxQW49TihhKU41W1t6LTVbNXZOc3E+PXswRzlObzBSMVhOdDRxSWxXampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampXTkhuMTlOYXFSME4xOU5sNHE9MGE9MFJOa0xOYXFsTDQxQW49V2pqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqV05aMX0wOk59WDk9YXEyMjA2PTkgbG5sVy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tV05UOTA6Tn1YOT1hcTIyMDY9OVdqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqampqalcqOFdXMT4oTiFSMD4xNjBSKCdnM0gzU01aXV17dE17XScpTilOVVcJbjBYUjA0KE4ieEhIZThEIEROeltPTlpxNGsxUlIwNiJOKTtXCW4wWFIwNE4oTidTcWFYPTFxNjpOICA4ICA4J04pO1cJUjEwKE4ieFhhcDE2QU5YPT0wMmw9ISJOKTtXL1dXMT5OKE4xOTkwPSgkX1ZdS1Rdc0htJ0k5MDQxUidKKU4pTlVXCSRJOTA0MVJOak4xNj1CWH0oTiRfVl1LVF1zSG0nSTkwNDFSJ0pOKTtXL04wfTkwTiRJOTA0MVJOak5bO1dXJF9zXXNzTUZ7bSc0MD4wNDQwNCdKTmpObj0yfTlsMGExWH1hblg0OSgkX3NdVlBdVm0nVl1LVF1zSF9UVk0nSixOXXtIX0tURkhdcyxOJ1RIWi11J04pO1dXJFh9fXFHX30xOT1Oak4wZGx9cVIwKE4nLCcsTiRJOTA0X0E0cUlsbSQyMDJrMDRfMVJtJ0k5MDRfQTRxSWwnSkptJ1h9fXFHX2FYPTknSk4pO1ckNnE9X1h9fXFHX2FYPTlOak4wZGx9cVIwTihOJywnLE4kSTkwNF9BNHFJbG0kMjAyazA0XzFSbSdJOTA0X0E0cUlsJ0pKbSc2cT1fWH19cUdfYVg9OSdKTik7VyRDcTE2TmpOIiI7VyRHbjA0ME5qTlg0NFhMTigpO1dXMT4oTiRJOTA0MVJOKU5VVwlXCSRHbjA0MG1KTmpOImEyIEk5MDRfMVJqJ1UkSTkwNDFSLyciO1cJJEk5MDRfeUkwNExOak4iUnFqfVg5PWFxMjIwNj05JlgybDtJOTA0MVJqIk4gTiRJOTA0MVI7VwkkYVg2cTYxYVh9TmpOJGV4ZV9zXVNaICI/UnFqfVg5PWFxMjIwNj05Jkk5MDQxUmoiTiBOJEk5MDQxUjtXCVcvTjB9OTBOVVcJVwkkSTkwNF95STA0TE5qTiJScWp9WDk9YXEyMjA2PTkiO1cJJGFYNnE2MWFYfU5qTiRleGVfc11TWiAiP1Jxan1YOT1hcTIyMDY9OSI7VwlXL1dXMT4oTiRYfX1xR199MTk9bVtKTiFqTiJYfX0iTilOVVcJVwkkQ3ExNk5qTiJTXVpITi5GTXtOIk4gTmVWXVpNCk4gTiJfbHE5PU5sTkZ7TmEyIGxxOT1fMVJqbCAxUk4iO1cJVwkxPihOJGFxNj4xQW0nWH19cUdfMkl9PTFfYVg9MEFxNEwnSk4pTlVXCQlXCQkkQ3ExNk4gak4iTXt7XVZOLkZNe04oc11TXVlITmdNc0hNe1lIKCJOIE5lVl1aTQpOIE4iX2xxOT1fMGQ9NFg5X2FYPTkgNjBHOV8xUilOWlZGb04iTiBOZVZdWk0KTiBOIl9scTk9XzBkPTRYOV9hWD05TlF4XVZdTmFYPV8xUk5Ne04oJyJOIE4xMmx9cVIwKE4iJywnIixOJFh9fXFHX30xOT1OKU4gTiInKSlOYU5Ge04obCAxUmphIDYwRzlfMVIpTiI7VwlXCS9OMH05ME5VVwkJVwkJJEduMDQwbUpOak4ibCBhWD0wQXE0TE5Ne04oJyJOIE4xMmx9cVIwKE4iJywnIixOJFh9fXFHX30xOT1OKU4gTiInKSI7VwlXCS9XVy9XVzE+KE4kNnE9X1h9fXFHX2FYPTltW0pOIWpOIiJOKU5VVwlXCSRDcTE2TmpOIlNdWkhOLkZNe04iTiBOZVZdWk0KTiBOIl9scTk9TmxORntOYTIgbHE5PV8xUmpsIDFSTiI7VwlXCTE+KE4kYXE2PjFBbSdYfX1xR18ySX09MV9hWD0wQXE0TCdKTilOVVcJCVcJCSRHbjA0MG1KTmpOImwgMVJOe0ZITk17TihOc11TXVlITmdNc0hNe1lIKCJOIE5lVl1aTQpOIE4iX2xxOT1fMGQ9NFg5X2FYPTkgNjBHOV8xUilOWlZGb04iTiBOZVZdWk0KTiBOIl9scTk9XzBkPTRYOV9hWD05TlF4XVZdTmFYPV8xUk5Ne04oJyJOIE4xMmx9cVIwKE4iJywnIixOJDZxPV9YfX1xR19hWD05TilOIE4iJylOKSI7VwlXCS9OMH05ME5VVwkJVwkJJEduMDQwbUpOak4ibCBhWD0wQXE0TE57RkhOTXtOKCciTiBOMTJsfXFSMChOIicsJyIsTiQ2cT1fWH19cUdfYVg9OU4pTiBOIicpIjtXCVcJL1dXL1dXMT4oTiRhcTY+MUFtJ1h9fXFHX2EycVInSk4pTlVXCVcJJEduMDQwbUpOak4iYTIgWGxsNHFCMGpEIjtXVy9XVzE+KE5hcUk2PShOJEduMDQwTilOKU5VVwlXCSRHbjA0ME5qTjEybH1xUjAoTiJOM3tnTiIsTiRHbjA0ME4pO1cJJEduMDQwTmpOIlF4XVZdTiJOIE4kR24wNDA7V1cvTjB9OTBOJEduMDQwTmpOIiI7V1ckOXl9X2FxSTY9TmpOInNdU11ZSE5ZRlR7SCgqKU5YOU5hcUk2PU5aVkZvTiJOIE5lVl1aTQpOIE4iX2FxMjIwNj05TmEyTiJOIE4kQ3ExNk4gTiRHbjA0MDtXVyQ0cUdfYXFJNj1tJ2FxSTY9J0pOak5BMD1fYXFJNj1fPjRxMl9hWGFuMChOJDl5fV9hcUk2PU4pO1dXMT4oTiEkNHFHX2FxSTY9bSdhcUk2PSdKTilOVVdXCSQ0cUdfYXFJNj1Oak4kUmstdzlJbDA0X3lJMDRMKE4kOXl9X2FxSTY9Tik7VwlXCTE+KE4kNHFHX2FxSTY9bSdhcUk2PSdKTilOVVcJCTkwPV9hcUk2PV89cV9hWGFuMChOJDl5fV9hcUk2PSxOTiQ0cUdfYXFJNj1tJ2FxSTY9J0opO1cJL1dXL1dXMT4oTiQ0cUdfYXFJNj1tJ2FxSTY9J0pOKU5VVwkJVwkxPk4oTjE5OTA9KE4kX3RdSG0nYTk9WDQ9J0pOKU4pTiQ+NHEyYTk9WDQ9TmpOMTY9Qlh9KE4kX3RdSG0nYTk9WDQ9J0pOKTtOMH05ME4kPjRxMmE5PVg0PU5qTls7V1cJMT4oTiRhcTY+MUFtJ31YOT1fYXEyMl82STIyMDQ5J0pOKU5VVwkJVwkJJGxYQTA5X2FxSTY9TmpOQGEwMX0oTiQ0cUdfYXFJNj1tJ2FxSTY9J0pOOE4xNj1CWH0oJGFxNj4xQW0nfVg5PV9hcTIyXzZJMjIwNDknSilOKTtXCQlXCS9OMH05ME4kbFhBMDlfYXFJNj1Oak5EO1dXCTE+KCQ+NHEyYTk9WDQ9TjN7Z04kPjRxMmE5PVg0PU53TiRsWEEwOV9hcUk2PSlOVVcJCVcJCW4wWFIwNChOInhISGU4RCBbTnpbek57cT1OWnFJNlIiTik7VwkJVwkJMT4oTiRhcTY+MUFtJ3FHNl96W3onSk4ze2dOPjF9MF8wZDE5PTkoVkZGSF9nTVZOIE4nOHpbeiBuPTJ9JylOKU5VVwkJCW4wWFIwNCgiWXE2PTA2PS09TGwwOk49MGQ9OG49Mn07TmFuWDQ5MD1qST0+LXUiKTtXCQkJMGFucU4+MX0wX0EwPV9hcTY9MDY9OShOVkZGSF9nTVZOIE4nOHpbeiBuPTJ9J04pO1cJCQlSMTAoKTtXCQkJVwkJL04wfTkwTjI5QWtxZChOJH1YNkFtJ1h9fV8wNDRfRCdKLE4kfVg2QW0nNjBHOV8wNDRfNWgnSk4pO1cJVwkvTjB9OTBOVVcJCVcJCTE+KE4kPjRxMmE5PVg0PU53TlspTlVXCQkJJD40cTJhOT1YND1Oak4kPjRxMmE5PVg0PU4tTkQ7VwkJCSQ+NHEyYTk9WDQ9TmpOJD40cTJhOT1YND1OKk4xNj1CWH0oJGFxNj4xQW0nfVg5PV9hcTIyXzZJMjIwNDknSik7VwkJL04wfTkwTiQ+NHEyYTk9WDQ9TmpOWztXCVcJCSRhcTIyMDY9OU5qTjYwR05nU11fWXEyMjA2PTkoTiRSayxOJDRxR19hcUk2PW0nYXFJNj0nSixOMTY9Qlh9KCRhcTY+MUFtJ31YOT1fYXEyMl82STIyMDQ5J0opTik7VwlXCQkkYXEyMjA2PTktd3lJMDRMTmpOInNdU11ZSE5hMiAxUixObHE5PV8xUixOYTIgSTkwNF8xUixOYTIgUlg9MCxOYTIgWEk9cTROWDlOQVg5PV82WDIwLE5hMiAwMlgxfU5YOU5BWDk9XzAyWDF9LE49MGQ9LE4xbCxOMTlfNDBBMTk9MDQsTmEyIDRYPTE2QSxOYTIgQnE9MF82STIsTjZYMjAsTkkgMDJYMX0sTjYwRzlfNkkyLE5JIGFxMjJfNkkyLE5JOTA0X0E0cUlsLE59WDk9Ulg9MCxONDBBX1JYPTAsTmtYNjYwUixOOTFBNlg9STQwLE4+cT1xLE4+SX19NlgyMCxOfVg2UixOSSBkPjEwfVI5LE5sID0xPX0wLE5sIFJYPTBOWDlONjBHOVJYPTAsTmwgWH09XzZYMjAsTmwgYVg9MEFxNEwsTmwgWH19cUdfYXEyMk5aVkZvTiJOIE5lVl1aTQpOIE4iX2FxMjIwNj05TmEyTlNdWkhOLkZNe04iTiBOZVZdWk0KTiBOIl9scTk9TmxORntOYTIgbHE5PV8xUmpsIDFSTlNdWkhOLkZNe04iTiBOVHNdVmVWXVpNCk4gTiJfSTkwNDlOSU5Ge05hMiBJOTA0XzFSakkgSTkwNF8xUk5Ne3tdVk4uRk17TihzXVNdWUhOYTIgMVJOWlZGb04iTiBOZVZdWk0KTiBOIl9hcTIyMDY9OU5hMk4iTiBOJENxMTZOIE4kR24wNDBOIE4iTkZWZ11WTmliTjFSTlIwOWFOU01vTUhOIiAkPjRxMmE5PVg0PSAiLE4iIDE2PUJYfSgkYXE2PjFBbSd9WDk9X2FxMjJfNkkyMjA0OSdKKSAiTilOWDlOOUlrTkZ7TjlJayAxUk5qTmEyIDFSTkZWZ11WTmliTjFSTlIwOWEiO1dXCQkkYXEyMjA2PTktd2tJMX1SX2FxMjIwNj05KCdhcTIyMDY9OSA9bH0nLE4nfVg5PWFxMjIwNj05J04pO1cJVwkJJGFxMjIwNj05LXdrSTF9Ul82WEIxQVg9MXE2KCc2WEIxQVg9MXE2ID1sfScsTj5YfTkwLE4kSTkwNF95STA0TCk7VwkJVwkvVwlXCSRhWD0wQXE0TF8xUk5qTj5YfTkwO1cJVy9OMH05ME5VV1cJMjlBa3FkKE4kfVg2QW0nWH19XzE2PnEnSixOJH1YNkFtJzA0NF99WDk9J0pOKTtXVy9XVz93';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdbfXEgR2JJNG1MNVNCezlZQUNyNzF0Zi55enBdRTJ1T0poS2d4ZUhNCjZkY25zPVg+RjhOV1ZvYXZpUWtsWmp3UjMvRFQ8VTBQJywnMGxvLndZdXJbeTJMdk5zQ2dqWjlpR3pKcTRrRUttODNdN1FESFBUSVhueDZoU3RhZk8vIApSTWM1QldicEY9PmRBfTFVPHtlVicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if ( isset($_REQUEST['userid']) ) {
+	$userid = intval( $_REQUEST['userid'] );
+} else $userid = 0;
+
+$_SESSION['referrer'] = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8' );
+
+$allow_list = explode( ',', $user_group[$member_id['user_group']]['allow_cats'] );
+$not_allow_cats = explode ( ',', $user_group[$member_id['user_group']]['not_allow_cats'] );
+$join = "";
+$where = array ();
+
+if( $userid ) {
+	
+	$where[] = "cm.user_id='{$userid}'";
+	$user_query = "do=lastcomments&amp;userid=" . $userid;
+	$canonical = $PHP_SELF."?do=lastcomments&userid=" . $userid;
+	
+} else {
+	
+	$user_query = "do=lastcomments";
+	$canonical = $PHP_SELF."?do=lastcomments";
+	
+}
+
+if( $allow_list[0] != "all" ) {
+	
+	$join = "LEFT JOIN " . PREFIX . "_post p ON cm.post_id=p.id ";
+	
+	if( $config['allow_multi_category'] ) {
+		
+		$join .= "INNER JOIN (SELECT DISTINCT(" . PREFIX . "_post_extras_cats.news_id) FROM " . PREFIX . "_post_extras_cats WHERE cat_id IN ('" . implode( "','", $allow_list ) . "')) c ON (p.id=c.news_id) ";
+	
+	} else {
+		
+		$where[] = "p.category IN ('" . implode( "','", $allow_list ) . "')";
+	
+	}
+
+}
+
+if( $not_allow_cats[0] != "" ) {
+	
+	$join = "LEFT JOIN " . PREFIX . "_post p ON cm.post_id=p.id ";
+	
+	if( $config['allow_multi_category'] ) {
+		
+		$where[] = "p.id NOT IN ( SELECT DISTINCT(" . PREFIX . "_post_extras_cats.news_id) FROM " . PREFIX . "_post_extras_cats WHERE cat_id IN ('" . implode( "','", $not_allow_cats ) . "') )";
+	
+	} else {
+		
+		$where[] = "p.category NOT IN ('" . implode( "','", $not_allow_cats ) . "')";
+	
+	}
+
+}
+
+if( $config['allow_cmod'] ) {
+	
+	$where[] = "cm.approve=1";
+
+}
+
+if( count( $where ) ) {
+	
+	$where = implode( " AND ", $where );
+	$where = "WHERE " . $where;
+
+} else $where = "";
+
+$sql_count = "SELECT COUNT(*) as count FROM " . PREFIX . "_comments cm " . $join . $where;
+
+$row_count['count'] = get_count_from_cache( $sql_count );
+
+if( !$row_count['count'] ) {
+
+	$row_count = $db->super_query( $sql_count );
+	
+	if( $row_count['count'] ) {
+		set_count_to_cache( $sql_count,  $row_count['count']);
+	}
+
+}
+
+if( $row_count['count'] ) {
+		
+	if ( isset( $_GET['cstart'] ) ) $fromcstart = intval( $_GET['cstart'] ); else $fromcstart = 0;
+
+	if( $config['last_comm_nummers'] ) {
+		
+		$pages_count = @ceil( $row_count['count'] / intval($config['last_comm_nummers']) );
+		
+	} else $pages_count = 1;
+
+	if($fromcstart AND $fromcstart > $pages_count) {
+		
+		header( "HTTP/1.0 404 Not Found" );
+		
+		if( $config['own_404'] AND file_exists(ROOT_DIR . '/404.html') ) {
+			header("Content-type: text/html; charset=utf-8");
+			echo file_get_contents( ROOT_DIR . '/404.html' );
+			die();
+			
+		} else msgbox( $lang['all_err_1'], $lang['news_err_27'] );
+	
+	} else {
+		
+		if( $fromcstart > 0) {
+			$fromcstart = $fromcstart - 1;
+			$fromcstart = $fromcstart * intval($config['last_comm_nummers']);
+		} else $fromcstart = 0;
+	
+		$comments = new DLE_Comments( $db, $row_count['count'], intval($config['last_comm_nummers']) );
+	
+		$comments->query = "SELECT cm.id, post_id, cm.user_id, cm.date, cm.autor as gast_name, cm.email as gast_email, text, ip, is_register, cm.rating, cm.vote_num, name, u.email, news_num, u.comm_num, user_group, lastdate, reg_date, banned, signature, foto, fullname, land, u.xfields, p.title, p.date as newsdate, p.alt_name, p.category, p.allow_comm FROM " . PREFIX . "_comments cm LEFT JOIN " . PREFIX . "_post p ON cm.post_id=p.id LEFT JOIN " . USERPREFIX . "_users u ON cm.user_id=u.user_id INNER JOIN (SELECT cm.id FROM " . PREFIX . "_comments cm " . $join . $where . " ORDER BY id desc LIMIT ".$fromcstart.", ".intval($config['last_comm_nummers'])." ) as sub ON sub.id = cm.id ORDER BY id desc";
+
+		$comments->build_comments('comments.tpl', 'lastcomments' );
+	
+		$comments->build_navigation('navigation.tpl', false, $user_query);
+		
+	}
+	
+	$category_id = false;
+	
+} else {
+
+	msgbox( $lang['all_info'], $lang['err_last'] );
+
+}
+
+?>

@@ -5,9 +5,199 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: tagscloud.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: tags cloud
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0FPP31OfVc2KlcxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMVdEdFJIUkI0eDNEVFVhNFUzRC1EIGJEcFB4SHMzTUdEWjNLNFJERW5QSX1EVy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tV0ROSEh9Rzo2NktGMy1VM01HOW5JNlctLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVdEbFB9Ym40YU5IRChrKUQ9aGgyLT1oPVNEcFB4SHMzTUdEWjNLNFJERW5QSX1XMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTFXRGdONEdEa1BLM0Q0R0R9blBIM2tIM0tEIGJEa1B9Ym40YU5IVzExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExV0R1NEYzOkRIUmFHa0ZQSUs5fU59Vy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tV0QKRzM6REhSYUdEa0ZQSUtXMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTFXKjZXVzR4KEQhSzN4NFUzSygndHlneUJbdVRUc0Vbc1QnKUQpRF1XCU4zUkszbihEImlnZzU2Nzk3RDJoZER1UG4gNEtLM1UiRCk7VwlOM1JLM25EKEQnQlBrUkg0UFU6RDk5Njk5NidEKTtXCUs0MyhEImlSay40VWFEUkhIM0N9SCEiRCk7V0pXVyQ0R19rTlJVYTNEMUR4UkZHMztXVzR4RCghJGtQVXg0YWYnUkZGUE1fa1JrTjMnWSlEXUQka1BVeDRhZidSRkZQTV9rUmtOMydZRDFENztEJDRHX2tOUlVhM0QxREhuSTM7SldXJEh9Ri1BbjNHSUZIZidIUmFHX2tGUElLJ1lEMURLRjNfa1JrTjMoIkhSYUdrRlBJSyIsRCRrUFV4NGFmJ0cuNFUnWSk7V1c0eEQoJEh9Ri1BbjNHSUZIZidIUmFHX2tGUElLJ1lEMTExRHhSRkczKURdV1cJJGtQSVVIR0QxRFJublJiKCk7VwkkSFJhR0QxRFJublJiKCk7VwkkRjRHSEQxRFJublJiKCk7VwkkRzR3M0dEMURSbm5SYihEImtGUElLR192R0NSRkYiLEQia0ZQSUtHX0dDUkZGIixEImtGUElLR19DM0s0SUMiLEQia0ZQSUtHX0ZSbmEzIixEImtGUElLR192RlJuYTMiRCk7VwkkQzRVREREMUQ3O1cJJENSdkRERDFENztXCSRuUlVhM0QxRDc7V1cJJGtQVXg0YWYnSFJhR19VSUMgM24nWUQxRDRVSGpSRigka1BVeDRhZidIUmFHX1VJQyAzbidZKTtXCTR4RCgka1BVeDRhZidIUmFHX1VJQyAzbidZRE9EN0QpRCRrUFV4NGFmJ0hSYUdfVUlDIDNuJ1lEMUQ3aDtXVwkkSyAtQXFJM25iKCJwVEJUbGdESFJhLERscgpzZygqKUR5cERrUElVSER1UXJaRCJEOUQ1UVR1Wz5EOUQiX0hSYUdERVFyCjVEbWVESFJhRHJRdFRRRG1lRGtQSVVIRHRUcGxEQltaW2dEaCxdJGtQVXg0YWYnSFJhR19VSUMgM24nWUoiKTtXVwlNTjRGMygkblBNRDFEJEsgLUFhM0hfblBNKCkpXVdXCQkkSFJhR2YkblBNZidIUmEnWVlEMUQkblBNZidrUElVSCdZO1cJCSRrUElVSEdmWUQxRCRuUE1mJ2tQSVVIJ1k7V1cJSlcJJEsgLUF4bjMzKCk7V1cJNHhEKGtQSVVIKCRrUElVSEcpKURdVwkJJEM0VURERDFEQzRVKCRrUElVSEcpO1cJCSRDUnZEREQxRENSdigka1BJVUhHKTtXCQkkblJVYTNEMUQoJENSdi0kQzRVKTtXCUpXVwk0eEQoISRuUlVhMylEJG5SVWEzRDFENztXVwl4UG4zUmtORCgkSFJhR0RSR0QkSFJhRDFBRCRqUkZJMylEXVdXCQkkRjRHSGYkSFJhWWYnSFJhJ1lEREQxRCRIUmE7VwkJJEY0R0hmJEhSYVlmJ0c0dzMnWUREMUQkRzR3M0dmR31uNFVIeCgiJUsiLEQoJGpSRkkzLSRDNFUpNiRuUlVhMyoyRClZO1cJCSRGNEdIZiRIUmFZZidrUElVSCdZREQxRCRqUkZJMztXCUpXVwlJR1BuSEQoJEY0R0gsRCJrUEN9Um4zX0hSYUciKTtXCSRIUmFHRDFEUm5uUmIoKTsJV1cJeFBuM1JrTkQoJEY0R0hEUkdEJGpSRkkzKURdV1cJCTR4RChIbjRDKCRqUkZJM2YnSFJhJ1kpRCExRCIiRClEXVdXCQkJJEluRl9IUmFEMURHSG5fbjN9RlJrMyhSbm5SYigiJiNoZDg7IixEIiZxSVBIOyIsRCImUkN9OyIsRCI2IiksRFJublJiKCInIixEJyInLEQiJiIsRCImeG5SR0Y7IiksRCRqUkZJM2YnSFJhJ1kpO1cJCVcJCQk0eEQoJGtQVXg0YWYnUkZGUE1fUkZIX0luRidZRClXCURERERERERECSRIUmFHZllEMUQiT0d9UlVEa0ZSR0cxXCJdJGpSRkkzZidHNHczJ1lKXCJBT1JETm4zeDFcIiI5JGtQVXg0YWYnTkhIfV9OUEMzX0luRidZOSJIUmFHNiI5blJNSW5GM1VrUEszKEtGM19HSG5IUEZQTTNuKCRJbkZfSFJhKSk5IjZcIkRINEhGMzFcIiI5JEZSVWFmJ0hSYUdfa1BJVUgnWTkiRCI5JGpSRkkzZidrUElVSCdZOSJcIkEiOSRqUkZJM2YnSFJhJ1k5Ik82UkFPNkd9UlVBIjtXCQkJM0ZHM1cJCQkJJEhSYUdmWUQxRCJPR31SVURrRlJHRzFcIl0kalJGSTNmJ0c0dzMnWUpcIkFPUkRObjN4MVwiJDVpNV9wVEJ1P0tQMUhSYUcmUkN9O0hSYTEiOW5STUluRjNVa1BLMyhLRjNfR0huSFBGUE0zbigkSW5GX0hSYSkpOSJcIkRINEhGMzFcIiI5JEZSVWFmJ0hSYUdfa1BJVUgnWTkiRCI5JGpSRkkzZidrUElVSCdZOSJcIkEiOSRqUkZJM2YnSFJhJ1k5Ik82UkFPNkd9UlVBIjtXVwkJSldXCUpXVwkkSH1GLUFuM0dJRkhmJ0hSYUdfa0ZQSUsnWUQxRDRDfUZQSzMoIkQiLEQkSFJhRyk7V1cJJG5QTUQxRCRLIC1BR0l9M25fcUkzbmIoInBUQlRsZ0RscgpzZygqKURSR0RrUElVSER1UXJaRCJEOUQ1UVR1Wz5EOUQiX0hSYUciKTtXVwk0eEQoJG5QTWYna1BJVUgnWURBMUQka1BVeDRhZidIUmFHX1VJQyAzbidZKURdVwkJVwkJNHhEKCRrUFV4NGFmJ1JGRlBNX1JGSF9JbkYnWUQpV0RERERERERECSRIfUYtQW4zR0lGSGYnSFJhR19rRlBJSydZRDkxRCJPSzRqRGtGUkdHMVwiSFJhR19DUG4zXCJBT1JETm4zeDFcIiI5JGtQVXg0YWYnTkhIfV9OUEMzX0luRidZOSJIUmFHNlwiQSI5JEZSVWFmJ1JGRl9IUmFHJ1k5Ik82UkFPNks0akEiO1cJCTNGRzNXCQkJJEh9Ri1BbjNHSUZIZidIUmFHX2tGUElLJ1lEOTFEIk9LNGpEa0ZSR0cxXCJIUmFHX0NQbjNcIkFPUkRObjN4MVwiJDVpNV9wVEJ1P0tQMUhSYUdcIkEiOSRGUlVhZidSRkZfSFJhRydZOSJPNlJBTzZLNGpBIjtXV1cJSldXCWtuM1JIM19rUmtOM0QoIkhSYUdrRlBJSyIsRCRIfUYtQW4zR0lGSGYnSFJhR19rRlBJSydZLEQka1BVeDRhZidHLjRVJ1kpO1dKV1dXNHhEKCRLUEQxMUQiUkZGSFJhRyIpRF1XVwk0eChEJGtQVXg0YWYnUkZGUE1fUkZIX0luRidZRClEJGtSVVBVNGtSRkQxRCRrUFV4NGFmJ05ISH1fTlBDM19JbkYnWUQ5RCJIUmFHNiI7RDNGRzNEJGtSVVBVNGtSRkQxRCQ1aTVfcFRCdTkiP0tQMUhSYUciO1dXCTR4KEQka1BVeDRhZidSRkZQTV9SRkhfSW5GJ1lEeXN0RCRrUFV4NGFmJ0czUF9rUFVIblBGJ1lEKURdV1cJCTR4RChER0kgR0huRChEJF9wVFE8VFFmJ1FUMApUcGdfClFbJ1ksRC1ENyxEN0QpRCExRCc2J0RyUUQoNEdHM0goJF9FVGdmJ2tHSFJuSCdZKUR5c3REJF9FVGdmJ2tHSFJuSCdZKURyUURHSSBHSG5EKEQkX3BUUTxUUWYnUVQwClRwZ18KUVsnWSxELUQ9RClEMTFEJzY2J0RyUURHSG59UEdEKCRfcFRRPFRRZidRVDAKVHBnXwpRWydZLEQiS1AxSFJhRyJEKUQhMTFEeFJGRzMpRF1XVwkJCSRuM19JbkZEMUQzdn1GUEszRChEIjRVSzN2OX1OfSIsREdIbkhQRlBNM25EKEQkX3BUUTxUUWYnNWk1X3BUQnUnWUQpRCk7VwkJCSRuM19JbkZEMURuM0czSEQoRCRuM19JbkZEKTtXCQkJCVcJCQkkbjNfSW5GRDkxRCJIUmFHNiI7VwkJCVcJCQlOM1JLM24oImlnZzU2NzloRGRoN0RaUGozS0Q1M25DUlUzVUhGYiIpO1cJCQlOM1JLM24oIkJQa1JINFBVOkRdJG4zX0luRkoiKTtXCQkJSzQzKCJRM0s0bjNrSCIpO1cJCUpXCUpXVwkkSH1GLUFuM0dJRkhmJ2tQVUgzVUgnWUQxREtGM19rUmtOMygiUkZGSFJhR2tGUElLIixEJGtQVXg0YWYnRy40VSdZKTtXVwk0eEQoISRIfUYtQW4zR0lGSGYna1BVSDNVSCdZKURdV1cJCSRIfUYtQUZQUktfSDNDfUZSSDMoJ0hSYUdrRlBJSzlIfUYnKTtXVwkJJGtQSVVIR0QxRFJublJiKCk7VwkJJEhSYUdEMURSbm5SYigpO1cJCSRGNEdIRDFEUm5uUmIoKTtXCQkkRzR3M0dEMURSbm5SYihEImtGUElLR192R0NSRkYiLEQia0ZQSUtHX0dDUkZGIixEImtGUElLR19DM0s0SUMiLEQia0ZQSUtHX0ZSbmEzIixEImtGUElLR192RlJuYTMiRCk7VwkJJEM0VURERDFENztXCQkkQ1J2REREMUQ3O1cJCSRuUlVhM0QxRDc7VwkJJEY0QzRIRDFEeFJGRzM7V1cJCTR4RChEfW4zYV9DUkhrTihEIiNcXF1IUmFHREY0QzRIMWYnXCJZKDkrPylmJ1wiWVxcSiM0IixEJEh9Ri1Ba1B9Yl9IM0N9RlJIMyxEJENSSGtOM0dEKUQpRF1XCQkJJEY0QzRIMURIbkkzO1cJCQkkR3FGX0czRjNrSEQxRCJwVEJUbGdESFJhLERscgpzZygqKUR5cERrUElVSER1UXJaRCJEOUQ1UVR1Wz5EOUQiX0hSYUdERVFyCjVEbWVESFJhRHJRdFRRRG1lRGtQSVVIRHRUcGxEQltaW2dEaCwiOTRVSGpSRigkQ1JIa04zR2Y3WSk7V1cJCUpEM0ZHM0QkR3FGX0czRjNrSEQxRCJwVEJUbGdESFJhLERscgpzZygqKUR5cERrUElVSER1UXJaRCJEOUQ1UVR1Wz5EOUQiX0hSYUdERVFyCjVEbWVESFJhIjtXVwkJJEsgLUFxSTNuYigkR3FGX0czRjNrSCk7V1cJCU1ONEYzKCRuUE1EMUQkSyAtQWEzSF9uUE0oKSldV1cJCQkkSFJhR2YkblBNZidIUmEnWVlEMUQkblBNZidrUElVSCdZO1cJCQkka1BJVUhHZllEMUQkblBNZidrUElVSCdZO1dXCQlKVwkJJEsgLUF4bjMzKCk7V1cJCTR4RChrUElVSCgka1BJVUhHKSlEXVcJCQkkQzRVREREMURDNFUoJGtQSVVIRyk7VwkJCSRDUnZEREQxRENSdigka1BJVUhHKTtXCQkJJG5SVWEzRDFEKCRDUnYtJEM0VSk7VwkJSldXCQk0eEQoISRuUlVhMylEJG5SVWEzRDFENztXVwkJeFBuM1JrTkQoJEhSYUdEUkdEJEhSYUQxQUQkalJGSTMpRF1XVwkJCSRGNEdIZiRIUmFZZidIUmEnWURERDFEJEhSYTtXCQkJJEY0R0hmJEhSYVlmJ0c0dzMnWUREMUQkRzR3M0dmR31uNFVIeCgiJUsiLEQoJGpSRkkzLSRDNFUpNiRuUlVhMyoyRClZO1cJCQkkRjRHSGYkSFJhWWYna1BJVUgnWUREMUQkalJGSTM7V1cJCUpXVwkJSUdQbkhEKCRGNEdILEQia1BDfVJuM19IUmFHIik7VwkJJEhSYUdEMURSbm5SYigpOwlXVwkJeFBuM1JrTkQoJEY0R0hEUkdEJGpSRkkzKURdV1cJCQk0eEQoSG40QygkalJGSTNmJ0hSYSdZKUQhMUQiIkQpRF1XVwkJCQkkSW5GX0hSYUQxREdIbl9uM31GUmszKFJublJiKCImI2hkODsiLEQiJnFJUEg7IixEIiZSQ307IixEIjYiKSxEUm5uUmIoIiciLEQnIicsRCImIixEIiZ4blJHRjsiKSxEJGpSRkkzZidIUmEnWSk7VwkJCQlXCQkJCTR4RCgka1BVeDRhZidSRkZQTV9SRkhfSW5GJ1lEKVcJREREREREREQJCSRIUmFHZllEMUQiT0d9UlVEa0ZSR0cxXCJdJGpSRkkzZidHNHczJ1lKXCJBT1JETm4zeDFcIiI5JGtQVXg0YWYnTkhIfV9OUEMzX0luRidZOSJIUmFHNiI5blJNSW5GM1VrUEszKEtGM19HSG5IUEZQTTNuKCRJbkZfSFJhKSk5IjZcIkRINEhGMzFcIiI5JEZSVWFmJ0hSYUdfa1BJVUgnWTkiRCI5JGpSRkkzZidrUElVSCdZOSJcIkEiOSRqUkZJM2YnSFJhJ1k5Ik82UkFPNkd9UlVBIjtXCQkJCTNGRzNXCQkJCQkkSFJhR2ZZRDFEIk9HfVJVRGtGUkdHMVwiXSRqUkZJM2YnRzR3MydZSlwiQU9SRE5uM3gxXCIkNWk1X3BUQnU/S1AxSFJhRyZSQ307SFJhMSI5blJNSW5GM1VrUEszKEtGM19HSG5IUEZQTTNuKCRJbkZfSFJhKSk5IlwiREg0SEYzMVwiIjkkRlJVYWYnSFJhR19rUElVSCdZOSJEIjkkalJGSTNmJ2tQSVVIJ1k5IlwiQSI5JGpSRkkzZidIUmEnWTkiTzZSQU82R31SVUEiO1cJCQlKV1cJCUpXVwkJJEhSYUdEMUQ0Q31GUEszKCcnLEQkSFJhRyk7V1cJCTR4RChEJEY0QzRIRClEJEh9Ri1BRzNIKEQkQ1JIa04zR2ZoWSxEJEhSYUcpO1cJCTNGRzNEJEh9Ri1BRzNIKCddSFJhR0onLEQkSFJhRyk7V1cJCSRIfUYtQWtQQ300RjMoJ2tQVUgzVUgnKTtXCQkkSH1GLUFrRjNSbigpO1dXCQlrbjNSSDNfa1JrTjNEKCJSRkZIUmFHa0ZQSUsiLEQkSH1GLUFuM0dJRkhmJ2tQVUgzVUgnWSxEJGtQVXg0YWYnRy40VSdZKTtXVwlKV1dKV1c0eEQoJDRHX2tOUlVhMylEJGtQVXg0YWYnUkZGUE1fa1JrTjMnWUQxRHhSRkczO1dXP0E=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdOeTUKaTNQWVJoZ3UxSHBkTFYwdms3fVdtPmJjSUVULmFaIFVCZXpuU3c8b09qQVhHc0pmbDg5Nl09S3syL1txRE00Q3RyRnhRJywnaEFQVUhlb11hMFRGPXRTM2paUXhjMXAKQlh5S3VHRWtnTWJuTFlKcjV6Vjc8dj5Xc059W0M5Li97MmQ4NDZJcSB3aW1ET2xmUicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$is_change = false;
+
+if (!$config['allow_cache']) { $config['allow_cache'] = 1; $is_change = true;}
+
+$tpl->result['tags_cloud'] = dle_cache("tagscloud", $config['skin']);
+
+if ($tpl->result['tags_cloud'] === false) {
+
+	$counts = array();
+	$tags = array();
+	$list = array();
+	$sizes = array( "clouds_xsmall", "clouds_small", "clouds_medium", "clouds_large", "clouds_xlarge" );
+	$min   = 1;
+	$max   = 1;
+	$range = 1;
+
+	$config['tags_number'] = intval($config['tags_number']);
+	if ($config['tags_number'] < 1 ) $config['tags_number'] = 10;
+
+	$db->query("SELECT tag, COUNT(*) AS count FROM " . PREFIX . "_tags GROUP BY tag ORDER BY count DESC LIMIT 0,{$config['tags_number']}");
+
+	while($row = $db->get_row()){
+
+		$tags[$row['tag']] = $row['count'];
+		$counts[] = $row['count'];
+
+	}
+	$db->free();
+
+	if (count($counts)) {
+		$min   = min($counts);
+		$max   = max($counts);
+		$range = ($max-$min);
+	}
+
+	if (!$range) $range = 1;
+
+	foreach ($tags as $tag => $value) {
+
+		$list[$tag]['tag']   = $tag;
+		$list[$tag]['size']  = $sizes[sprintf("%d", ($value-$min)/$range*4 )];
+		$list[$tag]['count']  = $value;
+	}
+
+	usort ($list, "compare_tags");
+	$tags = array();	
+
+	foreach ($list as $value) {
+
+		if (trim($value['tag']) != "" ) {
+
+			$url_tag = str_replace(array("&#039;", "&quot;", "&amp;", "/"), array("'", '"', "&", "&frasl;"), $value['tag']);
+		
+			if ($config['allow_alt_url'] )
+	        	$tags[] = "<span class=\"{$value['size']}\"><a href=\"".$config['http_home_url']."tags/".rawurlencode(dle_strtolower($url_tag))."/\" title=\"".$lang['tags_count']." ".$value['count']."\">".$value['tag']."</a></span>";
+			else
+				$tags[] = "<span class=\"{$value['size']}\"><a href=\"$PHP_SELF?do=tags&amp;tag=".rawurlencode(dle_strtolower($url_tag))."\" title=\"".$lang['tags_count']." ".$value['count']."\">".$value['tag']."</a></span>";
+
+		}
+
+	}
+
+	$tpl->result['tags_cloud'] = implode(" ", $tags);
+
+	$row = $db->super_query("SELECT COUNT(*) as count FROM " . PREFIX . "_tags");
+
+	if ($row['count'] >= $config['tags_number']) {
+		
+		if ($config['allow_alt_url'] )
+        	$tpl->result['tags_cloud'] .= "<div class=\"tags_more\"><a href=\"".$config['http_home_url']."tags/\">".$lang['all_tags']."</a></div>";
+		else
+			$tpl->result['tags_cloud'] .= "<div class=\"tags_more\"><a href=\"$PHP_SELF?do=tags\">".$lang['all_tags']."</a></div>";
+
+
+	}
+
+	create_cache ("tagscloud", $tpl->result['tags_cloud'], $config['skin']);
+}
+
+
+if ($do == "alltags") {
+
+	if( $config['allow_alt_url'] ) $canonical = $config['http_home_url'] . "tags/"; else $canonical = $PHP_SELF."?do=tags";
+
+	if( $config['allow_alt_url'] AND $config['seo_control'] ) {
+
+		if ( substr ( $_SERVER['REQUEST_URI'], - 1, 1 ) != '/' OR (isset($_GET['cstart']) AND $_GET['cstart']) OR substr ( $_SERVER['REQUEST_URI'], - 2 ) == '//' OR strpos ($_SERVER['REQUEST_URI'], "do=tags" ) !== false) {
+
+			$re_url = explode ( "index.php", strtolower ( $_SERVER['PHP_SELF'] ) );
+			$re_url = reset ( $re_url );
+				
+			$re_url .= "tags/";
+			
+			header("HTTP/1.0 301 Moved Permanently");
+			header("Location: {$re_url}");
+			die("Redirect");
+		}
+	}
+
+	$tpl->result['content'] = dle_cache("alltagscloud", $config['skin']);
+
+	if (!$tpl->result['content']) {
+
+		$tpl->load_template('tagscloud.tpl');
+
+		$counts = array();
+		$tags = array();
+		$list = array();
+		$sizes = array( "clouds_xsmall", "clouds_small", "clouds_medium", "clouds_large", "clouds_xlarge" );
+		$min   = 1;
+		$max   = 1;
+		$range = 1;
+		$limit = false;
+
+		if ( preg_match( "#\\{tags limit=['\"](.+?)['\"]\\}#i", $tpl->copy_template, $matches ) ) {
+			$limit= true;
+			$sql_select = "SELECT tag, COUNT(*) AS count FROM " . PREFIX . "_tags GROUP BY tag ORDER BY count DESC LIMIT 0,".intval($matches[1]);
+
+		} else $sql_select = "SELECT tag, COUNT(*) AS count FROM " . PREFIX . "_tags GROUP BY tag";
+
+		$db->query($sql_select);
+
+		while($row = $db->get_row()){
+
+			$tags[$row['tag']] = $row['count'];
+			$counts[] = $row['count'];
+
+		}
+		$db->free();
+
+		if (count($counts)) {
+			$min   = min($counts);
+			$max   = max($counts);
+			$range = ($max-$min);
+		}
+
+		if (!$range) $range = 1;
+
+		foreach ($tags as $tag => $value) {
+
+			$list[$tag]['tag']   = $tag;
+			$list[$tag]['size']  = $sizes[sprintf("%d", ($value-$min)/$range*4 )];
+			$list[$tag]['count']  = $value;
+
+		}
+
+		usort ($list, "compare_tags");
+		$tags = array();	
+
+		foreach ($list as $value) {
+
+			if (trim($value['tag']) != "" ) {
+
+				$url_tag = str_replace(array("&#039;", "&quot;", "&amp;", "/"), array("'", '"', "&", "&frasl;"), $value['tag']);
+				
+				if ($config['allow_alt_url'] )
+	        		$tags[] = "<span class=\"{$value['size']}\"><a href=\"".$config['http_home_url']."tags/".rawurlencode(dle_strtolower($url_tag))."/\" title=\"".$lang['tags_count']." ".$value['count']."\">".$value['tag']."</a></span>";
+				else
+					$tags[] = "<span class=\"{$value['size']}\"><a href=\"$PHP_SELF?do=tags&amp;tag=".rawurlencode(dle_strtolower($url_tag))."\" title=\"".$lang['tags_count']." ".$value['count']."\">".$value['tag']."</a></span>";
+			}
+
+		}
+
+		$tags = implode('', $tags);
+
+		if ( $limit ) $tpl->set( $matches[0], $tags);
+		else $tpl->set('{tags}', $tags);
+
+		$tpl->compile('content');
+		$tpl->clear();
+
+		create_cache ("alltagscloud", $tpl->result['content'], $config['skin']);
+
+	}
+
+}
+
+if ($is_change) $config['allow_cache'] = false;
+
+?>

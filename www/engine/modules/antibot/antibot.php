@@ -5,9 +5,361 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: antibot.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: CAPTCHA
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3dBP1lXWVEwKlE1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NVEyUEYxRnl2N3Uyb21Jdm11Mi0yRDwyCn03MSB1VDQybnVsdkYyT3F9alkyUS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tUTJXMTFZNDowMGxadS1tdVQ0Q3FqMFEtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVEyeH1ZPHF2SVcxMihOKTJoU1NdLWhTaE0yCn03MSB1VDQybnVsdkYyT3F9allRNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTVRMi9XdjQyTn1sdTJ2NDJZcX0xdU4xdWwyRDwyTn1ZPHF2SVcxUTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1UTJLdlp1OjJGbTF2RH0xQ1lXWVEtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVEyZTR1OjJ4R3QveHJHUTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1USowUVFRIzJVeEd0L3hyRzJ0OHs9b3gvMmZvOAoueyAyaENTUVEjMkdqMX1KRjF2TjIxdTQxMjF9MjF1WloyTn1KWWoxdXE0MkZtbDJXakpGbTQyRllGcTFRUSMyeH1ZPHF2SVcxMkQ8MlVxaklafTMyCnVxSXV2LDJoU1NnLDJoU1NzLDJoU1M+LDJoU1JSUSMyVFRUQ05GWTFOV0ZDcWosMlRUVEM5cWpJWn0zQ3FqUVEjMgo8NDF1SjJxdVZqdnF1SnVtMTQ6MnRydDJdQ1NDZysyVDAyT1BRUSMyVXhHdC94ckcydjQyRjI3cXV1MjR9NzFURnF1QzJhfWoyTkZtMjdxdXVaPDJqNHUydjEyN31xMmx1M3VafVl2bUkyfVRtMjR2MXUyfXEyNH03MVRGcXVDUSMyLjcyPH1qMmo0dTIxV3Y0MjR9NzFURnF1MkY0MkYyWUZxMTJ9NzJ9VG0yNH03VEZxdSwyPH1qMkpqNDEyWnVGM3UyTn1ZPHF2SVcxMm19MXZOdTQydm0xRk4xMn1xMkZsbDJVeEd0L3hyRzJOfVk8cXZJVzEybX0xdk51NDIxfTJ9VG1DUSMyRzQyRjJsdTdGaloxMk59bTd2SWpxRjF2fW0sMlV4R3QveHJHMldGNDJGMjRKRlpaMk5xdWx2MTQyMXVjMTJGMTJEfTExfUoyfTcyeEd0L3hyRzJ2SkZJdUNRIzJhfWoyTkZtMnF1Sn0zdTJ2MSwyRGoxMi4yVH1qWmwyRHUyWVp1RjR1bDJ2NzI8fWoyWnU3MTJ2MUMyOylRUUB1cXF9cV9xdVl9cTF2bUkyKDJvX0d5eTJeMm9faUc4IC4gTzJeMm9fUG90OG94Ry9vUDJeMm9fIHsvLnhvMik7UUB2bXZfNHUxMigyJ3VxcX1xX3F1WX1xMXZtSScsMm9fR3l5Ml4yb19pRzggLiBPMl4yb19Qb3Q4b3hHL29QMl4yb18gey8ueG8yKTtRUUB2bXZfNHUxMigyJ2x2NFlaRjxfdXFxfXE0JywyMXFqdTIpO1FAdm12XzR1MTIoMidXMUpaX3VxcX1xNCcsMjdGWjR1Mik7UVFsdTd2bXUoMidQRy9HeS5Lb28gTy4gbycsMjFxanUyKTtRbHU3dm11KDInOHt7L19QLjgnLDI0akQ0MXEoMmx2cW1GSnUoMjJfX0sueW9fXzIpLDJTLDItaGQyKTIpO1FsdTd2bXUoMidvIE8uIG9fUC44JywyOHt7L19QLjgyQzInMHVtSXZtdScyKTtRUUB2bU5aamx1X31tTnUyKG8gTy4gb19QLjgyQzInMGxGMUYwTn1tN3ZJQ1lXWScpO1FRdjcyKE5adUZtX2pxWigkXwpvOGZvOGInci8vdF84b0tvOG84J0IpMiE1Mk5adUZtX2pxWigkXwpvOGZvOGInci8vdF9yewovJ0IpKTJIUQlXdUZsdXEoMiJyLy90MFJDUjJdU2QyS31xRHZsbHVtIjIpO1EJbHZ1KCJyRk45dm1JMkYxMXVKWTEhIik7UXBRUXY3MigyJE59bTd2SWInRmoxV19sfUpGdm0nQjIpMkhRUQkkbH1KRnZtX059fTl2dTI1MnVjWVp9bHUyKCJDIiwyTlp1Rm1fanFaKDIkXwpvOGZvOGInci8vdF9yewovJ0IyKSk7UQkkbH1KRnZtX059fTl2dV9OfWptMTI1Mk59am0xKCRsfUpGdm1fTn19OXZ1KTtRCSRsfUpGdm1fRlpafVRfTn1qbTEyNTItaDtRCVEJdjcyKDIkbH1KRnZtX059fTl2dV9OfWptMTJ3MmgyKTJIUQlRCQl2NzIoMnZtX0ZxcUY8KCRsfUpGdm1fTn19OXZ1YiRsfUpGdm1fTn19OXZ1X059am0xLWhCLDJGcXFGPCgnTn1KJywyJ211MScsMid9cUknKTIpKTIkbH1KRnZtX0ZaWn1UX059am0xMjUyLWQ7UQkJdjcyKDIkbH1KRnZtX059fTl2dWIkbH1KRnZtX059fTl2dV9OfWptMS1SQjI1NTInakYnMikyJGx9SkZ2bV9GWlp9VF9OfWptMTI1Mi1kO1EJCSRsfUpGdm1fTn19OXZ1MjUyRnFxRjxfNFp2TnUoJGx9SkZ2bV9OfX05dnUsMiRsfUpGdm1fRlpafVRfTn1qbTEpO1EJcFEJUQkkbH1KRnZtX059fTl2dTI1MiJDIjJDMnZKWVp9bHUyKCJDIiwyJGx9SkZ2bV9OfX05dnUpO1EJUQl2NygydlloWn1tSSgkXwpvOGZvOGInci8vdF9yewovJ0IpMjU1Mi1SMns4MnZZaFp9bUkoJF8KbzhmbzhiJ3IvL3RfcnsKLydCKTI1NTUyN0ZaNHUyKTJsdTd2bXUoMidQe25HLiAnLDIkbH1KRnZtX059fTl2dTIpO1EJdVo0dTJsdTd2bXUoMidQe25HLiAnLDJtalpaMik7UVFwMnVaNHUybHU3dm11KDInUHtuRy4gJywybWpaWjIpO1FRbFp1XzR1NDR2fW0oKTtRUSR2SjI1Mm11VDJVeEd0L3hyRygpO1FRJF8KbwoKLnsgYic0dU5fTn1sdV80dTQ0dn1tJ0IyNTIkdkotd0l1MVV1PAoxcXZtSSgpO1FRN2ptTjF2fW0ybFp1XzR1NDR2fW0oMiQ0dmwyNTI3Rlo0dTIpMkhRCUlafURGWjIkTn1tN3ZJO1EJUQkkWUZxRko0MjUyNHU0NHZ9bV9JdTFfTn19OXZ1X1lGcUZKNCgpO1FRCXY3MigyUHtuRy4gMikyJFlGcUZKNGInbH1KRnZtJ0IyNTJQe25HLiA7UQlRCXY3MigkTn1tN3ZJYid9bVo8XzQ0WidCKTIkWUZxRko0Yic0dU5qcXUnQjI1MjFxanU7UQlRCTR1NDR2fW1fNHUxX059fTl2dV9ZRnFGSjQoJFlGcUZKNGInWnY3dTF2SnUnQiwyIjAiLDIkWUZxRko0YidsfUpGdm0nQiwyJFlGcUZKNGInNHVOanF1J0IsMjFxanUpO1FRCXY3MigyJDR2bDIpMkA0dTQ0dn1tX3ZsKDIkNHZsMik7UVEJQDR1NDR2fW1fNDFGcTEoKTtRUXBRUTdqbU4xdn1tMk5adUZtX2pxWjIoJGpxWikySFFRMjJ2NzIoJGpxWjI1NTInJykycXUxanFtO1FRMjIkanFaMjUyNDFxX3F1WVpGTnUoIlcxMVk6MDAiLDIiIiwyNDFxMX1afVR1cSgkanFaKSk7UTIyJGpxWjI1MjQxcV9xdVlaRk51KCJXMTFZNDowMCIsMiIiLDIkanFaMik7UTIydjcyKDRqRDQxcSgkanFaLDJTLDJdKTI1NTInVFRUQycpMjIkanFaMjUyNGpENDFxKCRqcVosMl0pO1EyMiRqcVoyNTJ1Y1lafWx1KCcwJywyJGpxWik7UTIyJGpxWjI1MnF1NHUxKCRqcVopO1EyMiRqcVoyNTJ1Y1lafWx1KCc6JywyJGpxWik7UTIyJGpxWjI1MnF1NHUxKCRqcVopO1FRMjJxdTFqcW0yJGpxWjtRcFFRTlpGNDQyVXhHdC94ckdIUVEJWWpEWnZOMiQ5dTw0MXF2bUkyNTInJztRUQkwMDJJdW11cUYxdTQyOXU8NDFxdm1JMkZtbDJ2SkZJdVEJN2ptTjF2fW0yX19OfW00MXFqTjEoKUhRUQkJJEZaWVdGRHUxMjUyIlNSaGRdTWdzPkVGRE5sdTdJV3ZbOVpKbX1ZVnE0MWozVGM8WCI7MiMybH0ybX0xMk5XRm1JdTJUdjFXfWoxMk5XRm1Jdm1JMjd9bTEyN3ZadTQhUQkJUQkJIzI0PEpEfVo0Mmo0dWwyMX0ybHFGVDJ4R3QveHJHUQkJMDAkRlpafVR1bF80PEpEfVo0MjUyIlNSaGRdTWdzPkUiOzIjbHZJdjE0UQkJJEZaWn1UdWxfNDxKRH1aNDI1MiJoZF1NZ3M+RUZETmx1SXY5WVY0M2M8WCI7MiNGWllXRkR1MTJUdjFXfWoxMjR2SnZaRnEyNDxKRH1aNDIofTVTLDJSNVosMnY1WywyMTU3KVEJCVEJCSMyN31abHVxMlR2MVcyN31tMTRRCQkkN31tMTRsdnEyNTInN31tMTQnOwlRCQlRCQkjMnhHdC94ckcyNDFxdm1JMlp1bUkxV1EJCSRadW1JMVcyNTJKMV9xRm1sKE0scyk7MiMycUZtbH1KMk0yfXEyZzJ9cTJzUQkJMDAkWnVtSTFXMjUyZztRCQlRCQkjMnhHdC94ckcydkpGSXUyNHZYdTIoPH1qMmx9Mm19MTJtdXVsMjF9Mk5XRm1JdTJ2MSwyMVd2NDJZRnFGSnUxdXE0MnY0Mn1ZMXZKRlopUQkJJFR2bDFXMjUyUmdTO1EJCSRXdXZJVzEyNTI+UztRCQlRCQkjMjQ8SkR9Wic0MjN1cTF2TkZaMjdaak4xakYxdn1tMkZKWVp2MWpsdVEJCSQ3WmpOMWpGMXZ9bV9GSlladjFqbHUyNTI+O1EJCVEJCSNtfXY0dVEJCTAwJFRXdjF1X219djR1X2x1bTR2MTw1UzsyMDAybX0yVFd2MXUybX12NHVRCQkkVFd2MXVfbX12NHVfbHVtNHYxPDVSMGc7UQkJMDAkRFpGTjlfbX12NHVfbHVtNHYxPDVTOzIwMDJtfTJEWkZOOTJtfXY0dVEJCSREWkZOOV9tfXY0dV9sdW00djE8NVIwZFM7UQkJUQkJIzJ2bU5xdUY0dTI0Rjd1MTwyRDwyWXF1M3VtMXZ9bTJ9NzI0WUZOdTQyRHUxVHV1bTI0PEpEfVo0UQkJJG19XzRZRk51NDI1MjFxanU7UQkJUQkJUQkJIzJ4R3QveHJHMnZKRkl1Mk59Wn1xNDIoOE9MLDJTLWhNTSlRCQkwMCQ3fXF1SXF9am1sX059Wn1xMjUyRnFxRjwoUywyUywyUyk7UQkJMDAkREZOOUlxfWptbF9OfVp9cTI1MkZxcUY8KGhoUywyaGRTLDJoTU0pO1EJCSQ3fXF1SXF9am1sX059Wn1xMjUyRnFxRjwoSjFfcUZtbChTLD5TKSwySjFfcUZtbChTLD5TKSwySjFfcUZtbChTLD5TKSk7UQkJJERGTjlJcX1qbWxfTn1afXEyNTJGcXFGPChKMV9xRm1sKGhoUyxoTU0pLDJKMV9xRm1sKGhoUyxoTU0pLDJKMV9xRm1sKGhoUyxoTU0pKTtRCQlRCQkjMj10b08yVmpGWnYxPDJ9NzJ4R3QveHJHMnZKRkl1MihEdklJdXEydjQyRHUxMXVxMlZqRlp2MTwsMkRqMTJaRnFJdXEyN3ZadTI0dlh1KVEJCSRbWXVJX1ZqRlp2MTwyNTJFUztRCQkkN31tMTQ1RnFxRjwoKTtRCQkkN31tMTRsdnFfRkQ0fVpqMXU1bHZxbUZKdShfX0sueW9fXylDJzAnQyQ3fW0xNGx2cTtRCQl2NzIoJFdGbWxadTI1Mn1ZdW1sdnEoJDd9bTE0bHZxX0ZENH1aajF1KSkySFEJCQlUV3ZadTIoN0ZaNHUyITU1MigkN3ZadTI1MnF1RmxsdnEoJFdGbWxadSkpKTJIUQkJCQl2NzIoWXF1SV9KRjFOVygnMFxDWW1JJDB2JywyJDd2WnUpKTJIUQkJCQkJJDd9bTE0YkI1JDd9bTE0bHZxX0ZENH1aajF1QycwJ0MkN3ZadTtRCQkJCXBRCQkJcFEJCTIyMjJOWn00dWx2cSgkV0ZtbFp1KTtRCQlwCVEJUQkJJEZaWVdGRHUxX1p1bUkxVzU0MXFadW0oJEZaWVdGRHUxKTtRCQlRCQlsfUhRCQkJMDAySXVtdXFGMXZtSTJxRm1sfUoyOXU8NDFxdm1JUQkJCVRXdlp1KDFxanUpSFEJCQkJJDFXdjQtdzl1PDQxcXZtSTUnJztRCQkJCTd9cSgkdjVTOyR2QSRadW1JMVc7JHYrKylIUQkJCQkJJDFXdjQtdzl1PDQxcXZtSUM1JEZaWn1UdWxfNDxKRH1aNGJKMV9xRm1sKFMsNDFxWnVtKCRGWlp9VHVsXzQ8SkR9WjQpLVIpQjtRCQkJCXBRCQkJCXY3KCFZcXVJX0pGMU5XKCcwTll8TkR8Tjl8Tmd8TkV8cW18cUp8Skp8Tn18bH18Tlp8bER8Vll8VkR8bFl8VFQwJywyJDFXdjQtdzl1PDQxcXZtSSkpMkRxdUY5O1EJCQlwUQkJUQkJCSQ3fW0xXzd2WnU1JDd9bTE0YkoxX3FGbWwoUywyTn1qbTEoJDd9bTE0KS1SKUI7UQkJCSQ3fW0xNXZKRkl1TnF1RjF1N3F9SlltSSgkN31tMV83dlp1KTtRCQkJdkpGSXVGWllXRkRadW1sdm1JKCQ3fW0xLDIxcWp1KTtRUQkJCSQ3fW0xN3ZadV9UdmwxVzV2SkZJdTRjKCQ3fW0xKTtRCQkJJDd9bTE3dlp1X1d1dklXMTV2SkZJdTQ8KCQ3fW0xKS1SO1EJCQlRCQkJJDd9bTFfSnUxcXZONDVGcXFGPCgpO1EJCQkkNDxKRH1aNVM7UQkJCSRxdUZsdm1JXzQ8SkR9WjU3Rlo0dTtRUQkJCTAwMlp9Rmx2bUkyN31tMVEJCQk3fXEoJHY1UzskdkEkN31tMTd2WnVfVHZsMVcyJiYyJDQ8SkR9WkEkRlpZV0ZEdTFfWnVtSTFXOyR2KyspSFEJCQkJJDFxRm00WUZxdW0xMjUyKHZKRkl1Tn1afXFGMSgkN31tMSwyJHYsMlMpMnd3MmhdKTI1NTJSaHM7UVEJCQkJdjcoISRxdUZsdm1JXzQ8SkR9WjImJjIhJDFxRm00WUZxdW0xKUhRCQkJCQkkN31tMV9KdTFxdk40YiRGWllXRkR1MWIkNDxKRH1aQkI1RnFxRjwoJzQxRnExJzV3JHYpO1EJCQkJCSRxdUZsdm1JXzQ8SkR9WjUxcWp1O1EJCQkJCU59bTF2bWp1O1EJCQkJcFFRCQkJCXY3KCRxdUZsdm1JXzQ8SkR9WjImJjIkMXFGbTRZRnF1bTEpSFEJCQkJCSQ3fW0xX0p1MXF2TjRiJEZaWVdGRHUxYiQ0PEpEfVpCQmIndW1sJ0I1JHY7UQkJCQkJJHF1Rmx2bUlfNDxKRH1aNTdGWjR1O1EJCQkJCSQ0PEpEfVorKztRCQkJCQlOfW0xdm1qdTtRCQkJCXBRCQkJcFFRCQkJJHZKSTV2SkZJdU5xdUYxdTFxanVOfVp9cSgkVHZsMVcsMiRXdXZJVzEpO1EJCQl2SkZJdUZaWVdGRFp1bWx2bUkoJHZKSSwyMXFqdSk7UQkJCSRUV3YxdTV2SkZJdU59Wn1xRlpafU5GMXUoJHZKSSwyaE1NLDJoTU0sMmhNTSk7UQkJCSREWkZOOTV2SkZJdU59Wn1xRlpafU5GMXUoJHZKSSwyUywyUywyUyk7UVEJCQl2SkZJdTd2Wlp1bHF1TjFGbUladSgkdkpJLDJTLDJTLDIkVHZsMVctUiwyJFd1dklXMS1SLDIkVFd2MXUpO1FRCQkJMDAybHFGVDIxdWMxUQkJCSRjNVI7UQkJCSR9bGw1SjFfcUZtbChTLFIpO1EJCQl2NygkfWxsNTVTKTIkfWxsNS1SO1EJCQk3fXEoJHY1UzskdkEkWnVtSTFXOyR2KyspSFEJCQkJJEo1JDd9bTFfSnUxcXZONGIkMVd2NC13OXU8NDFxdm1JYiR2QkI7UVEJCQkJJDw1KCgkdiVoKSokN1pqTjFqRjF2fW1fRkpZWnYxamx1Mi0yJDdaak4xakYxdn1tX0ZKWVp2MWpsdTBoKSokfWxsUQkJCQkJKzJKMV9xRm1sKC1xfWptbCgkN1pqTjFqRjF2fW1fRkpZWnYxamx1MGQpLDJxfWptbCgkN1pqTjFqRjF2fW1fRkpZWnYxamx1MGQpKVEJCQkJCSsyKCRXdXZJVzEtJDd9bTE3dlp1X1d1dklXMSkwaDtRUQkJCQl2NygkbX1fNFlGTnU0KUhRCQkJCQkkNFd2NzE1UztRCQkJCQl2NygkdndTKUhRCQkJCQkJJDRXdjcxNVJTU1NTO1EJCQkJCQk3fXEoJDQ8NWQ7JDQ8QSQ3fW0xN3ZadV9XdXZJVzEtUlM7JDQ8KzVSKUhRCQkJCQkJCTd9cSgkNGM1JEpiJzQxRnExJ0ItUjskNGNBJEpiJ3VtbCdCOyQ0Yys1UilIUQkJCQkyMjIyMjIyMgkJJHFJRDV2SkZJdU59Wn1xRjEoJDd9bTEsMiQ0YywyJDQ8KTtRCQkJCTIyMjIyMjIyCQkkfVlGTnYxPDUkcUlEd3doXTtRCQkJCQkJCQl2NygkfVlGTnYxPEFSaHMpSFEJCQkJCQkJCQkkWnU3MTUkNGMtJEpiJzQxRnExJ0IrJGM7UQkJCQkJCQkJCSRZPDUkNDwrJDw7UQkJCQkJCQkJCXY3KCRZPHckV3V2SVcxKTJEcXVGOTtRCQkJCQkJCQkJN31xKCRZYzVKdm0oJFp1NzEsJFR2bDFXLVIpOyRZY3ckWnU3MS1oU1MyJiYyJFljdzVTOyRZYy01UilIUQkJCQkJCTIyMjIyMjIyCQkkTn1afXE1dkpGSXVOfVp9cUYxKCR2SkksMiRZYywyJFk8KTImMlNjNzc7UQkJCQkJCQkJCQl2NygkTn1afXErJH1ZRk52MTxBUnNTKUgyMDAyUnNTMi0yMVdxdTRXfVpsUQkJCQkJCQkJCQkJdjcoJDRXdjcxdyRadTcxLSRZYylIUQkJCQkJCQkJCQkJCSQ0V3Y3MTUkWnU3MS0kWWM7UQkJCQkJCQkJCQkJcFEJCQkJCQkJCQkJCURxdUY5O1EJCQkJCQkJCQkJcFEJCQkJCQkJCQlwUQkJCQkJCQkJCURxdUY5O1EJCQkJCQkJCXBRCQkJCQkJCXBRCQkJCQkJcFEJCQkJCQl2NygkNFd2NzE1NVJTU1NTKUhRCQkJCQkJCSQ0V3Y3MTVKMV9xRm1sKF0sZyk7UQkJCQkJCXBRUQkJCQkJcFEJCQkJcHVaNHVIUQkJCQkJJDRXdjcxNVI7UQkJCQlwUQkJCQl2SkZJdU59WTwoJHZKSSwyJDd9bTEsMiRjLSQ0V3Y3MSwyJDwsMiRKYic0MUZxMSdCLDJSLDIkSmIndW1sJ0ItJEpiJzQxRnExJ0IsMiQ3fW0xN3ZadV9XdXZJVzEpO1EJCQkJJGMrNSRKYid1bWwnQi0kSmInNDFGcTEnQi0kNFd2NzE7UQkJCXBRCQlwVFd2WnUoJGN3NSRUdmwxVy1SUyk7MjAwMlRXdlp1Mm19MTI3djEydm0yTkZtM0Y0UVEJCTAwbX12NHVRCQkkVFd2MXU1dkpGSXVOfVp9cUZaWn1ORjF1KCQ3fW0xLDJoTU0sMmhNTSwyaE1NKTtRCQkkRFpGTjk1dkpGSXVOfVp9cUZaWn1ORjF1KCQ3fW0xLDJTLDJTLDJTKTtRCQk3fXEoJHY1UzskdkEoKCRXdXZJVzEtZFMpKiRjKSokVFd2MXVfbX12NHVfbHVtNHYxPDskdisrKUhRCQkJdkpGSXU0dTFZdmN1WigkdkpJLDJKMV9xRm1sKFMsMiRjLVIpLDJKMV9xRm1sKFJTLDIkV3V2SVcxLVJNKSwyJFRXdjF1KTtRCQlwUQkJN31xKCR2NVM7JHZBKCgkV3V2SVcxLWRTKSokYykqJERaRk45X219djR1X2x1bTR2MTw7JHYrKylIUQkJCXZKRkl1NHUxWXZjdVooJHZKSSwySjFfcUZtbChTLDIkYy1SKSwySjFfcUZtbChSUywyJFd1dklXMS1STSksMiREWkZOOSk7UQkJcFFRCQlRCQkkTnVtMXVxNSRjMGg7UVEJCTAwMk5xdWx2MTRDMi99MnF1Sn0zdSwyNHV1Mk59bTd2SWpxRjF2fW0yN3ZadVEJCSR2SkloNXZKRkl1TnF1RjF1MXFqdU59Wn1xKCRUdmwxVywyJFd1dklXMSk7UQkJJDd9cXVJcX1qbWw1dkpGSXVOfVp9cUZaWn1ORjF1KCR2SkloLDIkN31xdUlxfWptbF9OfVp9cWJTQiwyJDd9cXVJcX1qbWxfTn1afXFiUkIsMiQ3fXF1SXF9am1sX059Wn1xYmhCKTtRCQkkREZOOUlxfWptbDV2SkZJdU59Wn1xRlpafU5GMXUoJHZKSWgsMiRERk45SXF9am1sX059Wn1xYlNCLDIkREZOOUlxfWptbF9OfVp9cWJSQiwyJERGTjlJcX1qbWxfTn1afXFiaEIpO1EJCXZKRkl1N3ZaWnVscXVOMUZtSVp1KCR2SkloLDJTLDJTLDIkVHZsMVctUiwyJFd1dklXMS1SLDIkREZOOUlxfWptbCk7CQlRUVFRCQkwMDJZdXF2fWw0UQkJJHFGbWxSNUoxX3FGbWwoc01TU1NTLFJoU1NTU1MpMFJTU1NTU1NTO1EJCSRxRm1saDVKMV9xRm1sKHNNU1NTUyxSaFNTU1NTKTBSU1NTU1NTUztRCQkkcUZtbGQ1SjFfcUZtbChzTVNTU1MsUmhTU1NTUykwUlNTU1NTU1M7UQkJJHFGbWxdNUoxX3FGbWwoc01TU1NTLFJoU1NTU1MpMFJTU1NTU1NTO1EJCTAwMllXRjR1NFEJCSRxRm1sTTVKMV9xRm1sKFMsZFJdUk1FaGcpMFJTU1NTU1NTO1EJCSRxRm1sZzVKMV9xRm1sKFMsZFJdUk1FaGcpMFJTU1NTU1NTO1EJCSRxRm1sczVKMV9xRm1sKFMsZFJdUk1FaGcpMFJTU1NTU1NTO1EJCSRxRm1sPjVKMV9xRm1sKFMsZFJdUk1FaGcpMFJTU1NTU1NTO1EJCTAwMkZKWVp2MWpsdTRRCQkkcUZtbEU1SjFfcUZtbChkZFMsXWhTKTBSUlM7UQkJJHFGbWxSUzVKMV9xRm1sKGRkUyxdTVMpMFJTUztRUQkJMDBURjN1Mmx2NDF9cTF2fW1RUQkJN31xKCRjNVM7JGNBJFR2bDFXOyRjKyspSFEJCQk3fXEoJDw1UzskPEEkV3V2SVcxOyQ8KyspSFEJCQkJJDRjNSRjKyg0dm0oJGMqJHFGbWxSKyRxRm1sTSkrNHZtKCQ8KiRxRm1sZCskcUZtbGcpKSokcUZtbEUtJFR2bDFXMGgrJE51bTF1cStSO1EJCQkJJDQ8NSQ8Kyg0dm0oJGMqJHFGbWxoKyRxRm1scykrNHZtKCQ8KiRxRm1sXSskcUZtbD4pKSokcUZtbFJTO1FRCQkJCXY3KCQ0Y0FTMnx8MiQ0PEFTMnx8MiQ0Y3c1JFR2bDFXLVIyfHwyJDQ8dzUkV3V2SVcxLVIpSFEJCQkJCU59bTF2bWp1O1EJCQkJcHVaNHVIUQkJCQkJJE59Wn1xNXZKRkl1Tn1afXFGMSgkdkpJLDIkNGMsMiQ0PCkyJjJTY0tLO1EJCQkJCSROfVp9cV9jNXZKRkl1Tn1afXFGMSgkdkpJLDIkNGMrUiwyJDQ8KTImMlNjS0s7UQkJCQkJJE59Wn1xXzw1dkpGSXVOfVp9cUYxKCR2SkksMiQ0YywyJDQ8K1IpMiYyU2NLSztRCQkJCQkkTn1afXFfYzw1dkpGSXVOfVp9cUYxKCR2SkksMiQ0YytSLDIkNDwrUikyJjJTY0tLO1EJCQkJcFFRCQkJCXY3KCROfVp9cTU1aE1NMiYmMiROfVp9cV9jNTVoTU0yJiYyJE59Wn1xXzw1NWhNTTImJjIkTn1afXFfYzw1NWhNTSlIUQkJCQkJTn1tMXZtanU7UQkJCQlwdVo0dTJ2NygkTn1afXE1NVMyJiYyJE59Wn1xX2M1NVMyJiYyJE59Wn1xXzw1NVMyJiYyJE59Wn1xX2M8NTVTKUhRCQkJCQkkbXVUcXVsNSQ3fXF1SXF9am1sX059Wn1xYlNCO1EJCQkJCSRtdVRJcXV1bTUkN31xdUlxfWptbF9OfVp9cWJSQjtRCQkJCQkkbXVURFpqdTUkN31xdUlxfWptbF9OfVp9cWJoQjtRCQkJCXB1WjR1SFEJCQkJCSQ3cTRjNSQ0Yy03Wn19cSgkNGMpO1EJCQkJCSQ3cTQ8NSQ0PC03Wn19cSgkNDwpO1EJCQkJCSQ3cTRjUjVSLSQ3cTRjO1EJCQkJCSQ3cTQ8UjVSLSQ3cTQ8O1FRCQkJCQkkbXVUTn1afXE1KFEJCQkJCQkkTn1afXEqJDdxNGNSKiQ3cTQ8UitRCQkJCQkJJE59Wn1xX2MqJDdxNGMqJDdxNDxSK1EJCQkJCQkkTn1afXFfPCokN3E0Y1IqJDdxNDwrUQkJCQkJCSROfVp9cV9jPCokN3E0YyokN3E0PCk7UVEJCQkJCXY3KCRtdVROfVp9cXdoTU0pMiRtdVROfVp9cTVoTU07UQkJCQkJJG11VE59Wn1xNSRtdVROfVp9cTBoTU07UQkJCQkJJG11VE59Wn1xUzVSLSRtdVROfVp9cTtRUQkJCQkJJG11VHF1bDUkbXVUTn1afXFTKiQ3fXF1SXF9am1sX059Wn1xYlNCKyRtdVROfVp9cSokREZOOUlxfWptbF9OfVp9cWJTQjtRCQkJCQkkbXVUSXF1dW01JG11VE59Wn1xUyokN31xdUlxfWptbF9OfVp9cWJSQiskbXVUTn1afXEqJERGTjlJcX1qbWxfTn1afXFiUkI7UQkJCQkJJG11VERaanU1JG11VE59Wn1xUyokN31xdUlxfWptbF9OfVp9cWJoQiskbXVUTn1afXEqJERGTjlJcX1qbWxfTn1afXFiaEI7UQkJCQlwUVEJCQkJdkpGSXU0dTFZdmN1WigkdkpJaCwyJGMsMiQ8LDJ2SkZJdU59Wn1xRlpafU5GMXUoJHZKSWgsMiRtdVRxdWwsMiRtdVRJcXV1bSwyJG11VERaanUpKTtRCQkJcFEJCXBRCQlRCQlXdUZsdXEoJ29jWXZxdTQ6Mm59bSwyaGcyPWpaMlJFRXMyU006U1M6U1MyT24vJyk7MlEJCVd1Rmx1cSgneEZOV3UteH1tMXF9WjoybX0tNDF9cXUsMm19LU5GTld1LDJKajQxLXF1M0ZadmxGMXUnKTsyUQkJV3VGbHVxKCd4Rk5XdS14fW0xcX1aOjJZfTQxLU5XdU45NVMsMllxdS1OV3VOOTVTJywyS0d5Cm8pOzJRCQlXdUZsdXEoJ3RxRklKRjoybX0tTkZOV3UnKTtRCQl2Nyg3am1OMXZ9bV91Y3Y0MTQoInZKRkl1W1l1SSIpKUhRCQkJV3VGbHVxKCJ4fW0xdW0xLS88WXU6MnZKRkl1MFtZdUkiKTtRCQkJdkpGSXVbWXVJKCR2SkloLDJtalpaLDIkW1l1SV9WakZadjE8KTtRCQlwdVo0dTJ2Nyg3am1OMXZ9bV91Y3Y0MTQoInZKRkl1SXY3IikpSFEJCQlXdUZsdXEoInh9bTF1bTEtLzxZdToydkpGSXUwSXY3Iik7UQkJCXZKRkl1SXY3KCR2SkloKTtRCQlwdVo0dTJ2Nyg3am1OMXZ9bV91Y3Y0MTQoInZKRkl1WW1JIikpSFEJCQlXdUZsdXEoInh9bTF1bTEtLzxZdToydkpGSXUwYy1ZbUkiKTtRCQkJdkpGSXVZbUkoJHZKSWgpO1EJCXBRCXBRUQkwMDJxdTFqcW00Mjl1PDQxcXZtSVEJN2ptTjF2fW0ySXUxVXU8CjFxdm1JKClIUQkJcXUxanFtMiQxV3Y0LXc5dTw0MXF2bUk7UQlwUXBRUT93';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCc5L0YwPlBtTDU4b099bE42NHMzek1XVGFyWWRnakUgLlVLY0h5cFJmQ0c8dgp1SnhJd3tEZWJdQVprMlMxW3RxaT1CaFFWN25YJywna1RhLzhEbkI9UkVHb2RjWHM3dlE1aHdZSHAzNnU5TklLRnh7TH0xVi5BeWlTZW1DZz5PYlVbNDxsWiAwdGpQcldKXTIKcWZNeicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+
+# KCAPTCHA PROJECT VERSION 2.0
+
+# Automatic test to tell computers and humans apart
+
+# Copyright by Kruglov Sergei, 2006, 2007, 2008, 2011
+# www.captcha.ru, www.kruglov.ru
+
+# System requirements: PHP 4.0.6+ w/ GD
+
+# KCAPTCHA is a free software. You can freely use it for developing own site or software.
+# If you use this software as a part of own sofware, you must leave copyright notices intact or add KCAPTCHA copyright notices to own.
+# As a default configuration, KCAPTCHA has a small credits text at bottom of CAPTCHA image.
+# You can remove it, but I would be pleased if you left it. ;)
+
+@error_reporting ( E_ALL ^ E_WARNING ^ E_DEPRECATED ^ E_NOTICE );
+@ini_set ( 'error_reporting', E_ALL ^ E_WARNING ^ E_DEPRECATED ^ E_NOTICE );
+
+@ini_set ( 'display_errors', true );
+@ini_set ( 'html_errors', false );
+
+define( 'DATALIFEENGINE', true );
+define( 'ROOT_DIR', substr( dirname(  __FILE__ ), 0, -23 ) );
+define( 'ENGINE_DIR', ROOT_DIR . '/engine' );
+
+@include_once (ENGINE_DIR . '/data/config.php');
+
+if (clean_url($_SERVER['HTTP_REFERER']) != clean_url($_SERVER['HTTP_HOST'])) {
+	header( "HTTP/1.1 403 Forbidden" );
+	die("Hacking attempt!");
+}
+
+if ( $config['auth_domain'] ) {
+
+	$domain_cookie = explode (".", clean_url( $_SERVER['HTTP_HOST'] ));
+	$domain_cookie_count = count($domain_cookie);
+	$domain_allow_count = -2;
+	
+	if ( $domain_cookie_count > 2 ) {
+	
+		if ( in_array($domain_cookie[$domain_cookie_count-2], array('com', 'net', 'org') )) $domain_allow_count = -3;
+		if ( $domain_cookie[$domain_cookie_count-1] == 'ua' ) $domain_allow_count = -3;
+		$domain_cookie = array_slice($domain_cookie, $domain_allow_count);
+	}
+	
+	$domain_cookie = "." . implode (".", $domain_cookie);
+	
+	if( ip2long($_SERVER['HTTP_HOST']) == -1 OR ip2long($_SERVER['HTTP_HOST']) === false ) define( 'DOMAIN', $domain_cookie );
+	else define( 'DOMAIN', null );
+
+} else define( 'DOMAIN', null );
+
+dle_session();
+
+$im = new KCAPTCHA();
+
+$_SESSION['sec_code_session'] = $im->getKeyString();
+
+function dle_session( $sid = false ) {
+	global $config;
+	
+	$params = session_get_cookie_params();
+
+	if ( DOMAIN ) $params['domain'] = DOMAIN;
+	
+	if ($config['only_ssl']) $params['secure'] = true;
+	
+	session_set_cookie_params($params['lifetime'], "/", $params['domain'], $params['secure'], true);
+
+	if ( $sid ) @session_id( $sid );
+
+	@session_start();
+
+}
+
+function clean_url ($url) {
+
+  if ($url == '') return;
+
+  $url = str_replace("http://", "", strtolower($url));
+  $url = str_replace("https://", "", $url );
+  if (substr($url, 0, 4) == 'www.')  $url = substr($url, 4);
+  $url = explode('/', $url);
+  $url = reset($url);
+  $url = explode(':', $url);
+  $url = reset($url);
+
+  return $url;
+}
+
+class KCAPTCHA{
+
+	public $keystring = '';
+
+	// generates keystring and image
+	function __construct(){
+
+		$alphabet = "0123456789abcdefghijklmnopqrstuvwxyz"; # do not change without changing font files!
+		
+		# symbols used to draw CAPTCHA
+		//$allowed_symbols = "0123456789"; #digits
+		$allowed_symbols = "23456789abcdegikpqsvxyz"; #alphabet without similar symbols (o=0, 1=l, i=j, t=f)
+		
+		# folder with fonts
+		$fontsdir = 'fonts';	
+		
+		# CAPTCHA string length
+		$length = mt_rand(5,7); # random 5 or 6 or 7
+		//$length = 6;
+		
+		# CAPTCHA image size (you do not need to change it, this parameters is optimal)
+		$width = 160;
+		$height = 80;
+		
+		# symbol's vertical fluctuation amplitude
+		$fluctuation_amplitude = 8;
+		
+		#noise
+		//$white_noise_density=0; // no white noise
+		$white_noise_density=1/6;
+		//$black_noise_density=0; // no black noise
+		$black_noise_density=1/30;
+		
+		# increase safety by prevention of spaces between symbols
+		$no_spaces = true;
+		
+		
+		# CAPTCHA image colors (RGB, 0-255)
+		//$foreground_color = array(0, 0, 0);
+		//$background_color = array(220, 230, 255);
+		$foreground_color = array(mt_rand(0,80), mt_rand(0,80), mt_rand(0,80));
+		$background_color = array(mt_rand(220,255), mt_rand(220,255), mt_rand(220,255));
+		
+		# JPEG quality of CAPTCHA image (bigger is better quality, but larger file size)
+		$jpeg_quality = 90;
+		$fonts=array();
+		$fontsdir_absolute=dirname(__FILE__).'/'.$fontsdir;
+		if ($handle = opendir($fontsdir_absolute)) {
+			while (false !== ($file = readdir($handle))) {
+				if (preg_match('/\.png$/i', $file)) {
+					$fonts[]=$fontsdir_absolute.'/'.$file;
+				}
+			}
+		    closedir($handle);
+		}	
+	
+		$alphabet_length=strlen($alphabet);
+		
+		do{
+			// generating random keystring
+			while(true){
+				$this->keystring='';
+				for($i=0;$i<$length;$i++){
+					$this->keystring.=$allowed_symbols[mt_rand(0,strlen($allowed_symbols)-1)];
+				}
+				if(!preg_match('/cp|cb|ck|c6|c9|rn|rm|mm|co|do|cl|db|qp|qb|dp|ww/', $this->keystring)) break;
+			}
+		
+			$font_file=$fonts[mt_rand(0, count($fonts)-1)];
+			$font=imagecreatefrompng($font_file);
+			imagealphablending($font, true);
+
+			$fontfile_width=imagesx($font);
+			$fontfile_height=imagesy($font)-1;
+			
+			$font_metrics=array();
+			$symbol=0;
+			$reading_symbol=false;
+
+			// loading font
+			for($i=0;$i<$fontfile_width && $symbol<$alphabet_length;$i++){
+				$transparent = (imagecolorat($font, $i, 0) >> 24) == 127;
+
+				if(!$reading_symbol && !$transparent){
+					$font_metrics[$alphabet[$symbol]]=array('start'=>$i);
+					$reading_symbol=true;
+					continue;
+				}
+
+				if($reading_symbol && $transparent){
+					$font_metrics[$alphabet[$symbol]]['end']=$i;
+					$reading_symbol=false;
+					$symbol++;
+					continue;
+				}
+			}
+
+			$img=imagecreatetruecolor($width, $height);
+			imagealphablending($img, true);
+			$white=imagecolorallocate($img, 255, 255, 255);
+			$black=imagecolorallocate($img, 0, 0, 0);
+
+			imagefilledrectangle($img, 0, 0, $width-1, $height-1, $white);
+
+			// draw text
+			$x=1;
+			$odd=mt_rand(0,1);
+			if($odd==0) $odd=-1;
+			for($i=0;$i<$length;$i++){
+				$m=$font_metrics[$this->keystring[$i]];
+
+				$y=(($i%2)*$fluctuation_amplitude - $fluctuation_amplitude/2)*$odd
+					+ mt_rand(-round($fluctuation_amplitude/3), round($fluctuation_amplitude/3))
+					+ ($height-$fontfile_height)/2;
+
+				if($no_spaces){
+					$shift=0;
+					if($i>0){
+						$shift=10000;
+						for($sy=3;$sy<$fontfile_height-10;$sy+=1){
+							for($sx=$m['start']-1;$sx<$m['end'];$sx+=1){
+				        		$rgb=imagecolorat($font, $sx, $sy);
+				        		$opacity=$rgb>>24;
+								if($opacity<127){
+									$left=$sx-$m['start']+$x;
+									$py=$sy+$y;
+									if($py>$height) break;
+									for($px=min($left,$width-1);$px>$left-200 && $px>=0;$px-=1){
+						        		$color=imagecolorat($img, $px, $py) & 0xff;
+										if($color+$opacity<170){ // 170 - threshold
+											if($shift>$left-$px){
+												$shift=$left-$px;
+											}
+											break;
+										}
+									}
+									break;
+								}
+							}
+						}
+						if($shift==10000){
+							$shift=mt_rand(4,6);
+						}
+
+					}
+				}else{
+					$shift=1;
+				}
+				imagecopy($img, $font, $x-$shift, $y, $m['start'], 1, $m['end']-$m['start'], $fontfile_height);
+				$x+=$m['end']-$m['start']-$shift;
+			}
+		}while($x>=$width-10); // while not fit in canvas
+
+		//noise
+		$white=imagecolorallocate($font, 255, 255, 255);
+		$black=imagecolorallocate($font, 0, 0, 0);
+		for($i=0;$i<(($height-30)*$x)*$white_noise_density;$i++){
+			imagesetpixel($img, mt_rand(0, $x-1), mt_rand(10, $height-15), $white);
+		}
+		for($i=0;$i<(($height-30)*$x)*$black_noise_density;$i++){
+			imagesetpixel($img, mt_rand(0, $x-1), mt_rand(10, $height-15), $black);
+		}
+
+		
+		$center=$x/2;
+
+		// credits. To remove, see configuration file
+		$img2=imagecreatetruecolor($width, $height);
+		$foreground=imagecolorallocate($img2, $foreground_color[0], $foreground_color[1], $foreground_color[2]);
+		$background=imagecolorallocate($img2, $background_color[0], $background_color[1], $background_color[2]);
+		imagefilledrectangle($img2, 0, 0, $width-1, $height-1, $background);		
+
+
+
+		// periods
+		$rand1=mt_rand(750000,1200000)/10000000;
+		$rand2=mt_rand(750000,1200000)/10000000;
+		$rand3=mt_rand(750000,1200000)/10000000;
+		$rand4=mt_rand(750000,1200000)/10000000;
+		// phases
+		$rand5=mt_rand(0,31415926)/10000000;
+		$rand6=mt_rand(0,31415926)/10000000;
+		$rand7=mt_rand(0,31415926)/10000000;
+		$rand8=mt_rand(0,31415926)/10000000;
+		// amplitudes
+		$rand9=mt_rand(330,420)/110;
+		$rand10=mt_rand(330,450)/100;
+
+		//wave distortion
+
+		for($x=0;$x<$width;$x++){
+			for($y=0;$y<$height;$y++){
+				$sx=$x+(sin($x*$rand1+$rand5)+sin($y*$rand3+$rand6))*$rand9-$width/2+$center+1;
+				$sy=$y+(sin($x*$rand2+$rand7)+sin($y*$rand4+$rand8))*$rand10;
+
+				if($sx<0 || $sy<0 || $sx>=$width-1 || $sy>=$height-1){
+					continue;
+				}else{
+					$color=imagecolorat($img, $sx, $sy) & 0xFF;
+					$color_x=imagecolorat($img, $sx+1, $sy) & 0xFF;
+					$color_y=imagecolorat($img, $sx, $sy+1) & 0xFF;
+					$color_xy=imagecolorat($img, $sx+1, $sy+1) & 0xFF;
+				}
+
+				if($color==255 && $color_x==255 && $color_y==255 && $color_xy==255){
+					continue;
+				}else if($color==0 && $color_x==0 && $color_y==0 && $color_xy==0){
+					$newred=$foreground_color[0];
+					$newgreen=$foreground_color[1];
+					$newblue=$foreground_color[2];
+				}else{
+					$frsx=$sx-floor($sx);
+					$frsy=$sy-floor($sy);
+					$frsx1=1-$frsx;
+					$frsy1=1-$frsy;
+
+					$newcolor=(
+						$color*$frsx1*$frsy1+
+						$color_x*$frsx*$frsy1+
+						$color_y*$frsx1*$frsy+
+						$color_xy*$frsx*$frsy);
+
+					if($newcolor>255) $newcolor=255;
+					$newcolor=$newcolor/255;
+					$newcolor0=1-$newcolor;
+
+					$newred=$newcolor0*$foreground_color[0]+$newcolor*$background_color[0];
+					$newgreen=$newcolor0*$foreground_color[1]+$newcolor*$background_color[1];
+					$newblue=$newcolor0*$foreground_color[2]+$newcolor*$background_color[2];
+				}
+
+				imagesetpixel($img2, $x, $y, imagecolorallocate($img2, $newred, $newgreen, $newblue));
+			}
+		}
+		
+		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); 
+		header('Cache-Control: no-store, no-cache, must-revalidate'); 
+		header('Cache-Control: post-check=0, pre-check=0', FALSE); 
+		header('Pragma: no-cache');
+		if(function_exists("imagejpeg")){
+			header("Content-Type: image/jpeg");
+			imagejpeg($img2, null, $jpeg_quality);
+		}else if(function_exists("imagegif")){
+			header("Content-Type: image/gif");
+			imagegif($img2);
+		}else if(function_exists("imagepng")){
+			header("Content-Type: image/x-png");
+			imagepng($img2);
+		}
+	}
+
+	// returns keystring
+	function getKeyString(){
+		return $this->keystring;
+	}
+}
+
+?>

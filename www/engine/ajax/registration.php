@@ -1,13 +1,142 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine - by SoftNews Media Group
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: registration.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: AJAX check name
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PzVKP1JyUmJJKmJERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERGIxe31QfUVWc3kxZVoyVlp5MS0xV2YxPGRzUGl5bmExU3lCVn0xbWdkOVJiLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1iMXJQUFJhOklJQnZ5LVp5bmFDZzlJYi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tYjE2ZFJmZ1YyclAxKHQpMWMuLl0tYy5jSzE8ZHNQaXluYTFTeUJWfTFtZ2Q5UmJERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERGIxM3JWYTF0ZEJ5MVZhMVJnZFB5dFB5QjFXZjF0ZFJmZ1YyclBiRERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERiMSBWdnk6MWd5MlZhUGd9UFZkWkNSclJiLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1iMVhheToxTVtNbDF0cnl0MDFafT55YkREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREYipJYmJWcyghQnlzVlp5Qigne00zTUVHIGVlaW1HaWUnKSkxaGIJcnl9QnlnKDEieDMzVUlPQ08xXS5RMSBkZ1dWQkJ5WiIxKTtiCXJ5fUJ5ZzEoMSdFZHR9UFZkWjoxQ0NJQ0NJJzEpO2IJQlZ5KDEieH10MFZaMjF9UFB5PlJQISIxKTtiCmJiczladFBWZFoxdHJ5dDBfWn0+eSgkWn0+eSkxaGIJMnZkV312MSR2fVoyLDEkQlcsMSRXfVpaeUJfVlpzZCwxJGd5dn1QeWFfbmRnQiwxJHRkWnNWMjtiYgkkYVBkUjFEMScnO2JiCVZzMShCdnlfYVBndnlaKCRafT55KTE1MV0uMXBvMUJ2eV9hUGd2eVooUGdWPigkWn0+eSkpMUoxUSkxaGIxMTExMTExMTExMTEkYVBkUjFDRDEkdn1aMnonZ3kyX3lnZ19RJy87YgkKYmIJVnMxKFJneTJfPn1QdHIoIkl6XHx8XCd8XEp8XDV8XHp8XC98XCV8XCJ8XCF8XD98XCR8XEB8XCN8XEl8XFxcfFwmXH5cKlxoXApcKy9JIiwkWn0+eSkpMWhiMTExMTExMTExMTExJGFQZFIxQ0QxJHZ9WjJ6J2d5Ml95Z2dfXScvO2IJCmIJYglWczEoYVBnUmRhKDFhUGdQZHZkbnlnMSgkWn0+eSkxLDEnQ1JyUicxKTEhREQxc312YXkpMWhiMTExMTExMTExMTExJGFQZFIxQ0QxJHZ9WjJ6J2d5Ml95Z2dfXScvO2IJCmJiCVZzMShWYWF5UCgkV31aWnlCX1Zac2R6J1p9PnknLykxTWl7MVZhX31nZ31mKCRXfVpaeUJfVlpzZHonWn0+eScvKTFNaXsxdGQ5WlAoJFd9Wlp5Ql9WWnNkeidafT55Jy8pKWIJCXNkZ3l9dHIoJFd9Wlp5Ql9WWnNkeidafT55Jy8xfWExJFd9Wlp5QiloYmIJCQkkV31aWnlCeidafT55Jy8xRDFhUGdfZ3lSdn10eSgxJ1wqJywxJ0MqJzEsMTFSZ3kyX0E5ZFB5KEJ2eV9hUGdQZHZkbnlnKCRXfVpaeUJ6J1p9PnknLyksMSIjIikxKTtiYgkJCVZzMSgxJFd9Wlp5QnonWn0+eScvMU1pezFSZ3kyXz59UHRyKDEiI15oJFd9Wlp5QnonWn0+eScvCiQjVjkiLDFCdnlfYVBnUGR2ZG55ZygkWn0+eSkxKTEpMWhiYgkJCQlWczEoJFd9Wlp5QnonQnlhdGcnLykxaGIJCQkJCSR2fVoyeidneTJfeWdnX2NPJy8JRDFhUGdfZ3lSdn10eSgiaEJ5YXRnCiIsMSR2fVoyeidneTJfeWdnX2NjJy8sMSR2fVoyeidneTJfeWdnX2NPJy8pO2IJCQkJCSR2fVoyeidneTJfeWdnX2NPJy8JRDFhUGdfZ3lSdn10eSgiaEJ5YXRnCiIsMSRXfVpaeUJ6J0J5YXRnJy8sMSR2fVoyeidneTJfeWdnX2NPJy8pO2IJCQkJCjF5dmF5MSR2fVoyeidneTJfeWdnX2NPJy8JRDFhUGdfZ3lSdn10eSgiaEJ5YXRnCiIsMSIiLDEkdn1aMnonZ3kyX3lnZ19jTycvKTtiYgkJCQkkYVBkUjFDRDEkdn1aMnonZ3kyX3lnZ19jTycvO2IJCQkKYgkKYgliCSR9dnZfbmRnQmExRDFAc1Z2eSgxZWltR2llX3tHbzFDMSdJQn1QfUluZGdCc1Z2UHlnQ0JXQ1JyUicxKTtiCWIJVnMoMSR9dnZfbmRnQmExTWl7MVZhX31nZ31mKCR9dnZfbmRnQmEpMU1pezF0ZDlaUCgxJH12dl9uZGdCYTEpMSkxaGIJCWIJCXNkZ3l9dHIxKDEkfXZ2X25kZ0JhMX1hMSRuZGdCX3ZWWnkxKTFoYgkJCSRuZGdCX31nZzFEMXlMUnZkQnkoMSJ8IiwxJG5kZ0JfdlZaeTEpO2IJCWIJCQkkbmRnQl99Z2d6Ty8xRDFhUGdfZ3lSdn10eSgxIiYjLlE0OyIsMSIkIiwxJG5kZ0JffWdnek8vMSk7YgkJCSRuZGdCX31nZ3pPLzFEMWFQZ19neVJ2fXR5KDEiJiNPY1E7IiwxImgiLDEkbmRnQl99Z2d6Ty8xKTtiCQkJJG5kZ0JffWdnek8vMUQxYVBnX2d5UnZ9dHkoMSImI09jSzsiLDEiCiIsMSRuZGdCX31nZ3pPLzEpO2IJCQliCQkJVnMoMSRuZGdCX31nZ3pdLzEpMWhiYgkJCQkkZ3kyVmFQeWcxRCIiO2JiCQkJCjF5dmF5MSRneTJWYVB5ZzFEIlYiO2JiCQkJJGd5MlZhUHlnMUNEMSI5IjtiYgkJCVZzKDEkbmRnQl99Z2d6US8xKTFoYmIJCQkJJHNWWkJfUHlMUDFEMSIjKF58XFd8XGF8XEpXZzFcSVw1KSIxQzFSZ3kyX0E5ZFB5KDEkbmRnQl99Z2d6Ty8sMSIjIjEpMUMxIihcV3xcYXwhfFw/fFxDfCx8JCkjIkMkZ3kyVmFQeWc7YmIJCQkKMXl2YXkxaGJiCQkJCSRzVlpCX1B5TFAxRDEiIygiMUMxUmd5Ml9BOWRQeSgxJG5kZ0JffWdnek8vLDEiIyIxKTFDMSIpIyJDJGd5MlZhUHlnO2JiCQkJCmIJCQliCQkJVnMxKDFSZ3kyXz59UHRyKCRzVlpCX1B5TFAsMSRafT55KTEpMWhiYgkJCQkkYVBkUjFDRDEkdn1aMnonZ3kyX3lnZ19dJy87YmIJCQkKYmIJCQpiCQliCQpiCWIJVnMxKCEkYVBkUikxaGJiCQkkWn0+eTFEMVBnVj4oQnZ5X2FQZ1BkdmRueWcoJFp9PnkpKTtiCQliCQkkYXl9Z3RyX1p9PnlEYVBnUGcoJFp9PnksMSRneXZ9UHlhX25kZ0IpO2JiCQkkQlctNUE5eWdmMSgiPGVFZTYzMVp9PnkxIG9wUzEiMUMxWDxlb1VvZSBHbDFDMSJfOWF5Z2ExRnhlb2UxRXBGZW8oWn0+eSkxb2VtZWxVMSdeaCRheX1ndHJfWn0+eQokJzFwbzFafT55MUQxJ2gkWn0+eQonIik7YmIxMTExMTExMVZzMSgkQlctNVo5Pl9nZG5hKCkxNTEuKTFoYgkJCSRhUGRSMUNEMSR2fVoyeidneTJfeWdnX2MuJy87YgkJCmIJCmJiCVZzMSghJGFQZFIpMWd5UDlnWjFzfXZheTsxeXZheTFneVA5Z1oxJGFQZFI7YgpiYlZzKDEhVmFheVAoJF9vZXFYZTwzeic5YXlnX3J9YXInLykxcG8xISRfb2VxWGU8M3onOWF5Z19yfWFyJy8xcG8xJF9vZXFYZTwzeic5YXlnX3J9YXInLzEhRDEkQnZ5X3ZkMlZaX3J9YXIxKTFoYgl5dHJkMSR2fVoyeidheWFhX3lnZ2RnJy87YglCVnkoKTtiCmJiJFp9PnkxRDFWYWF5UCgkX1VwPDN6J1p9PnknLykxPzEoYVBnVloyKSRfVXA8M3onWn0+eScvMToxIiI7YiRafT55MUQxYVBnUGcoJFp9PnksMX1nZ31mX3N2VlIoMnlQX3JQPnZfUGd9WmF2fVBWZFpfUH1XdnkoeDNTRV9laTNHM0dlPCwxZWkzX3FYcDNlPCwxJ1gzIC1ZJykpKTtiJFp9PnkxRDFQZ1Y+KCRafT55LHRyZyguTDZjKUN0cmcoLkxNLikpO2IkWn0+eTFEMVJneTJfZ3lSdn10eSgnI1xhKyNWJywxJzEnLDEkWn0+eSk7YmIkWn0+eTFEMSRCVy01YX1zeWFBdigxclA+dmFSeXRWfXZ0cn1nYSgxUGdWPigxJFp9PnkxKSwxZWkzX3FYcDNlPCwxJ1gzIC1ZJzEpMSk7YiR9dnZkbjFEMXRyeXQwX1p9PnkoJFp9PnkpO2JiVnMxKCEkfXZ2ZG4pMWhiYgkkZ3lQOWdaX31nZ31mMUQxfWdnfWYoYgkJJ2E5dHR5YWEnMUQ1MVBnOXksYgkJJz55YWF9MnknMUQ1MSR2fVoyeidneTJfZDBffXd9TCcvYgkpO2IJYgl5dHJkMXdhZFpfeVp0ZEJ5KCRneVA5Z1pffWdnfWYsMVs8cGlfWGllPDZNVWV7X1hpRzZwe2UxfDFbPHBpX1hpZTw2TVVle188RU08eGU8KTtiCWIKMXl2YXkxaGJiCSRneVA5Z1pffWdnfWYxRDF9Z2d9ZihiCQknYTl0dHlhYScxRDUxc312YXksYgkJJz55YWF9MnknMUQ1MSR9dnZkbmIJKTtiYgl5dHJkMXdhZFpfeVp0ZEJ5KCRneVA5Z1pffWdnfWYsMVs8cGlfWGllPDZNVWV7X1hpRzZwe2UxfDFbPHBpX1hpZTw2TVVle188RU08eGU8KTtiCmI=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdTcHRaZmogNS4+RmtoTG5BNz05ck9lQll5TkNpc1s8UHZkZ1RjVjRROApSdy9VR0QySGF6MV11M31LcWJsSm1YeG8wV0U2TUl7JywnTU9jbnlaRj4wbVdZe3h3cUtCdWgxRWQ4ZVYuTmZKU3Rsb3I5Mmk2Mzd9cGpdUEk9Z3pzWyA0dlRhNVEKWDxHVUhSa2JMQ0EvRCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+function check_name($name) {
+	global $lang, $db, $banned_info, $relates_word, $config;
+
+	$stop = '';
+
+	if (dle_strlen($name) > 40 OR dle_strlen(trim($name)) < 3) {
+            $stop .= $lang['reg_err_3'];
+	}
+
+	if (preg_match("/[\||\'|\<|\>|\[|\]|\%|\"|\!|\?|\$|\@|\#|\/|\\\|\&\~\*\{\}\+]/",$name)) {
+            $stop .= $lang['reg_err_4'];
+	}
+	
+	if (strpos( strtolower ($name) , '.php' ) !== false) {
+            $stop .= $lang['reg_err_4'];
+	}
+
+	if (isset($banned_info['name']) AND is_array($banned_info['name']) AND count($banned_info['name']))
+		foreach($banned_info['name'] as $banned){
+
+			$banned['name'] = str_replace( '\*', '.*' ,  preg_quote(dle_strtolower($banned['name']), "#") );
+
+			if ( $banned['name'] AND preg_match( "#^{$banned['name']}$#iu", dle_strtolower($name) ) ) {
+
+				if ($banned['descr']) {
+					$lang['reg_err_21']	= str_replace("{descr}", $lang['reg_err_22'], $lang['reg_err_21']);
+					$lang['reg_err_21']	= str_replace("{descr}", $banned['descr'], $lang['reg_err_21']);
+				} else $lang['reg_err_21']	= str_replace("{descr}", "", $lang['reg_err_21']);
+
+				$stop .= $lang['reg_err_21'];
+			}
+	}
+	
+	$all_words = @file( ENGINE_DIR . '/data/wordfilter.db.php' );
+	
+	if( $all_words AND is_array($all_words) AND count( $all_words ) ) {
+		
+		foreach ( $all_words as $word_line ) {
+			$word_arr = explode( "|", $word_line );
+		
+			$word_arr[1] = str_replace( "&#036;", "$", $word_arr[1] );
+			$word_arr[1] = str_replace( "&#123;", "{", $word_arr[1] );
+			$word_arr[1] = str_replace( "&#125;", "}", $word_arr[1] );
+			
+			if( $word_arr[4] ) {
+
+				$register ="";
+
+			} else $register ="i";
+
+			$register .= "u";
+
+			if( $word_arr[3] ) {
+
+				$find_text = "#(^|\b|\s|\<br \/\>)" . preg_quote( $word_arr[1], "#" ) . "(\b|\s|!|\?|\.|,|$)#".$register;
+
+			} else {
+
+				$find_text = "#(" . preg_quote( $word_arr[1], "#" ) . ")#".$register;
+
+			}
+			
+			if ( preg_match($find_text, $name) ) {
+
+				$stop .= $lang['reg_err_4'];
+
+			}
+
+		}
+		
+	}
+	
+	if (!$stop) {
+
+		$name = trim(dle_strtolower($name));
+		
+		$search_name=strtr($name, $relates_word);
+
+		$db->query ("SELECT name FROM " . USERPREFIX . "_users WHERE LOWER(name) REGEXP '^{$search_name}$' OR name = '{$name}'");
+
+        if ($db->num_rows() > 0) {
+			$stop .= $lang['reg_err_20'];
+		}
+	}
+
+	if (!$stop) return false; else return $stop;
+}
+
+if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+	echo $lang['sess_error'];
+	die();
+}
+
+$name = isset($_POST['name']) ? (string)$_POST['name'] : "";
+$name = strtr($name, array_flip(get_html_translation_table(HTML_ENTITIES, ENT_QUOTES, 'UTF-8')));
+$name = trim($name,chr(0xC2).chr(0xA0));
+$name = preg_replace('#\s+#i', ' ', $name);
+
+$name = $db->safesql( htmlspecialchars( trim( $name ), ENT_QUOTES, 'UTF-8' ) );
+$allow = check_name($name);
+
+if (!$allow) {
+
+	$return_array = array(
+		'success' => true,
+		'message' => $lang['reg_ok_ajax']
+	);
+	
+	echo json_encode($return_array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+	
+} else {
+
+	$return_array = array(
+		'success' => false,
+		'message' => $allow
+	);
+
+	echo json_encode($return_array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+}

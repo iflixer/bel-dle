@@ -5,9 +5,171 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: find_relates.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Search for relates news
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PzZdP0xRTG4+Km4KCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCm52Z0ZYRmxHZEJ2WlYxR1ZCdi12cGV2ZnFkWHtCdW92QUJ6R0Z2N2hxSEx2bi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tbnZRWFhMbzo+PnpSQi1WQnVvd2hIPm4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLW52PXFMZWhHMVFYdihLKXZPNDRJLU80T2p2ZnFkWHtCdW92QUJ6R0Z2N2hxSExuCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgpudltRR292S3F6QnZHb3ZMaHFYQktYQnp2cGV2S3FMZWhHMVFYbgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKbnZKR1JCOnZkR1Z6X2hCUkZYQm93TFFMbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tbnY8b0I6dmZCRmhLUXZkcWh2aEJSRlhCb3ZWQnVvbgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKbio+bm5HZCghekJkR1ZCeignZ3Nbc2xOSlpaezdOe1onKSl2OW4JUUJGekJoKHYiOFtbRD4udy52STR9dkpxaHBHenpCViJ2KTtuCVFCRnpCaHYodidscUtGWEdxVjp2d3c+d3c+J3YpO24JekdCKHYiOEZLUEdWMXZGWFhCWUxYISJ2KTtuMG5uR2QodiEkR29fUnExMUJ6dil2ekdCKHYiQmhocWgidik7bm5HZCh2IUdvb0JYKCRfclpTPFpmW1QnSG9CaF9RRm9RJ0Mpdk1ydiEkX3JaUzxaZltUJ0hvQmhfUUZvUSdDdk1ydiRfclpTPFpmW1QnSG9CaF9RRm9RJ0N2IQp2JHpSQl9ScTFHVl9RRm9Rdil2OW4JekdCKHYiQmhocWgidik7bjBubmRIVktYR3FWdm9YaEdMX3pGWEYoJFhCaVgpbjlubgkkY0hxWEJvdgp2RmhoRmUoIlxpRTQiLHYiXFgiLHYiXFYiLHYiXGgiLHYidyIsdiIsIix2IjsiLHYiOiIsdiImIix2IigiLHYiKSIsdiJUIix2IkMiLHYiOSIsdiIwIix2IgoiLHYiKiIsdiJeIix2IiUiLHYiJCIsdiJdIix2IjYiLHYiKyIsdiItIik7bgkkMXFxemNIcVhCb3YKdkZoaEZlKCInIix2JyInKTtuCSRoQkxjSHFYQm92CnZGaGhGZSgiXCciLHYnXCInKTtuCSRwcVl2CnZMRktQKCc4KicsdidaSm1tbUonKTtuCSRYQmlYdgp2TGhCMV9oQkxSRktCKCI+XiRwcVk+Iix2JycsdiRYQmlYKTtuCSRYQmlYdgp2b1hoR0xvUkZvUUJvKCRYQmlYKTtuCSRYQmlYdgp2WGhHWShvWGhHTF9YRjFvKCRYQmlYKSk7bgkkWEJpWHYKdm9YaF9oQkxSRktCKCRjSHFYQm8sdid2Jyx2JFhCaVgpO24JJFhCaVh2CnZvWGhfaEJMUkZLQigkMXFxemNIcVhCbyx2JGhCTGNIcVhCbyx2JFhCaVgpO25uCWhCWEhoVnYkWEJpWDtuMG5uJGNIQmhldgp2R29vQlgoJF9ETWZbVCdYR1hSQidDKXY/dnpSQl9vSHBvWGgob1hoR0xfekZYRigkX0RNZltUJ1hHWFJCJ0MpLHY0LHZPajQpdjp2Jyc7bm5HZHYoISRjSEJoZSl2ekdCKCk7bm5HZHYoJEtxVmRHMVQnZEhSUl9vQkZoS1EnQyl2OW5uCSRGaGh2CnZCaUxScXpCKCd2Jyx2JGNIQmhlKTtuCSRjSEJoZXYKdkZoaEZlKCk7bm4JZHFoQkZLUXYoJEZoaHZGb3YkdXFoeil2OW4JCSR1cWh6UkJWdgp2elJCX29YaFJCVihYaEdZKCR1cWh6KSk7bm4JCUdkdigkdXFoelJCVnY2CnYkS3FWZEcxVCdvQkZoS1FfUkJWMVhRX1lHVidDKXY5bm4JCQkkdXFoenYKdnYkenAtNm9GZEJvY1IoJHVxaHopO24JCQkkdXFoenYKdiciJ3Z3diR1cWh6dnd2JyInO25uCQkJJGNIQmhlVEN2CnYkdXFoejtuCQkwbgkwbm4JR2R2KEtxSFZYKCRjSEJoZSkpdiRjSEJoZXYKdicrJ3Z3dkdZTFJxekIoInYrIix2JGNIQmhlKTtuCUJSb0J2JGNIQmhldgp2Jyc7bm4wdkJSb0J2OW5uCSRGaGh2CnZCaUxScXpCKCd2Jyx2JGNIQmhlKTtuCSRjSEJoZXYKdkZoaEZlKCk7bm4JZHFoQkZLUXYoJEZoaHZGb3YkdXFoeil2OW4JCSR1cWh6UkJWdgp2elJCX29YaFJCVihYaEdZKCR1cWh6KSk7bm4JCUdkdigkdXFoelJCVnY2CnYkS3FWZEcxVCdvQkZoS1FfUkJWMVhRX1lHVidDKXYkY0hCaGVUQ3YKdiR6cC02b0ZkQm9jUihGenpvUkZvUUJvKCR1cWh6KSk7bgkwbm4JR2R2KEtxSFZYKCRjSEJoZSkpdiRjSEJoZXYKdkdZTFJxekIoIiUiLHYkY0hCaGUpO24JQlJvQnYkY0hCaGV2CnYnJztuMG5uR2QodiEkY0hCaGV2KXZ6R0IoKTtubiRwSGRkQmh2CnYiIjtuJGRIUlJfb19GenpkR0JSenYKdiIiO25uJEd6dgp2R29vQlgodiRfRE1mW1QnR3onQ3Ypdj92R1ZYL0ZSKHYkX0RNZltUJ0d6J0N2KXY6djQ7biRZcXpCdgp2R29vQlgoJF9ETWZbVCdZcXpCJ0Mpdj92R1ZYL0ZSKHYkX0RNZltUJ1lxekInQyl2OnY0O25uR2R2KHYkWXF6QnYpdjluCUdkKHYhJEhvQmhfMWhxSExUJFlCWXBCaF9HelQnSG9CaF8xaHFITCdDQ1QnRlJScXVfRnp6bydDdil2ekdCKHYiQmhocWgidik7bjB2QlJvQnY5bglHZCh2ISRIb0JoXzFocUhMVCRZQllwQmhfR3pUJ0hvQmhfMWhxSEwnQ0NUJ0ZSUnF1X0Z6WUdWJ0N2KXZ6R0IodiJCaGhxaCJ2KTtuMG5uR2QodiRHenYpdiR1UUJoQnYKdiJ2c3tndkd6diEKdicidnd2JEd6dnd2IiciO25CUm9CdiR1UUJoQnYKdiIiO25uR2R2KCRLcVZkRzFUJ2RIUlJfb0JGaEtRJ0MpdjlubgkkZEdWel91UUJoQnYKdiJBc1s9OChMd1hHWFJCLHZMd29RcWhYX29YcWhlLHZMd2RIUlJfb1hxaGUsdkx3aWRHQlJ6byl2czdzTntmW3YoJzlvWHFoZTAndk57dm1NTWxac3t2QU1nWikiO24JJGRIUlJfb19GenpkR0JSenYKdiIsdiJ2d3YkZEdWel91UUJoQnZ3diJ2Rm92b0txaEIiO24JJGRIUlJfb19GenpkR0JSenYKdm9YaF9oQkxSRktCKCI5b1hxaGUwIix2JGNIQmhlLHYkZEhSUl9vX0Z6emRHQlJ6KTtubjB2QlJvQnY5bm4JJGRHVnpfdVFCaEJ2CnYiTHdvUXFoWF9vWHFoZXZsTjNadiclOW9YcWhlMCUndk1ydkx3ZEhSUl9vWHFoZXZsTjNadiclOW9YcWhlMCUndk1ydkx3aWRHQlJ6b3ZsTjNadiclOW9YcWhlMCUndk1ydkx3WEdYUkJ2bE4zWnYnJTlvWHFoZTAlJyI7bjBubiRkR1Z6X3VRQmhCdgp2b1hoX2hCTFJGS0IoIjlvWHFoZTAiLHYkY0hCaGUsdiRkR1Z6X3VRQmhCKTtubiRvY1J2CnYiZlpsWj1bdkx3R3osdkx3WEdYUkIsdkx3ekZYQix2THdLRlhCMXFoZSx2THdGUlhfVkZZQjkkZEhSUl9vX0Z6emRHQlJ6MHZKck1BdiJ2d3ZEclpKTlV2d3YiX0xxb1h2THYyOFpyWnZMd0ZMTGhxL0IKLjkkdVFCaEIwIjtubkdkdigkS3FWZEcxVCdkSFJSX29CRmhLUSdDKXY5bgkkb2NSdncKdiJ2c3tndjkkZEdWel91UUJoQjB2TXJnWnJ2cGV2b0txaEJ2Z1pmPXZsTkFOW3ZqIjtuMHZCUm9CdjluCSRvY1J2dwp2InZze2d2KDkkZEdWel91UUJoQjApdk1yZ1pydnBldnpGWEJ2Z1pmPXZsTkFOW3ZqIjtuMG5uJHpwLTZjSEJoZSgkb2NSKTtubnVRR1JCdih2JGhCUkZYQnp2CnYkenAtNjFCWF9ocXUoKXYpdjluCW4JJGhCUkZYQnpUJ3pGWEInQ3YKdm9YaFhxWEdZQih2JGhCUkZYQnpUJ3pGWEInQ3YpO24JJGhCUkZYQnpUJ0tGWEIxcWhlJ0N2CnZHVlgvRlIodiRoQlJGWEJ6VCdLRlhCMXFoZSdDdik7bgkkVkJ1b196RlhCdgp2ekZYQih2J3otWS14Jyx2JGhCUkZYQnpUJ3pGWEInQ3YpO24JbglHZCh2JEtxVmRHMVQnRlJScXVfRlJYX0hoUidDdil2OW4JCW4JCUdkKHYkS3FWZEcxVCdvQnFfWGVMQidDdgoKdi52TXJ2diRLcVZkRzFUJ29CcV9YZUxCJ0N2Cgp2T3YpdjluCQkJbgkJCUdkKHYkaEJSRlhCelQnS0ZYQjFxaGUnQ3ZGVnp2JEtxVmRHMVQnb0JxX1hlTEInQ3YKCnZPdil2OW4JCQkJbgkJCQkkZEhSUl9SR1ZQdgp2JF9yTU1bX2dsWl88cmx2d3YxQlhfSGhSKHYkaEJSRlhCelQnS0ZYQjFxaGUnQ3Ypdnd2Ij4idnd2JGhCUkZYQnpUJ0d6J0N2d3YiLSJ2d3YkaEJSRlhCelQnRlJYX1ZGWUInQ3Z3diJ3UVhZUiI7bgkJCW4JCQkwdkJSb0J2OW4JCQkJbgkJCQkkZEhSUl9SR1ZQdgp2JF9yTU1bX2dsWl88cmx2d3YkaEJSRlhCelQnR3onQ3Z3diItInZ3diRoQlJGWEJ6VCdGUlhfVkZZQidDdnd2IndRWFlSIjtuCQkJbgkJCTBuCQluCQkwdkJSb0J2OW4JCQluCQkJJGRIUlJfUkdWUHYKdiRfck1NW19nbFpfPHJsdnd2ekZYQih2J3g+WT56PicsdiRoQlJGWEJ6VCd6RlhCJ0N2KXZ3diRoQlJGWEJ6VCdGUlhfVkZZQidDdnd2IndRWFlSIjtuCQkwbgluCTB2QlJvQnY5bgkJbgkJJGRIUlJfUkdWUHYKdiRfck1NW19nbFpfPHJsdnd2IkdWekJpd0xRTD9WQnVvR3oKInZ3diRoQlJGWEJ6VCdHeidDO24Jbgkwbm4JR2R2KHZ6UkJfb1hoUkJWKCRoQlJGWEJ6VCdYR1hSQidDKXY2dkVqdil2JGhCUkZYQnpUJ1hHWFJCJ0N2CnZ6UkJfb0hwb1hodigkaEJSRlhCelQnWEdYUkInQyx2NCx2RWopdyJ2d3d3IjtubglHZHYodiRIb0JoXzFocUhMVCRZQllwQmhfR3pUJ0hvQmhfMWhxSEwnQ0NUJ0ZSUnF1X0ZSUl9CekdYJ0N2KXY5bm4JCSR6X1JHVlB2CnYiXUZ2WEdYUkIKXCI5JFJGVjFUJ0J6R1hfQlhHWFJCJ0MwXCJ2UWhCZApcIj9ZcXoKQnpHWFZCdW8mRktYR3FWCkJ6R1hWQnVvJkd6CjkkaEJSRlhCelQnR3onQzBcInZYRmgxQlgKXCJfcFJGVlBcIjZdR3ZLUkZvbwpcImRGdmRGLUxCVktHUi1vY0hGaEItcXZMcW9HWEdxVi1SQmRYXCI2XT5HNl0+RjZdRnZYR1hSQgpcIjkkUkZWMVQnQnpHWF9vQlJ6QlInQzBcInZxVktSR0tQClwiS3FWZEdoWWdCUkJYQignP1lxegpCekdYVkJ1byZGS1hHcVYKenFCekdYVkJ1byZHZHpCUkJYQgplQm8mR3oKOSRoQlJGWEJ6VCdHeidDMCZIb0JoX1FGb1EKOSR6UkJfUnExR1ZfUUZvUTAnLHYnOSRoQlJGWEJ6VCdHeidDMCcpO3ZoQlhIaFZ2ZEZSb0I7XCJ2UWhCZApcIj9ZcXoKQnpHWFZCdW8mRktYR3FWCnpxQnpHWFZCdW8mR2R6QlJCWEIKZUJvJkd6CjkkaEJSRlhCelQnR3onQzAmSG9CaF9RRm9RCjkkelJCX1JxMUdWX1FGb1EwXCJ2WEZoMUJYClwiX3BSRlZQXCI2XUd2S1JGb28KXCJkRnZkRi1YaEZvUS1xdkxxb0dYR3FWLVJCZFh2WEJpWC16RlYxQmhcIjZdPkc2XT5GNiI7bm4JMHZCUm9CdiR6X1JHVlB2CnYiIjtubglHZHYodiRZcXpCdil2JHpfUkdWUHYKdiIiO24JbgkkcEhkZEJodncKdiJdekcvdm9YZVJCClwiTEZ6ekdWMTpPTGk7XCI2OSR6X1JHVlAwOSRWQnVvX3pGWEIwdi12XUZ2UWhCZApcIiJ2d3YkZEhSUl9SR1ZQdnd2IlwidlhGaDFCWApcIl9wUkZWUFwiNiJ2d3ZvWGhHTG9SRm9RQm8odiRoQlJGWEJ6VCdYR1hSQidDdil2d3YiXT5GNl0+ekcvNiI7bm4wbm4kenAtNktScW9CKCk7bm5HZCh2JHBIZGRCaHYpdkJLUXF2Il16Ry92S1JGb28KXCJkR1Z6aEJSRlhCelwiNiJ2d3YkcEhkZEJodnd2Il0+ekcvNiI7bkJSb0J2QktRcXYiXXpHL3ZLUkZvbwpcImRHVnpoQlJGWEJ6XCI2InZ3diRSRlYxVCdoQlJGWEJ6X1ZxWF9kcUhWeidDdnd2Il0+ekcvNiI7bm4/Ng==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdySUplIFFGYlJmbHMxRHZ5XWR3ClAvPXhpe2EzLmNPcDV0OG9HQT5YV0xFbm05Szxxen0waFNbazZqdWdDVFpNNEg3VTJOWVZCJywnUjRGeXpoYUpsU0xBZ1AgODxmLj1rdkNZeE5qSzFxMmJaOUhzaU0vdFZwNgpCe2NVb2QzfXJRVDc+NXdEXVtFTzB1R1hXSW1uZScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( !$is_logged ) die( "error" );
+
+if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+	die( "error" );
+}
+
+function strip_data($text)
+{
+
+	$quotes = array("\x60", "\t", "\n", "\r", ".", ",", ";", ":", "&", "(", ")", "[", "]", "{", "}", "=", "*", "^", "%", "$", "<", ">", "+", "-");
+	$goodquotes = array("'", '"');
+	$repquotes = array("\'", '\"');
+	$bom = pack('H*', 'EFBBBF');
+	$text = preg_replace("/^$bom/", '', $text);
+	$text = stripslashes($text);
+	$text = trim(strip_tags($text));
+	$text = str_replace($quotes, ' ', $text);
+	$text = str_replace($goodquotes, $repquotes, $text);
+
+	return $text;
+}
+
+$query = isset($_POST['title']) ? dle_substr(strip_data($_POST['title']), 0, 250) : '';
+
+if (!$query) die();
+
+if ($config['full_search']) {
+
+	$arr = explode(' ', $query);
+	$query = array();
+
+	foreach ($arr as $word) {
+		$wordlen = dle_strlen(trim($word));
+
+		if ($wordlen >= $config['search_length_min']) {
+
+			$word =  $db->safesql($word);
+			$word = '"' . $word . '"';
+
+			$query[] = $word;
+		}
+	}
+
+	if (count($query)) $query = '+' . implode(" +", $query);
+	else $query = '';
+
+} else {
+
+	$arr = explode(' ', $query);
+	$query = array();
+
+	foreach ($arr as $word) {
+		$wordlen = dle_strlen(trim($word));
+
+		if ($wordlen >= $config['search_length_min']) $query[] = $db->safesql(addslashes($word));
+	}
+
+	if (count($query)) $query = implode("%", $query);
+	else $query = '';
+}
+
+if( !$query ) die();
+
+$buffer = "";
+$full_s_addfield = "";
+
+$id = isset( $_POST['id'] ) ? intval( $_POST['id'] ) : 0;
+$mode = isset($_POST['mode']) ? intval( $_POST['mode']) : 0;
+
+if ( $mode ) {
+	if( !$user_group[$member_id['user_group']]['allow_adds'] ) die( "error" );
+} else {
+	if( !$user_group[$member_id['user_group']]['allow_admin'] ) die( "error" );
+}
+
+if( $id ) $where = " AND id != '" . $id . "'";
+else $where = "";
+
+if ($config['full_search']) {
+
+	$find_where = "MATCH(p.title, p.short_story, p.full_story, p.xfields) AGAINST ('{story}' IN BOOLEAN MODE)";
+	$full_s_addfield = ", " . $find_where . " as score";
+	$full_s_addfield = str_replace("{story}", $query, $full_s_addfield);
+
+} else {
+
+	$find_where = "p.short_story LIKE '%{story}%' OR p.full_story LIKE '%{story}%' OR p.xfields LIKE '%{story}%' OR p.title LIKE '%{story}%'";
+}
+
+$find_where = str_replace("{story}", $query, $find_where);
+
+$sql = "SELECT p.id, p.title, p.date, p.category, p.alt_name{$full_s_addfield} FROM " . PREFIX . "_post p WHERE p.approve=1{$where}";
+
+if ($config['full_search']) {
+	$sql .= " AND {$find_where} ORDER by score DESC LIMIT 5";
+} else {
+	$sql .= " AND ({$find_where}) ORDER by date DESC LIMIT 5";
+}
+
+$db->query($sql);
+
+while ( $related = $db->get_row() ) {
+	
+	$related['date'] = strtotime( $related['date'] );
+	$related['category'] = intval( $related['category'] );
+	$news_date = date( 'd-m-Y', $related['date'] );
+	
+	if( $config['allow_alt_url'] ) {
+		
+		if( $config['seo_type'] == 1 OR  $config['seo_type'] == 2 ) {
+			
+			if( $related['category'] and $config['seo_type'] == 2 ) {
+				
+				$full_link = $_ROOT_DLE_URL . get_url( $related['category'] ) . "/" . $related['id'] . "-" . $related['alt_name'] . ".html";
+			
+			} else {
+				
+				$full_link = $_ROOT_DLE_URL . $related['id'] . "-" . $related['alt_name'] . ".html";
+			
+			}
+		
+		} else {
+			
+			$full_link = $_ROOT_DLE_URL . date( 'Y/m/d/', $related['date'] ) . $related['alt_name'] . ".html";
+		}
+	
+	} else {
+		
+		$full_link = $_ROOT_DLE_URL . "index.php?newsid=" . $related['id'];
+	
+	}
+
+	if ( dle_strlen($related['title']) > 65 ) $related['title'] = dle_substr ($related['title'], 0, 65)." ...";
+
+	if ( $user_group[$member_id['user_group']]['allow_all_edit'] ) {
+
+		$d_link = "<a title=\"{$lang['edit_etitle']}\" href=\"?mod=editnews&action=editnews&id={$related['id']}\" target=\"_blank\"><i class=\"fa fa-pencil-square-o position-left\"></i></a><a title=\"{$lang['edit_seldel']}\" onclick=\"confirmDelete('?mod=editnews&action=doeditnews&ifdelete=yes&id={$related['id']}&user_hash={$dle_login_hash}', '{$related['id']}'); return false;\" href=\"?mod=editnews&action=doeditnews&ifdelete=yes&id={$related['id']}&user_hash={$dle_login_hash}\" target=\"_blank\"><i class=\"fa fa-trash-o position-left text-danger\"></i></a>";
+
+	} else $d_link = "";
+
+	if ( $mode ) $d_link = "";
+	
+	$buffer .= "<div style=\"padding:2px;\">{$d_link}{$news_date} - <a href=\"" . $full_link . "\" target=\"_blank\">" . stripslashes( $related['title'] ) . "</a></div>";
+
+}
+
+$db->close();
+
+if( $buffer ) echo "<div class=\"findrelated\">" . $buffer . "</div>";
+else echo "<div class=\"findrelated\">" . $lang['related_not_found'] . "</div>";
+
+?>

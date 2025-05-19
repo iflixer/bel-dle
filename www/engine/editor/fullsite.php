@@ -5,9 +5,26 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: fullsite.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: WYSIWYG for website news
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1c3P2RNZE9iKk8gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE9JRTBoMFJsU2NJWi5lbC5jSS1JPFhJVUpTaG1je0RJc2M5bDBJYXFKOGRJTy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tT0lNaGhkRDpiYjluYy0uY3tEdHE4Yk8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLU9JaUpkWHFsZU1oSSg2KUk9TExULT1MPVlJVUpTaG1je0RJc2M5bDBJYXFKOGRPICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBPSUtNbERJNko5Y0lsRElkcUpoYzZoYzlJPFhJNkpkWHFsZU1oTyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgT0lHbG5jOklTOG5uRGxoY3RkTWRPLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1PSXdEYzpJRm9VckZvYUlTSnFJe2M8RGxoY0kuY3tETyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTypiT09sUyhJITljU2wuYzkoSSdFQUtBUnJHWlptYXJtWidJKUkpSXZPCU1jMDljcShJInhLS3BidXR1SVRMZ0lHSnE8bDk5Yy4iSSk7TwlNYzA5Y3FJKEknUko2MGhsSi46SXR0YnR0YidJKTtPCTlsYyhJIngwNlZsLmVJMGhoY0NkaCEiSSk7T2ZPT2xTSSghbEREY2hJKCRxSntqJ1M4bm5fRGhKcVgnfSkpSSRxSntqJ1M4bm5fRGhKcVgnfUkgSSIiO09PJFM4bm4wcWMwSSBJNzc3eEtzUk9JSUlJNzlsCkk2bjBERCAie0RjOWxoSnF2JDkwcVZfaE1jQ2NmIlc3aGMxaDBxYzBJbDkgIlM4bm5fRGhKcVgiSS4wQ2MgIlM4bm5fRGhKcVgiSTZuMEREICJ7WERse1hlYzlsaEpxIklEaFhuYyAie2w5aE06NXolO01jbGVNaDpnTExkMTsiV3YkcUp7aidTOG5uX0RoSnFYJ31mN2JoYzFoMHFjMFc3YjlsCldPeEtzUjtPTz9X';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdMQVBLTVE5YXFraXpmNEZUWFtCezNOcHhyUmdETzxqbXc+biBzRW8uL3ZWWkhsXVUwNjhDfWUKV0dKMnljNTFiSVM9dDdoZFl1JywnMEE3VGhLZEdyekM4fVFXNHlKWHc2QlBISUwzcwpiW05VcWw9TURZbk97a0VSaWpTYWN1bV1ndj5Gb1ZaZTl4LyBmMi48dHA1MScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if (!isset ($row['full_story'])) $row['full_story'] = "";
+
+$fullarea = <<<HTML
+    <div class="wseditor{$dark_theme}"><textarea id="full_story" name="full_story" class="wysiwygeditor" style="width:98%;height:300px;">{$row['full_story']}</textarea></div>
+HTML;
+
+?>

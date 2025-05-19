@@ -5,9 +5,345 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: templates.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Templates
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0EyP2lxaWM8KmM1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NWM5bHNtc0t4Vj05bkdFeEc9OS05IEw5UDBWbWc9RnU5Nz1ieHM5MUQwZWk5Yy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tYzlxbW1pdTo8PGJYPS1HPUZ1NkRlPGMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWM5CjBpTER4RXFtOShkKTlUampCLVRqVC85UDBWbWc9RnU5Nz1ieHM5MUQwZWljNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTVjOU1xeHU5ZDBiPTl4dTlpRDBtPWRtPWI5IEw5ZDBpTER4RXFtYzU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1Yzl7eFg9OjltPXBpWHNtPXU2aXFpYy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tYzlodT06OU09cGlYc209dWM1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NWMqPGNjeFYoOSFiPVZ4Rz1iKDknbC5NLkt2e25uZzF2Z24nOSk5Mzg5IWI9VnhHPWIoOSdLMzExbmxfdmcnOSk5KTlhYwlxPXNiPUQoOSJOTU1KPFE2UTlCals5ezBEIHhiYj1HIjkpO2MJcT1zYj1EOSg5J0swZHNteDBHOjk2Njw2NjwnOSk7YwlieD0oOSJOc2RXeEdFOXNtbT1waW0hIjkpO2NVY2N4Vig5JHA9cCA9RF94YlknZXU9RF9FRDBlaSd5OSE1OVE5KTlhYwlwdUUoOSI9REQwRCIsOSRYc0dFWScwaW1fYj1HeD1iJ3ksOSRYc0dFWScwaW1fYj1HeD1iJ3k5KTtjVWNjeFYoOSF4dXU9bSgkXzhudGhuUE1ZJ2V1PURfcXN1cSd5KTkzODkhJF84bnRoblBNWSdldT1EX3FzdXEneTkzODkkXzhudGhuUE1ZJ2V1PURfcXN1cSd5OSE1OSRiWD1fWDBFeEdfcXN1cTkpOWFjCWMJcT1zYj1EKDkiSzBkc214MEc6OT9wMGI1bT1waVhzbT11JmV1PURfcXN1cTUiOTY5JGJYPV9YMEV4R19xc3VxOSk7YwlieD0oKTtjY1VjYyRfOG50aG5QTVknYjBfbT1waVhzbT0neTk1OXh1dT1tKCRfOG50aG5QTVknYjBfbT1waVhzbT0neSk5PzltRHhwKDltMG1Ec0d1WHhtKCRfOG50aG5QTVknYjBfbT1waVhzbT0neSw5VnNYdT0sOVZzWHU9KTkpOTo5Jyc7Y2MkYjBfbT1waVhzbT05NTkkXzhudGhuUE1ZJ2IwX209cGlYc209J3k7YyR1ZSBzZG14MEc5NTkkXzhudGhuUE1ZJ3VlIHNkbXgwRyd5O2NjJG09cGlYc209dV9YeHVtOTU5RT1tX1YwWGI9RF9YeHVtKDknbT1waVhzbT11JzkpO2MkWHNHRWVzRT1fWHh1bTk1OUU9bV9WMFhiPURfWHh1bSg5J1hzR0Vlc0U9JzkpO2NjeFYoOSRfOG50aG5QTVkndWUgc2RteDBHJ3k5NTU5IlhzR0Vlc0U9IjkpOWFjCWMJJHNYWDBGX3VzQz05NTlWc1h1PTtjCWMJeEdkWGViPShuZzF2Z25fbHY4OTY5Jzxic21zPGQwR1Z4RTZpcWknKTtjYwkkXzhudGhuUE1ZJ2IwX209cGlYc209J3k5NTltRHhwKDltMG1Ec0d1WHhtKCRfOG50aG5QTVknYjBfbT1waVhzbT0neSw5VnNYdT0sOVZzWHU9KTkpO2MJJF84bnRoblBNWSdiMF9Yc0dFZXNFPSd5OTU5bUR4cCg5bTBtRHNHdVh4bSgkXzhudGhuUE1ZJ2IwX1hzR0Vlc0U9J3ksOVZzWHU9LDlWc1h1PSk5KTtjYwl4Vig5JF84bnRoblBNWSdiMF9tPXBpWHNtPSd5OSE1OSIiOXNHYjkkXzhudGhuUE1ZJ2IwX1hzR0Vlc0U9J3k5ITU5IiI5KTlhYwkJJGQwR1Z4RVkiWHNHRV8iOTY5JF84bnRoblBNWSdiMF9tPXBpWHNtPSd5eTk1OSRfOG50aG5QTVknYjBfWHNHRWVzRT0neTtjCQkkc1hYMEZfdXNDPTk1OW1EZT07YwljCVU5PVh1PXhWKDkkZDBHVnhFWSJYc0dFXyI5NjkkXzhudGhuUE1ZJ2IwX209cGlYc209J3l5OXNHYjkkXzhudGhuUE1ZJ2IwX1hzR0Vlc0U9J3k5NTU5IiI5KTlhYwkJZUd1PW0oOSRkMEdWeEVZIlhzR0VfIjk2OSRfOG50aG5QTVknYjBfbT1waVhzbT0neXk5KTtjCQkkc1hYMEZfdXNDPTk1OW1EZT07YwlVYwljCXhWKDkkc1hYMEZfdXNDPTkpOWFjYwkJJGIgLUF6ZT1ETCg5InZnUG44TTl2Z00zOSI5NjloUG44Sjhue3ZTOTY5Il9zYnB4R19YMEV1OShHc3A9LDlic209LDl4aSw5c2RteDBHLDk9T21Ec3UpOUNzWGU9dTkoJyI2JGIgLUF1c1Y9dXpYKCRwPXAgPURfeGJZJ0dzcD0neSk2IicsOSdhJF9NdjduVScsOSdhJF92SlUnLDknZmYnLDknYSRfOG50aG5QTVknYjBfbT1waVhzbT0neVUnKSI5KTtjCQljCQl4Vig5JHNlbTBfYj1tPWRtX2QwR1Z4RTkpOSRkMEdWeEVZJ3FtbWlfcTBwPV9lRFgneTk1OSIiO2MJCWMJCSRxc0diWD1EOTU5VjBpPUcoOW5nMXZnbl9sdjg5NjknPGJzbXM8ZDBHVnhFNmlxaScsOSJGIjkpO2MJCVZGRHhtPSg5JHFzR2JYPUQsOSIyP2lxaTlcR1xHPDxQTHVtPXA5CjBHVnhFZURzbXgwR3VcR1xHXCRkMEdWeEU5NTlzRERzTDkoXEdcRyI5KTtjCQlWMEQ9c2RxOSg5JGQwR1Z4RTlzdTkkR3NwPTk1QTkkQ3NYZT05KTlhYwkJCVZGRHhtPSg5JHFzR2JYPUQsOSInYSRHc3A9VSc5NUE5J2EkQ3NYZT1VJyxcR1xHIjkpO2MJCVVjCQlWRkR4bT0oOSRxc0diWD1ELDkiKTtcR1xHP0EiOSk7YwkJVmRYMHU9KDkkcXNHYlg9RDkpO2MJYwlVY2NVY2N4Vig5JHVlIHNkbXgwRzk1NTkiRz1GIjkpOWFjYwkkIF9WMERwOTU5IjJWMERwOXA9bXEwYjVcImkwdW1cIkEybXMgWD05RnhibXE1UWpqJUEybURBMm1iOXE9eEVxbTVcIlEvalwiQTJkPUdtPURBJFhzR0VZMGltX0c9Rm09cGlfUXkmRyB1aTsmRyB1aTsmRyB1aTsydT1YPWRtOUdzcD01XCIgc3U9X209cGlYc209XCI5ZFhzdXU1XCJlR3hWMERwXCJBIjtjYwlWMEQ9c2RxOSg5JG09cGlYc209dV9YeHVtOXN1OSRXPUw5NUE5JENzWGU9OSk5YWMJCSQgX1YwRHA5NjU5IjIwaW14MEc5Q3NYZT01XCJhJFc9TFVcIkFhJENzWGU9WSdHc3A9J3lVMjwwaW14MEdBIjtjCVVjYwkkIF9WMERwOTY1OScyPHU9WD1kbUEmRyB1aTsmRyB1aTsnOTY5JFhzR0VZJzBpbV9wdUVHPUYneTk2OScmRyB1aTsmRyB1aTsyeEdpZW05ZFhzdXU1IlYwRHAtZDBHbUQwWCI5dW1MWD01IkZ4Ym1xOlF9amlPOyI5bUxpPTUibT1PbSI5YnhENSJzZW0wIjlHc3A9NSJtPXBpWHNtPV9Hc3A9IkEyIERBMiBEQTJ4R2llbTltTGk9NSJ1ZSBweG0iOUNzWGU9NSInOTY5JFhzR0VZJyBfdW1zRG0neTk2OSciOWRYc3V1NSIgbUc5IEUtbT1zWDkgbUctdXA5IG1HLURzeHU9YiJBYzk5OTk5OTk5MnhHaWVtOW1MaT01cXhiYj1HOUdzcD01cDBiOUNzWGU9NW09cGlYc209dUFjOTk5OTk5OTkyeEdpZW05bUxpPTVxeGJiPUc5R3NwPTVzZG14MEc5Q3NYZT01bT1waVhzbT11QWM5OTk5OTk5OTJ4R2llbTltTGk9NXF4YmI9RzlHc3A9NXVlIHNkbXgwRzlDc1hlPTViMEc9RkFjOTk5OTk5OTkyeEdpZW05bUxpPTVxeGJiPUc5R3NwPTVldT1EX3FzdXE5Q3NYZT01Iic5NjkkYlg9X1gwRXhHX3FzdXE5NjknIkFjOTk5OTk5OTkyPG1iQTI8bURBMjxtcyBYPUEyPFYwRHBBJztjYwkJcHVFKDkieEdWMCIsOSRYc0dFWSdkRD1zbT1fbT1waVhzbT0neSw5JCBfVjBEcDkpO2MJPU94bSgpO2NVY2N4Vig5JHVlIHNkbXgwRzk1NTkiYjBHPUYiOSk5YWMJYwlWZUdkbXgwRzkwaT1HX2J4RCgkYnhELDkkRz1GYnhEKTlhOTw8TXE9OVZlR2RteDBHOW1xc205RnhYWDlkMGlMOW1xPTlWeFg9dWMJCXhWKDlWeFg9Xz1PeHVtdSg5JGJ4RDkpOSYmOVZ4WD1fPU94dW11KDkkRz1GYnhEOSk5KTlhYwkJCSQwaT1HX2J4RDk1OTBpPUdieEQoOSRieEQ5KTtjCQkJRnF4WD05KDlWc1h1PTkhNTU5KCRWeFg9OTU5RD1zYmJ4RCg5JDBpPUdfYnhEOSkpOSk5YWMJCQkJeFYoOSRWeFg9OSE1OSI2IjkmJjkkVnhYPTkhNTkiNjYiOSk5YWMJCQkJCXhWKDlAVnhYPW1MaT0oOSRieEQ5NjkiPCI5NjkkVnhYPTk2OSI8IjkpOTU1OSJieEQiOSk5YWMJCQkJCQl4Vig5ITlWeFg9Xz1PeHVtdSg5JEc9RmJ4RDk2OSI8Ijk2OSRWeFg9OTY5IjwiOSk5KTlhYwkJCQkJCQlwV2J4RCg5JEc9RmJ4RDk2OSI8Ijk2OSRWeFg9OTY5IjwiOSk7YwkJCQkJCQlAZHFwMGIoOSRHPUZieEQ5NjkiPCI5NjkkVnhYPSw5akhISDkpO2MJCQkJCQkJMGk9R19ieEQoOSRieEQ5NjkiPCI5NjkkVnhYPTk2OSI8Iiw5JEc9RmJ4RDk2OSI8Ijk2OSRWeFg9OTY5IjwiOSk7YwkJCQkJCVVjCQkJCQlVOT1YdT05YWMJCQkJCQlkMGlMKDkkYnhEOTY5IjwiOTY5JFZ4WD0sOSRHPUZieEQ5NjkiPCI5NjkkVnhYPTkpO2MJCQkJCQlAZHFwMGIoOSRHPUZieEQ5NjkiPCI5NjkkVnhYPSw5amZmZjkpO2MJCQkJCVVjCQkJCVVjCQkJVWMJCVVjCVVjYwkkIHN1PV9tPXBpWHNtPTk1OW1EeHAoOW0wbURzR3VYeG0oJF84bnRoblBNWScgc3U9X209cGlYc209J3ksOVZzWHU9LDlWc1h1PSk5KTtjCSRtPXBpWHNtPV9Hc3A9OTU5bUR4cCg5bTBtRHNHdVh4bSgkXzhudGhuUE1ZJ209cGlYc209X0dzcD0neSw5VnNYdT0sOVZzWHU9KTkpO2MJYwl4Vig5aUQ9RV9wc21kcSg5IjxZXHx8XCd8XDJ8XEF8XFl8XHl8XCJ8XCF8XD98XCR8XEB8XDx8XFxcfFwmXH5cKlwreTwiLDkkbT1waVhzbT1fR3NwPTkpOSk5YWMJCXB1RSg5Ij1ERDBEIiw5JFhzR0VZJzBpbV89REQwRCd5LDkkWHNHRVknMGltXz1ERDBEX1EneSw5Ij9wMGI1bT1waVhzbT11JnVlIHNkbXgwRzVHPUYmZXU9RF9xc3VxNWEkYlg9X1gwRXhHX3FzdXFVIjkpO2MJVWMJYwkkRD11ZVhtOTU5QHBXYnhEKDk4MzNNX2x2ODk2OSI8bT1waVhzbT11PCI5NjkkbT1waVhzbT1fR3NwPSw5akhISDkpO2MJQGRxcDBiKDk4MzNNX2x2ODk2OSI8bT1waVhzbT11PCI5NjkkbT1waVhzbT1fR3NwPSw5akhISDkpO2MJYwl4Vig5ITkkRD11ZVhtOSk5cHVFKDkiPUREMEQiLDkkWHNHRVknMGltXz1ERDBEJ3ksOSRYc0dFWScwaW1fZERfPUREJ3ksOSI/cDBiNW09cGlYc209dSZ1ZSBzZG14MEc1Rz1GJmV1PURfcXN1cTVhJGJYPV9YMEV4R19xc3VxVSI5KTtjCT1YdT05MGk9R19ieEQoOTgzM01fbHY4OTY5IjxtPXBpWHNtPXU8Ijk2OSQgc3U9X209cGlYc209LDk4MzNNX2x2ODk2OSI8bT1waVhzbT11PCI5NjkkbT1waVhzbT1fR3NwPTkpO2NjCSRiIC1BemU9REwoOSJ2Z1BuOE05dmdNMzkiOTY5aFBuOEo4bnt2Uzk2OSJfc2JweEdfWDBFdTkoR3NwPSw5YnNtPSw5eGksOXNkbXgwRyw5PU9tRHN1KTlDc1hlPXU5KCciNiRiIC1BdXNWPXV6WCgkcD1wID1EX3hiWSdHc3A9J3kpNiInLDknYSRfTXY3blUnLDknYSRfdkpVJyw5J2ZIJyw5J2EkbT1waVhzbT1fR3NwPVUnKSI5KTtjCWMJcHVFKDkidWVkZD11dSIsOSRYc0dFWScwaW1feEdWMCd5LDkkWHNHRVknMGltX3hHVjBfUSd5LDkiP3AwYjVtPXBpWHNtPXUmZXU9RF9xc3VxNWEkYlg9X1gwRXhHX3FzdXFVIjkpO2NVY2N4Vig5JHVlIHNkbXgwRzk1NTkiYj1YPW09IjkpOWFjCXhWKDl1bURtMFgwRj1EKDkkYjBfbT1waVhzbT05KTk1NTl1bURtMFgwRj1EKCRkMEdWeEVZJ3VXeEcneSk5Mzg5dW1EbTBYMEY9RCg5JGIwX209cGlYc209OSk5NTU5InVwc0RtaXEwRz0iOTM4OXVtRG0wWDBGPUQoOSRiMF9tPXBpWHNtPTkpOTU1OScnOSk5YWMJCXB1RSg5Im5ERDBEIiw5JFhzR0VZJzBpbV89REQwRCd5LDkkWHNHRVknMGltXz1ERDBEX0IneSw5Ij9wMGI1bT1waVhzbT11JmV1PURfcXN1cTVhJGJYPV9YMEV4R19xc3VxVSI5KTtjCVVjCSRwdUU5NTkiMlYwRHA5cD1tcTBiNVwiaTB1bVwiQSRYc0dFWTBpbV94R1YwX1R5OTIgQSRiMF9tPXBpWHNtPTI8IEE/MiBEQTIgREFjOTk5OTk5OTkyeEdpZW05ZFhzdXU1XCIgbUc5IEUtbT1zWDkgbUctdXA5IG1HLURzeHU9YjlpMHV4bXgwRy1YPVZtXCI5bUxpPTV1ZSBweG05Q3NYZT01XCI5JFhzR0VZMGltX0w9dXk5XCJBMnhHaWVtOWRYc3V1NVwiIG1HOSBFLWJzR0U9RDkgbUctdXA5IG1HLURzeHU9YlwiOTBHClh4ZFc1XCJiMGRlcD1HbTZYMGRzbXgwRzUnP3AwYjVtPXBpWHNtPXUnO1wiOW1MaT01IGVtbTBHOUNzWGU9NVwiJFhzR0VZMGltX0cweVwiQWM5OTk5OTk5OTJ4R2llbTltTGk9NXF4YmI9RzlHc3A9NXAwYjlDc1hlPTVtPXBpWHNtPXVBYzk5OTk5OTk5MnhHaWVtOW1MaT01cXhiYj1HOUdzcD01dWUgc2RteDBHOUNzWGU9NWIwYj1YPW09QWM5OTk5OTk5OTJ4R2llbTltTGk9NXF4YmI9RzlHc3A9NWIwX209cGlYc209OUNzWGU9NVwiJGIwX209cGlYc209XCJBYzk5OTk5OTk5MnhHaWVtOW1MaT01cXhiYj1HOUdzcD01ZXU9RF9xc3VxOUNzWGU9NVwiJGJYPV9YMEV4R19xc3VxXCJBYzk5OTk5OTk5MjxWMERwQSI7YwljCXB1RSg5InhHVjAiLDkkWHNHRVknMGltX3hHVjBfWyd5LDkkcHVFOSk7Y1VjY3hWKDkkdWUgc2RteDBHOTU1OSJiMGI9WD1tPSI5KTlhYwl4Vig5dW1EbTBYMEY9RCg5JGIwX209cGlYc209OSk5NTU5dW1EbTBYMEY9RCgkZDBHVnhFWSd1V3hHJ3kpOTM4OXVtRG0wWDBGPUQoOSRiMF9tPXBpWHNtPTkpOTU1OSJ1cHNEbWlxMEc9IjkpOWFjCQlwdUUoOSJuREQwRCIsOSRYc0dFWScwaW1fPUREMEQneSw5JFhzR0VZJzBpbV89REQwRF9CJ3ksOSI/cDBiNW09cGlYc209dSZldT1EX3FzdXE1YSRiWD1fWDBFeEdfcXN1cVUiOSk7YwlVYwl4VighJGIwX209cGlYc209OTM4OWlEPUVfcHNtZHEoOSI8WVx8fFwnfFwyfFxBfFxZfFx5fFwifFwhfFw/fFwkfFxAfFw8fFxcXHxcJlx+XCpcK3k8Iiw5JGIwX209cGlYc209OSk5KTlhYwkJcHVFKDkiPUREMEQiLDkkWHNHRVknMGltXz1ERDBEJ3ksOSRYc0dFWScwaW1fPUREMERfUSd5LDkiP3AwYjVtPXBpWHNtPXUmZXU9RF9xc3VxNWEkYlg9X1gwRXhHX3FzdXFVIjkpO2MJVWNjCSRiIC1BemU9REwoOSJ2Z1BuOE05dmdNMzkiOTY5aFBuOEo4bnt2Uzk2OSJfc2JweEdfWDBFdTkoR3NwPSw5YnNtPSw5eGksOXNkbXgwRyw5PU9tRHN1KTlDc1hlPXU5KCciNiRiIC1BdXNWPXV6WCgkcD1wID1EX3hiWSdHc3A9J3kpNiInLDknYSRfTXY3blUnLDknYSRfdkpVJyw5J2ZvJyw5J2EkYjBfbT1waVhzbT1VJykiOSk7YwljCVh4dW1ieEQoOTgzM01fbHY4OTY5IjxtPXBpWHNtPXU8Ijk2OSRiMF9tPXBpWHNtPTkpO2MJYwlwdUUoOSJ1ZWRkPXV1Iiw5JFhzR0VZJzBpbV94R1YwX1sneSw5JFhzR0VZJzBpbV94R1YwX0IneSw5Ij9wMGI1bT1waVhzbT11JmV1PURfcXN1cTVhJGJYPV9YMEV4R19xc3VxVSI5KTtjVWNjJHVxMEZfYj1YPW09X1h4R1c5NTknJztjYyRiMF9tPXBpWHNtPTk1OW1EeHAoOW0wbURzR3VYeG0oJGIwX209cGlYc209LDlWc1h1PSw5VnNYdT0pOSk7Y2N4Vig5JGIwX209cGlYc209OTU1OScnOTBEOSE5JGIwX209cGlYc209OSk5YWMJJGIwX209cGlYc209OTU5JGQwR1Z4RVkndVd4Ryd5O2NVOT1YdT14Vig5JGIwX209cGlYc209OSE1OSRkMEdWeEVZJ3VXeEcneTkuZ2w5JGIwX209cGlYc209OSE1OSJ1cHNEbWlxMEc9IjkpOWFjCSR1cTBGX2I9WD1tPV9YeEdXOTU5IjJzOWRYc3V1NVwiIG1HOSBFLWJzR0U9RDkgbUctdXA5IG1HLURzeHU9YlwiOXFEPVY1XCI/cDBiNW09cGlYc209dSZ1ZSBzZG14MEc1Yj1YPW09JmV1PURfcXN1cTVhJGJYPV9YMEV4R19xc3VxVSZiMF9tPXBpWHNtPTUkYjBfbT1waVhzbT1cIkEkWHNHRVkwaW1fYj1YWHhHV3kyPHNBIjtjVWNjeFY5KCFAeHVfYnhEOSg5ODMzTV9sdjg5NjknPG09cGlYc209dTwnOTY5JGIwX209cGlYc209OSkpOWFjCWJ4PTkoOSJNPXBpWHNtPTlHMG05VjBlR2IhIjkpO2NVY2N4VigheHVfRkR4bXMgWD0oODMzTV9sdjg5NjknPG09cGlYc209dTwnOTY5JGIwX209cGlYc209OTY5IjwiKSk5YWNjCSRYc0dFWSd1bXNtX209cGlYc209J3k5NTl1bURfRD1pWHNkPTkoImFtPXBpWHNtPVUiLDknPG09cGlYc209dTwnNiRiMF9tPXBpWHNtPTYnPCcsOSRYc0dFWSd1bXNtX209cGlYc209J3kpO2NjCSRWc3hYOTU5IjJieEM5ZFhzdXU1XCJzWD1EbTlzWD1EbS1Gc0RHeEdFOXNYPURtLXVtTFg9Yi1YPVZtOXNYPURtLXNERDBGLVg9Vm05c1g9RG0tZDBwaTBHPUdtXCJBYSRYc0dFWSd1bXNtX209cGlYc209J3lVMjxieENBIjtjY1U5PVh1PTkkVnN4WDk1OSIiO2NjJDR1X3NERHNMWXk5NTkiPUdFeEc9PHVXeEd1PGQwYj1weEREMEQ8NHU8ZDBiPTY0dSI7YyRkdXVfc0REc0xZeTk1OSI9R0V4Rz08dVd4R3U8ZDBiPXB4REQwRDxkdXU8Yj1Wc2VYbTZkdXUiO2NjPWRxMHE9c2I9RCg5IjJ4OWRYc3V1NVwiVnM5VnMtYj11V20waTlpMHV4bXgwRy1YPVZtXCJBMjx4QTJ1aXNHOWRYc3V1NVwibT1PbS11PXB4IDBYYlwiQWEkWHNHRVkncT1zYj1EX21wX1EneVUyPHVpc0dBIiw5JFhzR0VZJ3E9c2I9RF9tcF9UJ3k5KTtjYz1kcTA5MjIyTk03S2MyYnhDOWRYc3V1NSJpc0c9WDlpc0c9WC1iPVZzZVhtIkFjOTkyYnhDOWRYc3V1NSJpc0c9WC1xPXNieEdFIkFjOTk5OWEkWHNHRVknMGltXz1ieG1fcT1zYid5VWM5OTI8YnhDQWM5OTJieEM5ZFhzdXU1ImlzRz1YLSAwYkwiQWMJCTJWMERwOXA9bXEwYjUiaTB1bSI5c2RteDBHNSI/cDBiNW09cGlYc209dSI5ZFhzdXU1IlYwRHAtcTBEeFowR21zWCI5c2VtMGQwcGlYPW09NSIwVlYiQQljCQk5MmJ4QzlkWHN1dTUiVjBEcC1FRDBlaSJBYwkJOTkyWHMgPVg5ZFhzdXU1ImQwR21EMFgtWHMgPVg5ZDBYLXVwLVQiQWEkWHNHRVknMGltX21xPXNidSd5VTI8WHMgPVhBYwkJOTkyYnhDOWRYc3V1NSJkMFgtdXAtUWoiQWMJCQkyIEFhJGIwX209cGlYc209VTI8IEFjCQk5OTI8YnhDQWMJCTI8YnhDQWMJCWMJCTkyYnhDOWRYc3V1NSJWMERwLUVEMGVpOXAgLVRqIkFjCQk5OTJYcyA9WDlkWHN1dTUiZDBHbUQwWC1YcyA9WDlkMFgtdXAtVCJBYSRYc0dFWScwaW1fdUx1X3NYJ3lVMjxYcyA9WEFjCQk5OTJieEM5ZFhzdXU1ImQwWC11cC1RaiJBYwkJCTJ1PVg9ZG05ZFhzdXU1ImVHeFYwRHAiOUdzcD01ImIwX1hzR0Vlc0U9IkFjCQkyMGlteDBHOUNzWGU9NSIiQWEkWHNHRVkndUx1X0VYMCBzWCd5VTI8MGlteDBHQWNOTTdLO2NjVjBEPXNkcTkoOSRYc0dFZXNFPV9YeHVtOXN1OSRXPUw5NUE5JENzWGU9OSk5YWMJYwl4Vig5eHV1PW0oOSRDc1hlPVkneGQwRyd5OSk5LmdsOSRDc1hlPVkneGQwRyd5OSk5YWMJCSRWWHNFdTk1OSI5YnNtcy1kMEdtPUdtNVwiMnVpc0c5ZFhzdXU1J3U9WD1kbS14ZDBHJ0EyeHBFOXVEZDUnWHNHRWVzRT08YSRXPUxVPGEkQ3NYZT1ZJ3hkMEcneVUnQTI8dWlzR0EydWlzRzlkWHN1dTUndT1YPWRtLWI9dWREJ0FhJENzWGU9WSdHc3A9J3lVMjx1aXNHQVwiOSI7YwlVOT1YdT05JFZYc0V1OTU5IiI7YwljCXhWKDkkVz1MOTU1OSRkMEdWeEVZIlhzR0VfIjk2OSRiMF9tPXBpWHNtPXk5KTlhYwkJPWRxMDkiMjBpbXgwRzl1PVg9ZG09YjlDc1hlPTVcImEkVz1MVVwiYSRWWHNFdVVBYSRDc1hlPVknR3NwPSd5VTI8MGlteDBHQSI7YwlVOT1YdT05YWMJCT1kcTA5IjIwaW14MEc5Q3NYZT01XCJhJFc9TFVcImEkVlhzRXVVQWEkQ3NYZT1ZJ0dzcD0neVUyPDBpbXgwR0EiO2MJVWMJY1VjYz1kcTA5MjIyTk03S2MJCTI8dT1YPWRtQTJ4R2llbTltTGk9NSJ1ZSBweG0iOUNzWGU9NSJhJFhzR0VZJyBfdT1YPWRtJ3lVIjlkWHN1dTUiIG1HOSBFLXVYc209LWZqajkgbUctdXA5IG1HLURzeHU9YjlpMHV4bXgwRy1EeEVxbSJBMnhHaWVtOW1MaT01InF4YmI9RyI5R3NwPTVldT1EX3FzdXE5Q3NYZT01IiRiWD1fWDBFeEdfcXN1cSJBMnhHaWVtOW1MaT01InF4YmI9RyI5R3NwPTUidWUgc2RteDBHIjlDc1hlPTUiWHNHRWVzRT0iQTJ4R2llbTltTGk9NSJxeGJiPUciOUdzcD01ImIwX209cGlYc209IjlDc1hlPTUiYSRiMF9tPXBpWHNtPVUiQWMJCTk5MjxieENBYwkJMjxieENBYwkJMjxWMERwQWMJCTJWMERwOXA9bXEwYjUiaTB1bSI5c2RteDBHNSI/cDBiNW09cGlYc209dSI5ZFhzdXU1IlYwRHAtcTBEeFowR21zWCI5c2VtMGQwcGlYPW09NSIwVlYiQQljCQk5MmJ4QzlkWHN1dTUiVjBEcC1FRDBlaTlwIC1UaiJBYwkJOTkyWHMgPVg5ZFhzdXU1ImQwR21EMFgtWHMgPVg5ZDBYLXVwLVQiQWEkWHNHRVknMGltX0c9Rm09aVg9Yid5VTI8WHMgPVhBYwkJOTkyYnhDOWRYc3V1NSJkMFgtdXAtUWoiQTJWMERwOXA9bXEwYjUiaTB1bSI5c2RteDBHNSI/cDBiNW09cGlYc209dSI5ZFhzdXU1IlYwRHAtcTBEeFowR21zWCI5c2VtMGQwcGlYPW09NSIwVlYiQTJ1PVg9ZG05ZFhzdXU1ImVHeFYwRHAiOUdzcD01ImIwX209cGlYc209IkFjTk03SztjY1YwRD1zZHE5KDkkbT1waVhzbT11X1h4dW05c3U5JFc9TDk1QTkkQ3NYZT05KTlhYwl4Vig5JFc9TDk1NTkkYjBfbT1waVhzbT05KTlhYwkJPWRxMDkiMjBpbXgwRzl1PVg9ZG09YjlDc1hlPTVcImEkVz1MVVwiQWEkQ3NYZT1ZJ0dzcD0neVUyPDBpbXgwR0EiO2MJVTk9WHU9OWFjCQk9ZHEwOSIyMGlteDBHOUNzWGU9NVwiYSRXPUxVXCJBYSRDc1hlPVknR3NwPSd5VTI8MGlteDBHQSI7YwlVY1VjYz1kcTA5MjIyTk03S2MyPHU9WD1kbUEyeEdpZW05bUxpPTUidWUgcHhtIjlDc1hlPTUiYSRYc0dFWScgX3Vtc0RtJ3lVIjlkWHN1dTUiIG1HOSBFLXVYc209LWZqajkgbUctdXA5IG1HLURzeHU9YjlpMHV4bXgwRy1EeEVxbSJBJkcgdWk7JkcgdWk7MnM5MEdkWHhkVzUiNHNDc3VkRHhpbTpOPVhpKCdtPXBpWHNtPXUnKSI5ZFhzdXU1InVtc21ldS14R1YwIjlxRD1WNSIjIkFhJFhzR0VZJzBpbV9tPXBpcT1YaSd5VTI8c0EyeEdpZW05bUxpPTVxeGJiPUc5R3NwPTVldT1EX3FzdXE5Q3NYZT01IiRiWD1fWDBFeEdfcXN1cSJBMnhHaWVtOW1MaT01InF4YmI9RyI5R3NwPTUic2RteDBHIjlDc1hlPTUibT1waVhzbT11IkFjCQk5OTI8YnhDQWMJCTI8YnhDQWMJCTI8VjBEcEFjCQkJOTJieEM5ZFhzdXU1IlYwRHAtRUQwZWkiQWMJCQk5OTJYcyA9WDlkWHN1dTUiZDBHbUQwWC1YcyA9WDlkMFgtdXAtVCJBMjxYcyA9WEFjCQkJOTkyYnhDOWRYc3V1NSJkMFgtdXAtUWoiQWMJCQkJMnM5ZFhzdXU1IiBtRzkgRS1tPXNYOSBtRy11cDkgbUctRHN4dT1iOWkwdXhteDBHLVg9Vm0iOXFEPVY1Ij9wMGI1bT1waVhzbT11JnVlIHNkbXgwRzVHPUYmc2RteDBHNW09cGlYc209dSZldT1EX3FzdXE1YSRiWD1fWDBFeEdfcXN1cVUiQWEkWHNHRVknMGltXz1HPUZtPWlYJ3lVMjxzQWMJCQkJYSR1cTBGX2I9WD1tPV9YeEdXVWMJCQk5OTI8YnhDQWMJCQkyPGJ4Q0FjYzk5OTI8YnhDQWMyPGJ4Q0FjYzJieEM5ZFhzdXU1ImlzRz1YOWlzRz1YLWI9VnNlWG0iQWM5OTJieEM5ZFhzdXU1ImlzRz1YLXE9c2J4R0UiQWM5OTk5YSRYc0dFWScwaW1fPWJtPXhYJ3lVOTIgQWEkYjBfbT1waVhzbT1VMjwgQWM5OTk5MmJ4QzlkWHN1dTUicT1zYnhHRS09WD1wPUdtdSJBYwk5OTk5MmVYOWRYc3V1NSJ4ZDBHdS1YeHVtIkFjCQkJMlh4QTJzOXFEPVY1IiMiOWRYc3V1NSJpc0c9WC1WZVhYdWREPT1HIkEyeDlkWHN1dTUiVnM5VnMtPU9pc0diIkEyPHhBMjxzQTI8WHhBYwkJMjxlWEFjOTk5OTI8YnhDQWM5OTI8YnhDQWM5OTJieEM5ZFhzdXU1ImlzRz1YLSAwYkw5RDBGLXU9c3BYPXV1IkFjCTkyYnhDOWRYc3V1NSJkMFgtcGItUVQ5cCAtUWoiQWEkWHNHRVknbT1waVhzbT11X3E9WGkneVU5MnM5ZFhzdXU1InBzeEciOXFEPVY1InFtbWl1Ojw8Ylg9LUc9RnU2RGU8PU9tRHN1PDBHWHhHPTxzWFhUNnFtcFgiOW1zREU9bTUiXyBYc0dXIkFxbW1pdTo8PGJYPS1HPUZ1NkRlPD1PbURzdTwwR1h4Rz08c1hYVDZxbXBYMjxzQTI8YnhDQWMJYwk5OTJieEM5ZFhzdXU1ImQwWC1wYi1UIkFjCQkyYnhDOXhiNSJWeFg9bUQ9PSI5ZFhzdXU1IlZ4WD1tRD09IkEyPGJ4Q0FjCTk5MjxieENBYwk5OWMJOTkyYnhDOWRYc3V1NSJkMFgtcGItUWoiQWMJCQkyYnhDOXhiNSJWeFg9PWJ4bSI5dW1MWD01IiAwRGI9RDo5dTBYeGI5UWlPOSM+Pj47cHhHLXE9eEVxbTo5L0gvaU87OWlzYmJ4R0U6L2lPOyJBMjxieENBYwk5OTI8YnhDQWMJYzk5OTI8YnhDQWMyYnhDOWRYc3V1NSJpc0c9WC1WMDBtPUQiQWMJMiBlbW0wRzlkWHN1dTUiIG1HOSBFLW09c1g5IG1HLXVwOSBtRy1Ec3h1PWIiOW1MaT01IiBlbW0wRyI5MEdkWHhkVzUiZEQ9c209VnhYPSgpIkEyeDlkWHN1dTUiVnM5VnMtaVhldS1keERkWD05aTB1eG14MEctWD1WbSJBMjx4QWEkWHNHRVknbT1waVhzbT1fZEQ9c209J3lVMjwgZW1tMEdBYzI8YnhDQWMyPGJ4Q0FjMnVkRHhpbUFjNHRlPURMKFZlR2RteDBHKCQpYWNjCSQoJyNWeFg9bUQ9PScpNlZ4WD1NRD09KGE5RDAwbTo5J2EkYjBfbT1waVhzbT1VPCcsOXVkRHhpbTo5Jz1HRXhHPTxzNHNPPGQwR21EMFhYPUQ2aXFpP3AwYjVtPXBpWHNtPXUmZXU9RF9xc3VxNWEkYlg9X1gwRXhHX3FzdXFVJyw5VjBYYj1EbkM9R206OSdkWHhkVycsOT1PaXNHYlBpPT1iOjlIL2osOWQwWFhzaXU9UGk9PWI6OUgvaiw5cGVYbXh7MFhiPUQ6OVZzWHU9LDlpRD1DPUdtS3hHVy5kbXgwRzo5bURlPTlVLDlWZUdkbXgwRyhWeFg9KTlhOWMJYwkJUHEwRkswc2J4R0UoJycpO2NjCQkkNmkwdW0oJz1HRXhHPTxzNHNPPGQwR21EMFhYPUQ2aXFpP3AwYjVtPXBpWHNtPXUnLDlhOXNkbXgwRzo5Ilgwc2IiLDlWeFg9OjlWeFg9LDlldT1EX3FzdXE6OSJhJGJYPV9YMEV4R19xc3VxVSI5VSw5VmVHZG14MEcoYnNtcylhYwkJCWMJCQlOeGI9SzBzYnhHRSgnJyk7YwkJCSQoJyNWeFg9PWJ4bScpNnFtcFgoYnNtcyk7YwkJCWMJCVUsOSdxbXBYJyk7Y2MJCUQ9bWVERzlWc1h1PTtjYwlVKTtjY1UpO2NWZUdkbXgwRzl1c0M9VnhYPSg5VnhYPTkpYWMJQ3NEOWQwR209R205NTk9YnhtMEQ2RT1tSXNYZT0oKTtjYwkkNmkwdW0oJz1HRXhHPTxzNHNPPGQwR21EMFhYPUQ2aXFpP3AwYjVtPXBpWHNtPXUnLDlhOXNkbXgwRzo5InVzQz0iLDlWeFg9OjlWeFg9LDlkMEdtPUdtOjlkMEdtPUdtLDlldT1EX3FzdXE6OSJhJGJYPV9YMEV4R19xc3VxVSI5VSw5VmVHZG14MEcoYnNtcylhY2MJCXhWOSg5YnNtczk1NTkiMFciOSk5YWMJCQlsS25KZXVxNnhHVjAoJ2EkWHNHRVknbT1waVhzbT1fdXNDPWIneVUnKTtjCQlVOT1YdT05YWMJCQlsS25KZXVxNj1ERDBEKGJzbXMpO2MJCVVjYwlVKTtjY1U7Y2NWZUdkbXgwRzlkRD1zbT1WeFg9KDkpYWNjCWxLbmlEMHBpbSgiYSRYc0dFWSdtPXBpWHNtPV89R209RCd5VSIsOScnLDkiYSRYc0dFWSdpX2lEMHBpbSd5VSIsOVZlR2RteDBHOShWeFg9KTlhY2MJCVBxMEZLMHNieEdFKCcnKTsJCWMJCSQ2aTB1bSgnPUdFeEc9PHM0c088ZDBHbUQwWFg9RDZpcWk/cDBiNW09cGlYc209dScsOWE5c2RteDBHOjkiZEQ9c209Iiw5VnhYPTo5VnhYPSw5bT1waVhzbT06OSdhJGIwX209cGlYc209VScsOWV1PURfcXN1cTo5ImEkYlg9X1gwRXhHX3FzdXFVIjlVLDlWZUdkbXgwRyhic21zKWFjCQkJCWMJCQlOeGI9SzBzYnhHRSgnJyk7YwkJCQljCQkJeFY5KDlic21zOTU1OSIwVyI5KTlhYwkJCQliMGRlcD1HbTZYMGRzbXgwRzUnP3AwYjVtPXBpWHNtPXUmYjBfbT1waVhzbT01YSRiMF9tPXBpWHNtPVUmZXU9RF9xc3VxNWEkYlg9X1gwRXhHX3FzdXFVJztjCQkJVTk9WHU9OWFjCQkJCWxLbkpldXE2PUREMEQoYnNtcyk7YwkJCVVjCWMJCVUpO2NjCVUsOVZzWHU9LDknYSRYc0dFWSdHPUZ1X3VzQz0neVUnKTtjY1U7YzI8dWREeGltQWNhJFZzeFhVY05NN0s7Y2M9ZHEwVjAwbT1EKCk7Yz9B';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCd7M2pHYnNvWE96PjVMCi8yOD1SRUtGPE1ncFNKREh4VmxOSXJQdmRbQnF3Q0E2MFQgVzlRY2V1NH1udDdZLmkxa11aVXltaGFmJywnRk8wbmRhOGx4cUI9eUM1PFJlSmdMdy9UTm1YUHI3aWZESFZXU0ljMzRoWnY+Lm8yYmsgMQp1c2o5RVFNW0FwR0tZen1ddFV7NicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( $member_id['user_group'] != 1 ) {
+	msg( "error", $lang['opt_denied'], $lang['opt_denied'] );
+}
+
+if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+	
+	header( "Location: ?mod=templates&user_hash=" . $dle_login_hash );
+	die();
+
+}
+
+$_REQUEST['do_template'] = isset($_REQUEST['do_template']) ? trim( totranslit($_REQUEST['do_template'], false, false) ) : '';
+
+$do_template = $_REQUEST['do_template'];
+$subaction = $_REQUEST['subaction'];
+
+$templates_list = get_folder_list( 'templates' );
+$language_list = get_folder_list( 'language' );
+
+if( $_REQUEST['subaction'] == "language" ) {
+	
+	$allow_save = false;
+	
+	include(ENGINE_DIR . '/data/config.php');
+
+	$_REQUEST['do_template'] = trim( totranslit($_REQUEST['do_template'], false, false) );
+	$_REQUEST['do_language'] = trim( totranslit($_REQUEST['do_language'], false, false) );
+
+	if( $_REQUEST['do_template'] != "" and $_REQUEST['do_language'] != "" ) {
+		$config["lang_" . $_REQUEST['do_template']] = $_REQUEST['do_language'];
+		$allow_save = true;
+	
+	} elseif( $config["lang_" . $_REQUEST['do_template']] and $_REQUEST['do_language'] == "" ) {
+		unset( $config["lang_" . $_REQUEST['do_template']] );
+		$allow_save = true;
+	}
+	
+	if( $allow_save ) {
+
+		$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '66', '{$_REQUEST['do_template']}')" );
+		
+		if( $auto_detect_config ) $config['http_home_url'] = "";
+		
+		$handler = fopen( ENGINE_DIR . '/data/config.php', "w" );
+		fwrite( $handler, "<?php \n\n//System Configurations\n\n\$config = array (\n\n" );
+		foreach ( $config as $name => $value ) {
+			fwrite( $handler, "'{$name}' => '{$value}',\n\n" );
+		}
+		fwrite( $handler, ");\n\n?>" );
+		fclose( $handler );
+	
+	}
+
+}
+
+if( $subaction == "new" ) {
+
+	$b_form = "<form method=\"post\"><table width=100%><tr><td height=\"150\"><center>$lang[opt_newtemp_1]&nbsp;&nbsp;&nbsp;<select name=\"base_template\" class=\"uniform\">";
+
+	foreach ( $templates_list as $key => $value ) {
+		$b_form .= "<option value=\"{$key}\">{$value['name']}</option>";
+	}
+
+	$b_form .= '</select>&nbsp;&nbsp;' . $lang['opt_msgnew'] . '&nbsp;&nbsp;<input class="form-control" style="width:190px;" type="text" dir="auto" name="template_name"><br><br><input type="submit" value="' . $lang['b_start'] . '" class="btn bg-teal btn-sm btn-raised">
+        <input type=hidden name=mod value=templates>
+        <input type=hidden name=action value=templates>
+        <input type=hidden name=subaction value=donew>
+        <input type=hidden name=user_hash value="' . $dle_login_hash . '">
+        </td></tr></table></form>';
+
+		msg( "info", $lang['create_template'], $b_form );
+	exit();
+}
+
+if( $subaction == "donew" ) {
+	
+	function open_dir($dir, $newdir) { //The function that will copy the files
+		if( file_exists( $dir ) && file_exists( $newdir ) ) {
+			$open_dir = opendir( $dir );
+			while ( false !== ($file = readdir( $open_dir )) ) {
+				if( $file != "." && $file != ".." ) {
+					if( @filetype( $dir . "/" . $file . "/" ) == "dir" ) {
+						if( ! file_exists( $newdir . "/" . $file . "/" ) ) {
+							mkdir( $newdir . "/" . $file . "/" );
+							@chmod( $newdir . "/" . $file, 0777 );
+							open_dir( $dir . "/" . $file . "/", $newdir . "/" . $file . "/" );
+						}
+					} else {
+						copy( $dir . "/" . $file, $newdir . "/" . $file );
+						@chmod( $newdir . "/" . $file, 0666 );
+					}
+				}
+			}
+		}
+	}
+
+	$base_template = trim( totranslit($_REQUEST['base_template'], false, false) );
+	$template_name = trim( totranslit($_REQUEST['template_name'], false, false) );
+	
+	if( preg_match( "/[\||\'|\<|\>|\[|\]|\"|\!|\?|\$|\@|\/|\\\|\&\~\*\+]/", $template_name ) ) {
+		msg( "error", $lang['opt_error'], $lang['opt_error_1'], "?mod=templates&subaction=new&user_hash={$dle_login_hash}" );
+	}
+	
+	$result = @mkdir( ROOT_DIR . "/templates/" . $template_name, 0777 );
+	@chmod( ROOT_DIR . "/templates/" . $template_name, 0777 );
+	
+	if( ! $result ) msg( "error", $lang['opt_error'], $lang['opt_cr_err'], "?mod=templates&subaction=new&user_hash={$dle_login_hash}" );
+	else open_dir( ROOT_DIR . "/templates/" . $base_template, ROOT_DIR . "/templates/" . $template_name );
+
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '67', '{$template_name}')" );
+	
+	msg( "success", $lang['opt_info'], $lang['opt_info_1'], "?mod=templates&user_hash={$dle_login_hash}" );
+}
+
+if( $subaction == "delete" ) {
+	if( strtolower( $do_template ) == strtolower($config['skin']) OR strtolower( $do_template ) == "smartphone" OR strtolower( $do_template ) == '' ) {
+		msg( "Error", $lang['opt_error'], $lang['opt_error_4'], "?mod=templates&user_hash={$dle_login_hash}" );
+	}
+	$msg = "<form method=\"post\">$lang[opt_info_2] <b>$do_template</b>?<br><br>
+        <input class=\"btn bg-teal btn-sm btn-raised position-left\" type=submit value=\" $lang[opt_yes] \"><input class=\"btn bg-danger btn-sm btn-raised\" onClick=\"document.location='?mod=templates';\" type=button value=\"$lang[opt_no]\">
+        <input type=hidden name=mod value=templates>
+        <input type=hidden name=subaction value=dodelete>
+        <input type=hidden name=do_template value=\"$do_template\">
+        <input type=hidden name=user_hash value=\"$dle_login_hash\">
+        </form>";
+	
+	msg( "info", $lang['opt_info_3'], $msg );
+}
+
+if( $subaction == "dodelete" ) {
+	if( strtolower( $do_template ) == strtolower($config['skin']) OR strtolower( $do_template ) == "smartphone" ) {
+		msg( "Error", $lang['opt_error'], $lang['opt_error_4'], "?mod=templates&user_hash={$dle_login_hash}" );
+	}
+	if(!$do_template OR preg_match( "/[\||\'|\<|\>|\[|\]|\"|\!|\?|\$|\@|\/|\\\|\&\~\*\+]/", $do_template ) ) {
+		msg( "error", $lang['opt_error'], $lang['opt_error_1'], "?mod=templates&user_hash={$dle_login_hash}" );
+	}
+
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '68', '{$do_template}')" );
+	
+	listdir( ROOT_DIR . "/templates/" . $do_template );
+	
+	msg( "success", $lang['opt_info_3'], $lang['opt_info_4'], "?mod=templates&user_hash={$dle_login_hash}" );
+}
+
+$show_delete_link = '';
+
+$do_template = trim( totranslit($do_template, false, false) );
+
+if( $do_template == '' or ! $do_template ) {
+	$do_template = $config['skin'];
+} elseif( $do_template != $config['skin'] AND $do_template != "smartphone" ) {
+	$show_delete_link = "<a class=\"btn bg-danger btn-sm btn-raised\" href=\"?mod=templates&subaction=delete&user_hash={$dle_login_hash}&do_template=$do_template\">$lang[opt_dellink]</a>";
+}
+
+if (!@is_dir ( ROOT_DIR . '/templates/' . $do_template )) {
+	die ( "Template not found!" );
+}
+
+if(!is_writable(ROOT_DIR . '/templates/' . $do_template . "/")) {
+
+	$lang['stat_template'] = str_replace ("{template}", '/templates/'.$do_template.'/', $lang['stat_template']);
+
+	$fail = "<div class=\"alert alert-warning alert-styled-left alert-arrow-left alert-component\">{$lang['stat_template']}</div>";
+
+} else $fail = "";
+
+$js_array[] = "engine/skins/codemirror/js/code.js";
+$css_array[] = "engine/skins/codemirror/css/default.css";
+
+echoheader( "<i class=\"fa fa-desktop position-left\"></i><span class=\"text-semibold\">{$lang['header_tm_1']}</span>", $lang['header_tm_2'] );
+
+echo <<<HTML
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['opt_edit_head']}
+  </div>
+  <div class="panel-body">
+		<form method="post" action="?mod=templates" class="form-horizontal" autocomplete="off">	
+		 <div class="form-group">
+		  <label class="control-label col-sm-2">{$lang['opt_theads']}</label>
+		  <div class="col-sm-10">
+			<b>{$do_template}</b>
+		  </div>
+		</div>
+		
+		 <div class="form-group mb-20">
+		  <label class="control-label col-sm-2">{$lang['opt_sys_al']}</label>
+		  <div class="col-sm-10">
+			<select class="uniform" name="do_language">
+		<option value="">{$lang['sys_global']}</option>
+HTML;
+
+foreach ( $language_list as $key => $value ) {
+	
+	if( isset( $value['icon'] ) AND $value['icon'] ) {
+		$flags = " data-content=\"<span class='select-icon'><img src='language/{$key}/{$value['icon']}'></span><span class='select-descr'>{$value['name']}</span>\" ";
+	} else $flags = "";
+	
+	if( $key == $config["lang_" . $do_template] ) {
+		echo "<option selected value=\"{$key}\"{$flags}>{$value['name']}</option>";
+	} else {
+		echo "<option value=\"{$key}\"{$flags}>{$value['name']}</option>";
+	}
+	
+}
+
+echo <<<HTML
+		</select><input type="submit" value="{$lang['b_select']}" class="btn bg-slate-600 btn-sm btn-raised position-right"><input type="hidden" name=user_hash value="$dle_login_hash"><input type="hidden" name="subaction" value="language"><input type="hidden" name="do_template" value="{$do_template}">
+		  </div>
+		</div>
+		</form>
+		<form method="post" action="?mod=templates" class="form-horizontal" autocomplete="off">	
+		 <div class="form-group mb-20">
+		  <label class="control-label col-sm-2">{$lang['opt_newtepled']}</label>
+		  <div class="col-sm-10"><form method="post" action="?mod=templates" class="form-horizontal" autocomplete="off"><select class="uniform" name="do_template">
+HTML;
+
+foreach ( $templates_list as $key => $value ) {
+	if( $key == $do_template ) {
+		echo "<option selected value=\"{$key}\">{$value['name']}</option>";
+	} else {
+		echo "<option value=\"{$key}\">{$value['name']}</option>";
+	}
+}
+
+echo <<<HTML
+</select><input type="submit" value="{$lang['b_start']}" class="btn bg-slate-600 btn-sm btn-raised position-right">&nbsp;&nbsp;<a onclick="javascript:Help('templates')" class="status-info" href="#">{$lang['opt_temphelp']}</a><input type=hidden name=user_hash value="$dle_login_hash"><input type="hidden" name="action" value="templates">
+		  </div>
+		</div>
+		</form>
+			 <div class="form-group">
+			  <label class="control-label col-sm-2"></label>
+			  <div class="col-sm-10">
+				<a class="btn bg-teal btn-sm btn-raised position-left" href="?mod=templates&subaction=new&action=templates&user_hash={$dle_login_hash}">{$lang['opt_enewtepl']}</a>
+				{$show_delete_link}
+			  </div>
+			</div>
+
+   </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['opt_edteil']} <b>{$do_template}</b>
+    <div class="heading-elements">
+	    <ul class="icons-list">
+			<li><a href="#" class="panel-fullscreen"><i class="fa fa-expand"></i></a></li>
+		</ul>
+    </div>
+  </div>
+  <div class="panel-body row-seamless">
+	 <div class="col-md-12 mb-10">{$lang['templates_help']} <a class="main" href="https://dle-news.ru/extras/online/all2.html" target="_blank">https://dle-news.ru/extras/online/all2.html</a></div>
+	
+	  <div class="col-md-2">
+		<div id="filetree" class="filetree"></div>
+	  </div>
+	  
+	  <div class="col-md-10">
+			<div id="fileedit" style="border: solid 1px #BBB;min-height: 575px; padding:5px;"></div>
+	  </div>
+	
+   </div>
+<div class="panel-footer">
+	<button class="btn bg-teal btn-sm btn-raised" type="button" onclick="createfile()"><i class="fa fa-plus-circle position-left"></i>{$lang['template_create']}</button>
+</div>
+</div>
+<script>
+jQuery(function($){
+
+	$('#filetree').fileTree({ root: '{$do_template}/', script: 'engine/ajax/controller.php?mod=templates&user_hash={$dle_login_hash}', folderEvent: 'click', expandSpeed: 750, collapseSpeed: 750, multiFolder: false, preventLinkAction: true }, function(file) { 
+	
+		ShowLoading('');
+
+		$.post('engine/ajax/controller.php?mod=templates', { action: "load", file: file, user_hash: "{$dle_login_hash}" }, function(data){
+			
+			HideLoading('');
+			$('#fileedit').html(data);
+			
+		}, 'html');
+
+		return false;
+
+	});
+
+});
+function savefile( file ){
+	var content = editor.getValue();
+
+	$.post('engine/ajax/controller.php?mod=templates', { action: "save", file: file, content: content, user_hash: "{$dle_login_hash}" }, function(data){
+
+		if ( data == "ok" ) {
+			DLEPush.info('{$lang['template_saved']}');
+		} else {
+			DLEPush.error(data);
+		}
+
+	});
+
+};
+
+function createfile( ){
+
+	DLEprompt("{$lang['template_enter']}", '', "{$lang['p_prompt']}", function (file) {
+
+		ShowLoading('');		
+		$.post('engine/ajax/controller.php?mod=templates', { action: "create", file: file, template: '{$do_template}', user_hash: "{$dle_login_hash}" }, function(data){
+				
+			HideLoading('');
+				
+			if ( data == "ok" ) {
+				document.location='?mod=templates&do_template={$do_template}&user_hash={$dle_login_hash}';
+			} else {
+				DLEPush.error(data);
+			}
+	
+		});
+
+	}, false, '{$lang['news_save']}');
+
+};
+</script>
+{$fail}
+HTML;
+
+echofooter();
+?>

@@ -1,13 +1,414 @@
-<?php
+<?PHP
 /*
 =====================================================
  DataLife Engine - by SoftNews Media Group 
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: wordfilter.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: words filter
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P2UgP09RTzhEKjhjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjYzh1bTQzNGY+Tkt1QzVWPjVLdS11UFR1e0ZOM0xLcEd1YUtCPjR1OTJGdy51OC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tOHVvMzMuRzpEREJXSy01S3BHWjJ3RDgtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTh1aEYuVDI+Vm8zdSgwKXVpUlJ6LWlSaV11e0ZOM0xLcEd1YUtCPjR1OTJGdy44Y2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2M4dWxvPkd1MEZCS3U+R3UuMkYzSzAzS0J1UFR1MEYuVDI+Vm8zOGNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjOHV4PldLOnVwRjJCTj5XM0syWi5vLjgtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTh1QUdLOnVwRjJCR3VOPlczSzI4Y2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2M4KkQ4OD5OKHUhQktOPjVLQih1J209bD1mdHhDQ0w5dExDJ3UpdVM2dSFCS04+NUtCKHUnZlM5OUNtX3RMJ3UpdSl1SDgJb0s0QksyKHUiUWxsT0Q8Wjx1elIxdXhGMlA+QkJLNSJ1KTs4CW9LNEJLMnUodSdmRjA0Mz5GNTp1WlpEWlpEJ3UpOzgJQj5LKHUiUTQwRT41VnU0MzNLdi4zISJ1KTs4ZDg4Pk4odSF1JHdHSzJfVjJGdy5iJHZLdlBLMl8+QmInd0dLMl9WMkZ3Lid9fWInNEJ2PjVfcEYyQk4+VzNLMid9dSl1SDgJdkdWKHUiSzIyRjIiLHUkVzQ1VmInPjVCS3JfQks1PktCJ30sdSRXNDVWYic+NUJLcl9CSzU+S0InfXUpOzhkODgkMktHd1czdWN1IiI7OCRwRjJCXz5CdWN1PkdHSzMoJF82Q3NBQ3tsYidwRjJCXz5CJ30pdT91PjUzCjRXKHUkXzZDc0FDe2xiJ3BGMkJfPkInfXUpdTp1Ujs4OCQuNDJHS3VjdTVLcHVPNDJHS3g+VzNLMigpOzgkLjQyR0stZU4+VzNLMl92RkJLdWN1TjRXR0s7ODg+Tih1JDQwMz5GNXVjY3UiNEJCInUpdUg4OAk+Tih1IT5HR0szKCRfNkNzQUN7bGInd0dLMl9vNEdvJ30pdVM2dSEkXzZDc0FDe2xiJ3dHSzJfbzRHbyd9dVM2dSRfNkNzQUN7bGInd0dLMl9vNEdvJ311IWN1JEJXS19XRlY+NV9vNEdvdSl1SDgJCTgJCUI+Syh1IlE0MEU+NVZ1NDMzS3YuMyF1QUdLMnU1RjN1TkZ3NUIidSk7OAk4CWQ4CTgJJHBGMkJfTj41QnVjdTMyPnYodUczMj4uXzM0VkcodUczMj4uR1c0R29LRyh1JF9PU3tsYidwRjJCX04+NUInfXUpdSl1KTs4CTgJPk4odSRwRjJCX04+NUJ1Y2N1IiJ1KXVIOAkJdkdWKHUiSzIyRjIiLHUkVzQ1VmIncEYyQl9LMjJGMid9LHUkVzQ1VmIncEYyQl9wRjJCJ30sdSI/dkZCY3BGMkJOPlczSzIidSk7OAlkOAk4CSRwRjJCXzJLLlc0MEt1Y3UzMj52KEczMj4uR1c0R29LRyh1JC40MkdLLWVubl9PNDJHSyh1JC40MkdLLWUuMkYwS0dHKHUkX09Te2xiJ3BGMkJfMksuVzQwSyd9dSksdU40V0dLdSl1KSk7OAk4CSRwRjJCXz5CdWN1Mz52SygpOzgJOAkkNFdXXz4zS3ZHdWN1Tj5XSyh1Q0w5dExDX210NnVadSdEQjQzNERwRjJCTj5XM0syWkJQWi5vLid1KTs4CU5GMks0MG91KHUkNFdXXz4zS3ZHdTRHdSQ+M0t2X1c+NUt1KXVIOAkJJD4zS3ZfNDIydWN1S3IuV0ZCSyh1InwiLHUkPjNLdl9XPjVLdSk7OAkJPk4odSQ+M0t2XzQyMmJSfXVjY3UkcEYyQl8+QnUpdUg4CQkJJHBGMkJfPkJ1Kys7OAkJZDgJZDgJOAlORjJLNDBvdSh1JDRXV18+M0t2R3U0R3UkcEYyQl9XPjVLdSl1SDgJCSRwRjJCXzQyMnVjdUtyLldGQksodSJ8Iix1JHBGMkJfVz41S3UpOzgJCT5OKHUkcEYyQl80MjJiPH11Y2N1JHBGMkJfTj41QnUpdUg4CQkJdkdWKHUiSzIyRjIiLHUkVzQ1VmIncEYyQl9LMjJGMid9LHUkVzQ1VmIncEYyQl80Mid9LHUiP3ZGQmNwRjJCTj5XM0syInUpOzgJCWQ4CWQ4CTgJJDVLcF9wRjJCR3VjdU5GLks1KHVDTDl0TENfbXQ2dVp1J0RCNDM0RHBGMkJOPlczSzJaQlBaLm8uJyx1IjQidSk7OAkkcEYyQl9OPjVCdWN1RzMyXzJLLlc0MEsodSJ8Iix1IiYjPGl6Iix1JHBGMkJfTj41QnUpOzgJJHBGMkJfMksuVzQwS3VjdUczMl8ySy5XNDBLKHUifCIsdSImIzxpeiIsdSRwRjJCXzJLLlc0MEt1KTs4OAkkcEYyQl9OPjVCdWN1RzMyXzJLLlc0MEsodSIkIix1IiYjUjFKOyIsdSRwRjJCX04+NUJ1KTs4CSRwRjJCX04+NUJ1Y3VHMzJfMksuVzQwSyh1IkgiLHUiJiM8aTE7Iix1JHBGMkJfTj41QnUpOzgJJHBGMkJfTj41QnVjdUczMl8ySy5XNDBLKHUiZCIsdSImIzxpXTsiLHUkcEYyQl9OPjVCdSk7OAkkcEYyQl9OPjVCdWN1RzMyXzJLLlc0MEsodSIgIix1IiZXMzsiLHUkcEYyQl9OPjVCdSk7OAkkcEYyQl9OPjVCdWN1RzMyXzJLLlc0MEsodSJlIix1IiZWMzsiLHUkcEYyQl9OPjVCdSk7OAkJOAkkcEYyQl8ySy5XNDBLdWN1RzMyXzJLLlc0MEsodSIkIix1IiYjUjFKOyIsdSRwRjJCXzJLLlc0MEt1KTs4CSRwRjJCXzJLLlc0MEt1Y3VHMzJfMksuVzQwSyh1IkgiLHUiJiM8aTE7Iix1JHBGMkJfMksuVzQwS3UpOzgJJHBGMkJfMksuVzQwS3VjdUczMl8ySy5XNDBLKHUiZCIsdSImIzxpXTsiLHUkcEYyQl8ySy5XNDBLdSk7ODgJJEJQLWVxd0syVCh1InRMe0M2bHV0TGxTdSJ1WnVBe0M2TzZDeHRVdVp1Il80QnY+NV9XRlZHdSg1NHZLLHVCNDNLLHU+Lix1NDAzPkY1LHVLcjMyNEcpdQo0V3dLR3UoJyJaJEJQLWVHNE5LR3FXKCR2S3ZQSzJfPkJiJzU0dksnfSlaIicsdSdIJF9sdGFDZCcsdSdIJF90T2QnLHUneVsnLHUnIlpvM3ZXRy5LMD40VzBvNDJHKCRwRjJCX04+NUIsdUNMbF9zQVNsQ3ssdSdBbHgtaicpWiInKSJ1KTs4OAlOcDI+M0sodSQ1S3BfcEYyQkcsdSIkcEYyQl8+QnwkcEYyQl9OPjVCfCRwRjJCXzJLLlc0MEt8InVadT41Mwo0Vyh1JF9PU3tsYiczVC5LJ311KXVadSJ8Ilp1PjUzCjRXKHUkX09Te2xiJzJLVj5HM0syJ311KXVaInwiWnU+NTMKNFcodSRfT1N7bGInTj5XM0syX0dLNDIwbyd9dSl1WiJ8Ilp1PjUzCjRXKHUkX09Te2xiJ04+VzNLMl80MDM+RjUnfXUpdVoifHxcNSJ1KTs4CU4wV0ZHSyh1JDVLcF9wRjJCR3UpOzg4ZHVLV0dLPk4odSQ0MDM+RjV1Y2N1IjJLdkYKSyJ1KXVIOAk4CT5OKHUhPkdHSzMoJF82Q3NBQ3tsYid3R0syX280R28nfSl1UzZ1ISRfNkNzQUN7bGInd0dLMl9vNEdvJ311UzZ1JF82Q3NBQ3tsYid3R0syX280R28nfXUhY3UkQldLX1dGVj41X280R291KXVIOAkJOAkJQj5LKHUiUTQwRT41VnU0MzNLdi4zIXVBR0sydTVGM3VORnc1QiJ1KTs4CTgJZDgJOAk+Tih1IXUkcEYyQl8+QnUpdUg4CQl2R1YodSJLMjJGMiIsdSRXNDVWYidwRjJCX0syMkYyJ30sdSRXNDVWYidwRjJCXzVGTid9LHUiP3ZGQmNwRjJCTj5XM0syInUpOzgJZDgJOAkkRldCX3BGMkJHdWN1Tj5XSyh1Q0w5dExDX210NnVadSdEQjQzNERwRjJCTj5XM0syWkJQWi5vLid1KTs4CSQ1S3BfcEYyQkd1Y3VORi5LNSh1Q0w5dExDX210NnVadSdEQjQzNERwRjJCTj5XM0syWkJQWi5vLicsdSJwInUpOzg4CSRCUC1lcXdLMlQodSJ0THtDNmx1dExsU3UidVp1QXtDNk82Q3h0VXVadSJfNEJ2PjVfV0ZWR3UoNTR2Syx1QjQzSyx1Pi4sdTQwMz5GNSx1S3IzMjRHKXUKNFd3S0d1KCciWiRCUC1lRzROS0dxVygkdkt2UEsyXz5CYic1NHZLJ30pWiInLHUnSCRfbHRhQ2QnLHUnSCRfdE9kJyx1J2pSJyx1JycpInUpOzgJOAlORjJLNDBvdSh1JEZXQl9wRjJCR3U0R3UkRldCX3BGMkJHX1c+NUt1KXVIOAkJJHBGMkJfNDIydWN1S3IuV0ZCSyh1InwiLHUkRldCX3BGMkJHX1c+NUt1KTs4CQk+Tih1JHBGMkJfNDIyYlJ9dSFjdSRwRjJCXz5CdSl1SDgJCQlOcDI+M0sodSQ1S3BfcEYyQkcsdSRGV0JfcEYyQkdfVz41S3UpOzgJCWQ4CWQ4CU4wV0ZHSyh1JDVLcF9wRjJCR3UpOzg4ZHVLV0dLPk4odSQ0MDM+RjV1Y2N1IktCPjMidSl1SDgJOAlERHVob0swRXU+TnV4PlczSzJ1cDRHdUcuSzA+Tj5LQjgJPk4odSF1JHBGMkJfPkJ1KXVIOAkJdkdWKHUiSzIyRjIiLHUkVzQ1VmIncEYyQl9LMjJGMid9LHUkVzQ1VmIncEYyQl81Rk4nfSx1Ij92RkJjcEYyQk4+VzNLMiJ1KTs4CWQ4CUswb0ZvSzRCSzIodSIgPnUwVzRHR2NcIk40dU40LU4+VzNLMnUuRkc+Mz5GNS1XS04zXCJlIEQ+ZSBHLjQ1dTBXNEdHY1wiM0tyMy1HS3Y+UEZXQlwiZUgkVzQ1VmIncEYyQl9vSzRCJ31kIERHLjQ1ZSIsdSRXNDVWYidvSzRCSzJfTj5fPCd9dSk7ODgJJDRXV19wRjJCR3VjdU4+V0sodUNMOXRMQ19tdDZ1WnUnREI0MzREcEYyQk4+VzNLMlpCUFouby4ndSk7OAlORjJLNDBvdSh1JDRXV19wRjJCR3U0R3UkcEYyQl9XPjVLdSl1SDgJCTgJCSRwRjJCXzQyMnVjdUtyLldGQksodSJ8Iix1JHBGMkJfVz41S3UpOzgJCSRHS1dLMDNLQl9pdWN1NDIyNFQoJycsdScnLHUnJyk7OAkJJEdLV0swM0tCXzF1Y3U0MjI0VCgnJyx1JycpOzgJCTgJCT5OKHUkcEYyQl80MjJiUn11Y2N1JHBGMkJfPkJ1KXVIODgJCQkkcEYyQl80MjJiPH11Y3VHMzJfMksuVzQwSyh1IiYjUjFKOyIsdSIkIix1JHBGMkJfNDIyYjx9dSk7OAkJCSRwRjJCXzQyMmI8fXVjdUczMl8ySy5XNDBLKHUiJiM8aTE7Iix1IkgiLHUkcEYyQl80MjJiPH11KTs4CQkJJHBGMkJfNDIyYjx9dWN1RzMyXzJLLlc0MEsodSImIzxpXTsiLHUiZCIsdSRwRjJCXzQyMmI8fXUpOzgJCQk4CQkJJHBGMkJfNDIyYml9dWN1RzMyXzJLLlc0MEsodSImI1IxSjsiLHUiJCIsdSRwRjJCXzQyMmJpfXUpOzgJCQkkcEYyQl80MjJiaX11Y3VHMzJfMksuVzQwSyh1IiYjPGkxOyIsdSJIIix1JHBGMkJfNDIyYml9dSk7OAkJCSRwRjJCXzQyMmJpfXVjdUczMl8ySy5XNDBLKHUiJiM8aV07Iix1ImQiLHUkcEYyQl80MjJiaX11KTs4CQkJOAkJCSRwRjJCXzQyMmI8fXVjdSQuNDJHSy1lQkswRkJLbm5oRkJLRyh1JHBGMkJfNDIyYjx9LHVONFdHS3UpOzgJCQkkcEYyQl80MjJiaX11Y3UkLjQyR0stZUJLMEZCS25uaEZCS0codSRwRjJCXzQyMmJpfSx1TjRXR0t1KTs4CTgJCQk+Tih1JHBGMkJfNDIyYjF9dSl1JEdLV0swM0tCdWN1IkdLV0swM0tCIjs4CQkJS1dHS3UkR0tXSzAzS0J1Y3UiIjs4OAkJCT5OKHUkcEYyQl80MjJien11KXUkR0tXSzAzS0JfPHVjdSJHS1dLMDNLQiI7OAkJCUtXR0t1JEdLV0swM0tCXzx1Y3UiIjs4OAkJCSRHS1dLMDNLQl9pYiRwRjJCXzQyMmJdfX11Y3UiR0tXSzAzS0IiOzgJCQkkR0tXSzAzS0JfMWIkcEYyQl80MjJiSn19dWN1IkdLV0swM0tCIjs4CQk4CQkJJHZHVnVjdSAgIFFsYWY4IE5GMnZ1dkszb0ZCYyIuRkczInUwVzRHR2MiTkYydi1vRjI+a0Y1MzRXImU4IEI+CnUwVzRHR2MiLjQ1S1d1LjQ1S1ctQktONHdXMyJlOHV1IEI+CnUwVzRHR2MiLjQ1S1ctb0s0Qj41ViJlOHV1dXVIJFc0NVZiJ3BGMkJfS0I+M19vSzRCJ31kOHV1IERCPgplOHV1IEI+CnUwVzRHR2MiLjQ1S1ctUEZCVCJlOHV1OAkJIEI+CnUwVzRHR2MiTkYydi1WMkZ3LiJlOAkJdXUgVzRQS1d1MFc0R0djIjBGNTMyRlctVzRQS1d1MEZXLXZCLWl1MEZXLUd2LTEiZUgkVzQ1VmIncEYyQl9wRjJCJ31kIERXNFBLV2U4CQl1dSBCPgp1MFc0R0djIjBGVy12Qi08UnUwRlctR3YtWyJlOAkJCSA+NS53M3VCPjJjIjR3M0YidTBXNEdHYyJORjJ2LTBGNTMyRld1cD5CM28tMV1SInUKNFd3S2MiJHBGMkJfNDIyYjx9InUzVC5LYyIzS3IzInU1NHZLYyJwRjJCX04+NUIiZTgJCXV1IERCPgplOAkJdSBEQj4KZTgJCSBCPgp1MFc0R0djIk5GMnYtVjJGdy4iZTgJCXV1IFc0UEtXdTBXNEdHYyIwRjUzMkZXLVc0UEtXdTBGVy12Qi1pdTBGVy1Hdi0xImVIJFc0NVZiJ3BGMkJfMksuJ31kIERXNFBLV2U4CQl1dSBCPgp1MFc0R0djIjBGVy12Qi08UnUwRlctR3YtWyJlOAkJCSA+NS53M3VCPjJjIjR3M0YidTBXNEdHYyJORjJ2LTBGNTMyRld1cD5CM28tMV1SInUzVC5LYyIzS3IzInU1NHZLYyJwRjJCXzJLLlc0MEsidQo0V3dLYyIkcEYyQl80MjJiaX0idXUzPjNXS2MiSCRXNDVWYidwRjJCX29LVy5fPCd9ZCJlOAkJCSBCPgp1MFc0R0djIjNLcjMtdnczS0J1M0tyMy1HPmtLLUd2NFdXdW8+QkJLNS1HdnVvPkJCSzUtckciZUgkVzQ1VmIncEYyQl9vS1cuX2knfWQgREI+CmU4CQl1dSBEQj4KZTgJCXUgREI+CmU4CQkgQj4KdTBXNEdHYyJORjJ2LVYyRncuImU4CQl1dSBXNFBLV3UwVzRHR2MiMEY1MzJGVy1XNFBLV3UwRlctdkItaXUwRlctR3YtMSJlSCRXNDVWYidOPlczSzJfM1QuSyd9ZCBEVzRQS1dlOAkJdXUgQj4KdTBXNEdHYyIwRlctdkItPFJ1MEZXLUd2LVsiZTgJCQkgR0tXSzAzdTBXNEdHYyJ3NT5ORjJ2InU1NHZLYyIzVC5LImUgRi4zPkY1dQo0V3dLYyJSImVIJFc0NVZiJ04+VzNLMl8zVC5LXzwnfWQgREYuMz5GNWUgRi4zPkY1dQo0V3dLYyI8InVIJEdLV0swM0tCZGVIJFc0NVZiJ04+VzNLMl8zVC5LX2knfWQgREYuMz5GNWUgREdLV0swM2U4CQl1dSBEQj4KZTgJCXUgREI+CmU4CQkgQj4KdTBXNEdHYyJORjJ2LVYyRncuImU4CQl1dSBXNFBLV3UwVzRHR2MiMEY1MzJGVy1XNFBLV3UwRlctdkItaXUwRlctR3YtMSJlSCRXNDVWYidOPlczSzJfMktWPkczSzInfWQgRFc0UEtXZTgJCXV1IEI+CnUwVzRHR2MiMEZXLXZCLTxSdTBGVy1Hdi1bImU4CQkJIEdLV0swM3U1NHZLYyIyS1Y+RzNLMiJ1MFc0R0djInc1Pk5GMnYidUczVFdLYyJ2PjUtcD5CM286PFJSLnI7ImUgRi4zPkY1dQo0V3dLYyJSImVIJFc0NVZiJ0YuM19HVEdfNUYnfWQgREYuMz5GNWUgRi4zPkY1dQo0V3dLYyI8InVIJEdLV0swM0tCXzxkZUgkVzQ1VmInRi4zX0dUR19US0cnfWQgREYuMz5GNWUgREdLV0swM2U4CQl1dSBEQj4KZTgJCXUgREI+CmU4CQkgQj4KdTBXNEdHYyJORjJ2LVYyRncuImU4CQl1dSBXNFBLV3UwVzRHR2MiMEY1MzJGVy1XNFBLV3UwRlctdkItaXUwRlctR3YtMSJlSCRXNDVWYidOPlczSzJfR0s0MjBvJ31kIERXNFBLV2U4CQl1dSBCPgp1MFc0R0djIjBGVy12Qi08UnUwRlctR3YtWyJlOAkJCSBHS1dLMDN1NTR2S2MiTj5XM0syX0dLNDIwbyJ1MFc0R0djInc1Pk5GMnYiZSBGLjM+RjV1CjRXd0tjIlIidUgkR0tXSzAzS0JfaWJSfWRlSCRXNDVWYidOPlczSzJfR0s0MjBvX1InfWQgREYuMz5GNWUgRi4zPkY1dQo0V3dLYyI8InVIJEdLV0swM0tCX2liPH1kZUgkVzQ1VmInTj5XM0syX0dLNDIwb188J31kIERGLjM+RjVlIEYuMz5GNXUKNFd3S2MiaSJ1SCRHS1dLMDNLQl9pYml9ZGVIJFc0NVZiJ04+VzNLMl9HSzQyMG9faSd9ZCBERi4zPkY1ZSBER0tXSzAzZTgJCXV1IERCPgplOAkJdSBEQj4KZQkJdTgJCSBCPgp1MFc0R0djIk5GMnYtVjJGdy4iZTgJCXV1IFc0UEtXdTBXNEdHYyIwRjUzMkZXLVc0UEtXdTBGVy12Qi1pdTBGVy1Hdi0xImVIJFc0NVZiJ04+VzNLMl80MDM+RjUnfWQgRFc0UEtXZTgJCXV1IEI+CnUwVzRHR2MiMEZXLXZCLTxSdTBGVy1Hdi1bImU4CQkJIEdLV0swM3U1NHZLYyJOPlczSzJfNDAzPkY1InUwVzRHR2MidzU+TkYydiJlIEYuMz5GNXUKNFd3S2MiUiJ1SCRHS1dLMDNLQl8xYlJ9ZGVIJFc0NVZiJ04+VzNLMl80MDM+RjVfUid9ZCBERi4zPkY1ZSBGLjM+RjV1CjRXd0tjIjwidUgkR0tXSzAzS0JfMWI8fWRlSCRXNDVWYidOPlczSzJfNDAzPkY1XzwnfWQgREYuMz5GNWUgREdLV0swM2U4CQl1dSBEQj4KZTgJCXUgREI+CmUJODgJIERCPgplOCBCPgp1MFc0R0djIi40NUtXLU5GRjNLMiJlOAkgUHczM0Y1dTBXNEdHYyJQMzV1UFYtM0s0V3VQMzUtR3Z1UDM1LTI0PkdLQiJ1M1QuS2MiR3dQdj4zImUgPnUwVzRHR2MiTjR1TjQtTldGLi5ULUZ1LkZHPjM+RjUtV0tOMyJlIEQ+ZUgkVzQ1VmInd0dLMl9HNApLJ31kIERQdzMzRjVlOCBEQj4KZTggREI+CmU4ID41LnczdTNULktjIm8+QkJLNSJ1NTR2S2MiNDAzPkY1InUKNFd3S2MiQkZLQj4zImU4ID41LnczdTNULktjIm8+QkJLNSJ1NTR2S2MicEYyQl8+QiJ1CjRXd0tjIiRwRjJCXzQyMmJSfSJlOCA+NS53M3UzVC5LYyJvPkJCSzUidTU0dktjInZGQiJ1CjRXd0tjInBGMkJOPlczSzIiZTggPjUudzN1M1QuS2Mibz5CQks1InU1NHZLYyJ3R0syX280R28idQo0V3dLYyIkQldLX1dGVj41X280R28iZTggRE5GMnZlOFFsYWY7OAkJCTg4CQkJSzBvRnUkdkdWOzgJOAkJOAkJZDgJCTgJZDgJOAlLMG9GTkZGM0syKCk7OAlCPksoKTs4OGR1S1dHSz5OKHUkNDAzPkY1dWNjdSJCRktCPjMidSl1SDgJOAk+Tih1IT5HR0szKCRfNkNzQUN7bGInd0dLMl9vNEdvJ30pdVM2dSEkXzZDc0FDe2xiJ3dHSzJfbzRHbyd9dVM2dSRfNkNzQUN7bGInd0dLMl9vNEdvJ311IWN1JEJXS19XRlY+NV9vNEdvdSl1SDgJCTgJCUI+Syh1IlE0MEU+NVZ1NDMzS3YuMyF1QUdLMnU1RjN1TkZ3NUIidSk7OAk4CWQ4OAkkcEYyQl9OPjVCdWN1MzI+dih1RzMyPi5fMzRWRyh1RzMyPi5HVzRHb0tHKHUkX09Te2xiJ3BGMkJfTj41Qid9dSl1KXUpOzgJOAk+Tih1JHBGMkJfTj41QnVjY3UiInUpdUg4CQl2R1YodSJLMjJGMiIsdSRXNDVWYidwRjJCX0syMkYyJ30sdSRXNDVWYidwRjJCX3BGMkInfSx1Ilg0CjRHMDI+LjM6bz5HM0YyVFpWRigtPCkidSk7OAlkOAk4CSRwRjJCXzJLLlc0MEt1Y3VHMzI+LkdXNEdvS0codSQuNDJHSy1lbm5fTzQyR0sodSQuNDJHSy1lLjJGMEtHRyh1JF9PU3tsYidwRjJCXzJLLlc0MEsnfXUpLHVONFdHS3UpdSk7OAk4CSRwRjJCX04+NUJ1Y3VHMzJfMksuVzQwSyh1InwiLHUiJiM8aXoiLHUkcEYyQl9OPjVCdSk7OAkkcEYyQl8ySy5XNDBLdWN1RzMyXzJLLlc0MEsodSJ8Iix1IiYjPGl6Iix1JHBGMkJfMksuVzQwS3UpOzg4CSRwRjJCX04+NUJ1Y3VHMzJfMksuVzQwSyh1IiQiLHUiJiNSMUo7Iix1JHBGMkJfTj41QnUpOzgJJHBGMkJfTj41QnVjdUczMl8ySy5XNDBLKHUiSCIsdSImIzxpMTsiLHUkcEYyQl9OPjVCdSk7OAkkcEYyQl9OPjVCdWN1RzMyXzJLLlc0MEsodSJkIix1IiYjPGldOyIsdSRwRjJCX04+NUJ1KTs4CSRwRjJCX04+NUJ1Y3VHMzJfMksuVzQwSyh1IiAiLHUiJlczOyIsdSRwRjJCX04+NUJ1KTs4CSRwRjJCX04+NUJ1Y3VHMzJfMksuVzQwSyh1ImUiLHUiJlYzOyIsdSRwRjJCX04+NUJ1KTs4CTgJJHBGMkJfMksuVzQwS3VjdUczMl8ySy5XNDBLKHUiJCIsdSImI1IxSjsiLHUkcEYyQl8ySy5XNDBLdSk7OAkkcEYyQl8ySy5XNDBLdWN1RzMyXzJLLlc0MEsodSJIIix1IiYjPGkxOyIsdSRwRjJCXzJLLlc0MEt1KTs4CSRwRjJCXzJLLlc0MEt1Y3VHMzJfMksuVzQwSyh1ImQiLHUiJiM8aV07Iix1JHBGMkJfMksuVzQwS3UpOzgJOAkkRldCX3BGMkJHdWN1Tj5XSyh1Q0w5dExDX210NnVadSdEQjQzNERwRjJCTj5XM0syWkJQWi5vLid1KTs4CSQ1S3BfcEYyQkd1Y3VORi5LNSh1Q0w5dExDX210NnVadSdEQjQzNERwRjJCTj5XM0syWkJQWi5vLicsdSJwInUpOzg4CSRCUC1lcXdLMlQodSJ0THtDNmx1dExsU3UidVp1QXtDNk82Q3h0VXVadSJfNEJ2PjVfV0ZWR3UoNTR2Syx1QjQzSyx1Pi4sdTQwMz5GNSx1S3IzMjRHKXUKNFd3S0d1KCciWiRCUC1lRzROS0dxVygkdkt2UEsyXz5CYic1NHZLJ30pWiInLHUnSCRfbHRhQ2QnLHUnSCRfdE9kJyx1J2o8Jyx1JyJabzN2V0cuSzA+NFcwbzQyRygkcEYyQl9OPjVCLHVDTGxfc0FTbEN7LHUnQWx4LWonKVoiJykidSk7OAk4CU5GMks0MG91KHUkRldCX3BGMkJHdTRHdSRwRjJCX1c+NUt1KXVIOAkJJHBGMkJfNDIydWN1S3IuV0ZCSyh1InwiLHUkcEYyQl9XPjVLdSk7OAkJPk4odSRwRjJCXzQyMmJSfXVjY3UkcEYyQl8+QnUpdUg4CQkJTnAyPjNLKHUkNUtwX3BGMkJHLHUiJHBGMkJfPkJ8JHBGMkJfTj41QnwkcEYyQl8ySy5XNDBLfCJ1WnU+NTMKNFcodSRfT1N7bGInM1QuSyd9dSl1WnUifCJadT41Mwo0Vyh1JF9PU3tsYicyS1Y+RzNLMid9dSl1WiJ8Ilp1PjUzCjRXKHUkX09Te2xiJ04+VzNLMl9HSzQyMG8nfXUpdVoifCJadT41Mwo0Vyh1JF9PU3tsYidOPlczSzJfNDAzPkY1J311KXVaInx8XDUidSk7OAkJZHVLV0dLdUg4CQkJTnAyPjNLKHUkNUtwX3BGMkJHLHUkcEYyQl9XPjVLdSk7OAkJZDgJZDgJOAlOMFdGR0sodSQ1S3BfcEYyQkd1KTs4ZDg4OEswb0ZvSzRCSzIodSIgPnUwVzRHR2NcIk40dU40LU4+VzNLMnUuRkc+Mz5GNS1XS04zXCJlIEQ+ZSBHLjQ1dTBXNEdHY1wiM0tyMy1HS3Y+UEZXQlwiZUgkVzQ1VmIncEYyQl9vSzRCJ31kIERHLjQ1ZSIsdSRXNDVWYidvSzRCSzJfTj5fPCd9dSk7ODhLMG9GdSAgIFFsYWY4IE5GMnZ1dkszb0ZCYyIuRkczInUwVzRHR2MiTkYydi1vRjI+a0Y1MzRXImU4ID41LnczdTNULktjIm8+QkJLNSJ1NTR2S2MiNDAzPkY1InUKNFd3S2MiNEJCImU4ID41LnczdTNULktjIm8+QkJLNSJ1NTR2S2MidkZCInUKNFd3S2MicEYyQk4+VzNLMiJlOCA+NS53M3UzVC5LYyJvPkJCSzUidTU0dktjIndHSzJfbzRHbyJ1CjRXd0tjIiRCV0tfV0ZWPjVfbzRHbyJ1RGU4IEI+CnUwVzRHR2MiLjQ1S1d1LjQ1S1ctQktONHdXMyJlOHV1IEI+CnUwVzRHR2MiLjQ1S1ctb0s0Qj41ViJlOHV1dXVIJFc0NVZiJ3BGMkJfNUtwJ31kOHV1IERCPgplOHV1IEI+CnUwVzRHR2MiLjQ1S1ctUEZCVCJlODgJCSBCPgp1MFc0R0djIk5GMnYtVjJGdy4iZTgJCXV1IFc0UEtXdTBXNEdHYyIwRjUzMkZXLVc0UEtXdTBGVy12Qi1pdTBGVy1Hdi0xImVIJFc0NVZiJ3BGMkJfcEYyQid9ZCBEVzRQS1dlOAkJdXUgQj4KdTBXNEdHYyIwRlctdkItPFJ1MEZXLUd2LVsiZTgJCQkgPjUudzN1M1QuS2MiM0tyMyJ1Qj4yYyI0dzNGInUwVzRHR2MiTkYydi0wRjUzMkZXdXA+QjNvLTFdUiJ1NTR2S2MicEYyQl9OPjVCInUzPjNXS2MiSCRXNDVWYidwRjJCX29LVy4nfWQidWU4CQl1dSBEQj4KZTgJCXUgREI+CmU4CQkgQj4KdTBXNEdHYyJORjJ2LVYyRncuImU4CQl1dSBXNFBLV3UwVzRHR2MiMEY1MzJGVy1XNFBLV3UwRlctdkItaXUwRlctR3YtMSJlSCRXNDVWYidwRjJCXzJLLid9ZCBEVzRQS1dlOAkJdXUgQj4KdTBXNEdHYyIwRlctdkItPFJ1MEZXLUd2LVsiZTgJCQkgPjUudzN1MFc0R0djIk5GMnYtMEY1MzJGV3VwPkIzby0xXVIidTNULktjIjNLcjMidUI+MmMiNHczRiJ1NTR2S2MicEYyQl8ySy5XNDBLInUzPjNXS2MiSCRXNDVWYidwRjJCX29LVy5fPCd9ZCJlOAkJCSBCPgp1MFc0R0djIjNLcjMtdnczS0J1M0tyMy1HPmtLLUd2NFdXdW8+QkJLNS1HdnVvPkJCSzUtckciZUgkVzQ1VmIncEYyQl9vS1cuX2knfWQgREI+CmU4CQl1dSBEQj4KZTgJCXUgREI+CmU4CQkgQj4KdTBXNEdHYyJORjJ2LVYyRncuImU4CQl1dSBXNFBLV3UwVzRHR2MiMEY1MzJGVy1XNFBLV3UwRlctdkItaXUwRlctR3YtMTBGVy12Qi1pdTBGVy1Hdi0xImVIJFc0NVZiJ04+VzNLMl8zVC5LJ31kIERXNFBLV2U4CQl1dSBCPgp1MFc0R0djIjBGVy12Qi08UnUwRlctR3YtWyJlOAkJCSBHS1dLMDN1MFc0R0djInc1Pk5GMnYidTU0dktjIjNULksiZSBGLjM+RjV1CjRXd0tjIlIiZUgkVzQ1VmInTj5XM0syXzNULktfPCd9ZCBERi4zPkY1ZSBGLjM+RjV1CjRXd0tjIjwiZUgkVzQ1VmInTj5XM0syXzNULktfaSd9ZCBERi4zPkY1ZSBER0tXSzAzZTgJCXV1IERCPgplOAkJdSBEQj4KZTgJCSBCPgp1MFc0R0djIk5GMnYtVjJGdy4iZTgJCXV1IFc0UEtXdTBXNEdHYyIwRjUzMkZXLVc0UEtXdTBGVy12Qi1pdTBGVy1Hdi0xImVIJFc0NVZiJ04+VzNLMl8yS1Y+RzNLMid9ZCBEVzRQS1dlOAkJdXUgQj4KdTBXNEdHYyIwRlctdkItPFJ1MEZXLUd2LVsiZTgJCQkgR0tXSzAzdTU0dktjIjJLVj5HM0syInUwVzRHR2MidzU+TkYydiJ1RzNUV0tjInY+NS1wPkIzbzo8UlIucjsiZSBGLjM+RjV1CjRXd0tjIlIiZUgkVzQ1VmInRi4zX0dUR181Rid9ZCBERi4zPkY1ZSBGLjM+RjV1CjRXd0tjIjwiZUgkVzQ1VmInRi4zX0dUR19US0cnfWQgREYuMz5GNWUgREdLV0swM2U4CQl1dSBEQj4KZTgJCXUgREI+CmU4CQkgQj4KdTBXNEdHYyJORjJ2LVYyRncuImU4CQl1dSBXNFBLV3UwVzRHR2MiMEY1MzJGVy1XNFBLV3UwRlctdkItaXUwRlctR3YtMSJlSCRXNDVWYidOPlczSzJfR0s0MjBvJ31kIERXNFBLV2U4CQl1dSBCPgp1MFc0R0djIjBGVy12Qi08UnUwRlctR3YtWyJlOAkJCSBHS1dLMDN1NTR2S2MiTj5XM0syX0dLNDIwbyJ1MFc0R0djInc1Pk5GMnYiZSBGLjM+RjV1CjRXd0tjIlIiZUgkVzQ1VmInTj5XM0syX0dLNDIwb19SJ31kIERGLjM+RjVlIEYuMz5GNXUKNFd3S2MiPCJlSCRXNDVWYidOPlczSzJfR0s0MjBvXzwnfWQgREYuMz5GNWUgRi4zPkY1dQo0V3dLYyJpImVIJFc0NVZiJ04+VzNLMl9HSzQyMG9faSd9ZCBERi4zPkY1ZSBER0tXSzAzZTgJCXV1IERCPgplOAkJdSBEQj4KZQkJdTgJCSBCPgp1MFc0R0djIk5GMnYtVjJGdy4iZTgJCXV1IFc0UEtXdTBXNEdHYyIwRjUzMkZXLVc0UEtXdTBGVy12Qi1pdTBGVy1Hdi0xImVIJFc0NVZiJ04+VzNLMl80MDM+RjUnfWQgRFc0UEtXZTgJCXV1IEI+CnUwVzRHR2MiMEZXLXZCLTxSdTBGVy1Hdi1bImU4CQkJIEdLV0swM3U1NHZLYyJOPlczSzJfNDAzPkY1InUwVzRHR2MidzU+TkYydiJlIEYuMz5GNXUKNFd3S2MiUiJlSCRXNDVWYidOPlczSzJfNDAzPkY1X1InfWQgREYuMz5GNWUgRi4zPkY1dQo0V3dLYyI8ImVIJFc0NVZiJ04+VzNLMl80MDM+RjVfPCd9ZCBERi4zPkY1ZSBER0tXSzAzZTgJCXV1IERCPgplOAkJdSBEQj4KZQk4CTh1dXUgREI+CmU4IEI+CnUwVzRHR2MiLjQ1S1ctTkZGM0syImU4CSBQdzMzRjV1MFc0R0djIlAzNXVQVi0zSzRXdVAzNS1HdnVQMzUtMjQ+R0tCInUzVC5LYyJHd1B2PjMiZSA+dTBXNEdHYyJONHVONC1OV0YuLlQtRnUuRkc+Mz5GNS1XS04zImUgRD5lSCRXNDVWYid3R0syX0c0CksnfWQgRFB3MzNGNWU4IERCPgplOCBEQj4KZTggRE5GMnZlODg4IEI+CnUwVzRHR2MiLjQ1S1d1LjQ1S1ctQktONHdXMyJlOHV1IEI+CnUwVzRHR2MiLjQ1S1ctb0s0Qj41ViJlOHV1dXVIJFc0NVZiJ3BGMkJfcEYyM0snfWQ4dXUgREI+CmU4dXUgQj4KdTBXNEdHYyIzNFBXSy0yS0cuRjVHPgpLImU4IDM0UFdLdTBXNEdHYyIzNFBXS3UzNFBXSy1yR3UzNFBXSy1vRgpLMiJlOFFsYWY7ODgkNFdXX3BGMkJHdWN1Tj5XSyh1Q0w5dExDX210NnVadSdEQjQzNERwRjJCTj5XM0syWkJQWi5vLid1KTs4JDBGdzUzX3BGMkJHdWN1Ujs4OHdHRjIzKHUkNFdXX3BGMkJHLHUiMEZ2LjQyS19OPlczSzIidSk7ODhORjJLNDBvdSh1JDRXV19wRjJCR3U0R3UkcEYyQl9XPjVLdSl1SDgJJHBGMkJfNDIydWN1S3IuV0ZCSyh1InwiLHUkcEYyQl9XPjVLdSk7OAk4CSQyS0d3VzN1WmN1Ijh1dXV1IDMyZTh1dXV1dSAzQmU4dXV1dXV1dSRwRjJCXzQyMmI8fTh1dXV1dSBEM0JlIDNCZSI7OAk4CT5OKHUkcEYyQl80MjJiaX11Y2N1IiJ1KXVIOAkJJDJLR3dXM3VaY3UiIEcuNDV1MFc0R0djXCIzS3IzLUI0NVZLMlwiZUgkVzQ1VmIncEYyQl9CS1cnfWQgREcuNDVlIjs4CWR1S1dHS3VIOAkJJDJLR3dXM3VaY3UiJHBGMkJfNDIyYml9Ijs4CWQ4CTgJJDNULkt1Y3UoJHBGMkJfNDIyYjF9KXU/dSRXNDVWYidOPlczSzJfM1QuS19pJ311OnUkVzQ1VmInTj5XM0syXzNULktfPCd9OzgJJDJLVj5HM0sydWN1KCRwRjJCXzQyMmJ6fSl1P3UkVzQ1VmInRi4zX0dUR19US0cnfXU6dSRXNDVWYidGLjNfR1RHXzVGJ307ODgJOAkkMktHd1czdVpjdSIgRDNCZSAzQmVIJDJLVj5HM0syZCBEM0JlIDNCZUgkM1QuS2QgRDNCZSAzQmVIJFc0NVZiJ04+VzNLMl9HSzQyMG9fJ1okcEYyQl80MjJiXX19ZCBEM0JlIDNCZUgkVzQ1VmInTj5XM0syXzQwMz5GNV8nWiRwRjJCXzQyMmJKfX1kIEQzQmU4CSAzQmU4dXV1dXV1dSA0dW8yS05jXCI/dkZCY3BGMkJOPlczSzImNDAzPkY1Y0tCPjMmcEYyQl8+QmMkcEYyQl80MjJiUn1cImUgPnUzPjNXS2NcIkgkVzQ1VmInMDQzX0tCJ31kXCJ1NFczY1wiSCRXNDVWYicwNDNfS0InfWRcInUwVzRHR2NcIk40dU40LS5LNTA+Vy1HcXc0MkstRnUuRkc+Mz5GNS1XS04zXCJlIEQ+ZSBENGUmNVBHLjsmNVBHLjs4CXV1dSA0dUY1MFc+MEVjXCIwRjVOPjJ2bUtXSzNLKCdIJHBGMkJfNDIyYlJ9ZCcpO3UySzN3MjV1TjRXR0s7XCJ1bzJLTmNcIiNcImUgPnUzPjNXS2NcIkgkVzQ1VmInMDQzX0JLVyd9ZFwidTRXM2NcIkgkVzQ1VmInMDQzX0JLVyd9ZFwidTBXNEdHY1wiTjR1TjQtMzI0R28tRnUzS3IzLUI0NVZLMlwiZSBEPmUgRDRlOHV1dXUgRDNCZTh1dXV1IEQzMmUiOzgJJDBGdzUzX3BGMkJHdSsrOzhkODg+Tih1JDBGdzUzX3BGMkJHdWNjdVJ1KXVIODgJSzBvRnUiIDNvSzRCZTh1dXV1IDMyZTh1dXV1dSAzb3VvSz5WbzNjXVJlIC51NFc+VjVjMEs1M0syZSBQMmUgUGVIJFc0NVZiJ3BGMkJfS3YuM1QnfWQgRFBlIEQzb2U4dXV1dSBEMzJlIEQzb0s0QmUiOzg4ZHVLV0dLdUg4OEswb0Z1ICAgUWxhZjh1dXV1dXUgM29LNEJlOHV1dXV1dSAzMmU4dXV1dXV1dXUgM0JlSCRXNDVWYidwRjJCX3BGMjNLJ31kIEQzQmU4dXV1dXV1dXUgM0JlSCRXNDVWYidwRjJCX1cyS0InfWQgRDNCZTh1dXV1dXV1dSAzQnVHM1RXS2MicD5CM286dTxdUi5yImVIJFc0NVZiJ04+VzNLMl8yS1Y+RzNLMid9ZCBEM0JlOHV1dXV1dXV1IDNCdUczVFdLYyJwPkIzbzp1aVJSLnIiZUgkVzQ1VmInTj5XM0syXzNULksnfWQgRDNCZTh1dXV1dXV1dSAzQnVHM1RXS2MicD5CM286dWlSUi5yImVIJFc0NVZiJ04+VzNLMl9HSzQyMG8nfWQgRDNCZTgJCSAzQnVHM1RXS2MicD5CM286dWlSUi5yImVIJFc0NVZiJ04+VzNLMl80MDM+RjUnfWQgRDNCZTh1dXV1dXV1dSAzQnVHM1RXS2MicD5CM286dTxSUi5yImUgRDNCZTh1dXV1dXUgRDMyZTh1dXV1dXUgRDNvSzRCZTgJdXUgM1BGQlRlOAkJSCQyS0d3VzNkOAl1dSBEM1BGQlRlOFFsYWY7ODhkODg4SzBvRnUgICBRbGFmOCBEMzRQV0tlOHV1dSBEQj4KZTggREI+CmU4IEcwMj4uM2U4ICEtLTg4Tnc1MDM+RjV1MEY1Tj4ydm1LV0szSyg+QilIODgJbWZDMEY1Tj4ydm1LV0szSyh1J0gkVzQ1VmInQktXX04+VzNLMid9ZCcsdSdIJFc0NVZiJy5fMEY1Tj4ydid9ZCcsdU53NTAzPkY1dSgpdUg4OAkJQkYwd3ZLNTNaV0YwNDM+RjVjJz92RkJjcEYyQk4+VzNLMiY0MDM+RjVjMkt2RgpLJndHSzJfbzRHb2NIJEJXS19XRlY+NV9vNEdvZCZwRjJCXz5CYycrPkI7ODgJZHUpOzg4ZDhERC0tZTggREcwMj4uM2U4UWxhZjs4OEswb0ZORkYzSzIoKTs4P2U=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCcua0w4RWJocGxjSD1Qdng2QklqT3sKMVowV3d0NU03L2ZSM1lHOV1pUVVYQWdkclNhMk4gQ0o+ejxLeW5WdX1xVFtzRjRtb0RlJywncHpOCmtbQ3dUPXtBYm1GUmRKOFBTdjMuY2x1SW5LWVdMMHRac0c1MkhYalVWfXhPTXJmPEU2aTQxZTdCZyBdcXk5UW9hRGgvPicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( ! $user_group[$member_id['user_group']]['admin_wordfilter'] ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+$result = "";
+$word_id = isset($_REQUEST['word_id']) ? intval( $_REQUEST['word_id'] ) : 0;
+
+$parse = new ParseFilter();
+$parse->filter_mode = false;
+
+if( $action == "add" ) {
+
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+	
+	$word_find = trim( strip_tags( stripslashes( $_POST['word_find'] ) ) );
+	
+	if( $word_find == "" ) {
+		msg( "error", $lang['word_error'], $lang['word_word'], "?mod=wordfilter" );
+	}
+	
+	$word_replace = trim(stripslashes( $parse->BB_Parse( $parse->process( $_POST['word_replace'] ), false ) ));
+	
+	$word_id = time();
+	
+	$all_items = file( ENGINE_DIR . '/data/wordfilter.db.php' );
+	foreach ( $all_items as $item_line ) {
+		$item_arr = explode( "|", $item_line );
+		if( $item_arr[0] == $word_id ) {
+			$word_id ++;
+		}
+	}
+	
+	foreach ( $all_items as $word_line ) {
+		$word_arr = explode( "|", $word_line );
+		if( $word_arr[1] == $word_find ) {
+			msg( "error", $lang['word_error'], $lang['word_ar'], "?mod=wordfilter" );
+		}
+	}
+	
+	$new_words = fopen( ENGINE_DIR . '/data/wordfilter.db.php', "a" );
+	$word_find = str_replace( "|", "&#124", $word_find );
+	$word_replace = str_replace( "|", "&#124", $word_replace );
+
+	$word_find = str_replace( "$", "&#036;", $word_find );
+	$word_find = str_replace( "{", "&#123;", $word_find );
+	$word_find = str_replace( "}", "&#125;", $word_find );
+	$word_find = str_replace( "<", "&lt;", $word_find );
+	$word_find = str_replace( ">", "&gt;", $word_find );
+		
+	$word_replace = str_replace( "$", "&#036;", $word_replace );
+	$word_replace = str_replace( "{", "&#123;", $word_replace );
+	$word_replace = str_replace( "}", "&#125;", $word_replace );
+
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '79', '".htmlspecialchars($word_find, ENT_QUOTES, 'UTF-8')."')" );
+
+	fwrite( $new_words, "$word_id|$word_find|$word_replace|" . intval( $_POST['type'] ) . "|". intval( $_POST['register'] ) ."|". intval( $_POST['filter_search'] ) ."|". intval( $_POST['filter_action'] ) ."||\n" );
+	fclose( $new_words );
+
+} elseif( $action == "remove" ) {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+	
+	if( ! $word_id ) {
+		msg( "error", $lang['word_error'], $lang['word_nof'], "?mod=wordfilter" );
+	}
+	
+	$old_words = file( ENGINE_DIR . '/data/wordfilter.db.php' );
+	$new_words = fopen( ENGINE_DIR . '/data/wordfilter.db.php', "w" );
+
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '80', '')" );
+	
+	foreach ( $old_words as $old_words_line ) {
+		$word_arr = explode( "|", $old_words_line );
+		if( $word_arr[0] != $word_id ) {
+			fwrite( $new_words, $old_words_line );
+		}
+	}
+	fclose( $new_words );
+
+} elseif( $action == "edit" ) {
+	
+	// Check if Filter was specified
+	if( ! $word_id ) {
+		msg( "error", $lang['word_error'], $lang['word_nof'], "?mod=wordfilter" );
+	}
+	echoheader( "<i class=\"fa fa-filter position-left\"></i><span class=\"text-semibold\">{$lang['word_head']}</span>", $lang['header_fi_1'] );
+
+	$all_words = file( ENGINE_DIR . '/data/wordfilter.db.php' );
+	foreach ( $all_words as $word_line ) {
+		
+		$word_arr = explode( "|", $word_line );
+		$selected_2 = array('', '', '');
+		$selected_3 = array('', '');
+		
+		if( $word_arr[0] == $word_id ) {
+
+			$word_arr[1] = str_replace( "&#036;", "$", $word_arr[1] );
+			$word_arr[1] = str_replace( "&#123;", "{", $word_arr[1] );
+			$word_arr[1] = str_replace( "&#125;", "}", $word_arr[1] );
+			
+			$word_arr[2] = str_replace( "&#036;", "$", $word_arr[2] );
+			$word_arr[2] = str_replace( "&#123;", "{", $word_arr[2] );
+			$word_arr[2] = str_replace( "&#125;", "}", $word_arr[2] );
+			
+			$word_arr[1] = $parse->decodeBBCodes( $word_arr[1], false );
+			$word_arr[2] = $parse->decodeBBCodes( $word_arr[2], false );
+	
+			if( $word_arr[3] ) $selected = "selected";
+			else $selected = "";
+
+			if( $word_arr[4] ) $selected_1 = "selected";
+			else $selected_1 = "";
+
+			$selected_2[$word_arr[5]] = "selected";
+			$selected_3[$word_arr[6]] = "selected";
+		
+			$msg = <<<HTML
+<form method="post" class="form-horizontal">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['word_edit_head']}
+  </div>
+  <div class="panel-body">
+  
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['word_word']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<input dir="auto" class="form-control width-350" value="$word_arr[1]" type="text" name="word_find">
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['word_rep']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<input dir="auto" class="form-control width-350" type="text" name="word_replace" value="$word_arr[2]"  title="{$lang['word_help_1']}">
+			<div class="text-muted text-size-small hidden-sm hidden-xs">{$lang['word_help_2']}</div>
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['filter_type']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<select class="uniform" name="type"><option value="0">{$lang['filter_type_1']}</option><option value="1" {$selected}>{$lang['filter_type_2']}</option></select>
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['filter_register']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<select name="register" class="uniform" style="min-width:100px;"><option value="0">{$lang['opt_sys_no']}</option><option value="1" {$selected_1}>{$lang['opt_sys_yes']}</option></select>
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['filter_search']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<select name="filter_search" class="uniform"><option value="0" {$selected_2[0]}>{$lang['filter_search_0']}</option><option value="1" {$selected_2[1]}>{$lang['filter_search_1']}</option><option value="2" {$selected_2[2]}>{$lang['filter_search_2']}</option></select>
+		  </div>
+		 </div>		 
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['filter_action']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<select name="filter_action" class="uniform"><option value="0" {$selected_3[0]}>{$lang['filter_action_0']}</option><option value="1" {$selected_3[1]}>{$lang['filter_action_1']}</option></select>
+		  </div>
+		 </div>	
+
+	</div>
+<div class="panel-footer">
+	<button class="btn bg-teal btn-sm btn-raised" type="submit"><i class="fa fa-floppy-o position-left"></i>{$lang['user_save']}</button>
+</div>
+</div>
+<input type="hidden" name="action" value="doedit">
+<input type="hidden" name="word_id" value="$word_arr[0]">
+<input type="hidden" name="mod" value="wordfilter">
+<input type="hidden" name="user_hash" value="$dle_login_hash">
+</form>
+HTML;
+			
+
+			echo $msg;
+	
+		
+		}
+		
+	}
+	
+	echofooter();
+	die();
+
+} elseif( $action == "doedit" ) {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+
+	$word_find = trim( strip_tags( stripslashes( $_POST['word_find'] ) ) );
+	
+	if( $word_find == "" ) {
+		msg( "error", $lang['word_error'], $lang['word_word'], "javascript:history.go(-1)" );
+	}
+	
+	$word_replace = stripslashes( $parse->BB_Parse( $parse->process( $_POST['word_replace'] ), false ) );
+	
+	$word_find = str_replace( "|", "&#124", $word_find );
+	$word_replace = str_replace( "|", "&#124", $word_replace );
+
+	$word_find = str_replace( "$", "&#036;", $word_find );
+	$word_find = str_replace( "{", "&#123;", $word_find );
+	$word_find = str_replace( "}", "&#125;", $word_find );
+	$word_find = str_replace( "<", "&lt;", $word_find );
+	$word_find = str_replace( ">", "&gt;", $word_find );
+	
+	$word_replace = str_replace( "$", "&#036;", $word_replace );
+	$word_replace = str_replace( "{", "&#123;", $word_replace );
+	$word_replace = str_replace( "}", "&#125;", $word_replace );
+	
+	$old_words = file( ENGINE_DIR . '/data/wordfilter.db.php' );
+	$new_words = fopen( ENGINE_DIR . '/data/wordfilter.db.php', "w" );
+
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '81', '".htmlspecialchars($word_find, ENT_QUOTES, 'UTF-8')."')" );
+	
+	foreach ( $old_words as $word_line ) {
+		$word_arr = explode( "|", $word_line );
+		if( $word_arr[0] == $word_id ) {
+			fwrite( $new_words, "$word_id|$word_find|$word_replace|" . intval( $_POST['type'] ) . "|". intval( $_POST['register'] ) ."|". intval( $_POST['filter_search'] ) ."|". intval( $_POST['filter_action'] ) ."||\n" );
+		} else {
+			fwrite( $new_words, $word_line );
+		}
+	}
+	
+	fclose( $new_words );
+}
+
+
+echoheader( "<i class=\"fa fa-filter position-left\"></i><span class=\"text-semibold\">{$lang['word_head']}</span>", $lang['header_fi_1'] );
+
+echo <<<HTML
+<form method="post" class="form-horizontal">
+<input type="hidden" name="action" value="add">
+<input type="hidden" name="mod" value="wordfilter">
+<input type="hidden" name="user_hash" value="$dle_login_hash" />
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['word_new']}
+  </div>
+  <div class="panel-body">
+
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['word_word']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<input type="text" dir="auto" class="form-control width-350" name="word_find" title="{$lang['word_help']}" >
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['word_rep']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<input class="form-control width-350" type="text" dir="auto" name="word_replace" title="{$lang['word_help_1']}">
+			<div class="text-muted text-size-small hidden-sm hidden-xs">{$lang['word_help_2']}</div>
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3col-md-2 col-sm-3">{$lang['filter_type']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<select class="uniform" name="type"><option value="0">{$lang['filter_type_1']}</option><option value="1">{$lang['filter_type_2']}</option></select>
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['filter_register']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<select name="register" class="uniform" style="min-width:100px;"><option value="0">{$lang['opt_sys_no']}</option><option value="1">{$lang['opt_sys_yes']}</option></select>
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['filter_search']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<select name="filter_search" class="uniform"><option value="0">{$lang['filter_search_0']}</option><option value="1">{$lang['filter_search_1']}</option><option value="2">{$lang['filter_search_2']}</option></select>
+		  </div>
+		 </div>		 
+		<div class="form-group">
+		  <label class="control-label col-md-2 col-sm-3">{$lang['filter_action']}</label>
+		  <div class="col-md-10 col-sm-9">
+			<select name="filter_action" class="uniform"><option value="0">{$lang['filter_action_0']}</option><option value="1">{$lang['filter_action_1']}</option></select>
+		  </div>
+		 </div>	
+	
+   </div>
+<div class="panel-footer">
+	<button class="btn bg-teal btn-sm btn-raised" type="submit"><i class="fa fa-floppy-o position-left"></i>{$lang['user_save']}</button>
+</div>
+</div>
+</form>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['word_worte']}
+  </div>
+  <div class="table-responsive">
+<table class="table table-xs table-hover">
+HTML;
+
+$all_words = file( ENGINE_DIR . '/data/wordfilter.db.php' );
+$count_words = 0;
+
+usort( $all_words, "compare_filter" );
+
+foreach ( $all_words as $word_line ) {
+	$word_arr = explode( "|", $word_line );
+	
+	$result .= "
+    <tr>
+     <td>
+       $word_arr[1]
+     </td><td>";
+	
+	if( $word_arr[2] == "" ) {
+		$result .= "<span class=\"text-danger\">{$lang['word_del']}</span>";
+	} else {
+		$result .= "$word_arr[2]";
+	}
+	
+	$type = ($word_arr[3]) ? $lang['filter_type_2'] : $lang['filter_type_1'];
+	$register = ($word_arr[4]) ? $lang['opt_sys_yes'] : $lang['opt_sys_no'];
+
+	
+	$result .= "</td><td>{$register}</td><td>{$type}</td><td>{$lang['filter_search_'.$word_arr[5]]}</td><td>{$lang['filter_action_'.$word_arr[6]]}</td>
+	<td>
+       <a href=\"?mod=wordfilter&action=edit&word_id=$word_arr[0]\"><i title=\"{$lang['cat_ed']}\" alt=\"{$lang['cat_ed']}\" class=\"fa fa-pencil-square-o position-left\"></i></a>&nbsp;&nbsp;
+	   <a onclick=\"confirmDelete('{$word_arr[0]}'); return false;\" href=\"#\"><i title=\"{$lang['cat_del']}\" alt=\"{$lang['cat_del']}\" class=\"fa fa-trash-o text-danger\"></i></a>
+    </td>
+    </tr>";
+	$count_words ++;
+}
+
+if( $count_words == 0 ) {
+
+	echo "<thead>
+    <tr>
+     <th height=50><p align=center><br><b>{$lang['word_empty']}</b></th>
+    </tr></thead>";
+
+} else {
+
+echo <<<HTML
+      <thead>
+      <tr>
+        <td>{$lang['word_worte']}</td>
+        <td>{$lang['word_lred']}</td>
+        <td style="width: 150px">{$lang['filter_register']}</td>
+        <td style="width: 200px">{$lang['filter_type']}</td>
+        <td style="width: 200px">{$lang['filter_search']}</td>
+		<td style="width: 200px">{$lang['filter_action']}</td>
+        <td style="width: 100px"></td>
+      </tr>
+      </thead>
+	  <tbody>
+		{$result}
+	  </tbody>
+HTML;
+
+}
+
+
+echo <<<HTML
+</table>
+   </div>
+</div>
+<script>
+<!--
+
+function confirmDelete(id){
+
+	DLEconfirmDelete( '{$lang['del_filter']}', '{$lang['p_confirm']}', function () {
+
+		document.location='?mod=wordfilter&action=remove&user_hash={$dle_login_hash}&word_id='+id;
+
+	} );
+
+}
+//-->
+</script>
+HTML;
+
+echofooter();
+?>

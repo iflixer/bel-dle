@@ -5,9 +5,237 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: download.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Files download
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0l1P3BCcEY9KkZkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZEZQblZTVnNVVHlQREw8VUx5UC1QWm1QND5UU1t5TmJQZ3lDVVZQTy4+cnBQRi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tRlBCU1NwYjo9PUN2eS1MeU5iMy5yPUYtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUZQMj5wbS5VPEJTUChjKVBBcXFsLUFxQXpQND5UU1t5TmJQZ3lDVVZQTy4+cnBGZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRGUFFCVWJQYz5DeVBVYlBwLj5TeWNTeUNQWm1QYz5wbS5VPEJTRmRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkRlA3VXZ5OlBDPk5Mdj5WQzNwQnBGLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1GUGtieTpQN1V2eWJQQz5OTHY+VkNGZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRGKj1GRlVUKFAhQ3lUVUx5QyhQJ25dUV1zZTdERFtPZVtEJ1ApUClQS0YJQnlWQ3kuKFAiNlFRCj17M3tQbHF4UDc+LlpVQ0N5TCJQKTtGCUJ5VkN5LlAoUCdzPmNWU1U+TDpQMzM9J1ApO0YJQ1V5KFAiNlZjfVVMPFBWU1N5RXBTISJQKTtGaEZGVVQoUFViYnlTKCRfMURha0Q0UTAnRT5DeScvKVBdW25QJF8xRGFrRDRRMCdFPkN5Jy9QZGRQJ3kuLj4uJylQS0ZGCSR2Vkw8MCdDPk5Mdj5WQ195Li4+LicvUGRQYlMuXy55cHZWY3koJ0tjPnJMU2gnLFAkcmJ5Ll88Lj5ycDAkRXlFWnkuX1VDMCdyYnkuXzwuPnJwJy8vMCdFVjVfQz5OTHY+VkNiJy8sUCR2Vkw8MCdDPk5Mdj5WQ195Li4+LicvUCk7RkYJQEJ5VkN5LigiNlFRCj17M3FQbHF4UDc+LlpVQ0N5TCIpO0YJRWI8Wj41KCR2Vkw8MCdWdnZfeS4uX3snLyxQJHZWTDwwJ0M+Tkx2PlZDX3kuLj4uJy8pO0ZGaFB5dmJ5UEtGRglVVFAoJGM+TFRVPDAnVnZ2Pk5fLnk8VWJTLlZTVT5MJy8pUEtGCQlVTGN2ckN5Xz5MY3kobnNECnZyPFVMYjo6MkJ5Y30oRFtPZVtEX25lMVAzUCc9RT5DcnZ5Yj1iVVN5dj48VUwzcEJwJykpO0YJaEZGCVVUUCghJFViX3Y+PDx5QylQS0YJCSRFeUVaeS5fVUMwJ3JieS5fPC4+cnAnL1BkUHo7RgloRkYJLnk5clUueV8+TGN5KG5zRAp2cjxVTGI6OjJCeWN9KERbT2VbRF9uZTFQM1AnPWN2VmJieWI9Qz5OTHY+VkMzY3ZWYmIzcEJwJykpO0ZGCSRVQ1BkUFViYnlTKCRfMURha0Q0UTAnVUMnLylQP1BQVUxTSlZ2KCRfMURha0Q0UTAnVUMnLylQOlBxO0YJJEpVeU4+THZVTHlQZFBVYmJ5UygkXzFEYWtENFEwJ0pVeU4+THZVTHknLylQP1BTLnJ5UDpQVFZ2Ynk7RkYJJHB5LkVQZFBTLnJ5O0YJJD5MdlVMeUpVeU5feTVTUGRQVi4uVm0oInBDVCIsUCJDPmMiLFAiQz5jNSIsUCJDPmNFIixQIkM+U0UiLFAiQz5TNSIsUCI1dmI1IixQIjV2YloiLFAiNXZiIixQIjV2YkUiLFAicHBTNSIsUCJwcGI1IixQInBwUyIsUCJwcGIiLFAicHBTRSIsUCJwPlNFIixQInBwVkUiLFAicD5TNSIsUCJwcGJFIixQIj5DUyIsUCI+QzUiKTtGCSRUcnZ2X3ZVTH1QZFAkYz5MVFU8MCdCU1NwX0I+RXlfci52Jy87RkYJVVRQKFViYnlTKCRfMURha0Q0UTAnVi55VicvKVBWTENQJF8xRGFrRDRRMCdWLnlWJy9QZGRQImJTVlNVYyIpUEtGRgkJJC4+TlBkUCRDWi1JYnJweS5fOXJ5Lm0oIjREc0QyUVAqUDcxamdQIlAzUAoxRDdlUlAzUCJfYlNWU1VjX1RVdnliUFk2RDFEUFVDUGQnSyRVQ2gnIik7RkYJCSQuPk5fTHlOYlBkUCRDWi1JYnJweS5fOXJ5Lm0oIjREc0QyUVBVQyxQTFZFeVA3MWpnUCJQM1AKMUQ3ZVJQM1AiX2JTVlNVY1BZNkQxRFBVQ1BkJ0skLj5OMCdiU1ZTVWNfVUMnL2gnIik7RkYJCVVUUChVYmJ5UygkLj5OX0x5TmIwJ1VDJy8pUFZMQ1AkLj5OX0x5TmIwJ1VDJy8pUEtGRgkJCVVUUCgkYz5MVFU8MCdWdnY+Tl9WdlNfci52Jy8pUCRUcnZ2X3ZVTH1QZFAkYz5MVFU8MCdCU1NwX0I+RXlfci52Jy9QM1AkLj5OX0x5TmIwJ0xWRXknL1AzUCIzQlNFdiI7RgkJCXl2YnlQJFRydnZfdlVMfVBkUCRjPkxUVTwwJ0JTU3BfQj5FeV9yLnYnL1AzUCJVTEN5NTNwQnA/Qz5kYlNWU1VjJnBWPHlkIlAzUCQuPk5fTHlOYjAnTFZFeScvO0ZGCQloRgkJRgloUHl2YnlQS0ZGCQkkLj5OUGRQJENaLUlicnB5Ll85cnkubSgiNERzRDJRUCpQNzFqZ1AiUDNQCjFEN2VSUDNQIl9UVXZ5YlBZNkQxRFBVQ1BkJ0skVUNoJyIpO0ZGCQlVVFAoVWJieVMoJC4+TjAnTHlOYl9VQycvKVBWTENQJC4+TjAnTHlOYl9VQycvUFZMQ1AhJEpVeU4+THZVTHkpUEtGRgkJCSQuPk5fTHlOYlBkUCRDWi1JYnJweS5fOXJ5Lm0oIjREc0QyUVBVQyxQVnJTPi4sUENWU3ksUGNWU3k8Pi5tLFBWdlNfTFZFeSxQVnBwLj5KeSxQVmNjeWJiUDcxamdQIlAzUAoxRDdlUlAzUCJfcD5iU1BzRDdRUCBqZVtQIlAzUAoxRDdlUlAzUCJfcD5iU195NVMuVmJQaltQKCJQM1AKMUQ3ZVJQM1AiX3A+YlMzVUNkIlAzUAoxRDdlUlAzUCJfcD5iU195NVMuVmIzTHlOYl9VQylQWTZEMURQVUNQZCdLJC4+TjAnTHlOYl9VQycvaCciKTtGRgkJCVVUUCgkLj5OX0x5TmIwJ1VDJy8pUEtGRgkJCQkkLj5OX0x5TmIwJ0NWU3knL1BkUGJTLlM+U1VFeSgkLj5OX0x5TmIwJ0NWU3knLyk7RkYJCQkJVVRQKCRjPkxUVTwwJ1Z2dj5OX1Z2U19yLnYnLylQS0ZGCQkJCQlVVFAoJGM+TFRVPDAnYnk+X1NtcHknL1BkZFB7UD4uUCRjPkxUVTwwJ2J5Pl9TbXB5Jy9QZGRQQSlQS0ZGCQkJCQkJVVRQKCQuPk5fTHlOYjAnY1ZTeTw+Lm0nL1BWTENQJGM+TFRVPDAnYnk+X1NtcHknL1BkZFBBKVBLRkYJCQkJCQkJJFRydnZfdlVMfVBkUCRjPkxUVTwwJ0JTU3BfQj5FeV9yLnYnL1AzUDx5U19yLnYoJC4+Tl9MeU5iMCdjVlN5PD4ubScvKVAzUCI9IlAzUCQuPk5fTHlOYjAnVUMnL1AzUCItIlAzUCQuPk5fTHlOYjAnVnZTX0xWRXknL1AzUCIzQlNFdiI7RgkJCQkJCWhQeXZieVBLRkYJCQkJCQkJJFRydnZfdlVMfVBkUCRjPkxUVTwwJ0JTU3BfQj5FeV9yLnYnL1AzUCQuPk5fTHlOYjAnVUMnL1AzUCItIlAzUCQuPk5fTHlOYjAnVnZTX0xWRXknL1AzUCIzQlNFdiI7RgkJCQkJCWhGCQkJCQloUHl2YnlQS0ZGCQkJCQkJJFRydnZfdlVMfVBkUCRjPkxUVTwwJ0JTU3BfQj5FeV9yLnYnL1AzUENWU3koJ0g9RT1DPScsUCQuPk5fTHlOYjAnQ1ZTeScvKVAzUCQuPk5fTHlOYjAnVnZTX0xWRXknL1AzUCIzQlNFdiI7RgkJCQkJaEYJCQkJaFB5dmJ5UEtGRgkJCQkJJFRydnZfdlVMfVBkUCRjPkxUVTwwJ0JTU3BfQj5FeV9yLnYnL1AzUCJVTEN5NTNwQnA/THlOYlVDZCJQM1AkLj5OX0x5TmIwJ1VDJy87RgkJCQloRkYJCQkJJD5wU1U+TGJQZFBMeU5iX3B5LkVVYmJVPkwoJC4+Tl9MeU5iMCdWY2N5YmInLyk7RgkJCQlVVFAoVWJieVMoJD5wU1U+TGIwJEV5RVp5Ll9VQzAncmJ5Ll88Lj5ycCcvLylQVkxDUCQ+cFNVPkxiMCRFeUVaeS5fVUMwJ3JieS5fPC4+cnAnLy9QVkxDUCQ+cFNVPkxiMCRFeUVaeS5fVUMwJ3JieS5fPC4+cnAnLy9QIWRQeClQJHB5LkVQZFBTLnJ5O0YJCQkJVVRQKFViYnlTKCQ+cFNVPkxiMCRFeUVaeS5fVUMwJ3JieS5fPC4+cnAnLy8pUFZMQ1AkPnBTVT5MYjAkRXlFWnkuX1VDMCdyYnkuXzwuPnJwJy8vUGRkUHgpUCRweS5FUGRQVFZ2Ynk7RkYJCQkJVVRQKCRjPkxUVTwwJ0w+X0NWU3knL1BWTENQISRjPkxUVTwwJ0x5TmJfVHJTci55Jy9QVkxDUCEkcmJ5Ll88Lj5ycDAkRXlFWnkuX1VDMCdyYnkuXzwuPnJwJy8vMCdWdnY+Tl9WdnZfeUNVUycvKVBLRkYJCQkJCVVUUCgkLj5OX0x5TmIwJ0NWU3knL1BJUCRfUWVnRClQS0YJCQkJCQkkcHkuRVBkUFRWdmJ5O0YJCQkJCWhGCQkJCWhGRgkJCQkkY1ZTX3ZVYlNQZFB5NXB2PkN5KCcsJyxQJC4+Tl9MeU5iMCdjVlN5PD4ubScvKTtGRgkJCQlVVFAoYz5yTFMoJGNWU192VWJTKSlQS0ZGCQkJCQkkVnZ2Pk5fdlViU1BkUHk1cHY+Q3koJywnLFAkcmJ5Ll88Lj5ycDAkRXlFWnkuX1VDMCdyYnkuXzwuPnJwJy8vMCdWdnY+Tl9jVlNiJy8pO0YJCQkJCSRMPlNfVnZ2Pk5fY1ZTYlBkUHk1cHY+Q3koJywnLFAkcmJ5Ll88Lj5ycDAkRXlFWnkuX1VDMCdyYnkuXzwuPnJwJy8vMCdMPlNfVnZ2Pk5fY1ZTYicvKTtGRgkJCQkJVD4ueVZjQlAoJGNWU192VWJTUFZiUCR5dnlFeUxTKVBLRkYJCQkJCQlVVFAoJFZ2dj5OX3ZVYlMwcS9QIWRQIlZ2diJQVkxDUCFVTF9WLi5WbSgkeXZ5RXlMUyxQJFZ2dj5OX3ZVYlMpKVAkcHkuRVBkUFRWdmJ5O0ZGCQkJCQkJVVRQKCRMPlNfVnZ2Pk5fY1ZTYjBxL1AhZFAiIlBWTENQVUxfVi4uVm0oJHl2eUV5TFMsUCRMPlNfVnZ2Pk5fY1ZTYikpUCRweS5FUGRQVFZ2Ynk7RgkJCQkJaEYJCQkJaEZGCQkJCVVUUCghJC4+Tl9MeU5iMCdWcHAuPkp5Jy9QVkxDUCRFeUVaeS5fVUMwJ0xWRXknL1AhZFAkLj5OX0x5TmIwJ1ZyUz4uJy9QVkxDUCEkcmJ5Ll88Lj5ycDAkRXlFWnkuX1VDMCdyYnkuXzwuPnJwJy8vMCdWdnY+Tl9WdnZfeUNVUycvKVAkcHkuRVBkUFRWdmJ5O0YJCQloRkYJCWhGCQlGCWhGRglVVFAoISRweS5FKVBLRgkJQnlWQ3kuKCI2UVEKPXsze1BscXhQNz4uWlVDQ3lMIik7RgkJQ1V5KCJIPnJQQz5MJ1NQQlZKeVBWY2N5YmJQUz5QQz5OTHY+VkNQU0JVYlBUVXZ5Iik7RgloRkYJVVRQKCFVYmJ5UygkLj5OMCdMVkV5Jy8pUGoxUCFVYmJ5UygkLj5OMCc+TGJ5Lkp5LicvKVBqMVAhJC4+TjAnTFZFeScvUGoxUCEkLj5OMCc+TGJ5Lkp5LicvKVBLRgkJQnlWQ3kuKCI2UVEKPXsze1BscXhQNz4uWlVDQ3lMIik7RgkJQ1V5KCJdY2N5YmJQQ3lMVXlDIik7RgloRkYJJFRVdnlfTFZFeVBkUHBWU0JVTFQ+KCQuPk4wJz5MYnkuSnkuJy8pO0ZGCVVUUCgkSlV5Tj5MdlVMeVBdW25QVUxfVi4uVm0oJFRVdnlfTFZFeTAneTVTeUxiVT5MJy8sUCQ+THZVTHlKVXlOX3k1UykpUEtGRgkJJGM+TFRVPDAnVFV2eWJfVkxTVXZ5eWNCJy9QZFBUVnZieTtGCQkkcmJ5Ll88Lj5ycDAkRXlFWnkuX1VDMCdyYnkuXzwuPnJwJy8vMCdWdnY+Tl9UVXZ5YicvUGRQUy5yeTtGRgloUHl2YnlQJEpVeU4+THZVTHlQZFBUVnZieTtGRglVVFAoISRyYnkuXzwuPnJwMCRFeUVaeS5fVUMwJ3JieS5fPC4+cnAnLy8wJ1Z2dj5OX1RVdnliJy8pUEtGCQlCeVZDeS4oIjZRUQo9ezN7UGxxeFA3Pi5aVUNDeUwiKTtGCQlDVXkoIl1jY3liYlBDeUxVeUMiKTtGCWhGRglVVFAoJGM+TFRVPDAnVFV2eWJfVkxTVXZ5eWNCJy8pUEtGRgkJVHJMY1NVPkxQLnlieVNfci52KCRyLnYpRgkJS0YJCQkkci52UGRQKGJTLlVMPCkkci52O0ZGCQkJJEpWdnJ5UGRQYlMuXy55cHZWY3koIkJTU3A6PT0iLFAiIixQJHIudik7RgkJCSRKVnZyeVBkUGJTLl8ueXB2VmN5KCJCU1NwYjo9PSIsUCIiLFAkSlZ2cnkpO0YJCQkkSlZ2cnlQZFBiUy5fLnlwdlZjeSgiTk5OMyIsUCIiLFAkSlZ2cnkpO0YJCQkkSlZ2cnlQZFB5NXB2PkN5KCI9IixQJEpWdnJ5KTtGCQkJJEpWdnJ5UGRQLnlieVMoJEpWdnJ5KTtGCQkJLnlTci5MUCRKVnZyeTtGCQloRkYJCSRfNEQxV0QxMCc2UVEKXzFEN0QxRDEnL1BkUC55YnlTX3IudigkXzREMVdEMTAnNlFRCl8xRDdEMUQxJy8pO0YJCSRfNEQxV0QxMCc2UVEKXzZqNFEnL1BkUC55YnlTX3IudigkXzREMVdEMTAnNlFRCl82ajRRJy8pO0ZGCQlVVFAoJF80RDFXRDEwJzZRUQpfNmo0UScvUCFkUCRfNEQxV0QxMCc2UVEKXzFEN0QxRDEnLylQS0YJCQlCeVZDeS4oIjZRUQo9ezN7UGxxeFA3Pi5aVUNDeUwiKTtGCQkJQnlWQ3kuKCJzPmNWU1U+TDpQIlAzUCRUcnZ2X3ZVTH0pO0YJCQlDVXkoIl1jY3liYlBDeUxVeUMhISF1Wi5QPUl1Wi5QPUkKdnlWYnlQSlViVVNQdVZQQi55VGRcIkskYz5MVFU8MCdCU1NwX0I+RXlfci52Jy9oXCJJSyRjPkxUVTwwJ0JTU3BfQj5FeV9yLnYnL2h1PVZJIik7RgkJaEYJaEZGCVVUUCgkLj5OMCdVYl9wclp2VWMnLylQJHJwdj5WQ3lDX3BWU0JQZFAncHJadlVjX1RVdnliPSc7Rgl5dmJ5UCRycHY+VkN5Q19wVlNCUGRQJ1RVdnliPSc7RkYJJFRVdnlQZFBMeU5QQz5OTHY+VkMoJHJwdj5WQ3lDX3BWU0JQM1AkLj5OMCc+TGJ5Lkp5LicvLFAkLj5OMCdMVkV5Jy8sUCQuPk4wJ0MuVUp5LicvKTtGRglVVFAoJHJieS5fPC4+cnAwJEV5RVp5Ll9VQzAncmJ5Ll88Lj5ycCcvLzAnRVY1X0M+Tkx2PlZDYicvUFZMQ1AhJEpVeU4+THZVTHkpUEtGRgkJJFM+Q1ZtX1NVRXlQZFBiUy5TPlNVRXkoJ1M+Q1ZtUEVVQ0xVPEJTJyk7RkYJCVVUKFAkUz5DVm1fU1VFeVApUEtGCQkJJENaLUk5cnkubSgibkRzRFFEUDcxamdQIlAzUGs0RDEKMUQ3ZVJQM1AiX0M+Tkx2PlZDYl92PjxQWTZEMURQQ1ZTeVB1UCdLJFM+Q1ZtX1NVRXloJyIpO0YJCWhGRgkJJF9lClBkUCRDWi1JYlZUeWI5digkX2UKKTtGRgkJVVRQKCRVYl92Pjw8eUNQVkxDUCRFeUVaeS5fVUMwJ3JieS5fVUMnLylQS0YJCQkkTkJ5LnlQZFAicmJ5Ll9VQ1BkJ0skRXlFWnkuX1VDMCdyYnkuX1VDJy9oJyI7RgkJaFB5dmJ5UEtGCQkJJE5CeS55UGRQIlVwUGQnSyRfZQpoJyI7RgkJaEZGCQkkQz5OTF92PjxQZFAkQ1otSWJycHkuXzlyeS5tKCI0RHNEMlFQVUNQNzFqZ1AiUDNQazREMQoxRDdlUlAzUCJfQz5OTHY+VkNiX3Y+PFBZNkQxRFBUVXZ5X1VDUGQnSyRVQ2gnUF1bblBLJE5CeS55aCIpO0ZGCQlVVFAoVWJieVMoJEM+Tkxfdj48MCdVQycvKVBWTENQJEM+Tkxfdj48MCdVQycvKVAkQz5OTHY+VkN5Q1BkUFMucnk7RgkJeXZieVAkQz5OTHY+VkN5Q1BkUFRWdmJ5O0ZGCQlVVFAoISRDPk5Mdj5WQ3lDKVBLRkYJCQkkQz5OTF92PjxQZFAkQ1otSWJycHkuXzlyeS5tKCI0RHNEMlFQYz5yTFMoKilQVmJQYz5yTFNQNzFqZ1AiUDNQazREMQoxRDdlUlAzUCJfQz5OTHY+VkNiX3Y+PFBZNkQxRFBLJE5CeS55aCIpO0ZGCQkJVVRQKCRDPk5MX3Y+PDAnYz5yTFMnL1BJZFAkcmJ5Ll88Lj5ycDAkRXlFWnkuX1VDMCdyYnkuXzwuPnJwJy8vMCdFVjVfQz5OTHY+VkNiJy8pUEtGRgkJCQlCeVZDeS4oIjZRUQo9ezNxUHhxe1BnPkp5Q1AKeS5FVkx5TFN2bSIpO0YJCQkJQnlWQ3kuKCJzPmNWU1U+TDpQP0M+ZEM+Tkx2PlZDJkU+Q3lkeS4uPi4iKTtGCQkJCUNVeSgiMXlDVS55Y1MiKTtGCQkJaEZGCQkJVVRQKCRVYl92Pjw8eUNQVkxDUCRFeUVaeS5fVUMwJ3JieS5fVUMnLylQS0YJCQkJJENaLUk5cnkubSgiZVs0RDFRUGVbUWpQIlAzUGs0RDEKMUQ3ZVJQM1AiX0M+Tkx2PlZDYl92PjxQKHJieS5fVUMsUFRVdnlfVUMsUENWU3kpUFddc2tENCgnSyRFeUVaeS5fVUMwJ3JieS5fVUMnL2gnLFAnSyRVQ2gnLFAnSyRfUWVnRGgnKSIpO0YJCQloUHl2YnlQS0YJCQkJJENaLUk5cnkubSgiZVs0RDFRUGVbUWpQIlAzUGs0RDEKMUQ3ZVJQM1AiX0M+Tkx2PlZDYl92PjxQKFVwLFBUVXZ5X1VDLFBDVlN5KVBXXXNrRDQoJ0skX2UKaCcsUCdLJFVDaCcsUCdLJF9RZWdEaCcpIik7RgkJCWhGRgkJaEYJaEZGCVVUUChVYmJ5UygkXzFEYWtENFEwJ1YueVYnLylQVkxDUCRfMURha0Q0UTAnVi55VicvUGRkUCJiU1ZTVWMiKVBLRkYJCVVUUCgkYz5MVFU8MCdUVXZ5Yl9jPnJMUycvUFZMQ1AhJFRVdnktSS5WTDx5KVBLRgkJCSRDWi1JOXJ5Lm0oImsKbl1RRFAiUDNQCjFEN2VSUDNQIl9iU1ZTVWNfVFV2eWJQNERRUENjPnJMU2RDYz5yTFMre1BZNkQxRFBVQ1BkJyRVQyciKTtGCQloRgloUHl2YnlQS0ZGCQlVVFAoJGM+TFRVPDAnVFV2eWJfYz5yTFMnL1BWTENQISRUVXZ5LUkuVkw8eSlQS0YJCQkkQ1otSTlyeS5tKCJrCm5dUURQIlAzUAoxRDdlUlAzUCJfVFV2eWJQNERRUENjPnJMU2RDYz5yTFMre1BZNkQxRFBVQ1BkJyRVQyciKTtGCQloRgloRkYJJENaLUljdj5ieSgpO0YJYnliYlU+TF9OLlVTeV9jdj5ieSgpO0ZGCSRUVXZ5LUlDPk5Mdj5WQ19UVXZ5KCk7RkYJQ1V5KCk7RkZo';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCc5djZ9VGFBaDVHcHsycmJqWUNrcVg4aU9CPGdzU3lmRkpNTEUvb1E9LnhWUmxVd3REClc0SzM+MUhJbiBQZFo3XVt1bTBjZU56JywncWxIa2ZRMn14S3AxQ3VzT1dkVTBCNzlHaGdNTHRlWgp2am5tXTZUL3IzYVg0aXo4RVBWU3sub1JZPkRKID1iRkFOPHlbY0l3NScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../' );
+	die( "Hacking attempt!" );
+}
+
+if( isset($_REQUEST['mode']) AND $_REQUEST['mode'] == 'error') {
+
+	$lang['download_error'] = str_replace('{count}', $user_group[$member_id['user_group']]['max_downloads'], $lang['download_error'] );
+
+	@header("HTTP/1.0 403 Forbidden");
+	msgbox($lang['all_err_1'], $lang['download_error']);
+
+} else {
+
+	if ($config['allow_registration']) {
+		include_once(DLEPlugins::Check(ENGINE_DIR . '/modules/sitelogin.php'));
+	}
+
+	if (!$is_logged) {
+		$member_id['user_group'] = 5;
+	}
+
+	require_once(DLEPlugins::Check(ENGINE_DIR . '/classes/download.class.php'));
+
+	$id = isset($_REQUEST['id']) ?  intval($_REQUEST['id']) : 0;
+	$viewonline = isset($_REQUEST['viewonline']) ? true : false;
+
+	$perm = true;
+	$onlineview_ext = array("pdf", "doc", "docx", "docm", "dotm", "dotx", "xlsx", "xlsb", "xls", "xlsm", "pptx", "ppsx", "ppt", "pps", "pptm", "potm", "ppam", "potx", "ppsm", "odt", "odx");
+	$full_link = $config['http_home_url'];
+
+	if (isset($_REQUEST['area']) and $_REQUEST['area'] == "static") {
+
+		$row = $db->super_query("SELECT * FROM " . PREFIX . "_static_files WHERE id ='{$id}'");
+
+		$row_news = $db->super_query("SELECT id, name FROM " . PREFIX . "_static WHERE id ='{$row['static_id']}'");
+
+		if (isset($row_news['id']) and $row_news['id']) {
+
+			if ($config['allow_alt_url']) $full_link = $config['http_home_url'] . $row_news['name'] . ".html";
+			else $full_link = $config['http_home_url'] . "index.php?do=static&page=" . $row_news['name'];
+
+		}
+		
+	} else {
+
+		$row = $db->super_query("SELECT * FROM " . PREFIX . "_files WHERE id ='{$id}'");
+
+		if (isset($row['news_id']) and $row['news_id'] and !$viewonline) {
+
+			$row_news = $db->super_query("SELECT id, autor, date, category, alt_name, approve, access FROM " . PREFIX . "_post LEFT JOIN " . PREFIX . "_post_extras ON (" . PREFIX . "_post.id=" . PREFIX . "_post_extras.news_id) WHERE id ='{$row['news_id']}'");
+
+			if ($row_news['id']) {
+
+				$row_news['date'] = strtotime($row_news['date']);
+
+				if ($config['allow_alt_url']) {
+
+					if ($config['seo_type'] == 1 or $config['seo_type'] == 2) {
+
+						if ($row_news['category'] and $config['seo_type'] == 2) {
+
+							$full_link = $config['http_home_url'] . get_url($row_news['category']) . "/" . $row_news['id'] . "-" . $row_news['alt_name'] . ".html";
+						} else {
+
+							$full_link = $config['http_home_url'] . $row_news['id'] . "-" . $row_news['alt_name'] . ".html";
+						}
+					} else {
+
+						$full_link = $config['http_home_url'] . date('Y/m/d/', $row_news['date']) . $row_news['alt_name'] . ".html";
+					}
+				} else {
+
+					$full_link = $config['http_home_url'] . "index.php?newsid=" . $row_news['id'];
+				}
+
+				$options = news_permission($row_news['access']);
+				if (isset($options[$member_id['user_group']]) and $options[$member_id['user_group']] and $options[$member_id['user_group']] != 3) $perm = true;
+				if (isset($options[$member_id['user_group']]) and $options[$member_id['user_group']] == 3) $perm = false;
+
+				if ($config['no_date'] and !$config['news_future'] and !$user_group[$member_id['user_group']]['allow_all_edit']) {
+
+					if ($row_news['date'] > $_TIME) {
+						$perm = false;
+					}
+				}
+
+				$cat_list = explode(',', $row_news['category']);
+
+				if (count($cat_list)) {
+
+					$allow_list = explode(',', $user_group[$member_id['user_group']]['allow_cats']);
+					$not_allow_cats = explode(',', $user_group[$member_id['user_group']]['not_allow_cats']);
+
+					foreach ($cat_list as $element) {
+
+						if ($allow_list[0] != "all" and !in_array($element, $allow_list)) $perm = false;
+
+						if ($not_allow_cats[0] != "" and in_array($element, $not_allow_cats)) $perm = false;
+					}
+				}
+
+				if (!$row_news['approve'] and $member_id['name'] != $row_news['autor'] and !$user_group[$member_id['user_group']]['allow_all_edit']) $perm = false;
+			}
+
+		}
+		
+	}
+
+	if (!$perm) {
+		header("HTTP/1.1 403 Forbidden");
+		die("You don't have access to download this file");
+	}
+
+	if (!isset($row['name']) OR !isset($row['onserver']) OR !$row['name'] OR !$row['onserver']) {
+		header("HTTP/1.1 403 Forbidden");
+		die("Access denied");
+	}
+
+	$file_name = pathinfo($row['onserver']);
+
+	if ($viewonline AND in_array($file_name['extension'], $onlineview_ext)) {
+
+		$config['files_antileech'] = false;
+		$user_group[$member_id['user_group']]['allow_files'] = true;
+
+	} else $viewonline = false;
+
+	if (!$user_group[$member_id['user_group']]['allow_files']) {
+		header("HTTP/1.1 403 Forbidden");
+		die("Access denied");
+	}
+
+	if ($config['files_antileech']) {
+
+		function reset_url($url)
+		{
+			$url = (string)$url;
+
+			$value = str_replace("http://", "", $url);
+			$value = str_replace("https://", "", $value);
+			$value = str_replace("www.", "", $value);
+			$value = explode("/", $value);
+			$value = reset($value);
+			return $value;
+		}
+
+		$_SERVER['HTTP_REFERER'] = reset_url($_SERVER['HTTP_REFERER']);
+		$_SERVER['HTTP_HOST'] = reset_url($_SERVER['HTTP_HOST']);
+
+		if ($_SERVER['HTTP_HOST'] != $_SERVER['HTTP_REFERER']) {
+			header("HTTP/1.1 403 Forbidden");
+			header("Location: " . $full_link);
+			die("Access denied!!!<br /><br />Please visit <a href=\"{$config['http_home_url']}\">{$config['http_home_url']}</a>");
+		}
+	}
+
+	if ($row['is_public']) $uploaded_path = 'public_files/';
+	else $uploaded_path = 'files/';
+
+	$file = new download($uploaded_path . $row['onserver'], $row['name'], $row['driver']);
+
+	if ($user_group[$member_id['user_group']]['max_downloads'] and !$viewonline) {
+
+		$today_time = strtotime('today midnight');
+
+		if( $today_time ) {
+			$db->query("DELETE FROM " . USERPREFIX . "_downloads_log WHERE date < '{$today_time}'");
+		}
+
+		$_IP = $db->safesql($_IP);
+
+		if ($is_logged and $member_id['user_id']) {
+			$where = "user_id ='{$member_id['user_id']}'";
+		} else {
+			$where = "ip ='{$_IP}'";
+		}
+
+		$down_log = $db->super_query("SELECT id FROM " . USERPREFIX . "_downloads_log WHERE file_id ='{$id}' AND {$where}");
+
+		if (isset($down_log['id']) and $down_log['id']) $downloaded = true;
+		else $downloaded = false;
+
+		if (!$downloaded) {
+
+			$down_log = $db->super_query("SELECT count(*) as count FROM " . USERPREFIX . "_downloads_log WHERE {$where}");
+
+			if ($down_log['count'] >= $user_group[$member_id['user_group']]['max_downloads']) {
+
+				header("HTTP/1.0 301 Moved Permanently");
+				header("Location: ?do=download&mode=error");
+				die("Redirect");
+			}
+
+			if ($is_logged and $member_id['user_id']) {
+				$db->query("INSERT INTO " . USERPREFIX . "_downloads_log (user_id, file_id, date) VALUES('{$member_id['user_id']}', '{$id}', '{$_TIME}')");
+			} else {
+				$db->query("INSERT INTO " . USERPREFIX . "_downloads_log (ip, file_id, date) VALUES('{$_IP}', '{$id}', '{$_TIME}')");
+			}
+
+		}
+	}
+
+	if (isset($_REQUEST['area']) and $_REQUEST['area'] == "static") {
+
+		if ($config['files_count'] and !$file->range) {
+			$db->query("UPDATE " . PREFIX . "_static_files SET dcount=dcount+1 WHERE id ='$id'");
+		}
+	} else {
+
+		if ($config['files_count'] and !$file->range) {
+			$db->query("UPDATE " . PREFIX . "_files SET dcount=dcount+1 WHERE id ='$id'");
+		}
+	}
+
+	$db->close();
+	session_write_close();
+
+	$file->download_file();
+
+	die();
+
+}

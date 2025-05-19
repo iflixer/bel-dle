@@ -5,9 +5,44 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: print.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Version for print
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1BlP25Mbnc9KndOTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTnd9YmZTZk8uejl9cEVpLkU5fS19Zz59REt6U1c5RzV9MDlRLmZ9QUlLa259dy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0td31MU1NuNTo9PVFjOS1FOUc1MUlrPXctLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLXd9WEtuPkkuaUxTfShGKX1SPDw2LVI8Um19REt6U1c5RzV9MDlRLmZ9QUlLa253Tk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk53fXlMLjV9RktROX0uNX1uSUtTOUZTOVF9Zz59RktuPkkuaUxTd05OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5Od30KLmM5On1uSS5FUzFuTG53LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS13fVs1OTp9WTlJNS5LRX16S0l9bkkuRVN3Tk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk53Kj13dy56KH0hUTl6LkU5USh9J2JUeVRPLwpwcFdBL1dwJ30pfSl9IHcJTDlmUTlJKH0ib3l5aj1zMXN9NjxIfQpLSWcuUVE5RSJ9KTt3CUw5ZlE5SX0ofSdPS0ZmUy5LRTp9MTE9J30pO3cJUS45KH0ib2ZGZC5FaX1mU1M5XW5TISJ9KTt3dXd3LnooJFFjOV9dS1FrYzl9IU59IjVTZlMuRiJ9VFdifSRRYzlfXUtRa2M5fSFOfSI1TEtHemtjYyJ9KX0gdwlMOWZROUkofSJveXlqPXMxc302PEh9CktJZy5RUTlFIn0pO3cJTDlmUTlJfSh9J09LRmZTLktFOn09J30pO3cJUS45KCJvZkZkLkVpfWZTUzldblMhIik7d3V3d0BMOWZROUkoIlhLRVM5RVMtUz5uOTp9Uzl7Uz1MU11jO31GTGZJNTlTTmtTei1hIik7d3cuen0oJEZLRXouaVYnSTU1Xy5FektJXTlJJ3QpfS5FRmNrUTlfS0VGOX0oYk9wamNraS5FNTo6WEw5RmQocFdBL1dwX2IvOH0xfSc9XUtRa2M5NT1JNTUuRXpLSV0xbkxuJykpO3d3LnooJFFjOV9dS1FrYzl9Tk59IjVTZlMuRiJ9VFdifSRfQXB5ViduZmk5J3R9Tk59IklrYzk1Iil9IHcJJF9BcHlWJ25maTkndH1OfSJRYzktSWtjOTUtbmZpOSI7d3V3dyRGS0V6LmlWJ2ZjY0tHX0ZmRkw5J3R9Tn16ZmM1OTt3JDMuOUdfUzldbmNmUzl9Tn0ibkkuRVMiO3d3STkyay5JOV9LRUY5fShiT3BqY2tpLkU1OjpYTDlGZChwV0EvV3BfYi84fTF9Jz05RWkuRTkxbkxuJykpO3d3JFNuYy1QSTk1a2NTVidGS0VTOUVTJ3R9Tn01U0lfSTluY2ZGOX0ofScgeW9wMHB1Jyx9JEZLRXouaVYnTFNTbl9MS105X2tJYyd0fTF9J1M5XW5jZlM5NT0nfTF9JEZLRXouaVYnNWQuRSd0LH0kU25jLVBJOTVrY1NWJ0ZLRVM5RVMndH0pO3ckU25jLVBJOTVrY1NWJ0ZLRVM5RVMndH1OfTVTSV9JOW5jZkY5fSh9JyBGTGZJNTlTdScsfSdrU3otYScsfSRTbmMtUEk5NWtjU1YnRktFUzlFUyd0fSk7d3c5RkxLfSRTbmMtUEk5NWtjU1YnRktFUzlFUyd0O3d3US45KCk7dw==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCd6NGsydUNCL2hVcEF5UEVkPk9XOTFbe1N0WHhMfQpNLkpic3ZsSEtWUlFuM2NdWmpvWXdpRkRxOGVUTjxyPUlnYTAgN2ZtRzU2JywnZkp1cX1aS0lPWUVHVD5ua3lMTmUuVXh0XUN6aCBGWGlRRDFXNzNvWzJkcHZsbUJQSFYKZ2NTalI8QT0wNi9yYjhNezlhNXdzNCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../' );
+	die( "Hacking attempt!" );
+}
+
+if($dle_module != "static" AND $dle_module != "showfull" ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: /' );
+	die("Hacking attempt!");
+}
+
+@header("Content-type: text/html; charset=utf-8");
+
+if ($config['rss_informer']) include_once (DLEPlugins::Check(ENGINE_DIR . '/modules/rssinform.php'));
+
+if($dle_module == "static" AND $_GET['page'] == "rules") {
+	$_GET['page'] = "dle-rules-page";
+}
+
+$config['allow_cache'] = false;
+$view_template = "print";
+
+require_once (DLEPlugins::Check(ENGINE_DIR . '/engine.php'));
+
+$tpl->result['content'] = str_replace ( '{THEME}', $config['http_home_url'] . 'templates/' . $config['skin'], $tpl->result['content'] );
+$tpl->result['content'] = str_replace ( '{charset}', 'utf-8', $tpl->result['content'] );
+
+echo $tpl->result['content'];
+
+die();

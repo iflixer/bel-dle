@@ -5,9 +5,213 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: newsletter.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: AJAX to send messages
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3ROPy9NL3FdKnFycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnE1by5RLlV5aiA1WnV3eXUgNS01R2w1ejJqUW0gSEU1MSAKeS41eGcyUy81cS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tcTVNUVEvRTpdXQp2IC11IEhFPWdTXXEtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLXE1TDIvbGd5d01RNShmKTU3Q0NELTdDN2U1ejJqUW0gSEU1MSAKeS41eGcyUy9xcnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJxNUpNeUU1ZjIKIDV5RTUvZzJRIGZRIAo1R2w1ZjIvbGd5d01RcXJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycTVreXYgOjV1IEhFdiBRUSBnPS9NL3EtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLXE1WUUgOjVoY2hiNVEyNUUgdQo1VCBFRS53IEVxcnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJxKl1xcXlqKCEKIGp5dSAKKCdvaEpoVTlrWlpteDltWicpKTVkcQlNIC4KIGcoNSI0Sko2XVc9VzVEQ3M1azJnR3kKCiB1IjUpO3EJTSAuCiBnNSg1J1UyZi5ReTJ1OjU9PV09PV0nNSk7cQkKeSAoNSI0LmYweXV3NS5RUSBUL1EhIjUpO3FPcXF5ajUoISR5RV92Mnd3IAo1PHA1ISRTRSBnX3dnMlMvSSRUIFRHIGdfeQpJJ1NFIGdfd2cyUy8nPj5JJy4KVHl1X3UgSEV2IFFRIGcnPik1CnkgNSgiIGdnMmciKTtxcXlqKDUheUVFIFEoJF9wWjhZWnpKSSdTRSBnX00uRU0nPik1PHA1ISRfcFo4WVp6SkknU0UgZ19NLkVNJz41PHA1JF9wWjhZWnpKSSdTRSBnX00uRU0nPjUhcjUkCnYgX3Yyd3l1X00uRU01KTVkcXEJCnkgNSgiIGdnMmciKTtxCXFPcXEkLy5nRSA1cjV1IEg1Ni5nRSBreXZRIGcoKTtxJC8uZ0UgLXQudnYySF9mMgogNXI1ai52RSA7cXEkRVEuZ1FqZzJUNXI1eUVFIFEoJF82PHpKSSdFUS5nUWpnMlQnPik1PzV5dVFuLnYoJF82PHpKSSdFUS5nUWpnMlQnPik1OjVDO3FxeWo1KHlFRSBRKCRfNjx6SkknIFQvai51dyBnJz4pNWhtbzUkXzY8ekpJJyBUL2oudXcgZyc+KTVkcXEJJCBUL2oudXcgZzVyNS5nZy5sKCk7NXFxCSRRIFQvNXI1IEEvdjIKICgiLCIsNSRfNjx6SkknIFQvai51dyBnJz4pOzVxcQlqMmcgLmZNNSg1JFEgVC81LkU1JG4udlMgNSk1ZHEJCSQgVC9qLnV3IGdJPjVyNXl1UW4udigkbi52UyApO3EJT3FxCSQgVC9qLnV3IGc1cjV5VC92MgogKDUiJywnIiw1JCBUL2oudXcgZzUpO3FxCSQgVC9qLnV3IGc1cjUiU0UgZ193ZzJTLzU5bTUoJyI1PTUkIFQvai51dyBnNT01IicpIjtxcU81IHZFIDUkIFQvai51dyBnNXI1ai52RSA7cXEkUWwvIDVyNXlFRSBRKCRfNjx6SkknUWwvICc+KTU/NSRfNjx6SkknUWwvICc+NTo1IiI7cSQuX1QueXY1cjV5RUUgUSgkXzY8ekpJJy5fVC55dic+KTU/NTV5dVFuLnYoJF82PHpKSScuX1QueXYnPik1OjVDO3EkdnlUeVE1cjV5RUUgUSgkXzY8ekpJJ3Z5VHlRJz4pNT81NXl1UW4udigkXzY8ekpJJ3Z5VHlRJz4pNTo1QztxJGpnMlRnIHcKLlEgNXI1eUVFIFEoJF82PHpKSSdqZzJUZyB3Ci5RICc+KTU/NTV5dVFuLnYoJF82PHpKSSdqZzJUZyB3Ci5RICc+KTU6NUM7cSRRMmcgdwouUSA1cjV5RUUgUSgkXzY8ekpJJ1EyZyB3Ci5RICc+KTU/NTV5dVFuLnYoJF82PHpKSSdRMmcgdwouUSAnPik1OjVDO3EkamcyVCB1UQouUSA1cjV5RUUgUSgkXzY8ekpJJ2pnMlQgdVEKLlEgJz4pNT81NXl1UW4udigkXzY8ekpJJ2pnMlQgdVEKLlEgJz4pNTo1QztxJFEyIHVRCi5RIDVyNXlFRSBRKCRfNjx6SkknUTIgdVEKLlEgJz4pNT81NXl1UW4udigkXzY8ekpJJ1EyIHVRCi5RICc+KTU6NUM7cSRFUSAvNXI1QztxcSRReVF2IDVyNXlFRSBRKCRfNjx6SkknUXlRdiAnPik1PzVNUVR2RS8gZnkudmZNLmdFKEVRZ3kvX1Eud0UoNVFneVQoNSRfNjx6SkknUXlRdiAnPjUpNSksNVptSl84WTxKWnosNSdZSmstWCc1KTU6NScnO3EkUXlRdiA1cjVFUWdfZyAvdi5mICg1IiYuVC87LlQvOyIsNSImLlQvOyIsNSRReVF2IDUpO3FxJFQgRUUudyA1cjV5RUUgUSgkXzY8ekpJJ1QgRUUudyAnPik1PzVFUWd5L0V2LkVNIEUoJC8uZ0UgLXQvZzJmIEVFKCRfNjx6SkknVCBFRS53ICc+KSk1OjUnJztxcXlqNSghJFF5UXYgNTxwNSEkVCBFRS53IDU8cDUhJHZ5VHlRKTUKeSA1KCIgZ2cyZyIpO3FxJEhNIGcgNXI1LmdnLmwoKTtxcSRITSBnIEk+NXI1IkcudXUgCjUhcjUnbCBFJyI7cXF5ajUoJCBUL2oudXcgZyk1JEhNIGcgST41cjUkIFQvai51dyBnO3F5ajUoJC5fVC55djVobW81JFFsLyA1cnI1IiBULnl2Iik1JEhNIGcgST41cjUiLnZ2MkhfVC55djVyNSdXJyI7cXF5aig1JGpnMlRnIHcKLlEgNSk1ZHEJJEhNIGcgST41cjUiZyB3XwouUSB0ciciNT01JGpnMlRnIHcKLlEgNT01IiciO3FPcXF5aig1JFEyZyB3Ci5RIDUpNWRxCSRITSBnIEk+NXI1Imcgd18KLlEgTnInIjU9NSRRMmcgdwouUSA1PTUiJyI7cU9xcXlqKDUkamcyVCB1UQouUSA1KTVkcQkkSE0gZyBJPjVyNSJ2LkVRCi5RIHRyJyI1PTUkamcyVCB1UQouUSA1PTUiJyI7cU9xcXlqKDUkUTIgdVEKLlEgNSk1ZHEJJEhNIGcgST41cjUidi5FUQouUSBOciciNT01JFEyIHVRCi5RIDU9NSInIjtxT3FxJEhNIGcgNXI1IjVWNFpwWjUiPXlUL3YyCiA1KCI1aG1vNSIsNSRITSBnICk7cXF5ajUoJFFsLyA1cnI1Ii9UIik1ZHFxCSRReVQgNXI1UXlUICgpO3EJJFF5UXYgNXI1JApHLXRFLmogRTN2KCRReVF2ICk7cXEJJGcgRVN2UTVyNSQKRy10M1MgZ2woInpaVVpMSjVTRSBnX3kKLDV1LlQgLDVqU3Z2dS5UIDVrcDwxNSI1PTVZelpwNnBaazliNT01Il9TRSBnRSI9JEhNIGcgPSI1VTkxOUo1Ij0kRVEuZ1FqZzJUPSIsIj0kdnlUeVEpO3FxcXEJSE15diAoJGcySDVyNSQKRy10dyBRX2cySCgkZyBFU3ZRKSk1ZHEJcQkJeWo1KDUkZzJISSdqU3Z2dS5UICc+NSk1JFQgRUUudyBfRSB1CjVyNUVRZ19nIC92LmYgKCJkJVNFIGclTyIsNSRnMkhJJ2pTdnZ1LlQgJz4sNSRUIEVFLncgKTtxCQkgdkUgNSRUIEVFLncgX0UgdQo1cjVFUWdfZyAvdi5mICgiZCVTRSBnJU8iLDUkZzJISSd1LlQgJz4sNSRUIEVFLncgKTtxCQkJcQkJJFQgRUUudyBfRSB1CjVyNSQKRy10RS5qIEUzdigkVCBFRS53IF9FIHUKKTtxCQlxCQkkCkctdDNTIGdsKCI5bXpacEo1OW1KPDUiNT01WXpacDZwWms5YjU9NSJfZjJ1biBnRS5ReTJ1RTUoRVNHfSBmUSw1ZmcgLlEgCl8uUSw1Uy8KLlEgCl8uUSw1RSB1CiBnX3kKLDVnIGZ5L3kgdVFfeQopNW4udlMgRTUoJ2QkUXlRdiBPJyw1J2QkX0o5MVpPJyw1J2QkX0o5MVpPJyw1J2QkVCBURyBnX3kKSSdTRSBnX3kKJz5PJyw1J2QkZzJISSdTRSBnX3kKJz5PJykiKTtxCQkkZjJ1biBnRS5ReTJ1X3kKNXI1JApHLXR5dUUgZ1FfeQooKTtxCQkkCkctdDNTIGdsKCI5bXpacEo1OW1KPDUiNT01WXpacDZwWms5YjU9NSJfZjJ1biBnRS5ReTJ1X1NFIGdFNShTRSBnX3kKLDVmMnVuIGdFLlF5MnVfeQopNW4udlMgRTUoJ2QkZzJISSdTRSBnX3kKJz5PJyw1J2QkZjJ1biBnRS5ReTJ1X3kKTycpNTxtNW9ZNlU5TGhKWjVLWmk1WTZvaEpaNVNFIGdfeQo1cjVQaFVZWnooU0UgZ195CikiKTtxCQkkCkctdDNTIGdsKCI5bXpacEo1OW1KPDUiNT01WXpacDZwWms5YjU9NSJfZjJ1biBnRS5ReTJ1RV9UIEVFLncgRTUoZjJ1biBnRS5ReTJ1X3kKLDVFIHUKIGdfeQosNWYydVEgdVEsNWZnIC5RIApfLlEpNW4udlMgRTUoJ2QkZjJ1biBnRS5ReTJ1X3kKTycsNSdkJFQgVEcgZ195CkknU0UgZ195Cic+TycsNSdkJFQgRUUudyBfRSB1Ck8nLDUnZCRfSjkxWk8nKSIpO3FxCQkkCkctdDNTIGdsKCJZNm9oSlo1IjU9NVl6WnA2cFprOWI1PTUiX1NFIGdFNUUgUTUvVF8udnZyL1RfLnZ2K1csNS9UX1N1ZyAuCnIvVF9TdWcgLgorVzU1VjRacFo1U0UgZ195CnInZCRnMkhJJ1NFIGdfeQonPk8nIik7cQkJcQkJJEVRIC8rKztxCU9xcQkkCkctdGpnICAoJGcgRVN2USk7cXFPNSB2RSB5ajUoJFFsLyA1cnI1IiBULnl2Iik1ZHFxCSRnMkg1cjUkCkctdEVTLyBnXzNTIGdsKDUielpVWkxKNVEgVC92LlEgNWtwPDE1IjU9NTZwWms5YjU9NSJfIFQueXY1VjRacFo1dS5UIHIndSBIRXYgUVEgZyc1VTkxOUo1QyxXIjUpO3FxCSRnMkhJJ1EgVC92LlEgJz41cjVFUWdfZyAvdi5mICg1ImQlZk0uZ0UgUSVPIiw1J1NRai1YJyw1JGcySEknUSBUL3YuUSAnPjUpO3EJJGcySEknUSBUL3YuUSAnPjVyNUVRZ19nIC92LmYgKDUiZCVReVF2ICVPIiw1JFF5UXYgLDUkZzJISSdRIFQvdi5RICc+NSk7cQkkZzJISSdRIFQvdi5RICc+NXI1RVFnX2cgL3YuZiAoNSJkJWYydVEgdVElTyIsNSRUIEVFLncgLDUkZzJISSdRIFQvdi5RICc+NSk7cQkJCXEJJFF5UXYgNXI1RVFnX2cgL3YuZiAoNS5nZy5sKCcmLlQvOycsNScmM1MyUTsnLDUnJiNDc1s7JyksNS5nZy5sKCcmJyw1JyInLDUiJyIpLDUkUXlRdiA1KTtxCSRUIEVFLncgNXI1RVFneS9Fdi5FTSBFKDUkZzJISSdRIFQvdi5RICc+NSk7cXEJJFQueXY1cjV1IEg1CnYgX1QueXY1KCRmMnVqeXcsNVFnUyApO3EJJFQueXYtdDAgIC8udnluIDVyNVFnUyA7cXEJeWo1KCRmMnVqeXdJJ1QueXZfR2ZmJz4pNWRxCQkkdnlUeVE1cjUkdnlUeVE1KjVhO3EJCSR5NXI1QztxCQkkUTVyNUM7cQkJJE1fVC55djVyNS5nZy5sKCk7cQkJJEdmZjVyNS5nZy5sKCk7cXEJCSQKRy10M1MgZ2woInpaVVpMSjUgVC55djVrcDwxNSI1PTVZelpwNnBaazliNT01Il9TRSBnRSI9JEhNIGcgPSI1PHBvWnA1Qmk1U0UgZ195CjVvWnpMNVU5MTlKNSI9JEVRLmdRamcyVD0iLCI9JHZ5VHlRKTtxcQkJJApHLXRmdjJFICgpO3FxCQlITXl2ICgkZzJINXI1JApHLXR3IFFfZzJIKCkpNWRxCQkJcQkJCXlqNSgkeTVycjVDKTVkNSRNX1QueXZJJFE+NXI1JGcySEknIFQueXYnPjtPcQkJCSB2RSA1ZCRHZmZJJFE+ST41cjUkZzJISScgVC55dic+O09xcQkJCSR5Kys7cXEJCQl5ajUoJHk1cnI1YSk1ZHEJCQkJJHlyQztxCQkJCSRRKys7cQkJCU9xcQkJCSRFUSAvKys7cTU1NTU1NTU1T3FxCQkkCkctdGpnICAoKTtxcQkJajJnIC5mTTUoJE1fVC55djUuRTUkMCBsNXJ0NSQgVC55dik1ZHEJCQkkVC55di10R2ZmNXI1JEdmZkkkMCBsPjtxCQkJJFQgRUUudyBfRSB1CjVyNUVRZ19nIC92LmYgKCJkJVNFIGclTyIsNSR2LnV3SSd1dl95dWoyXzcnPiw1JFQgRUUudyApO3EJCQlxCQkJJFQgRUUudyBfRSB1CjVyNUVRZ19nIC92LmYgKCJkJVN1RVNHRWZneUcgJU8iLDUiLS0iLDUkVCBFRS53IF9FIHUKKTtxcQkJCSRULnl2LXRFIHUKNSgkIFQueXYsNSRReVF2ICw1JFQgRUUudyBfRSB1Cik7cQkJT3FxCU81IHZFIDVkcXEJCSQKRy10M1MgZ2woInpaVVpMSjUgVC55diw1Ly5FRUgyZwosNXUuVCAsNVNFIGdfeQosNWpTdnZ1LlQgNWtwPDE1IjU9NVl6WnA2cFprOWI1PTUiX1NFIGdFIj0kSE0gZyA9IjU8cG9acDVCaTVTRSBnX3kKNW9aekw1VTkxOUo1Ij0kRVEuZ1FqZzJUPSIsIj0kdnlUeVEpO3FxCQkkCkctdGZ2MkUgKCk7cQkJCXEJCUhNeXYgKDUkZzJINXI1JApHLXR3IFFfZzJIKCk1KTVkcXEJCQl5ajUoNSRnMkhJJ2pTdnZ1LlQgJz41KTVkcQkJCQkkVCBFRS53IF9FIHUKNXI1RVFnX2cgL3YuZiAoImQlU0UgZyVPIiw1JGcySEknalN2dnUuVCAnPiw1JFQgRUUudyApO3EJCQlPNSB2RSA1ZHEJCQkJJFQgRUUudyBfRSB1CjVyNUVRZ19nIC92LmYgKCJkJVNFIGclTyIsNSRnMkhJJ3UuVCAnPiw1JFQgRUUudyApO3EJCQlPcXEJCQl5aig1IXlFRSBRKCRmMnVqeXdJJzAgbCc+KTUpNSRmMnVqeXdJJzAgbCc+NXI1Jyc7cQkJCSRNLkVNNXI1VAplKDV6WkxZcFpfaFlKNF9LWmk1PTUkX3pacFBacEknNEpKNl80PHpKJz41PTUkZzJISSdTRSBnX3kKJz41PTVFTS5XKDVFU0dFUWcoJGcySEknLy5FRUgyZwonPiw1Qyw1YSk1KTU9NSRmMnVqeXdJJzAgbCc+NSk7cQkJCXEJCQkkU3VFU0dFZmd5RyBfdnl1MDVyNSRmMnVqeXdJJ01RUS9fTTJUIF9TZ3YnPjU9NSJ5dQogQT0vTS8/CjJydSBIRXYgUVEgZ1N1RVNHRWZneUcgJlNFIGdfeQpyIjU9NSRnMkhJJ1NFIGdfeQonPjU9NSImTS5FTXIiNT01JE0uRU07cQkJCXEJCQl5aig1RVFneS8yRSg1JGcySEknIFQueXYnPiw1IkBULnl2PWdTIjUpNXJycjVqLnZFIDVobW81RVFneS8yRSg1JGcySEknIFQueXYnPiw1IkB5dUcyQT1nUyI1KTVycnI1ai52RSA1aG1vNUVRZ3kvMkUoNSRnMkhJJyBULnl2Jz4sNSJAdnlFUT1nUyI1KTVycnI1ai52RSA1aG1vNUVRZ3kvMkUoNSRnMkhJJyBULnl2Jz4sNSJARzA9Z1MiNSk1cnJyNWoudkUgNSk1ZHEJCQkJJFQueXYtdC4KCkxTRVEyVDQgLgogZygnVXlFUS1ZdUVTR0VmZ3lHICcsNSJOZCRTdUVTR0VmZ3lHIF92eXUwT3QiKTtxCQkJT3EJCQlxCQkJJFQueXYtdC4KCkxTRVEyVDQgLgogZygnNmcgZiAKIHVmICcsNSJHU3YwIik7cQkJCXEJCTU1NTUkVCBFRS53IF9FIHUKNXI1RVFnX2cgL3YuZiAoImQlU3VFU0dFZmd5RyAlTyIsNSRTdUVTR0VmZ3lHIF92eXUwLDUkVCBFRS53IF9FIHUKKTtxCQk1NTU1cQkJNTU1NSRULnl2LXRFIHUKNSgkZzJISScgVC55dic+LDUkUXlRdiAsNSRUIEVFLncgX0UgdQopO3EJcQkJNTU1NSRFUSAvKys7cQkJT3FxCQkkCkctdGpnICAoKTtxCU9xcU81IHZFIDUKeSA1KCIgZ2cyZyIpO3FxJGYyU3VRNXI1JEVRLmdRamcyVDUrNSRFUSAvO3FxeWooJEVRIC81TjUkdnlUeVEpNSRmMlQvdiBRIDVyNVc7NSB2RSA1JGYyVC92IFEgNXI1QztxcSRHU2pqIGc1cjUiZFwiRVEuUVNFXCI6NVwiMjBcIixcImYyU3VRXCI6NWQkZjJTdVFPLFwiZjJUL3YgUSBcIjo1ZCRmMlQvdiBRIE9PIjtxcSBmTTI1JEdTamogZztxP3Q=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdKSDxQan1pdmU1cmhFbVNnNC9MZGxCVgphb3dEUUE4MXNwS3hDTz5uWWNmXVVUNnQuRnpYMHtaa05HWz1iVzl5SU0zIHVxNzJSJywnVHdPVmZqWWw1ID1Bc051ckhwQ3t5QldkNkRnNHR4UU0zUktHMH1ddlVKYy9MbVA+YVpTOGt6RUY8YjkuWDFJaVtocWVuCjJvNycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if (!$is_logged OR !$user_group[$member_id['user_group']]['admin_newsletter']) die ("error");
+
+if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+
+	die ("error");
+	
+}
+
+$parse = new ParseFilter();
+$parse->allow_code = false;
+
+$startfrom = isset($_POST['startfrom']) ? intval($_POST['startfrom']) : 0;
+
+if (isset($_POST['empfanger']) AND $_POST['empfanger']) {
+
+	$empfanger = array(); 
+
+	$temp = explode(",", $_POST['empfanger']); 
+
+	foreach ( $temp as $value ) {
+		$empfanger[] = intval($value);
+	}
+
+	$empfanger = implode( "','", $empfanger );
+
+	$empfanger = "user_group IN ('" . $empfanger . "')";
+
+} else $empfanger = false;
+
+$type = isset($_POST['type']) ? $_POST['type'] : "";
+$a_mail = isset($_POST['a_mail']) ?  intval($_POST['a_mail']) : 0;
+$limit = isset($_POST['limit']) ?  intval($_POST['limit']) : 0;
+$fromregdate = isset($_POST['fromregdate']) ?  intval($_POST['fromregdate']) : 0;
+$toregdate = isset($_POST['toregdate']) ?  intval($_POST['toregdate']) : 0;
+$fromentdate = isset($_POST['fromentdate']) ?  intval($_POST['fromentdate']) : 0;
+$toentdate = isset($_POST['toentdate']) ?  intval($_POST['toentdate']) : 0;
+$step = 0;
+
+$title = isset($_POST['title']) ? htmlspecialchars(strip_tags( trim( $_POST['title'] ) ), ENT_QUOTES, 'UTF-8' ) : '';
+$title = str_replace( "&amp;amp;", "&amp;", $title );
+
+$message = isset($_POST['message']) ? stripslashes($parse->process($_POST['message'])) : '';
+
+if (!$title OR !$message OR !$limit) die ("error");
+
+$where = array();
+
+$where[] = "banned != 'yes'";
+
+if ($empfanger) $where[] = $empfanger;
+if ($a_mail AND $type == "email") $where[] = "allow_mail = '1'";
+
+if( $fromregdate ) {
+	$where[] = "reg_date>='" . $fromregdate . "'";
+}
+
+if( $toregdate ) {
+	$where[] = "reg_date<='" . $toregdate . "'";
+}
+
+if( $fromentdate ) {
+	$where[] = "lastdate>='" . $fromentdate . "'";
+}
+
+if( $toentdate ) {
+	$where[] = "lastdate<='" . $toentdate . "'";
+}
+
+$where = " WHERE ".implode (" AND ", $where);
+
+if ($type == "pm") {
+
+	$time = time();
+	$title = $db->safesql($title);
+
+	$result = $db->query("SELECT user_id, name, fullname FROM " . USERPREFIX . "_users".$where." LIMIT ".$startfrom.",".$limit);
+
+
+
+	while($row = $db->get_row($result)) {
+	
+		if ( $row['fullname'] ) $message_send = str_replace("{%user%}", $row['fullname'], $message);
+		else $message_send = str_replace("{%user%}", $row['name'], $message);
+			
+		$message_send = $db->safesql($message_send);
+		
+		$db->query("INSERT INTO " . USERPREFIX . "_conversations (subject, created_at, updated_at, sender_id, recipient_id) values ('{$title}', '{$_TIME}', '{$_TIME}', '{$member_id['user_id']}', '{$row['user_id']}')");
+		$conversation_id = $db->insert_id();
+		$db->query("INSERT INTO " . USERPREFIX . "_conversation_users (user_id, conversation_id) values ('{$row['user_id']}', '{$conversation_id}') ON DUPLICATE KEY UPDATE user_id = VALUES(user_id)");
+		$db->query("INSERT INTO " . USERPREFIX . "_conversations_messages (conversation_id, sender_id, content, created_at) values ('{$conversation_id}', '{$member_id['user_id']}', '{$message_send}', '{$_TIME}')");
+
+		$db->query("UPDATE " . USERPREFIX . "_users set pm_all=pm_all+1, pm_unread=pm_unread+1  WHERE user_id='{$row['user_id']}'");
+		
+		$step++;
+	}
+
+	$db->free($result);
+
+} elseif ($type == "email") {
+
+	$row = $db->super_query( "SELECT template FROM " . PREFIX . "_email WHERE name='newsletter' LIMIT 0,1" );
+
+	$row['template'] = str_replace( "{%charset%}", 'utf-8', $row['template'] );
+	$row['template'] = str_replace( "{%title%}", $title, $row['template'] );
+	$row['template'] = str_replace( "{%content%}", $message, $row['template'] );
+			
+	$title = str_replace( array('&amp;', '&quot;', '&#039;'), array('&', '"', "'"), $title );
+	$message = stripslashes( $row['template'] );
+
+	$mail = new dle_mail ($config, true);
+	$mail->keepalive = true;
+
+	if ($config['mail_bcc']) {
+		$limit = $limit * 6;
+		$i = 0;
+		$t = 0;
+		$h_mail = array();
+		$bcc = array();
+
+		$db->query("SELECT email FROM " . USERPREFIX . "_users".$where." ORDER BY user_id DESC LIMIT ".$startfrom.",".$limit);
+
+		$db->close();
+
+		while($row = $db->get_row()) {
+			
+			if ($i == 0) { $h_mail[$t] = $row['email'];}
+			else {$bcc[$t][] = $row['email'];}
+
+			$i++;
+
+			if ($i == 6) {
+				$i=0;
+				$t++;
+			}
+
+			$step++;
+        }
+
+		$db->free();
+
+		foreach ($h_mail as $key => $email) {
+			$mail->bcc = $bcc[$key];
+			$message_send = str_replace("{%user%}", $lang['nl_info_2'], $message);
+			
+			$message_send = str_replace("{%unsubscribe%}", "--", $message_send);
+
+			$mail->send ($email, $title, $message_send);
+		}
+
+	} else {
+
+		$db->query("SELECT email, password, name, user_id, fullname FROM " . USERPREFIX . "_users".$where." ORDER BY user_id DESC LIMIT ".$startfrom.",".$limit);
+
+		$db->close();
+			
+		while( $row = $db->get_row() ) {
+
+			if ( $row['fullname'] ) {
+				$message_send = str_replace("{%user%}", $row['fullname'], $message);
+			} else {
+				$message_send = str_replace("{%user%}", $row['name'], $message);
+			}
+
+			if( !isset($config['key']) ) $config['key'] = '';
+			$hash = md5( SECURE_AUTH_KEY . $_SERVER['HTTP_HOST'] . $row['user_id'] . sha1( substr($row['password'], 0, 6) ) . $config['key'] );
+			
+			$unsubscribe_link = $config['http_home_url'] . "index.php?do=newsletterunsubscribe&user_id=" . $row['user_id'] . "&hash=" . $hash;
+			
+			if( stripos( $row['email'], "@mail.ru" ) === false AND stripos( $row['email'], "@inbox.ru" ) === false AND stripos( $row['email'], "@list.ru" ) === false AND stripos( $row['email'], "@bk.ru" ) === false ) {
+				$mail->addCustomHeader('List-Unsubscribe', "<{$unsubscribe_link}>");
+			}
+			
+			$mail->addCustomHeader('Precedence', "bulk");
+			
+		    $message_send = str_replace("{%unsubscribe%}", $unsubscribe_link, $message_send);
+		    
+		    $mail->send ($row['email'], $title, $message_send);
+	
+		    $step++;
+		}
+
+		$db->free();
+	}
+
+} else die ("error");
+
+$count = $startfrom + $step;
+
+if($step < $limit) $complete = 1; else $complete = 0;
+
+$buffer = "{\"status\": \"ok\",\"count\": {$count},\"complete\": {$complete}}";
+
+echo $buffer;
+?>

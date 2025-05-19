@@ -1,13 +1,228 @@
-<?php
+<?PHP
 /*
 =====================================================
  DataLife Engine - by SoftNews Media Group 
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: mass_static_action.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: mass action static pages
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3VPP1E8UUlVKklhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYUllVFM3U3lkNHdlbGI1ZGJ3ZS1lcWNlWz00NzZ3djhlZ3dOZFNlQVg9V0hlSS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tSWVDNzdIODpVVU5rdy1id3Y4UFhXVUktLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUllPj1IY1hkNUM3ZShzKWVpR0c5LWlHaTBlWz00NzZ3djhlZ3dOZFNlQVg9V0hJYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFJZUtDZDhlcz1Od2VkOGVIWD03d3M3d05lcWNlcz1IY1hkNUM3SWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhSWV9ZGt3OmVFUzg4Xzg3Uzdkc19TczdkPWJQSENISS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tSWVdOHc6ZUVTODhlU3M3ZD1iZTg3Uzdkc2VIUzV3OElhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYUkqVUlkNChlIU53NGRid04oZSdUL0sveTJ9bGw2QTI2bCdlKWVmaGUhTnc0ZGJ3TihlJ3lmQUFsVF8yNidlKWUpZW1JCUN3U053WChlIjxLS1FVelB6ZTlHamV9PVhxZE5Od2IiZSk7SQlDd1NOd1hlKGUneT1zUzdkPWI6ZVBQVVBQVSdlKTtJCU5kdyhlIjxTcy5kYjVlUzc3d0VINyEiZSk7SW5JSWQ0KGUhZSRXOHdYXzVYPVdIMyRFd0Vxd1hfZE4zJ1c4d1hfNVg9V0gnWlozJ1NORWRiXzg3UzdkcydaZSllbUkJRTg1KGUid1hYPVgiLGUka1NiNTMnRVM4OF93WFg9WCdaLGUka1NiNTMnRVM4OF9OTndiZHdOJ1osZSRfW2xbWzJmNjMnODdTN2RzX1h3NHdYWHdYJ1plKTtJbklJZDQoZSFlZDg4dzcoJF9bbFtbMmY2Myc4N1M3ZHNfWHc0d1hYd1gnWillKWVtSQlJCSRfW2xbWzJmNjMnODdTN2RzX1h3NHdYWHdYJ1plYWUiP0U9TmE4N1M3ZHMmU0VIO1NzN2Q9YmFrZDg3IjtJSW5JSSQ4d2t3czd3Tl9id3Y4ZWFlZDg4dzcoJF9obExdbFtLMyc4d2t3czd3Tl9id3Y4J1opZT9lJF9obExdbFtLMyc4d2t3czd3Tl9id3Y4J1plOmVTWFhTYygpO0lJZDQoZSFlJDh3a3dzN3dOX2J3djhlKWVtSQlFODUoZSJ3WFg9WCIsZSRrU2I1MydFUzg4X3dYWD1YJ1osZSRrU2I1MydFUzg4X053YmR3TidaLGUkX1tsW1syZjYzJzg3Uzdkc19YdzR3WFh3WCdaZSk7SW5JSWQ0KGUhZDg4dzcoJF9obExdbFtLMydXOHdYX0NTOEMnWillZmhlISRfaGxMXWxbSzMnVzh3WF9DUzhDJ1plZmhlJF9obExdbFtLMydXOHdYX0NTOEMnWmUhYWUkTmt3X2s9NWRiX0NTOENlKWVtSQlJCU5kdyhlIjxTcy5kYjVlUzc3d0VINyFlXTh3WGViPTdlND1XYk4iZSk7SUluSUkkU3M3ZD1iZWFlQzdFazhId3NkU2tzQ1NYOChlODdYZEhfN1M1OChlODdYZEg4a1M4Q3c4KGUkX1FmW0szJ1NzN2Q9YidaZSllKWUpO0lJJC5fRVM4OGVhZTRTazh3O0kkNGR3a05lYWU0U2s4dztJSWQ0KGUkU3M3ZD1iZWFhZSJFUzg4X05TN3ciZSllbUkJJDRkd2tOZWFlIk5TN3ciO0kJJFlTa1d3ZWFlN2RFdygpO0kJJC5fRVM4OGVhZTdYV3c7SQkkN2Q3a3dlYWUka1NiNTMnRVM4OF84N1M3ZHNfd05kN19OUzd3XzdrJ1o7SQkka1NiNTMnRVM4OF9zPWI0ZFhFJ1plYWUka1NiNTMnRVM4OF84N1M3ZHNfd05kN19OUzd3XzRYeidaO0kJJGtTYjUzJ0VTODhfcz1iNGRYRV96J1plYWUka1NiNTMnRVM4OF84N1M3ZHNfcz1iNGRYRV9pJ1o7SW5ld2s4d2Q0KGUkU3M3ZD1iZWFhZSJFUzg4X3Nrd1NYX3M9V2I3ImUpZW1JCSQ0ZHdrTmVhZSJZZHd2OCI7SQkkWVNrV3dlYWVHO0kJJC5fRVM4OGVhZTdYV3c7SQkkN2Q3a3dlYWUka1NiNTMnRVM4OF9za3dTWF9zPVdiN19pJ1o7SQkka1NiNTMnRVM4OF9zPWI0ZFhFJ1plYWUka1NiNTMnRVM4OF9za3dTWF9zPVdiN196J1o7SQkka1NiNTMnRVM4OF9zPWI0ZFhFX3onWmVhZSRrU2I1MydFUzg4Xzg3Uzdkc19zPWI0ZFhFX2knWjtJbklJZDQoZSRfUWZbSzMnTj1TczdkPWInWmVhYWUiRVM4OF9XSE5TN3ciZS82VGUkNGR3a05lKWVtSQk0PVh3U3NDZShlJDh3a3dzN3dOX2J3djhlUzhlJGROZSllbUkJCSRkTmVhZWRiN1lTayhlJGROZSk7SQkJJE5xLXUxV3dYYyhlIl1RVC9LbGUiZVBlUWhsfTJ0ZVBlIl84N1M3ZHNlW2xLZW0kNGR3a05uYSdtJFlTa1d3bidlRjxsaGxlZE5hJ20kZE5uJyJlKTtJCW5JCSROcS11MVd3WGMoZSIyNltsaEtlMjZLZmUiZVBlXVtsaFFobH0ydGVQZSJfU05FZGJfaz01OGUoYlNFdyxlTlM3dyxlZEgsZVNzN2Q9Yixld0o3WFM4KWVZU2tXdzhlKCciUCROcS11OFM0dzgxaygkRXdFcXdYX2ROMydiU0V3J1opUCInLGUnbSRfSzJnbG4nLGUnbSRfMlFuJyxlJ2pSJyxlJycpImUpO0kJRTg1KGUiOFdzc3c4OCIsZSRrU2I1MydOcV89LidaLGUka1NiNTMnTnFfPS5feidaLGUkX1tsW1syZjYzJzg3Uzdkc19YdzR3WFh3WCdaZSk7SW5JSWQ0KGUkLl9FUzg4ZSllbUkJSQl3c0M9Q3dTTndYKGUiT2Rlc2tTODhhXCI0U2U0Uy1zPUVFd2I3LT1lSD04ZDdkPWIta3c0N1widU9VZHVPOEhTYmVza1M4OGFcIjd3SjctOHdFZHE9a05cInVtJGtTYjUzJ0N3U053WF9xPUpfN2Q3a3cnWm5PVThIU2J1IixlJDdkN2t3ZSk7SQlJCXdzQz1lT09PPEtneUlPND1YRWVFdzdDPU5hIkg9ODcidUlPTmRZZXNrUzg4YSJIU2J3a2VIU2J3ay1OdzRTV2s3InVJZWVPTmRZZXNrUzg4YSJIU2J3ay1Dd1NOZGI1InVJZWVlZW0kN2Q3a3duSWVlT1VOZFl1SWVlT05kWWVza1M4OGEiSFNid2stcT1OYyJ1SQkJTzdTcWt3ZXZkTjdDYSJ6R0clInVJCQllZWVlTzdYdUkJCWVlZWVlZWVlTzdOZUN3ZDVDN2EiekdHImVza1M4OGEiN3dKNy1zd2I3d1gidW0ka1NiNTMnRVM4OF9zPWI0ZFhFJ1puSTxLZ3k7SQlJCXdzQz1lImUoT3F1ImVQZXM9V2I3KGUkOHdrd3M3d05fYnd2OGUpZVBlIk9VcXUpZSRrU2I1M0VTODhfcz1iNGRYRV96Wk9xWHVPcVh1SU9kYkhXN2Vza1M4OGFcInE3YmVxNS03d1NrZXE3Yi04RWVxN2ItWFNkOHdOZUg9OGQ3ZD1iLWt3NDdcImU3Y0h3YThXcUVkN2VZU2tXd2FcIm0ka1NiNTMnRVM4OF9jdzgnWm5cImU4N2Nrd2FcIkVkYi12ZE43Qzp6R0dISjtcInVPZGJIVzdlN2NId2FxVzc3PWJlc2tTODhhXCJxN2JlcTUtTlNiNXdYZXE3Yi04RWVxN2ItWFNkOHdOZUg9OGQ3ZD1iLWt3NDdcImVZU2tXd2FcIm0ka1NiNTMnRVM4OF9iPSdablwiZTg3Y2t3YVwiRWRiLXZkTjdDOnpHR0hKO1wiZT1ic2tkcy5hXCJyU1lTOHNYZEg3Ok49c1dFd2I3UGs9c1M3ZD1iYSc/RT1OYTg3UzdkcyZTczdkPWJha2Q4NydcInVJT2RiSFc3ZTdjSHdhQ2ROTndiZWJTRXdhU3M3ZD1iZVlTa1d3YVwibSRTczdkPWJuXCJ1SU9kYkhXN2U3Y0h3YUNkTk53YmViU0V3YVc4d1hfQ1M4Q2VZU2tXd2FcIm0kTmt3X2s9NWRiX0NTOENuXCJ1SU9kYkhXN2U3Y0h3YUNkTk53YmViU0V3YU49U3M3ZD1iZVlTa1d3YVwiRVM4OF9XSE5TN3dcInVJT2RiSFc3ZTdjSHdhQ2ROTndiZWJTRXdhRT1OZVlTa1d3YVwiRVM4OF84N1M3ZHNfU3M3ZD1iOFwidSI7SQk0PVh3U3NDZShlJDh3a3dzN3dOX2J3djhlUzhlJGJ3djhkTmUpZW1JCQkkYnd2OGROZWFlZGI3WVNrKCRid3Y4ZE4pO0kJCXdzQz1lIk9kYkhXN2U3Y0h3YUNkTk53YmViU0V3YTh3a3dzN3dOX2J3djgzWmVZU2tXd2FcIiRid3Y4ZE5cInVcYiI7SQluSQlJCXdzQz1lT09PPEtneUlPVTdOdUkJCWVlZWVPVTdYdUkJCU9VN1Nxa3d1SWVlT1VOZFl1SU9VTmRZdUlPVTQ9WEV1STxLZ3k7SQlJCXdzQz00PT03d1goKTtJCXdKZDcoKTtJSW5JSWQ0KGUkU3M3ZD1iZWFhZSJFUzg4X053a3c3dyJlKWVtSQlJCXdzQz1Dd1NOd1goZSJPZGVza1M4OGFcIjRTZTRTLXM9RUV3YjctPWVIPThkN2Q9Yi1rdzQ3XCJ1T1VkdU84SFNiZXNrUzg4YVwiN3dKNy04d0VkcT1rTlwidW0ka1NiNTMnQ3dTTndYX3E9Sl83ZDdrdydabk9VOEhTYnUiLGUka1NiNTMnRVM4OF84N1M3ZHNfTndrdzd3J1plKTtJCUkJd3NDPWVPT088S2d5SU80PVhFZUV3N0M9TmEiSD04NyJ1SU9OZFllc2tTODhhIkhTYndrZUhTYndrLU53NFNXazcidUllZU9OZFllc2tTODhhIkhTYndrLUN3U05kYjUidUllZWVlbSRrU2I1MydFUzg4Xzg3Uzdkc19Od2t3N3cnWm5JZWVPVU5kWXVJZWVPTmRZZXNrUzg4YSJIU2J3ay1xPU5jInVJCQlPN1Nxa3dldmRON0NhInpHRyUidUkJCWVlZWVPN1h1SQkJZWVlZWVlZWVPN05lQ3dkNUM3YSJ6R0ciZXNrUzg4YSI3d0o3LXN3Yjd3WCJ1SW0ka1NiNTMnRVM4OF9zPWI0ZFhFJ1puSTxLZ3k7SQlJCXdzQz1lIihPcXUiZVBlcz1XYjcoZSQ4d2t3czd3Tl9id3Y4ZSllUGUiT1VxdSllJGtTYjUzRVM4OF84N1M3ZHNfcz1iNGRYRV9qWk9xWHVPcVh1SU9kYkhXN2Vza1M4OGFcInE3YmVxNS03d1NrZXE3Yi04RWVxN2ItWFNkOHdOZUg9OGQ3ZD1iLWt3NDdcImU3Y0h3YThXcUVkN2VZU2tXd2FcIm0ka1NiNTMnRVM4OF9jdzgnWm5cImU4N2Nrd2FcIkVkYi12ZE43Qzp6R0dISjtcInVPZGJIVzdlN2NId2FxVzc3PWJlc2tTODhhXCJxN2JlcTUtTlNiNXdYZXE3Yi04RWVxN2ItWFNkOHdOZUg9OGQ3ZD1iLWt3NDdcImVZU2tXd2FcIm0ka1NiNTMnRVM4OF9iPSdablwiZTg3Y2t3YVwiRWRiLXZkTjdDOnpHR0hKO1wiZT1ic2tkcy5hXCJyU1lTOHNYZEg3Ok49c1dFd2I3UGs9c1M3ZD1iYSc/RT1OYTg3UzdkcyZTczdkPWJha2Q4NydcInVJT2RiSFc3ZTdjSHdhQ2ROTndiZWJTRXdhU3M3ZD1iZVlTa1d3YVwiTj1fRVM4OF9Od2t3N3dcInVJT2RiSFc3ZTdjSHdhQ2ROTndiZWJTRXdhVzh3WF9DUzhDZVlTa1d3YVwibSROa3dfaz01ZGJfQ1M4Q25cInVJT2RiSFc3ZTdjSHdhQ2ROTndiZWJTRXdhRT1OZVlTa1d3YVwiRVM4OF84N1M3ZHNfU3M3ZD1iOFwidSI7SQk0PVh3U3NDZShlJDh3a3dzN3dOX2J3djhlUzhlJGJ3djhkTmUpZW1JCQkkYnd2OGROZWFlZGI3WVNrKCRid3Y4ZE4pO0kJCXdzQz1lIk9kYkhXN2U3Y0h3YUNkTk53YmViU0V3YTh3a3dzN3dOX2J3djgzWmVZU2tXd2FcIiRid3Y4ZE5cInVcYiI7SQluSQlJCXdzQz1lT09PPEtneUlPVTdOdUkJCWVlZWVPVTdYdUkJCU9VN1Nxa3d1SWVlT1VOZFl1SU9VTmRZdUlPVTQ9WEV1STxLZ3k7SQlJCXdzQz00PT03d1goKTtJCXdKZDcoKTtJSW5ld2s4d2Q0KGUkU3M3ZD1iZWFhZSJOPV9FUzg4X053a3c3dyJlKWVtSQlJCSROd2t3N3dOX1NYN2Rza3c4ZWFlRztJCVR5bH1ka3c4OjpkYmQ3KCk7SQlJCTQ9WHdTc0NlKGUkOHdrd3M3d05fYnd2OGVTOGUkZE5lKWVtSQkJSQkJJGROZWFlZGI3WVNrKGUkZE5lKTtJSQkJJE53a3c3d05fU1g3ZHNrdzhlKys7SQkJSQkJJE5xLXUxV3dYYyhlIlRseWxLbGV9aGZnZSJlUGVRaGx9MnRlUGUiXzg3Uzdkc2VGPGxobGVkTmEnJGROJyJlKTtJSQkJJE5xLXUxV3dYYyhlIltseWw+S2UqZX1oZmdlImVQZVFobH0ydGVQZSJfODdTN2RzXzRka3c4ZUY8bGhsZTg3Uzdkc19kTmVhZSckZE4nImUpO0lJCQl2Q2Rrd2UoZSRYPXZlYWUkTnEtdTV3N19YPXYoKWUpZW1JCQkJSQkJCWQ0KGUkWD12Myc9Yjh3WFl3WCdaZSllbUkJCQkJCUkJCQkJZDQoZTdYZEUoJFg9djMnPWI4d1hZd1gnWillYWFlIlBDN1Nzc3c4OCIpZU5kdygiPFNzLmRiNWVTNzd3RUg3ISIpO0kJCQkJSQkJCQlkNChlJFg9djMnZDhfSFdxa2RzJ1plKWUkV0hrPVNOd05fSFM3Q2VhZSdIV3FrZHNfNGRrdzhVJztld2s4d2UkV0hrPVNOd05fSFM3Q2VhZSc0ZGt3OFUnO0kJSQkJCQlUeWx9ZGt3ODo6VHdrdzd3KGUkV0hrPVNOd05fSFM3Q1AkWD12Myc9Yjh3WFl3WCdaLGUkWD12MydOWGRZd1gnWmUpO0lJCQkJbmV3azh3ZW1JCQkJCUkJCQkJJE5TN1NkRVM1d2VhZTV3N19XSGs9U053Tl9kRVM1d19kYjQ9KGUkWD12MydiU0V3J1plKTtJSQkJCQlUeWx9ZGt3ODo6VHdrdzd3KGUiSD04NzhVImVQZSROUzdTZEVTNXctdUhTN0MsZSRYPXYzJ05YZFl3WCdaZSk7SUkJCQkJZDRlKCROUzdTZEVTNXctdUNkTkhkKWVtSQkJCQkJVHlsfWRrdzg6OlR3a3c3dygiSD04NzhVbSROUzdTZEVTNXctdTQ9a053WG5VbSROUzdTZEVTNXctdUNkTkhkbiIsZSRYPXYzJ05YZFl3WCdaKTtJCQkJCW5JSQkJCQlkNChlJE5TN1NkRVM1dy11N0NXRXFlKWVtSQkJCQkJSQkJCQkJVHlsfWRrdzg6OlR3a3c3dyhlIkg9ODc4VW0kTlM3U2RFUzV3LXU0PWtOd1huVTdDV0VxOFVtJE5TN1NkRVM1dy11YlNFd24iLGUkWD12MydOWGRZd1gnWmUpO0lJCQkJCQlkNGUoJE5TN1NkRVM1dy11Q2ROSGQpZW1JCQkJCQkJVHlsfWRrdzg6OlR3a3c3dygiSD04NzhVbSROUzdTZEVTNXctdTQ9a053WG5VN0NXRXE4VW0kTlM3U2RFUzV3LXVDZE5IZG4iLGUkWD12MydOWGRZd1gnWmUpO0kJCQkJCW5JSQkJCQluSQkJCQlJCQkJCWQ0KGUkTlM3U2RFUzV3LXVFd05kV0VlKWVtSQkJCQkJSQkJCQkJVHlsfWRrdzg6OlR3a3c3dyhlIkg9ODc4VW0kTlM3U2RFUzV3LXU0PWtOd1huVUV3TmRXRVVtJE5TN1NkRVM1dy11YlNFd24iLGUkWD12MydOWGRZd1gnWmUpO0kJCQkJCUkJCQkJCWQ0ZSgkTlM3U2RFUzV3LXVDZE5IZCllbUkJCQkJCQlUeWx9ZGt3ODo6VHdrdzd3KCJIPTg3OFVtJE5TN1NkRVM1dy11ND1rTndYblVFd05kV0VVbSROUzdTZEVTNXctdUNkTkhkbiIsZSRYPXYzJ05YZFl3WCdaKTtJCQkJCQluSQkJCQluSQkJCW5JCQluSQlJCQkkTnEtdTFXd1hjKGUiVGx5bEtsZX1oZmdlImVQZVFobH0ydGVQZSJfODdTN2RzXzRka3c4ZUY8bGhsZTg3Uzdkc19kTmVhZSckZE4nImUpO0lJCW5JSQkkTnEtdTFXd1hjKGUiMjZbbGhLZTI2S2ZlImVQZV1bbGhRaGx9MnRlUGUiX1NORWRiX2s9NThlKGJTRXcsZU5TN3csZWRILGVTczdkPWIsZXdKN1hTOCllWVNrV3c4ZSgnIlAkTnEtdThTNHc4MWsoJEV3RXF3WF9kTjMnYlNFdydaKVAiJyxlJ20kX0syZ2xuJyxlJ20kXzJRbicsZSc5RycsZScnKSJlKTtJCUkJZDQoZXM9V2I3KGUkOHdrd3M3d05fYnd2OGUpZWFhZSROd2t3N3dOX1NYN2Rza3c4ZSllbUkJCUU4NShlIjhXc3N3ODgiLGUka1NiNTMnRVM4OF84N1M3ZHNfTndrdzd3J1osZSRrU2I1MydFUzg4X053az0uJ1osZSRfW2xbWzJmNjMnODdTN2RzX1h3NHdYWHdYJ1plKTtJCW5ld2s4d2VtSQkJRTg1KGUid1hYPVgiLGUka1NiNTMnRVM4OF9iPTc9LidaLGUiJE53a3c3d05fU1g3ZHNrdzhlJGtTYjUzRVM4OF9kWmUiZVBlcz1XYjcoZSQ4d2t3czd3Tl9id3Y4ZSllUGUiZSRrU2I1M0VTODhfYj03PS5feloiLGUkX1tsW1syZjYzJzg3Uzdkc19YdzR3WFh3WCdaZSk7SQluSQlJbmV3azh3ZW1JCUkJRTg1KGUiZGI0PSIsZSRrU2I1MydFUzg4X2I9U3M3J1osZSRrU2I1MydFUzg4X2I9U3M3X3onWixlJF9bbFtbMmY2Myc4N1M3ZHNfWHc0d1hYd1gnWmUpO0lJbkk/dQ==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCddRmdFYzVkTD5JNkhrcjBDYi9uUlM9VFBbMXg8IGlRMnAKM1ZzWmZtV2FZbFhPeUd6Qmp1N3tlVX1xSjhoRHRONG92QXdLTTkuJywnVVdNbXlnaVFDCk5wbGo1aG5BfTlhb0QuU3E4SFoyUElZSls3Y11Pe3U9dkVyPEwwMTYzPnRWIC9GYnhzUnpYZGZCd0dlVEs0aycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( ! $user_group[$member_id['user_group']]['admin_static'] ) {
+	msg( "error", $lang['mass_error'], $lang['mass_ddenied'], $_SESSION['static_referrer'] );
+}
+
+if( ! isset($_SESSION['static_referrer']) ) {
+	
+	$_SESSION['static_referrer'] = "?mod=static&amp;action=list";
+
+}
+
+$selected_news = isset($_REQUEST['selected_news']) ? $_REQUEST['selected_news'] : array();
+
+if( ! $selected_news ) {
+	msg( "error", $lang['mass_error'], $lang['mass_denied'], $_SESSION['static_referrer'] );
+}
+
+if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+	
+	die( "Hacking attempt! User not found" );
+
+}
+
+$action = htmlspecialchars( strip_tags( stripslashes( $_POST['action'] ) ) );
+
+$k_mass = false;
+$field = false;
+
+if( $action == "mass_date" ) {
+	$field = "date";
+	$value = time();
+	$k_mass = true;
+	$title = $lang['mass_static_edit_date_tl'];
+	$lang['mass_confirm'] = $lang['mass_static_edit_date_fr1'];
+	$lang['mass_confirm_1'] = $lang['mass_static_confirm_2'];
+} elseif( $action == "mass_clear_count" ) {
+	$field = "views";
+	$value = 0;
+	$k_mass = true;
+	$title = $lang['mass_clear_count_2'];
+	$lang['mass_confirm'] = $lang['mass_clear_count_1'];
+	$lang['mass_confirm_1'] = $lang['mass_static_confirm_2'];
+}
+
+if( $_POST['doaction'] == "mass_update" AND $field ) {
+	foreach ( $selected_news as $id ) {
+		$id = intval( $id );
+		$db->query( "UPDATE " . PREFIX . "_static SET {$field}='{$value}' WHERE id='{$id}'" );
+	}
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '39', '')" );
+	msg( "success", $lang['db_ok'], $lang['db_ok_1'], $_SESSION['static_referrer'] );
+}
+
+if( $k_mass ) {
+	
+	echoheader( "<i class=\"fa fa-comment-o position-left\"></i><span class=\"text-semibold\">{$lang['header_box_title']}</span>", $title );
+	
+	echo <<<HTML
+<form method="post">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$title}
+  </div>
+  <div class="panel-body">
+		<table width="100%">
+		    <tr>
+		        <td height="100" class="text-center">{$lang['mass_confirm']}
+HTML;
+	
+	echo " (<b>" . count( $selected_news ) . "</b>) $lang[mass_confirm_1]<br><br>
+<input class=\"btn bg-teal btn-sm btn-raised position-left\" type=submit value=\"{$lang['mass_yes']}\" style=\"min-width:100px;\"><input type=button class=\"btn bg-danger btn-sm btn-raised position-left\" value=\"{$lang['mass_no']}\" style=\"min-width:100px;\" onclick=\"javascript:document.location='?mod=static&action=list'\">
+<input type=hidden name=action value=\"{$action}\">
+<input type=hidden name=user_hash value=\"{$dle_login_hash}\">
+<input type=hidden name=doaction value=\"mass_update\">
+<input type=hidden name=mod value=\"mass_static_actions\">";
+	foreach ( $selected_news as $newsid ) {
+		$newsid = intval($newsid);
+		echo "<input type=hidden name=selected_news[] value=\"$newsid\">\n";
+	}
+	
+	echo <<<HTML
+</td>
+		    </tr>
+		</table>
+  </div>
+</div>
+</form>
+HTML;
+	
+	echofooter();
+	exit();
+
+}
+
+if( $action == "mass_delete" ) {
+	
+	echoheader( "<i class=\"fa fa-comment-o position-left\"></i><span class=\"text-semibold\">{$lang['header_box_title']}</span>", $lang['mass_static_delete'] );
+	
+	echo <<<HTML
+<form method="post">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['mass_static_delete']}
+  </div>
+  <div class="panel-body">
+		<table width="100%">
+		    <tr>
+		        <td height="100" class="text-center">
+{$lang['mass_confirm']}
+HTML;
+	
+	echo "(<b>" . count( $selected_news ) . "</b>) $lang[mass_static_confirm_3]<br><br>
+<input class=\"btn bg-teal btn-sm btn-raised position-left\" type=submit value=\"{$lang['mass_yes']}\" style=\"min-width:100px;\"><input type=button class=\"btn bg-danger btn-sm btn-raised position-left\" value=\"{$lang['mass_no']}\" style=\"min-width:100px;\" onclick=\"javascript:document.location='?mod=static&action=list'\">
+<input type=hidden name=action value=\"do_mass_delete\">
+<input type=hidden name=user_hash value=\"{$dle_login_hash}\">
+<input type=hidden name=mod value=\"mass_static_actions\">";
+	foreach ( $selected_news as $newsid ) {
+		$newsid = intval($newsid);
+		echo "<input type=hidden name=selected_news[] value=\"$newsid\">\n";
+	}
+	
+	echo <<<HTML
+</td>
+		    </tr>
+		</table>
+  </div>
+</div>
+</form>
+HTML;
+	
+	echofooter();
+	exit();
+
+} elseif( $action == "do_mass_delete" ) {
+	
+	$deleted_articles = 0;
+	DLEFiles::init();
+	
+	foreach ( $selected_news as $id ) {
+		
+		$id = intval( $id );
+
+		$deleted_articles ++;
+		
+		$db->query( "DELETE FROM " . PREFIX . "_static WHERE id='$id'" );
+
+		$db->query( "SELECT * FROM " . PREFIX . "_static_files WHERE static_id = '$id'" );
+
+		while ( $row = $db->get_row() ) {
+			
+			if( $row['onserver'] ) {
+					
+				if( trim($row['onserver']) == ".htaccess") die("Hacking attempt!");
+				
+				if( $row['is_public'] ) $uploaded_path = 'public_files/'; else $uploaded_path = 'files/';
+	
+				DLEFiles::Delete( $uploaded_path.$row['onserver'], $row['driver'] );
+
+			} else {
+				
+				$dataimage = get_uploaded_image_info( $row['name'] );
+
+				DLEFiles::Delete( "posts/" . $dataimage->path, $row['driver'] );
+
+				if ($dataimage->hidpi) {
+					DLEFiles::Delete("posts/{$dataimage->folder}/{$dataimage->hidpi}", $row['driver']);
+				}
+
+				if( $dataimage->thumb ) {
+					
+					DLEFiles::Delete( "posts/{$dataimage->folder}/thumbs/{$dataimage->name}", $row['driver'] );
+
+					if ($dataimage->hidpi) {
+						DLEFiles::Delete("posts/{$dataimage->folder}/thumbs/{$dataimage->hidpi}", $row['driver'] );
+					}
+
+				}
+				
+				if( $dataimage->medium ) {
+					
+					DLEFiles::Delete( "posts/{$dataimage->folder}/medium/{$dataimage->name}", $row['driver'] );
+					
+					if ($dataimage->hidpi) {
+						DLEFiles::Delete("posts/{$dataimage->folder}/medium/{$dataimage->hidpi}", $row['driver']);
+					}
+				}
+			}
+		}
+	
+		$db->query( "DELETE FROM " . PREFIX . "_static_files WHERE static_id = '$id'" );
+
+	}
+
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '40', '')" );
+	
+	if( count( $selected_news ) == $deleted_articles ) {
+		msg( "success", $lang['mass_static_delete'], $lang['mass_delok'], $_SESSION['static_referrer'] );
+	} else {
+		msg( "error", $lang['mass_notok'], "$deleted_articles $lang[mass_i] " . count( $selected_news ) . " $lang[mass_notok_1]", $_SESSION['static_referrer'] );
+	}
+	
+} else {
+	
+	msg( "info", $lang['mass_noact'], $lang['mass_noact_1'], $_SESSION['static_referrer'] );
+
+}
+?>

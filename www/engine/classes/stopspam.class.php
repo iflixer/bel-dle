@@ -1,13 +1,165 @@
 <?php
-/*
-=====================================================
- DataLife Engine - by SoftNews Media Group 
------------------------------------------------------
- https://dle-news.ru/
------------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
------------------------------------------------------
- You use Demo Version of DataLife Engine
-=====================================================
-*/
-?><?php $_F=__FILE__;$_X='P0JyPzVTNWZNKipmbypvQEQuQTVuQWk9d0Q1dXdmbypvZm8qb0hpdTU1OGlvTmx1RUVvW0Fpb0UuQTVbQWk9d0U1dXc0TkF3b2R6ZTRvfUU4RW9iRUFDb21DLjhpQ3VsbHQ0Zm8qZm8qb0B1PS5TQWlvZGl3bUNvVkFFPWZvKm9ATkE1dGltYVMub3Y+ICAsb2Rpd21Db1ZBRT1mbypvQGxtTjhDRThvUy4uNTpNTXl5eTRBNThDRUE9aU44NEFpYU1sbU44Q0U4RU1MRHMtVy0ybHU9RThvTERzb1ctMmx1PUU4b0ptTjhDRThmbypvQGxtQ3hvUy4uNTpNTXl5eTRFLkE1W0FpPXdFNXV3NE5Bd009RXVhOG9kemVvVjhbOGk4Q044Zm8qb0BqOGlFbUFDbz40IGZvKk1mb2ZvTmx1RUVvRC5BNUQ1dXdmb2tmCU0qKmYJKm9JUzhvZHplb3g4dDRmCSpmCSpvQGp1aW9FLmltQ2FmCSpNZm8JNWltanUuOG8kdTVtX3g4dDtmbwk1aW1qdS44byROUzhOeF9sOGo4bDtmbwlmCU0qKmYJKm9JUzhvRnVFOG89aWwsb1tBaW8uU3VvZHplTWYJKmYJKm9AanVpb0UuaW1DYWYJKk1mbwk1aW1qdS44byQ4Q0s1QW1DLm9HbydTLi41Ok1NdTVtNEUuQTVbQWk9d0U1dXc0QWlhTSc7Zm8JZm8JZm8JTSoqZm8JKm8yQUNFLmk9Ti5BaTRmbwkqZm8JKm9ANXVpdXdvRS5pbUNhbyR1NW1feDh0bzxBPWlvZHplb1g4dCxvQTUubUFDdWxvKD1DbDhFRW91S0ttQ2FvLkFvS3UudUZ1RTgpNGZvCSpNZm8JNT1GbG1Ob1s9Q04ubUFDb19fTkFDRS5pPU4uKG8kdTVtX3g4dG9Hb0M9bGwsbyROUzhOeF9sOGo4bG9HbyBvKW9rZm8JCU1Nb0UuQWk4b2p1aW11Rmw4RWZvCQkkLlNtRS1CdTVtX3g4dG9HbyR1NW1feDh0O2ZvCQkkLlNtRS1CTlM4TnhfbDhqOGxvR29tQy5qdWwoJE5TOE54X2w4ajhsKTtmbwloZm8JZm8JTSoqZm8JKm9kS0tvLkFvLlM4b0t1LnVGdUU4Zm8JKmZvCSpvQDV1aXV3b3VpaXV0byR1aWFFb3VFRUFObXUubWo4b3VpaXV0b05BQy51bUNtQ2FvOHd1bWwsb201LG89RThpQ3V3OG91Q0tvQTUubUFDdWxsdCxvOGptSzhDTjhmbwkqbzg0YTRvJHVpYUVvR291aWl1dCgnOHd1bWwnb0dCbyc9RThpQDgvdXc1bDg0TkF3JyxvJ201X3VLS2knb0dCbycwNDA0MDQwJyxvJz1FOGlDdXc4J29HQm8nRDV1d3c4aT8nLG8nOGptSzhDTjgnb0dCbydxdG9bdWpBPWltLjhveThGRW0uOG9TLi41Ok1NeXl5NDgvdXc1bDg0TkF3J28pO2ZvCSpvQGk4Lj1pQ29GQUFsOHVDb0h1RW8uUzhvPTVLdS44b0U9Tk44RVs9bGxvQWlvQ0EuNGZvCSpNZgk1PUZsbU5vWz1DTi5tQUNvdUtLKG8kdWlhRW8pZglrCQkJCWYJCU1Nb0VTQT1sS29OUzhOeG9bbWlFLm9tW29DQS5vdWxpOHVLdG9tQ29LdS51RnVFOGYJCWYJCU1Nb3VLS291NW1veDh0ZgkJJHVpYUVwJ3U1bV94OHQnWm9HbyQuU21FLUJ1NW1feDh0O2YJCWYJCU1Nbz1pbG8uQW81QWxsZgkJJD1pbG9HbydTLi41Ok1NeXl5NEUuQTVbQWk9d0U1dXc0TkF3TXVLSzQ1UzU/JzRTLi41X0Y9bWxLXzY9OGl0KCR1aWFFLG8nJyxvJyYnKTtmCQlmCQlNTW84LzhOPS44ZgkJJGk4RTVBQ0U4b0dvW21sOF9hOC5fTkFDLjhDLkUoJD1pbCk7ZgkJZgkJaTguPWlDbyhbdWxFOG9HR28kaThFNUFDRThvP29bdWxFOG86by5pPTgpO2YJaGZvCWZvCU0qKmZvb29vKm8zOC5vaThOQWlLb1tpQXdvRTV1d3c4aUVvS3UudUZ1RTg0Zm9vb28qZm9vb28qb0A1dWl1d291aWl1dG8kdWlhRW91RUVBTm11Lm1qOG91aWl1dG9OQUMudW1DbUNhbzhtLlM4aW9BQzhvKEFpb3VsbClvQVtvLlM4RTg6bz1FOGlDdXc4b01vOHd1bWxvTW9tNTRmb29vbypvODRhNG8kdWlhRW9Hb3VpaXV0KCc4d3VtbCdvR0JvJz1FOGlAOC91dzVsODROQXcnLG8nbTUnb0dCbycwNDA0MDQwJyxvJz1FOGlDdXc4J29HQm8nRDV1d3c4aT8nbyk7Zm9vb28qb0BpOC49aUNvQUZiOE4ub1Y4RTVBQ0U4NGZvb29vKk1mbwk1PUZsbU5vWz1DTi5tQUNvYTguKG8kdWlhRW8pZm8Ja2ZvCQlNTW9FU0E9bEtvTlM4TnhvW21pRS5vbVtvQ0Eub3VsaTh1S3RvbUNvS3UudUZ1RThmbwkJZm8JCU1Nbz1pbG8uQW81QWxsZm8JCSQ9aWxvR28kLlNtRS1COENLNUFtQy40J3U1bT8nNFMuLjVfRj1tbEtfNj04aXQoJHVpYUUsbycnLG8nJicpNCcmYkVBQyc7Zm8JCWZvCQlNTW9mbwkJaTguPWlDbyQuU21FLUI1QWxsX2JFQUMobyQ9aWxvKTtmbwloZm8JZm8JTSoqZm8JKm8yUzhOeG9tW284bS5TOGlvSzgudW1sRW9OQWlpOEU1QUNLby5Bb3VveENBeUNvRTV1d3c4aTRvMlM4TnhtQ2FvW0Fpbz1FOGlDdXc4b21Fb0ttRU5BPWl1YThLNGZvCSpmbwkqb0A1dWl1d291aWl1dG8kdWlhRW91RUVBTm11Lm1qOG91aWl1dG9OQUMudW1DbUNhbzhtLlM4aW9BQzhvKEFpb3VsbClvQVtvLlM4RTg6bz1FOGlDdXc4b01vOHd1bWxvTW9tNWZvCSpvODRhNG8kdWlhRW9Hb3VpaXV0KCc4d3VtbCdvR0JvJz1FOGlAOC91dzVsODROQXcnLG8nbTUnb0dCbycwNDA0MDQwJyxvJz1FOGlDdXc4J29HQm8nRDV1d3c4aT8nbyk7Zm8JKm9AaTguPWlDb0ZBQWw4dUNmbwkqTWYJNT1GbG1Ob1s9Q04ubUFDb21FX0U1dXd3OGkobyR1aWFFbylmCWtmCQlNTW81QWxsb0t1LnVGdUU4ZgkJJGk4TkFpS29HbyQuU21FLUJhOC4obyR1aWFFbyk7ZmYJCW1bKG8kaThOQWlLb0dHR29bdWxFOG8pb2k4Lj1pQ29bdWxFODtmZgkJTU1vYW1qOG8uUzhvRjhDOFttLm9BW28uUzhvS0E9Ri5mCQkkRTV1d3c4aW9Hb1t1bEU4O2ZmCQlNTW81dWlFOG9LdS51RnVFOG9pOE5BaUtmCQlbQWk4dU5TKG8kaThOQWlLb3VFbyRLdS51NUFtQy5vKWYJCWtmZgkJCU1Nb0NBLm8nRT1OTjhFRSdvS3UudTVBbUMub2Q3c29FNXV3dzhpZgkJCW1bbyhvbUVFOC4oJEt1LnU1QW1DLi1CdTU1OHVpRSlvJiZvJEt1LnU1QW1DLi1CdTU1OHVpRW8pZgkJCWtmCQkJCW1bKG9tRUU4LigkS3UudTVBbUMuLUJOQUNbbUs4Q044KW8mJm8kLlNtRS1CTlM4TnhfbDhqOGxvQm8gbylva2YJCQkJCSRLdS51NUFtQy4tQk5BQ1ttSzhDTjhvR29tQy5qdWwoJEt1LnU1QW1DLi1CTkFDW21LOENOOCk7ZmYJCQkJCW1bbyhvJC5TbUUtQk5TOE54X2w4ajhsb0dHb3ZvZDdzbyRLdS51NUFtQy4tQk5BQ1ttSzhDTjhvQm9SPm8pb2tvJEU1dXd3OGlvR28uaT04O29oZmYJCQkJCW1bbyhvJC5TbUUtQk5TOE54X2w4ajhsb0dHb1dvZDdzbyRLdS51NUFtQy4tQk5BQ1ttSzhDTjhvQm8wPm8pb2tvJEU1dXd3OGlvR28uaT04O29oZmYJCQkJaG84bEU4b2tmZgkJCQkJJEU1dXd3OGlvR28uaT04O2ZmCQkJCWhmCQkJaGYJCWhmZgkJaTguPWlDbyRFNXV3dzhpO2YJaGZvCWZvCU0qKmZvCSpvMzgub2JFQUNvdUNLb0s4TkFLODRvMj1paThDLmx0bz1FOEtvW0FpbzVBbGxtQ2FvLlM4b0t1LnVGdUU4LG9GPS5vU0E1bUNhb1tBaW9bPS49aThvZm8JKm9iRUFDb2k4RTVBQ0U4b0U9NTVBaS4sb3lTOENvdUtLbUNhNGZvCSpmbwkqb0A1dWl1d29FLmltQ2FvJD1pbG9JUzhvPWlsby5Bb2E4LmZvCSpvQGk4Lj1pQ29BRmI4Ti5vVjhFNUFDRTg0Zm8JKk1mbwk1aUEuOE4uOEtvRS51Lm1Ob1s9Q04ubUFDbzVBbGxfYkVBQyhvJD1pbG8pZm8Ja2YJCSRLdS51b0dvW3VsRTg7ZgkJCWYJCW1bKG9bPUNOLm1BQ184L21FLkUobydOPWlsX21DbS4nbylvKW9rZgkJCQlmCQkJJE5Tb0dvTj1pbF9tQ20uKCk7ZgkJCU49aWxfRTguQTUuKG8kTlMsbzJ9VkpdeklffVZKLG8kPWlsbyk7ZgkJCU49aWxfRTguQTUuKG8kTlMsbzJ9VkpdeklffURjVmQzYzdJLG8kX0RjVjFjVnAnWUlJel99RGNWX2QzYzdJJ1pvKTtmCQkJQE49aWxfRTguQTUuKG8kTlMsbzJ9Vkpdeklfbl1KSl1ISl0yZEllXTcsbyBvKTtmCQkJTj1pbF9FOC5BNS4obyROUyxvMn1WSl16SV9WY0l9VjdJVmQ3RG5jVixvIG8pO2YJCQlOPWlsX0U4LkE1LigkTlMsbzJ9VkpdeklfSWVxY119SSxvCik7ZgkJCU49aWxfRTguQTUuKG8kTlMsbzJ9VkpdeklfWWNkc2NWLG8+KTtmCQkJCWYJCQkkS3UudW9Hb049aWxfOC84TihvJE5Tbyk7ZgkJCU49aWxfTmxBRTgobyROU28pO2YJZgkJCW1bKG8kS3UudW8hR0dvW3VsRThvKW9pOC49aUNvYkVBQ19LOE5BSzgoJEt1LnUpO2YJCQlmCQlob2ZmCQltWyhvNWk4YV93dS5OUygnTSB8dDhFfEFDfC5pPThNbScsb21DbV9hOC4oJ3VsbEF5Xz1pbF9bQTU4QycpKW8pb2tmCWYJCQkkS3UudW9Hb0BbbWw4X2E4Ll9OQUMuOEMuRShvJD1pbG8pO2YJCQkJZgkJCW1bKG8kS3UudW8hR0dvW3VsRThvKW9pOC49aUNvYkVBQ19LOE5BSzgoJEt1LnUpO2YJZgkJaGZvCQlmbwkJaTguPWlDb1t1bEU4O2ZvCWhmb2hmbw==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCcwOHRZaDJjbUFLWz5Oa3ZkbHlqc1A8LmJnQl00T1RYdUQxVnd9elV4ZVM5aXtKM1JucTdvRXA9RzZaTSA1UUMvSGFXZgpGTHJJJywnOGV5SH1DRWlvZGYwY3syQWx3dkRRWXRqSj5PLlg5S2FTVlJtVVA3a0loenI2TEc0Rk1OIHNbdT1xXS8xcFpueFdnMwo1YkI8VCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+/**
+ * @StopForumSpam
+ * 
+ * Wrapper class for stopforumspam.com API. Uses json internally.
+ *
+ * @author Armin Rosu
+ * @copyright 2011, Armin Rosu
+ * @license http://www.opensource.org/licenses/BSD-3-Clause BSD 3-Clause License
+ * @link http://www.stopforumspam.com/usage API Reference
+ * @version 0.1
+ */
+ 
+ class StopSpam
+ {
+	/**
+	* The API key.
+	*
+	* @var string
+	*/
+ 	private $api_key;
+ 	private $check_level;
+ 	
+	/**
+	* The base url, for tha API/
+	*
+	* @var string
+	*/
+ 	private $endpoint = 'http://api.stopforumspam.org/';
+ 	
+ 	
+ 	/**
+ 	* Constructor.
+ 	*
+ 	* @param string $api_key Your API Key, optional (unless adding to database).
+ 	*/
+ 	public function __construct( $api_key = null, $check_level = 1 ) {
+ 		// store variables
+ 		$this->api_key = $api_key;
+ 		$this->check_level = intval($check_level);
+ 	}
+ 	
+ 	/**
+ 	* Add to the database
+ 	*
+ 	* @param array $args associative array containing email, ip, username and optionally, evidence
+ 	* e.g. $args = array('email' => 'user@example.com', 'ip_addr' => '8.8.8.8', 'username' => 'Spammer?', 'evidence' => 'My favourite website http://www.example.com' );
+ 	* @return boolean Was the update succesfull or not.
+ 	*/
+	public function add( $args )
+	{				
+		// should check first if not already in database
+		
+		// add api key
+		$args['api_key'] = $this->api_key;
+		
+		// url to poll
+		$url = 'http://www.stopforumspam.com/add.php?'.http_build_query($args, '', '&');
+		
+		// execute
+		$response = file_get_contents($url);
+		
+		return (false == $response ? false : true);
+	}
+ 	
+ 	/**
+    * Get record from spammers database.
+    *
+    * @param array $args associative array containing either one (or all) of these: username / email / ip.
+    * e.g. $args = array('email' => 'user@example.com', 'ip' => '8.8.8.8', 'username' => 'Spammer?' );
+    * @return object Response.
+    */
+ 	public function get( $args )
+ 	{
+ 		// should check first if not already in database
+ 		
+ 		// url to poll
+ 		$url = $this->endpoint.'api?'.http_build_query($args, '', '&').'&json';
+ 		
+ 		// 
+ 		return $this->poll_json( $url );
+ 	}
+ 	
+ 	/**
+ 	* Check if either details correspond to a known spammer. Checking for username is discouraged.
+ 	*
+ 	* @param array $args associative array containing either one (or all) of these: username / email / ip
+ 	* e.g. $args = array('email' => 'user@example.com', 'ip' => '8.8.8.8', 'username' => 'Spammer?' );
+ 	* @return boolean
+ 	*/
+	public function is_spammer( $args )
+	{
+		// poll database
+		$record = $this->get( $args );
+
+		if( $record === false ) return false;
+
+		// give the benefit of the doubt
+		$spammer = false;
+
+		// parse database record
+		foreach( $record as $datapoint )
+		{
+
+			// not 'success' datapoint AND spammer
+			if ( isset($datapoint->appears) && $datapoint->appears )
+			{
+				if( isset($datapoint->confidence) && $this->check_level > 1 ) {
+					$datapoint->confidence = intval($datapoint->confidence);
+
+					if ( $this->check_level == 2 AND $datapoint->confidence > 40 ) { $spammer = true; }
+
+					if ( $this->check_level == 3 AND $datapoint->confidence > 80 ) { $spammer = true; }
+
+				} else {
+
+					$spammer = true;
+
+				}
+			}
+		}
+
+		return $spammer;
+	}
+ 	
+ 	/**
+ 	* Get json and decode. Currently used for polling the database, but hoping for future 
+ 	* json response support, when adding.
+ 	*
+ 	* @param string $url The url to get
+ 	* @return object Response.
+ 	*/
+ 	protected static function poll_json( $url )
+ 	{
+		$data = false;
+			
+		if( function_exists( 'curl_init' ) ) {
+				
+			$ch = curl_init();
+			curl_setopt( $ch, CURLOPT_URL, $url );
+			curl_setopt( $ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT'] );
+			@curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );
+			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+			curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+			curl_setopt( $ch, CURLOPT_HEADER, 0);
+				
+			$data = curl_exec( $ch );
+			curl_close( $ch );
+	
+			if( $data !== false ) return json_decode($data);
+			
+		} 
+
+		if( preg_match('/1|yes|on|true/i', ini_get('allow_url_fopen')) ) {
+	
+			$data = @file_get_contents( $url );
+				
+			if( $data !== false ) return json_decode($data);
+	
+		}
+ 		
+ 		return false;
+ 	}
+ }
+ 

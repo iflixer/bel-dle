@@ -5,9 +5,265 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: email.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: E-mail templates
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='Py5kP217bUNJKkNxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcUM8M11HXVd6dDg8OW9bem84PC08Mlk8Zmp0R1g4NWE8NDgwel08L0tqIG08Qy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tQzx7R0dtYTpJSTBlOC1vODVhVksgSUMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUM8T2ptWUt6W3tHPCg2KTx1TEw9LXVMdWI8Zmp0R1g4NWE8NDgwel08L0tqIG1DcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFDPH17emE8NmowODx6YTxtS2pHODZHODA8Mlk8NmptWUt6W3tHQ3FxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxQzxGemU4Ojw4N116ZVZte21DLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1DPFRhODo8OS03XXplPEc4N21lXUc4YUNxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcUMqSUN6dCg8ITA4dHpvODAoPCczU31TV2xGOTlYL2xYOSc8KTxjeDwhMDh0em84MCg8J1djLy85M19sWCc8KTwpPEpDCXs4XTA4Syg8InZ9fVFJc1ZzPD1MQTxGaksyejAwOG8iPCk7Qwl7OF0wOEs8KDwnV2o2XUd6am86PFZWSVZWSSc8KTtDCTB6OCg8InZdNnB6b1s8XUdHODdtRyEiPCk7Q0RDQ3p0KDwkNzg3MjhLX3owMScgYThLX1tLaiBtJ0U8IXE8czwpPEpDCTdhWyg8IjhLS2pLIiw8JGVdb1sxJ10wMG84NWFfMDhvejgwJ0UsPCRlXW9bMScwMl8wOG96ODAnRTwpO0NEQ0N6dCg8JF02R3pqbzxxcTwiYV15OCI8KTxKQwlDCXp0KDwhemFhOEcoJF94OVJUOWZ9MScgYThLX3tdYXsnRSk8Y3g8ISRfeDlSVDlmfTEnIGE4S197XWF7J0U8Y3g8JF94OVJUOWZ9MScgYThLX3tdYXsnRTwhcTwkMGU4X2VqW3pvX3tdYXs8KTxKQwkJQwkJMHo4KDwidl02cHpvWzxdR0c4N21HITxUYThLPG9qRzx0aiBvMCI8KTtDCUMJREMJQwkkSzhbXzddemVfRzhuRzxxPHphYThHKCRfUWNmfTEnSzhbXzddemVfRzhuRydFKTw/PCQwMi0uYV10OGFOZSgkX1FjZn0xJ0s4W183XXplX0c4bkcnRTwpPDo8Jyc7QwkkSzhbXzddemVfe0c3ZTxxPHphYThHKCRfUWNmfTEnSzhbXzddemVfe0c3ZSdFKTw/PHpvR3ldZSg8JF9RY2Z9MSdLOFtfN116ZV97RzdlJ0U8KTw6PEw7QwkkdDg4MF83XXplX0c4bkc8cTx6YWE4RygkX1FjZn0xJ3Q4ODBfN116ZV9HOG5HJ0UpPD88JDAyLS5hXXQ4YU5lKCRfUWNmfTEndDg4MF83XXplX0c4bkcnRTwpPDo8Jyc7QwkkdDg4MF83XXplX3tHN2U8cTx6YWE4RygkX1FjZn0xJ3Q4ODBfN116ZV97RzdlJ0UpPD88em9HeV1lKDwkX1FjZn0xJ3Q4ODBfN116ZV97RzdlJ0U8KTw6PEw7QwkkZWphR183XXplX0c4bkc8cTx6YWE4RygkX1FjZn0xJ2VqYUdfN116ZV9HOG5HJ0UpPD88PCQwMi0uYV10OGFOZSgkX1FjZn0xJ2VqYUdfN116ZV9HOG5HJ0U8KTw6PCcnO0MJJGVqYUdfN116ZV97RzdlPHE8emFhOEcoJF9RY2Z9MSdlamFHXzddemVfe0c3ZSdFKTw/PHpvR3ldZSg8JF9RY2Z9MSdlamFHXzddemVfe0c3ZSdFPCk8OjxMO0MJJG84NV9vODVhX0c4bkc8cTx6YWE4RygkX1FjZn0xJ284NV9vODVhX0c4bkcnRSk8PzwkMDItLmFddDhhTmUoJF9RY2Z9MSdvODVfbzg1YV9HOG5HJ0U8KTw6PCcnO0MJJG84NV9vODVhX3tHN2U8cTx6YWE4RygkX1FjZn0xJ284NV9vODVhX3tHN2UnRSk8Pzx6b0d5XWUoPCRfUWNmfTEnbzg1X284NWFfe0c3ZSdFPCk8OjxMO0MJJG84NV82ajc3OG9HYV9HOG5HPHE8emFhOEcoJF9RY2Z9MSdvODVfNmo3NzhvR2FfRzhuRydFKTw/PCQwMi0uYV10OGFOZSg8JF9RY2Z9MSdvODVfNmo3NzhvR2FfRzhuRydFPCk8OjwnJztDCSRvODVfNmo3NzhvR2Ffe0c3ZTxxPHphYThHKCRfUWNmfTEnbzg1XzZqNzc4b0dhX3tHN2UnRSk8Pzx6b0d5XWUoPCRfUWNmfTEnbzg1XzZqNzc4b0dhX3tHN2UnRTwpPDo8TDtDCSRvODVfbTdfRzhuRzxxPHphYThHKCRfUWNmfTEnbzg1X203X0c4bkcnRSk8PzwkMDItLmFddDhhTmUoJF9RY2Z9MSdvODVfbTdfRzhuRydFPCk8OjwnJztDCSRvODVfbTdfe0c3ZTxxPHphYThHKCRfUWNmfTEnbzg1X203X3tHN2UnRSk8Pzx6b0d5XWUoPCRfUWNmfTEnbzg1X203X3tHN2UnRTwpPDo8TDtDCSRvODVfbzg1YWU4R0c4S19HOG5HPHE8emFhOEcoJF9RY2Z9MSdvODVfbzg1YWU4R0c4S19HOG5HJ0UpPD88JDAyLS5hXXQ4YU5lKDwkX1FjZn0xJ284NV9vODVhZThHRzhLX0c4bkcnRTwpPDo8Jyc7QwkkNV16R183XXplX3tHN2U8cTx6YWE4RygkX1FjZn0xJzVdekdfN116ZV97RzdlJ0UpPD88em9HeV1lKDwkX1FjZn0xJzVdekdfN116ZV97RzdlJ0U8KTw6PEw7QwkkNV16R183XXplX0c4bkc8cTx6YWE4RygkX1FjZn0xJzVdekdfN116ZV9HOG5HJ0UpPD88JDAyLS5hXXQ4YU5lKDwkX1FjZn0xJzVdekdfN116ZV9HOG5HJ0U8KTw6PCcnO0MJQwkkRzVqdF02R2pLX3tHN2U8cTx6YWE4RygkX1FjZn0xJ0c1anRdNkdqS197RzdlJ0UpPD88em9HeV1lKDwkX1FjZn0xJ0c1anRdNkdqS197RzdlJ0U8KTw6PEw7QwkkRzVqdF02R2pLX0c4bkc8cTx6YWE4RygkX1FjZn0xJ0c1anRdNkdqS19HOG5HJ0UpPD88JDAyLS5hXXQ4YU5lKDwkX1FjZn0xJ0c1anRdNkdqS19HOG5HJ0U8KTw6PCcnO0MJQwkkMDItLk4gOEtZKDwiVFEzU305PCI8VjxReDlGbGc8VjwiXzg3XXplPGY5fTxHODdtZV1HOHEnJEs4W183XXplX0c4bkcnLDwgYThfe0c3ZXEnJEs4W183XXplX3tHN2UnPFB2OXg5PG9dNzhxJ0s4W183XXplJyI8KTtDCSQwMi0uTiA4S1koPCJUUTNTfTk8IjxWPFF4OUZsZzxWPCJfODddemU8Zjl9PEc4N21lXUc4cSckdDg4MF83XXplX0c4bkcnLDwgYThfe0c3ZXEnJHQ4ODBfN116ZV97RzdlJzxQdjl4OTxvXTc4cSd0ODgwXzddemUnIjwpO0MJJDAyLS5OIDhLWSg8IlRRM1N9OTwiPFY8UXg5RmxnPFY8Il84N116ZTxmOX08Rzg3bWVdRzhxJyRlamFHXzddemVfRzhuRycsPCBhOF97RzdlcSckZWphR183XXplX3tHN2UnPFB2OXg5PG9dNzhxJ2VqYUdfN116ZSciPCk7QwkkMDItLk4gOEtZKDwiVFEzU305PCI8VjxReDlGbGc8VjwiXzg3XXplPGY5fTxHODdtZV1HOHEnJG84NV9vODVhX0c4bkcnLDwgYThfe0c3ZXEnJG84NV9vODVhX3tHN2UnPFB2OXg5PG9dNzhxJ284NV9vODVhJyI8KTtDCSQwMi0uTiA4S1koPCJUUTNTfTk8IjxWPFF4OUZsZzxWPCJfODddemU8Zjl9PEc4N21lXUc4cSckbzg1XzZqNzc4b0dhX0c4bkcnLDwgYThfe0c3ZXEnJG84NV82ajc3OG9HYV97RzdlJzxQdjl4OTxvXTc4cSc2ajc3OG9HYSciPCk7QwkkMDItLk4gOEtZKDwiVFEzU305PCI8VjxReDlGbGc8VjwiXzg3XXplPGY5fTxHODdtZV1HOHEnJG84NV9tN19HOG5HJyw8IGE4X3tHN2VxJyRvODVfbTdfe0c3ZSc8UHY5eDk8b103OHEnbTcnIjwpO0MJJDAyLS5OIDhLWSg8IlRRM1N9OTwiPFY8UXg5RmxnPFY8Il84N116ZTxmOX08Rzg3bWVdRzhxJyRvODVfbzg1YWU4R0c4S19HOG5HJyw8IGE4X3tHN2VxJ3MnPFB2OXg5PG9dNzhxJ284NWFlOEdHOEsnIjwpO0MJJDAyLS5OIDhLWSg8IlRRM1N9OTwiPFY8UXg5RmxnPFY8Il84N116ZTxmOX08Rzg3bWVdRzhxJyQ1XXpHXzddemVfRzhuRycsPCBhOF97RzdlcSckNV16R183XXplX3tHN2UnPFB2OXg5PG9dNzhxJzVdekdfN116ZSciPCk7QwkkMDItLk4gOEtZKDwiVFEzU305PCI8VjxReDlGbGc8VjwiXzg3XXplPGY5fTxHODdtZV1HOHEnJEc1anRdNkdqS19HOG5HJyw8IGE4X3tHN2VxJyRHNWp0XTZHaktfe0c3ZSc8UHY5eDk8b103OHEnRzVqdF02R2pLJyI8KTtDCUMJJDAyLS5OIDhLWSg8ImxYZjl4fTxsWH1jPCI8VjxUZjl4UXg5RmxnPFY8Il9dMDd6b19lalthPChvXTc4LDwwXUc4LDx6bSw8XTZHempvLDw4bkdLXWEpPHldZSA4YTwoJyJWJDAyLS5hXXQ4YU5lKCQ3ODcyOEtfejAxJ29dNzgnRSlWIicsPCdKJF99bDQ5RCcsPCdKJF9sUUQnLDwnQXMnLDwnJykiPCk7QwlDCTdhWyg8ImEgNjY4YWEiLDwkZV1vWzEnN116ZV9dMDBqcCdFLDwkZV1vWzEnN116ZV9dMDBqcF9zJ0UsPCI/N2owcTg3XXplIjwpO0NDRDw4ZWE4PEpDQzw8JFphX11LS11ZMUU8cTwiOG9bem84SWFwem9hSTZqMDg3ektLaktJWmFJNmowOFZaYSI7Qzw8JDZhYV9dS0tdWTFFPHE8IjhvW3pvOElhcHpvYUk2ajA4N3pLS2pLSTZhYUkwOHRdIGVHVjZhYSI7Q0MJODZ7ans4XTA4Syg8ImR6PDZlXWFhcVwidF08dF0tOG95OGVqbTgtajxtamF6R3pqby1lOHRHXCIuZEl6LmRhbV1vPDZlXWFhcVwiRzhuRy1hODd6MmplMFwiLkokZV1vWzEnam1HXzg3XXplJ0VEZElhbV1vLiIsPCRlXW9bMSd7OF0wOEtfN19zJ0U8KTtDCUMJJDAyLS5OIDhLWSg8ImY5VzlPfTwqPEZ4YzQ8IjxWPFF4OUZsZzxWPCJfODddemUiPCk7QwkkIGE4X3tHN2U8cTxdS0tdWSgpO0MJJDddemVfRzg3bWVdRzg8cTxdS0tdWSgpO0NDCTV7emU4PCg8JEtqNTxxPCQwMi0uWzhHX0tqNSgpPCk8SkMJCSQ3XXplX0c4N21lXUc4MSRLajUxJ29dNzgnRUU8cTx7RzdlYW04NnpdZTZ7XUthKDxhR0t6bWFlXWF7OGEoPCRLajUxJ0c4N21lXUc4J0U8KSw8OVh9X1JUY305Ziw8J1R9Ri1IJzwpO0MJCUMJCXp0KDwkS2o1MScgYThfe0c3ZSdFPCk8JCBhOF97RzdlMSRLajUxJ29dNzgnRUU8cTwnNns4NnA4MCc7PDhlYTg8JCBhOF97RzdlMSRLajUxJ29dNzgnRUU8cTwnJztDCURDCSQwMi0udEs4OCgpO0NDCTg2e2o8ZGRkdn00V0NkYUdZZTguQ1ZPajA4NHpLS2pLPEpDCXs4elt7Rzo8QUxMbW47QwkyakswOEs6PHNtbjxhamV6MDwjNjY2NjY2O0M8PDJqbi1he10wajU6PHpvYThHPEw8c21uPHNtbjxLWzJdKEwsTCxMLExWTD5iKTtDRENkSWFHWWU4LkNkdGpLNzxdNkd6am9xIj83ajBxODddemUmXTZHempvcWFdeTgiPDc4R3tqMHEibWphRyIuQ2R6b20gRzxHWW04cSJ7ejAwOG8iPG9dNzhxIiBhOEtfe11heyI8eV1lIDhxIiQwZThfZWpbem9fe11heyI8SS5DZDB6eTw2ZV1hYXEibV1vOGU8bV1vOGUtMDh0XSBlRyIuQzw8ZDB6eTw2ZV1hYXEibV1vOGUtezhdMHpvWyIuQzw8PDxKJGVdb1sxJ2ptR184N116ZSdFREM8PGRJMHp5LkM8PGQwenk8NmVdYWFxIm1dbzhlLTJqMFkiLkMJQ0NkMHp5PDZlXWFhcSJdNjZqSzB6am8iPHowcSJdNjZqSzB6am8iLkNDPDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tW0tqIG0iLkM8PDw8ZDB6eTw2ZV1hYXEiXTY2akswempvLXs4XTB6b1siLkM8PDw8PDxkXTw2ZV1hYXEiXTY2akswempvLUdqW1tlOCI8MF1HXS1HaltbZThxIjZqZWVdbWE4IjwwXUddLW1dSzhvR3EiI102NmpLMHpqbyI8e0s4dHEiIzZqZWVdbWE4Y284Ii5DPDw8PDw8PDxKJGVdb1sxJzddemVfem90aidFREM8PDw8PDxkSV0uQzw8PDxkSTB6eS5DPDw8PGQwenk8ejBxIjZqZWVdbWE4Y284Ijw2ZV1hYXEiXTY2akswempvLTJqMFk8NmplZV1tYTgiLkM8PDw8PDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tem9vOEsiLkM8PDw8PDw8PEokZV1vWzEnN116ZV9LOFtfem90aidFRGQySzxJLmQySzxJLkMJCWRHOG5HXUs4XTwwektxIl0gR2oiPDZlXWFhcSI2ZV1hYXo2PHtHN2VfODB6R2pLIjxLajVhcSJzYiI8YUdZZThxIjV6MEd7OnNMTCU7IjxvXTc4cSJLOFtfN116ZV9HOG5HIi5KJDddemVfRzg3bWVdRzgxJ0s4W183XXplJ0VEZElHOG5HXUs4XS5DCQlkMHp5PDZlXWFhcSI2ezg2cDJqbiIuZGVdMjhlLmR6b20gRzw2ZV1hYXEiejZ7ODZwIjxHWW04cSI2ezg2cDJqbiI8ejBxIks4W183XXplX3tHN2UiPG9dNzhxIks4W183XXplX3tHN2UiPHldZSA4cSJzIjxKJCBhOF97RzdlMSdLOFtfN116ZSdFRC5KJGVdb1sxJzg3XXplXyBhOF97RzdlJ0VEZEllXTI4ZS5kSTB6eS5DPDw8PDw8ZEkwenkuQzw8PDxkSTB6eS5DPDxkSTB6eS5DPDxDPDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tW0tqIG0iLkM8PDw8ZDB6eTw2ZV1hYXEiXTY2akswempvLXs4XTB6b1siLkM8PDw8PDxkXTw2ZV1hYXEiXTY2akswempvLUdqW1tlOCI8MF1HXS1HaltbZThxIjZqZWVdbWE4IjwwXUddLW1dSzhvR3EiI102NmpLMHpqbyI8e0s4dHEiIzZqZWVdbWE4fTVqIi5DPDw8PDw8PDxKJGVdb1sxJzddemVfem90al9zJ0VEQzw8PDw8PGRJXS5DPDw8PGRJMHp5LkM8PDw8ZDB6eTx6MHEiNmplZV1tYTh9NWoiPDZlXWFhcSJdNjZqSzB6am8tMmowWTw2amVlXW1hOCIuQzw8PDw8PGQwenk8NmVdYWFxIl02NmpLMHpqby16b284SyIuQzw8PDw8PDw8SiRlXW9bMSc3XXplX3Q4ODBfem90aidFRGQySzxJLmQySzxJLkMJCWRHOG5HXUs4XTwwektxIl0gR2oiPDZlXWFhcSI2ZV1hYXo2PHtHN2VfODB6R2pLIjxLajVhcSJzYiI8YUdZZThxIjV6MEd7OnNMTCU7IjxvXTc4cSJ0ODgwXzddemVfRzhuRyIuSiQ3XXplX0c4N21lXUc4MSd0ODgwXzddemUnRURkSUc4bkddSzhdLkMJCWQwenk8NmVdYWFxIjZ7ODZwMmpuIi5kZV0yOGUuZHpvbSBHPDZlXWFhcSJ6Nns4NnAiPEdZbThxIjZ7ODZwMmpuIjx6MHEidDg4MF83XXplX3tHN2UiPG9dNzhxInQ4ODBfN116ZV97RzdlIjx5XWUgOHEicyI8SiQgYThfe0c3ZTEndDg4MF83XXplJ0VELkokZV1vWzEnODddemVfIGE4X3tHN2UnRURkSWVdMjhlLmRJMHp5LkM8PDw8PDxkSTB6eS5DPDw8PGRJMHp5LkM8PGRJMHp5LkNDPDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tW0tqIG0iLkM8PDw8ZDB6eTw2ZV1hYXEiXTY2akswempvLXs4XTB6b1siLkM8PDw8PDxkXTw2ZV1hYXEiXTY2akswempvLUdqW1tlOCI8MF1HXS1HaltbZThxIjZqZWVdbWE4IjwwXUddLW1dSzhvR3EiI102NmpLMHpqbyI8e0s4dHEiIzZqZWVdbWE4fXtLODgiLkM8PDw8PDw8PEokZV1vWzEnN116ZV96b3RqX3UnRURDPDw8PDw8ZEldLkM8PDw8ZEkwenkuQzw8PDxkMHp5PHowcSI2amVlXW1hOH17Szg4Ijw2ZV1hYXEiXTY2akswempvLTJqMFk8NmplZV1tYTgiLkM8PDw8PDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tem9vOEsiLkM8PDw8PDw8PEokZV1vWzEnN116ZV9lamFHX3pvdGonRURkMks8SS5kMks8SS5DCQlkRzhuR11LOF08MHpLcSJdIEdqIjw2ZV1hYXEiNmVdYWF6Njx7RzdlXzgwekdqSyI8S2o1YXEic2IiPGFHWWU4cSI1ejBHezpzTEwlOyI8b103OHEiZWphR183XXplX0c4bkciLkokN116ZV9HODdtZV1HODEnZWphR183XXplJ0VEZElHOG5HXUs4XS5DCQlkMHp5PDZlXWFhcSI2ezg2cDJqbiIuZGVdMjhlLmR6b20gRzw2ZV1hYXEiejZ7ODZwIjxHWW04cSI2ezg2cDJqbiI8ejBxImVqYUdfN116ZV97RzdlIjxvXTc4cSJlamFHXzddemVfe0c3ZSI8eV1lIDhxInMiPEokIGE4X3tHN2UxJ2VqYUdfN116ZSdFRC5KJGVdb1sxJzg3XXplXyBhOF97RzdlJ0VEZEllXTI4ZS5kSTB6eS5DPDw8PDw8ZEkwenkuQzw8PDxkSTB6eS5DPDxkSTB6eS5DQzw8ZDB6eTw2ZV1hYXEiXTY2akswempvLVtLaiBtIi5DPDw8PGQwenk8NmVdYWFxIl02NmpLMHpqby17OF0wem9bIi5DPDw8PDw8ZF08NmVdYWFxIl02NmpLMHpqby1HaltbZTgiPDBdR10tR2pbW2U4cSI2amVlXW1hOCI8MF1HXS1tXUs4b0dxIiNdNjZqSzB6am8iPHtLOHRxIiM2amVlXW1hOD0iLkM8PDw8PDw8PEokZV1vWzEnN116ZV96b3RqX0EnRURDPDw8PDw8ZEldLkM8PDw8ZEkwenkuQzw8PDxkMHp5PHowcSI2amVlXW1hOD0iPDZlXWFhcSJdNjZqSzB6am8tMmowWTw2amVlXW1hOCIuQzw8PDw8PGQwenk8NmVdYWFxIl02NmpLMHpqby16b284SyIuQzw8PDw8PDw8SiRlXW9bMSc3XXplX284NWFfem90aidFRGQySzxJLmQySzxJLkMJCWRHOG5HXUs4XTwwektxIl0gR2oiPDZlXWFhcSI2ZV1hYXo2PHtHN2VfODB6R2pLIjxLajVhcSJzYiI8YUdZZThxIjV6MEd7OnNMTCU7IjxvXTc4cSJvODVfbzg1YV9HOG5HIi5KJDddemVfRzg3bWVdRzgxJ284NV9vODVhJ0VEZElHOG5HXUs4XS5DCQlkMHp5PDZlXWFhcSI2ezg2cDJqbiIuZGVdMjhlLmR6b20gRzw2ZV1hYXEiejZ7ODZwIjxHWW04cSI2ezg2cDJqbiI8ejBxIm84NV9vODVhX3tHN2UiPG9dNzhxIm84NV9vODVhX3tHN2UiPHldZSA4cSJzIjxKJCBhOF97RzdlMSdvODVfbzg1YSdFRC5KJGVdb1sxJzg3XXplXyBhOF97RzdlJ0VEZEllXTI4ZS5kSTB6eS5DPDw8PDw8ZEkwenkuQzw8PDxkSTB6eS5DPDxkSTB6eS5DPDxDPDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tW0tqIG0iLkM8PDw8ZDB6eTw2ZV1hYXEiXTY2akswempvLXs4XTB6b1siLkM8PDw8PDxkXTw2ZV1hYXEiXTY2akswempvLUdqW1tlOCI8MF1HXS1HaltbZThxIjZqZWVdbWE4IjwwXUddLW1dSzhvR3EiI102NmpLMHpqbyI8e0s4dHEiIzZqZWVdbWE4YiIuQzw8PDw8PDw8SiRlXW9bMSc3XXplX3pvdGpfPSdFREM8PDw8PDxkSV0uQzw8PDxkSTB6eS5DPDw8PGQwenk8ejBxIjZqZWVdbWE4YiI8NmVdYWFxIl02NmpLMHpqby0yajBZPDZqZWVdbWE4Ii5DPDw8PDw8ZDB6eTw2ZV1hYXEiXTY2akswempvLXpvbzhLIi5DPDw8PDw8PDxKJGVdb1sxJzddemVfNmo3N196b3RqJ0VEZDJLPEkuZDJLPEkuQwkJZEc4bkddSzhdPDB6S3EiXSBHaiI8NmVdYWFxIjZlXWFhejY8e0c3ZV84MHpHaksiPEtqNWFxInNiIjxhR1llOHEiNXowR3s6c0xMJTsiPG9dNzhxIm84NV82ajc3OG9HYV9HOG5HIi5KJDddemVfRzg3bWVdRzgxJzZqNzc4b0dhJ0VEZElHOG5HXUs4XS5DCQlkMHp5PDZlXWFhcSI2ezg2cDJqbiIuZGVdMjhlLmR6b20gRzw2ZV1hYXEiejZ7ODZwIjxHWW04cSI2ezg2cDJqbiI8ejBxIm84NV82ajc3OG9HYV97RzdlIjxvXTc4cSJvODVfNmo3NzhvR2Ffe0c3ZSI8eV1lIDhxInMiPEokIGE4X3tHN2UxJzZqNzc4b0dhJ0VELkokZV1vWzEnODddemVfIGE4X3tHN2UnRURkSWVdMjhlLmRJMHp5LkM8PDw8PDxkSTB6eS5DPDw8PGRJMHp5LkM8PGRJMHp5LkM8PEM8PGQwenk8NmVdYWFxIl02NmpLMHpqby1bS2ogbSIuQzw8PDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tezhdMHpvWyIuQzw8PDw8PGRdPDZlXWFhcSJdNjZqSzB6am8tR2pbW2U4IjwwXUddLUdqW1tlOHEiNmplZV1tYTgiPDBdR10tbV1LOG9HcSIjXTY2akswempvIjx7Szh0cSIjNmplZV1tYThyIi5DPDw8PDw8PDxKJGVdb1sxJzddemVfem90al9yJ0VEQzw8PDw8PGRJXS5DPDw8PGRJMHp5LkM8PDw8ZDB6eTx6MHEiNmplZV1tYThyIjw2ZV1hYXEiXTY2akswempvLTJqMFk8NmplZV1tYTgiLkM8PDw8PDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tem9vOEsiLkM8PDw8PDw8PEokZV1vWzEnN116ZV9tN196b3RqJ0VEZDJLPEkuZDJLPEkuQwkJZEc4bkddSzhdPDB6S3EiXSBHaiI8NmVdYWFxIjZlXWFhejY8e0c3ZV84MHpHaksiPEtqNWFxInNiIjxhR1llOHEiNXowR3s6c0xMJTsiPG9dNzhxIm84NV9tN19HOG5HIi5KJDddemVfRzg3bWVdRzgxJ203J0VEZElHOG5HXUs4XS5DCQlkMHp5PDZlXWFhcSI2ezg2cDJqbiIuZGVdMjhlLmR6b20gRzw2ZV1hYXEiejZ7ODZwIjxHWW04cSI2ezg2cDJqbiI8ejBxIm84NV9tN197RzdlIjxvXTc4cSJvODVfbTdfe0c3ZSI8eV1lIDhxInMiPEokIGE4X3tHN2UxJ203J0VELkokZV1vWzEnODddemVfIGE4X3tHN2UnRURkSWVdMjhlLmRJMHp5LkM8PDw8PDxkSTB6eS5DPDw8PGRJMHp5LkM8PGRJMHp5LkNDPDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tW0tqIG0iLkM8PDw8ZDB6eTw2ZV1hYXEiXTY2akswempvLXs4XTB6b1siLkM8PDw8PDxkXTw2ZV1hYXEiXTY2akswempvLUdqW1tlOCI8MF1HXS1HaltbZThxIjZqZWVdbWE4IjwwXUddLW1dSzhvR3EiI102NmpLMHpqbyI8e0s4dHEiIzZqZWVdbWE4PiIuQzw8PDw8PDw8SiRlXW9bMSc3XXplX3pvdGpfSCdFREM8PDw8PDxkSV0uQzw8PDxkSTB6eS5DPDw8PGQwenk8ejBxIjZqZWVdbWE4PiI8NmVdYWFxIl02NmpLMHpqby0yajBZPDZqZWVdbWE4Ii5DPDw8PDw8ZDB6eTw2ZV1hYXEiXTY2akswempvLXpvbzhLIi5DPDw8PDw8PDxKJGVdb1sxJzddemVfNV16R196b3RqJ0VEZDJLPEkuZDJLPEkuQwkJZEc4bkddSzhdPDB6S3EiXSBHaiI8NmVdYWFxIjZlXWFhejY8e0c3ZV84MHpHaksiPEtqNWFxInNiIjxhR1llOHEiNXowR3s6c0xMJTsiPG9dNzhxIjVdekdfN116ZV9HOG5HIi5KJDddemVfRzg3bWVdRzgxJzVdekdfN116ZSdFRGRJRzhuR11LOF0uQwkJZDB6eTw2ZV1hYXEiNns4NnAyam4iLmRlXTI4ZS5kem9tIEc8NmVdYWFxIno2ezg2cCI8R1ltOHEiNns4NnAyam4iPHowcSI1XXpHXzddemVfe0c3ZSI8b103OHEiNV16R183XXplX3tHN2UiPHldZSA4cSJzIjxKJCBhOF97RzdlMSc1XXpHXzddemUnRUQuSiRlXW9bMSc4N116ZV8gYThfe0c3ZSdFRGRJZV0yOGUuZEkwenkuQzw8PDw8PGRJMHp5LkM8PDw8ZEkwenkuQzw8ZEkwenkuQ0M8PGQwenk8NmVdYWFxIl02NmpLMHpqby1bS2ogbSIuQzw8PDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tezhdMHpvWyIuQzw8PDw8PGRdPDZlXWFhcSJdNjZqSzB6am8tR2pbW2U4IjwwXUddLUdqW1tlOHEiNmplZV1tYTgiPDBdR10tbV1LOG9HcSIjXTY2akswempvIjx7Szh0cSIjNmplZV1tYThIIi5DPDw8PDw8PDxKJGVdb1sxJzddemVfem90al9oJ0VEQzw8PDw8PGRJXS5DPDw8PGRJMHp5LkM8PDw8ZDB6eTx6MHEiNmplZV1tYThIIjw2ZV1hYXEiXTY2akswempvLTJqMFk8NmplZV1tYTgiLkM8PDw8PDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tem9vOEsiLkM8PDw8PDw8PEokZV1vWzEnN116ZV9HNWp0XTZHaktfem90aidFRGQySzxJLmQySzxJLkMJCWRHOG5HXUs4XTwwektxIl0gR2oiPDZlXWFhcSI2ZV1hYXo2PHtHN2VfODB6R2pLIjxLajVhcSJzYiI8YUdZZThxIjV6MEd7OnNMTCU7IjxvXTc4cSJHNWp0XTZHaktfRzhuRyIuSiQ3XXplX0c4N21lXUc4MSdHNWp0XTZHaksnRURkSUc4bkddSzhdLkMJCWQwenk8NmVdYWFxIjZ7ODZwMmpuIi5kZV0yOGUuZHpvbSBHPDZlXWFhcSJ6Nns4NnAiPEdZbThxIjZ7ODZwMmpuIjx6MHEiRzVqdF02R2pLX3tHN2UiPG9dNzhxIkc1anRdNkdqS197RzdlIjx5XWUgOHEicyI8SiQgYThfe0c3ZTEnRzVqdF02R2pLJ0VELkokZV1vWzEnODddemVfIGE4X3tHN2UnRURkSWVdMjhlLmRJMHp5LkM8PDw8PDxkSTB6eS5DPDw8PGRJMHp5LkM8PGRJMHp5LkNDPDxkMHp5PDZlXWFhcSJdNjZqSzB6am8tW0tqIG0iLkM8PDw8ZDB6eTw2ZV1hYXEiXTY2akswempvLXs4XTB6b1siLkM8PDw8PDxkXTw2ZV1hYXEiXTY2akswempvLUdqW1tlOCI8MF1HXS1HaltbZThxIjZqZWVdbWE4IjwwXUddLW1dSzhvR3EiI102NmpLMHpqbyI8e0s4dHEiIzZqZWVdbWE4aCIuQzw8PDw8PDw8SiRlXW9bMSc3XXplX3pvdGpfPidFREM8PDw8PDxkSV0uQzw8PDxkSTB6eS5DPDw8PGQwenk8ejBxIjZqZWVdbWE4aCI8NmVdYWFxIl02NmpLMHpqby0yajBZPDZqZWVdbWE4Ii5DPDw8PDw8ZDB6eTw2ZV1hYXEiXTY2akswempvLXpvbzhLIi5DPDw8PDw8PDxKJGVdb1sxJzddemVfbzg1YWU4R0c4S196b3RqJ0VEZDJLPEkuZDJLPEkuQwkJPDw8PGRHOG5HXUs4XTwwektxIl0gR2oiPDZlXWFhcSI2ZV1hYXo2PHtHN2VfODB6R2pLIjxLajVhcSJzYiI8YUdZZThxIjV6MEd7OnNMTCU7IjxvXTc4cSJvODVfbzg1YWU4R0c4S19HOG5HIi5KJDddemVfRzg3bWVdRzgxJ284NWFlOEdHOEsnRURkSUc4bkddSzhdLkM8PDw8PDxkSTB6eS5DPDw8PGRJMHp5LkM8PGRJMHp5Ljw8Q0MJPDxDCWRJMHp5LkM8PDxkSTB6eS5DCWQwenk8NmVdYWFxIm1dbzhlLXRqakc4SyIuQwk8PDxkMiBHR2pvPEdZbThxImEgMjd6RyI8NmVdYWFxIjJHbzwyWy1HOF1lPDJHby1hNzwyR28tS116YTgwPG1qYXpHempvLWU4dEciLmR6PDZlXWFhcSJ0XTx0XS10ZWptbVktajxtamF6R3pqby1lOHRHIi5kSXouSiRlXW9bMScgYThLX2FdeTgnRURkSTIgR0dqby5DCWRJMHp5LkNkSTB6eS5DZEl0aks3LkNDZGE2S3ptRy5DJCh0IG82R3pqbygpSkM8PCQoIlZ7RzdlXzgwekdqSyIpVjhdNnsodCBvNkd6am8oKTxKQwkJeV1LPDgwekdqSzxxPE9qMDg0ektLaktWdEtqN304bkdTSzhdKDxHe3phLDxKQwkJCTdqMDg6PCJ7RzdlN3puODAiLEMJCQkwS11bM0tqbTo8dF1lYTgsQwkJCV0gR2p4OHRLOGF7OjxHSyA4QwkJPDxEKTtDCUMJCXQgbzZHempvPCBtMF1HOH04bkdTSzhdKCk8SkMJCQk4MHpHaktWYV15OCgpO0MJCURDCUMJCTgwekdqS1ZqbygnNntdb1s4Jyw8IG0wXUc4fThuR1NLOF0pO0MJRCk7Q0QpO0NkSWE2S3ptRy5Ddn00VztDCUMJODZ7anRqakc4SygpO0NEQz8u';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdrbEhvRiA5aEVxTlphc21CajVpPVN1d1RYOFduQS9EY1B7M0MyPmdRWWRLMXRWSk96clI8ZV14VXBNeQo0Zkd9MFs3NmJJdi5MJywnekk4bkZ1RTldPXFqczFwVm93SjRBMlpVTmVMeDNHfU9XaEQKYjdYUHk8cltmLntDaTZRIGxhUllrQnZLTVN0VGRnbWM1L0g+MCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( $member_id['user_group'] != 1 ) {
+	msg( "error", $lang['addnews_denied'], $lang['db_denied'] );
+}
+
+if( $action == "save" ) {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+	
+	$reg_mail_text = isset($_POST['reg_mail_text']) ? $db->safesql($_POST['reg_mail_text'] ) : '';
+	$reg_mail_html = isset($_POST['reg_mail_html']) ? intval( $_POST['reg_mail_html'] ) : 0;
+	$feed_mail_text = isset($_POST['feed_mail_text']) ? $db->safesql($_POST['feed_mail_text'] ) : '';
+	$feed_mail_html = isset($_POST['feed_mail_html']) ? intval( $_POST['feed_mail_html'] ) : 0;
+	$lost_mail_text = isset($_POST['lost_mail_text']) ?  $db->safesql($_POST['lost_mail_text'] ) : '';
+	$lost_mail_html = isset($_POST['lost_mail_html']) ? intval( $_POST['lost_mail_html'] ) : 0;
+	$new_news_text = isset($_POST['new_news_text']) ? $db->safesql($_POST['new_news_text'] ) : '';
+	$new_news_html = isset($_POST['new_news_html']) ? intval( $_POST['new_news_html'] ) : 0;
+	$new_comments_text = isset($_POST['new_comments_text']) ? $db->safesql( $_POST['new_comments_text'] ) : '';
+	$new_comments_html = isset($_POST['new_comments_html']) ? intval( $_POST['new_comments_html'] ) : 0;
+	$new_pm_text = isset($_POST['new_pm_text']) ? $db->safesql($_POST['new_pm_text'] ) : '';
+	$new_pm_html = isset($_POST['new_pm_html']) ? intval( $_POST['new_pm_html'] ) : 0;
+	$new_newsletter_text = isset($_POST['new_newsletter_text']) ? $db->safesql( $_POST['new_newsletter_text'] ) : '';
+	$wait_mail_html = isset($_POST['wait_mail_html']) ? intval( $_POST['wait_mail_html'] ) : 0;
+	$wait_mail_text = isset($_POST['wait_mail_text']) ? $db->safesql( $_POST['wait_mail_text'] ) : '';
+	
+	$twofactor_html = isset($_POST['twofactor_html']) ? intval( $_POST['twofactor_html'] ) : 0;
+	$twofactor_text = isset($_POST['twofactor_text']) ? $db->safesql( $_POST['twofactor_text'] ) : '';
+	
+	$db->query( "UPDATE " . PREFIX . "_email SET template='$reg_mail_text', use_html='$reg_mail_html' WHERE name='reg_mail'" );
+	$db->query( "UPDATE " . PREFIX . "_email SET template='$feed_mail_text', use_html='$feed_mail_html' WHERE name='feed_mail'" );
+	$db->query( "UPDATE " . PREFIX . "_email SET template='$lost_mail_text', use_html='$lost_mail_html' WHERE name='lost_mail'" );
+	$db->query( "UPDATE " . PREFIX . "_email SET template='$new_news_text', use_html='$new_news_html' WHERE name='new_news'" );
+	$db->query( "UPDATE " . PREFIX . "_email SET template='$new_comments_text', use_html='$new_comments_html' WHERE name='comments'" );
+	$db->query( "UPDATE " . PREFIX . "_email SET template='$new_pm_text', use_html='$new_pm_html' WHERE name='pm'" );
+	$db->query( "UPDATE " . PREFIX . "_email SET template='$new_newsletter_text', use_html='1' WHERE name='newsletter'" );
+	$db->query( "UPDATE " . PREFIX . "_email SET template='$wait_mail_text', use_html='$wait_mail_html' WHERE name='wait_mail'" );
+	$db->query( "UPDATE " . PREFIX . "_email SET template='$twofactor_text', use_html='$twofactor_html' WHERE name='twofactor'" );
+	
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '31', '')" );
+	
+	msg( "success", $lang['mail_addok'], $lang['mail_addok_1'], "?mod=email" );
+
+} else {
+
+  $js_array[] = "engine/skins/codemirror/js/code.js";
+  $css_array[] = "engine/skins/codemirror/css/default.css";
+
+	echoheader( "<i class=\"fa fa-envelope-o position-left\"></i><span class=\"text-semibold\">{$lang['opt_email']}</span>", $lang['header_m_1'] );
+	
+	$db->query( "SELECT * FROM " . PREFIX . "_email" );
+	$use_html = array();
+	$mail_template = array();
+
+	while ( $row = $db->get_row() ) {
+		$mail_template[$row['name']] = htmlspecialchars( stripslashes( $row['template'] ), ENT_QUOTES, 'UTF-8' );
+		
+		if( $row['use_html'] ) $use_html[$row['name']] = 'checked'; else $use_html[$row['name']] = '';
+	}
+	$db->free();
+
+	echo <<<HTML
+<style>
+.CodeMirror {
+	height: 300px;
+	border: 1px solid #cccccc;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+</style>
+<form action="?mod=email&action=save" method="post">
+<input type="hidden" name="user_hash" value="$dle_login_hash" />
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['opt_email']}
+  </div>
+  <div class="panel-body">
+	
+
+<div class="accordion" id="accordion">
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+        {$lang['mail_info']}
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {$lang['mail_reg_info']}<br /><br />
+		<textarea dir="auto" class="classic html_editor" rows="15" style="width:100%;" name="reg_mail_text">{$mail_template['reg_mail']}</textarea>
+		<div class="checkbox"><label><input class="icheck" type="checkbox" id="reg_mail_html" name="reg_mail_html" value="1" {$use_html['reg_mail']}>{$lang['email_use_html']}</label></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+        {$lang['mail_info_1']}
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {$lang['mail_feed_info']}<br /><br />
+		<textarea dir="auto" class="classic html_editor" rows="15" style="width:100%;" name="feed_mail_text">{$mail_template['feed_mail']}</textarea>
+		<div class="checkbox"><label><input class="icheck" type="checkbox" id="feed_mail_html" name="feed_mail_html" value="1" {$use_html['feed_mail']}>{$lang['email_use_html']}</label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        {$lang['mail_info_2']}
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {$lang['mail_lost_info']}<br /><br />
+		<textarea dir="auto" class="classic html_editor" rows="15" style="width:100%;" name="lost_mail_text">{$mail_template['lost_mail']}</textarea>
+		<div class="checkbox"><label><input class="icheck" type="checkbox" id="lost_mail_html" name="lost_mail_html" value="1" {$use_html['lost_mail']}>{$lang['email_use_html']}</label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        {$lang['mail_info_3']}
+      </a>
+    </div>
+    <div id="collapse4" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {$lang['mail_news_info']}<br /><br />
+		<textarea dir="auto" class="classic html_editor" rows="15" style="width:100%;" name="new_news_text">{$mail_template['new_news']}</textarea>
+		<div class="checkbox"><label><input class="icheck" type="checkbox" id="new_news_html" name="new_news_html" value="1" {$use_html['new_news']}>{$lang['email_use_html']}</label></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+        {$lang['mail_info_4']}
+      </a>
+    </div>
+    <div id="collapse5" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {$lang['mail_comm_info']}<br /><br />
+		<textarea dir="auto" class="classic html_editor" rows="15" style="width:100%;" name="new_comments_text">{$mail_template['comments']}</textarea>
+		<div class="checkbox"><label><input class="icheck" type="checkbox" id="new_comments_html" name="new_comments_html" value="1" {$use_html['comments']}>{$lang['email_use_html']}</label></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+        {$lang['mail_info_6']}
+      </a>
+    </div>
+    <div id="collapse6" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {$lang['mail_pm_info']}<br /><br />
+		<textarea dir="auto" class="classic html_editor" rows="15" style="width:100%;" name="new_pm_text">{$mail_template['pm']}</textarea>
+		<div class="checkbox"><label><input class="icheck" type="checkbox" id="new_pm_html" name="new_pm_html" value="1" {$use_html['pm']}>{$lang['email_use_html']}</label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+        {$lang['mail_info_8']}
+      </a>
+    </div>
+    <div id="collapse7" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {$lang['mail_wait_info']}<br /><br />
+		<textarea dir="auto" class="classic html_editor" rows="15" style="width:100%;" name="wait_mail_text">{$mail_template['wait_mail']}</textarea>
+		<div class="checkbox"><label><input class="icheck" type="checkbox" id="wait_mail_html" name="wait_mail_html" value="1" {$use_html['wait_mail']}>{$lang['email_use_html']}</label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+        {$lang['mail_info_9']}
+      </a>
+    </div>
+    <div id="collapse8" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {$lang['mail_twofactor_info']}<br /><br />
+		<textarea dir="auto" class="classic html_editor" rows="15" style="width:100%;" name="twofactor_text">{$mail_template['twofactor']}</textarea>
+		<div class="checkbox"><label><input class="icheck" type="checkbox" id="twofactor_html" name="twofactor_html" value="1" {$use_html['twofactor']}>{$lang['email_use_html']}</label></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+        {$lang['mail_info_7']}
+      </a>
+    </div>
+    <div id="collapse9" class="accordion-body collapse">
+      <div class="accordion-inner">
+        {$lang['mail_newsletter_info']}<br /><br />
+		    <textarea dir="auto" class="classic html_editor" rows="15" style="width:100%;" name="new_newsletter_text">{$mail_template['newsletter']}</textarea>
+      </div>
+    </div>
+  </div>  
+
+	  
+	</div>
+   </div>
+	<div class="panel-footer">
+	   <button type="submit" class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-floppy-o position-left"></i>{$lang['user_save']}</button>
+	</div>
+</div>
+</form>
+
+<script>
+$(function(){
+  $(".html_editor").each(function() {
+		var editor = CodeMirror.fromTextArea( this, {
+			mode: "htmlmixed",
+			dragDrop: false,
+			autoRefresh: true
+		  });
+	
+		function updateTextArea() {
+			editor.save();
+		}
+	
+		editor.on('change', updateTextArea);
+	});
+});
+</script>
+HTML;
+	
+	echofooter();
+}
+?>

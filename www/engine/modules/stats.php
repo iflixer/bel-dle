@@ -5,9 +5,149 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: stats.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: site statistics
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P2xmP3kweUhTKkhwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcEg5WWRSZG00bm85a3RENHRvOS05dXM5e1RuUnpvVTE5Vm9LNGQ5RVFUT3k5SC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tSDkwUlJ5MTpTU0tGby10b1UxalFPU0gtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUg5UFR5c1E0RDBSOShCKTl2CgpxLXYKdng5e1RuUnpvVTE5Vm9LNGQ5RVFUT3lIcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBIOUkwNDE5QlRLbzk0MTl5UVRSb0JSb0s5dXM5QlR5c1E0RDBSSHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwSDlpNEZvOjkxUmRSMWp5MHlILS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1IOUExbzo5MTRSbzkxUmRSNDFSNEIxSHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwSCpTSEg0big5IUtvbjR0b0soJ1laSVptMmlra3pFMnprJyk5KTlhSAkwb2RLb1EoOSJySUlMUzVqNTlxCl05aVRRdTRLS290IjkpO0gJMG9kS29ROSg5J21UQmRSNFR0OjlqalNqalMnOSk7SAlLNG8oOSJyZEJKNHREOWRSUm9neVIhIjkpO0hiSEgkUnlGLWxRbzFPRlJbJ0JUdFJvdFInNjlwOUtGb19CZEIwbyg5IjFSZFIxIiw5JEJUdG40RFsnMUo0dCc2LDlSUU9vOSk7SEg0big5JEJUdG40RFsnZEZGVFVfZEZSX09RRic2OSk5JEJkdFR0NEJkRjlwOSRCVHRuNERbJzBSUnlfMFRnb19PUUYnNjlqOSIxUmRSNDFSNEIxajBSZ0YiOzlvRjFvOSRCZHRUdDRCZEY5cDkkTHJMX3trbWlqIj9LVHAxUmRSMSI7SEg0big5ITkkUnlGLWxRbzFPRlJbJ0JUdFJvdFInNjkpOWFISAkkS3UtbC9Pb1FzKDkie3JjPjlJWmVtazl7SVpJQXs5aS5jVjlgIjlqOVllelpWazlqOSJgIjkpO0gJJGdzMS9GXzE0R285cDkKO0gJVTA0Rm85KDkkUTlwOSRLdS1sRG9SX1FUVSgpOSk5YUhICQk0big5MVJReVQxKDkkUVsnemRnbyc2LDlMLmtpMjc5ajkiXyI5KTkhcHA5bmRGMW85KTkkZ3MxL0ZfMTRHbzkrcDkkUVsnWWRSZF9Gb3REUjAnNjkrOSRRWycydEtvaF9Gb3REUjAnNjtISAliSAkkS3UtbG5Rb28oKTtICUgJJGdzMS9GXzE0R285cDluVFFnZFIxNEdvKDkkZ3MxL0ZfMTRHbzkpO0gJSAkkUVRVOXA5JEt1LWwxT3lvUV8vT29Rcyg5IntrbWtQSTlQY0F6SSgqKTlkMTlCVE90UjlpLmNWOSI5ajlMLmtpMjc5ajkiX3lUMVIiOSk7SAkkMVJkUjFfdG9VMTlwOSRRVFVbJ0JUT3RSJzY7SAlICSRRVFU5cDkkS3UtbDFPeW9RXy9Pb1FzKDkie2tta1BJOVBjQXpJKCopOWQxOUJUT3RSOWkuY1Y5IjlqOUwua2kyNzlqOSJfeVQxUjk+cmsuazlkeXlRVD1vOXAnNSciOSk7SAkkMVJkUjFfZHl5UVQ9bzlwOSRRVFVbJ0JUT3RSJzY7SAlICSRRVFU5cDkkS3UtbDFPeW9RXy9Pb1FzKDkie2tta1BJOVBjQXpJKCopOWQxOUJUT3RSOWkuY1Y5IjlqOUwua2kyNzlqOSJfQlRnZ290UjEiOSk7SAkkQlRPdFJfQlRnZ290UjE5cDkkUVRVWydCVE90Uic2O0gJSAkkUVRVOXA5JEt1LWwxT3lvUV8vT29Rcyg5IntrbWtQSTlQY0F6SSgqKTlkMTlCVE90UjlpLmNWOSI5ajlBe2suTC5raTI3OWo5Il9PMW9RMSI5KTtICSQxUmRSMV9PMW9RMTlwOSRRVFVbJ0JUT3RSJzY7SAlICSRRVFU5cDkkS3UtbDFPeW9RXy9Pb1FzKDkie2tta1BJOVBjQXpJKCopOWQxOUJUT3RSOWkuY1Y5IjlqOUF7ay5MLmtpMjc5ajkiX08xb1ExOT5yay5rOXVkdHRvS3Anc28xJyI5KTtICSQxUmRSMV91ZHR0b0s5cDkkUVRVWydCVE90Uic2O0gJSAkkUVRVOXA5JEt1LWwxT3lvUV8vT29Rcyg5IntrbWtQSTlQY0F6SSgqKTlkMTlCVE90UjlpLmNWOSI5ajlMLmtpMjc5ajkiX3lUMVI5PnJrLms5ZEZGVFVfZ2Q0dDlwJzUnOVp6WTlkeXlRVD1vOXAnNSciOSk7SAkkMVJkUjFfZ2Q0dDlwOSRRVFVbJ0JUT3RSJzY7SAlICSRSb2d5X0tkUm85cDlLZFJvKDknMy1nLUs5cjo0Jyw5JF9JMlZrOS05KF1YCgo5Kjl2cSk5KTtICSRRVFU5cDkkS3UtbDFPeW9RXy9Pb1FzKDkie2tta1BJOVBjQXpJKCopOWQxOUJUT3RSOWkuY1Y5IjlqOUwua2kyNzlqOSJfeVQxUjk+cmsuazlLZFJvOWxwOSckUm9neV9LZFJvJ1p6WTlLZFJvOWZwOSciaktkUm8oOSczLWctSzlyOjQnLDkkX0kyVmspaiInOVp6WTlkeXlRVD1vOXAnNSciOSk7SAkkMVJkUjFfS2RzOXA5JFFUVVsnQlRPdFInNjtICUgJJFFUVTlwOSRLdS1sMU95b1FfL09vUXMoOSJ7a21rUEk5UGNBekkoKik5ZDE5QlRPdFI5aS5jVjkiOWo5TC5raTI3OWo5Il9CVGdnb3RSMTk+cmsuazlLZFJvOWxwOSckUm9neV9LZFJvJ1p6WTlLZFJvOWZwOSciaktkUm8oOSczLWctSzlyOjQnLDkkX0kyVmspaiInIjkpO0gJJEJUZ2dvdFIxX0tkczlwOSRRVFVbJ0JUT3RSJzY7SAlICSRSb2d5X0tkUm85cDlLZFJvKDknMy1nLUs5cjo0Jyw5JF9JMlZrOS05KF1YCgo5Kjl2cTkqOVcpOSk7SAkkUVRVOXA5JEt1LWwxT3lvUV8vT29Rcyg5IntrbWtQSTlQY0F6SSgqKTlkMTlCVE90UjlpLmNWOSI5ajlMLmtpMjc5ajkiX3lUMVI5PnJrLms5S2RSbzlscDknJFJvZ3lfS2RSbydaelk5S2RSbzlmcDknImpLZFJvKDknMy1nLUs5cjo0Jyw5JF9JMlZrKWoiJzlaelk5ZHl5UVQ9bzlwJzUnIjkpO0gJJDFSZFIxX1Vvb0o5cDkkUVRVWydCVE90Uic2O0gJSAkkUVRVOXA5JEt1LWwxT3lvUV8vT29Rcyg5IntrbWtQSTlQY0F6SSgqKTlkMTlCVE90UjlpLmNWOSI5ajlMLmtpMjc5ajkiX0JUZ2dvdFIxOT5yay5rOUtkUm85bHA5JyRSb2d5X0tkUm8nWnpZOUtkUm85ZnA5JyJqS2RSbyg5JzMtZy1LOXI6NCcsOSRfSTJWaylqIiciOSk7SAkkQlRnZ290UjFfVW9vSjlwOSRRVFVbJ0JUT3RSJzY7SAlICSRSb2d5X0tkUm85cDlLZFJvKDknMy1nLUs5cjo0Jyw5JF9JMlZrOS05KF1YCgo5Kjl2cTkqOV01KTkpO0gJJFFUVTlwOSRLdS1sMU95b1FfL09vUXMoOSJ7a21rUEk5UGNBekkoKik5ZDE5QlRPdFI5aS5jVjkiOWo5TC5raTI3OWo5Il95VDFSOT5yay5rOUtkUm85bHA5JyRSb2d5X0tkUm8nWnpZOUtkUm85ZnA5JyJqS2RSbyg5JzMtZy1LOXI6NCcsOSRfSTJWaylqIic5WnpZOWR5eVFUPW85cCc1JyI5KTtICSQxUmRSMV9nVHRSMDlwOSRRVFVbJ0JUT3RSJzY7SAlICSRRVFU5cDkkS3UtbDFPeW9RXy9Pb1FzKDkie2tta1BJOVBjQXpJKCopOWQxOUJUT3RSOWkuY1Y5IjlqOUwua2kyNzlqOSJfQlRnZ290UjE5PnJrLms5S2RSbzlscDknJFJvZ3lfS2RSbydaelk5S2RSbzlmcDknImpLZFJvKDknMy1nLUs5cjo0Jyw5JF9JMlZrKWoiJyI5KTtICSRCVGdnb3RSMV9nVHRSMDlwOSRRVFVbJ0JUT3RSJzY7SAlICSRSb2d5X0tkUm85cDkkX0kyVms5LTkoXVgKCjkqOXZxKTtICSRRVFU5cDkkS3UtbDFPeW9RXy9Pb1FzKDkie2tta1BJOVBjQXpJKCopOWQxOUJUT3RSOWkuY1Y5IjlqOUF7ay5MLmtpMjc5ajkiX08xb1ExOT5yay5rOVFvRF9LZFJvOWw5JyRSb2d5X0tkUm8nIjkpO0gJJE8xb1FfS2RzOXA5JFFUVVsnQlRPdFInNjtICUgJJFJvZ3lfS2RSbzlwOSRfSTJWazktOShdWAoKOSo5dnE5KjlXKTtICSRRVFU5cDkkS3UtbDFPeW9RXy9Pb1FzKDkie2tta1BJOVBjQXpJKCopOWQxOUJUT3RSOWkuY1Y5IjlqOUF7ay5MLmtpMjc5ajkiX08xb1ExOT5yay5rOVFvRF9LZFJvOWw5JyRSb2d5X0tkUm8nIjkpO0gJJE8xb1FfVW9vSjlwOSRRVFVbJ0JUT3RSJzY7SAlICSRSb2d5X0tkUm85cDkkX0kyVms5LTkoXVgKCjkqOXZxOSo5XTUpO0gJJFFUVTlwOSRLdS1sMU95b1FfL09vUXMoOSJ7a21rUEk5UGNBekkoKik5ZDE5QlRPdFI5aS5jVjkiOWo5QXtrLkwua2kyNzlqOSJfTzFvUTE5PnJrLms5UW9EX0tkUm85bDknJFJvZ3lfS2RSbyciOSk7SAkkTzFvUV9nVHRSMDlwOSRRVFVbJ0JUT3RSJzY7SAlICSRSeUYtbEZUZEtfUm9neUZkUm8oOScxUmRSMWpSeUYnOSk7SAlICSRSeUYtbDFvUig5J2FLZFJvdHVkdEpiJyw5JGdzMS9GXzE0R285KTtICSRSeUYtbDFvUig5J2F0b1UxX3RPZ2InLDkkMVJkUjFfdG9VMTkpO0gJJFJ5Ri1sMW9SKDknYXRvVTFfZEZGVFViJyw5JDFSZFIxX2R5eVFUPW85KTtICSRSeUYtbDFvUig5J2FCVGdnX3RPZ2InLDkkQlRPdFJfQlRnZ290UjE5KTtICSRSeUYtbDFvUig5J2FPMW9RX3RPZ2InLDkkMVJkUjFfTzFvUTE5KTtICSRSeUYtbDFvUig5J2FPMW9RX3VkdHRvS2InLDkkMVJkUjFfdWR0dG9LOSk7SAkkUnlGLWwxb1IoOSdhdG9VMV9nZDR0YicsOSQxUmRSMV9nZDR0OSk7SAkkUnlGLWwxb1IoOSdhdG9VMV9nVEtvUWInLDkkMVJkUjFfdG9VMTktOSQxUmRSMV9keXlRVD1vOSk7SAlICSRSeUYtbDFvUig5J2F0b1UxX0tkc2InLDkkMVJkUjFfS2RzOSk7SAkkUnlGLWwxb1IoOSdhdG9VMV9Vb29KYicsOSQxUmRSMV9Vb29KOSk7SAkkUnlGLWwxb1IoOSdhdG9VMV9nVHRSMGInLDkkMVJkUjFfZ1R0UjA5KTtICUgJJFJ5Ri1sMW9SKDknYUJUZ2dfS2RzYicsOSRCVGdnb3RSMV9LZHM5KTtICSRSeUYtbDFvUig5J2FCVGdnX1Vvb0piJyw5JEJUZ2dvdFIxX1Vvb0o5KTtICSRSeUYtbDFvUig5J2FCVGdnX2dUdFIwYicsOSRCVGdnb3RSMV9nVHRSMDkpO0gJSAkkUnlGLWwxb1IoOSdhTzFvUV9LZHNiJyw5JE8xb1FfS2RzOSk7SAkkUnlGLWwxb1IoOSdhTzFvUV9Vb29KYicsOSRPMW9RX1Vvb0o5KTtICSRSeUYtbDFvUig5J2FPMW9RX2dUdFIwYicsOSRPMW9RX2dUdFIwOSk7SAlICSRLdS1sL09vUXMoOSJ7a21rUEk5TzFvUV80Syw5dGRnbyw5TzFvUV9EUVRPeSw5UW9EX0tkUm8sOUZkMVJLZFJvLDl0b1UxX3RPZyw5QlRnZ190T2c5aS5jVjkiOWo5QXtrLkwua2kyNzlqOSJfTzFvUTE5PnJrLms5dG9VMV90T2c5bDknCic5Yy5Zay45ZTM5dG9VMV90T2c5WWt7UDltMlYySTkKLDUKIjkpO0gJSAkkUlR5X1JkdUZvOXA5ImZSMG9kS2xmUlFsZlJLbGEkRmR0RFsnUlR5X3RkZ28nNmJmU1JLbGZSSzlkRjREdHBcIkJvdFJvUVwibGEkRmR0RFsnUlR5XzFSZFJPMSc2YmZTUktsZlJLOWRGNER0cFwiQm90Um9RXCJsYSRGZHREWydSVHlfUW9EJzZiZlNSS2xmUks5ZEY0RHRwXCJCb3RSb1FcImxhJEZkdERbJ1JUeV9GZDFSJzZiZlNSS2xmUks5ZEY0RHRwXCJCb3RSb1FcImxhJEZkdERbJ1JUeV90dE9nJzZiZlNSS2xmUks5ZEY0RHRwXCJCb3RSb1FcImxhJEZkdERbJ1JUeV9CdE9nJzZiZlNSS2xmUks5ZEY0RHRwXCJCb3RSb1FcImxhJEZkdERbJ1JUeV95Zyc2YmZTUktsZlNSUWxmU1Iwb2RLbCI7SAlICVUwNEZvOSg5JFFUVTlwOSRLdS1sRG9SX1FUVSgpOSk5YUgJCUgJCSRRb0Q0MVJRZFI0VHQ5cDlGZHRES2RSbyg5JEJUdG40RFsnUjRnbzFSZGd5X2RCUjQ9byc2LDkkUVRVWydRb0RfS2RSbyc2OSk7SAkJJEZkMVI5cDlGZHRES2RSbyg5JEJUdG40RFsnUjRnbzFSZGd5X2RCUjQ9byc2LDkkUVRVWydGZDFSS2RSbyc2OSk7SEgJCTRuKDkkQlR0bjREWydkRkZUVV9kRlJfT1FGJzY5KTlhSAkJCUgJCQkkTzFvUV90ZGdvOXA5JEJUdG40RFsnMFJSeV8wVGdvX09RRic2OWo5Ik8xb1FTIjlqOU9RRm90QlRLbyg5JFFUVVsndGRnbyc2OSk5ajkiUyI7SAkJCSRPMW9RX3RkZ285cDkiVHRCRjRCSnBcInswVFVMUVRuNEZvKCciOWo5T1FGb3RCVEtvKDkkUVRVWyd0ZGdvJzY5KTlqOSInLDknIjlqOTBSZ0YxeW9CNGRGQjBkUTEoOSRPMW9RX3RkZ28sOWt6SV9NQWNJa3ssOSdBSWktOCc5KTlqOSInLDknIjlqOSRPMW9RX0RRVE95WyRnb2d1b1FfNEtbJ08xb1FfRFFUT3knNjZbJ2RLZzR0X29LNFJPMW9RMSc2OWo5IicpOzlRb1JPUXQ5bmRGMW87XCIiO0gJCQkkTzFvUV90ZGdvOXA5ImZkOWEkTzFvUV90ZGdvYjlCRmQxMXBcInlnX0Y0MVJcIjkwUW9ucFwiIjlqOSRCVHRuNERbJzBSUnlfMFRnb19PUUYnNjlqOSJPMW9RUyI5ajlPUUZvdEJUS28oOSRRVFVbJ3RkZ28nNjkpOWo5IlNcImwiOWo5JFFUVVsndGRnbyc2OWo5ImZTZGwiO0gJCUgJCWI5b0YxbzlhSAkJCUgJCQkkTzFvUV90ZGdvOXA5IiRMckxfe2ttaT8xT3VkQlI0VHRwTzFvUTR0blQmTzFvUXAiOWo5T1FGb3RCVEtvKDkkUVRVWyd0ZGdvJzY5KTtICQkJJE8xb1FfdGRnbzlwOSJUdEJGNEJKcFwiezBUVUxRVG40Rm8oJyI5ajlPUUZvdEJUS28oOSRRVFVbJ3RkZ28nNjkpOWo5IicsOSciOWo5MFJnRjF5b0I0ZEZCMGRRMSg5JE8xb1FfdGRnbyw5a3pJX01BY0lreyw5J0FJaS04JzkpOWo5IicsOSciOWo5JE8xb1FfRFFUT3lbJGdvZ3VvUV80S1snTzFvUV9EUVRPeSc2NlsnZEtnNHRfb0s0Uk8xb1ExJzY5ajkiJyk7OVFvUk9RdDluZEYxbztcIiI7SAkJCSRPMW9RX3RkZ285cDkiZmQ5YSRPMW9RX3RkZ29iOUJGZDExcFwieWdfRjQxUlwiOTBRb25wXCIkTHJMX3trbWk/MU91ZEJSNFR0cE8xb1E0dG5UJmRneTtPMW9RcCI5ajlPUUZvdEJUS28oOSRRVFVbJ3RkZ28nNjkpOWo5IlwibCI5ajkkUVRVWyd0ZGdvJzY5ajkiZlNkbCI7SEgJCWJICQkJCUgJCSRPMW9RX3lnOXA5ImZkOTBRb25wXCIkTHJMX3trbWk/S1RweWcmZGd5O0tUZEJSNFR0cHRvVXlnJmRneTtPMW9RdGRnb3AiOWo5T1FGb3RCVEtvKCRRVFVbJ3RkZ28nNik5ajkiXCJsYSRGZHREWydSVHlfeWcnNmJmU2RsIjtICQlICQkkUlR5X1JkdUZvOWpwOSJmUlFsZlJLbGEkTzFvUV90ZGdvYmZTUktsZlJLOWRGNER0cFwiQm90Um9RXCJsYSRPMW9RX0RRVE95WyRRVFVbJ08xb1FfRFFUT3knNjZbJ0RRVE95X3lRb240aCc2YmEkTzFvUV9EUVRPeVskUVRVWydPMW9RX0RRVE95JzY2WydEUVRPeV90ZGdvJzZiYSRPMW9RX0RRVE95WyRRVFVbJ08xb1FfRFFUT3knNjZbJ0RRVE95XzFPbm40aCc2YmZTUktsZlJLOWRGNER0cFwiQm90Um9RXCJsYSRRb0Q0MVJRZFI0VHRiZlNSS2xmUks5ZEY0RHRwXCJCb3RSb1FcImxhJEZkMVJiZlNSS2xmUks5ZEY0RHRwXCJCb3RSb1FcImxhJFFUVVsndG9VMV90T2cnNmJmU1JLbGZSSzlkRjREdHBcIkJvdFJvUVwibGEkUVRVWydCVGdnX3RPZyc2YmZTUktsZlJLOWRGNER0cFwiQm90Um9RXCJsWzlhJE8xb1FfeWdiOTZmU1JLbGZTUlFsIjtICUgJYkgJSAkkS3UtbG5Rb28oKTtICUgJJFJ5Ri1sMW9SKDknYVJUeU8xb1ExYicsOSRSVHlfUmR1Rm85KTtICUgJJFJ5Ri1sQlRneTRGbyg5J0JUdFJvdFInOSk7SAkkUnlGLWxCRm9kUSgpO0gJSAlCUW9kUm9fQmRCMG8oOSIxUmRSMSIsOSRSeUYtbFFvMU9GUlsnQlR0Um90Uic2LDkkQlR0bjREWycxSjR0JzYsOVJRT285KTtIYkg/bA==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdoNllEMlRQT0M8e2dYdzNyUVpjc01BRUlhb2JtQmw9NEx2LnggOThwakt0Pkd6aVdWRjVlSmtOSGZSblV9U10weS9kN3FbdTEKJywneF1EZ0lvQ3VaVlNtNjlZSHJBT3lRVUdUe2V9TGM+dmlQMlI1aiA4PS5kbld6TkY3TWwxQmtFSgo8dGZ3Sy8zaHBxYVg0W2JzMCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$tpl->result['content'] = dle_cache( "stats", $config['skin'], true );
+
+if( $config['allow_alt_url'] ) $canonical = $config['http_home_url'] . "statistics.html"; else $canonical = $PHP_SELF."?do=stats";
+
+if( ! $tpl->result['content'] ) {
+
+	$db->query( "SHOW TABLE STATUS FROM `" . DBNAME . "`" );
+	$mysql_size = 0;
+	while ( $r = $db->get_row() ) {
+
+		if( strpos( $r['Name'], PREFIX . "_" ) !== false ) $mysql_size += $r['Data_length'] + $r['Index_length'];
+
+	}
+	$db->free();
+	
+	$mysql_size = formatsize( $mysql_size );
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_post" );
+	$stats_news = $row['count'];
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_post WHERE approve ='1'" );
+	$stats_approve = $row['count'];
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_comments" );
+	$count_comments = $row['count'];
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . USERPREFIX . "_users" );
+	$stats_users = $row['count'];
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . USERPREFIX . "_users WHERE banned='yes'" );
+	$stats_banned = $row['count'];
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_post WHERE allow_main ='1' AND approve ='1'" );
+	$stats_main = $row['count'];
+	
+	$temp_date = date( 'Y-m-d H:i', $_TIME - (3600 * 24) );
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_post WHERE date >= '$temp_date'AND date <= '".date( 'Y-m-d H:i', $_TIME)."' AND approve ='1'" );
+	$stats_day = $row['count'];
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_comments WHERE date >= '$temp_date'AND date <= '".date( 'Y-m-d H:i', $_TIME)."'" );
+	$comments_day = $row['count'];
+	
+	$temp_date = date( 'Y-m-d H:i', $_TIME - (3600 * 24 * 7) );
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_post WHERE date >= '$temp_date'AND date <= '".date( 'Y-m-d H:i', $_TIME)."' AND approve ='1'" );
+	$stats_week = $row['count'];
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_comments WHERE date >= '$temp_date'AND date <= '".date( 'Y-m-d H:i', $_TIME)."'" );
+	$comments_week = $row['count'];
+	
+	$temp_date = date( 'Y-m-d H:i', $_TIME - (3600 * 24 * 31) );
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_post WHERE date >= '$temp_date'AND date <= '".date( 'Y-m-d H:i', $_TIME)."' AND approve ='1'" );
+	$stats_month = $row['count'];
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_comments WHERE date >= '$temp_date'AND date <= '".date( 'Y-m-d H:i', $_TIME)."'" );
+	$comments_month = $row['count'];
+	
+	$temp_date = $_TIME - (3600 * 24);
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . USERPREFIX . "_users WHERE reg_date > '$temp_date'" );
+	$user_day = $row['count'];
+	
+	$temp_date = $_TIME - (3600 * 24 * 7);
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . USERPREFIX . "_users WHERE reg_date > '$temp_date'" );
+	$user_week = $row['count'];
+	
+	$temp_date = $_TIME - (3600 * 24 * 31);
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . USERPREFIX . "_users WHERE reg_date > '$temp_date'" );
+	$user_month = $row['count'];
+	
+	$tpl->load_template( 'stats.tpl' );
+	
+	$tpl->set( '{datenbank}', $mysql_size );
+	$tpl->set( '{news_num}', $stats_news );
+	$tpl->set( '{news_allow}', $stats_approve );
+	$tpl->set( '{comm_num}', $count_comments );
+	$tpl->set( '{user_num}', $stats_users );
+	$tpl->set( '{user_banned}', $stats_banned );
+	$tpl->set( '{news_main}', $stats_main );
+	$tpl->set( '{news_moder}', $stats_news - $stats_approve );
+	
+	$tpl->set( '{news_day}', $stats_day );
+	$tpl->set( '{news_week}', $stats_week );
+	$tpl->set( '{news_month}', $stats_month );
+	
+	$tpl->set( '{comm_day}', $comments_day );
+	$tpl->set( '{comm_week}', $comments_week );
+	$tpl->set( '{comm_month}', $comments_month );
+	
+	$tpl->set( '{user_day}', $user_day );
+	$tpl->set( '{user_week}', $user_week );
+	$tpl->set( '{user_month}', $user_month );
+	
+	$db->query( "SELECT user_id, name, user_group, reg_date, lastdate, news_num, comm_num FROM " . USERPREFIX . "_users WHERE news_num > '0' ORDER BY news_num DESC LIMIT 0,10" );
+	
+	$top_table = "<thead><tr><td>{$lang['top_name']}</td><td align=\"center\">{$lang['top_status']}</td><td align=\"center\">{$lang['top_reg']}</td><td align=\"center\">{$lang['top_last']}</td><td align=\"center\">{$lang['top_nnum']}</td><td align=\"center\">{$lang['top_cnum']}</td><td align=\"center\">{$lang['top_pm']}</td></tr></thead>";
+	
+	while ( $row = $db->get_row() ) {
+		
+		$registration = langdate( $config['timestamp_active'], $row['reg_date'] );
+		$last = langdate( $config['timestamp_active'], $row['lastdate'] );
+
+		if( $config['allow_alt_url'] ) {
+			
+			$user_name = $config['http_home_url'] . "user/" . urlencode( $row['name'] ) . "/";
+			$user_name = "onclick=\"ShowProfile('" . urlencode( $row['name'] ) . "', '" . htmlspecialchars( $user_name, ENT_QUOTES, 'UTF-8' ) . "', '" . $user_group[$member_id['user_group']]['admin_editusers'] . "'); return false;\"";
+			$user_name = "<a {$user_name} class=\"pm_list\" href=\"" . $config['http_home_url'] . "user/" . urlencode( $row['name'] ) . "/\">" . $row['name'] . "</a>";
+		
+		} else {
+			
+			$user_name = "$PHP_SELF?subaction=userinfo&user=" . urlencode( $row['name'] );
+			$user_name = "onclick=\"ShowProfile('" . urlencode( $row['name'] ) . "', '" . htmlspecialchars( $user_name, ENT_QUOTES, 'UTF-8' ) . "', '" . $user_group[$member_id['user_group']]['admin_editusers'] . "'); return false;\"";
+			$user_name = "<a {$user_name} class=\"pm_list\" href=\"$PHP_SELF?subaction=userinfo&amp;user=" . urlencode( $row['name'] ) . "\">" . $row['name'] . "</a>";
+
+		}
+				
+		$user_pm = "<a href=\"$PHP_SELF?do=pm&amp;doaction=newpm&amp;username=" . urlencode($row['name']) . "\">{$lang['top_pm']}</a>";
+		
+		$top_table .= "<tr><td>{$user_name}</td><td align=\"center\">{$user_group[$row['user_group']]['group_prefix']}{$user_group[$row['user_group']]['group_name']}{$user_group[$row['user_group']]['group_suffix']}</td><td align=\"center\">{$registration}</td><td align=\"center\">{$last}</td><td align=\"center\">{$row['news_num']}</td><td align=\"center\">{$row['comm_num']}</td><td align=\"center\">[ {$user_pm} ]</td></tr>";
+	
+	}
+	
+	$db->free();
+	
+	$tpl->set( '{topusers}', $top_table );
+	
+	$tpl->compile( 'content' );
+	$tpl->clear();
+	
+	create_cache( "stats", $tpl->result['content'], $config['skin'], true );
+}
+?>

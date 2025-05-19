@@ -5,9 +5,197 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: rss.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: the news feeds
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3NQP1RTVHpZKnpjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3pHalhlWDxneF1HCjU3ZzVdRy1HTTRHb0V4ZWldQzBHNl1wZ1hHQlJFZlRHei0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tekdTZWVUMDpZWXBMXS01XUMwSFJmWXotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLXpHSkVUNFJnN1NlRyhhKUd0REQ4LXREdDNHb0V4ZWldQzBHNl1wZ1hHQlJFZlR6Y2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2N6Ry9TZzBHYUVwXUdnMEdUUkVlXWFlXXBHTTRHYUVUNFJnN1NlemNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Njekd1Z0xdOkdSMDBIVFNUei0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tekdPMF06R2VTXUc1XUMwR3hdXXAwemNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjeipZenpneChHIXBdeGc1XXAoRydqQS9BPFF1CgppQlFpCidHKUcpR0Z6CVNdWHBdUihHIn0vL2JZeUh5RzhEbEd1RVJNZ3BwXTUiRyk7eglTXVhwXVJHKEcnPEVhWGVnRTU6R0hIWSdHKTt6CXBnXShHIn1YYT5nNTdHWGVlXVZUZSEiRyk7emR6emd4KCRwTF1fVkVwZkxdRyFjRyJWWGc1IkdBaWpHJHBMXV9WRXBmTF1HIWNHIlhMTDVdQzAiR0FpakckcExdX1ZFcGZMXUchY0ciYVhlWExFNyJHQWlqRyRwTF1fVkVwZkxdRyFjRyJhWGUiKUdGeglTXVhwXVIoRyJ9Ly9iWXlIeUc4RGxHdUVSTWdwcF01IkcpO3oJU11YcF1SRyhHJzxFYVhlZ0U1OkdZJ0cpO3oJcGddKCJ9WGE+ZzU3R1hlZV1WVGUhIik7emR6emc1YUxmcF1fRTVhXUcoajwKYkxmN2c1MDo6SlNdYT4oPXt7L19qUT1HSEcnWUxYNTdmWDddWSdHSEckYUU1eGc3bidMWDU3MCcuR0hHJ1lDXU0wZ2VdSEw1NycpKTt6emd4RygwZVJURTAoJGFFNXhnN24nU2VlVF9TRVZdX2ZSTCcuLEciWVkiKUdjY2NHRClHJGFFNXhnN24nU2VlVF9TRVZdX2ZSTCcuR2NHIlNlZVQwOiJIJGFFNXhnN24nU2VlVF9TRVZdX2ZSTCcuO3pdTDBdZ3hHKDBlUlRFMCgkYUU1eGc3bidTZWVUX1NFVl1fZlJMJy4sRyJZIilHY2NjR0QpRyRhRTV4ZzduJ1NlZVRfU0VWXV9mUkwnLkdjRyJTZWVUMDpZWSJIJF9vCj1OCj1uJ30vL2JffXtvLycuSCRhRTV4ZzduJ1NlZVRfU0VWXV9mUkwnLjt6eiRlVExHY0c1XUNHcExdX2VdVlRMWGVdKEcpO3okZVRMLXNwZ1JHY0c9e3svX2pRPUdIRydZZV1WVExYZV0wJzt6cF14ZzVdKEcnLwo2YjxBLwpfalE9JyxHJGVUTC1zcGdSRyk7enokVl1WTV1SX2dwbidmMF1SXzdSRWZUJy5HY0czO3p6Z3hHKGcwMF1lKCRfQgovbidhWGVdN0VSNCcuKUdBaWpHJF9CCi9uJ2FYZV03RVI0Jy4pR0Z6CSRhWGVdN0VSNF9ncEdjRzddZV9RaigkX0IKL24nYVhlXTdFUjQnLik7emRHXUwwXUckYVhlXTdFUjRfZ3BHY0d4WEwwXTt6eiRtZ11DX2VdVlRMWGVdR2NHIlIwMCI7eiRSMDBWRXBdR2NHZzAwXWUoJF89CmtPCm8vbidSMDBWRXBdJy4pRz9HJF89CmtPCm8vbidSMDBWRXBdJy5HOkcnJzt6enokYUU1eGc3bidYTExFQ19hWGFTXScuR2NHZVJmXTt6JGFFNXhnN24nWExMRUNfTVg1NV1SJy5HY0d4WEwwXTt6JGFFNXhnN24nUjAwXzVmVk1dUicuR2NHZzVlbVhMKEckYUU1eGc3bidSMDBfNWZWTV1SJy5HKTt6JGEwZVhSZUdjR0Q7enokYUU1eGc3bidSMDBfVFhSWFYwJy5HY0dlUmdWKFNlVkxfXTVlZ2U0X3BdYUVwXSgkYUU1eGc3bidSMDBfVFhSWFYwJy4sRwppL19rT3svCm8sRydmZXgtWicpKTt6JGFFNXhnN24nUjAwX2VmUk1FVFhSWFYwJy5HY0dlUmdWKFNlVkxfXTVlZ2U0X3BdYUVwXSgkYUU1eGc3bidSMDBfZWZSTUVUWFJYVjAnLixHCmkvX2tPey8KbyxHJ2ZleC1aJykpO3okYUU1eGc3bidSMDBfcDldNVRYUlhWMCcuR2NHZVJnVihTZVZMX101ZWdlNF9wXWFFcF0oJGFFNXhnN24nUjAwX3A5XTVUWFJYVjAnLixHCmkvX2tPey8KbyxHJ2ZleC1aJykpO3p6Z3hHKEckZjBdUkcpRyRhRTV4ZzduJ1hMTEVDX2FYYVNdJy5HY0d4WEwwXTt6emd4KEdnMDBdZSgkX0IKL24nMGZNWGFlZ0U1Jy4pR0FpakckX0IKL24nMGZNWGFlZ0U1Jy5HY2NHJ1hMTDVdQzAnRylHJGFFNXhnN24nU0VWXV9lZ2VMXScuR2NHJExYNTduJzBTRUNfZjBdUl81XUMwJy5HSEcnRydHSEdTZVZMMFRdYWdYTGFTWFIwKEckZjBdUixHCmkvX2tPey8KbyxHJ08vdS1aJ0cpR0hHIkctRyJHSEckYUU1eGc3bidTRVZdX2VnZUxdJy47el1MMF1neChHZzAwXWUoJF9CCi9uJ3BFJy4pR0FpakckX0IKL24ncEUnLkdjY0cnYVhlJ0cpRyRhRTV4ZzduJ1NFVl1fZWdlTF0nLkdjRzBlUmdUMExYMFNdMChHJGFYZV9nNXhFbiRhWGVdN0VSNF9ncC5uJzVYVl0nLkcpR0hHIkctRyJHSEckYUU1eGc3bidTRVZdX2VnZUxdJy47enokMF1MeF9mUkxHY0dTZVZMMFRdYWdYTGFTWFIwKCRfbwo9Tgo9bic9CmtPCm8vX29KfQo2CicuSCc6WVknSEckX28KPU4KPW4nbwo9Tgo9X2lBNgonLkdIRyRfbwo9Tgo9bic9CmtPCm8vX089UScuLEcKaS9fa097LwpvLEciZmV4LVoiKTt6eiRSMDBfYUU1ZV01ZUdjR1BQUDE2PHpQP3JWTEdtXVIwZ0U1YyJ5SEQiR101YUVwZzU3YyJPL3UtWiI/c3pQUjAwR21dUjBnRTVjInRIRCJHRiRhRTV4ZzduJ1IwMF9UWFJYVjAnLmRzelBhU1g1NV1Mc3pQZWdlTF1zRiRhRTV4ZzduJ1NFVl1fZWdlTF0nLmRQWWVnZUxdc3pQTGc1PnNGJGFFNXhnN24nU2VlVF9TRVZdX2ZSTCcuZFBZTGc1PnN6UFhlRVY6TGc1PkdTUl14YyIkMF1MeF9mUkwiR1JdTGMiMF1MeCJHZTRUXWMiWFRUTGdhWGVnRTVZUjAwK3JWTCJHWXN6UExYNTdmWDddc0YkTFg1N24nTFg1N2ZYN11fYUVwXScuZFBZTFg1N2ZYN11zelBwXTBhUmdUZWdFNXNGJGFFNXhnN24nU0VWXV9lZ2VMXScuZFBZcF0wYVJnVGVnRTVzejE2PDt6emd4KEckUjAwVkVwXUdjY0cncDldNScpR0Z6egkkUjAwX2FFNWVdNWVHY0dQUFAxNjx6UD9yVkxHbV1SMGdFNWMieUhEIkddNWFFcGc1N2MiTy91LVoiP3N6UFIwMEdtXVIwZ0U1YyJ0SEQiR0YkYUU1eGc3bidSMDBfcDldNVRYUlhWMCcuZHN6UGFTWDU1XUxzelBlZ2VMXXNGJGFFNXhnN24nU0VWXV9lZ2VMXScuZFBZZWdlTF1zelBMZzU+c0YkYUU1eGc3bidTZWVUX1NFVl1fZlJMJy5kUFlMZzU+c3pQTFg1N2ZYN11zRiRMWDU3bidMWDU3Zlg3XV9hRXBdJy5kUFlMWDU3Zlg3XXN6MTY8O3p6ZHp6Z3hHKCRSMDBWRXBdR2NjRydlZlJNRScpR0Z6egkkUjAwX2FFNWVdNWVHY0dQUFAxNjx6UD9yVkxHbV1SMGdFNWMieUhEIkddNWFFcGc1N2MiTy91LVoiP3N6UFIwMEdtXVIwZ0U1YyJ0SEQiR0YkYUU1eGc3bidSMDBfZWZSTUVUWFJYVjAnLmRzelBhU1g1NV1Mc3pQZWdlTF1zRiRhRTV4ZzduJ1NFVl1fZWdlTF0nLmRQWWVnZUxdc3pQTGc1PnNGJGFFNXhnN24nU2VlVF9TRVZdX2ZSTCcuZFBZTGc1PnN6UHBdMGFSZ1RlZ0U1c0YkYUU1eGc3bidTRVZdX2VnZUxdJy5kUFlwXTBhUmdUZWdFNXN6MTY8O3p6ZHp6emd4KEcheGdMXV9dcmcwZTAoRyRlVEwtc3BnUkdIRyJZUjAwSGVUTCJHKUcpR0Z6egkkZVRMLXNlXVZUTFhlXUdjR1BQUH0vNjx6blIwMC5QZ2VdVnN6UGVnZUxdc0ZlZ2VMXWRQWWVnZUxdc3pQN2ZncEdnMGJdUlZYPGc1PmMiZVJmXSJzRlIwMExnNT5kUFk3Zmdwc3pQTGc1PnNGUjAwTGc1PmRQWUxnNT5zelBwYTphUl1YZUVSc0ZSMDBYZmVTRVJkUFlwYTphUl1YZUVSc3pQVGZNalhlXXNGUjAwcFhlXWRQWVRmTWpYZV1zelBhWGVdN0VSNHNGYVhlXTdFUjRkUFlhWGVdN0VSNHN6UHBdMGFSZ1RlZ0U1c1AhbkpqQS9BbkYwU0VSZS0wZUVSNGQuLnNQWXBdMGFSZ1RlZ0U1c3pQWWdlXVZzbllSMDAuenpuZWZSTUUuUGdlXVZHZWZSTUVjImVSZl0ic3pQZWZSTUU6XXJlXTVwXXB9ZVZMc2VSZl1QWWVmUk1FOl1yZV01cF1wfWVWTHN6UExnNT5zRlIwMExnNT5kUFlMZzU+c3pQWGZlU0VSc0ZSMDBYZmVTRVJkUFlYZmVTRVJzelBhWGVdN0VSNHNGYVhlXTdFUjRkUFlhWGVdN0VSNHN6UFRmTWpYZV1zRlIwMHBYZV1kUFlUZk1qWGVdc3pQZWZSTUU6YUU1ZV01ZXNQIW5KakEvQW5GeGZMTC0wZUVSNGQuLnNQWWVmUk1FOmFFNWVdNWVzelBZZ2VdVnNuWWVmUk1FLnp6bnA5XTUuUGdlXVZzelBlZ2VMXXNGZWdlTF1kUFllZ2VMXXN6UExnNT5zRlIwMExnNT5kUFlMZzU+c3pQVHBYTGc1PnNGUjAwTGc1PmRQWVRwWExnNT5zelA3Zmdwc0Y1XUMwLWdwZFBZN2ZncHN6UFRmTWpYZV1zRlIwMHBYZV1kUFlUZk1qWGVdc3pQYVhlXTdFUjRzNVhlZ21dLTRdMFBZYVhlXTdFUjRzekZnVlg3XTBkelBhRTVlXTVlOl01YUVwXXBzUCFuSmpBL0FuRnhmTEwtMGVFUjRkLi5zUFlhRTVlXTVlOl01YUVwXXBzelBZZ2VdVnNuWXA5XTUuen0vNjw7enoJJGVUTC1zYUVUNF9lXVZUTFhlXUdjRyRlVEwtc2VdVlRMWGVdO3p6ZEddTDBdR0Z6CXoJJGVUTC1zTEVYcF9lXVZUTFhlXShHJ1IwMEhlVEwnRyk7egl6ZHp6emd4KEckYUU1eGc3bicwZ2VdX0V4eExnNV0nLkd7PUchJGFFNXhnN24nWExMRUNfUjAwJy5Hez1HKCRSMDBWRXBdR2NjRydwOV01J0dBaWpHISRhRTV4ZzduJ1hMTEVDXzRYNXBdcl9wOV01Jy4pR3s9RygkUjAwVkVwXUdjY0cnZWZSTUUnR0FpakchJGFFNXhnN24nWExMRUNfNFg1cF1yX2VmUk1FJy4pRylHRnoJegkkUjAwX2FFNWVdNWVHSGNHUFBQMTY8elBnZV1Wc3pQZWdlTF1zPW9vR2c1R0V4eExnNV1HVkVwXVBZZWdlTF1zelA3ZmdwR2cwYl1SVlg8ZzU+YyJlUmZdInNQWTdmZ3BzelBMZzU+c1BZTGc1PnN6UHBdMGFSZ1RlZ0U1cz1vb0dnNUdFeHhMZzVdR1ZFcF1QWXBdMGFSZ1RlZ0U1c3pQYVhlXTdFUjRzZjVwXXhnNV1wUFlhWGVdN0VSNHN6UFhmZVNFUnNqWGVYPGd4XUcKNTdnNV1QWVhmZVNFUnN6UFRmTWpYZV1zalhlWDxneF1HCjU3ZzVdUFlUZk1qWGVdc3pQWWdlXVZzejE2PDt6emRHXUwwXUdGegl6CWd4KEckUjAwVkVwXUdjY0cncDldNSdHKUdGegkJegkJJGVUTC1zZV1WVExYZV1HY0cwZVJfUl1UTFhhXShHJ25wOV01LicsRycnLEckZVRMLXNlXVZUTFhlXUcpO3oJCSRlVEwtc2VdVlRMWGVdR2NHMGVSX1JdVExYYV0oJ25ZcDldNS4nLEcnJyxHJGVUTC1zZV1WVExYZV1HKTt6CQkkZVRMLXNlXVZUTFhlXUdjR1RSXTdfUl1UTFhhXSgiJ1xcblIwMFxcLihIKj8pXFxuWVIwMFxcLicwZyIsRyIiLEckZVRMLXNlXVZUTFhlXUcpO3oJCSRlVEwtc2VdVlRMWGVdR2NHVFJdN19SXVRMWGFdKCInXFxuZWZSTUVcXC4oSCo/KVxcblllZlJNRVxcLicwZyIsRyIiLEckZVRMLXNlXVZUTFhlXUcpO3oJCSRlVEwtc2VdVlRMWGVdR2NHZVJnVigkZVRMLXNlXVZUTFhlXSk7egkJeglkR11MMF1neChHJFIwMFZFcF1HY2NHJ2VmUk1FJ0cpR0Z6CQl6CQkkZVRMLXNlXVZUTFhlXUdjRzBlUl9SXVRMWGFdKCduZWZSTUUuJyxHJycsRyRlVEwtc2VdVlRMWGVdRyk7egkJJGVUTC1zZV1WVExYZV1HY0cwZVJfUl1UTFhhXSgnblllZlJNRS4nLEcnJyxHJGVUTC1zZV1WVExYZV1HKTt6CQkkZVRMLXNlXVZUTFhlXUdjR1RSXTdfUl1UTFhhXSgiJ1xcbnA5XTVcXC4oSCo/KVxcbllwOV01XFwuJzBnIixHIiIsRyRlVEwtc2VdVlRMWGVdRyk7egkJJGVUTC1zZV1WVExYZV1HY0dUUl03X1JdVExYYV0oIidcXG5SMDBcXC4oSCo/KVxcbllSMDBcXC4nMGciLEciIixHJGVUTC1zZV1WVExYZV1HKTt6CQkkZVRMLXNlXVZUTFhlXUdjR2VSZ1YoJGVUTC1zZV1WVExYZV0pO3p6CWRHXUwwXUdGegkJegkJJGVUTC1zZV1WVExYZV1HY0cwZVJfUl1UTFhhXSgnblIwMC4nLEcnJyxHJGVUTC1zZV1WVExYZV1HKTt6CQkkZVRMLXNlXVZUTFhlXUdjRzBlUl9SXVRMWGFdKCduWVIwMC4nLEcnJyxHJGVUTC1zZV1WVExYZV1HKTt6CQkkZVRMLXNlXVZUTFhlXUdjR1RSXTdfUl1UTFhhXSgiJ1xcbmVmUk1FXFwuKEgqPylcXG5ZZWZSTUVcXC4nMGciLEciIixHJGVUTC1zZV1WVExYZV1HKTt6CQkkZVRMLXNlXVZUTFhlXUdjR1RSXTdfUl1UTFhhXSgiJ1xcbnA5XTVcXC4oSCo/KVxcbllwOV01XFwuJzBnIixHIiIsRyRlVEwtc2VdVlRMWGVdRyk7egkJJGVUTC1zZV1WVExYZV1HY0dlUmdWKCRlVEwtc2VdVlRMWGVdKTsJeglkegl6CSRlVEwtc2FFVDRfZV1WVExYZV1HY0ckZVRMLXNlXVZUTFhlXTt6CXoJZzVhTGZwXV9FNWFdRyhqPApiTGY3ZzUwOjpKU11hPigKaUJRaQpfalE9R0hHJ1ldNTdnNV1IVFNUJykpO3oJegkkUjAwX2FFNWVdNWVHSGNHJGVUTC1zUl0wZkxlbidhRTVlXTVlJy47emR6eiRSMDBfYUU1ZV01ZUdIY0cnUFlhU1g1NV1Mc1BZUjAwcyc7enokUjAwX2FFNWVdNWVHY0cwZVJfZ1JdVExYYV0oRydGL30KNgpkJyxHJGFFNXhnN24nU2VlVF9TRVZdX2ZSTCcuR0hHJ2VdVlRMWGVdMFknR0hHJGFFNXhnN24nMD5nNScuLEckUjAwX2FFNWVdNWVHKTt6elNdWHBdUihHIkpFNWVdNWUtZTRUXTpHWFRUTGdhWGVnRTVZclZMO0dhU1hSMF1lY2ZleC1aIkcpO3pdYVNFRyRSMDBfYUU1ZV01ZTt6enBnXSgpO3o=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCc8NXpQRj5lL2NocHhCWnJUQzJRb210VjZJcz1baQp5ZHZSYVg5IDRVcWdOdy4wRXVPWUpHZkhLM31EbGJdazhNajFXQTd7bkxTJywnTG4KPHtrdFQ9OWRmRzh4cHdLSVN2Mm1NNj5ScU5FMX1CcmNhekp5V1ppVjddc29GVS9DIHUuWTVIMDNQZVE0YkRYakFnT1tsaCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../' );
+	die( "Hacking attempt!" );
+}
+
+if($dle_module != "main" AND $dle_module != "allnews" AND $dle_module != "catalog" AND $dle_module != "cat") {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: /' );
+	die("Hacking attempt!");
+}
+
+include_once (DLEPlugins::Check(ROOT_DIR . '/language/' . $config['langs'] . '/website.lng'));
+
+if (strpos($config['http_home_url'], "//") === 0) $config['http_home_url'] = "https:".$config['http_home_url'];
+elseif (strpos($config['http_home_url'], "/") === 0) $config['http_home_url'] = "https://".$_SERVER['HTTP_HOST'].$config['http_home_url'];
+
+$tpl = new dle_template( );
+$tpl->dir = ROOT_DIR . '/templates';
+define( 'TEMPLATE_DIR', $tpl->dir );
+
+$member_id['user_group'] = 5;
+
+if (isset($_GET['category']) AND $_GET['category']) {
+	$category_id = get_ID($_GET['category']);
+} else $category_id = false;
+
+$view_template = "rss";
+$rssmode = isset($_REQUEST['rssmode']) ? $_REQUEST['rssmode'] : '';
+
+
+$config['allow_cache'] = true;
+$config['allow_banner'] = false;
+$config['rss_number'] = intval( $config['rss_number'] );
+$cstart = 0;
+
+$config['rss_params'] = trim(html_entity_decode($config['rss_params'], ENT_QUOTES, 'utf-8'));
+$config['rss_turboparams'] = trim(html_entity_decode($config['rss_turboparams'], ENT_QUOTES, 'utf-8'));
+$config['rss_dzenparams'] = trim(html_entity_decode($config['rss_dzenparams'], ENT_QUOTES, 'utf-8'));
+
+if ( $user ) $config['allow_cache'] = false;
+
+if( isset($_GET['subaction']) AND $_GET['subaction'] == 'allnews' ) $config['home_title'] = $lang['show_user_news'] . ' ' . htmlspecialchars( $user, ENT_QUOTES, 'UTF-8' ) . " - " . $config['home_title'];
+elseif( isset($_GET['do']) AND $_GET['do'] == 'cat' ) $config['home_title'] = stripslashes( $cat_info[$category_id]['name'] ) . " - " . $config['home_title'];
+
+$self_url = htmlspecialchars($_SERVER['REQUEST_SCHEME'].'://'. $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'], ENT_QUOTES, "utf-8");
+
+$rss_content = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" {$config['rss_params']}>
+<channel>
+<title>{$config['home_title']}</title>
+<link>{$config['http_home_url']}</link>
+<atom:link href="$self_url" rel="self" type="application/rss+xml" />
+<language>{$lang['language_code']}</language>
+<description>{$config['home_title']}</description>
+XML;
+
+if( $rssmode == 'dzen') {
+
+	$rss_content = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" {$config['rss_dzenparams']}>
+<channel>
+<title>{$config['home_title']}</title>
+<link>{$config['http_home_url']}</link>
+<language>{$lang['language_code']}</language>
+XML;
+
+}
+
+if ($rssmode == 'turbo') {
+
+	$rss_content = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" {$config['rss_turboparams']}>
+<channel>
+<title>{$config['home_title']}</title>
+<link>{$config['http_home_url']}</link>
+<description>{$config['home_title']}</description>
+XML;
+
+}
+
+
+if( !file_exists( $tpl->dir . "/rss.tpl" ) ) {
+
+	$tpl->template = <<<HTML
+[rss]<item>
+<title>{title}</title>
+<guid isPermaLink="true">{rsslink}</guid>
+<link>{rsslink}</link>
+<dc:creator>{rssauthor}</dc:creator>
+<pubDate>{rssdate}</pubDate>
+<category>{category}</category>
+<description><![CDATA[{short-story}]]></description>
+</item>[/rss]
+
+[turbo]<item turbo="true">
+<turbo:extendedHtml>true</turbo:extendedHtml>
+<link>{rsslink}</link>
+<author>{rssauthor}</author>
+<category>{category}</category>
+<pubDate>{rssdate}</pubDate>
+<turbo:content><![CDATA[{full-story}]]></turbo:content>
+</item>[/turbo]
+
+[dzen]<item>
+<title>{title}</title>
+<link>{rsslink}</link>
+<pdalink>{rsslink}</pdalink>
+<guid>{news-id}</guid>
+<pubDate>{rssdate}</pubDate>
+<category>native-yes</category>
+{images}
+<content:encoded><![CDATA[{full-story}]]></content:encoded>
+</item>[/dzen]
+HTML;
+
+	$tpl->copy_template = $tpl->template;
+
+} else {
+	
+	$tpl->load_template( 'rss.tpl' );
+	
+}
+
+
+if( $config['site_offline'] OR !$config['allow_rss'] OR ($rssmode == 'dzen' AND !$config['allow_yandex_dzen']) OR ($rssmode == 'turbo' AND !$config['allow_yandex_turbo']) ) {
+	
+	$rss_content .= <<<XML
+<item>
+<title>RSS in offline mode</title>
+<guid isPermaLink="true"></guid>
+<link></link>
+<description>RSS in offline mode</description>
+<category>undefined</category>
+<author>DataLife Engine</author>
+<pubDate>DataLife Engine</pubDate>
+</item>
+XML;
+
+} else {
+	
+	if( $rssmode == 'dzen' ) {
+		
+		$tpl->template = str_replace( '[dzen]', '', $tpl->template );
+		$tpl->template = str_replace('[/dzen]', '', $tpl->template );
+		$tpl->template = preg_replace("'\\[rss\\](.*?)\\[/rss\\]'si", "", $tpl->template );
+		$tpl->template = preg_replace("'\\[turbo\\](.*?)\\[/turbo\\]'si", "", $tpl->template );
+		$tpl->template = trim($tpl->template);
+		
+	} elseif( $rssmode == 'turbo' ) {
+		
+		$tpl->template = str_replace('[turbo]', '', $tpl->template );
+		$tpl->template = str_replace('[/turbo]', '', $tpl->template );
+		$tpl->template = preg_replace("'\\[dzen\\](.*?)\\[/dzen\\]'si", "", $tpl->template );
+		$tpl->template = preg_replace("'\\[rss\\](.*?)\\[/rss\\]'si", "", $tpl->template );
+		$tpl->template = trim($tpl->template);
+
+	} else {
+		
+		$tpl->template = str_replace('[rss]', '', $tpl->template );
+		$tpl->template = str_replace('[/rss]', '', $tpl->template );
+		$tpl->template = preg_replace("'\\[turbo\\](.*?)\\[/turbo\\]'si", "", $tpl->template );
+		$tpl->template = preg_replace("'\\[dzen\\](.*?)\\[/dzen\\]'si", "", $tpl->template );
+		$tpl->template = trim($tpl->template);	
+	}
+	
+	$tpl->copy_template = $tpl->template;
+	
+	include_once (DLEPlugins::Check(ENGINE_DIR . '/engine.php'));
+	
+	$rss_content .= $tpl->result['content'];
+}
+
+$rss_content .= '</channel></rss>';
+
+$rss_content = str_ireplace( '{THEME}', $config['http_home_url'] . 'templates/' . $config['skin'], $rss_content );
+
+header( "Content-type: application/xml; charset=utf-8" );
+echo $rss_content;
+
+die();

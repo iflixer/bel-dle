@@ -5,9 +5,94 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
------------------------------------------------------
- You use Demo Version of DataLife Engine
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: comments.php
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PyB9P3c5d3h7KnhGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRnhQUVsxW2JWTEFQdnldVnlBUC1QbkRQVT5MMWhBdXJQRUFnVltQalg+SHdQeC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0teFA5MTF3cjp7e2d0QS15QXVyT1hIe3gtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLXhQbD53RFhWXTkxUChlKVBCUlIwLUJSQmRQVT5MMWhBdXJQRUFnVltQalg+SHd4RkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZ4UEo5VnJQZT5nQVBWclB3WD4xQWUxQWdQbkRQZT53RFhWXTkxeEZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGeFA2VnRBOlBlPktLQXkxck93OXd4RkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZ4Knt4eFZMKFAhZ0FMVnlBZygnUU5KTmJHNnZ2aGpHaHYnKVApUFN4CTlBW2dBWChQIk1KSm97NE80UDBSelA2PlhuVmdnQXkiUCk7eAk5QVtnQVhQKFAnYj5lWzFWPnk6UE9Pe09PeydQKTt4CWdWQShQIk1bZS9WeV1QWzExQUt3MSEiUCk7eDN4eCRWZ1BGUFZyckExKCRfPXZpCnZVSnAnVmcnNSlQP1BWeTFZW3QoUCRfPXZpCnZVSnAnVmcnNVApUDpQUjt4JFtlMVY+eVBGUFZyckExKCRfPXZpCnZVSnAnW2UxVj55JzUpUD9QJF89dmkKdlVKcCdbZTFWPnknNVA6UCcnO3gkckhuW2UxVj55UEZQVnJyQTEoJF89dmkKdlVKcCdySG5bZTFWPnknNSlQP1AkXz12aQp2VUpwJ3JIbltlMVY+eSc1UDpQJyc7eCRfVXZVVUdzaHAnWEFMQVhYQVgnNVBGUFZyckExKCRfVXZVVUdzaHAnWEFMQVhYQVgnNSlQP1ByMVhfWEF3dFtlQSgiJltLdzsiLCImIixQJF9VdlVVR3NocCdYQUxBWFhBWCc1UClQOlAnJzt4JF9vc1VKcCdyQXRBZTFBZ19lPktLQXkxcic1UEZQVnJyQTEoJF9vc1VKcCdyQXRBZTFBZ19lPktLQXkxcic1KVA/UCRfb3NVSnAnckF0QWUxQWdfZT5LS0F5MXInNVA6UFtYWFtEKCk7eHhWTChWcnJBMSgkX29zVUpwJ0tbcnJfW2UxVj55JzUpUE5oUVAkX29zVUpwJ0tbcnJfW2UxVj55JzVQRkZQIktbcnJfZT5LblZ5QSJQTmhRUFZyX1tYWFtEKCRfb3NVSnAnckF0QWUxQWdfZT5LS0F5MXInNSlQTmhRUGU+SHkxKCRfb3NVSnAnckF0QWUxQWdfZT5LS0F5MXInNSlQIFA0KVBTeHgJVkwoUCRfb3NVSnAnZ3RBX1t0dD51XzlbcjknNVAhRlAiIlBOaFFQJF9vc1VKcCdndEFfW3R0PnVfOVtyOSc1UEZGUCRndEFfdD5dVnlfOVtyOVBOaFFQJFZyX3Q+XV1BZ1BOaFFQJEhyQVhfXVg+SHdwJEtBS25BWF9WZ3AnSHJBWF9dWD5Idyc1NXAnZ0F0X1t0dGUnNVApUFN4eAkJJGU+S0tBeTFyX1tYWFtEUEZQW1hYW0QoKTt4CQkkVmdyX1tYWFtEUEZQW1hYW0QoKTt4eAkJTD5YQVtlOVAoUCRfb3NVSnAnckF0QWUxQWdfZT5LS0F5MXInNVBbclAkVmdQKVBTeAkJCSRlPktLQXkxcl9bWFhbRHA1UEZQVnkxWVt0KFAkVmdQKTt4CQkzeHgJCSRlPktLQXkxclBGUFZLd3Q+Z0EoIicsJyIsUCRlPktLQXkxcl9bWFhbRCk7eAkJJHJmdF9YQXJIdDFQRlAkZ24tIGZIQVhEKFAiVXZidmxKUFZnLFAxQUMxUDY9c0VQIlBPUG89djZHbVBPUCJfZT5LS0F5MXJQdTlBWEFQVmdQR2hQKCciUE9QJGU+S0tBeTFyUE9QIicpUHM9UXY9UGFjUFZnUE5VbCJQKTt4eAkJJGU+S0tBeTFyUEZQW1hYW0QoKTt4CQl1OVZ0QVAoUCRYPnVQRlAkZ24tIF1BMV9YPnUoUCRyZnRfWEFySHQxUClQKVBTeAkJCSRWZ3JfW1hYW0RwNVBGUCRYPnVwJ1ZnJzU7eAkJCSRlPktLQXkxcnA1UEZQcjFYVndydFtyOUFyKFAkWD51cCcxQUMxJzVQKTt4CQkzeAkJJGduLSBMWEFBKFAkcmZ0X1hBckh0MVApO3h4CQlWTFAoISRlPnlMVl1wJ1t0dD51X2U+S0tBeTFyX3VEclZ1RF0nNSlQJGVfVkt3dD5nQVBGUCJ9blggfW5YICI7eAkJQXRyQVAkZV9WS3d0PmdBUEZQIiI7eHgJCSRlPktLQXkxUEZQJGduLSByW0xBcmZ0KFBWS3d0PmdBKCRlX1ZLd3Q+Z0EsUCRlPktLQXkxcilQKTt4eAkJJGduLSBmSEFYRChQIgpvUU5KdlAiUE9Qbz12NkdtUE9QIl9lPktLQXkxclBVdkpQMUFDMUYnUyRlPktLQXkxMydQVE12PXZQVmdGJ1MkVmdyX1tYWFtEcFI1MyciUCk7eHgJCSR3W1hBeTFQRlAkVmdyX1tYWFtEcFI1O3gJCUh5ckExUCgkVmdyX1tYWFtEcFI1KTt4CQl4CQlMPlhBW2U5UChQJFZncl9bWFhbRFBbclAkVmdQKVBTeAkJCXgJCQlWTFAoUCRlPnlMVl1wJzFYQUFfZT5LS0F5MXInNVApUFN4CQkJCSRnbi0gZkhBWEQoUCIKb1FOSnZQIlBPUG89djZHbVBPUCJfZT5LS0F5MXJQVXZKUHdbWEF5MUYnUyR3W1hBeTEzJ1BUTXY9dlB3W1hBeTFQRidTJFZnMyciUCk7eAkJCTN4CQkJeAkJCWdBdEExQWU+S0tBeTFyKFAkVmdQKTt4eAkJM3h4CQlldEFbWF9lW2U5QShQW1hYW0QoJ3lBdXJfJyxQJ0xIdHRfJyxQJ2U+S0tfJyxQJ1hycidQKVApO3gJCQl4CQk5QVtnQVgoUCJiPmVbMVY+eTpQUyRfVXZVVUdzaHAnWEFMQVhYQVgnNTMiUCk7eAkJZ1ZBKCk7CXh4CTNQQXRyQVBLcl1uPkMoUCR0W3ldcCdlPktLX0FYWF9CJzUsUCR0W3ldcCdlPktLX0FYWF8wJzVQKTt4eDNQQXRyQVZMKFZyckExKCRfb3NVSnAnS1tycl9bZTFWPnknNSlQTmhRUCRfb3NVSnAnS1tycl9bZTFWPnknNVBGRlAiS1tycl9nQXRBMUEiUE5oUVBlPkh5MSgkX29zVUpwJ3JBdEFlMUFnX2U+S0tBeTFyJzUpUClQU3h4CVZMKFAkX29zVUpwJ2d0QV9bdHQ+dV85W3I5JzVQIUZQIiJQTmhRUCRfb3NVSnAnZ3RBX1t0dD51XzlbcjknNVBGRlAkZ3RBX3Q+XVZ5XzlbcjlQTmhRUCRWcl90Pl1dQWdQTmhRUCRIckFYX11YPkh3cCRLQUtuQVhfVmdwJ0hyQVhfXVg+SHcnNTVwJ2dBdF9bdHRlJzVQKVBTeHgJCUw+WEFbZTlQKFAkX29zVUpwJ3JBdEFlMUFnX2U+S0tBeTFyJzVQW3JQJFZnUClQU3gJCQl4CQkJJFZnUEZQVnkxWVt0KFAkVmdQKTt4eAkJCWdBdEExQWU+S0tBeTFyKFAkVmdQKTt4eAkJM3h4CQlldEFbWF9lW2U5QShQW1hYW0QoJ3lBdXJfJyxQJ0xIdHRfJyxQJ2U+S0tfJyxQJ1hycidQKVApO3gJeAkJOUFbZ0FYKFAiYj5lWzFWPnk6UFMkX1V2VVVHc2hwJ1hBTEFYWEFYJzUzIlApO3gJCWdWQSgpOwl4eAkzUEF0ckFQS3Jdbj5DKFAkdFt5XXAnZT5LS19BWFhfQic1LFAkdFt5XXAnZT5LS19BWFhfMCc1UCk7eHh4M1BBdHJBUEtyXW4+QyhQJHRbeV1wJ2U+S0tfQVhYX0InNSxQJHRbeV1wJ2U+S0tfQVhYX2QnNU8iJnlucnc7fVtQOVhBTEZcInFbWVtyZVhWdzE6OVZyMT5YRE9dPigtNCk7XCIgUyR0W3ldcCdbdHRfd1hBWSc1M317WyAiUCk7eHg/IA==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdqQnloSXFZQ2x6fW50SGVHdQpLVTJWOUZTM3dQWlIvRWdBZnh7W2JXUS5NT2k4TDFvbWE1NnIwNEQ+IGtUdnBKN2NYPXM8XU5kJywnRzJuTktqdnhDMzxibHVjSXdVbVNKaWg9e31wIDYwa01kZXEKL2FMVkQ5SC5RemZ0UFhCXUZzNDF5bz5aV0VbVDhZclJPN2dBNScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$id = isset($_REQUEST['id']) ? intval( $_REQUEST['id'] ) : 0;
+$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
+$subaction = isset($_REQUEST['subaction']) ? $_REQUEST['subaction'] : '';
+$_SESSION['referrer'] = isset($_SESSION['referrer']) ? str_replace("&amp;","&", $_SESSION['referrer'] ) : '';
+$_POST['selected_comments'] = isset($_POST['selected_comments']) ? $_POST['selected_comments'] : array();
+
+if(isset($_POST['mass_action']) AND $_POST['mass_action'] == "mass_combine" AND is_array($_POST['selected_comments']) AND count($_POST['selected_comments']) > 1) {
+
+	if( $_POST['dle_allow_hash'] != "" AND $_POST['dle_allow_hash'] == $dle_login_hash AND $is_logged AND $user_group[$member_id['user_group']]['del_allc'] ) {
+
+		$comments_array = array();
+		$ids_array = array();
+
+		foreach ( $_POST['selected_comments'] as $id ) {
+			$comments_array[] = intval( $id );
+		}
+
+		$comments = implode("','", $comments_array);
+		$sql_result = $db->query( "SELECT id, text FROM " . PREFIX . "_comments where id IN ('" . $comments . "') ORDER BY id ASC" );
+
+		$comments = array();
+		while ( $row = $db->get_row( $sql_result ) ) {
+			$ids_array[] = $row['id'];
+			$comments[] = stripslashes( $row['text'] );
+		}
+		$db->free( $sql_result );
+
+		if (!$config['allow_comments_wysiwyg']) $c_implode = "<br><br>";
+		else $c_implode = "";
+
+		$comment = $db->safesql( implode($c_implode, $comments) );
+
+		$db->query( "UPDATE " . PREFIX . "_comments SET text='{$comment}' WHERE id='{$ids_array[0]}'" );
+
+		$parent = $ids_array[0];
+		unset ($ids_array[0]);
+		
+		foreach ( $ids_array as $id ) {
+			
+			if ( $config['tree_comments'] ) {
+				$db->query( "UPDATE " . PREFIX . "_comments SET parent='{$parent}' WHERE parent ='{$id}'" );
+			}
+			
+			deletecomments( $id );
+
+		}
+
+		clear_cache( array('news_', 'full_', 'comm_', 'rss' ) );
+			
+		header( "Location: {$_SESSION['referrer']}" );
+		die();	
+
+	} else msgbox( $lang['comm_err_2'], $lang['comm_err_4'] );
+
+} elseif(isset($_POST['mass_action']) AND $_POST['mass_action'] == "mass_delete" AND count($_POST['selected_comments']) ) {
+
+	if( $_POST['dle_allow_hash'] != "" AND $_POST['dle_allow_hash'] == $dle_login_hash AND $is_logged AND $user_group[$member_id['user_group']]['del_allc'] ) {
+
+		foreach ( $_POST['selected_comments'] as $id ) {
+			
+			$id = intval( $id );
+
+			deletecomments( $id );
+
+		}
+
+		clear_cache( array('news_', 'full_', 'comm_', 'rss' ) );
+	
+		header( "Location: {$_SESSION['referrer']}" );
+		die();	
+
+	} else msgbox( $lang['comm_err_2'], $lang['comm_err_4'] );
+
+
+} else msgbox( $lang['comm_err_2'], $lang['comm_err_5']."&nbsp;<a href=\"javascript:history.go(-1);\">{$lang['all_prev']}</a>" );
+
+?>

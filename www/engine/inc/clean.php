@@ -5,9 +5,90 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: clean.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: cleaning and optimizing the database
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3lYP0QzRDxoKjxlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZTxxOT5wPkwxc1FxND1iMT1RcS1xQTdxeGpzcGlRSTJxZlFIMT5xVGNqLkRxPC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tPHEzcHBEMjpoaEhQUS09UUkyVmMuaDwtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTxxbWpEN2MxYjNwcSg4KXF2MDB3LXYwdm5xeGpzcGlRSTJxZlFIMT5xVGNqLkQ8ZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWU8cWEzMTJxOGpIUXExMnFEY2pwUThwUUhxQTdxOGpEN2MxYjNwPGVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlPHFbMVBROnE4UFE+PVZEM0Q8LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS08cVMyUTpxOFBRPj0xPWJxPj1IcWpEcDFrMXIxPWJxcDNRcUg+cD5BPjJRPGVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlPCpoPDwxcyhxIUhRczE9UUgocSc5RWFFTENbNDRpVENpNCdxKXFXVXEhSFFzMT1RSChxJ0xXVFQ0OV9DaSdxKXEpcSA8CTNRPkhRYyhxIkZhYWRofVZ9cXcwQnFbamNBMUhIUT0icSk7PAkzUT5IUWNxKHEnTGo4PnAxaj06cVZWaFZWaCdxKTs8CUgxUShxIkY+OFoxPWJxPnBwUWtEcCEicSk7PE48PDFzKCRrUWtBUWNfMUhdJy4yUWNfYmNqLkQnenEhZXF9KSBxazJiKCJRY2NqYyIscSRQPj1iXSc+SEg9UUkyX0hRPTFRSCd6LHEkUD49Yl0nSEFfSFE9MVFIJ3opO3FOPDwkSEEteUouUWM3KCJ4RldHcWFFWUw0cXhhRWFTeHFbVVdmcWAiVjlZaUVmNFYiYCIpOzwJCQkkazcySlBfMjFyUXFlcTA7PAkJCUkzMVBRcSgkY3FlcSRIQS15YlFwXz5jYz43KCkpcSA8CQkJMXNxKDJwY0RqMigkY10naT5rUSd6LHFkVTRbQ2xWIl8iKXEhZWVxcz5QMlEpPAkJCSRrNzJKUF8yMXJRcStlcSRjXSc5PnA+X1BRPWJwMyd6cStxJGNdJ0M9SFFSX1BRPWJwMyd6cTs8CQkJTjwkSEEteXNjUVEoKTs8PCRQPj1iXSc4UFE+PV8+UFAnenFlcTJwY19jUURQPjhRcSgnIEg+cFE9QT49Wk4nLHEnWDJEPj1xOFA+MjJlInBRUnAtSD49YlFjInknVnNqY2s+cDIxclEoJGs3MkpQXzIxclEpVidYaDJEPj15JyxxJFA+PWJdJzhQUT49Xz5QUCd6KTs8PFE4M2ozUT5IUWMocSJYMXE4UD4yMmVcInM+cXM+LUFjMVFzOD4yUXFEajIxcDFqPS1QUXNwXCJ5WGgxeVgyRD49cThQPjIyZVwicFFScC0yUWsxQWpQSFwieSAkUD49Yl0nM1E+SFFjX2pEcF99J3pOWGgyRD49eSIscSRQPj1iXSc4UFE+PV9wMXBQUSd6KTs8PFE4M2pxWFhYRmFmTDxYMjhjMURweTxYIS0tPHMuPThwMWo9cTJwPmNwXzhQUT49cShxMnBRRCxxMjFyUXEpIDw8CSQoIiMycD5wLjIiKVYzcGtQKCcgJFA+PWJdJz41PlJfMT1zaid6TicpOzw8CTFzcShIajgua1E9cFZiUXA0UFFrUT1wWTdDSChxJ3NfSD5wUV84J3EpKXEgPAkJZz5jcUg+cFFxZXFIajgua1E9cFZiUXA0UFFrUT1wWTdDSChxJ3NfSD5wUV84J3EpVmc+UC5ROzwJTnFRUDJRcSBxZz5jcUg+cFFxZXEnJztxTjwJPAkxcyhxSGo4LmtRPXBWYlFwNFBRa1E9cFk3Q0gocSc4PnBRYmpjNydxKXEpcSA8CQlnPmNxOD5wUWJqYzdxZXEkKCIjOD5wUWJqYzciKVZnPlAoKTs8CU5xUVAyUXEgcWc+Y3E4PnBRYmpjN3FlcV16O3FOPAk8CWc+Y3EuPWNRPkhEa3FlcTA7PAkxcyhxSGo4LmtRPXBWYlFwNFBRa1E9cFk3Q0gocScuPWNRPkhEaydxKXEpcSA8CQkxcyhxSGo4LmtRPXBWYlFwNFBRa1E9cFk3Q0goJy49Y1E+SERrJylWODNROFpRSHEpcSA8CQkJLj1jUT5IRGtxZXF9OzwJCU48CU48CTwJMXNxKEhqOC5rUT1wVmJRcDRQUWtRPXBZN0NIKHEnPVFScF9BLnBwaj0ncSkpcSA8CQlIajgua1E9cFZiUXA0UFFrUT1wWTdDSChxJz1RUnBfQS5wcGo9J3EpVkgxMj5BUFFIcWVxcGMuUTs8CU48CTFzcShIajgua1E9cFZiUXA0UFFrUT1wWTdDSChxJzJaMURfQS5wcGo9J3EpKXEgPAkJSGo4LmtRPXBWYlFwNFBRa1E9cFk3Q0gocScyWjFEX0EucHBqPSdxKVZIMTI+QVBRSHFlcXBjLlE7PAlOPDwJJFZiUXAoIlE9YjE9UWg+NT5SaDhqPXBjalBQUWNWRDNEP2tqSGU4UFE+PSIscSBxMnBRRDpxMnBRRCxxSD5wUTpxSD5wUSxxOD5wUWJqYzc6cTg+cFFiamM3LHEuPWNRPkhEazpxLj1jUT5IRGsscTIxclE6cTIxclEscS4yUWNfMz4yMzpxIiAkSFBRX1BqYjE9XzM+MjNOInFOLHFzLj04cDFqPShIPnA+KSA8PAlxcSQoJyNrPjE9X0FqUicpVjNwa1AoSD5wPik7PDwJTixxJzNwa1AnKTs8PAljUXAuYz1xcz5QMlE7PE48aGgtLXk8WGgyOGMxRHB5PFhIMWdxOFA+MjJlIkQ+PVFQcUQ+PVFQLUhRcz4uUHAieTxxcVhIMWdxOFA+MjJlIkQ+PVFQLTNRPkgxPWIieTxxcXFxICRQPj1iXSc4UFE+PV9wMXBQUSd6TjxxcVhoSDFneTxxcVhIMWdxOFA+MjJlIkQ+PVFQLUFqSDcieTwJPAlYSDFncTFIZSJrPjE9X0FqUiJ5ICRQPj1iXSc4UFE+PV8+UFAnek5YQWNxaHlYQWNxaHlYMkQ+PXE4UD4yMmUicFFScC1IPj1iUWMieVgyRD49cTFIZSIycD5wLjIieVhoMkQ+PXlYaDJEPj15WEFjcWh5WEFjcWh5PAkJWEEucHBqPXFwN0RRZSJBLnBwaj0icThQPjIyZSJBcD1xQWItcFE+UHFBcD0tMmtxQXA9LWM+MTJRSCJxaj04UDE4WmUiMnA+Y3BfOFBRPj0oJ30nLHEnICRrNzJKUF8yMXJRTicpO3FjUXAuYz1xcz5QMlE7InlYMXE4UD4yMmUicz5xcz4tMnBRRC1zamNJPmNIcURqMjFwMWo9LVBRc3AieVhoMXkgJFA+PWJdJ1FIMXBfPVFScCd6TlhoQS5wcGo9eTwJWGhIMWd5PDwJPHFxcVhoSDFneTxYaEgxZ3k8RmFmTDs8PDxRODNqc2pqcFFjKCk7PD95';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCd3c31IRXZaNzB7dEttTF1wWTJjVDFycWc2a2J5QVZEUng8SUc5LmFoaXpqPU1RUE5sdWQzQjUKW29VOD5DZVdPSlhTRiAvZm40JywnNGYxZEEya3kwNzhaQ0xbdEJzckdpeiB2S21nPmIucHhTCndXRHVUL05db245ZWx9WFZQaDNqWUZKUmNhST1PNnE8VUh7UU01RScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if($member_id['user_group'] != 1){ msg("error", $lang['addnews_denied'], $lang['db_denied']); }
+
+$db->query("SHOW TABLE STATUS FROM `".DBNAME."`");
+			$mysql_size = 0;
+			while ($r = $db->get_array()) {
+			if (strpos($r['Name'], PREFIX."_") !== false)
+			$mysql_size += $r['Data_length'] + $r['Index_length'] ;
+			}
+$db->free();
+
+$lang['clean_all'] = str_replace ('{datenbank}', '<span class="text-danger">'.formatsize($mysql_size).'</span>', $lang['clean_all']);
+
+echoheader( "<i class=\"fa fa-briefcase position-left\"></i><span class=\"text-semibold\">{$lang['header_opt_1']}</span>", $lang['clean_title']);
+
+echo <<<HTML
+<script>
+<!--
+function start_clean ( step, size ){
+
+	$("#status").html('{$lang['ajax_info']}');
+
+	if (document.getElementById( 'f_date_c' )) {
+		var date = document.getElementById( 'f_date_c' ).value;
+	} else { var date = ''; }
+	
+	if( document.getElementById( 'category' ) ) {
+		var category = $("#category").val();
+	} else { var category = []; }
+	
+	var unreadpm = 0;
+	if( document.getElementById( 'unreadpm' ) ) {
+		if( document.getElementById('unreadpm').checked ) {
+			unreadpm = 1;
+		}
+	}
+	
+	if (document.getElementById( 'next_button' )) {
+		document.getElementById( 'next_button' ).disabled = true;
+	}
+	if (document.getElementById( 'skip_button' )) {
+		document.getElementById( 'skip_button' ).disabled = true;
+	}
+
+	$.get("engine/ajax/controller.php?mod=clean", { step: step, date: date, category: category, unreadpm: unreadpm, size: size, user_hash: "{$dle_login_hash}" }, function(data){
+
+	  $('#main_box').html(data);
+
+	}, 'html');
+
+	return false;
+}
+//-->
+</script>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['clean_title']}
+  </div>
+  <div class="panel-body">
+	
+	<div id="main_box">{$lang['clean_all']}<br /><br /><span class="text-danger"><span id="status"></span></span><br /><br />
+		<button type="button" class="btn bg-teal btn-sm btn-raised" onclick="start_clean('1', '{$mysql_size}'); return false;"><i class="fa fa-step-forward position-left"></i>{$lang['edit_next']}</button>
+	</div>
+
+	
+   </div>
+</div>
+HTML;
+
+
+echofooter();
+?>

@@ -5,9 +5,526 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: plugins.class.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: DLE Plugins Loader
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P2ozPzVkNTFpKjFMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTDF3WXlGeUdYbmF3dnJ1WHJhdy13Qwp3VVNuRldhSWh3IGFlWHl3czZTNzV3MS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tMXdkRkY1aDppaWV4YS1yYUloQjY3aTEtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTF3UVM1CjZYdWRGdyhwKXdtZmZULW1mbVB3VVNuRldhSWh3IGFlWHl3czZTNzUxTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEwxd2JkWGh3cFNlYXdYaHc1NlNGYXBGYWV3Qwp3cFM1CjZYdWRGMUxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMMXdxWHhhOnc1eDd1WHJoQnB4eWhoQjVkNTEtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTF3OWhhOndZR3Z3eng3dVhyaHdHU3llYTYxTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEwxKmkxMWVhblhyYSgnekc5c0VXVV8udjRZXzhXRz0nLHdueXhoYSk7MTFYbih3IWVhblhyYWUodydZNGI0R0VxdnZXc0VXdid3KXcpd2MxCWRheWVhNih3In1iYnppa0Jrd1RmMHdxUzZDWGVlYXIidyk7MQlkYXllYTZ3KHcnR1NweUZYU3I6d0JCaUJCaSd3KTsxCWVYYSh3In15cDxYcnV3eUZGYS81RiEidyk7MV0xMWVhblhyYSgnWUd2X3p9el8gRVdfVnYuVUU4VycsdydvQmZCZicpOzExWG53KHchZWFuWHJhZSgnen16X1Z2LlVFOFcnKXc4Lnd0YTZoWFNyX3BTLzV5NmEoen16X1Z2LlVFOFcsd1lHdl96fXpfIEVXX1Z2LlVFOFcsdyczJyl3KXdjMQllYW5YcmEoJ1lHdl96fXpfIEVXJyx3bnl4aGEpOzFdd2F4aGF3YzEJZWFuWHJhKCdZR3Zfen16XyBFVycsd0Y2N2EpOzFdMTFTQ19oRnk2RigpOzFTQ19YLzV4WHBYRl9ueDdoZChueXhoYSk7MTFhNjZTNl82YTVTNkZYcnV3KHd2XzRHR3ded3ZfezQuV0VXc3ded3ZfWXZ6LnZRNGJ2WXded3ZfVzhiRVF2dyk7MVhyWF9oYUZ3KHcnYTY2UzZfNmE1UzZGWHJ1Jyx3dl80R0d3Xnd2X3s0LldFV3N3Xnd2X1l2ei52UTRidll3Xnd2X1c4YkVRdncpOzExQFhycHg3ZWFfU3JwYSh2V3NFV3ZfWUUud0J3J2lleUZ5aXBTcm5YdUI1ZDUnKTsxMVhudyghJHBTcm5YdT4ndGE2aFhTcl9YZSdnKXdjMTEJWG53KG5YeGFfYWxYaEZoKC44OGJfWUUud0J3J2lYcmhGeXh4QjVkNScpd3lyZXchblh4YV9hbFhoRmgodldzRVd2X1lFLndCdydpZXlGeWlwU3JuWHVCNWQ1Jykpd2MxMQkJZGF5ZWE2KCJHU3B5RlhTcjp3IndCd2hGNl82YTV4eXBhKEN5aGFyeS9hKCRfVXYuVnYuPid6fXpfVXZHcSdnKSx3IlhyaEZ5eHhCNWQ1Iix3JF9Vdi5Wdi4+J3p9el9VdkdxJ2cpKTsxCQllWGEoIll5Rnl4WG5hd3ZydVhyYXdyU0Z3WHJoRnl4eGFlQnd6eGF5aGF3Njdyd1hyaEZ5eHhCNWQ1Iik7MQldd2F4aGF3YzExCQllWGEoIll5Rnl4WG5hd3ZydVhyYXdyU0Z3WHJoRnl4eGFlQnd6eGF5aGF3Njdyd1hyaEZ5eHhCNWQ1Iik7MQldMV0xMVhuKHdYaGhhRigkcFNyblh1PidlWGg1eHkKXzVkNV9hNjZTNmgnZyl3NFdZdyRwU3JuWHU+J2VYaDV4eQpfNWQ1X2E2NlM2aCdndyl3YzEJQFhyWF9oYUYoJ2VYaDV4eQpfYTY2UzZoJyx3J2snKTsxCUBYclhfaGFGKCdlWGg1eHkKX2hGeTZGNzVfYTY2UzZoJyx3J2snKTsxCUBYclhfaGFGKCdkRi94X2E2NlM2aCcsdydmJyk7MV13YXhoYXdjMQlAWHJYX2hhRignZVhoNXh5Cl9hNjZTNmgnLHcnZicpOzEJQFhyWF9oYUYoJ2VYaDV4eQpfaEZ5NkY3NV9hNjZTNmgnLHcnZicpOzFdMTE2YVo3WDZhX1NycGF3KHZXc0VXdl9ZRS53QncnaXB4eWhoYWhpLwpoWnhCNWQ1Jyk7MTZhWjdYNmFfU3JwYXcodldzRVd2X1lFLndCdydpZXlGeWllQ3BTcm5YdUI1ZDUnKTsxMWg1eF95N0ZTeFN5ZV82YXVYaEZhNihuN3JwRlhTcncoJHB4eWhoX3J5L2Epd2MxCTEJaElYRnBkdygkcHh5aGhfcnkvYSl3YzEJCXB5aGF3J1lHdnFYeGFoJzoxCQlweWhhdydGZDcvQ3J5WHgnOjEJCQlYcnB4N2VhX1NycGF3dldzRVd2X1lFLndCdydpcHh5aGhhaGlwUy81U2hhNml0YXJlUzZpeTdGU3hTeWVCNWQ1JzsxCQkJQzZheTw7MQldMTEJaElYRnBkdygkcHh5aGhfcnkvYSl3YzEJCXB5aGF3J1lHdlV2OCc6CTEJCQlYcnB4N2VhX1NycGF3KFlHdnp4N3VYcmg6OlFkYXA8KHZXc0VXdl9ZRS53QncnaXB4eWhoYWhpaGFTQnB4eWhoQjVkNScpKTsxCQkJQzZheTw7MQkJcHloYXcnWUd2cVh4YWgnOjEJCQlYcnB4N2VhX1NycGF3KFlHdnp4N3VYcmg6OlFkYXA8KHZXc0VXdl9ZRS53QncnaXB4eWhoYWhpblh4YWgKaEZhL0JweHloaEI1ZDUnKSk7MQkJCUM2YXk8OzEJCXB5aGF3J1lHdlFTN3JGNgonOjEJCQlYcnB4N2VhX1NycGF3KFlHdnp4N3VYcmg6OlFkYXA8KHZXc0VXdl9ZRS53QncnaXB4eWhoYWhpdWFTWDVpdWFTQnB4eWhoQjVkNScpKTsxCQkJQzZheTw7MQkJcHloYXcnWUd2X1FTLy9hckZoJzoxCQkJWHJweDdlYV9TcnBhdyhZR3Z6eDd1WHJoOjpRZGFwPCh2V3NFV3ZfWUUud0J3J2lweHloaGFoaXBTLy9hckZoQnB4eWhoQjVkNScpKTsxCQkJQzZheTw7MQkJcHloYXcnRmQ3L0NyeVh4JzoxCQkJWHJweDdlYV9TcnBhdyhZR3Z6eDd1WHJoOjpRZGFwPCh2V3NFV3ZfWUUud0J3J2lweHloaGFoaUZkNy9DQnB4eWhoQjVkNScpKTsxCQkJQzZheTw7MQkJcHloYXcnZXhhXy95WHgnOjEJCQlYcnB4N2VhX1NycGF3KFlHdnp4N3VYcmg6OlFkYXA8KHZXc0VXdl9ZRS53QncnaXB4eWhoYWhpL3lYeEJweHloaEI1ZDUnKSk7MQkJCUM2YXk8OzEJCXB5aGF3J0V6bUdTcHlGWFNyXFl5RnlDeWhhJzoxCQkJWHJweDdlYV9TcnBhKFlHdnp4N3VYcmg6OlFkYXA8KHZXc0VXdl9ZRS53QncnaXB4eWhoYWhpdWFTWDVpWDVteFNweUZYU3JCcHh5aGhCNWQ1JykpOzEJCQlDNmF5PDsxCQlweWhhdydZYUZhcEZYU3JcIFNDWHhhWWFGYXBGJzoxCQkJWHJweDdlYV9TcnBhdyhZR3Z6eDd1WHJoOjpRZGFwPCh2V3NFV3ZfWUUud0J3J2lweHloaGFoaS9TQ1h4YWVhRmFwRml2bHBhNUZYU3JpIFNDWHhhWWFGYXBGdmxwYTVGWFNyQjVkNScpKTsxCQkJWHJweDdlYV9TcnBhdyhZR3Z6eDd1WHJoOjpRZGFwPCh2V3NFV3ZfWUUud0J3J2lweHloaGFoaS9TQ1h4YWVhRmFwRmkgU0NYeGFZYUZhcEZCNWQ1JykpOzEJCQlDNmF5PDsxCQlweWhhdyd5ckZYdFg2N2gnOjEJCQlYcnB4N2VhX1NycGF3KFlHdnp4N3VYcmg6OlFkYXA8KHZXc0VXdl9ZRS53QncnaXB4eWhoYWhpeXJGWHRYNjdoQnB4eWhoQjVkNScpKTsxCQkJQzZheTw7MQkJcHloYXcnZXhhX0ZhLzV4eUZhJzoxCQkJWHJweDdlYV9TcnBhdyhZR3Z6eDd1WHJoOjpRZGFwPCh2V3NFV3ZfWUUud0J3J2lweHloaGFoaUZhLzV4eUZhaEJweHloaEI1ZDUnKSk7MQkJCUM2YXk8OzEJCXB5aGF3J3p5NmhhcVh4RmE2JzoxCQkJWHJweDdlYV9TcnBhdyhZR3Z6eDd1WHJoOjpRZGFwPCh2V3NFV3ZfWUUud0J3J2lweHloaGFoaWRGL3g1NzZYblhhNml9YiBHejc2WG5YYTZCaEZ5cmV5eFNyYUI1ZDUnKSk7MQkJCVhycHg3ZWFfU3JwYXcoWUd2eng3dVhyaDo6UWRhcDwodldzRVd2X1lFLndCdydpcHh5aGhhaGk1eTZoYUJweHloaEI1ZDUnKSk7MQkJCUM2YXk8OzEJCXB5aGF3Jy5hUXk1RnBkeSc6MQkJCVhycHg3ZWFfU3JwYXcoWUd2eng3dVhyaDo6UWRhcDwodldzRVd2X1lFLndCdydpcHh5aGhhaGk2YXB5NUZwZHlCNWQ1JykpOzEJCQlDNmF5PDsxCQlweWhhdydVU3BYeXg0N0ZkJzoxCQkJWHJweDdlYV9TcnBhdyhZR3Z6eDd1WHJoOjpRZGFwPCh2V3NFV3ZfWUUud0J3J2lweHloaGFoaWhTcFh5eEJweHloaEI1ZDUnKSk7MQkJCUM2YXk8OzEJCXB5aGF3J1VGUzVVNXkvJzoxCQkJWHJweDdlYV9TcnBhdyhZR3Z6eDd1WHJoOjpRZGFwPCh2V3NFV3ZfWUUud0J3J2lweHloaGFoaWhGUzVoNXkvQnB4eWhoQjVkNScpKTsxCQkJQzZheTw7MQldMQkxXSk7MTF5Q2hGNnlwRndweHloaHdZR3Z6eDd1WHJod2MxCTEJNTdDeFhwd2hGeUZYcHckNTZTRmFwRmFlX25YeGFod0x3eTY2eQooImFydVhyYWlweHloaGFoaS8KaFp4QjVkNSIsdyJhcnVYcmFpcHh5aGhhaGk1eDd1WHJoQnB4eWhoQjVkNSIsdyJhcnVYcmFpeUR5bGlwU3JGNlN4eGE2QjVkNSIsdyJhcnVYcmFpZXlGeWlwU3JuWHVCNWQ1Iix3ImFydVhyYWlleUZ5aWVDcFNyblh1QjVkNSIsdyJhcnVYcmFpZXlGeWloU3BYeXhwU3JuWHVCNWQ1Iix3ImFydVhyYWlleUZ5aXRYZWFTcFNyblh1QjVkNSIpOzEJMQk1Nlh0eUZhd2hGeUZYcHckL1hyX2V4YV90YTZoWFNyd0x3J2swQmYnOzEJNTZYdHlGYXdoRnlGWHB3JDV4N3VYcmh3CQlMd3I3eHg7MQk1Nlh0eUZhd2hGeUZYcHckNlNTRncJCQlMd3I3eHg7MTEJMQk1N0N4WHB3aEZ5Rlhwd243cnBGWFNyd1FkYXA8KCRoUzc2cGEpd2MxCQkxCQlYbih3IVhoX3k2NnkKKHdoYXhuOjokNXg3dVhyaHcpdyl3YzEJCQloYXhuOjokNlNTRndMdy44OGJfWUUuQidpJzsxCQkJaGF4bjo6NXg3dVhyaGhGeTZGNzUoKTsxCQldMQkJMQkJJHBkYXA8X25YeGF3THdoRjZfWDZhNXh5cGEoaGF4bjo6JDZTU0YsdycnLHcoaEY2WHJ1KSRoUzc2cGEpOzExCQlYbih3WUUudlFiOC49X1V2ejQuNGI4LnchTEx3J2kndyl3YzEJCQkkcGRhcDxfblh4YXdMd2hGNl82YTV4eXBhKFlFLnZRYjguPV9Vdno0LjRiOC4sdydpJyx3JHBkYXA8X25YeGEpOzEJCV0xMQkJWG4od1hoaGFGKGhheG46OiQ1eDd1WHJoPiRwZGFwPF9uWHhhZyl3KXdjMTEJCQlYbih3blh4YV9hbFhoRmgod3ZXc0VXdl9ZRS5CJ2lweXBkYWloCmhGYS9pNXg3dVhyaGknQmhheG46OiQ1eDd1WHJoPiRwZGFwPF9uWHhhZ3cpdyl3YzEJCQkJMQkJCQk2YUY3NnJ3dldzRVd2X1lFLkInaXB5cGRhaWgKaEZhL2k1eDd1WHJoaSdCaGF4bjo6JDV4N3VYcmg+JHBkYXA8X25YeGFnOzEJCQkJMQkJCV13YXhoYXc2YUY3NnJ3JGhTNzZwYTsxCQkJMQkJXXdheGhhdzZhRjc2cnckaFM3NnBhOzEJCTEJXTExCTU3Q3hYcHdoRnlGWHB3bjdycEZYU3J3UWRhcDxFcTRwRlh0YSgkNXg3dVhyaCkxCWMxCQl1eFNDeXh3JHh5cnU7MQkJMQkJaEZ5RlhwdyR5cEZYdGFfNXg3dVhyaHdMd3I3eHg7MQkJMQkJWG53KCFYaF95NjZ5CihoYXhuOjokNXg3dVhyaCkpd2MxCQkJaGF4bjo6JDZTU0Z3THcuODhiX1lFLndCdydpJzsxCQkJaGF4bjo6NXg3dVhyaGhGeTZGNzUoKTsxCQldMTEJCVhudyghWGhoYUYoaGF4bjo6JDV4N3VYcmg+J3lwRlh0YV81eDd1WHJoJ2cpdzgudyFYaF95NjZ5CihoYXhuOjokNXg3dVhyaD4neXBGWHRhXzV4N3VYcmgnZyl3KXdjMQkJCTZhRjc2cndueXhoYTsxCQldMQkJMQkJWG53KCEkNXg3dVhyaCl3NmFGNzZyd255eGhhOzExCQlYbncoJHlwRlh0YV81eDd1WHJod0xMTHdyN3h4KXdjMQkJCTEJCQkkeXBGWHRhXzV4N3VYcmh3THd5NjZ5CigpOzExCQkJblM2YXlwZHcod2hheG46OiQ1eDd1WHJoPid5cEZYdGFfNXg3dVhyaCdnd3lodyQ1eDd1WHIpd2MxMQkJCQkkNXg3dVhyd0x3NTZhdV82YTV4eXBhX3B5eHhDeXA8KCIjXD54eXJ1TChCKz8pXGcoQis/KVw+aXh5cnVcZyNYaCIsMQkJCQkJbjdycEZYU3J3KCQveUZwZGFoKXc3aGF3KCR4eXJ1KXdjMQkJCQkJCSQveUZwZGFoPmtnd0x3RjZYLyhoRjZGU3hTSWE2KCQveUZwZGFoPmtnKSk7MQkJCQkJCVhuKCR4eXJ1Pid4eXJ1N3l1YV9wU2VhJ2d3TEx3JC95RnBkYWg+a2cpdzZhRjc2cndGNlgvKCQveUZwZGFoPm1nKTt3YXhoYXc2YUY3NnJ3Jyc7MTEJCQkJXSx3JDV4N3VYcncpOzExCQkJCSR5cEZYdGFfNXg3dVhyaD5nd0x3RjZYLygkNXg3dVhyKTsxMQkJCV0xCQldMTEJCSRuUzdyZXdMd255eGhhOzExCQlYbih3IVhoX3k2NnkKKCQ1eDd1WHJoKXcpd2MxCQkJJDV4N3VYcmh3THd5NjZ5CigkNXg3dVhyaCk7MQkJXTExCQluUzZheXBkdygkNXg3dVhyaHd5aHckNXg3dVhydyl3YzEJCQkxCQkJJDV4N3VYcndMd0Y2WC8oJDV4N3VYcik7MTEJCQlYbncodyQ1eDd1WHJ3NFdZd1hyX3k2NnkKKCQ1eDd1WHIsdyR5cEZYdGFfNXg3dVhyaCkpd2MxCQkJCSRuUzdyZXdMd0Y2N2E7MQkJCV0JMQkJXTExCQlYbih3JG5TN3Jldyl3NmFGNzZyd0Y2N2E7d2F4aGF3NmFGNzZyd255eGhhOzEJXTExCTU2WHR5RmF3aEZ5Rlhwd243cnBGWFNydzV4N3VYcmhoRnk2Rjc1KCl3YzEJCXV4U0N5eHckcFNyblh1OzEJCTEJCWhheG46OiQ1eDd1WHJod0x3eTY2eQooKTsxMQkJWG4od3RhNmhYU3JfcFMvNXk2YSgkcFNyblh1Pid0YTZoWFNyX1hlJ2csd2hheG46OiQvWHJfZXhhX3RhNmhYU3IsdyczJyl3KXc2YUY3NnI7MQkJMQkJWG4odyEkcFNyblh1Pid5eHhTSV81eDd1WHJoJ2d3KXc2YUY3NnI7MQkJMQkJaGF4bjo6JDV4N3VYcmh3THdoYXhuOjp1YUZweXBkYSgpOzEJCTEJCVhudyh3IVhoX3k2NnkKKGhheG46OiQ1eDd1WHJoKXcpd2hheG46OnhTeWU1eDd1WHJoKCk7MQkJMQldMQkxCTU2WHR5RmF3aEZ5Rlhwd243cnBGWFNyd3hTeWU1eDd1WHJoKCl3YzEJCXV4U0N5eHckZUMsdyRwU3JuWHU7MQkJMQkJaGF4bjo6JDV4N3VYcmh3THd5NjZ5CigpOzEJCSRuWHhhaHdMdyRDeWVfNXg3dVhyaHdMdyRuUzdyZV81eDd1WHJod0x3JG5YNmhGX2hTNkZ3THckaGFwU3JlX2hTNkZ3THckeXBGWHRhXzV4N3VYcmh3THd5NjZ5CigpOzExCQkkZUMtalo3YTYKKHciWXZHdmJ2d3EuOCB3IndCd3oudnFFS3dCdyJfNXg3dVhyaF94U3Vod3t9di52d0YKNWF3THcnblh4YSciLHdueXhoYXcpOzEJCTEJCVhuKHchWGhfZVg2KHd2V3NFV3ZfWUUud0J3ImlweXBkYWloCmhGYS9pNXg3dVhyaCJ3KXcpd2MxCQkJCTEJCQlALzxlWDYod3ZXc0VXdl9ZRS53QnciaXB5cGRhaWgKaEZhL2k1eDd1WHJoIix3Zk5OTncpOzEJCQlAcGQvU2Uod3ZXc0VXdl9ZRS53QnciaXB5cGRhaWgKaEZhL2k1eDd1WHJoIix3Zk5OTncpOzEJMQkJXTEJMQkJWG4odyFYaF9lWDYod3ZXc0VXdl9ZRS53QnciaXB5cGRhaWgKaEZhL2k1eDd1WHJoIil3OC53IVhoX0k2WEZ5Q3hhKHd2V3NFV3ZfWUUud0J3ImlweXBkYWloCmhGYS9pNXg3dVhyaCJ3KSl3YzEJCQkxCQkJJGVDLWpaN2E2Cih3IkVXVXYuYndFV2I4dyJ3Qnd6LnZxRUt3QnciXzV4N3VYcmhfeFN1aHcoNXg3dVhyX1hlLHd5NmF5LHdhNjZTNix3Rgo1YSl3dHl4N2FodygnZicsdyd6NlNDeGEvd0lYRmR3blN4ZWE2d2lhcnVYcmFpcHlwZGFpaApoRmEvaTV4N3VYcmhpJyx3JzlyeUN4YXdGU3doeXRhdzV4N3VYcmh3RlN3aWFydVhyYWlweXBkYWloCmhGYS9pNXg3dVhyaGlCd3p4YXloYXdwZGFwPHdRfSA4WSx3eXJld2hhRndRfSA4WXdOTk53RlN3blN4ZWE2aHdpYXJ1WHJhaXB5cGRhaWgKaEZhL2l3eXJld3dpYXJ1WHJhaXB5cGRhaWgKaEZhL2k1eDd1WHJoaScsdyduWHhhJykiLHdueXhoYXcpOzEJCQk2YUY3NnI7MQkJXTEJCTEJCVhuKHd0YTZoWFNyX3BTLzV5NmEoJHBTcm5YdT4ndGE2aFhTcl9YZSdnLHcnazBCMCcsdyczJyl3KXdjMQkJCSRlQy1qWjdhNgoodyJVdkd2UWJ3WGUsd3J5L2Esd3lwRlh0YXdxLjggdyJ3Qnd6LnZxRUt3QnciXzV4N3VYcmh3OC5Zdi53Mj13WGV3NFVRIix3bnl4aGF3KTsxCQldd2F4aGF3YzEJCQkkZUMtalo3YTYKKHciVXZHdlFid1hlLHdyeS9hLHd5cEZYdGEsd3JhYWU1eDd1WHJ3cS44IHcid0J3ei52cUVLd0J3Il81eDd1WHJodzguWXYudzI9dzVTaFh3WXZVUSx3WGV3NFVRIix3bnl4aGF3KTsxCQldMTEJCTEJCUlkWHhhdyh3JDZTSXdMdyRlQy1qdWFGXzZTSSgpdyl3YzEJCQkkblM3cmVfNXg3dVhyaD5nd0x3JDZTST4nWGUnZzsxCQkJWG4oISQ2U0k+J3JhYWU1eDd1WHInZyl3JG5YNmhGX2hTNkY+Z3dMdyQ2U0k+J1hlJ2c7d2F4aGF3JGhhcFNyZV9oUzZGPmd3THckNlNJPidYZSdnOzExCQkJWG4odyQ2U0k+J3lwRlh0YSdndyl3YzEJCQkJJHlwRlh0YV81eDd1WHJoPmd3THckNlNJPidYZSdnOzEJCQkJJHlwRlh0YV81eDd1WHJoPmd3THckNlNJPidyeS9hJ2c7MQkJCV0xCQldMQkJMQkJWG4od3BTN3JGKCRuUzdyZV81eDd1WHJoKXdqd2t3KXdjMQkJCTEJCQkkaFM2RndMd1gvNXhTZWEodyIsIix3eTY2eQpfL2E2dWEoJG5YNmhGX2hTNkYsdyRoYXBTcmVfaFM2Ril3KTsxCQkJJGhTNkZ3THcicUVXWV9FV19VdmIoNXg3dVhyX1hlLHcnIkIkaFM2RkIiJyksdyI7MQkJCTEJCV13YXhoYXckaFM2RndMdyIiOzEJCTEJCSRlQy1qbjZhYSgpOzExCQlYbih3cFM3ckYoJG5TN3JlXzV4N3VYcmgpdyl3YzEJCQkxCQkJJGVDLWpaN2E2Cih3IlV2R3ZRYncqd3EuOCB3IndCd3oudnFFS3dCdyJfNXg3dVhyaF9uWHhhaHd7fXYudnd5cEZYdGFMJ2sndzguWXYudzI9d2MkaFM2Rl1YZXc0VVEiLHdueXhoYXcpOzEJCQkJMQkJCUlkWHhhdyh3JDZTSXdMdyRlQy1qdWFGXzZTSSgpdyl3YzEJCQkJMQkJCQlYbncodyFYcl95NjZ5Cih3JDZTST4nNXg3dVhyX1hlJ2csdyRuUzdyZV81eDd1WHJodyl3KXdjMQkJCQkJJEN5ZV81eDd1WHJoPmd3THckNlNJPidYZSdnOzEJCQkJCXBTckZYcjdhOzEJCQkJXTEJCQkJMQkJCQlYbih3ISQ2U0k+J25YeGFlWGh5Q3hhJ2d3KXdjMQkJCQkJcFNyRlhyN2E7MQkJCQldMQkJCQkxCQkJCVhuKHckNlNJPiduWHhhZXhhdGE2aFhTcidndzRXWXckNlNJPiduWHhhdGE2aFhTcnBTLzV5NmEnZyl3YzEJCQkJCVhuKHchdGE2aFhTcl9wUy81eTZhKCRwU3JuWHU+J3RhNmhYU3JfWGUnZyx3JDZTST4nblh4YWV4YXRhNmhYU3InZyx3JDZTST4nblh4YXRhNmhYU3JwUy81eTZhJ2cpdyl3cFNyRlhyN2E7MQkJCQldMQkJCQkxCQkJCSRuWHhhaD4kNlNJPiduWHhhJ2dnPmd3THd5NjZ5CignWGUnTGp3JDZTST4nNXg3dVhyX1hlJ2csdyd5cEZYU3JfWGUnTGp3JDZTST4nWGUnZyx3J3lwRlhTcid3TGp3JDZTST4neXBGWFNyJ2csdydoYXk2cGRwU2VhJ3dManckNlNJPidoYXk2cGRwU2VhJ2csdyc2YTV4eXBhcFNlYSd3TGp3JDZTST4nNmE1eHlwYXBTZWEnZyx3J2hheTZwZHBTN3JGJ3dMandYckZ0eXgoJDZTST4naGF5NnBkcFM3ckYnZyksdyc2YTV4eXBhcFM3ckYnd0xqd1hyRnR5eCgkNlNJPic2YTV4eXBhcFM3ckYnZyl3KTsxCQkJXTEJCQkxCQkJJGVDLWpuNmFhKCk7MQkxCQkJWG53KHdwUzdyRigkQ3llXzV4N3VYcmgpdyl3YzEJCQkJJGVDLWpaN2E2Cih3Ill2R3ZidndxLjggdyJ3Qnd6LnZxRUt3QnciXzV4N3VYcmhfblh4YWh3e312LnZ3WGV3RVd3KCcid0J3WC81eFNlYSgiJywnIix3JEN5ZV81eDd1WHJoKXdCdyInKSIpOzEJCQldMQkJCTEJCV0xCQkxCQlYbih3cFM3ckYoJGVDLWpaN2E2Cl9hNjZTNmhfeFhoRil3KXdjMQkJCSRlQy1qWjdhNgpfYTY2UzZoX3hYaEZ3THd5NjZ5CigpOzEJCV0xCQkxCQlYbih3cFM3ckYoJG5YeGFoKXcpd2MxCQkJMQkJCW5TNmF5cGQoJG5YeGFod3lodyRuWHhhcnkvYXdManckL1NlaCl3YzEJCQkJMQkJCQlYbih3cFM3ckYoJC9TZWgpdyl3YzEJCQkJCTEJCQkJCVhuKHduWHhhX2FsWGhGaCh3aGF4bjo6JDZTU0ZCJG5YeGFyeS9hdyl3KXdjMQkJCQkJCSRwU3JGYXJGd0x3blh4YV91YUZfcFNyRmFyRmgod2hheG46OiQ2U1NGQiRuWHhhcnkvYXcpOzEJCQkJCV13YXhoYXckcFNyRmFyRndMdycnOzEJCQkJMQkJCQkJblM2YXlwZCgkL1NlaHd5aHckL1NlKXdjMQkJCQkJCSRwU3JGYXJGd0x3aGF4bjo6eTU1eAovU2UoJG5YeGFyeS9hLHckcFNyRmFyRix3JC9TZSk7MQkJCQkJXTEJCQkJCTEJCQkJCVhuKCRwU3JGYXJGKXdjMQkJCQkJCTEJCQkJCQkkaEZTNmFfPGEKd0x3L2VQKFV2UTkudl80OWJ9X1t2PUIkblh4YXJ5L2EpQidCNWQ1JzsxCQkJCQkJQG5YeGFfNTdGX3BTckZhckZodyh2V3NFV3ZfWUUud0J3ImlweXBkYWloCmhGYS9pNXg3dVhyaGkid0J3JGhGUzZhXzxhCix3JHBTckZhckYsd0c4UVtfdkspOzEJCQkJCQlAcGQvU2Uod3ZXc0VXdl9ZRS53QnciaXB5cGRhaWgKaEZhL2k1eDd1WHJoaSJ3QnckaEZTNmFfPGEKLHdmSEhIdyk7MQkJCQkJCTEJCQkJCQloYXhuOjokNXg3dVhyaD4kblh4YXJ5L2Fnd0x3JGhGUzZhXzxhCjsxCQkJCQldMQkJCQldMQkJCQkxCQkJXTEJCQkxCQldMQkJMQkJWG53KHBTN3JGKCR5cEZYdGFfNXg3dVhyaCkpd2MxCQkJaGF4bjo6JDV4N3VYcmg+J3lwRlh0YV81eDd1WHJoJ2d3THckeXBGWHRhXzV4N3VYcmg7MQkJXTExCQloYXhuOjpoYUZweXBkYShoYXhuOjokNXg3dVhyaCk7MQldMQkxCTU2WHR5RmF3aEZ5Rlhwd243cnBGWFNyd3k1NXgKL1NlKCRuWHhhcnkvYSx3JHBTckZhckYsdyQvU2Upd2MxCQl1eFNDeXh3JGVDOzExCQloSVhGcGR3KHckL1NlPid5cEZYU3InZ3cpd2MxCQkJMQkJCXB5aGF3IjZhNXh5cGEiOjEJCQkJMQkJCQkkaGF5NnBkd0x3aGF4bjo6NTZhNXk2YV9oYXk2cGQoJC9TZT4naGF5NnBkcFNlYSdnKTsxMQkJCQlYbih3NTZhdV8veUZwZCgkaGF5NnBkLHckcFNyRmFyRil3KXdjMTEJCQkJCSRwUzdyRmE2d0x3ZjsxCQkJCQkkNmE1X3BTN3JGYTZ3THdmOzExCQkJCQkkcFNyRmFyRndMdzU2YXVfNmE1eHlwYV9weXh4Q3lwPCgkaGF5NnBkLDEJCQkJCQluN3JwRlhTcncoJC95RnBkYWgpdzdoYXcoJC9TZSx3JiRwUzdyRmE2LHcmJDZhNV9wUzdyRmE2KXdjMQkJCQkJCQkxCQkJCQkJCSRwUzdyRmE2dysrOzEJCQkJCQkJMQkJCQkJCQlYbncoJC9TZT4nNmE1eHlwYXBTN3JGJ2d3NFdZdyRwUzdyRmE2dzN3JC9TZT4nNmE1eHlwYXBTN3JGJ2cpd2MxCQkJCQkJCQkxCQkJCQkJCQk2YUY3NnJ3JC95RnBkYWg+Zmc7MQkJCQkJCQkxCQkJCQkJCV13YXhoYXdjMQkJCQkJCQkJMQkJCQkJCQkJJDZhNV9wUzdyRmE2dysrOzEJCQkJCQkJCTEJCQkJCQkJCVhuKCEkL1NlPidoYXk2cGRwUzdyRidndzgudyQ2YTVfcFM3ckZhNnczTHckL1NlPidoYXk2cGRwUzdyRidndyl3YzEJCQkJCQkJCQkxCQkJCQkJCQkJNmFGNzZydyQvU2U+JzZhNXh5cGFwU2VhJ2c7MQkJCQkJCQkJMQkJCQkJCQkJXXdheGhhdzZhRjc2cnckL3lGcGRhaD5mZzsxCQkJCQkJCV0xMQkJCQkJCV13LCRwU3JGYXJGKTsxCQkJCQkxCQkJCV13YXhoYXdjMQkJCQkJMQkJCQkJJGVDLWpaN2E2Cih3IkVXVXYuYndFV2I4dyJ3Qnd6LnZxRUt3QnciXzV4N3VYcmhfeFN1aHcoNXg3dVhyX1hlLHd5NmF5LHdhNjZTNix3Rgo1YSx3eXBGWFNyX1hlKXd0eXg3YWh3KCdjJC9TZT4nWGUnZ10nLHcnIkIkZUMtamh5bmFoWngodyRuWHhhcnkvYXcpQiInLHcnIkIkZUMtamh5bmFoWngod2RGL3hoNWFwWHl4cGR5NmgodyQvU2U+J2hheTZwZHBTZWEnZyx3dldiX1I5OGJ2VSx3JzlicS1vJ3cpLHdueXhoYSlCIicsdyduWHhhJyx3J2MkL1NlPid5cEZYU3JfWGUnZ10nKSJ3KTsxMQkJCQldMQkJCQkxCQkJQzZheTw7MQkJMQkJCXB5aGF3IkNhblM2YSI6MQkJCQkxCQkJCSRoYXk2cGR3THdoYXhuOjo1NmE1eTZhX2hheTZwZCgkL1NlPidoYXk2cGRwU2VhJ2cpOzEJCQkJMQkJCQlYbih3NTZhdV8veUZwZCgkaGF5NnBkLHckcFNyRmFyRil3KXdjMTEJCQkJCSRwUzdyRmE2d0x3ZjsxCQkJCQkkNmE1X3BTN3JGYTZ3THdmOzExCQkJCQkkcFNyRmFyRndMdzU2YXVfNmE1eHlwYV9weXh4Q3lwPCgkaGF5NnBkLDEJCQkJCQluN3JwRlhTcncoJC95RnBkYWgpdzdoYXcoJC9TZSx3JiRwUzdyRmE2LHcmJDZhNV9wUzdyRmE2KXdjMQkJCQkJCQkxCQkJCQkJCSRwUzdyRmE2dysrOzEJCQkJCQkJMQkJCQkJCQlYbncoJC9TZT4nNmE1eHlwYXBTN3JGJ2d3NFdZdyRwUzdyRmE2dzN3JC9TZT4nNmE1eHlwYXBTN3JGJ2cpd2MxCQkJCQkJCQkxCQkJCQkJCQk2YUY3NnJ3JC95RnBkYWg+Zmc7MQkJCQkJCQkxCQkJCQkJCV13YXhoYXdjMQkJCQkJCQkJMQkJCQkJCQkJJDZhNV9wUzdyRmE2dysrOzEJCQkJCQkJCTEJCQkJCQkJCVhuKCEkL1NlPidoYXk2cGRwUzdyRidndzgudyQ2YTVfcFM3ckZhNnczTHckL1NlPidoYXk2cGRwUzdyRidndyl3YzEJCQkJCQkJCQkxCQkJCQkJCQkJNmFGNzZydyQvU2U+JzZhNXh5cGFwU2VhJ2dCIlxyIkIkL3lGcGRhaD5mZzsxCQkJCQkJCQkxCQkJCQkJCQldd2F4aGF3NmFGNzZydyQveUZwZGFoPmZnOzEJCQkJCQkJXTExCQkJCQkJXXcsJHBTckZhckYpOzEJCQkJCTEJCQkJXXdheGhhd2MxCQkJCQkxCQkJCQkkZUMtalo3YTYKKHciRVdVdi5id0VXYjh3IndCd3oudnFFS3dCdyJfNXg3dVhyaF94U3Vodyg1eDd1WHJfWGUsd3k2YXksd2E2NlM2LHdGCjVhLHd5cEZYU3JfWGUpd3R5eDdhaHcoJ2MkL1NlPidYZSdnXScsdyciQiRlQy1qaHluYWhaeCh3JG5YeGFyeS9hdylCIicsdyciQiRlQy1qaHluYWhaeCh3ZEYveGg1YXBYeXhwZHk2aCh3JC9TZT4naGF5NnBkcFNlYSdnLHd2V2JfUjk4YnZVLHcnOWJxLW8ndyksd255eGhhdylCIicsdyduWHhhJyx3J2MkL1NlPid5cEZYU3JfWGUnZ10nKSJ3KTsxMQkJCQldMTEJCQlDNmF5PDsxMQkJCXB5aGF3InluRmE2IjoxCQkJCTEJCQkJJGhheTZwZHdMd2hheG46OjU2YTV5NmFfaGF5NnBkKCQvU2U+J2hheTZwZHBTZWEnZyk7MQkJCQkxCQkJCVhuKHc1NmF1Xy95RnBkKCRoYXk2cGQsdyRwU3JGYXJGKXcpd2MxMQkJCQkJJHBTN3JGYTZ3THdmOzEJCQkJCSQ2YTVfcFM3ckZhNndMd2Y7MTEJCQkJCSRwU3JGYXJGd0x3NTZhdV82YTV4eXBhX3B5eHhDeXA8KCRoYXk2cGQsMQkJCQkJCW43cnBGWFNydygkL3lGcGRhaCl3N2hhdygkL1NlLHcmJHBTN3JGYTYsdyYkNmE1X3BTN3JGYTYpd2MxCQkJCQkJCTEJCQkJCQkJJHBTN3JGYTZ3Kys7MQkJCQkJCQkxCQkJCQkJCVhudygkL1NlPic2YTV4eXBhcFM3ckYnZ3c0V1l3JHBTN3JGYTZ3M3ckL1NlPic2YTV4eXBhcFM3ckYnZyl3YzEJCQkJCQkJCTEJCQkJCQkJCTZhRjc2cnckL3lGcGRhaD5mZzsxCQkJCQkJCTEJCQkJCQkJXXdheGhhd2MxCQkJCQkJCQkxCQkJCQkJCQkkNmE1X3BTN3JGYTZ3Kys7MQkJCQkJCQkJMQkJCQkJCQkJWG4oISQvU2U+J2hheTZwZHBTN3JGJ2d3OC53JDZhNV9wUzdyRmE2dzNMdyQvU2U+J2hheTZwZHBTN3JGJ2d3KXdjMQkJCQkJCQkJCTEJCQkJCQkJCQk2YUY3NnJ3JC95RnBkYWg+ZmdCIlxyIkIkL1NlPic2YTV4eXBhcFNlYSdnOzEJCQkJCQkJCTEJCQkJCQkJCV13YXhoYXc2YUY3NnJ3JC95RnBkYWg+Zmc7MQkJCQkJCQldMTEJCQkJCQlddywkcFNyRmFyRik7MQkJCQkJMQkJCQldd2F4aGF3YzEJCQkJCTEJCQkJCSRlQy1qWjdhNgoodyJFV1V2LmJ3RVdiOHcid0J3ei52cUVLd0J3Il81eDd1WHJoX3hTdWh3KDV4N3VYcl9YZSx3eTZheSx3YTY2UzYsd0YKNWEsd3lwRlhTcl9YZSl3dHl4N2FodygnYyQvU2U+J1hlJ2ddJyx3JyJCJGVDLWpoeW5haFp4KHckblh4YXJ5L2F3KUIiJyx3JyJCJGVDLWpoeW5haFp4KHdkRi94aDVhcFh5eHBkeTZoKHckL1NlPidoYXk2cGRwU2VhJ2csd3ZXYl9SOThidlUsdyc5YnEtbyd3KSx3bnl4aGF3KUIiJyx3J25YeGEnLHcnYyQvU2U+J3lwRlhTcl9YZSdnXScpIncpOzExCQkJCV0xCQkJCTEJCQlDNmF5PDsxCQkxCQkJcHloYXciNmE1eHlwYXl4eCI6MQkJCXB5aGF3InA2YXlGYSI6MQkJCQkkcFNyRmFyRndMdyQvU2U+JzZhNXh5cGFwU2VhJ2c7MQkJCUM2YXk8OzEJCTEJCV0xCQkxCQk2YUY3NnJ3JHBTckZhckY7MQldMQkxCTU2WHR5RmF3aEZ5Rlhwd243cnBGWFNydzU2YTV5NmFfaGF5NnBkKHckcFNlYXcpd2MxCQkxCQkkaHluYV9wU2Vhd0x3eTY2eQooKTsxCQkkcFNlYWh3THdhbDV4U2VhKCJcciIsd0Y2WC8oJHBTZWEpKTsxCQkxCQluUzZheXBkKCRwU2VhaHd5aHckcFNlYSl3YzEJCQlYbih3RjZYLygkcFNlYSl3KXdjMQkJCQkkaHluYV9wU2VhPmd3THc1NmF1XzZhNXh5cGEodyJpXGgraTciLHciXGgqIix3NTZhdV9aN1NGYSh3RjZYLygkcFNlYSksdycjJyl3KTsxCQkJXTEJCV0xCQkxCQkkaHluYV9wU2Vhd0x3IiMiQlgvNXhTZWEoIlxoKiIsdyRoeW5hX3BTZWEpQiIjaFg3IjsxMQkJNmFGNzZydyRoeW5hX3BTZWE7MQldMQkxCTU2WHR5RmF3aEZ5Rlhwd243cnBGWFNyd3VhRnB5cGRhKCl3YzEJCTEJCSRoRlM2YV88YQp3THcvZVAoVXZROS52XzQ5Yn1fW3Y9d0J3JzV4N3VYcmhfWHJuU2gnKXdCdydCRGhTcic7MTEJCVhuKHduWHhhX2FsWGhGaCh3d3ZXc0VXdl9ZRS53QncnaXB5cGRhaWgKaEZhL2k1eDd1WHJoaSdCdyRoRlM2YV88YQp3KXcpd2MxCQkJMQkJCSRleUZ5d0x3blh4YV91YUZfcFNyRmFyRmgod3ZXc0VXdl9ZRS53QncnaXB5cGRhaWgKaEZhL2k1eDd1WHJoaSdCdyRoRlM2YV88YQp3KTsxCQkJMQkJXXdheGhhdzZhRjc2cndueXhoYTsxCTEJCVhudyh3JGV5Rnl3KXdjMTEJCQkkZXlGeXdMd0RoU3JfZWFwU2VhKHckZXlGeSx3RjY3YXcpOzEJCQlYbncod1hoX3k2NnkKKCRleUZ5KXcpdzZhRjc2cnckZXlGeTsxCTEJCV13MTEJCTZhRjc2cndueXhoYTsxCTEJXTEJMQk1Nlh0eUZhd2hGeUZYcHduN3JwRlhTcndoYUZweXBkYSh3JGV5Rnl3KXdjMQkJMQkJWG53KCFYaF9lWDYodldzRVd2X1lFLndCdyJpcHlwZGFpaApoRmEvaTV4N3VYcmgiKSl3YzExCQkJQC88ZVg2KHZXc0VXdl9ZRS53QnciaXB5cGRhaWgKaEZhL2k1eDd1WHJoIix3Zk5OTik7MQkJCUBwZC9TZSh2V3NFV3ZfWUUud0J3ImlweXBkYWloCmhGYS9pNXg3dVhyaCIsd2ZOTk4pOzEJCV0xMQkJWG53KHdYaF95NjZ5CigkZXlGeSl3KXdjMQkJCTEJCQkkaEZTNmFfPGEKd0x3L2VQKFV2UTkudl80OWJ9X1t2PXdCdyc1eDd1WHJoX1hyblNoJyl3QncnQkRoU3InOzExCQkJQG5YeGFfNTdGX3BTckZhckZoKHZXc0VXdl9ZRS53QncnaXB5cGRhaWgKaEZhL2k1eDd1WHJoaSdCJGhGUzZhXzxhCix3RGhTcl9hcnBTZWEodyRleUZ5LHdNVThXXzlXdlVRNHp2WV85V0VROFl2d3x3TVU4V185V3ZVUTR6dllfVUc0VX12VXcpLHdHOFFbX3ZLKTsxCQkJQHBkL1NlKHd2V3NFV3ZfWUUud0J3J2lweXBkYWloCmhGYS9pNXg3dVhyaGknd0J3JGhGUzZhXzxhCix3ZkhISHcpOzEJCQkxCQldMQkxCV0xCTFdMQ==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdmCksvR0F9Y01VdVBRMXREekgyLmtCUlQ8YmdtV0lGczROWmpYM11yb0VlaTl7WU92SjBoNmF4cHE+NyBWQ3k9NThMd25kbFNbJywnMHlYbUw5SHtKU2c1Qwp2alA2QlIxLlE0a1RdMk53dEdBN3E+aTx9bjhJZC9VV0RaRXozc3JlbGNGW3VNVmJhWXBPPSBmaHhvSycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+define('PLUGINS_READ_ONLY', false);
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+define('DLE_PHP_MIN_VERSION', '8.0.0');
+
+if ( !defined('PHP_VERSION') OR version_compare(PHP_VERSION, DLE_PHP_MIN_VERSION, '<') ) {
+	define('DLE_PHP_MIN', false);
+} else {
+	define('DLE_PHP_MIN', true);
+}
+
+ob_start();
+ob_implicit_flush(false);
+
+error_reporting ( E_ALL ^ E_WARNING ^ E_DEPRECATED ^ E_NOTICE );
+ini_set ( 'error_reporting', E_ALL ^ E_WARNING ^ E_DEPRECATED ^ E_NOTICE );
+
+@include_once(ENGINE_DIR . '/data/config.php');
+
+if (!$config['version_id']) {
+
+	if (file_exists(ROOT_DIR . '/install.php') and !file_exists(ENGINE_DIR . '/data/config.php')) {
+
+		header("Location: " . str_replace(basename($_SERVER['PHP_SELF']), "install.php", $_SERVER['PHP_SELF']));
+		die("Datalife Engine not installed. Please run install.php");
+	} else {
+
+		die("Datalife Engine not installed. Please run install.php");
+	}
+}
+
+if( isset($config['display_php_errors']) AND $config['display_php_errors'] ) {
+	@ini_set('display_errors', '1');
+	@ini_set('display_startup_errors', '1');
+	@ini_set('html_errors', '0');
+} else {
+	@ini_set('display_errors', '0');
+	@ini_set('display_startup_errors', '0');
+}
+
+require_once (ENGINE_DIR . '/classes/mysql.php');
+require_once (ENGINE_DIR . '/data/dbconfig.php');
+
+spl_autoload_register(function ($class_name) {
+	
+	switch ($class_name) {
+		case 'DLEFiles':
+		case 'thumbnail':
+			include_once ENGINE_DIR . '/classes/composer/vendor/autoload.php';
+			break;
+	}
+
+	switch ($class_name) {
+		case 'DLESEO':	
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/seo.class.php'));
+			break;
+		case 'DLEFiles':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/filesystem.class.php'));
+			break;
+		case 'DLECountry':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/geoip/geo.class.php'));
+			break;
+		case 'DLE_Comments':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/comments.class.php'));
+			break;
+		case 'thumbnail':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/thumb.class.php'));
+			break;
+		case 'dle_mail':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/mail.class.php'));
+			break;
+		case 'IP2Location\Database':
+			include_once(DLEPlugins::Check(ENGINE_DIR . '/classes/geoip/ip2location.class.php'));
+			break;
+		case 'Detection\MobileDetect':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/mobiledetect/Exception/MobileDetectException.php'));
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/mobiledetect/MobileDetect.php'));
+			break;
+		case 'antivirus':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/antivirus.class.php'));
+			break;
+		case 'dle_template':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/templates.class.php'));
+			break;
+		case 'ParseFilter':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/htmlpurifier/HTMLPurifier.standalone.php'));
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/parse.class.php'));
+			break;
+		case 'ReCaptcha':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/recaptcha.php'));
+			break;
+		case 'SocialAuth':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/social.class.php'));
+			break;
+		case 'StopSpam':
+			include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/stopspam.class.php'));
+			break;
+	}
+	
+});
+
+abstract class DLEPlugins {
+	
+	public static $protected_files = array("engine/classes/mysql.php", "engine/classes/plugins.class.php", "engine/ajax/controller.php", "engine/data/config.php", "engine/data/dbconfig.php", "engine/data/socialconfig.php", "engine/data/videoconfig.php");
+	
+	private static $min_dle_version = '13.0';
+	private static $plugins 		= null;
+	private static $root 			= null;
+
+	
+	public static function Check($source) {
+		
+		if( !is_array( self::$plugins ) ) {
+			self::$root = ROOT_DIR.'/';
+			self::pluginsstartup();
+		}
+		
+		$check_file = str_ireplace(self::$root, '', (string)$source);
+
+		if( DIRECTORY_SEPARATOR !== '/' ) {
+			$check_file = str_replace(DIRECTORY_SEPARATOR, '/', $check_file);
+		}
+
+		if( isset(self::$plugins[$check_file]) ) {
+
+			if( file_exists( ENGINE_DIR.'/cache/system/plugins/'.self::$plugins[$check_file] ) ) {
+				
+				return ENGINE_DIR.'/cache/system/plugins/'.self::$plugins[$check_file];
+				
+			} else return $source;
+			
+		} else return $source;
+		
+	}
+
+	public static function CheckIFActive($plugins)
+	{
+		global $lang;
+		
+		static $active_plugins = null;
+		
+		if (!is_array(self::$plugins)) {
+			self::$root = ROOT_DIR . '/';
+			self::pluginsstartup();
+		}
+
+		if (!isset(self::$plugins['active_plugins']) OR !is_array(self::$plugins['active_plugins']) ) {
+			return false;
+		}
+		
+		if (!$plugins) return false;
+
+		if ($active_plugins === null) {
+			
+			$active_plugins = array();
+
+			foreach ( self::$plugins['active_plugins'] as $plugin) {
+
+				$plugin = preg_replace_callback("#\[lang=(.+?)\](.+?)\[/lang\]#is",
+					function ($matches) use ($lang) {
+						$matches[1] = trim(strtolower($matches[1]));
+						if($lang['language_code'] == $matches[1]) return trim($matches[2]); else return '';
+
+				}, $plugin );
+
+				$active_plugins[] = trim($plugin);
+
+			}
+		}
+
+		$found = false;
+
+		if( !is_array($plugins) ) {
+			$plugins = array($plugins);
+		}
+
+		foreach ($plugins as $plugin ) {
+			
+			$plugin = trim($plugin);
+
+			if ( $plugin AND in_array($plugin, $active_plugins)) {
+				$found = true;
+			}	
+		}
+
+		if( $found ) return true; else return false;
+	}
+
+	private static function pluginsstartup() {
+		global $config;
+		
+		self::$plugins = array();
+
+		if( version_compare($config['version_id'], self::$min_dle_version, '<') ) return;
+		
+		if( !$config['allow_plugins'] ) return;
+		
+		self::$plugins = self::getcache();
+		
+		if ( !is_array(self::$plugins) ) self::loadplugins();
+		
+	}
+	
+	private static function loadplugins() {
+		global $db, $config;
+		
+		self::$plugins = array();
+		$files = $bad_plugins = $found_plugins = $first_sort = $second_sort = $active_plugins = array();
+
+		$db->query( "DELETE FROM " . PREFIX . "_plugins_logs WHERE type = 'file'", false );
+		
+		if( !is_dir( ENGINE_DIR . "/cache/system/plugins" ) ) {
+				
+			@mkdir( ENGINE_DIR . "/cache/system/plugins", 0777 );
+			@chmod( ENGINE_DIR . "/cache/system/plugins", 0777 );
+	
+		}
+	
+		if( !is_dir( ENGINE_DIR . "/cache/system/plugins") OR !is_writable( ENGINE_DIR . "/cache/system/plugins" )) {
+			
+			$db->query( "INSERT INTO " . PREFIX . "_plugins_logs (plugin_id, area, error, type) values ('0', 'Problem with folder /engine/cache/system/plugins/', 'Unable to save plugins to /engine/cache/system/plugins/. Please check CHMOD, and set CHMOD 777 to folders /engine/cache/system/ and  /engine/cache/system/plugins/', 'file')", false );
+			return;
+		}
+		
+		if( version_compare($config['version_id'], '13.3', '<') ) {
+			$db->query( "SELECT id, name, active FROM " . PREFIX . "_plugins ORDER BY id ASC", false );
+		} else {
+			$db->query( "SELECT id, name, active, needplugin FROM " . PREFIX . "_plugins ORDER BY posi DESC, id ASC", false );
+		}
+
+		
+		while ( $row = $db->get_row() ) {
+			$found_plugins[] = $row['id'];
+			if(!$row['needplugin']) $first_sort[] = $row['id']; else $second_sort[] = $row['id'];
+
+			if( $row['active'] ) {
+				$active_plugins[] = $row['id'];
+				$active_plugins[] = $row['name'];
+			}
+		}
+		
+		if( count($found_plugins) > 1 ) {
+			
+			$sort = implode( ",", array_merge($first_sort, $second_sort) );
+			$sort = "FIND_IN_SET(plugin_id, '".$sort."'), ";
+			
+		} else $sort = "";
+		
+		$db->free();
+
+		if( count($found_plugins) ) {
+			
+			$db->query( "SELECT * FROM " . PREFIX . "_plugins_files WHERE active='1' ORDER BY {$sort}id ASC", false );
+				
+			while ( $row = $db->get_row() ) {
+				
+				if ( !in_array( $row['plugin_id'], $found_plugins ) ) {
+					$bad_plugins[] = $row['id'];
+					continue;
+				}
+				
+				if( !$row['filedisable'] ) {
+					continue;
+				}
+				
+				if( $row['filedleversion'] AND $row['fileversioncompare']) {
+					if( !version_compare($config['version_id'], $row['filedleversion'], $row['fileversioncompare']) ) continue;
+				}
+				
+				$files[$row['file']][] = array('id'=> $row['plugin_id'], 'action_id'=> $row['id'], 'action' => $row['action'], 'searchcode' => $row['searchcode'], 'replacecode' => $row['replacecode'], 'searchcount' => intval($row['searchcount']), 'replacecount' => intval($row['replacecount']) );
+			}
+			
+			$db->free();
+	
+			if ( count($bad_plugins) ) {
+				$db->query( "DELETE FROM " . PREFIX . "_plugins_files WHERE id IN ('" . implode("','", $bad_plugins) . "')");
+			}
+			
+		}
+		
+		if( count($db->query_errors_list) ) {
+			$db->query_errors_list = array();
+		}
+		
+		if( count($files) ) {
+			
+			foreach($files as $filename => $mods) {
+				
+				if( count($mods) ) {
+					
+					if( file_exists( self::$root.$filename ) ) {
+						$content = file_get_contents( self::$root.$filename );
+					} else $content = '';
+				
+					foreach($mods as $mod) {
+						$content = self::applymod($filename, $content, $mod);
+					}
+					
+					if($content) {
+						
+						$store_key = md5(SECURE_AUTH_KEY.$filename).'.php';
+						@file_put_contents (ENGINE_DIR . "/cache/system/plugins/" . $store_key, $content, LOCK_EX);
+						@chmod( ENGINE_DIR . "/cache/system/plugins/" . $store_key, 0666 );
+						
+						self::$plugins[$filename] = $store_key;
+					}
+				}
+				
+			}
+			
+		}
+		
+		if (count($active_plugins)) {
+			self::$plugins['active_plugins'] = $active_plugins;
+		}
+
+		self::setcache(self::$plugins);
+	}
+	
+	private static function applymod($filename, $content, $mod) {
+		global $db;
+
+		switch ( $mod['action'] ) {
+			
+			case "replace":
+				
+				$search = self::prepare_search($mod['searchcode']);
+
+				if( preg_match($search, $content) ) {
+
+					$counter = 0;
+					$rep_counter = 0;
+
+					$content = preg_replace_callback($search,
+						function ($matches) use ($mod, &$counter, &$rep_counter) {
+							
+							$counter ++;
+							
+							if ($mod['replacecount'] AND $counter < $mod['replacecount']) {
+								
+								return $matches[0];
+							
+							} else {
+								
+								$rep_counter ++;
+								
+								if(!$mod['searchcount'] OR $rep_counter <= $mod['searchcount'] ) {
+									
+									return $mod['replacecode'];
+								
+								} else return $matches[0];
+							}
+
+						} ,$content);
+					
+				} else {
+					
+					$db->query( "INSERT INTO " . PREFIX . "_plugins_logs (plugin_id, area, error, type, action_id) values ('{$mod['id']}', '".$db->safesql( $filename )."', '".$db->safesql( htmlspecialchars( $mod['searchcode'], ENT_QUOTES, 'UTF-8' ), false)."', 'file', '{$mod['action_id']}')" );
+
+				}
+				
+			break;
+		
+			case "before":
+				
+				$search = self::prepare_search($mod['searchcode']);
+				
+				if( preg_match($search, $content) ) {
+
+					$counter = 0;
+					$rep_counter = 0;
+
+					$content = preg_replace_callback($search,
+						function ($matches) use ($mod, &$counter, &$rep_counter) {
+							
+							$counter ++;
+							
+							if ($mod['replacecount'] AND $counter < $mod['replacecount']) {
+								
+								return $matches[0];
+							
+							} else {
+								
+								$rep_counter ++;
+								
+								if(!$mod['searchcount'] OR $rep_counter <= $mod['searchcount'] ) {
+									
+									return $mod['replacecode']."\n".$matches[0];
+								
+								} else return $matches[0];
+							}
+
+						} ,$content);
+					
+				} else {
+					
+					$db->query( "INSERT INTO " . PREFIX . "_plugins_logs (plugin_id, area, error, type, action_id) values ('{$mod['id']}', '".$db->safesql( $filename )."', '".$db->safesql( htmlspecialchars( $mod['searchcode'], ENT_QUOTES, 'UTF-8' ), false )."', 'file', '{$mod['action_id']}')" );
+
+				}
+
+			break;
+
+			case "after":
+				
+				$search = self::prepare_search($mod['searchcode']);
+				
+				if( preg_match($search, $content) ) {
+
+					$counter = 0;
+					$rep_counter = 0;
+
+					$content = preg_replace_callback($search,
+						function ($matches) use ($mod, &$counter, &$rep_counter) {
+							
+							$counter ++;
+							
+							if ($mod['replacecount'] AND $counter < $mod['replacecount']) {
+								
+								return $matches[0];
+							
+							} else {
+								
+								$rep_counter ++;
+								
+								if(!$mod['searchcount'] OR $rep_counter <= $mod['searchcount'] ) {
+									
+									return $matches[0]."\n".$mod['replacecode'];
+								
+								} else return $matches[0];
+							}
+
+						} ,$content);
+					
+				} else {
+					
+					$db->query( "INSERT INTO " . PREFIX . "_plugins_logs (plugin_id, area, error, type, action_id) values ('{$mod['id']}', '".$db->safesql( $filename )."', '".$db->safesql( htmlspecialchars( $mod['searchcode'], ENT_QUOTES, 'UTF-8' ), false )."', 'file', '{$mod['action_id']}')" );
+
+				}
+				
+			break;
+		
+			case "replaceall":
+			case "create":
+				$content = $mod['replacecode'];
+			break;
+		
+		}
+		
+		return $content;
+	}
+	
+	private static function prepare_search( $code ) {
+		
+		$safe_code = array();
+		$codes = explode("\n", trim($code));
+		
+		foreach($codes as $code) {
+			if( trim($code) ) {
+				$safe_code[] = preg_replace( "/\s+/u", "\s*", preg_quote( trim($code), '#') );
+			}
+		}
+		
+		$safe_code = "#".implode("\s*", $safe_code)."#siu";
+
+		return $safe_code;
+	}
+	
+	private static function getcache() {
+		
+		$store_key = md5(SECURE_AUTH_KEY . 'plugins_infos') . '.json';
+
+		if( file_exists(  ENGINE_DIR . '/cache/system/plugins/'. $store_key ) ) {
+			
+			$data = file_get_contents( ENGINE_DIR . '/cache/system/plugins/'. $store_key );
+			
+		} else return false;
+	
+		if ( $data ) {
+
+			$data = json_decode( $data, true );
+			if ( is_array($data) ) return $data;
+	
+		} 
+
+		return false;
+	
+	}
+	
+	private static function setcache( $data ) {
+		
+		if (!is_dir(ENGINE_DIR . "/cache/system/plugins")) {
+
+			@mkdir(ENGINE_DIR . "/cache/system/plugins", 0777);
+			@chmod(ENGINE_DIR . "/cache/system/plugins", 0777);
+		}
+
+		if ( is_array($data) ) {
+			
+			$store_key = md5(SECURE_AUTH_KEY . 'plugins_infos') . '.json';
+
+			@file_put_contents(ENGINE_DIR . '/cache/system/plugins/'.$store_key, json_encode( $data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ), LOCK_EX);
+			@chmod( ENGINE_DIR . '/cache/system/plugins/' . $store_key, 0666 );
+			
+		}
+	
+	}
+	
+}

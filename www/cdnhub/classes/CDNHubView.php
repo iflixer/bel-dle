@@ -24,7 +24,7 @@ class CDNHubView
 		global $config, $tpl;
 
 		if (defined('NEWS_ID')) {
-			$tpl->set('</body>', vh_js('/cdnhub/assets/js/actualize.js') . '</body>');
+			$tpl->set('</body>', cdnhub_js('/cdnhub/assets/js/actualize.js') . '</body>');
 
 			return true;
 		} else

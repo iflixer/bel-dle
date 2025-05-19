@@ -5,9 +5,78 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: pm_alert.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Notification about personal message
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1VHPy9GL1RDKlQyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMlRmTXVjdXFWTnJmOXY2VnZyZi1mOGhmPC5OY3pyam5mPXJlVnVmdzcuCi9mVC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tVGZGY2MvbjpDQ2U+ci12cmpuRTcKQ1QtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVRmSS4vaDdWNkZjZigxKWZvSEg1LW9Ib1JmPC5OY3pyam5mPXJlVnVmdzcuCi9UMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjJUZmFGVm5mMS5lcmZWbmYvNy5jcjFjcmVmOGhmMS4vaDdWNkZjVDIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyVGY0Vj5yOmYvWF91PnI3Y0UvRi9ULS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1UZltucjpmei5jVk5WMXVjVi52ZnU4LgpjZi9yN24udnU+Zlhybm51NnJUMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjJUKkNUVFZOKGYhZXJOVnZyZSgnTTNhM3F9NDk5end9ejknKWYpZnlUCUZydWVyNyhmIkRhYWlDUEVQZjVIWmY0Ljc4VmVlcnYiZik7VAlGcnVlcjdmKGYncS4xdWNWLnY6ZkVFQ0VFQydmKTtUCWVWcihmIkR1MVdWdjZmdWNjclgvYyEiZik7VHBUVCQ3LmpmMmYkZTgtVW4KL3I3X20KcjdoKCI8OXE5SWFmMUVuCjhTcjFjLGZYRTEudmNydmMsZjFFCi9ldWNyZV91YyxmWEVucnZlcjdfVmUsZgpFdnVYcixmSTM8OWZsRDl6ZjE3RT51bmNfN3J1ZV91Y2Z9PGZ6W3FxZnhLZjFFCi9ldWNyZV91Y2ZVZjE3RT51bmNfN3J1ZV91Y2ZhRDl6ZkhmOXE8OWZQZjl6TWYzPGY3cnVlX25jdWMKbmY0S3g9ZiJmRWZbPDlLaUs5NH1KZkVmIl8xLnZCcjdudWNWLnZuZjFmIHh9emYiZkVmWzw5S2lLOTR9SmZFZiJfMS52QnI3bnVjVi52XwpucjduZjEKZnh6ZjFFVmVmMmYxCkUxLnZCcjdudWNWLnZfVmVmIHh9emYiZkVmWzw5S2lLOTR9SmZFZiJfMS52QnI3bnVjVi52bl9Ycm5udTZybmZYZnh6ZjFFVmVmMmZYRTEudkJyN251Y1Yudl9WZWZxOTRhZiB4fXpmImZFZls8OUtpSzk0fUpmRWYiXzEudkJyN251Y1Yudl83cnVlbmYxN2Z4emYxRVZlZjJmMTdFMS52QnI3bnVjVi52X1ZlZjN6TWYxCkUKbnI3X1ZlZjJmMTdFCm5yN19WZWYgeH16Zig8OXE5SWFmMS52QnI3bnVjVi52X1ZlLGY9M0ooMTdydWNyZV91YylmMzxmPnVuY19Ycm5udTZyX2NWWHJmNEt4PWYiZkVmWzw5S2lLOTR9SmZFZiJfMS52QnI3bnVjVi52bl9Ycm5udTZybmZ3S3hbaWZndGYxLnZCcjdudWNWLnZfVmUpZjM8Zj5YZnh6ZlhFMS52QnI3bnVjVi52X1ZlZjJmPlhFMS52QnI3bnVjVi52X1ZlZjN6TWZYRTE3cnVjcmVfdWNmMmY+WEU+dW5jX1hybm51NnJfY1ZYcmYgeH16ZiJmRWZbPDlLaUs5NH1KZkVmIl8KbnI3bmYKZnh6ZlhFbnJ2ZXI3X1ZlZjJmCkUKbnI3X1ZlZmxEOUs5ZjEKRQpucjdfVmVmMmYneSRYclg4cjdfVmVMJwpucjdfVmUnMHAnZnhLTTlLZmd0ZjdydWVfbmN1YwpuZjM8SSxmMUUKL2V1Y3JlX3VjZk05PElmcX09fWFmUCIpO1RUJD51djZMJy9YX3U+cjdjJzBmMmZuYzdfN3IvPnUxcmYoInkKbnI3cCJmZixmJFhyWDhyN19WZUwndnVYcicwLGZuYzdfN3IvPnUxcmYoInl2ClhwImZmLGZWdmNCdT4oJFhyWDhyN19WZUwnL1hfCnY3cnVlJzApLGYkPnV2NkwnL1hfdT5yN2MnMCkpO1RUJDcuakwnbgo4U3IxYycwZjJmbmM3Vi9uPnVuRnJuKCQ3LmpMJ24KOFNyMWMnMCk7VFRWTmYoZT5yX25jNz5ydigkNy5qTCduCjhTcjFjJzApZlVmUkgpZnlUVAkkNy5qTCduCjhTcjFjJzBmMmZlPnJfbgo4bmM3KCQ3LmpMJ24KOFNyMWMnMCxmSCxmUkgpO1RUCVZOZigoJGNyWC9fZVh1a2YyZmU+cl9uYzc3Ly5uKCQ3LmpMJ24KOFNyMWMnMCxmJ2YnKSkpZiQ3LmpMJ24KOFNyMWMnMGYyZmU+cl9uCjhuYzcoJDcuakwnbgo4U3IxYycwLGZILGYkY3JYL19lWHVrKTtUVAkkNy5qTCduCjhTcjFjJzBmRTJmJ2ZFRUUnO1RwVCQ3LmpMJzEudmNydmMnMGYyZm5jN1Yvbj51bkZybigkNy5qTCcxLnZjcnZjJzApO1QkNy5qTCcxLnZjcnZjJzBmMmY3clguQnJfbQouY3JuX043LlhfY3JrYygkNy5qTCcxLnZjcnZjJzApO1RUJDcuakwnMS52Y3J2YycwZjJmMT5ydTdfMS52Y3J2YygkNy5qTCcxLnZjcnZjJzAsZkgsZk51Pm5yKTtUVFZOZihlPnJfbmM3PnJ2KCQ3LmpMJzEudmNydmMnMClmVWZaSEgpZnlUVAkkNy5qTCcxLnZjcnZjJzBmMmZlPnJfbgo4bmM3KCQ3LmpMJzEudmNydmMnMCxmSCxmWkhIKTtUVAlWTmYoKCRjclgvX2VYdWtmMmZlPnJfbmM3Ny8ubigkNy5qTCcxLnZjcnZjJzAsZidmJykpKWYkNy5qTCcxLnZjcnZjJzBmMmZlPnJfbgo4bmM3KCQ3LmpMJzEudmNydmMnMCxmSCxmJGNyWC9fZVh1ayk7VFQJJDcuakwnMS52Y3J2YycwZkUyZidmRUVFJztUcFRUVCQvWF91PnI3Y2YyZkdHR0RhPXFUR2VWQmZWZTIidnJqL1giZmNWYz5yMiJ5JD51djZMJy9YX3VjVmM+cicwcCJmbmNoPnIyImVWbi8+dWg6di52cjsiZlV5JD51djZMJy9YX3U+cjdjJzBwVEc4N1VHODdVVHkkPnV2NkwnL1hfdW4KOCcwcGZHOFV5JDcuakwnbgo4U3IxYycwcEdDOFVHODdVVHkkPnV2NkwnL1hfTjcuWCcwcGZHOFV5JDcuakwndnVYcicwcEdDOFVHODdVRzg3VUdWVXkkNy5qTCcxLnZjcnZjJzBwR0NWVUdDZVZCVVREYT1xO1RUJC52Pi51ZV9uMTdWL2NuTDBmMmZHR0dEYT1xVEJ1N2Z1am5WT3JmMmZSUkhmKmY2cmNndW5yPFZPcigpO1RUVk5mKHVqblZPcmZVZigkKGpWdmUuailFalZlY0YoKWYqZkhFXVIpKWZ5ZnVqblZPcmYyZiQoalZ2ZS5qKUVqVmVjRigpZipmSEVdUjtmcFRUJCgnI3Zyai9YJylFZVZ1Pi42KHlUCXUKYy54L3J2OmZjNwpyLFQJbkYuajpmJ051ZXInLFQJRlZlcjpmJ051ZXInLFQJalZlY0Y6ZnVqblZPcixUCTdyblZPdTg+cjpmTnU+bnIsVAllVnU+LjZJPnVubjpmImU+ci0vLi8KLy12cmovWCIsVAk4CmNjLnZuOmZ5VAkJInkkPnV2NkwnL1hfMT4ubnInMHAiZjpmTgp2MWNWLnYoKWZ5ZlQJCQkkKGNGVm4pRWVWdT4uNigiMT4ubnIiKTsJCQkJCQlUCQlwLGZUCQkieSQ+dXY2TCcvWF91N3J1ZScwcCI6Zk4KdjFjVi52KClmeVQJCQllLjEKWHJ2Y0U+LjF1Y1YudjIneSRpRGlfPDlxNHA/ZS4yL1gnOwkJCVQJCXBUCXBUcCk7VERhPXE7VD9V';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdycWtbSAogPjdFd3RUZFJYMzJCRmduWkxKdWg9Q3tzV0tdTW85LlZZT2E4UUd2MXhwZjBjNWxpYlNJNm15alUvTjw0RH1QQXplJywnZUx4VTB1SmxyLkdZClE1bUE9dmhCczNbWGF5TS9LN2tSOUQyRW9pVnpUYjY8bmNPfSBddDRXUFpqQ2dxe3c+cGZTRkhJMThOZCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$row = $db->super_query("SELECT c.subject, m.content, c.updated_at, m.sender_id, u.name, CASE WHEN cr.last_read_at IS NULL OR c.updated_at > cr.last_read_at THEN 0 ELSE 1 END AS read_status FROM " . USERPREFIX . "_conversations c JOIN " . USERPREFIX . "_conversation_users cu ON c.id = cu.conversation_id JOIN " . USERPREFIX . "_conversations_messages m ON c.id = m.conversation_id LEFT JOIN " . USERPREFIX . "_conversation_reads cr ON c.id = cr.conversation_id AND cu.user_id = cr.user_id JOIN (SELECT conversation_id, MAX(created_at) AS last_message_time FROM " . USERPREFIX . "_conversations_messages GROUP BY conversation_id) AS lm ON m.conversation_id = lm.conversation_id AND m.created_at = lm.last_message_time JOIN " . USERPREFIX . "_users u ON m.sender_id = u.user_id WHERE cu.user_id = '{$member_id['user_id']}' ORDER BY read_status ASC, c.updated_at DESC LIMIT 1");
+
+$lang['pm_alert'] = str_replace ("{user}"  , $member_id['name'], str_replace ("{num}"  , intval($member_id['pm_unread']), $lang['pm_alert']));
+
+$row['subject'] = stripslashes($row['subject']);
+
+if (dle_strlen($row['subject']) > 50) {
+
+	$row['subject'] = dle_substr($row['subject'], 0, 50);
+
+	if (($temp_dmax = dle_strrpos($row['subject'], ' '))) $row['subject'] = dle_substr($row['subject'], 0, $temp_dmax);
+
+	$row['subject'] .= ' ...';
+}
+$row['content'] = stripslashes($row['content']);
+$row['content'] = remove_quotes_from_text($row['content']);
+
+$row['content'] = clear_content($row['content'], 0, false);
+
+if (dle_strlen($row['content']) > 300) {
+
+	$row['content'] = dle_substr($row['content'], 0, 300);
+
+	if (($temp_dmax = dle_strrpos($row['content'], ' '))) $row['content'] = dle_substr($row['content'], 0, $temp_dmax);
+
+	$row['content'] .= ' ...';
+}
+
+
+$pm_alert = <<<HTML
+<div id="newpm" title="{$lang['pm_atitle']}" style="display:none;" >{$lang['pm_alert']}
+<br><br>
+{$lang['pm_asub']} <b>{$row['subject']}</b><br>
+{$lang['pm_from']} <b>{$row['name']}</b><br><br><i>{$row['content']}</i></div>
+HTML;
+
+$onload_scripts[] = <<<HTML
+var awsize = 550 * getBaseSize();
+
+if (awsize > ($(window).width() * 0.95)) { awsize = $(window).width() * 0.95; }
+
+$('#newpm').dialog({
+	autoOpen: true,
+	show: 'fade',
+	hide: 'fade',
+	width: awsize,
+	resizable: false,
+	dialogClass: "dle-popup-newpm",
+	buttons: {
+		"{$lang['pm_close']}" : function() { 
+			$(this).dialog("close");						
+		}, 
+		"{$lang['pm_aread']}": function() {
+			document.location='{$PHP_SELF}?do=pm';			
+		}
+	}
+});
+HTML;
+?>

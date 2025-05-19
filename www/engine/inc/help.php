@@ -1,13 +1,53 @@
-<?php
+<?PHP
 /*
 =====================================================
  DataLife Engine - by SoftNews Media Group 
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: help.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Help
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PzR4PzFHMWo8KmpVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVWpMZDNYMzhEeVBMb2xrRGxQTC1MZ3NMOTB5WHdQYUVMcFBZRDNMWmkwPk5Mai0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0takxSWFhORTo8PFk2UC1sUGFFS2k+PGotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWpMfTBOc2lEa1JYTCh7KUxDNTVdLUM1Q0hMOTB5WHdQYUVMcFBZRDNMWmkwPk5qVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVqTEZSREVMezBZUExERUxOaTBYUHtYUFlMZ3NMezBOc2lEa1JYalVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVakxuRDZQOkxSUDZOS05STmotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWpMSkVQOkxHUDZOalVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVaio8akR5KEwhWVB5RGxQWShMJ2R1RnU4T25vb3daT3dvJ0wpTApUTCFZUHlEbFBZKEwnOApaWm9kX093J0wpTClMIGoJUlAzWVBpKEwiR0ZGMTxNS01MXTVxTG4waWdEWVlQbCJMKTtqCVJQM1lQaUwoTCc4MHszWEQwbDpMS0s8S0s8J0wpO2oJWURQKEwiRzN7VkRsa0wzWFhQZk5YISJMKTtqPWpqJFJQNk5fRVB7WEQwbEVMVUwzaWkzcygpO2okRVB7WEQwbExVTFgwWGkzbEU2RFgoJF9Uby9KbzlGaCdFUHtYRDBsJ1MpO2pqJEVQNlB7WFBZXzYzbGs+M2tQTFVMJHswbHlEa2gnNjNsa0UnUztqakR5TChERUVQWChMJF99Cgp0T29oJ0VQNlB7WFBZXzYzbGs+M2tQJ1NMKSlMIExqagkkX30KCnRPb2gnRVA2UHtYUFlfNjNsaz4za1AnU0xVTFgwWGkzbEU2RFgoTCRffQoKdE9vaCdFUDZQe1hQWV82M2xrPjNrUCdTLEx5MzZFUCxMeTM2RVBMKTtqaglEeUwoJF99Cgp0T29oJ0VQNlB7WFBZXzYzbGs+M2tQJ1NMIVVMIiJMdXdkTEBERV9ZRGlMKExUCgpGX2RPVExLTCc8NjNsaz4za1A8J0xLTCRffQoKdE9vaCdFUDZQe1hQWV82M2xrPjNrUCdTTCkpTCBqCQkkRVA2UHtYUFlfNjNsaz4za1BMVUwkX30KCnRPb2gnRVA2UHtYUFlfNjNsaz4za1AnUztqCT1qaj1qakR5TChMeUQ2UF9QW0RFWEUoTGQ4bzE2PmtEbEU6On1SUHtWKFQKCkZfZE9UTEtMJzw2M2xrPjNrUDwnTEtMJEVQNlB7WFBZXzYzbGs+M2tQTEtMJzxSUDZOSzZsaydMKSlMKUwgaglpUGM+RGlQXzBse1BMKGQ4bzE2PmtEbEU6On1SUHtWKFQKCkZfZE9UTEtMJzw2M2xrPjNrUDwnTEtMJEVQNlB7WFBZXzYzbGs+M2tQTEtMJzxSUDZOSzZsaycpKTtqPUxQNkVQTFlEUCgiODNsaz4za1BMeUQ2UExsMFhMeTA+bFkiKTtqakR5KCRFUHtYRDBsKSBqaglEeSghREVFUFgoJFJQNk5fRVB7WEQwbEVoJ1hEWDZQJ1NoJEVQe1hEMGxTKSkgTFlEUCgiR1A2TkxFUHtYRDBsTHhnNCRFUHtYRDBseDxnNExsMFhMeTA+bFkiKTtMPWpqCVB7UjAieFlEbUxEWVVcIk4zbFA2LVJQNk4tRVB7WEQwbFwiTFhEWDZQVVwiIkskUlA2Tl9FUHtYRDBsRWgnWERYNlAnU2gkRVB7WEQwbFNLIlwiNCJLJFJQNk5fRVB7WEQwbEVoJ2cwWXMnU2gkRVB7WEQwbFNLIng8WURtNCI7aj1qUDZFUCBqaglmRWsoTCJQaWkwaSIsTCQ2M2xraCdEbFlQW19ZUGxEUFknUyxMJDYzbGtoJ0RsWVBbX1lQbERQWSdTTCk7aglqPWo/NA==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdFV1lOZ3dWcF1mWlEvezxSYkNxQmM2Nzh6dlQyMSBsa0FJU3J5Lm9pZW11SD59THg9NFBLTTUwWFVoRGFHagozSltPOXNkdG5GJywnc2pkcGJOa000bUdaUWMvaFkyM0JxbDdMeldSWFB7bmc4Sl02ZlZFcjl2QTV1QyA8fT5lLjEwb3Q9W2l3SApPYVV4SVN5REtGVCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$help_sections = array();
+$section = totranslit($_REQUEST['section']);
+
+$selected_language = $config['langs'];
+
+if (isset( $_COOKIE['selected_language'] )) { 
+
+	$_COOKIE['selected_language'] = totranslit( $_COOKIE['selected_language'], false, false );
+
+	if ($_COOKIE['selected_language'] != "" AND @is_dir ( ROOT_DIR . '/language/' . $_COOKIE['selected_language'] )) {
+		$selected_language = $_COOKIE['selected_language'];
+	}
+
+}
+
+if ( file_exists( DLEPlugins::Check(ROOT_DIR . '/language/' . $selected_language . '/help.lng' )) ) {
+	require_once (DLEPlugins::Check(ROOT_DIR . '/language/' . $selected_language . '/help.lng'));
+} else die("Language file not found");
+
+if($section){
+
+	if(!isset($help_sections['title'][$section])){ die("Help section <b>$section</b> not found"); }
+
+	echo"<div id=\"panel-help-section\" title=\"".$help_sections['title'][$section]."\">".$help_sections['body'][$section]."</div>";
+}
+else{
+
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+	
+}
+?>

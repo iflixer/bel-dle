@@ -1,0 +1,1 @@
+<div class="item slider__cover" data-bg="{image-1}"></div>

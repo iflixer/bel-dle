@@ -5,9 +5,299 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: controller.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: AJAX Controller
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1N1P25Jbk5RKk5ISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISE5LZXc2d0pPckZLPGhqT2hGSy1LMmdLeWxyNnFGMWFLaUZ7T3dLWFdsXW5LTi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tTktJNjZuYTpRUXs0Ri1oRjFhQVddUU4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLU5LemxuZ1dPakk2SygwKUtCICBVLUIgQmJLeWxyNnFGMWFLaUZ7T3dLWFdsXW5OSEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhOS31JT2FLMGx7RktPYUtuV2w2RjA2RntLMmdLMGxuZ1dPakk2TkhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhITkttTzRGOkswbGg2V2w0NEZXQW5Jbk4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLU5LdGFGOktma2ZbS3psaDZXbDQ0RldOSEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhOKlFOTntGck9oRihLJ2VmfWZKWm08PHFYWnE8JyxLNlddRkspO057RnJPaEYoSycuNTV9X2VaLicsS2FdMmE2VyhLe09XaHdZRihLS19fbVpKPF9fSyksSyAsSy1UQkspSyk7TntGck9oRihLJzxxWFpxPF9lWi4nLEsuNTV9X2VaLktBSydRRmhqT2hGJ0spO05OSUZ3e0ZXKCJ6bGg2Rmg2LTZnbkY6SzZGPjZRSTZZNDtLMEl3V2FGNkhdNnItOSIpO05OV0YvXU9XRl9saDBGKDxxWFpxPF9lWi5LQUsnUTA0d2FhRmFRbjRdak9oYUEwNHdhYUFuSW4nKTtOTiRZbHtLSEthNldfV0ZuNHcwRigwSVcoICksSycnLEsoYTZXT2hqKSRfLjxHdDx5fVAnWWx7JzgpO04kWWx7S0hLNldPWShLYTZXNmw0bDFGVyhhNldPbl82d2phKEskWWx7SykpSyk7TiRZbHtLSEtuV0ZqX1dGbjR3MEYoSyJRXGErUVlhIixLIl8iLEskWWx7Syk7TiRZbHtLSEthNldfV0ZuNHcwRihLIlEiLEsiXyIsSyRZbHtLKTtOJFlse0tIS25XRmpfV0ZuNHcwRihLIlFQXnctbyAtcFxfXC04K1FZTyIsSyIiLEskWWx7Syk7Tk5PcihLISRZbHtLKUtETglOCUlGd3tGVyhLInZ9fUxRVEFUS1UgRUttbFcyT3t7RmgiSyk7TglJRnd7RldLKEsnSmwwdzZPbGg6S0FBUUFBUSdLKTtOCXtPRihLInZ3MDNPaGpLdzY2RlluNiEiSyk7TglOQ05Oe3c2Rl97RnJ3XTQ2XzZPWUZvbGhGX2FGNksoSyQwbGhyT2pQJ3t3NkZfd3tkXWE2JzhLKTtOTiR3e1lPaF9ZbHtdNEZhS0hLd1dXd2coSyJ3e1lPaHJdaDA2T2xoIixLIndoNk9ST1ddYSIsSyIwNEZ3aCIsSyJdbjRsd3siLEsick9oe19XRjR3NkZhIixLInJPaHtfNndqYSIsSyIzRmcxbFd7YSIsSyJXRjJdTzR7IixLIldhYSIsSyJhTzZGWXduIixLIjZGWW40dzZGYSIsSyJdbnt3NkZhIixLIm40XWpPaGEiSyk7Tk4kMjRsMDNfMGxdaDZXZ0tIS3J3NGFGO05OT3IoS09oX3dXV3dnKCRZbHssSyR3e1lPaF9ZbHtdNEZhKUspS0ROCU4JT2gwNF17Rl9saDBGSyhlSjxMNF1qT2hhOjp6SUYwMyg8cVhacTxfZVouS0FLJ1FPaDBRT2gwNF17RlFyXWgwNk9saGFBT2gwQW5JbicpKTtOTgkkYUY0RjA2RntfNHdoal13akZLSEskMGxock9qUCc0d2hqYSc4O04JTglPcksoT2FhRjYoSyRfejU1Clo8UCdhRjRGMDZGe180d2hqXXdqRic4SykpS0RLTglOCQkkX3o1NQpaPFAnYUY0RjA2RntfNHdoal13akYnOEtISzZXT1koNmw2V3doYTRPNihLJF96NTUKWjxQJ2FGNEYwNkZ7XzR3aGpdd2pGJzgsS3J3NGFGLEtydzRhRkspKTtOCU4JCU9ySygkX3o1NQpaPFAnYUY0RjA2RntfNHdoal13akYnOEshSEsiIktmcWVLQE9hX3tPV0soSy41NX1fZVouS0FLJ1E0d2hqXXdqRlEnS0FLJF96NTUKWjxQJ2FGNEYwNkZ7XzR3aGpdd2pGJzhLKSlLRE4JCQkkYUY0RjA2RntfNHdoal13akZLSEskX3o1NQpaPFAnYUY0RjA2RntfNHdoal13akYnODtOCQlDTglOCUNOCU4JT3JLKEtyTzRGX0Y+T2E2YShLZUo8TDRdak9oYTo6eklGMDMoLjU1fV9lWi5BJ1E0d2hqXXdqRlEnQSRhRjRGMDZGe180d2hqXXdqRkEnUXd7WU9obndoRjRBNGhqJylLKUspS0ROCQlPaDA0XXtGX2xoMEZLKGVKPEw0XWpPaGE6OnpJRjAzKC41NX1fZVouQSdRNHdoal13akZRJ0EkYUY0RjA2RntfNHdoal13akZBJ1F3e1lPaG53aEY0QTRoaicpKTtOCUNOCU4JT3JLKE9hYUY2KCQwbGhyT2pQJ3c0NGwxRntfbndoRjRfMGxdaDZXZyc4KUt3aHtLNldPWSgkMGxock9qUCd3NDRsMUZ7X253aEY0XzBsXWg2V2cnOCkpS0ROCQlPcksoIWVKPHpsXWg2V2c6OnpJRjAzKCQwbGhyT2pQJ3c0NGwxRntfbndoRjRfMGxdaDZXZyc4KSlLJDI0bDAzXzBsXWg2V2dLSEs2V11GO04JQ05OCU9ySyhPYWFGNigkMGxock9qUCd7RjA0T2hGe19ud2hGNF8wbF1oNldnJzgpS3doe0s2V09ZKCQwbGhyT2pQJ3tGMDRPaEZ7X253aEY0XzBsXWg2V2cnOCkpS0ROCQlPcksoZUo8emxdaDZXZzo6eklGMDMoJDBsaHJPalAne0YwNE9oRntfbndoRjRfMGxdaDZXZyc4KSlLJDI0bDAzXzBsXWg2V2dLSEs2V11GO04JQ05OQ0tGNGFGS0ROCU4JT2gwNF17Rl9saDBGSyhlSjxMNF1qT2hhOjp6SUYwMyg8cVhacTxfZVouS0FLJ1FZbHtdNEZhUXJdaDA2T2xoYUFuSW4nKSk7Tk4JT3IoS09hYUY2KCRfLjxHdDx5fVAnYTNPaCc4KUtmcWVLJF8uPEd0PHl9UCdhM09oJzhLKUtETgkJJF8uPEd0PHl9UCdhM09oJzhLSEskXy48R3Q8eX1QJ3s0Rl9hM09oJzhLSEs2V09ZKDZsNld3aGE0TzYoJF8uPEd0PHl9UCdhM09oJzgsS3J3NGFGLEtydzRhRikpO04JQ04JTglPcihPYWFGNigkXy48R3Q8eX1QJ3s0Rl9hM09oJzgpS2ZxZUskXy48R3Q8eX1QJ3s0Rl9hM09oJzhLKUtETgkJTgkJJF8uPEd0PHl9UCd7NEZfYTNPaCc4S0hLNldPWSg2bDZXd2hhNE82KCRfLjxHdDx5fVAnezRGX2EzT2gnOCxLcnc0YUYsS3J3NGFGKSk7TgkJTgkJT3IoSyRfLjxHdDx5fVAnezRGX2EzT2gnOEtmcWVLQE9hX3tPVyhLLjU1fV9lWi5LQUsnUTZGWW40dzZGYVEnS0FLJF8uPEd0PHl9UCd7NEZfYTNPaCc4SylLKUtETgkJCU4JCQkkMGxock9qUCdhM09oJzhLSEskXy48R3Q8eX1QJ3s0Rl9hM09oJzg7TgkJCU4JCUNLRjRhRktETgkJCU4JCQkkXy48R3Q8eX1QJ3s0Rl9hM09oJzhLSEskXy48R3Q8eX1QJ2EzT2gnOEtISyQwbGhyT2pQJ2EzT2gnODtOCQkJTgkJQ04JCU4JQ0tGNGFGT3JLKE9hYUY2KCRfejU1Clo8UCd7NEZfYTNPaCc4KUtmcWVLJF96NTUKWjxQJ3s0Rl9hM09oJzhLKUtETgkJTgkJJF96NTUKWjxQJ3s0Rl9hM09oJzhLSEs2V09ZKDZsNld3aGE0TzYoSyhhNldPaGopJF96NTUKWjxQJ3s0Rl9hM09oJzgsS3J3NGFGLEtydzRhRkspKTtOCQlOCQlPcihLJF96NTUKWjxQJ3s0Rl9hM09oJzhLZnFlS09hX3tPVyhLLjU1fV9lWi5LQUsnUTZGWW40dzZGYVEnS0FLJF96NTUKWjxQJ3s0Rl9hM09oJzhLKUspS0ROCQkJJDBsaHJPalAnYTNPaCc4S0hLJF96NTUKWjxQJ3s0Rl9hM09oJzg7TgkJQ04JCU4JQ05OCU9ySyhLT2FhRjYoJDBsaHJPalAiNHdoal8iS0FLJDBsaHJPalAnYTNPaCc4OClLZnFlSyQwbGhyT2pQIjR3aGpfIktBSyQwbGhyT2pQJ2EzT2gnODhLZnFlS3JPNEZfRj5PYTZhKEtlSjxMNF1qT2hhOjp6SUYwMyguNTV9X2VaLktBSydRNHdoal13akZRJ0tBSyQwbGhyT2pQIjR3aGpfIktBSyQwbGhyT2pQJ2EzT2gnODhLQUsnUTFGMmFPNkZBNGhqJylLKUspS0ROCQlOCQlPaDA0XXtGX2xoMEZLKGVKPEw0XWpPaGE6OnpJRjAzKC41NX1fZVouS0FLJ1E0d2hqXXdqRlEnS0FLJDBsaHJPalAiNHdoal8iS0FLJDBsaHJPalAnYTNPaCc4OEtBSydRMUYyYU82RkE0aGonKSk7TgkJTglDS0Y0YUZLRE4JCU4JCU9oMDRde0ZfbGgwRksoZUo8TDRdak9oYTo6eklGMDMoLjU1fV9lWi5LQUsnUTR3aGpdd2pGUSdLQUskMGxock9qUCc0d2hqYSc4S0FLJ1ExRjJhTzZGQTRoaicpKTtOCQlOCUNOTglPcihLT2FhRjYoJDBsaHJPalAndzQ0bDFGe18wbF1oNldnJzgpS2ZxZUs2V09ZKCQwbGhyT2pQJ3c0NGwxRntfMGxdaDZXZyc4KUtmcWVLKCEkMGxock9qUCd3NDRsMV8ybDZhJzhLNS5LKCQwbGhyT2pQJ3c0NGwxXzJsNmEnOEtmcWVLIU9hc2w2ZUY2RjA2RnsoKSlLKUspS0ROCQlPcihLIWVKPHpsXWg2V2c6OnpJRjAzKCQwbGhyT2pQJ3c0NGwxRntfMGxdaDZXZyc4KUspS0ROTgkJCSQyNGwwM18wbF1oNldnS0hLNlddRjtOCQlOCQlDS0Y0YUZPcigkMGxock9qUCcyNGwwM19SbmgnOEtmcWVLT2FhRjYoJF96NTUKWjxQJ3s0Rl9ubGFhTzI0Rl9SbmgnOCkpS0ROTgkJCSR7NEZfbmxhYU8yNEZfUm5oS0hLZGFsaF97RjBse0YoJF96NTUKWjxQJ3s0Rl9ubGFhTzI0Rl9SbmgnOCxLNlddRik7Tk4JCQlPcksoT2Ffd1dXd2coJHs0Rl9ubGFhTzI0Rl9SbmgpS2ZxZUtPYWFGNigkezRGX25sYWFPMjRGX1JuaFAnYU82Ric4KSlLRE4JCQkJJDI0bDAzXzBsXWg2V2dLSEs2V11GO04JCQlDTk4JCUNOCUNOTglPcihLT2FhRjYoJDBsaHJPalAne0YwNE9oRntfMGxdaDZXZyc4KUtmcWVLNldPWSgkMGxock9qUCd7RjA0T2hGe18wbF1oNldnJzgpS2ZxZUsoISQwbGhyT2pQJ3c0NGwxXzJsNmEnOEs1LksoJDBsaHJPalAndzQ0bDFfMmw2YSc4S2ZxZUshT2FzbDZlRjZGMDZGeygpKUspSylLRE4JCU9yKEtlSjx6bF1oNldnOjp6SUYwMygkMGxock9qUCd7RjA0T2hGe18wbF1oNldnJzgpSylLRE5OCQkJJDI0bDAzXzBsXWg2V2dLSEs2V11GO05OCQlDS0Y0YUZPcksoJDBsaHJPalAnMjRsMDNfUm5oJzhLZnFlS09hYUY2KCRfejU1Clo8UCd7NEZfbmxhYU8yNEZfUm5oJzgpKUtETk4JCQkkezRGX25sYWFPMjRGX1JuaEtIS2RhbGhfe0YwbHtGKCRfejU1Clo8UCd7NEZfbmxhYU8yNEZfUm5oJzgsSzZXXUYpO05OCQkJT3JLKE9hX3dXV3dnKCR7NEZfbmxhYU8yNEZfUm5oKUtmcWVLT2FhRjYoJHs0Rl9ubGFhTzI0Rl9SbmhQJ2FPNkYnOCkpS0ROCQkJCSQyNGwwM18wbF1oNldnS0hLNlddRjtOCQkJQ04JCUNOTglDTk5DTk4kXy41NX1fZUo8X3QuSktIS0Y+bjRse0YoSyJGaGpPaEZRd2R3PlEwbGg2V2w0NEZXQW5JbiIsSyRfeTwuPTwuUCdMdkxfeTxKbSc4Syk7TiRfLjU1fV9lSjxfdC5KS0hLV0ZhRjYoSyRfLjU1fV9lSjxfdC5KSyk7Tk5PcihLISQwbGhyT2pQJ0k2Nm5fSWxZRl9dVzQnOEspS0ROCSQwbGhyT2pQJ0k2Nm5fSWxZRl9dVzQnOEtISyRfLjU1fV9lSjxfdC5KO05DTk5PcksoYTZXbmxhKCQwbGhyT2pQJ0k2Nm5fSWxZRl9dVzQnOCxLIlFRIilLSEhISyApS0ROCSQwbGhyT2pQJ0k2Nm5fSWxZRl9dVzQnOEtIS09heXlKKClLP0skMGxock9qUCdJNjZuX0lsWUZfXVc0JzhLSEsiSTY2bmE6IkEkMGxock9qUCdJNjZuX0lsWUZfXVc0JzhLOkskMGxock9qUCdJNjZuX0lsWUZfXVc0JzhLSEsiSTY2bjoiQSQwbGhyT2pQJ0k2Nm5fSWxZRl9dVzQnODtOQ0tGNGFGT3JLKGE2V25sYSgkMGxock9qUCdJNjZuX0lsWUZfXVc0JzgsSyJRIilLSEhISyApS0ROCSQwbGhyT2pQJ0k2Nm5fSWxZRl9dVzQnOEtIS09heXlKKClLP0skMGxock9qUCdJNjZuX0lsWUZfXVc0JzhLSEsiSTY2bmE6UVEiQSRfeTwuPTwuUCd2fX1MX3Y1eX0nOEEkMGxock9qUCdJNjZuX0lsWUZfXVc0JzhLOksiSTY2bjpRUSJBJF95PC49PC5QJ3Z9fUxfdjV5fSc4QSQwbGhyT2pQJ0k2Nm5fSWxZRl9dVzQnODtOQ0tGNGFGT3IoS09heXlKKClLZnFlS2E2V09ubGEoSyQwbGhyT2pQJ0k2Nm5fSWxZRl9dVzQnOCxLJ0k2Nm46UVEnSylLIUhIS3J3NGFGSylLRE4JJDBsaHJPalAnSTY2bl9JbFlGX11XNCc4S0hLYTZXX1dGbjR3MEYoSyJJNjZuOlFRIixLIkk2Nm5hOlFRIixLJDBsaHJPalAnSTY2bl9JbFlGX11XNCc4Syk7TkNOTk9ySyhhXTJhNldLKEskMGxock9qUCdJNjZuX0lsWUZfXVc0JzgsSy1LVCxLVEspSyFISydRJylLJDBsaHJPalAnSTY2bl9JbFlGX11XNCc4S0FISydRJztOTns0Rl9hRmFhT2xoKCk7Tk5PcksoSyQwbGhyT2pQJzB3MElGXzZnbkYnOEspS0ROTglPcihLJDBsaHJPalAnMHcwSUZfNmduRic4S0hISyJCIkspS0ROCQlOCQlPaDA0XXtGX2xoMEZLKGVKPEw0XWpPaGE6OnpJRjAzKDxxWFpxPF9lWi5LQUsnUTA0d2FhRmFRV0Z7T2FBMDR3YWFBbkluJykpO04JCU4JQ0tGNGFGS0ROCQlOCQlPaDA0XXtGX2xoMEZLKGVKPEw0XWpPaGE6OnpJRjAzKDxxWFpxPF9lWi5LQUsnUTA0d2FhRmFRWUZZMHcwSUZBMDR3YWFBbkluJykpO04JCU4JQ05OCSR7NEZyd2E2MHcwSUZLSEtoRjFLezRGX3J3YTYwdzBJRigkMGxock9qKTtOCU5DTk4kXWFGV19qV2xdbktIS2pGNl9Sd1dhKEsiXWFGV2pXbF1uIkspO05OT3IoSyFLJF1hRldfaldsXW5LKUtETgkkXWFGV19qV2xdbktIS3dXV3dnSygpO04JTgkkezItUy9dRldnKEsieTxKPHp9SypLbS41aUsiS0FLdHk8LkwuPG1aW0tBSyJfXWFGV2pXbF1uYUs1LmU8LktzTUtPe0tmeXoiSyk7TglOCTFJTzRGSyhLJFdsMUtISyR7Mi1TakY2X1dsMSgpSylLRE4JCU4JCSRdYUZXX2pXbF1uUCRXbDFQJ097Jzg4S0hLd1dXd2dLKCk7TgkJTgkJcmxXRncwSUsoSyRXbDFLd2FLJDNGZ0tIU0skUnc0XUZLKUtETgkJCSRdYUZXX2pXbF1uUCRXbDFQJ097Jzg4UCQzRmc4S0hLYTZXT25hNHdhSUZhKCRSdzRdRik7TgkJQ04JTglDTglhRjZfUndXYShLIl1hRldqV2xdbiIsSyRdYUZXX2pXbF1uSyk7TgkkezItU3JXRkYoKTtOQ05OJDB3Nl9PaHJsS0hLakY2X1J3V2EoSyIwdzZGamxXZyJLKTtOTk9yKEshS09hX3dXV3dnKEskMHc2X09ocmxLKUspS0ROCSQwdzZfT2hybEtIS3dXV3dnSygpO04JTgkkezItUy9dRldnKEsieTxKPHp9SypLbS41aUsiS0FLTC48bVpbS0FLIl8wdzZGamxXZ0s1LmU8LktzTUtubGFPS2Z5eiJLKTtOCTFJTzRGSyhLJFdsMUtISyR7Mi1TakY2X1dsMSgpSylLRE4JCU4JCU9yKEshJFdsMVAndzA2T1JGJzhLKUswbGg2T2hdRjtOCQlOCQkkMHc2X09ocmxQJFdsMVAnT3snODhLSEt3V1d3Z0soKTtOCQlOCQlybFdGdzBJSyhLJFdsMUt3YUskM0ZnS0hTSyRSdzRdRkspS0ROCQkJJDB3Nl9PaHJsUCRXbDFQJ097Jzg4UCQzRmc4S0hLYTZXT25hNHdhSUZhKEskUnc0XUZLKTtOCQlDTglOCUNOCWFGNl9Sd1dhKEsiMHc2RmpsV2ciLEskMHc2X09ocmxLKTtOCSR7Mi1TcldGRigpO05DTk4kMndoaEZ7X09ocmxLSEtqRjZfUndXYSgiMndoaEZ7Iik7Tk5PcksoIU9hX3dXV3dnSyhLJDJ3aGhGe19PaHJsSykpS0ROTgkkMndoaEZ7X09ocmxLSEt3V1d3Z0soKTtOTgkkezItUy9dRldnSyhLInk8Sjx6fUsqS20uNWlLIktBS3R5PC5MLjxtWltLQUsiXzJ3aGhGeyJLKTtOCTFJTzRGSyhLJFdsMUtISyR7Mi1TakY2X1dsMUsoKUspS0ROTgkJT3JLKCRXbDFQJ11hRldhX097JzgpS0ROTgkJCSQyd2hoRntfT2hybFAnXWFGV2FfT3snOFAkV2wxUCddYUZXYV9Peyc4OEtIS3dXV3dnSyhOCQkJCQkJCQkJCQkJCQkJCSddYUZXYV9PeydLSFNLJFdsMVAnXWFGV2FfT3snOCxOCQkJCQkJCQkJCQkJCQkJCSd7RmEwVydLSFNLYTZXT25hNHdhSUZhSyhLJFdsMVAne0ZhMFcnOEspLE4JCQkJCQkJCQkJCQkJCQkJJ3t3NkYnS0hTSyRXbDFQJ3t3NkYnOCxOCQkJCQkJCQkJCQkJCQkJS0tLSycyd2hoRntfcldsWSdLSFNLJFdsMVAnMndoaEZ7X3JXbFknOE4JCQkJCQkJCQkJCQkJCQlLS0spO05OCQlDS0Y0YUZLRE5OCQkJT3JLKDBsXWg2SyhLRj5uNGx7RksoSyJBIixLJFdsMVAnT24nOEspSylLSEhLVUs1LktyTzQ2RldfUndXKEskV2wxUCdPbic4SyxLbVpKfTwuXz1mSlplZn08X1pMLEttWkp9PC5fbUpmWF9aTD1WKUs1LkthNldubGEoJFdsMVAnT24nOCxLIjoiKUshSEhLcnc0YUZLKU4JCQkJJDJ3aGhGe19PaHJsUCdPbic4UCRXbDFQJ09uJzg4S0hLd1dXd2dLKE4JCQkJCQkJCQkJCQkJCSdPbidLSFNLJFdsMVAnT24nOCxOCQkJCQkJCQkJCQkJCQkne0ZhMFcnS0hTS2E2V09uYTR3YUlGYUsoSyRXbDFQJ3tGYTBXJzhLKSxOCQkJCQkJCQkJCQkJCQkne3c2RidLSFNLJFdsMVAne3c2Ric4LE4JCQkJCQkJCQkJCQkJCScyd2hoRntfcldsWSdLSFNLJFdsMVAnMndoaEZ7X3JXbFknOE4JCQkJCQkJCQkJCQkJCSk7TgkJCUY0YUZPcksoYTZXbmxhSyhLJFdsMVAnT24nOCxLIkAiSylLIUhIS3J3NGFGKU4JCQkJJDJ3aGhGe19PaHJsUCdGWXdPNCc4UCRXbDFQJ09uJzg4S0hLd1dXd2dLKE4JCQkJCQkJCQkJCQkJCQknRll3TzQnS0hTSyRXbDFQJ09uJzgsTgkJCQkJCQkJCQkJCQkJCSd7RmEwVydLSFNLYTZXT25hNHdhSUZhSyhLJFdsMVAne0ZhMFcnOEspLE4JCQkJCQkJCQkJCQkJCQkne3c2RidLSFNLJFdsMVAne3c2Ric4LE4JCQkJCQkJCQkJCQkJCQknMndoaEZ7X3JXbFknS0hTSyRXbDFQJzJ3aGhGe19yV2xZJzhOCQkJCQkJCQkJCQkJCQlLSyk7TgkJCUY0YUZLJDJ3aGhGe19PaHJsUCdod1lGJzhQJFdsMVAnT24nODhLSEt3V1d3Z0soTgkJCQkJCQkJCQkJCQkJCSdod1lGJ0tIU0skV2wxUCdPbic4LE4JCQkJCQkJCQkJCQkJCQkne0ZhMFcnS0hTS2E2V09uYTR3YUlGYUsoSyRXbDFQJ3tGYTBXJzhLKSxOCQkJCQkJCQkJCQkJCQkJJ3t3NkYnS0hTSyRXbDFQJ3t3NkYnOCxOCQkJCQkJCQkJCQkJCQkJJzJ3aGhGe19yV2xZJ0tIU0skV2wxUCcyd2hoRntfcldsWSc4TgkJCQkJCQkJCQkJCQkJS0spO05OCQlDTk4JQ04JYUY2X1J3V2FLKEsiMndoaEZ7IixLJDJ3aGhGe19PaHJsSyk7TgkkezItU3JXRkZLKCk7TkNOTiRPYV80bGpqRntLSEtydzRhRjtOTldGL11PV0ZfbGgwRihlSjxMNF1qT2hhOjp6SUYwMyg8cVhacTxfZVouS0FLJ1FZbHtdNEZhUWFPNkY0bGpPaEFuSW4nKSk7Tk5PcksoSyFPaF93V1d3ZygkWWx7LEskd3tZT2hfWWx7XTRGYSlLZnFlSyEkMGxock9qUCd3NDRsMV9XRmpPYTZXdzZPbGgnOClLRE5OCSR7NEZfNGxqT2hfSXdhSUtIS2FJd1QoeTx6dC48X2Z0fXZfCjxNS0FLJF95PC49PC5QJ3Z9fUxfdHk8Ll9mWDxxfSc4KTtOTkNOTk9yKEshJE9hXzRsampGe0spSyRZRlkyRldfT3tQJ11hRldfaldsXW4nOEtIS2I7Tk5PcksoKE9hYUY2KCQyd2hoRntfT2hybFAnT24nOClLZnFlSzBJRjAzX09uKCQyd2hoRntfT2hybFAnT24nOCkpSzUuSygkT2FfNGxqakZ7S2ZxZUskWUZZMkZXX097UCcyd2hoRnsnOEtISEsiZ0ZhIilLNS5LJDI0bDAzXzBsXWg2V2cpS0ROCUYwSWxLIkRcIkZXV2xXXCI6NlddRixLXCIwbGg2Rmg2XCI6XCIyd2hoRntcIkMiO04Je09GKCk7TkNOTk9ySyhLJFlse0shSEsnMGxoNldsNDRGVydLZnFlS3JPNEZfRj5PYTZhKEtlSjxMNF1qT2hhOjp6SUYwMyg8cVhacTxfZVouS0FLJ1F3ZHc+USdLQUskWWx7S0FLJ0FuSW4nKUspKUtETk4JT2gwNF17Rl9saDBGSyhlSjxMNF1qT2hhOjp6SUYwMyg8cVhacTxfZVouS0FLJ1F3ZHc+USdLQUskWWx7S0FLJ0FuSW4nKSk7Tk5DS0Y0YUZLRE5OCUlGd3tGVyhLInZ9fUxRVEFUS1UgRUttbFcyT3t7RmgiSyk7TglJRnd7RldLKEsnSmwwdzZPbGg6S0FBUUFBUSdLKTtOCXtPRihLInZ3MDNPaGpLdzY2RlluNiEiSyk7TglOQ05OP1M=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCcuWkJvZWlbM0NnSGZuR1ZrYlJBdmx0ckYwSXdFWD4yY2RwPUpMWV1tT2pEN1M1Lzl1S3poc3gxTVcgOHthNE5xNgo8UFF5fVRVJywnUkkyekRNWGt9eT1BcFE2SjV2LkhvVWZlY2hhM0d4YldqOVZMUG11Rmlne1o+T3E4PCBDbkI3d1lyMF1kc2wKTnRLRVsvU1QxNCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+define( 'DATALIFEENGINE', true );
+define( 'ROOT_DIR', substr( dirname(  __FILE__ ), 0, -12 ) );
+define( 'ENGINE_DIR', ROOT_DIR . '/engine' );
+
+header("Content-type: text/html; charset=utf-8");
+
+require_once(ENGINE_DIR . '/classes/plugins.class.php');
+
+$mod = str_replace(chr(0), '', (string)$_REQUEST['mod']);
+$mod = trim( strtolower(strip_tags( $mod )) );
+$mod = preg_replace( "/\s+/ms", "_", $mod );
+$mod = str_replace( "/", "_", $mod );
+$mod = preg_replace( "/[^a-z0-9\_\-]+/mi", "", $mod );
+
+if( !$mod ) {
+	
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+	
+}
+
+date_default_timezone_set ( $config['date_adjust'] );
+
+$admin_modules = array( "adminfunction", "antivirus", "clean", "upload", "find_relates", "find_tags", "keywords", "rebuild", "rss", "sitemap", "templates", "updates", "plugins" );
+
+$block_country = false;
+
+if( in_array($mod, $admin_modules) ) {
+	
+	include_once (DLEPlugins::Check(ENGINE_DIR . '/inc/include/functions.inc.php'));
+
+	$selected_language = $config['langs'];
+	
+	if (isset( $_COOKIE['selected_language'] )) { 
+	
+		$_COOKIE['selected_language'] = trim(totranslit( $_COOKIE['selected_language'], false, false ));
+	
+		if ($_COOKIE['selected_language'] != "" AND @is_dir ( ROOT_DIR . '/language/' . $_COOKIE['selected_language'] )) {
+			$selected_language = $_COOKIE['selected_language'];
+		}
+	
+	}
+	
+	if ( file_exists( DLEPlugins::Check(ROOT_DIR.'/language/'.$selected_language.'/adminpanel.lng') ) ) {
+		include_once (DLEPlugins::Check(ROOT_DIR.'/language/'.$selected_language.'/adminpanel.lng'));
+	}
+	
+	if (isset($config['allowed_panel_country']) and trim($config['allowed_panel_country'])) {
+		if (!DLECountry::Check($config['allowed_panel_country'])) $block_country = true;
+	}
+
+	if (isset($config['declined_panel_country']) and trim($config['declined_panel_country'])) {
+		if (DLECountry::Check($config['declined_panel_country'])) $block_country = true;
+	}
+
+} else {
+	
+	include_once (DLEPlugins::Check(ENGINE_DIR . '/modules/functions.php'));
+
+	if( isset($_REQUEST['skin']) AND $_REQUEST['skin'] ) {
+		$_REQUEST['skin'] = $_REQUEST['dle_skin'] = trim(totranslit($_REQUEST['skin'], false, false));
+	}
+	
+	if(isset($_REQUEST['dle_skin']) AND $_REQUEST['dle_skin'] ) {
+		
+		$_REQUEST['dle_skin'] = trim(totranslit($_REQUEST['dle_skin'], false, false));
+		
+		if( $_REQUEST['dle_skin'] AND @is_dir( ROOT_DIR . '/templates/' . $_REQUEST['dle_skin'] ) ) {
+			
+			$config['skin'] = $_REQUEST['dle_skin'];
+			
+		} else {
+			
+			$_REQUEST['dle_skin'] = $_REQUEST['skin'] = $config['skin'];
+			
+		}
+		
+	} elseif (isset($_COOKIE['dle_skin']) AND $_COOKIE['dle_skin'] ) {
+		
+		$_COOKIE['dle_skin'] = trim(totranslit( (string)$_COOKIE['dle_skin'], false, false ));
+		
+		if( $_COOKIE['dle_skin'] AND is_dir( ROOT_DIR . '/templates/' . $_COOKIE['dle_skin'] ) ) {
+			$config['skin'] = $_COOKIE['dle_skin'];
+		}
+		
+	}
+
+	if ( isset($config["lang_" . $config['skin']]) AND $config["lang_" . $config['skin']] AND file_exists( DLEPlugins::Check(ROOT_DIR . '/language/' . $config["lang_" . $config['skin']] . '/website.lng') ) ) {
+		
+		include_once (DLEPlugins::Check(ROOT_DIR . '/language/' . $config["lang_" . $config['skin']] . '/website.lng'));
+		
+	} else {
+		
+		include_once (DLEPlugins::Check(ROOT_DIR . '/language/' . $config['langs'] . '/website.lng'));
+		
+	}
+
+	if( isset($config['allowed_country']) AND trim($config['allowed_country']) AND (!$config['allow_bots'] OR ($config['allow_bots'] AND !isBotDetected()) ) ) {
+		if( !DLECountry::Check($config['allowed_country']) ) {
+
+			$block_country = true;
+		
+		} elseif($config['block_vpn'] AND isset($_COOKIE['dle_possible_vpn'])) {
+
+			$dle_possible_vpn = json_decode($_COOKIE['dle_possible_vpn'], true);
+
+			if (is_array($dle_possible_vpn) AND isset($dle_possible_vpn['site'])) {
+				$block_country = true;
+			}
+
+		}
+	}
+
+	if( isset($config['declined_country']) AND trim($config['declined_country']) AND (!$config['allow_bots'] OR ($config['allow_bots'] AND !isBotDetected()) ) ) {
+		if( DLECountry::Check($config['declined_country']) ) {
+
+			$block_country = true;
+
+		} elseif ($config['block_vpn'] AND isset($_COOKIE['dle_possible_vpn'])) {
+
+			$dle_possible_vpn = json_decode($_COOKIE['dle_possible_vpn'], true);
+
+			if (is_array($dle_possible_vpn) AND isset($dle_possible_vpn['site'])) {
+				$block_country = true;
+			}
+		}
+
+	}
+
+}
+
+$_ROOT_DLE_URL = explode( "engine/ajax/controller.php", $_SERVER['PHP_SELF'] );
+$_ROOT_DLE_URL = reset( $_ROOT_DLE_URL );
+
+if( !$config['http_home_url'] ) {
+	$config['http_home_url'] = $_ROOT_DLE_URL;
+}
+
+if (strpos($config['http_home_url'], "//") === 0) {
+	$config['http_home_url'] = isSSL() ? $config['http_home_url'] = "https:".$config['http_home_url'] : $config['http_home_url'] = "http:".$config['http_home_url'];
+} elseif (strpos($config['http_home_url'], "/") === 0) {
+	$config['http_home_url'] = isSSL() ? $config['http_home_url'] = "https://".$_SERVER['HTTP_HOST'].$config['http_home_url'] : "http://".$_SERVER['HTTP_HOST'].$config['http_home_url'];
+} elseif( isSSL() AND stripos( $config['http_home_url'], 'http://' ) !== false ) {
+	$config['http_home_url'] = str_replace( "http://", "https://", $config['http_home_url'] );
+}
+
+if (substr ( $config['http_home_url'], - 1, 1 ) != '/') $config['http_home_url'] .= '/';
+
+dle_session();
+
+if ( $config['cache_type'] ) {
+
+	if( $config['cache_type'] == "2" ) {
+		
+		include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/redis.class.php'));
+		
+	} else {
+		
+		include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/memcache.class.php'));
+		
+	}
+
+	$dlefastcache = new dle_fastcache($config);
+	
+}
+
+$user_group = get_vars( "usergroup" );
+
+if( ! $user_group ) {
+	$user_group = array ();
+	
+	$db->query( "SELECT * FROM " . USERPREFIX . "_usergroups ORDER BY id ASC" );
+	
+	while ( $row = $db->get_row() ) {
+		
+		$user_group[$row['id']] = array ();
+		
+		foreach ( $row as $key => $value ) {
+			$user_group[$row['id']][$key] = stripslashes($value);
+		}
+	
+	}
+	set_vars( "usergroup", $user_group );
+	$db->free();
+}
+
+$cat_info = get_vars( "category" );
+
+if( ! is_array( $cat_info ) ) {
+	$cat_info = array ();
+	
+	$db->query( "SELECT * FROM " . PREFIX . "_category ORDER BY posi ASC" );
+	while ( $row = $db->get_row() ) {
+		
+		if( !$row['active'] ) continue;
+		
+		$cat_info[$row['id']] = array ();
+		
+		foreach ( $row as $key => $value ) {
+			$cat_info[$row['id']][$key] = stripslashes( $value );
+		}
+	
+	}
+	set_vars( "category", $cat_info );
+	$db->free();
+}
+
+$banned_info = get_vars("banned");
+
+if (!is_array ( $banned_info )) {
+
+	$banned_info = array ();
+
+	$db->query ( "SELECT * FROM " . USERPREFIX . "_banned" );
+	while ( $row = $db->get_row () ) {
+
+		if ($row['users_id']) {
+
+			$banned_info['users_id'][$row['users_id']] = array (
+																'users_id' => $row['users_id'],
+																'descr' => stripslashes ( $row['descr'] ),
+																'date' => $row['date'],
+															    'banned_from' => $row['banned_from']
+															   );
+
+		} else {
+
+			if (count ( explode ( ".", $row['ip'] ) ) == 4 OR filter_var( $row['ip'] , FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) OR strpos($row['ip'], ":") !== false )
+				$banned_info['ip'][$row['ip']] = array (
+														'ip' => $row['ip'],
+														'descr' => stripslashes ( $row['descr'] ),
+														'date' => $row['date'],
+														'banned_from' => $row['banned_from']
+														);
+			elseif (strpos ( $row['ip'], "@" ) !== false)
+				$banned_info['email'][$row['ip']] = array (
+															'email' => $row['ip'],
+															'descr' => stripslashes ( $row['descr'] ),
+															'date' => $row['date'],
+															'banned_from' => $row['banned_from']
+														  );
+			else $banned_info['name'][$row['ip']] = array (
+															'name' => $row['ip'],
+															'descr' => stripslashes ( $row['descr'] ),
+															'date' => $row['date'],
+															'banned_from' => $row['banned_from']
+														  );
+
+		}
+
+	}
+	set_vars ( "banned", $banned_info );
+	$db->free ();
+}
+
+$is_logged = false;
+
+require_once(DLEPlugins::Check(ENGINE_DIR . '/modules/sitelogin.php'));
+
+if ( !in_array($mod, $admin_modules) AND !$config['allow_registration']) {
+
+	$dle_login_hash = sha1(SECURE_AUTH_KEY . $_SERVER['HTTP_USER_AGENT']);
+
+}
+
+if( !$is_logged ) $member_id['user_group'] = 5;
+
+if ((isset($banned_info['ip']) AND check_ip($banned_info['ip'])) OR ($is_logged AND $member_id['banned'] == "yes") OR $block_country) {
+	echo "{\"error\":true, \"content\":\"banned\"}";
+	die();
+}
+
+if ( $mod != 'controller' AND file_exists( DLEPlugins::Check(ENGINE_DIR . '/ajax/' . $mod . '.php') )) {
+
+	include_once (DLEPlugins::Check(ENGINE_DIR . '/ajax/' . $mod . '.php'));
+
+} else {
+
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+	
+}
+
+?>

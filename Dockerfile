@@ -1,5 +1,5 @@
 # Dockerfile
-FROM php:8.4-fpm-alpine
+FROM php:8.4-fpm
 
 # Устанавливаем расширения
 RUN apt-get update && apt-get install -y \

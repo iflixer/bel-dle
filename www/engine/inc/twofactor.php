@@ -5,9 +5,123 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
------------------------------------------------------
- You use Demo Version of DataLife Engine
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: twofactor.php
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='Pz1PP2R7ZHBNKnAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMHBzYWNSY1AyWW9zcnZqMnZvcy1zPG5zZQpZUmtvdVpzVG99MmNzMUwKL2RzcC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tcHN7UlJkWjpNTX1oby12b3VadEwvTXAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLXBzcQpkbkwyantScyhYKXNXZmZWLVdmV0hzZQpZUmtvdVpzVG99MmNzMUwKL2RwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDBwc0p7MlpzWAp9b3MyWnNkTApSb1hSb31zPG5zWApkbkwyantScDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwcHN5MmhvOnNSdQpZY1hSCkx0ZHtkcDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwcCpNcHAyWShzIX1vWTJ2b30ocydhPko+UEt5cnJrMUtrcidzKXMpc1twCXtvY31vTChzIlFKSjNNRHREc1ZmbXN5Ckw8Mn19b3Yicyk7cAl7b2N9b0xzKHMnUApYY1IyCnY6c3R0TXR0TSdzKTtwCX0ybyhzIlFjWGkydmpzY1JSbzZkUiEicyk7cF1wcDJZKHMkMlpfaApqb31fMnZzKXNbcAk2WmoocyJvTEwKTCIscyRoY3ZqOScydn1vNF99b3Yyb30nRyxzJGhjdmo5JzJ2fW80X31vdjJvfSdHcyk7cF1wcDJZKHMhMlpab1IoJF9lcmVlSyBrOSdSdQpZY1hSCkxfYy9SeydHKXMpc1twCTZaaihzIm9MTApMIixzJGhjdmo5JzJ2fW80X31vdjJvfSdHLHMkaGN2ajknMnZ9bzRffW92Mm99J0dzKTtwXXBwJG5vY0xzMHN9Y1JvKCd3JyxzUjI2bygpKTtwcDJZcygkX2VyZWVLIGs5J1J1ClljWFIKTF9SbmRvJ0dzMDBzVylzJGhjdmo5J1J1ClljWFIKTF9jaG9MUidHczBzJGhjdmo5J1J1ClljWFIKTF9jaG9MUl9EJ0c7cHAkWmkydl9oCmoydnMwc09PT1FKVFBwTyF9ClhSbmRvc3tSNmg9cE97UjZoc2hjdmowIlskaGN2ajknaGN2ai9jam9fWAp9bydHXSJzfTJMMCJbJGhjdmo5J30yTG9YUjIKdidHXSI9cE97b2N9PXAJTzZvUmNzWHtjTFpvUjAiL1JZLTUiPXAJT1IyUmhvPWFjUmNQMllvc3J2ajJ2b3Mtc1skaGN2ajknWmkydl9SMlJobydHXU9NUjJSaG89cAlPNm9SY3N2YzZvMCI3Mm91ZApMUiJzWAp2Um92UjAidTJ9UnswfW83MlhvLXUyfVJ7LHMydjJSMmNoLVpYY2hvMEQiPXAJTzZvUmNzdmM2bzAiUWN2fXtvaH15TDJvdn1obiJzWAp2Um92UjAiUkwvbyI9cAlPNm9SY3N2YzZvMCJZCkw2Y1ItfW9Sb1hSMgp2InNYCnZSb3ZSMCJSb2hvZHsKdm8wdgoiPXAJTzZvUmNzdmM2bzAiNzJvdWQKTFIic1gKdlJvdlIwIi9ab0wtWlhjaGM8aG8wdgosczJ2MlIyY2gtWlhjaG8wRHRmLHM2YzQyNi82LVpYY2hvMER0ZixzdTJ9UnswfW83MlhvLXUyfVJ7Ij1zcAlPNm9SY3N2YzZvMCJjZGRoby02CjwyaG8tdW88LWNkZC1YY2RjPGhvInNYCnZSb3ZSMCJub1oiPXAJTzZvUmNzdmM2bzAiY2RkaG8tNgo8MmhvLXVvPC1jZGQtWlJjUi9aLTxjTC1aUm5obyJzWAp2Um92UjAifW9ZYy9oUiI9cAlbWFpaX1kyaG9aXXBzc3NzW2xaX1kyaG9aXXBPTXtvY309cE88Cn1uc1hoY1paMCJ2Ci1Se282byI9cE9aWEwyZFI9cE8hLS1wN2NMc31ob19jWFJfaGN2anNzczBzOUc7cDdjTHNYY2hfaGN2ai9jam9zc3MwcydbJGhjdmo5J2hjdmovY2pvX1gKfW8nR10nO3A3Y0xzWTJob31vWWMvaFJSbzRSMHMnJztwN2NMc1kyaG88UnZSbzRSc3NzczBzJyc7cE1NLS09cE9NWlhMMmRSPXBwT30yN3NYaGNaWjAiWAp2UmMydm9MIj1wc3NPfTI3c1hoY1paMCJYCmgtNn0tVnNYCmgtNn0tCllZWm9SLVYiPXBzc3NzT30yN3NYaGNaWjAiZGNqby1YCnZSYzJ2b0wiPXBPIS0tVD5La3NjTG9jLS09cHBwCU99MjdzWGhjWlowImRjdm9oc2Rjdm9oLX1vWWMvaFIic1pSbmhvMCI2Y0xqMnYtUgpkOnNEZmZkNDsiPXBwc3Nzc3NzT30yN3NYaGNaWjAiZGN2b2gte29jfTJ2aiI9cHNzc3Nzc3NzWyRoY3ZqOSdaaTJ2X1IyUmhvJ0ddc2FjUmNQMllvc3J2ajJ2b3Bzc3Nzc3NPTX0yNz1wCXNzcHNzc3Nzc099MjdzWGhjWlowImRjdm9oLTwKfW4iPXAJCVskaGN2ajknUnUKWWNYUgpMX2Nob0xSJ0ddcAkJTzxMPU88TD1PMnZkL1JzMn0wIlJ1ClljWFIKTF9SCmlvdiJzUm5kbzAiUm80UiJzWmRvaGhYe29YaTAiWWNoWm8ic2MvUgpYCjZkaG9SbzAiCllZInNjL1IKWApMTG9YUjAiCllZInNjL1IKWGNkMlJjaDJBbzAiCllZInN2YzZvMCJSdQpZY1hSCkxfUgppb3YiczJ2ZC9SNgp9bzAidi82b0wyWCJzZGNSUm9MdjAiOWYtLkcqInNaUm5obzAidTJ9Uns6RGZmJTsic1hoY1paMCJYaGNaWjJYInNkaGNYb3sKaH1vTDAiWyRoY3ZqOSdSdQpZY1hSCkxfUjJSaG8nR10iPXAJCU99MjdzMn0wIlJ1ClljWFIKTF9Mb1pkCnZabyJzWlJuaG8wIlgKaApMOkxvfSI9T019Mjc9cAkJTzxMPU99MjdzWGhjWlowIlkKTDYtakwKL2QiPXAJCQlPPC9SUgp2czJ9MCJab3Z9InNSbmRvMCJaLzw2MlIic1hoY1paMCI8UnZzPFJ2LWRMMjZjTG5zPFJ2LUxjMlpvfXM8UnYtPGgKWGkiPVskaGN2ajknaApqMnZfPC9SUgp2J0ddc08yc1hoY1paMCJZY3NZYy1aMmp2LTJ2Ij1PTTI9T008L1JSCnY9cHNzc3Nzc3Nzc3NPTX0yNz1wc3Nzc3NzT019Mjc9cHNzc3NPTX0yNz1wCXBPWlhMMmRSPXNzcE8hLS1wJChZL3ZYUjIKdigpW3BwCSQoJyNab3Z9Jyl0WGgyWGkoWS92WFIyCnYoKVtwCXAJCTJZcyhzJCgiI1J1ClljWFIKTF9SCmlvdiIpdDdjaCgpdGhvdmpSe3NPc0Qpc1twCQkJcyQoIiNSdQpZY1hSCkxfUgppb3YiKXRjfX1xaGNaWignLzItWlJjUm8tb0xMCkwnKTtwCQldc29oWm9zW3AJCQk3Y0xzZDJ2czBzJCgiI1J1ClljWFIKTF9SCmlvdiIpdDdjaCgpO3AJCQkkdGQKWlIoIm92ajJ2b01jbGM0TVgKdlJMCmhob0x0ZHtkPzYKfTBSdQpZY1hSCkwiLHNbc2QydjpzZDJ2c10sc1kvdlhSMgp2KH1jUmMpW3AJCQlwCQkJCTJZcyhzfWNSY3RaL1hYb1pacylzW3AJCQkJcAkJCQkJdTJ2fQp1dGgKWGNSMgp2czBzdTJ2fQp1dGgKWGNSMgp2O3AJCQkJCXAJCQkJXXNvaFpvczJZcyh9Y1JjdG9MTApMKXNbcAkJCQkJcAkJCQkJJCgiI1J1ClljWFIKTF9Mb1pkCnZabyIpdHtSNmgofWNSY3RvTEwKTDJ2WQopO3AJCQkJCXAJCQkJXXAJCQkJcAkJCV0scyJsWgp2Iik7cAkJcAkJXXAJCXAJCUxvUi9MdnNZY2habztwCXAJXSk7cF0pO3BNTS0tPXBPTVpYTDJkUj1wCU99MjdzWGhjWlowIlJvNFItNi9Sb31zUm80Ui1aMkFvLVo2Y2hoc1JvNFItWG92Um9MIj1hY1JjUDJZb3Nydmoydm8mTG9qO3NzcQpkbkwyantSc1dmZlYtWyRub2NMXU88TD0mWApkbjtzT2Nze0xvWTAie1JSZFo6TU19aG8tdm91WnRML00ic1JjTGpvUjAiXzxoY3ZpIj1lCllSa291WnNUb30yY3MxTAovZE9NYz1zPmhoc0wyantSWnNMb1pvTDdvfXRPTX0yNz1wc3NPTX0yNz1wT019Mjc9cE9NfTI3PXBwT008Cn1uPXBPTXtSNmg9cFFKVFA7cHAJJFppMnZfaApqMnZzMHNaUkxfTG9kaGNYbyhzIltsWl9ZMmhvWl0iLHM8LzJofV9sWigkbFpfY0xMY24pLHMkWmkydl9oCmoydnMpO3AJJFppMnZfaApqMnZzMHNaUkxfTG9kaGNYbyhzIltYWlpfWTJob1pdIixzPC8yaH1fWFpaKCRYWlpfY0xMY24pLHMkWmkydl9oCmoydnMpO3AJcAlvWHsKcyRaaTJ2X2gKajJ2O3BwPz0=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdZU25haXhDVWwuL2tmfTJ5ckdlVHZxPWRRalI1b0VNSmggNzZwdHUKZ0ZBXUw0V3diTkI+T1ZtSDAxS1hzRDxaM0l6UGNbOXs4JywnZlZ5RGtxN1FqOXVOMGRpRkVdU01uQz5wSGd0OGVYL1RsT3ZtCi53b1VXen1yeDJZUktaQTw0MzU9R0ljIDFic1A2Skxhe1toQicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( $is_loged_in ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+if( !isset($_SESSION['twofactor_auth']) ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+$year = date('Y', time());
+
+if ($_SESSION['twofactor_type'] == 2) $lang['twofactor_alert'] = $lang['twofactor_alert_1'];
+
+$skin_login = <<<HTML
+<!doctype html>
+<html lang="{$lang['language_code']}" dir="{$lang['direction']}">
+<head>
+	<meta charset="utf-8">
+	<title>DataLife Engine - {$lang['skin_title']}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	{css_files}
+    {js_files}
+</head>
+<body class="no-theme">
+<script>
+<!--
+var dle_act_lang   = [];
+var cal_language   = '{$lang['language_code']}';
+var filedefaulttext= '';
+var filebtntext    = '';
+//-->
+</script>
+
+<div class="container">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="page-container">
+<!--MAIN area-->
+
+
+	<div class="panel panel-default" style="margin-top: 100px;">
+
+      <div class="panel-heading">
+        {$lang['skin_title']} DataLife Engine
+      </div>
+	  
+      <div class="panel-body">
+		{$lang['twofactor_alert']}
+		<br><br><input id="twofactor_token" type="text" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" name="twofactor_token" inputmode="numeric" pattern="[0-9]*" style="width:100%;" class="classic" placeholder="{$lang['twofactor_title']}">
+		<div id="twofactor_response" style="color:red"></div>
+		<br><div class="form-group">
+			<button id="send" type="submit" class="btn btn-primary btn-raised btn-block">{$lang['login_button']} <i class="fa fa-sign-in"></i></button>
+          </div>
+      </div>
+    </div>
+	
+<script>  
+<!--
+$(function(){
+
+	$('#send').click(function(){
+	
+		if ( $("#twofactor_token").val().length < 1) {
+			 $("#twofactor_token").addClass('ui-state-error');
+		} else {
+			var pin = $("#twofactor_token").val();
+			$.post("engine/ajax/controller.php?mod=twofactor", { pin: pin }, function(data){
+			
+				if ( data.success ) {
+				
+					window.location = window.location;
+					
+				} else if (data.error) {
+					
+					$("#twofactor_response").html(data.errorinfo);
+					
+				}
+				
+			}, "json");
+		
+		}
+		
+		return false;
+	
+	});
+});
+//-->
+</script>
+	<div class="text-muted text-size-small text-center">DataLife Engine&reg;  Copyright 2004-{$year}<br>&copy; <a href="https://dle-news.ru/" target="_blank">SoftNews Media Group</a> All rights reserved.</div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
+HTML;
+
+	$skin_login = str_replace( "{js_files}", build_js($js_array), $skin_login );
+	$skin_login = str_replace( "{css_files}", build_css($css_array), $skin_login );
+	
+	echo $skin_login;
+
+?>

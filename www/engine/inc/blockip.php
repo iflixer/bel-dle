@@ -5,9 +5,535 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: blockip.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Blocking visitors by IP
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PyAxP1N9U0tvKksyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMktBTTM5M0pydj1BY05Ick49QS1BUExBUXN2OVY9Qm5BdT0+cjNBR09zPFNBSy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tS0F9OTlTbjpvbz5UPS1OPUJuYk88b0stLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUtBaXNTTE9ySH05QSg3KUF6cHAvLXpwejZBUXN2OVY9Qm5BdT0+cjNBR09zPFNLMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjJLQUZ9cm5BN3M+PUFybkFTT3M5PTc5PT5BUExBN3NTTE9ySH05SzIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyS0FtclQ9OkFQVHM3aHJTYlN9U0stLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUtBNG49OkFVVHM3aHJOSEFScm5yOXNPbkFQTEFddEsyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMksqb0tydihBIT49dnJOPT4oQSdNQ0ZDSl1tY2NWR11WYydBKUFJZkEhPj12ck49PihBJ0pJR0djTV9dVidBKUEpQXdLCX09Mz49TyhBIjVGRnRvYWJhQS9wV0Ftc09Qcj4+PU4iQSk7Swl9PTM+PU9BKEEnSnM3Mzlyc046QWJib2JibydBKTtLCT5yPShBIjUzN2hyTkhBMzk5PS5TOSEiQSk7S1hLS3J2KEEhQSQ8bj1PX0hPczxTWyQuPS5QPU9fcj5bJzxuPU9fSE9zPFMnCgpbJzM+LnJOX1BUczdoclMnCkEpQXdLCS5uSChBIj1PT3NPIixBJFQzTkhbJ3JOPj04Xz49TnI9PicKLEEkVDNOSFsnck4+PThfPj1Ocj0+JwpBKTtLWEtLcnYoQXJubj05KEEkX2ZjbDRjUUZbJ3JTXzM+PicKQSlBKUEkclNfMz4+QTJBfTkuVG5TPTdyM1Q3fTNPbihBbjlPclNfOTNIbihBOU9yLihBJF9mY2w0Y1FGWydyU18zPj4nCkEpQSksQWNWRl9sNElGY1EsQSc0Rm0taydBKTtBPVRuPUEkclNfMz4+QTJBIiI7S3J2KEFybm49OShBJF9mY2w0Y1FGWydyUycKQSlBKUEkclNBMkF9OS5UblM9N3IzVDd9M09uKEFuOU9yU185M0huKEE5T3IuKEEkX2ZjbDRjUUZbJ3JTJwpBKUEpLEFjVkZfbDRJRmNRLEEnNEZtLWsnQSk7QT1Ubj1BJHJTQTJBIiI7S3J2KEFybm49OShBJF9mY2w0Y1FGWydyPicKQSlBKUEkcj5BMkFyTjlSM1QoQSRfZmNsNGNRRlsncj4nCkEpO0E9VG49QSRyPkEyQXA7S0skbjkzTzlfdk9zLkEyQXJubj05KEEkX2ZjbDRjUUZbJ245M085X3ZPcy4nCkEpQT9Bck45UjNUKEEkX2ZjbDRjUUZbJ245M085X3ZPcy4nCkEpQTpBcDtLJE49Qm5fUz1PX1MzSD1BMkE2cDtLS3J2KEEkbjkzTzlfdk9zLkExQXBBKUEkbjkzTzlfdk9zLkEyQXA7S0tydihBJG45M085X3ZPcy5BMUFwQSlBJG45M085X3ZPcy5BMkFwO0tLcnZBKHJubj05KEEkX2ZjbDRjUUZbJ249M083fUJzTz4nCkEpQUNWTUEkX2ZjbDRjUUZbJ249M083fUJzTz4nCilBd0tBQUtBQSRuPTNPN31Cc08+QTJBfTkuVG5TPTdyM1Q3fTNPbihBbjlPclNfOTNIbihBbjlPclNuVDNufT1uKEE5T3IuKEE8T1Q+PTdzPj1BKEEkX2ZjbDRjUUZbJ249M083fUJzTz4nCkEpQSlBKUEpLEFjVkZfaUl1dENGLEEnNEZtLWsnQSk7S0FBS1hBPVRuPUEkbj0zTzd9QnNPPkEyQSIiO0tLcnZBKCRuPTNPN31Cc08+KUEkPE9Ubj0zTzd9QTJBIiZuPTNPN31Cc08+Mnckbj0zTzd9QnNPPlgiO0E9VG49QSQ8T1RuPTNPN31BMkEiIjtLSyRTM09uPUEyQU49QkF0M09uPW1yVDk9TygpO0skUzNPbj0tIG4zdj1fLnM+PUEyQTlPPD07S0tydkEoJF9mY2w0Y1FGWyczNzlyc04nCkEyMkEiLjNubl8+PVQ9OT0iKUF3SwlLCXJ2KEEhcm5uPTkoJF9mY2w0Y1FGWyc8bj1PX30zbn0nCilBSWZBISRfZmNsNGNRRlsnPG49T199M259JwpBSWZBJF9mY2w0Y1FGWyc8bj1PX30zbn0nCkEhMkEkPlQ9X1RzSHJOX30zbn1BKUF3SwkJPnI9KEEiNTM3aHJOSEEzOTk9LlM5IUE0bj1PQU5zOUF2czxOPiJBKTtLCVhLSwlydihBIXJubj05KCRfdElRRlsnbj1UPTc5PT5fclNuJwopQSlBd0sJCS5uSChBIj1PT3NPIixBJFQzTkhbJy4zbm5fPU9Pc08nCixBJFQzTkhbJ3JTX249VF89T09zTycKLEEiPy5zPjJQVHM3aHJTIkEpO0sJWEsJSwl2c089Mzd9QShBJF90SVFGWyduPVQ9Nzk9Pl9yU24nCkEzbkEkcj5BKUF3SwkJJHI+QTJBck45UjNUKCRyPik7SwkJJD5QLSBFPD1PTChBIk1jSmNGY0FtZkl1QSJBYkE0UWNmdGZjbV1kQWJBIl9QM05OPT5BZTVjZmNBcj5BMkEndyRyPlgnIkEpO0sJWEsJSwkkPlAtIEU8PU9MKEEiXVZRY2ZGQV1WRklBIkFiQTRRY2Z0ZmNtXWRBYkEiXzM+LnJOX1RzSG5BKE4zLj0sQT4zOT0sQXJTLEEzNzlyc04sQT04OU8zbilBUjNUPD1uQSgnImIkPlAtIG4zdj1uRVQoJC49LlA9T19yPlsnTjMuPScKKWIiJyxBJ3ckX0ZddWNYJyxBJ3ckX110WCcsQSdhcCcsQScnKSJBKTtLCUsJQDxOVHJOaChBY1ZHXVZjX01dZkFiQSdvNzM3fT1vbkxuOT0ub1AzTk49PmJ7bnNOJ0EpO0sJSwl9PTM+PU8oQSJKczczOXJzTjpBPy5zPjJQVHM3aHJTJm45M085X3ZPcy4ydyRuOTNPOV92T3MuWHckPE9Ubj0zTzd9WCJBKTtLCT5yPSgpO0sJSwlLWEtLcnZBKCRfZmNsNGNRRlsnMzc5cnNOJwpBMjJBIj0+cjkiKUF3SwlLCXJ2KEEhcm5uPTkoJF9mY2w0Y1FGWyc8bj1PX30zbn0nCilBSWZBISRfZmNsNGNRRlsnPG49T199M259JwpBSWZBJF9mY2w0Y1FGWyc8bj1PX30zbn0nCkEhMkEkPlQ9X1RzSHJOX30zbn1BKUF3SwkJPnI9KEEiNTM3aHJOSEEzOTk9LlM5IUE0bj1PQU5zOUF2czxOPiJBKTtLCVhLSwkkcj5BMkFyTjlSM1RBKEEkX3RJUUZbJ3I+JwpBKTtLCSRyU18zPj5BMkEkPlAtIG4zdj1uRVQoOU9yLigkclNfMz4+KSk7SwkkUDNOTj0+Xz49bjdPQTJBJD5QLSBuM3Y9bkVUKEEkUzNPbj0tIFVVX3QzT249KEEkUzNPbj0tIFNPczc9bm4oQSRfdElRRlsnPj1uN08nCkEpLEF2M1RuPUEpQSk7SwkkUDNOTj0+X3ZPcy5BMkEkPlAtIG4zdj1uRVQoJC49LlA9T19yPlsnTjMuPScKKTtLSwlydihBITlPci4oQSRfdElRRlsnPjM5PScKQSlBSWZBKCgkX3RJUUZbJz4zOT0nCkEyQW45TzlzOXIuPShBJF90SVFGWyc+Mzk9JwpBKSlBMjIyQS1BYSlBSWZBISRfdElRRlsnPjM5PScKKUF3SwkJJDl9cm5fOXIuPUEyQXA7SwkJJD4zTG5BMkFwO0sJWEE9VG49QXdLCQkkOX1ybl85ci49QTJBJD5QLSBuM3Y9bkVUKCRfdElRRlsnPjM5PScKKTtLCQkkPjNMbkEyQWE7SwlYSwlLCXJ2KEEhJHJTXzM+PkEpQXdLCQkubkgoQSI9T09zTyIsQSRUM05IWydyU189T09zTycKLEEkVDNOSFsnclNfPU9Pc08nCixBIj8ucz4yUFRzN2hyUyJBKTtLCVhLCUsJJD5QLSBFPD1PTChBIjR0TUNGY0EiQWJBNFFjZnRmY21dZEFiQSJfUDNOTj0+QVFjRkFgPj1uN09gMid3JFAzTk49Pl8+PW43T1gnLEFgPjM5PWAyJ3ckOX1ybl85ci49WCcsQWA+M0xuYDIndyQ+M0xuWCcsQWByU2AyJ3ckclNfMz4+WCcsQVAzTk49Pl92T3MuMid3JFAzTk49Pl92T3MuWCdBZTVjZmNBcj4yJ3ckcj5YJyJBKTtLCUsJJD5QLSBFPD1PTChBIl1WUWNmRkFdVkZJQSJBYkE0UWNmdGZjbV1kQWJBIl8zPi5yTl9Uc0huQShOMy49LEE+Mzk9LEFyUyxBMzc5cnNOLEE9ODlPM24pQVIzVDw9bkEoJyJiJD5QLSBuM3Y9bkVUKCQuPS5QPU9fcj5bJ04zLj0nCiliIicsQSd3JF9GXXVjWCcsQSd3JF9ddFgnLEEnYWFrJyxBJ3ckclNfMz4+WCcpIkEpO0sJSwlAPE5Uck5oKEFjVkddVmNfTV1mQWJBJ283Mzd9PW9uTG45PS5vUDNOTj0+Yntuc04nQSk7SwlLCX09Mz49TyhBIkpzNzM5cnNOOkE/LnM+MlBUczdoclMmbjkzTzlfdk9zLjJ3JG45M085X3ZPcy5YdyQ8T1RuPTNPN31YIkEpO0sJPnI9KCk7SwlLWEtLcnYoQSRfZmNsNGNRRlsnMzc5cnNOJwpBMjJBIjM+PiJBKUF3SwlLCXJ2KEEhcm5uPTkoJF9mY2w0Y1FGWyc8bj1PX30zbn0nCilBSWZBISRfZmNsNGNRRlsnPG49T199M259JwpBSWZBJF9mY2w0Y1FGWyc8bj1PX30zbn0nCkEhMkEkPlQ9X1RzSHJOX30zbn1BKUF3SwkJPnI9KEEiNTM3aHJOSEEzOTk9LlM5IUE0bj1PQU5zOUF2czxOPiJBKTtLCVhLCUsJJFAzTk49Pl8+PW43T0EyQSQ+UC0gbjN2PW5FVChBJFMzT249LSBVVV90M09uPShBJFMzT249LSBTT3M3PW5uKEEkX3RJUUZbJz49bjdPJwpBKSxBdjNUbj1BKUEpO0sJJFAzTk49Pl92T3MuQTJBJD5QLSBuM3Y9bkVUKCQuPS5QPU9fcj5bJ04zLj0nCik7S0sJcnYoQSE5T3IuKEEkX3RJUUZbJz4zOT0nCkEpQUlmQSgoJF90SVFGWyc+Mzk9JwpBMkFuOU85czlyLj0oQSRfdElRRlsnPjM5PScKQSkpQTIyMkEtQWEpQUlmQSEkX3RJUUZbJz4zOT0nCilBd0sJCSQ5fXJuXzlyLj1BMkFwO0sJCSQ+M0xuQTJBcDtLCVhBPVRuPUF3SwkJJDl9cm5fOXIuPUEyQSQ+UC0gbjN2PW5FVCgkX3RJUUZbJz4zOT0nCik7SwkJJD4zTG5BMkFhO0sJWEsJSwlydihBISRyU18zPj5BKUF3SwkJLm5IKEEiPU9Pc08iLEEkVDNOSFsnclNfPU9Pc08nCixBJFQzTkhbJ3JTXz1PT3NPJwosQSI/LnM+MlBUczdoclMiQSk7SwlYS0sJJHJTbkEyQT04U1RzPj0oIlxOIixBJHJTXzM+Pik7SwlLCXZzTz0zN31BKCRyU25BM25BJHJTXzM+PilBd0sJCSRyU18zPj5BMkEkPlAtIG4zdj1uRVQoOU9yLigkclNfMz4+KSk7SwkJSwkJcnYoJHJTXzM+PilBd0sJCQkkT3NCQTJBJD5QLSBuPFM9T19FPD1PTChBIlFjSmNpRkFyPkFtZkl1QSJBYkF0ZmNtXWRBYkEiX1AzTk49PkFlNWNmY0FyU0EyJ3ckclNfMz4+WCciQSk7SwkJCUsJCQlydkEoQSEkT3NCWydyPicKQSlBd0sJCQkJJD5QLSBFPD1PTChBIl1WUWNmRkFdVkZJQSJBYkE0UWNmdGZjbV1kQWJBIl9QM05OPT5BKD49bjdPLEE+Mzk9LEE+M0xuLEFyUyxBUDNOTj0+X3ZPcy4pQVIzVDw9bkEoJ3ckUDNOTj0+Xz49bjdPWCcsQSd3JDl9cm5fOXIuPVgnLEEndyQ+M0xuWCcsQSd3JHJTXzM+PlgnLEEndyRQM05OPT5fdk9zLlgnKSJBKTtLCQkJWEsJCVhLCQlLCVhLCUsJJD5QLSBFPD1PTChBIl1WUWNmRkFdVkZJQSJBYkE0UWNmdGZjbV1kQWJBIl8zPi5yTl9Uc0huQShOMy49LEE+Mzk9LEFyUyxBMzc5cnNOLEE9ODlPM24pQVIzVDw9bkEoJyJiJD5QLSBuM3Y9bkVUKCQuPS5QPU9fcj5bJ04zLj0nCiliIicsQSd3JF9GXXVjWCcsQSd3JF9ddFgnLEEnZycsQScnKSJBKTtLCUsJQDxOVHJOaChBY1ZHXVZjX01dZkFiQSdvNzM3fT1vbkxuOT0ub1AzTk49PmJ7bnNOJ0EpO0sJSwl9PTM+PU8oQSJKczczOXJzTjpBPy5zPjJQVHM3aHJTJm45M085X3ZPcy4ydyRuOTNPOV92T3MuWHckPE9Ubj0zTzd9WCJBKTtLCT5yPSgpO0sJS1hBPVRuPXJ2KEEkX2ZjbDRjUUZbJzM3OXJzTicKQTIyQSI+PVQ9OT0iQSlBd0sJSwlydihBIXJubj05KCRfZmNsNGNRRlsnPG49T199M259JwopQUlmQSEkX2ZjbDRjUUZbJzxuPU9ffTNufScKQUlmQSRfZmNsNGNRRlsnPG49T199M259JwpBITJBJD5UPV9Uc0hyTl99M259QSlBd0sJCUsJCT5yPShBIjUzN2hyTkhBMzk5PS5TOSFBNG49T0FOczlBdnM8Tj4iQSk7SwlLCVhLCUsJcnYoQSEkcj5BKUF3SwkJLm5IKEEiPU9Pc08iLEEkVDNOSFsnclNfPU9Pc08nCixBJFQzTkhbJ3JTXz1PT3NPJwosQSI/LnM+MlBUczdoclMiQSk7SwlYSwlLCSQ+UC0gRTw9T0woQSJNY0pjRmNBbWZJdUEiQWJBNFFjZnRmY21dZEFiQSJfUDNOTj0+QWU1Y2ZjQXI+QTJBJ3ckcj5YJyJBKTtLCSQ+UC0gRTw9T0woQSJdVlFjZkZBXVZGSUEiQWJBNFFjZnRmY21dZEFiQSJfMz4uck5fVHNIbkEoTjMuPSxBPjM5PSxBclMsQTM3OXJzTixBPTg5TzNuKUFSM1Q8PW5BKCciYiQ+UC0gbjN2PW5FVCgkLj0uUD1PX3I+WydOMy49JwopYiInLEEndyRfRl11Y1gnLEEndyRfXXRYJyxBJ2FwJyxBJycpIkEpO0tLCUA8TlRyTmgoQWNWR11WY19NXWZBYkEnbzczN309b25Mbjk9Lm9QM05OPT5ie25zTidBKTtLCUsJfT0zPj1PKEEiSnM3Mzlyc046QT8ucz4yUFRzN2hyUyZuOTNPOV92T3MuMnckbjkzTzlfdk9zLlh3JDxPVG49M083fVgiQSk7Swk+cj0oKTtLS1hLSz03fXN9PTM+PU8oQSIxckE3VDNubjJcInYzQXYzLVRzN2hBU3Nucjlyc04tVD12OVwiIDFvciAxblMzTkE3VDNubjJcIjk9ODktbj0uclBzVD5cIiB3JFQzTkhbJ3NTOV9yU1AzTicKWDFvblMzTiAiLEEkVDNOSFsnfT0zPj1PX3ZyVDk9T19hJwpBKTtLSz03fXNBMTExNUZ1SksxPnJSQTdUM25uMiIucz4zVEF2Mz49IkFyPjIiTj1CUFRzN2giQTkzUHJOPj04MiItYSJBT3NUPTIiPnIzVHNIIkEzT3IzLVQzUD1UVD0+UEwyIk49QlBUczdoSjNQPVQiIEtBQTE+clJBN1Qzbm4yIi5zPjNULT5yM1RzSEEucz4zVC1USCJBT3NUPTIiPnM3PC49TjkiIEtBQUFBMT5yUkE3VDNubjIiLnM+M1QtN3NOOT1OOSIgSwkxdnNPLkEuPTl9cz4yIlNzbjkiQTM3OXJzTjIiIkE3VDNubjIidnNPLi19c09yRHNOOTNUIiBLCTFyTlM8OUE5TFM9MiJ9cj4+PU4iQU4zLj0yIi5zPiJBUjNUPD0yIlBUczdoclMiIEsJMXJOUzw5QTlMUz0yIn1yPj49TiJBTjMuPTIiMzc5cnNOIkFSM1Q8PTIiMz4+IiBLCTFyTlM8OUE5TFM9MiJ9cj4+PU4iQU4zLj0yIjxuPU9ffTNufSJBUjNUPD0yInckPlQ9X1RzSHJOX30zbn1YIiBLQUFBQUFBMT5yUkE3VDNubjIiLnM+M1QtfT0zPj1PQTxyLT5yM1RzSC05cjlUPVAzTyIgS0FBQUFBQUFBMVA8OTlzTkE5TFM9MiJQPDk5c04iQTdUM25uMiI3VHNuPSJBPjM5My0+cm4ucm5uMiIucz4zVCJBM09yMy1UM1A9VDIiaVRzbj0iIDFuUzNOQTNPcjMtfXI+Pj1OMiI5Tzw9IiAmOXIuPW47MW9uUzNOIDFvUDw5OXNOIEsJCTFuUzNOQTdUM25uMiI8ci0+cjNUc0gtOXI5VD0iQXI+MiJOPUI3MzluSjNQPVQiIHckVDNOSFsnclNfMz4+JwpYMW9uUzNOIEtBQUFBQUExbz5yUiBLQUFBQUFBMT5yUkE3VDNubjIiLnM+M1QtUHM+TCIgS0sJCTE+clJBN1Qzbm4yInZzTy4tSE9zPFMiIEsJCUFBMVQzUD1UQTdUM25uMiI3c045T3NULVQzUD1UQTdzVC1uLi0vIiB3JFQzTkhbJ3JTXzlMUz0nClgxb1QzUD1UIEsJCUFBMT5yUkE3VDNubjIiN3NULW4uLWsiIEsJCUFBQUExOT04OTNPPTNBPnJPMiIzPDlzIkE3VDNubjIiN1Qzbm5yNyJBbjlMVD0yIkJyPjl9OmFwcCUiQU9zQm4yIjYiQU4zLj0yInJTXzM+PiIgdyRyU1gxbzk9ODkzTz0zIEsJCUFBMW8+clIgSwkJQTFvPnJSIEsJCTE+clJBN1Qzbm4yInZzTy4tSE9zPFMiIEsJCUFBMVQzUD1UQTdUM25uMiI3c045T3NULVQzUD1UQTdzVC1uLi0vIiB3JFQzTkhbJ1AzTl8+Mzk9JwpYMW9UM1A9VCBLCQlBQTE+clJBN1Qzbm4yIjdzVC1uLi1rIiBLCQkJMXJOUzw5QUE3VDNubjIidnNPLi03c045T3NUIkFuOUxUPTIiQnI+OX06YWdwUzg7IkE+MzkzLU89VDIiNzNUPU4+M08iQTlMUz0yIjk9ODkiQT5yTzIiMzw5cyJBTjMuPTIiPjM5PSJBMzw5czdzLlNUPTk9MiJzdnYiIEsJCUFBMW8+clIgSwkJQTFvPnJSIEsJCTE+clJBN1Qzbm4yInZzTy4tSE9zPFMiIEsJCUFBMVQzUD1UQTdUM25uMiI3c045T3NULVQzUD1UQTdzVC1uLi0vIiB3JFQzTkhbJ1AzTl8+PW43TycKWDFvVDNQPVQgSwkJQUExPnJSQTdUM25uMiI3c1Qtbi4tayIgSwkJCTE5PTg5M089M0E+ck8yIjM8OXMiQTdUM25uMiI3VDNubnI3IkFuOUxUPTIiQnI+OX06YXBwJSJBT3NCbjIiNiJBTjMuPTIiPj1uN08iIDFvOT04OTNPPTMgSwkJQUExbz5yUiBLCQlBMW8+clIgSwlBQUsJCTE+clJBN1Qzbm4yIjk9ODktLjw5PT5BOT04OS1uckQ9LW4uM1RUIiB3JFQzTkhbJ3JTXz04My5TVD0nClgxbz5yUiBLCUFBS0FBQUFBQTFvPnJSIEtBQUFBQUExPnJSQTdUM25uMiIucz4zVC12c3M5PU8iIEsJCTFQPDk5c05BOUxTPTIiUDw5OXNOIkE3VDNubjIiUDlOQVBILUhPPUwtL3BwQVA5Ti1uLkFQOU4tTzNybj0+IkE+MzkzLT5ybi5ybm4yIi5zPjNUIiB3JFQzTkhbJ1NfNzNONz1UJwpYMW9QPDk5c04gSwlBQUFBMVA8OTlzTkE5TFM9MiJuPFAucjkiQTdUM25uMiJQOU5BUEgtOT0zVEFQOU4tbi5BUDlOLU8zcm49PkFTc25yOXJzTi1UPXY5IiAxckE3VDNubjIidjNBdjMtdlRzU1NMLXNBU3Nucjlyc04tVD12OSIgMW9yIHckVDNOSFsnPG49T19uM1I9JwpYMW9QPDk5c04gS0FBQUFBQTFvPnJSIEsJQUExb3ZzTy4gS0FBQUExbz5yUiBLQUExbz5yUiBLMW8+clIgSzVGdUo7S0s9N31zQTExMTVGdUpLMXZzTy5BMzc5cnNOMiI/LnM+MlRyTmhuIkEuPTl9cz4yIkg9OSJBTjMuPTIiTjNSciJBcj4yIk4zUnIiIEsxck5TPDlBOUxTPTIifXI+Pj1OIkFOMy49MiIucz4iQVIzVDw9MiJQVHM3aHJTIiBLMXJOUzw5QTlMUz0yIn1yPj49TiJBTjMuPTIibjkzTzlfdk9zLiJBcj4yIm45M085X3ZPcy4iQVIzVDw9MiJ3JG45M085X3ZPcy5YIiBLMXJOUzw5QTlMUz0yIn1yPj49TiJBTjMuPTIibj0zTzd9QnNPPiJBUjNUPD0yInckbj0zTzd9QnNPPlgiIEsxb3ZzTy4gSzF2c08uQTM3OXJzTjIiPy5zPjJQVHM3aHJTIkEuPTl9cz4yIlNzbjkiQU4zLj0yInNTOXJzTm5QM08iQXI+MiJzUzlyc05uUDNPIiBLMXJOUzw5QTlMUz0yIn1yPj49TiJBTjMuPTIiLnM+IkFSM1Q8PTIiUFRzN2hyUyIgSzFyTlM8OUE5TFM9MiJ9cj4+PU4iQU4zLj0yIm45M085X3ZPcy4iQXI+MiJuOTNPOV92T3MuIkFSM1Q8PTIidyRuOTNPOV92T3MuWCIgSzFyTlM8OUE5TFM9MiJ9cj4+PU4iQU4zLj0yIjxuPU9ffTNufSJBUjNUPD0yInckPlQ9X1RzSHJOX30zbn1YIiBLMT5yUkE3VDNubjIiUzNOPVRBUzNOPVQtPj12MzxUOSIgS0FBMT5yUkE3VDNubjIiUzNOPVQtfT0zPnJOSCIgS0FBQUF3JFQzTkhbJ3JTX1RybjknClhLCTE+clJBN1Qzbm4yIn09Mz5yTkgtPVQ9Lj1OOW4iIEsJCTE+clJBN1Qzbm4yInZzTy4tSE9zPFNBfTNuLXY9PT5QMzdoIkFuOUxUPTIiQnI+OX06ejZwUzg7IiBLCQkJMXJOUzw5QU4zLj0yIm49M083fUJzTz4iQTlMUz0yIm49M083fSJBPnJPMiIzPDlzIkE3VDNubjIidnNPLi03c045T3NUIkFTVDM3PX1zVD49TzIidyRUM05IWyduPTNPN31fdnI9VD4nClgiQXNON30zTkg9MiI+czc8Lj1OOWJzUzlyc05uUDNPYm45M085X3ZPcy5iUjNUPD0ycDsiQVIzVDw9MiJ3JG49M083fUJzTz5YIiBLCQkJMT5yUkE3VDNubjIidnNPLi03c045T3NULXY9PT5QMzdoIiBLCQkJQUFBQTEzQX1PPXYyIiMiQXNON1RyN2gyIiQoJyNzUzlyc05uUDNPJylibjxQLnI5KCk7QU89OTxPTkF2M1RuPTsiIDFyQTdUM25uMiJ2M0F2My1uPTNPN31BOT04OS1uckQ9LVAzbj1BOT04OS0uPDk9PiIgMW9yIDFvMyBLCQkJMW8+clIgSwkJMW8+clIgSwkxbz5yUiBLQUExbz5yUiBLNUZ1SjtLS0skckEyQSRuOTNPOV92T3MuKyROPUJuX1M9T19TM0g9O0tLcnZBKEEkbj0zTzd9QnNPPkEpQXdLQUFLQUEkbj0zTzd9QnNPPkEyQUAkPlAtIG4zdj1uRVQoJG49M083fUJzTz4pO0tBQSRCfT1PPUEyQSJlNWNmY0E8bj1Pbl9yPkEyQSdwJ0FDVk1BKHJTQVRyaD1BJyUkbj0zTzd9QnNPPiUnQUlmQT49bjdPQVRyaD1BJyUkbj0zTzd9QnNPPiUnKUEiO0tBQSRUM05IWydyU189LlM5TCcKQTJBJFQzTkhbJzkzSG5fbl9OczlfdnM8Tj4nCjtLQUFLWEE9VG49QSRCfT1PPUEyQSJlNWNmY0E8bj1Pbl9yPkEyQSdwJyI7S0skTz1uPFQ5XzdzPE45QTJBJD5QLSBuPFM9T19FPD1PTCgiUWNKY2lGQWlJNFZGKCopQTNuQTdzPE45QW1mSXVBIkFiQTRRY2Z0ZmNtXWRBYkEiX1AzTk49PkF3JEJ9PU89WCIpO0skM1RUXzdzPE45X049Qm5BMkEkTz1uPFQ5XzdzPE45Wyc3czxOOScKO0tLb29BUzNIck4zOXJzTktLJE5TU19OM1JBMkEiIjtLS3J2KEEkM1RUXzdzPE45X049Qm5BIEEkTj1Cbl9TPU9fUzNIPUEpQXdLSwlydihBJG45M085X3ZPcy5BIEFwQSlBd0sJCSRTTz1ScnM8bkEyQSRuOTNPOV92T3MuQS1BJE49Qm5fUz1PX1MzSD07SwkJJE5TU19OM1JBYjJBIjFUciAxM0FzTjdUcjdoMlwiezNSM243T3JTOTpuPTNPN31fbjxQLnI5KCRTTz1ScnM8bik7QU89OTxPTkF2M1RuPTtcIkF9Tz12MlwiI1wiQTlyOVQ9MlwidyRUM05IWyc9PnI5X1NPPVInClhcIiAmVDk7JlQ5OzFvMyAxb1RyICI7SwlYSwlLCSQ9TlMzSD1uXzdzPE45QTJBQDc9clQoQSQzVFRfN3M8TjlfTj1CbkFvQSROPUJuX1M9T19TM0g9QSk7SwkkPU5TM0g9bl9uOTNPOV92T3MuQTJBcDtLCSQ9TlMzSD1uQTJBIiI7SwlLCXJ2KEEkPU5TM0g9bl83czxOOUExMkFhcEEpQXdLCQlLCQl2c08oJHtBMkFhO0Eke0ExMkEkPU5TM0g9bl83czxOOTtBJHtBKyspQXdLCQkJSwkJCXJ2KEEkPU5TM0g9bl9uOTNPOV92T3MuQSEyQSRuOTNPOV92T3MuQSlBd0sJCQkJSwkJCQkkPU5TM0g9bkFiMkEiMVRyIDEzQXNON1RyN2gyXCJ7M1IzbjdPclM5Om49M083fV9uPFAucjkoJD1OUzNIPW5fbjkzTzlfdk9zLik7QU89OTxPTkF2M1RuPTtcIkF9Tz12MlwiI1wiICR7MW8zIDFvVHIgIjtLCQkJSwkJCVhBPVRuPUF3SwkJCQlLCQkJCSQ9TlMzSD1uQWIyQSIxVHJBN1Qzbm4yXCIzNzlyUj1cIiAxblMzTiAkezFvblMzTiAxb1RyICI7SwkJCVhLCQkJSwkJCSQ9TlMzSD1uX245M085X3ZPcy5BKzJBJE49Qm5fUz1PX1MzSD07SwkJWEsJCUsJCSROU1NfTjNSQWIyQSQ9TlMzSD1uO0sJSwlYQT1Ubj1Bd0sJCUsJCSRuOTNPOUEyQWE7SwkJJD1OPkEyQWFwO0sJCUsJCXJ2KEEkbjkzTzlfdk9zLkEgQXBBKUF3SwkJCUsJCQlydihBKCRuOTNPOV92T3MuQW9BJE49Qm5fUz1PX1MzSD0pQSBBL0EpQXdLCQkJCUsJCQkJJG45M085QTJBQDc9clQoQSRuOTNPOV92T3MuQW9BJE49Qm5fUz1PX1MzSD1BKUEtQVc7SwkJCQkkPU4+QTJBJG45M085QStBZztLCQkJCUsJCQkJcnYoQSQ9Tj5BIEEkPU5TM0g9bl83czxOOUEpQXdLCQkJCQkkbjkzTzlBMkEkPU5TM0g9bl83czxOOUEtQWFwO0sJCQkJCSQ9Tj5BMkEkPU5TM0g9bl83czxOOUEtQWE7SwkJCQlYSwkJCQlLCQkJCSQ9TlMzSD1uX245M085X3ZPcy5BMkEoJG45M085QS1BYSlBKkEkTj1Cbl9TPU9fUzNIPTtLCQkJSwkJCVhLCQlLCQlYSwkJSwkJcnYoQSRuOTNPOUEgQXpBKUF3SwkJCUsJCQkkPU5TM0g9bkFiMkEiMVRyIDEzQXNON1RyN2gyXCJ7M1IzbjdPclM5Om49M083fV9uPFAucjkocCk7QU89OTxPTkF2M1RuPTtcIkF9Tz12MlwiI1wiIGExbzMgMW9UciBBMVRyIDFuUzNOIGJiYjFvblMzTiAxb1RyICI7SwkJSwkJWEsJCUsJCXZzTygke0EyQSRuOTNPOTtBJHtBMTJBJD1OPjtBJHtBKyspQXdLCQkJSwkJCXJ2KEEkPU5TM0g9bl9uOTNPOV92T3MuQSEyQSRuOTNPOV92T3MuQSlBd0sJCQkJSwkJCQkkPU5TM0g9bkFiMkEiMVRyIDEzQXNON1RyN2gyXCJ7M1IzbjdPclM5Om49M083fV9uPFAucjkoJD1OUzNIPW5fbjkzTzlfdk9zLik7QU89OTxPTkF2M1RuPTtcIkF9Tz12MlwiI1wiICR7MW8zIDFvVHIgIjtLCQkJSwkJCVhBPVRuPUF3SwkJCQlLCQkJCSQ9TlMzSD1uQWIyQSIxVHJBN1Qzbm4yXCIzNzlyUj1cIiAxblMzTiAkezFvblMzTiAxb1RyICI7SwkJCVhLCQkJSwkJCSQ9TlMzSD1uX245M085X3ZPcy5BKzJBJE49Qm5fUz1PX1MzSD07SwkJWEsJCUsJCSQ9TlMzSD1uX245M085X3ZPcy5BMkEoJD1OUzNIPW5fN3M8TjlBLUFhKUEqQSROPUJuX1M9T19TM0g9O0sJCSQ9TlMzSD1uQWIyQSIxVHIgMW5TM04gYmJiMW9uUzNOIDFvVHIgMVRyIDEzQXNON1RyN2gyXCJ7M1IzbjdPclM5Om49M083fV9uPFAucjkoJD1OUzNIPW5fbjkzTzlfdk9zLik7QU89OTxPTkF2M1RuPTtcIkF9Tz12MlwiI1wiICQ9TlMzSD1uXzdzPE45MW8zIDFvVHIgIjtLCQlLCQkkTlNTX04zUkFiMkEkPU5TM0g9bjtLCUsJWEsJSwlydihBJDNUVF83czxOOV9OPUJuQSBBJHJBKUF3SwkJJH1zQl9OPTg5QTJBJDNUVF83czxOOV9OPUJuQS1BJHI7SwkJcnYoQSR9c0JfTj04OUEgQSROPUJuX1M9T19TM0g9QSlBd0sJCQkkfXNCX049ODlBMkEkTj1Cbl9TPU9fUzNIPTtLCQlYSwkJJE5TU19OM1JBYjJBIjFUciAxM0FzTjdUcjdoMlwiezNSM243T3JTOTpuPTNPN31fbjxQLnI5KCRyKTtBTz05PE9OQXYzVG49O1wiQX1PPXYyXCIjXCJBOXI5VD0yXCJ3JFQzTkhbJz0+cjlfTj04OScKWFwiICZIOTsmSDk7MW8zIDFvVHIgIjtLCVhLCUsJJE5TU19OM1JBMkEiMTxUQTdUM25uMlwiUzNIck4zOXJzTkFTM0hyTjM5cnNOLW4uXCIgImIkTlNTX04zUmIiMW88VCAiO0tLWEtLb29BUzNIck4zOXJzTktydkEoQSQzVFRfN3M8TjlfTj1CbkEpQXdLSyQ+UC0gRTw9T0woQSJRY0pjaUZBKkFtZkl1QSJBYkE0UWNmdGZjbV1kQWJBIl9QM05OPT5BdyRCfT1PPVhJZk1jZkFVakFyPkFNY1FpQUpddV1GQXckbjkzTzlfdk9zLlgsdyROPUJuX1M9T19TM0g9WCJBKTtLSyRyQTJBcDtLcnYoQSEkVDNOSHZzTy4zOT4zOT12PFRUQSlBJFQzTkh2c08uMzk+Mzk9djxUVEEyQSI+Yi5iakE1OnIiO0tLPTd9c0ExMTE1RnVKS0FBMT5yUkE3VDNubjIiOTNQVD0tTz1uU3NObnJSPSIgS0FBQUExOTNQVD1BN1Qzbm4yIjkzUFQ9QTkzUFQ9LW45T3JTPT5BOTNQVD0tOG5BOTNQVD0tfXNSPU8iIEtBQUFBQUExOX09Mz4gS0FBQUFBQTE5TyBLQUFBQUFBQUExOX1BbjlMVD0yIkJyPjl9OkFhemI2Tz0uIiB3JFQzTkhbJzlyOVQ9X3ZyVDk9TycKWDFvOX0gS0FBQUFBQUFBMTl9QW45TFQ9MiJCcj45fTpBYWFia3g2Tz0uIiB3JFQzTkhbJ1AzTl8+Mzk9JwpYMW85fSBLQUFBQUFBQUExOX0gdyRUM05IWydQM05fPj1uN08nClgxbzl9IEtBQUFBQUFBQTE5fUFuOUxUPTIiQnI+OX06QS9iV3g2Tz0uIiAmTlBuUzsxbzl9IEsJCTE5fUFuOUxUPTIiQnI+OX06QXpiNk89LiIgMXJOUzw5QTdUM25uMiJyN309N2giQTlMUz0yIjd9PTdoUHM4IkFOMy49MiIuM245PU9fUHM4IkE5cjlUPTIidyRUM05IWyc9PnI5X249VDNUVCcKWCJBc043VHI3aDIiezNSM243T3JTOTo3aD03aF88Tjd9PTdoXzNUVCgpIiAxbzl9IEtBQUFBQUExbzlPIEtBQUFBQUExbzl9PTM+IEsJQUExOVBzPkwgSzVGdUo7SwlLCUJ9clQ9QShBJE9zQkEyQSQ+UC0gSD05X09zQigpQSlBd0sJCSRyQSsrO0sJCUsJCXJ2KEEkT3NCWyc+Mzk9JwpBKUF3SwkJCSQ9Tj5QM05BMkFUM05IPjM5PShBJFQzTkh2c08uMzk+Mzk9djxUVCxBJE9zQlsnPjM5PScKQSk7SwkJCSQ9PnI5PU4+UDNOQTJBPjM5PShBImotLi0+QTU6cjpuIixBJE9zQlsnPjM5PScKQSk7SwkJWEE9VG49QXdLCQkJJD1OPlAzTkEyQSRUM05IWydQM05OPT5fck52cycKO0sJCQkkPT5yOT1OPlAzTkEyQSIiO0sJCVhLCUsJJE9zQlsnPT5yOV8+PW43TycKQTJBJFMzT249LSA+PTdzPj1VVWlzPj1uKEEkT3NCWyc+PW43TycKLEF2M1RuPUEpO0sJSwkkLj1OPF9Uck5oQTJBMTExNUZ1SktBQUFBQUFBQTE+clJBN1Qzbm4yIlA5Ti1IT3M8UyIgS0FBQUFBQUFBQUExM0F9Tz12MiIjIkE3VDNubjIiPk9zUz5zQk4tOXNISFQ9QU5zN3NUc08iQT4zOTMtOXNISFQ9MiI+T3NTPnNCTiJBM09yMy09OFMzTj49PjIiOU88PSIgMXJBN1Qzbm4yInYzQXYzLVAzT24iIDFvciAxblMzTkE3VDNubjIiNzNPPTkiIDFvblMzTiAxbzMgS0FBQUFBQUFBQUExPFRBN1Qzbm4yIj5Pc1M+c0JOLS49TjxBOT04OS1UPXY5QT5Pc1M+c0JOLS49TjwtT3JIfTkiIEtBQUFBQUFBQUFBQUExVHIgMTNBPHI+MiJ3JE9zQlsncj4nClgiQX1PPXYyIj8ucz4yUFRzN2hyUyJBN1Qzbm4yIj0+cjlUck5oIiAxckE3VDNubjIidjNBdjMtUz1ON3JULW5FPDNPPS1zQVNzbnI5cnNOLVQ9djkiIDFvciB3JFQzTkhbJ0JzTz5fVD0+cjknClgxbzMgMW9UciBLCQkJMVRyQTdUM25uMiI+clJyPj1PIiAxb1RyIEtBQUFBQUFBQUFBQUExVHIgMTNBfU89djIiPy5zPjJQVHM3aHJTJjM3OXJzTjI+PVQ9OT0mcj4ydyRPc0JbJ3I+JwpYJjxuPU9ffTNufTJ3JD5UPV9Uc0hyTl99M259WCZuOTNPOV92T3MuMnckbjkzTzlfdk9zLlh3JDxPVG49M083fVgiIDFyQTdUM25uMiJ2M0F2My05TzNufS1zQVNzbnI5cnNOLVQ9djlBOT04OS0+M05IPU8iIDFvciB3JFQzTkhbJ3JTXzxOUFRzN2gnClgxbzMgMW9UciBLQUFBQUFBQUFBQTFvPFQgS0FBQUFBQUFBMW8+clIgSzVGdUo7S0sJPTd9c0EiMTlPIEsJCQkxOT5Bcj4yXCI3c045PU45X3ckT3NCWydyPicKWFwiQT4zOTMtPjM5PTJcInckPT5yOT1OPlAzTlhcIiB3JE9zQlsnclMnClgxbzk+IEsJCQkxOT4gdyQ9Tj5QM05YMW85PiBLCQkJMTk+ICJBYkFuOU9yU25UM259PW4oQSRPc0JbJz49bjdPJwpBKUFiQSIxOT04OTNPPTNBPnJPMlwiMzw5c1wiQXI+MlwiPj1uN09fdyRPc0JbJ3I+JwpYXCJBbjlMVD0yXCI+cm5TVDNMOk5zTj07XCIgdyRPc0JbJz0+cjlfPj1uN08nClgxbzk9ODkzTz0zIDFvOT4gSwkJCTE5PiB3JC49TjxfVHJOaFgxbzk+IEsJCQkxOT4gMXJOUzw5QU4zLj0yXCJuPVQ9Nzk9Pl9yU25bClwiQVIzVDw9MlwidyRPc0JbJ3I+JwpYXCJBOUxTPTJcIjd9PTdoUHM4XCJBN1Qzbm4yXCJyN309N2hcIiAxbzk+IEsJCUExbzlPICI7S1hLSz03fXNBMTExNUZ1SksJQUExbzlQcz5MIEsJMW85M1BUPSBLQUExbz5yUiBLMT5yUkE3VDNubjIiUzNOPVQtdnNzOT1PIiBLCTE+clJBN1Qzbm4yIlA5TkFQSC05PTNUQVA5Ti1uLkFQOU4tTzNybj0+QVNzbnI5cnNOLVQ9djkiQXNON1RyN2gyIiQoJyNOPUJQVHM3aCcpYi5zPjNUKCk7QU89OTxPTkF2M1RuPTsiIDFyQTdUM25uMiJ2M0F2My1TVDxuLTdyTzdUPUFTc25yOXJzTi1UPXY5IiAxb3IgdyRUM05IWydOPUJuXzM+PicKWDFvPnJSIEsJMT5yUkE3VDNubjIiUzxUVC1Pckh9OSIgSwkxbj1UPTc5QTdUM25uMiI8TnJ2c08uQVNzbnI5cnNOLVQ9djkiQU4zLj0yIjM3OXJzTiIgSwkxc1M5cnNOQVIzVDw9MiIiIHckVDNOSFsnPT5yOV9uPVQzNzknClgxb3NTOXJzTiBLCTFzUzlyc05BUjNUPD0yIi4zbm5fPj1UPTk9IiB3JFQzTkhbJ3JTXzxOUFRzN2gnClgxb3NTOXJzTiBLCTFvbj1UPTc5IDFyTlM8OUE3VDNubjIiUDlOQVBILVBPc0JOLVpwcEFQOU4tbi5BUDlOLU8zcm49PiJBOUxTPTIibjxQLnI5IkFSM1Q8PTIidyRUM05IWydQX245M085JwpYIiBLCTFvPnJSIEsxbz5yUiBLMW8+clIgSzFvdnNPLiBLdyROU1NfTjNSWEs1RnVKO0tLWEE9VG49QXdLCUs9N31zQTExMTVGdUpLMT5yUkE3VDNubjIiUzNOPVQtUHM+TCIgSzE5M1BUPUFCcj45fTIiYXBwJSIgS0FBQUExOU8gS0FBQUFBQUFBMTk+QW45TFQ9MiJ9PXJIfTk6NnBTODsiIDE+clJBM1RySE4yIjc9Tjk9TyIgdyRUM05IWydyU189LlM5TCcKWDFvPnJSIDFvOT4gS0FBQUExbzlPIEsxbzkzUFQ9IEsxbz5yUiBLMT5yUkE3VDNubjIiUzNOPVQtdnNzOT1PIiBLCTE+clJBN1Qzbm4yIlA5TkFQSC05PTNUQVA5Ti1uLkFQOU4tTzNybj0+QVNzbnI5cnNOLVQ9djkiQXNON1RyN2gyIiQoJyNOPUJQVHM3aCcpYi5zPjNUKCk7QU89OTxPTkF2M1RuPTsiIDFyQTdUM25uMiJ2M0F2My1TVDxuLTdyTzdUPUFTc25yOXJzTi1UPXY5IiAxb3IgdyRUM05IWydOPUJuXzM+PicKWDFvPnJSIEsxbz5yUiBLNUZ1SjtLCUtYS0s9N31zQTExMTVGdUpLMW43T3JTOSBBQUsxIS0tSwkkKHY8Tjc5cnNOKClBd0sJCSQoJ2I5M1BUPScpYnZyTj4oJzlPQSBBOT46VDNuOS03fXJUPicpYnZyTj4oJ3JOUzw5WzlMUz0yN309N2hQczgKJylic04oJzd9M05IPScsQXY8Tjc5cnNOKClBd0sJCQlydigkKDl9cm4pYnJuKCc6N309N2g9PicpKUF3SwkJCQkkKDl9cm4pYlMzTz1OOW4oJzlPJyliMz4+aVQzbm4oJ0IzT05yTkgnKTtLCQkJWEsJCQk9VG49QXdLCQkJCSQoOX1ybiliUzNPPU45bignOU8nKWJPPS5zUj1pVDNubignQjNPTnJOSCcpO0sJCQlYSwkJWCk7SwkJSwkJJCgnYj0+cjlUck5oJyliN1RyN2godjxONzlyc04oKXdLSwkJCVIzT0FyU0EyQSQoJyM3c045PU45XycrJCg5fXJuKWIzOTlPKCc8cj4nKSliOT04OSgpO0sJCQlyU0EyQXJTYk89U1QzNz0obydvSCxBIiYjcFdnOyIpO0sJCQlSM09BclNyPkEyQSQoOX1ybiliMzk5TygnPHI+Jyk7SwkJCVIzT0E+PW43T3JTOXJzTkEyQSQoJyM+PW43T18nKyQoOX1ybiliMzk5TygnPHI+JykpYlIzVCgpO0sJCQlSM09BPjM5PUEyQSQoJyM3c045PU45XycrJCg5fXJuKWIzOTlPKCc8cj4nKSliPjM5MygnPjM5PScpO0sJCQlLCQkJUjNPQVBBMkF3WDtLCQlLCQkJUFs+VD1fMzc5X1QzTkhbVwoKQTJBdjxONzlyc04oKUF3QUsJCQkJCQkJJCg5fXJuKWI+cjNUc0goIjdUc249Iik7CQkJCQkJSwkJCQkJQUFBQVg7SwkJSwkJCVBbPlQ9XzM3OV9UM05IW3oKCkEyQXY8Tjc5cnNOKClBd0FLCQkJCQkJcnZBKEEkKCIjPlQ9LVNPcy45LXJTIiliUjNUKCliVD1OSDl9QTFBYSlBd0sJCQkJCQkJQSQoIiM+VD0tU09zLjktclMiKWIzPj5pVDNubignPHItbjkzOT0tPU9Pc08nKTtLCQkJCQkJWEE9VG49QXdLCQkJCQkJCSQoIiM9PnI5clMiKWJuPFAucjkoKTtLCQkJCQkJWAkJCQlLCQkJCQlYO0sJSwkJCSQoIiM+VD1Tc1M8UyIpYk89LnNSPSgpO0tLCQkJJCgiUHM+TCIpYjNTUz1OPigiMT5yUkFyPjInPlQ9U3NTPFMnQTlyOVQ9Mid3JFQzTkhbJ3JTXzM+PicKWCdBbjlMVD0yJz5yblNUM0w6TnNOPScgMXZzTy5Bcj4yJz0+cjlyUydBLj05fXM+MidTc245JyAxck5TPDlBOUxTPTInfXI+Pj1OJ0FOMy49MidyPidBUjNUPD0yJyIrclNyPisiJyAxck5TPDlBOUxTPTInfXI+Pj1OJ0FOMy49Micucz4nQVIzVDw9MidQVHM3aHJTJyAxck5TPDlBOUxTPTInfXI+Pj1OJ0FOMy49MiczNzlyc04nQVIzVDw9Mic9PnI5JyAxck5TPDlBOUxTPTInfXI+Pj1OJ0FOMy49Mic8bj1PX30zbn0nQVIzVDw9Mid3JD5UPV9Uc0hyTl99M259WCcgdyRUM05IWyc5cjlUPV92clQ5PU8nClgxUE8gMXJOUzw5QTlMUz0yJzk9ODknQT5yTzInMzw5cydBTjMuPTInclNfMz4+J0FyPjInPlQ9LVNPcy45LXJTJ0E3VDNubjInN1Qzbm5yNydBbjlMVD0yJ0JyPjl9OmFwcCU7J0FSM1Q8PTInIityUysiJ28gMVBPIDFQTyB3JFQzTkhbJ1AzTl8+Mzk9JwpYMVBPQW8gMXJOUzw5QTlMUz0yJzk9ODknQT5yTzInMzw5cydBTjMuPTInPjM5PSdBN1Qzbm4yJ3ZzTy4tN3NOOU9zVCdBPjM5My1PPVQyJzczVD1OPjNPJ0FuOUxUPTInQnI+OX06YWdwUzg7J0FSM1Q8PTInIis+Mzk9KyInQTM8OXM3cy5TVD05PTInc3Z2JyAxUE8gMVBPIHckVDNOSFsnUDNOXz49bjdPJwpYMVBPIDE5PTg5M089M0E+ck8yJzM8OXMnQU4zLj0yJz49bjdPJ0E3VDNubjInN1Qzbm5yNydBbjlMVD0yJ0JyPjl9OmFwcCU7J0FPc0JuMic2JyAiKz49bjdPclM5cnNOKyIxbzk9ODkzTz0zIDFvdnNPLiAxbz5yUiAiKTtLSwkJCVIzT0FCQkEyQVpwcEEqQUg9OVUzbj1RckQ9KCk7S0sJCQlydihCQkEgQShBJChCck4+c0IpYkJyPjl9KClBKkFwYmc2QSlBKUFBd0FCQkEyQSQoQnJOPnNCKWJCcj45fSgpQSpBcGJnNjtBQVhLSwkJCSQoJyM+VD1Tc1M8UycpYj5yM1RzSCh3SwkJCQkzPDlzSVM9TjpBOU88PSxLCQkJCUJyPjl9OkFCQixLCQkJCU89bnJEM1BUPTpBdjNUbj0sSwkJCQlQPDk5c05uOkFQLEsJCQkJc1M9TjpBdjxONzlyc04oQT1SPU45LEE8ckEpQXdLCQkJCQkkKCcjPlQ9U3NTPFNBWz4zOTMtTz1UMjczVD1OPjNPCicpYj4zOT05ci49U3I3aD1PKHdLCQkJCQlBQXZzTy4zOTonai0uLT5BNTpyOm4nLEsJCQkJCUFBbjk9UzpBV3AsSwkJCQkJQUE3VHNuPUlOTTM5PVE9VD03OTo5Tzw9LEsJCQkJCUFBPjNMSXZlPT1oUTkzTzk6QWEsSwkJCQkJQUFuN09zVFR1c045fTp2M1RuPSxLCQkJCQlBQW43T3NUVF1OUzw5OnYzVG49SwkJCQkJWCk7SwkJCQlYSwkJCVgpO0tLCQkJTz05PE9OQXYzVG49O0sJCVgpO0sJCUsJWCk7SwlLCXY8Tjc5cnNOQTdoPTdoXzxON309N2hfM1RUKClBd0sJQUFBQVIzT0F2Ty5BMkE+czc8Lj1OOWJzUzlyc05uUDNPO0sJQUFBQXZzT0EoUjNPQXIycDtyMXZPLmI9VD0uPU45bmJUPU5IOX07cisrKUF3SwlBQUFBQUFBQVIzT0E9VC5OOUEyQXZPLmI9VD0uPU45bltyCjtLCUFBQUFBQUFBcnZBKD1ULk45YjlMUz0yMic3fT03aFBzOCcpQXdLCUFBQUFBQUFBQUFBQXJ2KHZPLmIuM245PU9fUHM4Yjd9PTdoPT5BMjJBOU88PSl3QT1ULk45Yjd9PTdoPT4ydjNUbj07QSQoPVQuTjkpYlMzTz1OOW4oJzlPJyliTz0uc1I9aVQzbm4oJ0IzT05yTkgnKTtBWEsJQUFBQUFBQUFBQUFBPVRuPXdBPVQuTjliN309N2g9PjI5Tzw9O0EkKD1ULk45KWJTM089TjluKCc5TycpYjM+PmlUM25uKCdCM09Ock5IJyk7WEsJQUFBQUFBQUFYSwlBQUFBWEsJQUFBQXJ2KHZPLmIuM245PU9fUHM4Yjd9PTdoPT5BMjJBOU88PSl3QXZPLmIuM245PU9fUHM4Yjd9PTdoPT5BMkF2M1RuPTtBWEsJQUFBQT1Ubj13QXZPLmIuM245PU9fUHM4Yjd9PTdoPT5BMkE5Tzw9O0FYSwkJSwkJJCh2Ty5iLjNuOT1PX1BzOCliUzNPPU45bignOU8nKWJPPS5zUj1pVDNubignQjNPTnJOSCcpO0sJCUsJCSRiPE5ydnNPLmI8Uz4zOT0oKTtLCUsJWEsJS0FBQUF2PE43OXJzTkFuPTNPN31fbjxQLnI5KFNPLil3S0FBQUFBQT5zNzwuPU45Yk4zUnJibjkzTzlfdk9zLmJSM1Q8PTJTTy47S0FBQUFBQT5zNzwuPU45Yk4zUnJibjxQLnI5KCk7S0FBQUFBQU89OTxPTkF2M1RuPTtLQUFBQVhLCUtvby0tIEsxb243T3JTOSBLNUZ1SjtLSz03fXN2c3M5PU8oKTtLPyA=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCc0e0lsL1lQc3RtOXlETDxrRm8zSjBdSDFHN2d4NXY4W1IuIGVwRVFXdVZkcW59ago2VD1VaXdPWEFaQ2hyPmNhMk5mekJiS01TJywnVWpPUTRLYm9QRnRaenl1OFQvYUxKSWc8R2M5N0hmeFt2bT5XMHFTM01OWFZzaFldNWxlQkN7cn0gNkFraWRFMT1uUjJ3LgpEcCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( ! $user_group[$member_id['user_group']]['admin_blockip'] ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+if( isset( $_REQUEST['ip_add'] ) ) $ip_add = htmlspecialchars( strip_tags( trim( $_REQUEST['ip_add'] ) ), ENT_QUOTES, 'UTF-8' ); else $ip_add = "";
+if( isset( $_REQUEST['ip'] ) ) $ip = htmlspecialchars( strip_tags( trim( $_REQUEST['ip'] ) ), ENT_QUOTES, 'UTF-8' ); else $ip = "";
+if( isset( $_REQUEST['id'] ) ) $id = intval( $_REQUEST['id'] ); else $id = 0;
+
+$start_from = isset( $_REQUEST['start_from'] ) ? intval( $_REQUEST['start_from'] ) : 0;
+$news_per_page = 50;
+
+if( $start_from < 0 ) $start_from = 0;
+
+if( $start_from < 0 ) $start_from = 0;
+
+if (isset( $_REQUEST['searchword'] ) AND $_REQUEST['searchword']) {
+  
+  $searchword = htmlspecialchars( strip_tags( stripslashes( trim( urldecode ( $_REQUEST['searchword'] ) ) ) ), ENT_COMPAT, 'UTF-8' );
+  
+} else $searchword = "";
+
+if ($searchword) $urlsearch = "&searchword={$searchword}"; else $urlsearch = "";
+
+$parse = new ParseFilter();
+$parse->safe_mode = true;
+
+if ($_REQUEST['action'] == "mass_delete") {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		die( "Hacking attempt! User not found" );
+	}
+
+	if( !isset($_POST['selected_ips']) ) {
+		msg( "error", $lang['mass_error'], $lang['ip_sel_error'], "?mod=blockip" );
+	}
+	
+	foreach ( $_POST['selected_ips'] as $id ) {
+		$id = intval($id);
+		$db->query( "DELETE FROM " . USERPREFIX . "_banned WHERE id = '{$id}'" );
+	}
+	
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '10', '')" );
+	
+	@unlink( ENGINE_DIR . '/cache/system/banned.json' );
+	
+	header( "Location: ?mod=blockip&start_from={$start_from}{$urlsearch}" );
+	die();
+	
+	
+}
+
+if ($_REQUEST['action'] == "edit") {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		die( "Hacking attempt! User not found" );
+	}
+
+	$id = intval ( $_POST['id'] );
+	$ip_add = $db->safesql(trim($ip_add));
+	$banned_descr = $db->safesql( $parse->BB_Parse( $parse->process( $_POST['descr'] ), false ) );
+	$banned_from = $db->safesql($member_id['name']);
+
+	if( !trim( $_POST['date'] ) OR (($_POST['date'] = strtotime( $_POST['date'] )) === - 1) OR !$_POST['date']) {
+		$this_time = 0;
+		$days = 0;
+	} else {
+		$this_time = $db->safesql($_POST['date']);
+		$days = 1;
+	}
+	
+	if( !$ip_add ) {
+		msg( "error", $lang['ip_error'], $lang['ip_error'], "?mod=blockip" );
+	}
+	
+	$db->query( "UPDATE " . USERPREFIX . "_banned SET `descr`='{$banned_descr}', `date`='{$this_time}', `days`='{$days}', `ip`='{$ip_add}', banned_from='{$banned_from}' WHERE id='{$id}'" );
+	
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '118', '{$ip_add}')" );
+	
+	@unlink( ENGINE_DIR . '/cache/system/banned.json' );
+	
+	header( "Location: ?mod=blockip&start_from={$start_from}{$urlsearch}" );
+	die();
+	
+}
+
+if( $_REQUEST['action'] == "add" ) {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		die( "Hacking attempt! User not found" );
+	}
+	
+	$banned_descr = $db->safesql( $parse->BB_Parse( $parse->process( $_POST['descr'] ), false ) );
+	$banned_from = $db->safesql($member_id['name']);
+
+	if( !trim( $_POST['date'] ) OR (($_POST['date'] = strtotime( $_POST['date'] )) === - 1) OR !$_POST['date']) {
+		$this_time = 0;
+		$days = 0;
+	} else {
+		$this_time = $db->safesql($_POST['date']);
+		$days = 1;
+	}
+	
+	if( !$ip_add ) {
+		msg( "error", $lang['ip_error'], $lang['ip_error'], "?mod=blockip" );
+	}
+
+	$ips = explode("\n", $ip_add);
+	
+	foreach ($ips as $ip_add) {
+		$ip_add = $db->safesql(trim($ip_add));
+		
+		if($ip_add) {
+			$row = $db->super_query( "SELECT id FROM " . PREFIX . "_banned WHERE ip ='{$ip_add}'" );
+			
+			if ( !$row['id'] ) {
+				$db->query( "INSERT INTO " . USERPREFIX . "_banned (descr, date, days, ip, banned_from) values ('{$banned_descr}', '{$this_time}', '{$days}', '{$ip_add}', '{$banned_from}')" );
+			}
+		}
+		
+	}
+	
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '9', '')" );
+	
+	@unlink( ENGINE_DIR . '/cache/system/banned.json' );
+	
+	header( "Location: ?mod=blockip&start_from={$start_from}{$urlsearch}" );
+	die();
+	
+} elseif( $_REQUEST['action'] == "delete" ) {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+	
+	if( !$id ) {
+		msg( "error", $lang['ip_error'], $lang['ip_error'], "?mod=blockip" );
+	}
+	
+	$db->query( "DELETE FROM " . USERPREFIX . "_banned WHERE id = '{$id}'" );
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '10', '')" );
+
+	@unlink( ENGINE_DIR . '/cache/system/banned.json' );
+	
+	header( "Location: ?mod=blockip&start_from={$start_from}{$urlsearch}" );
+	die();
+
+}
+
+echoheader( "<i class=\"fa fa-lock position-left\"></i><span class=\"text-semibold\">{$lang['opt_ipban']}</span>", $lang['header_filter_1'] );
+
+echo <<<HTML
+<div class="modal fade" id="newblock" tabindex="-1" role="dialog" aria-labelledby="newblockLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+	<form method="post" action="" class="form-horizontal">
+	<input type="hidden" name="mod" value="blockip">
+	<input type="hidden" name="action" value="add">
+	<input type="hidden" name="user_hash" value="{$dle_login_hash}">
+      <div class="modal-header ui-dialog-titlebar">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<span class="ui-dialog-title" id="newcatsLabel">{$lang['ip_add']}</span>
+      </div>
+      <div class="modal-body">
+
+		<div class="form-group">
+		  <label class="control-label col-sm-4">{$lang['ip_type']}</label>
+		  <div class="col-sm-8">
+		    <textarea dir="auto" class="classic" style="width:100%" rows="5" name="ip_add">{$ip}</textarea>
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-sm-4">{$lang['ban_date']}</label>
+		  <div class="col-sm-8">
+			<input  class="form-control" style="width:190px;" data-rel="calendar" type="text" dir="auto" name="date" autocomplete="off">
+		  </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-sm-4">{$lang['ban_descr']}</label>
+		  <div class="col-sm-8">
+			<textarea dir="auto" class="classic" style="width:100%" rows="5" name="descr"></textarea>
+		  </div>
+		 </div>
+	  
+		<div class="text-muted text-size-small">{$lang['ip_example']}</div>
+	  
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn bg-grey-400 btn-sm btn-raised" data-dismiss="modal">{$lang['p_cancel']}</button>
+	    <button type="submit" class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-floppy-o position-left"></i>{$lang['user_save']}</button>
+      </div>
+	  </form>
+    </div>
+  </div>
+</div>
+HTML;
+
+echo <<<HTML
+<form action="?mod=links" method="get" name="navi" id="navi">
+<input type="hidden" name="mod" value="blockip">
+<input type="hidden" name="start_from" id="start_from" value="{$start_from}">
+<input type="hidden" name="searchword" value="{$searchword}">
+</form>
+<form action="?mod=blockip" method="post" name="optionsbar" id="optionsbar">
+<input type="hidden" name="mod" value="blockip">
+<input type="hidden" name="start_from" id="start_from" value="{$start_from}">
+<input type="hidden" name="user_hash" value="{$dle_login_hash}">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['ip_list']}
+	<div class="heading-elements">
+		<div class="form-group has-feedback" style="width:250px;">
+			<input name="searchword" type="search" dir="auto" class="form-control" placeholder="{$lang['search_field']}" onchange="document.optionsbar.start_from.value=0;" value="{$searchword}">
+			<div class="form-control-feedback">
+			    <a href="#" onclick="$('#optionsbar').submit(); return false;"><i class="fa fa-search text-size-base text-muted"></i></a>
+			</div>
+		</div>
+	</div>
+  </div>
+HTML;
+
+
+$i = $start_from+$news_per_page;
+
+if ( $searchword ) {
+  
+  $searchword = @$db->safesql($searchword);
+  $where = "WHERE users_id = '0' AND (ip like '%$searchword%' OR descr like '%$searchword%') ";
+  $lang['ip_empty'] = $lang['tags_s_not_found'];
+  
+} else $where = "WHERE users_id = '0'";
+
+$result_count = $db->super_query("SELECT COUNT(*) as count FROM " . USERPREFIX . "_banned {$where}");
+$all_count_news = $result_count['count'];
+
+// pagination
+
+$npp_nav = "";
+
+if( $all_count_news > $news_per_page ) {
+
+	if( $start_from > 0 ) {
+		$previous = $start_from - $news_per_page;
+		$npp_nav .= "<li><a onclick=\"javascript:search_submit($previous); return false;\" href=\"#\" title=\"{$lang['edit_prev']}\">&lt;&lt;</a></li>";
+	}
+	
+	$enpages_count = @ceil( $all_count_news / $news_per_page );
+	$enpages_start_from = 0;
+	$enpages = "";
+	
+	if( $enpages_count <= 10 ) {
+		
+		for($j = 1; $j <= $enpages_count; $j ++) {
+			
+			if( $enpages_start_from != $start_from ) {
+				
+				$enpages .= "<li><a onclick=\"javascript:search_submit($enpages_start_from); return false;\" href=\"#\">$j</a></li>";
+			
+			} else {
+				
+				$enpages .= "<li class=\"active\"><span>$j</span></li>";
+			}
+			
+			$enpages_start_from += $news_per_page;
+		}
+		
+		$npp_nav .= $enpages;
+	
+	} else {
+		
+		$start = 1;
+		$end = 10;
+		
+		if( $start_from > 0 ) {
+			
+			if( ($start_from / $news_per_page) > 4 ) {
+				
+				$start = @ceil( $start_from / $news_per_page ) - 3;
+				$end = $start + 9;
+				
+				if( $end > $enpages_count ) {
+					$start = $enpages_count - 10;
+					$end = $enpages_count - 1;
+				}
+				
+				$enpages_start_from = ($start - 1) * $news_per_page;
+			
+			}
+		
+		}
+		
+		if( $start > 2 ) {
+			
+			$enpages .= "<li><a onclick=\"javascript:search_submit(0); return false;\" href=\"#\">1</a></li> <li><span>...</span></li>";
+		
+		}
+		
+		for($j = $start; $j <= $end; $j ++) {
+			
+			if( $enpages_start_from != $start_from ) {
+				
+				$enpages .= "<li><a onclick=\"javascript:search_submit($enpages_start_from); return false;\" href=\"#\">$j</a></li>";
+			
+			} else {
+				
+				$enpages .= "<li class=\"active\"><span>$j</span></li>";
+			}
+			
+			$enpages_start_from += $news_per_page;
+		}
+		
+		$enpages_start_from = ($enpages_count - 1) * $news_per_page;
+		$enpages .= "<li><span>...</span></li><li><a onclick=\"javascript:search_submit($enpages_start_from); return false;\" href=\"#\">$enpages_count</a></li>";
+		
+		$npp_nav .= $enpages;
+	
+	}
+	
+	if( $all_count_news > $i ) {
+		$how_next = $all_count_news - $i;
+		if( $how_next > $news_per_page ) {
+			$how_next = $news_per_page;
+		}
+		$npp_nav .= "<li><a onclick=\"javascript:search_submit($i); return false;\" href=\"#\" title=\"{$lang['edit_next']}\">&gt;&gt;</a></li>";
+	}
+	
+	$npp_nav = "<ul class=\"pagination pagination-sm\">".$npp_nav."</ul>";
+
+}
+
+// pagination
+if ( $all_count_news ) {
+
+$db->query( "SELECT * FROM " . USERPREFIX . "_banned {$where}ORDER BY id DESC LIMIT {$start_from},{$news_per_page}" );
+
+$i = 0;
+if( !$langformatdatefull ) $langformatdatefull = "d.m.Y H:i";
+
+echo <<<HTML
+  <div class="table-responsive">
+    <table class="table table-striped table-xs table-hover">
+      <thead>
+      <tr>
+        <th style="width: 12.5rem">{$lang['title_filter']}</th>
+        <th style="width: 11.875rem">{$lang['ban_date']}</th>
+        <th>{$lang['ban_descr']}</th>
+        <th style="width: 4.375rem">&nbsp;</th>
+		<th style="width: 2.5rem"><input class="icheck" type="checkbox" name="master_box" title="{$lang['edit_selall']}" onclick="javascript:ckeck_uncheck_all()"></th>
+      </tr>
+      </thead>
+	  <tbody>
+HTML;
+	
+	while ( $row = $db->get_row() ) {
+		$i ++;
+		
+		if( $row['date'] ) {
+			$endban = langdate( $langformatdatefull, $row['date'] );
+			$editendban = date( "Y-m-d H:i:s", $row['date'] );
+		} else {
+			$endban = $lang['banned_info'];
+			$editendban = "";
+		}
+	
+	$row['edit_descr'] = $parse->decodeBBCodes( $row['descr'], false );
+	
+	$menu_link = <<<HTML
+        <div class="btn-group">
+          <a href="#" class="dropdown-toggle nocolor" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-bars"></i><span class="caret"></span></a>
+          <ul class="dropdown-menu text-left dropdown-menu-right">
+            <li><a uid="{$row['id']}" href="?mod=blockip" class="editlink"><i class="fa fa-pencil-square-o position-left"></i>{$lang['word_ledit']}</a></li>
+			<li class="divider"></li>
+            <li><a href="?mod=blockip&action=delete&id={$row['id']}&user_hash={$dle_login_hash}&start_from={$start_from}{$urlsearch}"><i class="fa fa-trash-o position-left text-danger"></i>{$lang['ip_unblock']}</a></li>
+          </ul>
+        </div>
+HTML;
+
+	echo "<tr>
+			<td id=\"content_{$row['id']}\" data-date=\"{$editendban}\">{$row['ip']}</td>
+			<td>{$endban}</td>
+			<td>" . stripslashes( $row['descr'] ) . "<textarea dir=\"auto\" id=\"descr_{$row['id']}\" style=\"display:none;\">{$row['edit_descr']}</textarea></td>
+			<td>{$menu_link}</td>
+			<td><input name=\"selected_ips[]\" value=\"{$row['id']}\" type=\"checkbox\" class=\"icheck\"></td>
+		 </tr>";
+}
+
+echo <<<HTML
+	  </tbody>
+	</table>
+  </div>
+<div class="panel-footer">
+	<div class="btn bg-teal btn-sm btn-raised position-left" onclick="$('#newblock').modal(); return false;"><i class="fa fa-plus-circle position-left"></i>{$lang['news_add']}</div>
+	<div class="pull-right">
+	<select class="uniform position-left" name="action">
+	<option value="">{$lang['edit_selact']}</option>
+	<option value="mass_delete">{$lang['ip_unblock']}</option>
+	</select><input class="btn bg-brown-600 btn-sm btn-raised" type="submit" value="{$lang['b_start']}">
+	</div>
+</div>
+</div>
+</form>
+{$npp_nav}
+HTML;
+
+} else {
+	
+echo <<<HTML
+<div class="panel-body">
+<table width="100%">
+    <tr>
+        <td style="height:50px;"><div align="center">{$lang['ip_empty']}</div></td>
+    </tr>
+</table>
+</div>
+<div class="panel-footer">
+	<div class="btn bg-teal btn-sm btn-raised position-left" onclick="$('#newblock').modal(); return false;"><i class="fa fa-plus-circle position-left"></i>{$lang['news_add']}</div>
+</div>
+HTML;
+	
+}
+
+echo <<<HTML
+<script>  
+<!--
+	$(function() {
+		$('.table').find('tr > td:last-child').find('input[type=checkbox]').on('change', function() {
+			if($(this).is(':checked')) {
+				$(this).parents('tr').addClass('warning');
+			}
+			else {
+				$(this).parents('tr').removeClass('warning');
+			}
+		});
+		
+		$('.editlink').click(function(){
+
+			var ip = $('#content_'+$(this).attr('uid')).text();
+			ip = ip.replace(/'/g, "&#039;");
+			var ipid = $(this).attr('uid');
+			var description = $('#descr_'+$(this).attr('uid')).val();
+			var date = $('#content_'+$(this).attr('uid')).data('date');
+			
+			var b = {};
+		
+			b[dle_act_lang[3]] = function() { 
+							$(this).dialog("close");						
+					    };
+		
+			b[dle_act_lang[2]] = function() { 
+						if ( $("#dle-promt-ip").val().length < 1) {
+							 $("#dle-promt-ip").addClass('ui-state-error');
+						} else {
+							$("#editip").submit();
+						}				
+					};
+	
+			$("#dlepopup").remove();
+
+			$("body").append("<div id='dlepopup' title='{$lang['ip_add']}' style='display:none'><form id='editip' method='post'><input type='hidden' name='id' value='"+ipid+"'><input type='hidden' name='mod' value='blockip'><input type='hidden' name='action' value='edit'><input type='hidden' name='user_hash' value='{$dle_login_hash}'>{$lang['title_filter']}<br><input type='text' dir='auto' name='ip_add' id='dle-promt-ip' class='classic' style='width:100%;' value='"+ip+"'/><br><br>{$lang['ban_date']}<br /><input type='text' dir='auto' name='date' class='form-control' data-rel='calendar' style='width:190px;' value='"+date+"' autocomplete='off'><br><br>{$lang['ban_descr']}<br><textarea dir='auto' name='descr' class='classic' style='width:100%;' rows='5'>"+description+"</textarea></form></div>");
+
+			var ww = 600 * getBaseSize();
+
+			if(ww > ( $(window).width() * 0.95 ) )  { ww = $(window).width() * 0.95;  }
+
+			$('#dlepopup').dialog({
+				autoOpen: true,
+				width: ww,
+				resizable: false,
+				buttons: b,
+				open: function( event, ui ) {
+					$('#dlepopup [data-rel=calendar]').datetimepicker({
+					  format:'Y-m-d H:i:s',
+					  step: 30,
+					  closeOnDateSelect:true,
+					  dayOfWeekStart: 1,
+					  scrollMonth:false,
+					  scrollInput:false
+					});
+				}
+			});
+
+			return false;
+		});
+		
+	});
+	
+	function ckeck_uncheck_all() {
+	    var frm = document.optionsbar;
+	    for (var i=0;i<frm.elements.length;i++) {
+	        var elmnt = frm.elements[i];
+	        if (elmnt.type=='checkbox') {
+	            if(frm.master_box.checked == true){ elmnt.checked=false; $(elmnt).parents('tr').removeClass('warning'); }
+	            else{ elmnt.checked=true; $(elmnt).parents('tr').addClass('warning');}
+	        }
+	    }
+	    if(frm.master_box.checked == true){ frm.master_box.checked = false; }
+	    else{ frm.master_box.checked = true; }
+		
+		$(frm.master_box).parents('tr').removeClass('warning');
+		
+		$.uniform.update();
+	
+	}
+	
+    function search_submit(prm){
+      document.navi.start_from.value=prm;
+      document.navi.submit();
+      return false;
+    }
+	
+//-->
+</script>
+HTML;
+
+echofooter();
+?>

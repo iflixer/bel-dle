@@ -1,13 +1,293 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+DataLife Engine - by SoftNews Media Group
 -----------------------------------------------------
- https://dle-news.ru/
+https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+This code is protected by copyright
+=====================================================
+File: banners.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+Use: banners
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0VzP3UydW1QKm1iYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYm1rNXc1L1JOcF0+OENSOHBdLV1UcV08Lk53TXBWT11JcHJSNV1uOS52dW0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLW0yd3d1TzpQUHJXcC04cFZPWjl2UG0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLW1kLnVxOVJDMnddKEIpXUt4eHktS3hLW108Lk53TXBWT11JcHJSNV1uOS52dW1iYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYm0KMlJPXUIucnBdUk9ddTkud3BCd3ByXVRxXUIudXE5UkMyd21iYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYm10UldwOl1UNTg4cDlPWnUydW0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLW1qT3A6XVQ1ODhwOU9tYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJtKlBtbVJOKF0hcnBOUjhwcigna0cKRy99dD4+TW59TT4nKV0pXWZtCTJwNXJwOShdInoKCntQNlo2XXl4SF10LjlUUnJycDgiXSk7bQkycDVycDldKF0nLy5CNXdSLjg6XVpaUFpaUCddKTttCXJScChdIno1Qm9SOENdNXd3cDR1dyEiXSk7bVFtbVJOXShdIXJwTlI4cHIoJ1lHTU0+IDwnKV0pXWZtbQlycE5SOHAoXSdZR01NPiA8JyxdNl0pO20JJE5SOU93X1I4Qld2cnBdYl13OXZwO21tUV1wV09wXSROUjlPd19SOEJXdnJwXWJdTjVXT3A7bW0kVDU4OHA5T11iXUNwd183NTlPKF0iVDU4OHA5TyJdKTttbVJOKF0hXVJPXzU5OTVxKF0kVDU4OHA5T10pXSldZm0JJFQ1ODhwOU9dYl01OTk1cV0oKTttCW0JJHJULUVVdnA5cShdIjw+Lz5kCl0qXXQgTEldIl1aXXsgPnR9PV1aXSJfVDU4OHA5T11MIGs+IF1ZMV1Scl1HPGQiXSk7bQltCVYyUldwXShdJDkuVl9UXWJdJHJULUVDcHdfOS5WKCldKV1mbQkJbQkJJFQ1ODhwOU9jJDkuVl9UYydScidTU11iXTU5OTVxXSgpO20JCW0JCU4uOXA1QjJdKF0kOS5WX1RdNU9dJG9wcV1iRV0kNzVXdnBdKV1mbQkJCSRUNTg4cDlPYyQ5LlZfVGMnUnInU1NjJG9wcVNdYl0kNzVXdnA7bQkJUW0JbQlRbQlPcHdfNzU5TyhdIlQ1ODhwOU8iLF0kVDU4OHA5T10pO20JJHJULUVOOXBwKCk7bVFtbSRUNThdYl01OTk1cV0oKTttJFQ1ODhwOV9SOF84cFZPXWJdNTk5NXFdKCk7bW1STihdQi52OHcoXSRUNTg4cDlPXSldRV14XSldZm0JTi45cDVCMl0oXSRUNTg4cDlPXTVPXSQ4NTRwXWJFXSQ3NVd2cF0pXWZtCQlSTihdJDc1V3ZwYyc1dXU5LjdwJ1NdKV1mXW0JCQltCQkJJHU1OTU0T19UNTg4cDldYl0iIjttbQkJCVJOKF0kNzVXdnBjJ0I1d3BDLjlxJ1NdKV1mbQkJCQkkNzVXdnBjJ0I1d3BDLjlxJ1NdYl1wWHVXLnJwKF0nLCcsXSQ3NVd2cGMnQjV3cEMuOXEnU10pO21tbQkJCQlSTihdJE5SOU93X1I4Qld2cnBdR01rXSRyV3BfNC5ydldwXSFiXSJPMi5WTnZXVyJdKV1mbW0JCQkJCVJOXSghUjhfNTk5NXEoJEI1d3BDLjlxX1JyLF0kNzVXdnBjJ0I1d3BDLjlxJ1MpKV0kNzVXdnBjJ0IucnAnU11iXSIiO21tCQkJCVFdcFdPcFJOXShdISROUjlPd19SOEJXdnJwXUdNa10kcldwXzQucnZXcF1iYl0iTzIuVk52V1ciXSldZm1tCQkJCQlSTihdIVJPT3B3KCQ5LlZjJ0I1d08nUyldTCBdIVJPXzU5OTVxKCQ5LlZjJ0I1d08nUyldKV0kOS5WYydCNXdPJ1NdYl01OTk1cSgpO21tCQkJCQkkNVdXLlZfdzJST19UNTg4cDldYl1ONVdPcDttCQkJCQltCQkJCQlOLjlwNUIyXSgkOS5WYydCNXdPJ1NdNU9dJDhfQjV3KV1mbQkJCQkJCVJOKF1SOF81OTk1cSgkOF9CNXcsXSQ3NVd2cGMnQjV3cEMuOXEnUyldKV0kNVdXLlZfdzJST19UNTg4cDldYl13OXZwO20JCQkJCVFtbQkJCQkJUk5dKF0hJDVXVy5WX3cyUk9fVDU4OHA5XSldJDc1V3ZwYydCLnJwJ1NdYl0iIjttbQkJCQlRbW0JCQlRbQkJCW0JCQlSTihdJDc1V3ZwYyc0NVI4J1NdKV1mbQkJCQlSTihdJF88PiBlPiBjJ2dqPiAxXzwKIH1NbidTXSFiXSIiXSldJDc1V3ZwYydCLnJwJ1NdYl0iIjttCQkJUW1tCQkJUk4oXSQ3NVd2cGMnTnU1Q3AnU11HTWtdUjh3NzVXKCRfbj4KYydCT3c1OXcnUyldRV02XSldJDc1V3ZwYydCLnJwJ1NdYl0iIjttCQkJUk5dKCQ3NVd2cGMnT3c1OXcnU11HTWtdJF8KfUk+XXNdJDc1V3ZwYydPdzU5dydTXSldJDc1V3ZwYydCLnJwJ1NdYl0iIjttCQkJUk5dKCQ3NVd2cGMncDhyJ1NdR01rXSRfCn1JPl1FXSQ3NVd2cGMncDhyJ1NdKV0kNzVXdnBjJ0IucnAnU11iXSIiO20JCQltCQkJJDc1V3ZwYydDOS52dVdwN3BXJ1NdYl1wWHVXLnJwKF0nLCcsXSQ3NVd2cGMnQzkudnVXcDdwVydTXSk7bQkJCW0JCQlSTihdJDc1V3ZwYydDOS52dVdwN3BXJ1NjeFNdIWJdIjVXVyJdNThyXSFSOF81OTk1cShdJDRwNFRwOV9ScmMndk9wOV9DOS52dSdTLF0kNzVXdnBjJ0M5LnZ1V3A3cFcnU10pXSldZm0JCQkJJDc1V3ZwYydCLnJwJ1NdYl0iIjttCQkJUW0JCQltCQkJJDc1V3ZwYydycDdSQnBXcDdwVydTXWJdcFh1Vy5ycChdJywnLF0kNzVXdnBjJ3JwN1JCcFdwN3BXJ1NdKTttCQkJbQkJCVJOKF0kNzVXdnBjJ3JwN1JCcFdwN3BXJ1NjeFNdR01rXSQ3NVd2cGMncnA3UkJwV3A3cFcnU2N4U10hYl0iNVdXIl0pXWZtCQkJCSR3NHVfTzIuVl1iXU41V09wO20JCQkJbQkJCQlOLjlwNUIyXSgkNzVXdnBjJ3JwN1JCcFdwN3BXJ1NdNU9dJHJwN1JCcCldZm0JCQkJCVJOKF0kcnA3UkJwXWJiXTZdR01rXSR3dVctRXJwT293LnVdKV0kdzR1X08yLlZdYl13OXZwO20JCQkJCVJOKF0kcnA3UkJwXWJiXUtdR01rXSR3dVctRXc1VFdwd10pXSR3NHVfTzIuVl1iXXc5dnA7bQkJCQkJUk4oXSRycDdSQnBdYmJdSF1HTWtdJHd1Vy1FTzQ1OXd1Mi44cF0pXSR3NHVfTzIuVl1iXXc5dnA7bQkJCQlRbQkJCQltCQkJCVJOKCFdJHc0dV9PMi5WXSldJDc1V3ZwYydCLnJwJ1NdYl0iIjttCQkJUW0JCQltCQkJUk5dKCQ3NVd2cGMnNDVYXzdScFZPJ1NdR01rXSQ3NVd2cGMnN1JwVk8nU11FYl0kNzVXdnBjJzQ1WF83UnBWTydTXSldZm0JCQkJJDc1V3ZwYydCLnJwJ1NdYl0iIjttCQkJUW0JCQltCQkJUk5dKCQ3NVd2cGMnNDVYX0Iudjh3TydTXUdNa10kNzVXdnBjJ0JXUkJvTydTXUViXSQ3NVd2cGMnNDVYX0Iudjh3TydTXSldZm0JCQkJJDc1V3ZwYydCLnJwJ1NdYl0iIjttCQkJUW1tCQkJUk4oXXc5UjQoJDc1V3ZwYyc1V1cuVnByX0Iudjh3OXEnUyldR01rXSFrLz5kLnY4dzlxOjpkMnBCbygkNzVXdnBjJzVXVy5WcHJfQi52OHc5cSdTKV0pXWZtCQkJCSQ3NVd2cGMnQi5ycCdTXWJdIiI7bQkJCVFtbQkJCVJOXSh3OVI0KCQ3NVd2cGMnOC53XzVXVy5WcHJfQi52OHc5cSdTKV1HTWtday8+ZC52OHc5cTo6ZDJwQm8oJDc1V3ZwYyc4LndfNVdXLlZwcl9CLnY4dzlxJ1MpKV1mbQkJCQkkNzVXdnBjJ0IucnAnU11iXSIiO20JCQlRbW0JCQlSTihdJDc1V3ZwYyc1V1cuVl83UnBWTydTXSldZm0JCQkJJHU1OTU0T19UNTg4cDldWmIicjV3NS1yV3BUN1JwVk9iXCJxcE9cIl0iO20JCQlRbQkJCW0JCQlSTihdJDc1V3ZwYyc1V1cuVl9CLnY4d08nU10pXWZtCQkJCSR1NTk1NE9fVDU4OHA5XVpiInI1dzUtcldwVEJXUkJvT2JcInFwT1wiXSI7bQkJCVFtCQkJbQkJCVJOKCR1NTk1NE9fVDU4OHA5XUdNa10kNzVXdnBjJ0IucnAnUyldZm0JCQkJJDc1V3ZwYydCLnJwJ1NdYl0ic3JSN11CVzVPT2JcInJXcF9UX2YkNzVXdnBjJ1Q1ODhwOV93NUMnU1FcIl1yNXc1LXJXcFRScmJcImYkNzVXdnBjJ1JyJ1NRXCJdZiR1NTk1NE9fVDU4OHA5UUUiWiQ3NVd2cGMnQi5ycCdTWiJzUHJSN0UiO20JCQlRbQkJCW0JCQkkNzVXdnBjJ0IucnAnU11iXU93OV9SOXB1VzVCcChdImZSOEJXdnJwIixdIiYjNktIO1I4Qld2cnAiLF0kNzVXdnBjJ0IucnAnU10pO20JCQkkNzVXdnBjJ0IucnAnU11iXU93OV9SOXB1VzVCcChdImZCLjh3cDh3IixdIiYjNktIO0IuOHdwOHciLF0kNzVXdnBjJ0IucnAnU10pO20JCQkkNzVXdnBjJ0IucnAnU11iXU93OV9SOXB1VzVCcChdImZCdk93LjQiLF0iJiM2S0g7QnZPdy40IixdJDc1V3ZwYydCLnJwJ1NdKTttCQltCQkJUk4oXSQ3NVd2cGMnQi5ycCdTXUdNa10kNzVXdnBjJ08yLjl3X3VXNUJwJ1NdKV1mbQkJCQltCQkJCVJOKF0hUk9PcHcoJFQ1OF9PMi45dyldKV1mbQkJCQkJbQkJCQkJJFQ1OF9PMi45d11iXTU5OTVxKCd3LnUnXWJFXTU5OTVxKCksbQkJCQkJCQkJCV1dXSdCcDgnXWJFXTU5OTVxKCksbQkJCQkJCQkJCV1dXSdyLlY4J11iRV01OTk1cSgpbQkJCQkJCQkJCV1dXSk7bQkJCQkJbQkJCQlRbQkJCQltCQkJCU9WUndCMl0oJDc1V3ZwYydPMi45d191VzVCcCdTKV1tCQkJCWZtCQkJCQlCNU9wXTZdOm0JCQkJCQkkVDU4X08yLjl3Yyd3LnUnU2NTXWJdNTk5NXFdKCJ3cFh3Il1iRV0kNzVXdnBjJ0IucnAnUyxdIkE1bzkiXWJFXSQ3NVd2cGMnVE93UkJvJ1NdKTttCQkJCQkJVDlwNW87bQkJCQkJbQkJCQkJQjVPcF1LXTptCQkJCQkJJFQ1OF9PMi45d2MnQnA4J1NjU11iXTU5OTVxXSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTXSk7bQkJCQkJCVQ5cDVvO20JCQkJCW0JCQkJCUI1T3BdSF06bQkJCQkJCSRUNThfTzIuOXdjJ3IuVjgnU2NTXWJdNTk5NXFdKCJ3cFh3Il1iRV0kNzVXdnBjJ0IucnAnUyxdIkE1bzkiXWJFXSQ3NVd2cGMnVE93UkJvJ1NdKTttCQkJCQkJVDlwNW87bQkJCQkJbQkJCQkJQjVPcF15XTptCQkJCQkJJFQ1OF9PMi45d2Mndy51J1NjU11iXTU5OTVxXSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTXSk7bQkJCQkJCSRUNThfTzIuOXdjJ3IuVjgnU2NTXWJdNTk5NXFdKCJ3cFh3Il1iRV0kNzVXdnBjJ0IucnAnUyxdIkE1bzkiXWJFXSQ3NVd2cGMnVE93UkJvJ1NdKTttCQkJCQkJVDlwNW87bQkJCQkJbQkJCQkJQjVPcF1bXTptCQkJCQkJJFQ1OF9PMi45d2MnQnA4J1NjU11iXTU5OTVxXSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTXSk7bQkJCQkJCSRUNThfTzIuOXdjJ3IuVjgnU2NTXWJdNTk5NXFdKCJ3cFh3Il1iRV0kNzVXdnBjJ0IucnAnUyxdIkE1bzkiXWJFXSQ3NVd2cGMnVE93UkJvJ1NdKTttCQkJCQkJVDlwNW87bQkJCQkJbQkJCQkJQjVPcF0wXTptCQkJCQkJJFQ1OF9PMi45d2MnQnA4J1NjU11iXTU5OTVxXSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTXSk7bQkJCQkJCSRUNThfTzIuOXdjJ3cudSdTY1NdYl01OTk1cV0oIndwWHciXWJFXSQ3NVd2cGMnQi5ycCdTLF0iQTVvOSJdYkVdJDc1V3ZwYydUT3dSQm8nU10pO20JCQkJCQlUOXA1bzttCQkJCQltCQkJCQlCNU9wXTNdOm0JCQkJCQkkVDU4X08yLjl3YydCcDgnU2NTXWJdNTk5NXFdKCJ3cFh3Il1iRV0kNzVXdnBjJ0IucnAnUyxdIkE1bzkiXWJFXSQ3NVd2cGMnVE93UkJvJ1NdKTttCQkJCQkJJFQ1OF9PMi45d2Mndy51J1NjU11iXTU5OTVxXSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTXSk7bQkJCQkJCSRUNThfTzIuOXdjJ3IuVjgnU2NTXWJdNTk5NXFdKCJ3cFh3Il1iRV0kNzVXdnBjJ0IucnAnUyxdIkE1bzkiXWJFXSQ3NVd2cGMnVE93UkJvJ1NdKTttCQkJCQkJVDlwNW87bQkJCQlRbQkJCW0JCQlRbW0JCQlSTl0oJDc1V3ZwYydCLnJwJ1NdNThyXSQ3NVd2cGMnQi40NHA4d09fdVc1QnAnUyldZm1tCQkJCVJOXSghUk9PcHcoJFQ1ODhwOU9fUjhfQi40NHA4d08pKV1mbW0JCQkJCSRUNTg4cDlPX1I4X0IuNDRwOHdPXWJdNTk5NXEobQkJCQkJCSd3LnUnXWJFXTU5OTVxKCksbQkJCQkJCSdCcDgnXWJFXTU5OTVxKCksbQkJCQkJCSdyLlY4J11iRV01OTk1cSgpbQkJCQkJKTttCQkJCVFtbQkJCQlPVlJ3QjJdKCQ3NVd2cGMnQi40NHA4d09fdVc1QnAnUyldZm0JCQkJCUI1T3BdNjptCQkJCQkJJFQ1ODhwOU9fUjhfQi40NHA4d09jJ3cudSdTY1NdYl01OTk1cSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTKTttCQkJCQkJVDlwNW87bW0JCQkJCUI1T3BdSzptCQkJCQkJJFQ1ODhwOU9fUjhfQi40NHA4d09jJ0JwOCdTY1NdYl01OTk1cSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTKTttCQkJCQkJVDlwNW87bW0JCQkJCUI1T3BdSDptCQkJCQkJJFQ1ODhwOU9fUjhfQi40NHA4d09jJ3IuVjgnU2NTXWJdNTk5NXEoIndwWHciXWJFXSQ3NVd2cGMnQi5ycCdTLF0iQTVvOSJdYkVdJDc1V3ZwYydUT3dSQm8nUyk7bQkJCQkJCVQ5cDVvO21tCQkJCQlCNU9wXXk6bQkJCQkJCSRUNTg4cDlPX1I4X0IuNDRwOHdPYyd3LnUnU2NTXWJdNTk5NXEoIndwWHciXWJFXSQ3NVd2cGMnQi5ycCdTLF0iQTVvOSJdYkVdJDc1V3ZwYydUT3dSQm8nUyk7bQkJCQkJCSRUNTg4cDlPX1I4X0IuNDRwOHdPYydyLlY4J1NjU11iXTU5OTVxKCJ3cFh3Il1iRV0kNzVXdnBjJ0IucnAnUyxdIkE1bzkiXWJFXSQ3NVd2cGMnVE93UkJvJ1MpO20JCQkJCQlUOXA1bzttbQkJCQkJQjVPcF1bOm0JCQkJCQkkVDU4OHA5T19SOF9CLjQ0cDh3T2MnQnA4J1NjU11iXTU5OTVxKCJ3cFh3Il1iRV0kNzVXdnBjJ0IucnAnUyxdIkE1bzkiXWJFXSQ3NVd2cGMnVE93UkJvJ1MpO20JCQkJCQkkVDU4OHA5T19SOF9CLjQ0cDh3T2Mnci5WOCdTY1NdYl01OTk1cSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTKTttCQkJCQkJVDlwNW87bW0JCQkJCUI1T3BdMDptCQkJCQkJJFQ1ODhwOU9fUjhfQi40NHA4d09jJ0JwOCdTY1NdYl01OTk1cSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTKTttCQkJCQkJJFQ1ODhwOU9fUjhfQi40NHA4d09jJ3cudSdTY1NdYl01OTk1cSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTKTttCQkJCQkJVDlwNW87bW0JCQkJCUI1T3BdMzptCQkJCQkJJFQ1ODhwOU9fUjhfQi40NHA4d09jJ0JwOCdTY1NdYl01OTk1cSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTKTttCQkJCQkJJFQ1ODhwOU9fUjhfQi40NHA4d09jJ3cudSdTY1NdYl01OTk1cSgid3BYdyJdYkVdJDc1V3ZwYydCLnJwJ1MsXSJBNW85Il1iRV0kNzVXdnBjJ1RPd1JCbydTKTttCQkJCQkJJFQ1ODhwOU9fUjhfQi40NHA4d09jJ3IuVjgnU2NTXWJdNTk5NXEoIndwWHciXWJFXSQ3NVd2cGMnQi5ycCdTLF0iQTVvOSJdYkVdJDc1V3ZwYydUT3dSQm8nUyk7bQkJCQkJCVQ5cDVvO20JCQkJUW0JCQlRbW0JCQlSTihdJDc1V3ZwYydSODhwVk8nU10pXSRUNTg4cDlfUjhfOHBWT2NTXWJdJDc1V3ZwYydUNTg4cDlfdzVDJ1M7bQkJCW0JCQkkVDU4YyQ3NVd2cGMnVDU4OHA5X3c1QydTU2NTXWJdJDc1V3ZwYydCLnJwJ1M7bQkJbQkJUW0JUW1RbW1tTi45cDVCMl0oXSRUNThdNU9dJG9wcV1iRV0kNzVXdnBdKV1mbQltCVJOKF0oJDlfb3BxXWJdQi52OHcoXSQ3NVd2cF0pKV1FXTZdKV1mbQkJbQkJTi45KCRSXWJdeDtdJFJdc10kOV9vcHE7XSRSXSsrKV1mbQkJCW0JCQlSTihdJFQ1OGMkb3BxU2MkUlNdYmJdJyddKV12OE9wdyhdJFQ1OGMkb3BxU2MkUlNdKTttCQltCQlRbQlRbW0JTy45dygkVDU4YyRvcHFTKTttbQlSTl0oXVJPT3B3KF0kXzw+PDx9TE1jJ1Q1ODhwOU8nU2Mkb3BxU10pXUdNa11CLnY4dygkVDU4YyRvcHFTKV1FXTZdKWZtCW0JCSRfPD48PH1MTWMnVDU4OHA5TydTYyRvcHFTXWJdUjh3NzVXKF0kXzw+PDx9TE1jJ1Q1ODhwOU8nU2Mkb3BxU10pO21tCQlSTihdKCRfPD48PH1MTWMnVDU4OHA5TydTYyRvcHFTXXNdKEIudjh3KCRUNThjJG9wcVMpLTYpKV1MIF0oXSRfPD48PH1MTWMnVDU4OHA5TydTYyRvcHFTXWJiXShCLnY4dygkVDU4YyRvcHFTKS02KV1HTWtdISROUjlPd19SOEJXdnJwKV0pXWZtbQkJCVJOKCROUjlPd19SOEJXdnJwKV1mbQkJCQkkOV9vcHFdYl0kXzw+PDx9TE1jJ1Q1ODhwOU8nU2Mkb3BxUys2O20JCQlRXXBXT3BdZm0JCQkJJDlfb3BxXWJdJF88Pjw8fUxNYydUNTg4cDlPJ1NjJG9wcVM7bQkJCVFtbQkJUV1wV09wXSQ5X29wcV1iXXg7bW0JUV1wV09wXWZtbQkJUk4oXVJPXzU5OTVxKCRUNThjJG9wcVMpXUdNa11CLnY4dygkVDU4YyRvcHFTKV1FXTZdKV1mbQkJCSQ5X29wcV1iXTU5OTVxXzk1OHIoXSRUNThjJG9wcVNdKTttCQlRXXBXT3BdJDlfb3BxXWJdeDttbQlRbW0JJF88Pjw8fUxNYydUNTg4cDlPJ1NjJG9wcVNdYl0kOV9vcHE7bQkkVDU4YyRvcHFTXWJdUk9PcHcoJFQ1OGMkb3BxU2MkOV9vcHFTKV0/XSRUNThjJG9wcVNjJDlfb3BxU106XScnO21tUW1tJFQ1ODhwOU9dYl0kVDU4O20kVDU4XWJdNTk5NXFdKCk7bXY4T3B3KF0kVDU4XSk7bW0/RQ==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdhOWlReW5UbTI2TFBSa2QuZwo0XTdxdXhTPXo1WU1JQWN7PFZLVUVCb3JaZVtoMWJIIDBmRDh0Pk4vakN9c0ZPWHdKcHZXM2xHJywnSnI5fTRHYgpoMU8vaURDb1FUbSB2eXAwXVhIYUJOTXpbUFN3MnE+Y2tkLlY1S1k9M1I2e1puRkVmTFVnSTxXc3h0OGV1bDdqQScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if ( !defined('BANNERS') ) {
+
+	define( 'BANNERS', 1 );
+	$first_include = true;
+
+} else $first_include = false;
+
+$banners = get_vars( "banners" );
+
+if( ! is_array( $banners ) ) {
+	$banners = array ();
+	
+	$db->query( "SELECT * FROM " . PREFIX . "_banners ORDER BY id ASC" );
+	
+	while ( $row_b = $db->get_row() ) {
+		
+		$banners[$row_b['id']] = array ();
+		
+		foreach ( $row_b as $key => $value ) {
+			$banners[$row_b['id']][$key] = $value;
+		}
+	
+	}
+	set_vars( "banners", $banners );
+	$db->free();
+}
+
+$ban = array ();
+$banner_in_news = array ();
+
+if( count( $banners ) > 0 ) {
+	foreach ( $banners as $name => $value ) {
+		if( $value['approve'] ) { 
+			
+			$params_banner = "";
+
+			if( $value['category'] ) {
+				$value['category'] = explode( ',', $value['category'] );
+
+
+				if( $first_include AND $dle_module != "showfull" ) {
+
+					if (!in_array($category_id, $value['category'])) $value['code'] = "";
+
+				} elseif ( !$first_include AND $dle_module == "showfull" ) {
+
+					if( !isset($row['cats']) OR !is_array($row['cats']) ) $row['cats'] = array();
+
+					$allow_this_banner = false;
+					
+					foreach ($row['cats'] as $n_cat) {
+						if( in_array($n_cat, $value['category']) ) $allow_this_banner = true;
+					}
+
+					if ( !$allow_this_banner ) $value['code'] = "";
+
+				}
+
+			}
+			
+			if( $value['main'] ) {
+				if( $_SERVER['QUERY_STRING'] != "" ) $value['code'] = "";
+			}
+
+			if( $value['fpage'] AND intval($_GET['cstart']) > 1 ) $value['code'] = "";
+			if ($value['start'] AND $_TIME < $value['start'] ) $value['code'] = "";
+			if ($value['end'] AND $_TIME > $value['end'] ) $value['code'] = "";
+			
+			$value['grouplevel'] = explode( ',', $value['grouplevel'] );
+			
+			if( $value['grouplevel'][0] != "all" and !in_array( $member_id['user_group'], $value['grouplevel'] ) ) {
+				$value['code'] = "";
+			}
+			
+			$value['devicelevel'] = explode( ',', $value['devicelevel'] );
+			
+			if( $value['devicelevel'][0] AND $value['devicelevel'][0] != "all" ) {
+				$tmp_show = false;
+				
+				foreach ($value['devicelevel'] as $device) {
+					if( $device == 1 AND $tpl->desktop ) $tmp_show = true;
+					if( $device == 2 AND $tpl->tablet ) $tmp_show = true;
+					if( $device == 3 AND $tpl->smartphone ) $tmp_show = true;
+				}
+				
+				if(! $tmp_show ) $value['code'] = "";
+			}
+			
+			if ($value['max_views'] AND $value['views'] >= $value['max_views'] ) {
+				$value['code'] = "";
+			}
+			
+			if ($value['max_counts'] AND $value['clicks'] >= $value['max_counts'] ) {
+				$value['code'] = "";
+			}
+
+			if( trim($value['allowed_country']) AND !DLECountry::Check($value['allowed_country']) ) {
+				$value['code'] = "";
+			}
+
+			if (trim($value['not_allowed_country']) AND DLECountry::Check($value['not_allowed_country'])) {
+				$value['code'] = "";
+			}
+
+			if( $value['allow_views'] ) {
+				$params_banner .="data-dlebviews=\"yes\" ";
+			}
+			
+			if( $value['allow_counts'] ) {
+				$params_banner .="data-dlebclicks=\"yes\" ";
+			}
+			
+			if($params_banner AND $value['code']) {
+				$value['code'] = "<div class=\"dle_b_{$value['banner_tag']}\" data-dlebid=\"{$value['id']}\" {$params_banner}>".$value['code']."</div>";
+			}
+			
+			$value['code'] = str_ireplace( "{include", "&#123;include", $value['code'] );
+			$value['code'] = str_ireplace( "{content", "&#123;content", $value['code'] );
+			$value['code'] = str_ireplace( "{custom", "&#123;custom", $value['code'] );
+		
+			if( $value['code'] AND $value['short_place'] ) {
+				
+				if( !isset($ban_short) ) {
+					
+					$ban_short = array('top' => array(),
+									   'cen' => array(),
+									   'down' => array()
+									   );
+					
+				}
+				
+				switch ($value['short_place']) 
+				{
+					case 1 :
+						$ban_short['top'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						break;
+					
+					case 2 :
+						$ban_short['cen'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						break;
+					
+					case 3 :
+						$ban_short['down'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						break;
+					
+					case 4 :
+						$ban_short['top'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						$ban_short['down'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						break;
+					
+					case 5 :
+						$ban_short['cen'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						$ban_short['down'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						break;
+					
+					case 6 :
+						$ban_short['cen'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						$ban_short['top'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						break;
+					
+					case 7 :
+						$ban_short['cen'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						$ban_short['top'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						$ban_short['down'][] = array ("text" => $value['code'], "zakr" => $value['bstick'] );
+						break;
+				}
+			
+			}
+
+			if ($value['code'] and $value['comments_place']) {
+
+				if (!isset($banners_in_comments)) {
+
+					$banners_in_comments = array(
+						'top' => array(),
+						'cen' => array(),
+						'down' => array()
+					);
+				}
+
+				switch ($value['comments_place']) {
+					case 1:
+						$banners_in_comments['top'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						break;
+
+					case 2:
+						$banners_in_comments['cen'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						break;
+
+					case 3:
+						$banners_in_comments['down'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						break;
+
+					case 4:
+						$banners_in_comments['top'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						$banners_in_comments['down'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						break;
+
+					case 5:
+						$banners_in_comments['cen'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						$banners_in_comments['down'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						break;
+
+					case 6:
+						$banners_in_comments['cen'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						$banners_in_comments['top'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						break;
+
+					case 7:
+						$banners_in_comments['cen'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						$banners_in_comments['top'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						$banners_in_comments['down'][] = array("text" => $value['code'], "zakr" => $value['bstick']);
+						break;
+				}
+			}
+
+			if( $value['innews'] ) $banner_in_news[] = $value['banner_tag'];
+			
+			$ban[$value['banner_tag']][] = $value['code'];
+		
+		}
+	}
+}
+
+
+foreach ( $ban as $key => $value ) {
+	
+	if( ($r_key = count( $value )) > 1 ) {
+		
+		for($i = 0; $i < $r_key; $i ++) {
+			
+			if( $ban[$key][$i] == '' ) unset( $ban[$key][$i] );
+		
+		}
+	}
+
+	sort($ban[$key]);
+
+	if ( isset( $_SESSION['banners'][$key] ) AND count($ban[$key]) > 1 ){
+	
+		$_SESSION['banners'][$key] = intval( $_SESSION['banners'][$key] );
+
+		if( ($_SESSION['banners'][$key] < (count($ban[$key])-1)) OR ( $_SESSION['banners'][$key] == (count($ban[$key])-1) AND !$first_include) ) {
+
+			if($first_include) {
+				$r_key = $_SESSION['banners'][$key]+1;
+			} else {
+				$r_key = $_SESSION['banners'][$key];
+			}
+
+		} else $r_key = 0;
+
+	} else {
+
+		if( is_array($ban[$key]) AND count($ban[$key]) > 1 ) {
+			$r_key = array_rand( $ban[$key] );
+		} else $r_key = 0;
+
+	}
+
+	$_SESSION['banners'][$key] = $r_key;
+	$ban[$key] = isset($ban[$key][$r_key]) ? $ban[$key][$r_key] : '';
+
+}
+
+$banners = $ban;
+$ban = array ();
+unset( $ban );
+
+?>

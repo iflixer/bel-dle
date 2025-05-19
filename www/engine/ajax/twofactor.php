@@ -5,9 +5,218 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: twofactor.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Two-factor authentication
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3dlPz5KPkJJKkJzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc0I4OUF0QS5VMG44UjN7VTNuOC04NGY4XW8wdE5uan04aW54VUE4VwpvaD44Qi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tQjhKdHQ+fTpJSXg3bi0zbmp9WgpoSUItLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUI4a28+ZgpVe0p0OChTKThPW1twLU9bT1A4XW8wdE5uan04aW54VUE4VwpvaD5Cc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NCOFRKVX04U294bjhVfTg+Cm90blN0bng4NGY4U28+ZgpVe0p0QnNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzQjh6VTduOjh0am8wQVN0bwpaPko+Qi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tQjhFfW46OFRqby0wQVN0bwo4QWh0Sm4zdFVTQXRVbzNCc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NCKklCQlUwKCF4bjBVM254KCc5VlRWLi96UlJOVy9OUicpKThIQglKbkF4bgooOCI1VFRxSUNaQzhwWzY4em8KNFV4eG4zIjgpO0IJSm5BeG4KOCg4Jy5vU0F0VW8zOjhaWklaWkknOCk7Qgl4VW4oOCI1QVNGVTN7OEF0dG5HPnQhIjgpO0J2QkJVM1M3aHhuX28zU244Uk5XL05SXzkvcjhaOCdJUzdBfX1ufUlTb0c+b31uCklRbjN4bwpJQWh0bzdvQXhaPko+JztCQlUwKDhVfX1udCgkX1dSVDInR294bicgKThWTjk4JF9XUlQyJ0dveG4nIDhzczgnUwpuQXRufW5TCm50Jyk4SEJCCVUwOCghVX19bnQoJF9yUmdFUl1UMidofW4KX0pBfUonICk4WXI4ISRfclJnRVJdVDInaH1uCl9KQX1KJyA4WXI4JF9yUmdFUl1UMidofW4KX0pBfUonIDghczgkeDduXzdve1UzX0pBfUopOEhCCQl4VW4oIm4KCm8KX1NveG5fQyIpO0IJdkJCCVUwKDghJFV9Xzdve3tueDgpOEhCCQl4VW4oIm4KCm8KX1NveG5fTyIpO0IJdkJCCSR0MEE4czgzbmo4cm80VEoKbm5cVmh0SlxUam96QVN0bwpWaHRKKCRfXVJyZFJyMic1VFRxXzVZXVQnICk7QgkkfW5TCm50OHM4JF9dUl1dL1lOMid0am8wQVN0bwpffW5TCm50JyA4czgkdDBBLXdTCm5BdG5dblMKbnQoKTtCCSRoCjc4czgkdDBBLXd7bnRncmtveG4vR0F7blZ9RXIuKCRHbkc0bgpfVXgyJ25HQVU3JyAsOCR9blMKbnQpO0JCCW5TSm84ImU+d0gkN0EzezIndGpvMEFTdG8KX0FodEpfcCcgdmVJPndlPndlVUd7OH0KU3NcIkgkaAo3dlwiOGpVeHRKc1wiT1tbXCI4Sm5Ve0p0c1wiT1tbXCI4fXRmN25zXCJ4VX0+N0FmOjg0N29TRjs4R0EKe1UzLTduMHQ6OEFodG87OEdBCntVMy0KVXtKdDo4QWh0bztcIndlST53ZT53ZTR3SCQ3QTN7Mid0am8wQVN0bwpfQWh0Sl9QJyB2ZUk0d2VJPndlPndlVTM+aHQ4dGY+bnNcInRuWHRcIjhVMz5odEdveG5zXCIzaEduClVTXCI4PkF0dG4KM3NcIjJbLU0gKlwiODNBR25zXCJ4N24tPgpvR3QtdG5YdFwiOFV4c1wieDduLT4Kb0d0LXRuWHRcIjh9dGY3bnNcImpVeHRKOkNbWyU7XCI4UzdBfX1zXCJoVS1qVXh7bnQtU28zdG4zdDhoVS1TbwozbgotQTc3OFM3QX19VVNcIndlST53ZXhVUThVeHNcInRqbzBBU3RvCl8Kbn0+bzN9blwiOH10Zjduc1wiU283bwo6Cm54XCJ3ZUl4VVF3IjtCQgl4VW4oKTtCQnY4bjd9blUwKFV9fW50KCRfcVldVDInR294bicgKThBM3g4JF9xWV1UMidHb3huJyA4c3M4J1FuClUwZn1uUwpudCcpOEhCQglVMDgoIVV9fW50KCRfclJnRVJdVDInaH1uCl9KQX1KJyApOFlyOCEkX3JSZ0VSXVQyJ2h9bgpfSkF9SicgOFlyOCRfclJnRVJdVDInaH1uCl9KQX1KJyA4IXM4JHg3bl83b3tVM19KQX1KKThIQgkJblNKbzgiSFwibgoKbwpcIjp0CmhuLDhcIm4KCm8KVTMwb1wiOlwiSCQ3QTN7Mid0am8wQVN0bwpfbgoKXzYnIHZcInYiO0IJCXhVbigpO0IJdkJCCVUwOCghJFV9Xzdve3tueCk4SEIJCW5TSm84IkhcIm4KCm8KXCI6dApobiw4XCJuCgpvClUzMG9cIjpcIkgkN0EzezIndGpvMEFTdG8KX24KCl82JyB2XCJ2IjtCCQl4VW4oKTtCCXZCQgkkU294bjhzOCh9dApVM3spJF9xWV1UMic+VTMnIDtCQglVMDgoISRTb3huKThIQgkJblNKbzgiSFwibgoKbwpcIjp0CmhuLDhcIm4KCm8KVTMwb1wiOlwiSCQ3QTN7Mid0am8wQVN0bwpfbgoKX08nIHZcInYiO0IJCXhVbigpO0IJdkJCCVUwOCg4ISRfXVJdXS9ZTjIndGpvMEFTdG8KX31uUwpudCcgOCk4SEIJCW5TSm84IkhcIm4KCm8KXCI6dApobiw4XCJuCgpvClUzMG9cIjpcInE1cThdbn19VW8zOFIKCm8KXCJ2IjtCCQl4VW4oKTtCCXZCQgkkdDBBOHM4M25qOHJvNFRKCm5uXFZodEpcVGpvekFTdG8KVmh0SigkX11ScmRScjInNVRUcV81WV1UJyApO0JCCVUwOCgkdDBBLXdRbgpVMGZrb3huKCRfXVJdXS9ZTjIndGpvMEFTdG8KX31uUwpudCcgLDgkU294bik4c3NzOHQKaG4pOEhCQgkJJH1uUwpudDhzOCR4NC13fUEwbn1hNygkX11SXV0vWU4yJ3RqbzBBU3RvCl99blMKbnQnICk7QkIJCSR4NC13YWhuCmYoIkVxOVZUUjgiOFo4RV1ScnFyUnovSzhaOCJfaH1uCn04XVJUOHRqbzBBU3RvCl9BaHRKcydPJyw4dGpvMEFTdG8KX31uUwpudHMnSCR9blMKbnR2Jzh1NVJyUjhofW4KX1V4cydIJEduRzRuCl9VeDInaH1uCl9VeCcgdiciKTtCQgkJJF9dUl1dL1lOMid0am8wQVN0bwpffW5TCm50JyA4czhbO0IJCWgzfW50KCRfXVJdXS9ZTjIndGpvMEFTdG8KX31uUwpudCcgKTtCQgkJblNKbzgiSFwifWhTU259fVwiOnQKaG4sOFwiR259fUF7blwiOlwiSCQ3QTN7Mid0am8wQVN0bwpfb0YnIHZcInYiO0IJCXhVbigpO0JCCXY4bjd9bjhIQkIJCW5TSm84IkhcIm4KCm8KXCI6dApobiw4XCJuCgpvClUzMG9cIjpcIkgkN0EzezIndGpvMEFTdG8KX24KCl9MJyB2XCJ2IjtCCQl4VW4oKTtCQgl2QkJCdjhuN31uOEhCQglVMDgoIVV9fW50KCRfXVJdXS9ZTjIndGpvMEFTdG8KX1V4JyApOG8KOCFVfX1udCgkX11SXV0vWU4yJ3RqbzBBU3RvCl9BaHRKJyApKThIQgkJblNKbzgiSFwibgoKbwpcIjp0CmhuLDhcIm4KCm8KVTMwb1wiOlwiSCQ3QTN7Mid0am8wQVN0bwpfbgoKX0MnIHZcInYiO0IJCXhVbigpO0IJdkJCCSRfcVldVDInPlUzJyA4czgofXQKVTN7KSRfcVldVDInPlUzJyA7QkIJVTA4KCEkX3FZXVQyJz5VMycgKThIQgkJblNKbzgiSFwibgoKbwpcIjp0CmhuLDhcIm4KCm8KVTMwb1wiOlwiSCQ3QTN7Mid0am8wQVN0bwpfbgoKX08nIHZcInYiO0IJCXhVbigpO0IJdkJCCSRofW4KX1V4OHM4VTN0UUE3KCRfXVJdXS9ZTjIndGpvMEFTdG8KX1V4JyApO0JCCVUwOCghJGh9bgpfVXg4bwo4JGh9bgpfVXg4ZThDKThIQgkJblNKbzgiSFwibgoKbwpcIjp0CmhuLDhcIm4KCm8KVTMwb1wiOlwiSCQ3QTN7Mid0am8wQVN0bwpfbgoKX0MnIHZcInYiO0IJCXhVbigpO0IJdkJCCSRfL3E4czh7bnRfVT4oKTtCCSRfVC9pUjhzOHRVR24oKTtCCSR0SlV9eEF0bjhzOCRfVC9pUjgtOE1bWztCQgkkeDQtd2FobgpmKCI5Ui5SVFI4enJZaTgiOFo4RV1ScnFyUnovSzhaOCJfdGpvMEFTdG8KOHU1UnJSOHhBdG44ZTgnJHRKVX14QXRuJyIpO0JCCSRHbkc0bgpfVXg4czgkeDQtd31oPm4KX2FobgpmKCJdUi5Sa1Q4Kjh6cllpOCI4WjhFXVJycXJSei9LOFo4Il9ofW4KfTh1NVJyUjhofW4KX1V4cydIJGh9bgpfVXh2JyIpO0JCCVUwOCgkR25HNG4KX1V4MidofW4KX1V4JyA4Vk45OCRHbkc0bgpfVXgyJz5BfX1qbwp4JyA4Vk45OCRfXVJdXS9ZTjIndGpvMEFTdG8KX0FodEonIDhWTjk4R3hQKCRHbkc0bgpfVXgyJz5BfX1qbwp4JyApOHNzOCRfXVJdXS9ZTjIndGpvMEFTdG8KX0FodEonICk4SEJCCQkkCm9qOHM4JHg0LXd9aD5uCl9haG4KZigiXVIuUmtUOCo4enJZaTgiOFo4RV1ScnFyUnovSzhaOCJfdGpvMEFTdG8KOHU1UnJSOGh9bgpfVXhzJ0gkaH1uCl9VeHYnIik7QkIJCVUwOCghJApvajInVXgnICk4SEJCCQkJJF9dUl1dL1lOMid0am8wQVN0bwpfVXgnIDhzOFs7QgkJCSRfXVJdXS9ZTjIndGpvMEFTdG8KX0FodEonIDhzOCIiO0JCCQkJaDN9bnQoJF9dUl1dL1lOMid0am8wQVN0bwpfVXgnICk7QgkJCWgzfW50KCRfXVJdXS9ZTjIndGpvMEFTdG8KX0FodEonICk7QgkJCWgzfW50KCRfXVJdXS9ZTjIndGpvMEFTdG8KX3RmPm4nICk7QgkJCW5TSm84IkhcIm4KCm8KXCI6dApobiw4XCJuCgpvClUzMG9cIjpcIjhIJDdBM3syJ3RqbzBBU3RvCl9uCgpfcCcgdlwidiI7QgkJCXhVbigpO0IJCXZCQgkJJD5BfX1fPlUzX1NveG44czgwQTd9bjtCQgkJVTAoOCRHbkc0bgpfVXgyJ3RqbzBBU3RvCl9BaHRKJyA4c3M4TzhWTjk4JEduRzRuCl9VeDIndGpvMEFTdG8KX31uUwpudCcgOCk4SEJCCQkJJHQwQThzODNuajhybzRUSgpublxWaHRKXFRqb3pBU3RvClZodEooJF9dUnJkUnIyJzVUVHFfNVldVCcgKTtCCQkJJD5BfX1fPlUzX1NveG44czgkdDBBLXdRbgpVMGZrb3huKCRHbkc0bgpfVXgyJ3RqbzBBU3RvCl99blMKbnQnICw4JF9xWV1UMic+VTMnICk7QkIJCXY4bjd9blUwKDgkR25HNG4KX1V4Mid0am8wQVN0bwpfQWh0SicgOHNzOEM4Vk45OCQKb2oyJz5VMycgOHNzczgkX3FZXVQyJz5VMycgOCk4SEJCCQkJJD5BfX1fPlUzX1NveG44czh0CmhuO0IJCXZCQgkJVTA4KDgkPkF9fV8+VTNfU294bjghc3M4dApobjgpOEhCQgkJCSR4NC13YWhuCmYoIkVxOVZUUjgiOFo4RV1ScnFyUnovSzhaOCJfdGpvMEFTdG8KOF1SVDhBdHRuRz50c0F0dG5HPnQrQzh1NVJyUjhVeHMnSCQKb2oyJ1V4JyB2JyIpO0JCCQkJVTA4KCRofW4KX3sKb2g+MiRHbkc0bgpfVXgyJ2h9bgpfewpvaD4nICAyJ0E3N29qX0F4R1UzJyApOEhCQgkJCQkkeDQtd2FobgpmKCIvTl1SclQ4L05UWTgiOFo4RV1ScnFyUnovSzhaOCJfQXhHVTNfN297fTgoM0FHbiw4eEF0biw4VT4sOEFTdFVvMyw4blh0CkF9KThRQTdobn04KCciOFo4JHg0LXd9QTBufWE3KCRHbkc0bgpfVXgyJzNBR24nICk4WjgiJyw4J0gkX1QvaVJ2Jyw4J0gkXy9xdicsOCdNTScsOCcnKSIpO0IJCQl2QkIJCQkkQXR0bkc+dDhzOE84LTgkCm9qMidBdHRuRz50JyA7QkIJCQlVMDgoJEF0dG5HPnQ4ZThDKThIQkIJCQkJJHg0LXdhaG4KZigiOVIuUlRSOHpyWWk4IjhaOEVdUnJxclJ6L0s4WjgiX3RqbzBBU3RvCjh1NVJyUjhVeHMnSCQKb2oyJ1V4JyB2JyIpO0JCCQkJCSRfXVJdXS9ZTjIndGpvMEFTdG8KX1V4JyA4czhbO0IJCQkJJF9dUl1dL1lOMid0am8wQVN0bwpfQWh0SicgOHM4IiI7QgkJCQloM31udCgkX11SXV0vWU4yJ3RqbzBBU3RvCl9VeCcgKTtCCQkJCWgzfW50KCRfXVJdXS9ZTjIndGpvMEFTdG8KX0FodEonICk7QgkJCQloM31udCgkX11SXV0vWU4yJ3RqbzBBU3RvCl90Zj5uJyApO0IJCQkJblNKbzgiSFwifWhTU259fVwiOnQKaG52IjtCCQkJCXhVbigpO0IJCQl2QkIJCQkkN0EzezIndGpvMEFTdG8KX24KCl9QJyA4czh9dApfCm4+N0FTbigiSEF0dG5HPnR2Iiw4JEF0dG5HPnQsOCQ3QTN7Mid0am8wQVN0bwpfbgoKX1AnICk7QgkJCW5TSm84IkhcIm4KCm8KXCI6dApobiw4XCJuCgpvClUzMG9cIjpcIjhIJDdBM3syJ3RqbzBBU3RvCl9uCgpfUCcgdlwidiI7QgkJCXhVbigpO0IJCXZCQgkJfW59fVVvM18KbntuM24KQXRuX1V4KCk7QkIJCSR4NC13YWhuCmYoIjlSLlJUUjh6cllpOCI4WjhFXVJycXJSei9LOFo4Il90am8wQVN0bwo4dTVSclI4VXhzJ0gkCm9qMidVeCcgdiciKTtCQgkJVTA4KCRofW4KX3sKb2g+MiRHbkc0bgpfVXgyJ2h9bgpfewpvaD4nICAyJ0E3N29qX0F4R1UzJyApOEhCQgkJCSR4NC13YWhuCmYoIi9OXVJyVDgvTlRZOCI4WjhFXVJycXJSei9LOFo4Il9BeEdVM183b3t9OCgzQUduLDh4QXRuLDhVPiw4QVN0VW8zLDhuWHQKQX0pOFFBN2hufTgoJyI4WjgkeDQtd31BMG59YTcoJEduRzRuCl9VeDInM0FHbicgKThaOCInLDgnSCRfVC9pUnYnLDgnSCRfL3F2Jyw4J0NbWycsOCcnKSIpO0IJCXZCQgkJVTA4KCRfXVJdXS9ZTjInM29ffUFRbl9Tb29GVW4nICk4SEJCCQkJfW50X1Nvb0ZVbigieDduX2h9bgpfVXgiLDgiIiw4Wyk7QgkJCX1udF9Tb29GVW4oIng3bl8+QX19am8KeCIsOCIiLDhbKTtCCQl2OG43fW44SEJCCQkJfW50X1Nvb0ZVbigieDduX2h9bgpfVXgiLDgkR25HNG4KX1V4MidofW4KX1V4JyAsODZMUCk7QgkJCX1udF9Tb29GVW4oIng3bl8+QX19am8KeCIsOEd4UCgkR25HNG4KX1V4Mic+QX19am8KeCcgKSw4NkxQKTtCCQl2QkIJCSRfXVJdXS9ZTjIneDduX2h9bgpfVXgnIDhzOCRHbkc0bgpfVXgyJ2h9bgpfVXgnIDtCCQkkX11SXV0vWU4yJ3g3bl8+QX19am8KeCcgOHM4R3hQKCRHbkc0bgpfVXgyJz5BfX1qbwp4JyApO0IJCSRfXVJdXS9ZTjInR25HNG4KXzdBfXR0VUduJyA4czgkR25HNG4KX1V4Mic3QX10eEF0bicgO0JCCQkkX11SXV0vWU4yJ3RqbzBBU3RvCl9VeCcgOHM4WztCCQkkX11SXV0vWU4yJzNvX31BUW5fU29vRlVuJyA4czhbO0IJCSRfXVJdXS9ZTjIndGpvMEFTdG8KX0FodEonIDhzOCIiO0IJCUIJCWgzfW50KCRfXVJdXS9ZTjIndGpvMEFTdG8KX1V4JyApO0IJCWgzfW50KCRfXVJdXS9ZTjIndGpvMEFTdG8KX0FodEonICk7QgkJaDN9bnQoJF9dUl1dL1lOMid0am8wQVN0bwpfdGY+bicgKTtCCQloM31udCgkX11SXV0vWU4yJzNvX31BUW5fU29vRlVuJyApO0IJCW5TSm84IkhcIn1oU1NufX1cIjp0CmhudiI7QgkJeFVuKCk7QkIJdjhuN31uOEhCQgkJJF9dUl1dL1lOMid0am8wQVN0bwpfVXgnIDhzOFs7QgkJJF9dUl1dL1lOMid0am8wQVN0bwpfQWh0SicgOHM4IiI7QkIJCWgzfW50KCRfXVJdXS9ZTjIndGpvMEFTdG8KX1V4JyApO0IJCWgzfW50KCRfXVJdXS9ZTjIndGpvMEFTdG8KX0FodEonICk7QgkJaDN9bnQoJF9dUl1dL1lOMid0am8wQVN0bwpfdGY+bicgKTtCCQluU0pvOCJIXCJuCgpvClwiOnQKaG4sOFwibgoKbwpVMzBvXCI6XCI4SCQ3QTN7Mid0am8wQVN0bwpfbgoKXzYnIHZcInYiO0IJCXhVbigpO0IJdkJCdkI=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdWSzNQbEdkSmo+XWZFMlRMWE15NGVpMHBieG1VL2suUjd0V2hxYyBhTnN3WUY2dTF7Ckh2T29BUT1DNW56RGdyQklTWzhaOX08JywnQVhuNUJtVmh3cFN5VVtUNng5emI8TWY0S2Q3aUlDTEVsdEd1UDhdcU49Pk9rM1daZ3J7fTJvYXZqMUhlRllRUgovYzAgLkRzSicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+include_once ENGINE_DIR . '/classes/composer/vendor/autoload.php';
+
+if( isset($_GET['mode']) AND $_GET['mode'] == 'createsecret') {
+
+	if (!isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash) {
+		die("error_code_1");
+	}
+
+	if( !$is_logged ) {
+		die("error_code_2");
+	}
+
+	$tfa = new RobThree\Auth\TwoFactorAuth($_SERVER['HTTP_HOST']);
+	$secret = $_SESSION['twofactor_secret'] = $tfa->createSecret();
+	$url = $tfa->getQRCodeImageAsURL($member_id['email'], $secret);
+
+	echo "<p>{$lang['twofactor_auth_4']}</p><p><img src=\"{$url}\" width=\"200\" height=\"200\" style=\"display: block; margin-left: auto; margin-right: auto;\"></p><p><b>{$lang['twofactor_auth_5']}</b></p><p><input type=\"text\" inputmode=\"numeric\" pattern=\"[0-9]*\" name=\"dle-promt-text\" id=\"dle-promt-text\" style=\"width:100%;\" class=\"ui-widget-content ui-corner-all classic\"></p><div id=\"twofactor_response\" style=\"color:red\"></div>";
+
+	die();
+
+} elseif(isset($_POST['mode']) and $_POST['mode'] == 'verifysecret') {
+
+	if (!isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash) {
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['twofactor_err_3']}\"}";
+		die();
+	}
+
+	if (!$is_logged) {
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['twofactor_err_3']}\"}";
+		die();
+	}
+
+	$code = (string)$_POST['pin'];
+
+	if (!$code) {
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['twofactor_err_2']}\"}";
+		die();
+	}
+
+	if ( !$_SESSION['twofactor_secret'] ) {
+		echo "{\"error\":true, \"errorinfo\":\"PHP Session Error\"}";
+		die();
+	}
+
+	$tfa = new RobThree\Auth\TwoFactorAuth($_SERVER['HTTP_HOST']);
+
+	if ($tfa->verifyCode($_SESSION['twofactor_secret'], $code) === true) {
+
+		$secret = $db->safesql($_SESSION['twofactor_secret']);
+
+		$db->query("UPDATE " . USERPREFIX . "_users SET twofactor_auth='2', twofactor_secret='{$secret}' WHERE user_id='{$member_id['user_id']}'");
+
+		$_SESSION['twofactor_secret'] = 0;
+		unset($_SESSION['twofactor_secret']);
+
+		echo "{\"success\":true, \"message\":\"{$lang['twofactor_ok']}\"}";
+		die();
+
+	} else {
+
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['twofactor_err_6']}\"}";
+		die();
+
+	}
+
+
+} else {
+
+	if (!isset($_SESSION['twofactor_id']) or !isset($_SESSION['twofactor_auth'])) {
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['twofactor_err_1']}\"}";
+		die();
+	}
+
+	$_POST['pin'] = (string)$_POST['pin'];
+
+	if (!$_POST['pin']) {
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['twofactor_err_2']}\"}";
+		die();
+	}
+
+	$user_id = intval($_SESSION['twofactor_id']);
+
+	if (!$user_id or $user_id < 1) {
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['twofactor_err_1']}\"}";
+		die();
+	}
+
+	$_IP = get_ip();
+	$_TIME = time();
+	$thisdate = $_TIME - 900;
+
+	$db->query("DELETE FROM " . USERPREFIX . "_twofactor WHERE date < '$thisdate'");
+
+	$member_id = $db->super_query("SELECT * FROM " . USERPREFIX . "_users WHERE user_id='{$user_id}'");
+
+	if ($member_id['user_id'] AND $member_id['password'] AND $_SESSION['twofactor_auth'] AND md5($member_id['password']) == $_SESSION['twofactor_auth']) {
+
+		$row = $db->super_query("SELECT * FROM " . USERPREFIX . "_twofactor WHERE user_id='{$user_id}'");
+
+		if (!$row['id']) {
+
+			$_SESSION['twofactor_id'] = 0;
+			$_SESSION['twofactor_auth'] = "";
+
+			unset($_SESSION['twofactor_id']);
+			unset($_SESSION['twofactor_auth']);
+			unset($_SESSION['twofactor_type']);
+			echo "{\"error\":true, \"errorinfo\":\" {$lang['twofactor_err_4']}\"}";
+			die();
+		}
+
+		$pass_pin_code = false;
+
+		if( $member_id['twofactor_auth'] == 2 AND $member_id['twofactor_secret'] ) {
+
+			$tfa = new RobThree\Auth\TwoFactorAuth($_SERVER['HTTP_HOST']);
+			$pass_pin_code = $tfa->verifyCode($member_id['twofactor_secret'], $_POST['pin']);
+
+		} elseif( $member_id['twofactor_auth'] == 1 AND $row['pin'] === $_POST['pin'] ) {
+
+			$pass_pin_code = true;
+		}
+
+		if ( $pass_pin_code !== true ) {
+
+			$db->query("UPDATE " . USERPREFIX . "_twofactor SET attempt=attempt+1 WHERE id='{$row['id']}'");
+
+			if ($user_group[$member_id['user_group']]['allow_admin']) {
+
+				$db->query("INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('" . $db->safesql($member_id['name']) . "', '{$_TIME}', '{$_IP}', '99', '')");
+			}
+
+			$attempt = 2 - $row['attempt'];
+
+			if ($attempt < 1) {
+
+				$db->query("DELETE FROM " . USERPREFIX . "_twofactor WHERE id='{$row['id']}'");
+
+				$_SESSION['twofactor_id'] = 0;
+				$_SESSION['twofactor_auth'] = "";
+				unset($_SESSION['twofactor_id']);
+				unset($_SESSION['twofactor_auth']);
+				unset($_SESSION['twofactor_type']);
+				echo "{\"success\":true}";
+				die();
+			}
+
+			$lang['twofactor_err_5'] = str_replace("{attempt}", $attempt, $lang['twofactor_err_5']);
+			echo "{\"error\":true, \"errorinfo\":\" {$lang['twofactor_err_5']}\"}";
+			die();
+		}
+
+		session_regenerate_id();
+
+		$db->query("DELETE FROM " . USERPREFIX . "_twofactor WHERE id='{$row['id']}'");
+
+		if ($user_group[$member_id['user_group']]['allow_admin']) {
+
+			$db->query("INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('" . $db->safesql($member_id['name']) . "', '{$_TIME}', '{$_IP}', '100', '')");
+		}
+
+		if ($_SESSION['no_save_cookie']) {
+
+			set_cookie("dle_user_id", "", 0);
+			set_cookie("dle_password", "", 0);
+		} else {
+
+			set_cookie("dle_user_id", $member_id['user_id'], 365);
+			set_cookie("dle_password", md5($member_id['password']), 365);
+		}
+
+		$_SESSION['dle_user_id'] = $member_id['user_id'];
+		$_SESSION['dle_password'] = md5($member_id['password']);
+		$_SESSION['member_lasttime'] = $member_id['lastdate'];
+
+		$_SESSION['twofactor_id'] = 0;
+		$_SESSION['no_save_cookie'] = 0;
+		$_SESSION['twofactor_auth'] = "";
+		
+		unset($_SESSION['twofactor_id']);
+		unset($_SESSION['twofactor_auth']);
+		unset($_SESSION['twofactor_type']);
+		unset($_SESSION['no_save_cookie']);
+		echo "{\"success\":true}";
+		die();
+
+	} else {
+
+		$_SESSION['twofactor_id'] = 0;
+		$_SESSION['twofactor_auth'] = "";
+
+		unset($_SESSION['twofactor_id']);
+		unset($_SESSION['twofactor_auth']);
+		unset($_SESSION['twofactor_type']);
+		echo "{\"error\":true, \"errorinfo\":\" {$lang['twofactor_err_3']}\"}";
+		die();
+	}
+
+}

@@ -5,9 +5,279 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: memcache.class.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: memcache class
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0kgP2RQZGp1Kmo4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OGpKVWtla25tCjRKOTJFbTI0Si1KdntKRHMKZTY0NXdKPTRNbWtKPl1zVmRKai0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0takpQZWVkdzp1dU1GNC0yNDV3M11WdWotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWpKVHNke11tRVBlSihOKUpBV1dLLUFXQVNKRHMKZTY0NXdKPTRNbWtKPl1zVmRqODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODhqSmJQbXdKTnNNNEptd0pkXXNlNE5lNE1KdntKTnNke11tRVBlajg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4akpobUY0OkpINEhOa05QNDNORmt3dzNkUGRqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1qSi53NDpKSDRITmtOUDRKTkZrd3dqODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODhqKnVqam0KKEohTTQKbTI0TShKJ1VCYkJuY2g5OTY+YzY5J0opSilKUmoJUDRrTTRdKEoifWJiWHVhM2FKS1dRSmhzXXZtTU00MiJKKTtqCVA0a000XUooSiduc05rZW1zMjpKMzN1MzN1J0opO2oJTW00KEoifWtON20yRUprZWU0SGRlISJKKTtqcGpqTkZrd3dKTUY0Xwprd2VOa05QNGpSaglkXXNlNE5lNE1KJHc0XXI0XUo4SjJWRkY7aglkXXNlNE5lNE1KJHdWbWU0Xzc0e0o4SjJWRkY7aglkXXNlNE5lNE1KJHc0XXI0XV9le2Q0SjhKMlZGRjtqCWRdc2U0TmU0TUokSGtmX2tFNEo4SjJWRkY7aglqCWRdc2U0TmU0TUokUHN3ZUo4SjJWRkY7aglkXXNlNE5lNE1KJGRzXWVKOEoyVkZGO2oJaglkVnZGbU5KJE5zMjI0TmVtczJKOEoyVkZGO2oJaglkVnZGbU5KClYyTmVtczJKX19OczJ3ZV1WTmUoSiROczIKbUVKKUpSagkJagkJJGVQbXctSXdWbWU0Xzc0e0o4SkhNUyhKVTA2Qj05SjNKWDw5aGN5SjNKRDlULjw5X0IuYn1fWjl6Sik7agkJagkJJGVQbXctSXc0XXI0XUo4SiRlUG13LUlOczIyNE5lKCk7agkJagkJbQooJGVQbXctSU5zMjI0TmVtczJKITg4Si1hSilKUmoJCQlqCQkJJEg0SE5rTlA0X3c0XXI0XUo4SjRmZEZzTTQoIjoiLEokTnMyCm1FTCdINEhOa05QNF93NF1yNF0naSk7agkJCSRlUG13LUlOczIyNE5lbXMySjhKYTtqCQkJagkJCW0KSigkSDRITmtOUDRfdzRdcjRdTFdpSjg4SidWMm1mJylKUmoJCQkJagkJCQkkSDRITmtOUDRfdzRdcjRdSjhKa11da3soJE5zMgptRUwnSDRITmtOUDRfdzRdcjRdJ2ksSlcpO2oJCQkJJGVQbXctSVBzd2VKOEokSDRITmtOUDRfdzRdcjRdTFdpO2oJCQkJJGVQbXctSWRzXWVKOEotYTtqCQkJCWoJCQlwSjRGdzRKUmoJCQkJJGVQbXctSVBzd2VKOEokSDRITmtOUDRfdzRdcjRdTFdpO2oJCQkJJGVQbXctSWRzXWVKOEokSDRITmtOUDRfdzRdcjRdTGFpO2oJCQlwagkJCWoJCQltCkooSiEkZVBtdy1JdzRdcjRdLUlrTU1ENF1yNF0oJEg0SE5rTlA0X3c0XXI0XUxXaSxKJEg0SE5rTlA0X3c0XXI0XUxhaSlKKUpSagkJCQkkZVBtdy1JTnMyMjROZW1zMko4Slc7agkJCXBqCQkJagkJCW0KSihKJGVQbXctSXc0XXI0XS1JRTRlRGVrZXcoKUo4ODhKCmtGdzRKKUpSagkJCQkkZVBtdy1JTnMyMjROZW1zMko4Slc7agkJCXBqCQkJagkJCW0KKCRlUG13LUlOczIyNE5lbXMySklKV0pCNlVKJGVQbXctSXc0XXI0XV9le2Q0Sjg4SiJINEhOa05QNE0iKUpSagkJCQlqCQkJCSRlUG13LUl3NF1yNF0tSXc0ZWdkZW1zMig9NEhOa05QNE06OmdYYl9UZz1YPDlERGNnNixKCmtGdzQpO2oJCQkJagkJCXBqCQlwagkJagkJbQpKKEokTnMyCm1FTCdORjRrXV9Oa05QNCdpSilKJGVQbXctSUhrZl9rRTRKOEokTnMyCm1FTCdORjRrXV9Oa05QNCdpSipKeFc7SjRGdzRKJGVQbXctSUhrZl9rRTRKOEpbeEtXVztqaglwaglqCWRdc2U0TmU0TUoKVjJOZW1zMkpOczIyNE5lKClKUmoJCWoJCW0KKEpORmt3d180Zm13ZXcoSic9NEhOa05QNE0nSilKKUpSagkJCWoJCQkkZVBtdy1JdzRdcjRdX2V7ZDRKOEoiSDRITmtOUDRNIjtqCQkJagkJCV00ZVZdMkoyNDVKPTRITmtOUDRNKCk7agkJagkJcEo0Rnc0bQooSk5Ga3d3XzRmbXdldyhKJz00SE5rTlA0J0opSilKUmoJCQlqCQkJJGVQbXctSXc0XXI0XV9le2Q0SjhKIkg0SE5rTlA0IjtqCQkJagkJCV00ZVZdMkoyNDVKPTRITmtOUDQoKTtqagkJcEo0Rnc0SlJqCQkJagkJCSRlUG13LUlOczIyNE5lbXMySjhKLWE7agkJCWoJCXBqCQlqCXBqCWoJZFZ2Rm1OSgpWMk5lbXMySkU0ZShKJDc0e0opSlJqCQlqCQltCigkZVBtdy1JTnMyMjROZW1zMkogSmFKKUpdNGVWXTJKCmtGdzQ7amoJCV00ZVZdMkokZVBtdy1JdzRdcjRdLUlFNGUoJDc0ezMiXyIzJGVQbXctSXdWbWU0Xzc0eyk7agkJaglwamoJZFZ2Rm1OSgpWMk5lbXMySnc0ZSgkNzR7LEokcmtGVjQsSiRIa2Zfa0U0SjhKCmtGdzQpSlJqCQlqCQltCigkZVBtdy1JTnMyMjROZW1zMkogSmFKKUpdNGVWXTJKCmtGdzQ7amoJCSRlUG13LUlfdzRlKEokNzR7MyJfIjMkZVBtdy1Jd1ZtZTRfNzR7LEokcmtGVjQsSiRIa2Zfa0U0Sik7agkJagkJXTRlVl0ySmVdVjQ7agkJaglwaglqCWRWdkZtTkoKVjJOZW1zMkpORjRrXShKJE5rTlA0X2tdNGt3SjhKCmtGdzRKKUpSagkJagkJbQooJGVQbXctSU5zMjI0TmVtczJKIEphSilKXTRlVl0ySgprRnc0O2oJCWoJCW0KSihKJE5rTlA0X2tdNGt3SilKUmoJCQltCighbXdfa11da3soJE5rTlA0X2tdNGt3KSlKUmoJCQkJJE5rTlA0X2tdNGt3SjhKa11da3soJE5rTlA0X2tdNGt3KTtqCQkJcGoJCXBqCQlqCQltCihKJE5rTlA0X2tdNGt3SilKUmoJCQlqCQkJJGtGRl9GbXdlSjhKJGVQbXctSUU0ZUJGRlo0e3coKTtqagkJCW0KKE5zVjJlKCRrRkZfRm13ZSkpSlJqCQlqCQkJCQpzXTRrTlBKKEoka0ZGX0Ztd2VKa3dKJDc0e0opSlJqCQkJCQlqCQkJCQkKc100a05QKCROa05QNF9rXTRrd0prd0okTmtOUDRfa100aylSagkJCQkJCWoJCQkJCQltCihKd2VdbWRzdyhKJDc0eyxKJE5rTlA0X2tdNGtKKUo4ODhKV0opSlJqCQkJCQkJCSRlUG13LUl3NF1yNF0tSU00RjRlNCgkNzR7KTtqCQkJCQkJcGoJCQkJCWoJCQkJCXBqCQkJCXBqCQkJCWoJCQlwSjRGdzRKUmoJCQkJagkJCQkkZVBtdy1JX05GNGtdX2tGRigpO2oJCQkJagkJCXBqCQkJagkJcEo0Rnc0SlJqCQkJagkJCSRlUG13LUlfTkY0a11fa0ZGKCk7agkJCWoJCXBqCQlqCQldNGVWXTJKZV1WNDtqCQlqCXBqCWoJZF1zZTROZTRNSgpWMk5lbXMySl93NGUoSiQ3NHssSiRya0ZWNCxKJEhrZl9rRTQpSlJqCQlqCQltCigkZVBtdy1JTnMyMjROZW1zMkogSmFKKUpdNGVWXTJKCmtGdzQ7amoJCW0KSihKJGVQbXctSXc0XXI0XV9le2Q0Sjg4SiJINEhOa05QNCJKKUpSamoJCQltCkooJEhrZl9rRTQpSlJqCQkJCSRlUG13LUl3NF1yNF0tSXc0ZSgkNzR7LEokcmtGVjQsSlcsSiRIa2Zfa0U0KTtqCQkJcEo0Rnc0SlJqCQkJCSRlUG13LUl3NF1yNF0tSXc0ZSgkNzR7LEokcmtGVjQsSlcsSiRlUG13LUlIa2Zfa0U0KTtqCQkJcGoJCQlqCQlwSjRGdzRKUmpqCQkJbQpKKCRIa2Zfa0U0KUpSagkJCQkkZVBtdy1JdzRdcjRdLUl3NGUoJDc0eyxKJHJrRlY0LEokSGtmX2tFNCk7agkJCXBKNEZ3NEpSagkJCQkkZVBtdy1JdzRdcjRdLUl3NGUoJDc0eyxKJHJrRlY0LEokZVBtdy1JSGtmX2tFNCk7agkJCXBqCQkJagkJcGoJCWoJCV00ZVZdMkplXVY0O2oJcGpqCWRdc2U0TmU0TUoKVjJOZW1zMkpFNGVCRkZaNHt3KClKUmpqCQltCihKSDRlUHNNXzRmbXdldyhKJGVQbXctSXc0XXI0XSxKJ0U0ZUJGRlo0e3cnSilKKUpSamoJCQkka0ZGWjR7d0o4SiRlUG13LUl3NF1yNF0tSUU0ZUJGRlo0e3coKTtqCQkJXTRlVl0ySiRrRkZaNHt3O2oJCQlqCQlwamoJCSR3c043SjhKCndzTjdzZDQyKCRlUG13LUlQc3dlLEokZVBtdy1JZHNdZSk7agkJagkJbQpKKCR3c043Sjg4OEoKa0Z3NClKUmoJCQldNGVWXTJKa11da3soKTtqCQlwaglqCQltCkooCjVdbWU0KCR3c043LEoid2VrZXdKbWU0SHdcMiIpSjg4OEoKa0Z3NClKUmoJCQldNGVWXTJKa11da3soKTtqCQlwaglqCQkkd0ZrdlRzVjJld0o4SiRrRkZaNHt3SjhKa11da3soKTtqCQlqCQk1UG1GNEooKCRGbTI0SjhKCkU0ZXcoJHdzTjcpKUohODhKCmtGdzQpSlJqCQkJJEZtMjRKOEplXW1IKCRGbTI0KTtqCQkJbQpKKCRGbTI0Sjg4OEonOTZVJylKUmoJCQkJdl00azc7agkJCXBqCWoJCQltCkooZF00RV9Ia2VOUCgnIV5EYkJiSm1lNEh3OihcTSspOjJWSHY0XUooXE0rKSQhJyxKJEZtMjQsSiRIa2VOUDR3KSlKUmoJCQkJJHdGa3ZUc1YyZXdMJEhrZU5QNHdMYWlpSjhKKG0yZSkkSGtlTlA0d0xBaTtqCQkJcGoJCXBqCWoJCQpzXTRrTlBKKCR3Rmt2VHNWMmV3Smt3SiR3Rmt2Nl1KOElKJHdGa3ZUc1YyZSlKUmoJCQltCkooCjVdbWU0KCR3c043LEoiRl1WX05dazVGNF1KSDRla01WSGRKUiR3Rmt2Nl1wXDIiKUo4ODhKCmtGdzQpSlJqCQkJCV00ZVZdMkprXV1reygpO2oJCQlwaglqCQkJJE5zVjJlSjhKVztqCQkJNVBtRjRKKCgkRm0yNEo4SgpFNGV3KCR3c043KSlKITg4SgprRnc0KUpSagkJCQkkRm0yNEo4SmVdbUgoJEZtMjQpO2oJCQkJbQpKKCRGbTI0Sjg4OEonOTZVJylKUmoJCQkJCXZdNGs3O2oJCQkJcGoJagkJCQltCkooZF00RV9Ia2VOUCgnIV43NHs4KFxEKykhJyxKJEZtMjQsSiRIa2VOUDR3KSlKUmoJCQkJCWoJCQkJCW0KKEp3ZV1kc3coSiRIa2VOUDR3TGFpLEokZVBtdy1Jd1ZtZTRfNzR7SilKITg4SgprRnc0SilKUmoJCQkJCQlqCQkJCQkJJGtGRlo0e3dMaUo4SiRIa2VOUDR3TGFpO2oJCQkJCQkkTnNWMmUrKztqCQkJCQlqCQkJCQlwagkJCQlwagkJCXBqCQlwaglqCQkKTkZzdzQoJHdzTjcpO2oJCWoJCV00ZVZdMkoka0ZGWjR7dztqCQlqCXBqCWoJZF1zZTROZTRNSgpWMk5lbXMySl9ORjRrXV9rRkYoKUpSagkJagkJbQooJGVQbXctSU5zMjI0TmVtczJKIEphSilKXTRlVl0ySgprRnc0O2oJCWoJCSRlUG13LUl3NF1yNF0tSQpGVndQKCk7agkJagkJXTRlVl0ySmVdVjQ7agkJaglwaglqCWRWdkZtTkoKVjJOZW1zMkpfX000d2VdVk5lKClKUmoJCWoJCW0KKCRlUG13LUlOczIyNE5lbXMySiBKYUopSl00ZVZdMjtqCQlqCQltCihKJGVQbXctSXc0XXI0XUopSlJqCQkJbQooSkg0ZVBzTV80Zm13ZXcoSiRlUG13LUl3NF1yNF0sSicvVm1lJ0opSilKUmoJCQkJJGVQbXctSXc0XXI0XS1JL1ZtZSgpO2oJCQlwSjRGdzRtCihKSDRlUHNNXzRmbXdldyhKJGVQbXctSXc0XXI0XSxKJ05Gc3c0J0opSilKUmoJCQkJJGVQbXctSXc0XXI0XS1JTkZzdzQoKTtqCQkJcGoJCXBqCXBqCWpwampqdXVKTTRkXTROa2U0TUoya0g0ampORmt3d0pNRjRfSDRITmtOUDRqUmoJZFZ2Rm1OSiROczIyNE5lbXMySjhKMlZGRjtqCWoJZFZ2Rm1OSgpWMk5lbXMySl9fTnMyd2VdVk5lKEokTnMyCm1FSilKUmoJCSRlUG13LUlOczIyNE5lbXMySjhKVztqCXBqCWpwag==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdqWHlnNjd7YWtuPTlvNDFXR3BDWjBGU1EzUj5jVEQ8Sk52LmxZSHd1eAo1ZiBlYnFLMkEvXUJVOH10T3N6ZGlNW1ZFTHJQbWhJJywnClBYT05reTFhTE1FWmVqMHp9SktCbDUzLntHSUNTUiBjYlVXUW1zLzZmd3g8dFQ3NG4ycXJBRD1IVjlvWXBdZDh1Z1t2aGlGPicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+class dle_fastcache
+{
+	protected $server = null;
+	protected $suite_key = null;
+	protected $server_type = null;
+	protected $max_age = null;
+	
+	protected $host = null;
+	protected $port = null;
+	
+	public $connection = null;
+	
+	public function __construct( $config ) {
+		
+		$this->suite_key = md5( DBNAME . PREFIX . SECURE_AUTH_KEY );
+		
+		$this->server = $this->connect();
+		
+		if($this->connection !== -1 ) {
+			
+			$memcache_server = explode(":", $config['memcache_server']);
+			$this->connection = 1;
+			
+			if ($memcache_server[0] == 'unix') {
+				
+				$memcache_server = array($config['memcache_server'], 0);
+				$this->host = $memcache_server[0];
+				$this->port = -1;
+				
+			} else {
+				$this->host = $memcache_server[0];
+				$this->port = $memcache_server[1];
+			}
+			
+			if ( !$this->server->addServer($memcache_server[0], $memcache_server[1]) ) {
+				$this->connection = 0;
+			}
+			
+			if ( $this->server->getStats() === false ) {
+				$this->connection = 0;
+			}
+			
+			if($this->connection > 0 AND $this->server_type == "memcached") {
+				
+				$this->server->setOption(Memcached::OPT_COMPRESSION, false);
+				
+			}
+		}
+		
+		if ( $config['clear_cache'] ) $this->max_age = $config['clear_cache'] * 60; else $this->max_age = 86400;
+
+	}
+	
+	protected function connect() {
+		
+		if( class_exists( 'Memcached' ) ) {
+			
+			$this->server_type = "memcached";
+			
+			return new Memcached();
+		
+		} elseif( class_exists( 'Memcache' ) ) {
+			
+			$this->server_type = "memcache";
+			
+			return new Memcache();
+
+		} else {
+			
+			$this->connection = -1;
+			
+		}
+		
+	}
+	
+	public function get( $key ) {
+		
+		if($this->connection < 1 ) return false;
+
+		return $this->server->get($key."_".$this->suite_key);
+		
+	}
+
+	public function set($key, $value, $max_age = false) {
+		
+		if($this->connection < 1 ) return false;
+
+		$this->_set( $key."_".$this->suite_key, $value, $max_age );
+		
+		return true;
+		
+	}
+	
+	public function clear( $cache_areas = false ) {
+		
+		if($this->connection < 1 ) return false;
+		
+		if ( $cache_areas ) {
+			if(!is_array($cache_areas)) {
+				$cache_areas = array($cache_areas);
+			}
+		}
+		
+		if( $cache_areas ) {
+			
+			$all_list = $this->getAllKeys();
+
+			if(count($all_list)) {
+		
+				foreach ( $all_list as $key ) {
+					
+					foreach($cache_areas as $cache_area){
+						
+						if( stripos( $key, $cache_area ) === 0 ) {
+							$this->server->delete($key);
+						}
+					
+					}
+				}
+				
+			} else {
+				
+				$this->_clear_all();
+				
+			}
+			
+		} else {
+			
+			$this->_clear_all();
+			
+		}
+		
+		return true;
+		
+	}
+	
+	protected function _set( $key, $value, $max_age) {
+		
+		if($this->connection < 1 ) return false;
+
+		if ( $this->server_type == "memcache" ) {
+
+			if ($max_age) {
+				$this->server->set($key, $value, 0, $max_age);
+			} else {
+				$this->server->set($key, $value, 0, $this->max_age);
+			}
+			
+		} else {
+
+			if ($max_age) {
+				$this->server->set($key, $value, $max_age);
+			} else {
+				$this->server->set($key, $value, $this->max_age);
+			}
+			
+		}
+		
+		return true;
+	}
+
+	protected function getAllKeys() {
+
+		if( method_exists( $this->server, 'getAllKeys' ) ) {
+
+			$allKeys = $this->server->getAllKeys();
+			return $allKeys;
+			
+		}
+
+		$sock = fsockopen($this->host, $this->port);
+		
+		if ($sock === false) {
+			return array();
+		}
+	
+		if (fwrite($sock, "stats items\n") === false) {
+			return array();
+		}
+	
+		$slabCounts = $allKeys = array();
+		
+		while (($line = fgets($sock)) !== false) {
+			$line = trim($line);
+			if ($line === 'END') {
+				break;
+			}
+	
+			if (preg_match('!^STAT items:(\d+):number (\d+)$!', $line, $matches)) {
+				$slabCounts[$matches[1]] = (int)$matches[2];
+			}
+		}
+	
+		foreach ($slabCounts as $slabNr => $slabCount) {
+			if (fwrite($sock, "lru_crawler metadump {$slabNr}\n") === false) {
+				return array();
+			}
+	
+			$count = 0;
+			while (($line = fgets($sock)) !== false) {
+				$line = trim($line);
+				if ($line === 'END') {
+					break;
+				}
+	
+				if (preg_match('!^key=(\S+)!', $line, $matches)) {
+					
+					if( strpos( $matches[1], $this->suite_key ) !== false ) {
+						
+						$allKeys[] = $matches[1];
+						$count++;
+					
+					}
+				}
+			}
+		}
+	
+		fclose($sock);
+		
+		return $allKeys;
+		
+	}
+	
+	protected function _clear_all() {
+		
+		if($this->connection < 1 ) return false;
+		
+		$this->server->flush();
+		
+		return true;
+		
+	}
+	
+	public function __destruct() {
+		
+		if($this->connection < 1 ) return;
+		
+		if( $this->server ) {
+			if( method_exists( $this->server, 'quit' ) ) {
+				$this->server->quit();
+			} elseif( method_exists( $this->server, 'close' ) ) {
+				$this->server->close();
+			}
+		}
+	}
+	
+}
+
+
+// deprecated name
+
+class dle_memcache
+{
+	public $connection = null;
+	
+	public function __construct( $config ) {
+		$this->connection = 0;
+	}
+	
+}

@@ -1,13 +1,131 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine - by SoftNews Media Group
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: seo.class.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Generate SEO shemes
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3F2P2lIaTxWKjxZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWTxTbFVNVXkwQnNTdWZhMGZzUy1TIHdTUW5CTS9zSTlTUHNLMFVTTkVuN2k8LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS08U0hNTWk5OlZWS3tzLWZzSTkKRTdWPC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tPFNbbml3RTBhSE1TKGcpU2JBQX0tYkFiQ1NRbkJNL3NJOVNQc0swVVNORW43aTxZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWTxTakgwOVNnbktzUzA5U2lFbk1zZ01zS1Mgd1Nnbml3RTBhSE08WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVk8Uy4we3M6Uzlzbgpne1U5OQppSGk8LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS08U1Q5czpTTnNmc0VVTXNTUXVaUzlIc3BzOTxZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWTwqVjw3OXNTUHN7IFVIelVcUXNuXFFnSHNwVTs8NzlzU1BzeyBVSHpVXFFzblxRZ0hzcFVcakgwZmE7PDc5c1NQc3sgVUh6VVxRc25cUHNNVWpVYTk7PDc5c1NQc3sgVUh6VVxRc25cMmZLc2gwZmE7PDwwQihTIUtzQjBmc0soUydsZGpkeTIudXUvTjIvdSdTKVMpU088CUhzVUtzRShTIkdqamVWbQptU31BTFMubkUgMEtLc2YiUyk7PAlIc1VLc0VTKFMneW5nVU0wbmY6UwoKVgoKVidTKTs8CUswcyhTIkdVZ1IwZmFTVU1Nc3BpTSEiUyk7PDU8PDBmZ3s3S3NfbmZnc1MobHl1ZXs3YTBmOTo6W0hzZ1IodS9OMi91X2wydFMKUydWZ3tVOTlzOVZnbnBpbjlzRVYzc2ZLbkVWcHN7IFVIelVWOXNuVjlFZ1YyZk1zRUJVZ3M5VlFzbjJmTXNFQlVncwppSGknKSk7PDBmZ3s3S3NfbmZnc1MobHl1ZXs3YTBmOTo6W0hzZ1IodS9OMi91X2wydFMKUydWZ3tVOTlzOVZnbnBpbjlzRVYzc2ZLbkVWcHN7IFVIelVWOXNuVjlFZ1YyZk1zRUJVZ3M5VlFnSHNwVTJmTXNFQlVncwppSGknKSk7PDBmZ3s3S3NfbmZnc1MobHl1ZXs3YTBmOTo6W0hzZ1IodS9OMi91X2wydFMKUydWZ3tVOTlzOVZnbnBpbjlzRVYzc2ZLbkVWcHN7IFVIelVWOXNuVjlFZ1ZRZ0hzcFUKaUhpJykpOzwwZmd7N0tzX25mZ3NTKGx5dWV7N2EwZjk6OltIc2dSKHUvTjIvdV9sMnRTClMnVmd7VTk5czlWZ25waW45c0VWM3NmS25FVnBzeyBVSHpVVjlzblY5RWdWUWdIc3BVVmpIMGZhCmlIaScpKTs8MGZnezdLc19uZmdzUyhseXVlezdhMGY5OjpbSHNnUih1L04yL3VfbDJ0UwpTJ1Zne1U5OXM5VmducGluOXNFVjNzZktuRVZwc3sgVUh6VVY5c25WOUVnVlBzTVVqVWE5CmlIaScpKTs8MGZnezdLc19uZmdzUyhseXVlezdhMGY5OjpbSHNnUih1L04yL3VfbDJ0UwpTJ1Zne1U5OXM5VmducGluOXNFVjNzZktuRVZwc3sgVUh6VVY5c25WOUVnVjJmS3NoMGZhCmlIaScpKTs8MGZnezdLc19uZmdzUyhseXVlezdhMGY5OjpbSHNnUih1L04yL3VfbDJ0UwpTJ1Zne1U5OXM5VmducGluOXNFVjNzZktuRVZwc3sgVUh6VVY5c25WOUVnVkdze2lzRQppSGknKSk7PAk8VSA5TUVVZ01TZ3tVOTlTbHl1UXVaU088CTwJaUUwM1VNc1M5TVVNMGdTJDlnSHNwVVNZU2Y3e3s7PAk8CWk3IHswZ1M5TVVNMGdTQjdmZ00wbmZTZEtLUWdIc3BVKCRNSDBmYSk8CU88CQkwQlMoUzlze0I6OiQ5Z0hzcFVTWVlZU2Y3e3tTKVNPPAkJCTlze0I6OiQ5Z0hzcFVTWVNmc0lTUWdIc3BVKCRNSDBmYSk7PAkJNVNzezlzU088CQkJOXN7Qjo6JDlnSHNwVS1xVUtLKCRNSDBmYSk7PAkJNTwJNTwJPAlpNyB7MGdTOU1VTTBnU0I3ZmdNMG5mU1tucGkwe3NRZ0hzcFUoKTwJTzwJCTBCUyhTOXN7Qjo6JDlnSHNwVVMhWVNmN3t7UylTTzwJCQk8CQkJRXNNN0VmU3o5bmZfc2ZnbktzKDlze0I6OiQ5Z0hzcFUsU3JRWi9fVC91UVtkZXVsX1QvMltabHVTfFNyUVovX1QvdVFbZGV1bF9ReWRRR3VRKTs8CQk8CQk1U3N7OXNTRXNNN0VmUycnOzwJCTwJNTwJPAlpNyB7MGdTOU1VTTBnU0I3ZmdNMG5mU2pIMGZhKDlNRTBmYVMkTXdpcyxTVUVFVXdTJEtVTVVTWVN4MSxTIG5ue1MkZnNzS19nbmZNc2hNU1lTTUU3cyk8CU88CQlFc003RWZTZnNJU2pIMGZhKCRNd2lzLFMkS1VNVSxTJGZzc0tfZ25mTXNoTSk7PAk1PAk8CWk3IHswZ1M5TVVNMGdTQjdmZ00wbmZTUHNNVWpVYTkoJGdIVUU5c01TWVMnN01CLUYnKTwJTzwJCSRwc01VU1lTZnNJU1BzTVVqVWE5KCk7PDwJCTBCKFMhMDlfOU1FMGZhKCRnSFVFOXNNKVMpU088CQkJJGdIVUU5c01TWVMnN01CLUYnOzwJCTU8PAkJJHBzTVUtcWk3OUgoJ3BzTVUnLFN4PAkJCSdnSFVFOXNNJ1NTU1NZcVMkZ0hVRTlzTTwJCTEpOzw8CQlFc003RWZTJHBzTVU7PAk1PAk8CWk3IHswZ1M5TVVNMGdTQjdmZ00wbmZTMmZLc2gvbkkoOU1FMGZhUyQ3RXspPAlPPAkJYXtuIFV7UyRnbmZCMGEsUyR7VWZhOzwJCTwJCTBCKFMhQjB7c19zaDA5TTkoU3RaWmpfbDJ0UwpTJ1YnClNwS0MoUXVbVHR1X2RUakdfa3VjKQonCk1oTSdTKVMpU088CQkJRXNNN0VmU2Y3e3s7PAkJNTwJCTwJCTBCKFNNRTBwKEIwe3NfYXNNX2duZk1zZk05KFN0WlpqX2wydFMKUydWJwpTcEtDKFF1W1R0dV9kVGpHX2t1YykKJwpNaE0nUykpUyFZU1NwS0MoUXVbVHR1X2RUakdfa3VjKVMpU088CQkJRXNNN0VmUy1tOzwJCTU8CQk8CQkwQihTISRnbmZCMGF4J0hNTWlfSG5wc183RXsnMVMpU088CQkJJGduZkIwYXgnSE1NaV9IbnBzXzdFeycxU1lTIlZWIgokX1F1dFd1dHgnR2pqZV9HWlFqJzEKIlYiOzwJCQkkN0V7U1lTIlYiCiQ3RXs7PAkJNTw8CQkwQlMoOU1FaW45KCRnbmZCMGF4J0hNTWlfSG5wc183RXsnMSxTIlZWIilTWVlZU0EpU088CQkJJGduZkIwYXgnSE1NaV9IbnBzXzdFeycxU1lTMDlRUXkoKVM/UyRnbmZCMGF4J0hNTWlfSG5wc183RXsnMVNZUyJITU1pOToiCiRnbmZCMGF4J0hNTWlfSG5wc183RXsnMVM6UyRnbmZCMGF4J0hNTWlfSG5wc183RXsnMVNZUyJITU1pOiIKJGduZkIwYXgnSE1NaV9IbnBzXzdFeycxOzwJCTVTc3s5czBCUyg5TUVpbjkoJGduZkIwYXgnSE1NaV9IbnBzXzdFeycxLFMiViIpU1lZWVNBKVNPPAkJCSRnbmZCMGF4J0hNTWlfSG5wc183RXsnMVNZUzA5UVF5KClTP1MkZ25mQjBheCdITU1pX0hucHNfN0V7JzFTWVMiSE1NaTk6VlYiCiRfUXV0V3V0eCdHamplX0daUWonMQokZ25mQjBheCdITU1pX0hucHNfN0V7JzFTOlMiSE1NaTpWViIKJF9RdXRXdXR4J0dqamVfR1pRaicxCiRnbmZCMGF4J0hNTWlfSG5wc183RXsnMTs8CQk1U3N7OXMwQihTMDlRUXkoKVNkL2xTOU1FMGluOShTJGduZkIwYXgnSE1NaV9IbnBzXzdFeycxLFMnSE1NaTpWVidTKVMhWVlTQlV7OXNTKVNPPAkJCSRnbmZCMGF4J0hNTWlfSG5wc183RXsnMVNZUzlNRV9Fc2l7VWdzKFMiSE1NaTpWViIsUyJITU1pOTpWViIsUyRnbmZCMGF4J0hNTWlfSG5wc183RXsnMVMpOzwJCTU8CQk8CQkkSG45TVNZU0t7c185TUVNbntuSXNFKGlVRTlzXzdFeygkZ25mQjBheCdITU1pX0hucHNfN0V7JzEsU2VHZV9UdHlfR1pRailTKTs8PAkJMEJTKDlNRWluOSgkN0V7LFMiVlYiKVNZWVlTQSlTTzwJCQkkN0V7U1lTMDlRUXkoKVM/UyQ3RXtTWVMiSE1NaTk6IgokN0V7UzpTJDdFe1NZUyJITU1pOiIKJDdFezs8CQk1U3N7OXMwQlMoOU1FaW45KCQ3RXssUyJWIilTWVlZU0EpU088CQkJJDdFe1NZUzA5UVF5KClTP1MkN0V7U1lTIkhNTWk5OlZWIgokSG45TQokN0V7UzpTIkhNTWk6VlYiCiRIbjlNCiQ3RXs7PAkJNVNzezlzMEIoUzA5UVF5KClTZC9sUzlNRTBpbjkoUyQ3RXssUydITU1pOlZWJ1MpUyFZWVNCVXs5c1MpU088CQkJJDdFe1NZUzlNRV9Fc2l7VWdzKFMiSE1NaTpWViIsUyJITU1pOTpWViIsUyQ3RXtTKTs8CQk1PDwJCSQwZktzaHNFU1lTZnNJUzJmS3NoMGZhKCRIbjlNLFN4PAkJCSRnbmZCMGF4JzBmS3NoZm5JX2lFbjMwS3NFJzFTWXFTcEtDKFF1W1R0dV9kVGpHX2t1Yyk8CQkxKTs8PAkJJEVzOTd7TVNZUyQwZktzaHNFLXEwZktzaFRFeygkN0V7KTs8PAkJQm5Fc1VnSFMoJEVzOTd7TVNVOVMkUnN3U1lxUyQzVXs3c1MpU088CQkJMEIoJDNVezdzUyFZWVNNRTdzKVNPPAkJCQk8CQkJCTBCKDA5OXNNKCR7VWZheCcwZktzaGZuSV9zRUVuRV8nCiQzVXs3czEpKVMkM1V7N3NTWVMke1VmYXgnMGZLc2hmbklfc0VFbkVfJwokM1V7N3MxOzwJCQkJPAkJCQlFc003RWZTVUVFVXdTKEFTWXFTJFJzdyxTbVNZcVMkM1V7N3MpOzwJCQk1PAkJNTwJCTwJCUVzTTdFZlNNRTdzOzwJNTw1PA==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdnRDB7QlhHVFtXNE1lPDk9Zl1yQThxc0ZsRTVSM20+IFBRdnljSXpkd0sxalVPL05hcHRZLngyQ3ViN0w2a29IUwpuVkpaaX1oJywnYzZpbGZCSFVDVlh0UApzOW56SjA3PmU4RHJ9a3YxWmJNUzxMWXdqQXlkXVRhe05HZ21SPUZbSTVFMnUzUUtXaCAuby9xT3A0eCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+use Melbahja\Seo\Schema;
+use Melbahja\Seo\Schema\Thing;
+use Melbahja\Seo\MetaTags;
+use Melbahja\Seo\Indexing;
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/composer/vendor/melbahja/seo/src/Interfaces/SeoInterface.php'));
+include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/composer/vendor/melbahja/seo/src/Interfaces/SchemaInterface.php'));
+include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/composer/vendor/melbahja/seo/src/Schema.php'));
+include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/composer/vendor/melbahja/seo/src/Schema/Thing.php'));
+include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/composer/vendor/melbahja/seo/src/MetaTags.php'));
+include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/composer/vendor/melbahja/seo/src/Indexing.php'));
+include_once (DLEPlugins::Check(ENGINE_DIR . '/classes/composer/vendor/melbahja/seo/src/Helper.php'));
+	
+abstract class DLESEO {
+	
+	private static $schema = null;
+	
+	public static function AddSchema($thing)
+	{
+		if ( self::$schema === null ) {
+			self::$schema = new Schema($thing);
+		} else {
+			self::$schema->add($thing);
+		}
+	}
+	
+	public static function CompileSchema()
+	{
+		if ( self::$schema != null ) {
+			
+			return json_encode(self::$schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+		
+		} else return '';
+		
+	}
+	
+	public static function Thing(string $type, array $data = [], bool $need_context = true)
+	{
+		return new Thing($type, $data, $need_context);
+	}
+	
+	public static function MetaTags($charset = 'utf-8')
+	{
+		$meta = new MetaTags();
+
+		if( !is_string($charset) ) {
+			$charset = 'utf-8';
+		}
+
+		$meta->push('meta', [
+			'charset'    => $charset
+		]);
+
+		return $meta;
+	}
+	
+	public static function IndexNow(string $url)
+	{
+		global $config, $lang;
+		
+		if( !file_exists( ROOT_DIR . '/'. md5(SECURE_AUTH_KEY).'.txt' ) ) {
+			return null;
+		}
+		
+		if( trim(file_get_contents( ROOT_DIR . '/'. md5(SECURE_AUTH_KEY).'.txt' )) !=  md5(SECURE_AUTH_KEY) ) {
+			return -1;
+		}
+		
+		if( !$config['http_home_url'] ) {
+			$config['http_home_url'] = "//".$_SERVER['HTTP_HOST']."/";
+			$url = "/".$url;
+		}
+
+		if (strpos($config['http_home_url'], "//") === 0) {
+			$config['http_home_url'] = isSSL() ? $config['http_home_url'] = "https:".$config['http_home_url'] : $config['http_home_url'] = "http:".$config['http_home_url'];
+		} elseif (strpos($config['http_home_url'], "/") === 0) {
+			$config['http_home_url'] = isSSL() ? $config['http_home_url'] = "https://".$_SERVER['HTTP_HOST'].$config['http_home_url'] : "http://".$_SERVER['HTTP_HOST'].$config['http_home_url'];
+		} elseif( isSSL() AND stripos( $config['http_home_url'], 'http://' ) !== false ) {
+			$config['http_home_url'] = str_replace( "http://", "https://", $config['http_home_url'] );
+		}
+		
+		$host = dle_strtolower(parse_url($config['http_home_url'], PHP_URL_HOST) );
+
+		if (strpos($url, "//") === 0) {
+			$url = isSSL() ? $url = "https:".$url : $url = "http:".$url;
+		} elseif (strpos($url, "/") === 0) {
+			$url = isSSL() ? $url = "https://".$host.$url : "http://".$host.$url;
+		} elseif( isSSL() AND stripos( $url, 'http://' ) !== false ) {
+			$url = str_replace( "http://", "https://", $url );
+		}
+
+		$indexer = new Indexing($host, [
+			$config['indexnow_provider'] => md5(SECURE_AUTH_KEY)
+		]);
+
+		$result = $indexer->indexUrl($url);
+
+		foreach ($result as $key => $value ) {
+			if($value !== true) {
+				
+				if(isset($lang['indexnow_error_'.$value])) $value = $lang['indexnow_error_'.$value];
+				
+				return array (0 => $key, 1 => $value);
+			}
+		}
+		
+		return true;
+	}
+}

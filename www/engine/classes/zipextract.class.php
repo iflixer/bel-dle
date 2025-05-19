@@ -5,9 +5,505 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: zipextract.class.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: ZIP Extract class
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PzBEP2VxZW9JKm82NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Nm9KalJMUnM4TUtKMXh1OHhLSi1KdmJKPEVNTFZLYSBKN0tBOFJKejJFWGVKby0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tb0pxTExlIDpJSUFRSy14S2EgMzJYSW8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLW9KVEVlYjI4dXFMSihmKUpwaWlILXBpcG1KPEVNTFZLYSBKN0tBOFJKejJFWGVvNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjZvSlNxOCBKZkVBS0o4IEplMkVMS2ZMS0FKdmJKZkVlYjI4dXFMbzY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2b0pHOFFLOkpdOGVLRkwyUmZMM2ZRUiAgM2VxZW8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLW9KdCBLOkp7ZFBKMUZMMlJmTEpmUVIgIG82NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Nm8qSW9vOE0oSiFBS004eEtBKEonalpTWnNkRzExVnpkVjEnSilKKUpsbwlxS1JBSzIoSiI1U1NQSVczV0pIaTlKR0UydjhBQUt4IkopO28JcUtSQUsySihKJ3NFZlJMOEV4OkozM0kzM0knSik7bwlBOEsoSiI1UmZCOHh1SlJMTEtZZUwhIkopO28Kb29mUVIgIEpBUUtfXThlX0tGTDJSZkxKbG8JbwllMjhDUkxLSiQyRUVMSjZKeFhRUTtvCW8JZVh2UThmSiRdOGU7b28JZTI4Q1JMS0okTUxlSjZKeFhRUTtvCWUyOENSTEtKJCAgcUo2SnhYUVE7bwllMjhDUkxLSiQgTUxlSjZKeFhRUTtvCWUyOENSTEtKJCBNTGVqODJKNkp4WFFRO28JbwllWHZROGZKJE1FUUFLMl9lSzJZOCAgOEV4SjZKaVVtbTtvCWVYdlE4ZkokTThRS19lSzJZOCAgOEV4SjZKaX1ISDtvCW8JZVh2UThmSiRLMjJFMiBfUTggTEo2SlIyMlJiKCk7bwllWHZROGZKJCBCOGVfOHhBS0ZKNkpSMjJSYigpO28JZVh2UThmSiQ4IF9lUVh1OHhKNkpNUlEgSztvbwllWHZROGZKJF04ZV8yRUVMSjZKTVJRIEs7bwllWHZROGZKJF04ZV94WFlNOFFLIEo2Smk7bwllWHZROGZKJF04ZV9ROCBMX2E4THFfMkVFTEo2SlIyMlJiKCk7bwlvCU1YeGZMOEV4Sl9fZkV4IEwyWGZMKEokXThlX1E4eEJKNkpNUlEgS0opSmxvCQl1UUV2UlFKJFFSeHU7bwkJbwkJJExxOCAtMDJFRUxKNkpPLy9TX2pkTzMnSSc7bwkJbwkJOE0oJF04ZV9ROHhCKUpsbwkJCSRMcTggLTBdOGVKNkp4S2FKezhlWjJmcThDSygpO28JCQk4TSgkTHE4IC0wXThlLTBFZUt4KEokXThlX1E4eEIsSntkUFpPVDVkYzE6OlQ1MVQ9VC9WPEopSiE2NkpMMlhLKUpsbwkJCQlMcTJFYUp4S2FKT1h4TDhZSzFGZktlTDhFeCgkUVJ4dS4nWGV1Ml9NX0syMkUyX1d9Jz4pO28JCQkKbwkJCW8JCQkkTHE4IC0wXThlX3hYWU04UUsgSjZKJExxOCAtMF04ZS0weFhZRzhRSyA7CW8JCQpvCQlvCQpvCW8JZVh2UThmSk1YeGZMOEV4SkdMZVRFeHhLZkwoSiRBUkxSSilKbG8JCXVRRXZSUUokUVJ4dTtvCQlvCQk4TUooSiRBUkxSLidMYmVLJz5KNjZKJyAgcXAnSilKbG8JCQlvCQkJOE0oSiFNWHhmTDhFeF9LRjggTCAoJyAgcXBfZkV4eEtmTCcpSilKbG8JCQkJTHEyRWFKeEthSk9YeEw4WUsxRmZLZUw4RXgoJFFSeHUuJ1hldTJfTV9LMjJFMl9XaSc+KTtvCQkJCm8JCQlvCQkJJExxOCAtMCAgcUo2SiAgcXBfZkV4eEtmTChKJEFSTFIuJyBLMkNLMic+LEokQVJMUi4nZUUyTCc+Sik7CW9vCQkJOE1KKEokTHE4IC0wICBxSjY2NkpNUlEgS0opSmxvCQkJCUxxMkVhSnhLYUpPWHhMOFlLMUZmS2VMOEV4KCRRUnh1LidYZXUyX01fSzIyRTJfV1cnPjMnSidKM0okQVJMUi4nIEsyQ0syJz5KM0onLEonMyRRUnh1LidYZXUyX01MZV9IJz4zJ0onSjNKJEFSTFIuJ2VFMkwnPik7bwkJCQpvbwkJCThNSihKIUAgIHFwX1JYTHFfZVIgIGFFMkEoSiRMcTggLTAgIHEsSiRBUkxSLidYIEsyeFJZSyc+LEokQVJMUi4nZVIgIGFFMkEnPkopSilKbG8JCQkJTHEyRWFKeEthSk9YeEw4WUsxRmZLZUw4RXgoJFFSeHUuJ1hldTJfTV9LMjJFMl9XcCc+KTtvCQkJCm9vCQkJJExxOCAtMCBNTGVKNkpAICBxcF8gTUxlKEokTHE4IC0wICBxSik7b28JCQk4TUooSiRMcTggLTAgTUxlSjY2NkpNUlEgS0opSmxvCQkJCUxxMkVhSnhLYUoxRmZLZUw4RXgoJFFSeHUuJ1hldTJfTV9LMjJFMl9XOSc+KTtvCQkJCm8JCQlvCQkJOE1KKEokQVJMUi4nZVJMcSc+SlJ4QUohQCAgcXBfIE1MZV8gTFJMKEokTHE4IC0wIE1MZSxKJEFSTFIuJ2VSTHEnPkopSilKbG8JCQkJTHEyRWFKeEthSk9YeEw4WUsxRmZLZUw4RXgoSiRRUnh1LidYZXUyX01fSzIyRTJfV0gnPjMnSiczJEFSTFIuJ2VSTHEnPkopO28JCQkKbwkJCW8JCQkkTHE4IC0wIE1MZWo4Mko2SiAgcXBfIE1MZV8yS1JRZVJMcShKJExxOCAtMCBNTGUsSiRBUkxSLidlUkxxJz5KKUozSidJJztvCQkJbwkJCSQgTDJLUllKNkpATUVlS3goIiAgcXAzIE1MZTpJSSIzOHhMQ1JRKCRMcTggLTAgTUxlKTMkTHE4IC0wIE1MZWo4MjMiOHhBS0YzZXFlIixKJzInKTtvCQkJbwkJCThNKCEkIEwyS1JZSi9PSkpAIEwyOGVFICggTDJLUllfdUtMX2ZFeExLeEwgKCQgTDJLUlkpLEonalpTWnNkRzExVnpkVjEnKUo2NjZKTVJRIEtKKUpsbwkJCQlMcTJFYUp4S2FKT1h4TDhZSzFGZktlTDhFeCgkUVJ4dS4nWGV1Ml9NX0syMkUyX1dtJz4pO28JCQkKb28JCQpKS1EgS0psb28JCQk4TUooSiRBUkxSLidMYmVLJz5KNjZKJyAgUU1MZSdKKUpsbwkJCQkkTHE4IC0wTUxlSjZKQE1MZV8gIFFfZkV4eEtmTChKJEFSTFIuJyBLMkNLMic+LEokQVJMUi4nZUUyTCc+LEptSik7bwkJCQpKS1EgS0psbwkJCQkkTHE4IC0wTUxlSjZKQE1MZV9mRXh4S2ZMKEokQVJMUi4nIEsyQ0syJz4sSiRBUkxSLidlRTJMJz4sSm1KKTtvCQkJCm9vCQkJOE1KKEokTHE4IC0wTUxlSjY2NkpNUlEgS0opSmxvCQkJCUxxMkVhSnhLYUpPWHhMOFlLMUZmS2VMOEV4KCRRUnh1LidYZXUyX01fSzIyRTJfV1cnPjMnSidKM0okQVJMUi4nIEsyQ0syJz5KM0onLEonMyRRUnh1LidYZXUyX01MZV9IJz4zJ0onSjNKJEFSTFIuJ2VFMkwnPik7bwkJCQpvbwkJCThNSihKIUBNTGVfUUV1OHgoSiRMcTggLTBNTGUsSiRBUkxSLidYIEsyeFJZSyc+LEokQVJMUi4nZVIgIGFFMkEnPkopSilKbG8JCQkJbwkJCQkkTHE4IC0wajggZkV4eEtmTEdTUCgpO28JCQkJbwkJCQlMcTJFYUp4S2FKT1h4TDhZSzFGZktlTDhFeCgkUVJ4dS4nWGV1Ml9NX0syMkUyX1dwJz4pO28JCQkKb28JCQlATUxlX2VSIEMoSiRMcTggLTBNTGUsSkwyWEtKKTtvCQkJbwkJCThNSihKJEFSTFIuJ2VSTHEnPkpaVmpKIUBNTGVfZnFBODIoSiRMcTggLTBNTGUsSiRBUkxSLidlUkxxJz5KKUopSmxvCQkJCW8JCQkJJExxOCAtMGo4IGZFeHhLZkxHU1AoKTtvCQkJCW8JCQkJTHEyRWFKeEthSk9YeEw4WUsxRmZLZUw4RXgoSiRRUnh1LidYZXUyX01fSzIyRTJfV0gnPjMnSiczJEFSTFIuJ2VSTHEnPkopO28JCQkKbwkJCW8JCQkkTEtZZUo2Sk1FZUt4KCdlcWU6SUlMS1llJyxKJzIrJyk7bwkJCW8JCQk4TUooQE1MZV9NdUtMKCRMcTggLTBNTGUsSiRMS1llLEonOHhBS0YzZXFlJyxKR1NQXzRkVlpPWyxKaSkpSmxvCQkJCTJLYTh4QSgkTEtZZSk7bwkJCQlvCQkJCThNKCBMMjhlRSAoIEwyS1JZX3VLTF9mRXhMS3hMICgkTEtZZSksSidqWlNac2RHMTFWemRWMScpSjY2NkpNUlEgS0opSkxxMkVhSnhLYUpPWHhMOFlLMUZmS2VMOEV4KCRRUnh1LidYZXUyX01fSzIyRTJfV20nPik7bwkJCW8JCQkKSktRIEtKTHEyRWFKeEthSk9YeEw4WUsxRmZLZUw4RXgoJFFSeHUuJ1hldTJfTV9LMjJFMl9XbSc+KTtvCQkJbwkJCW8JCQpvCQpvCW9KSkpKZVh2UThmSk1YeGZMOEV4Smo4IGZFeHhLZkxHU1AoKUpsbwkJb0pKSkpKSkpKOE1KKCRMcTggLTBNTGUpSmxvCQkJbwkJCThNKEokTHE4IC0wTUxlSiE2NkpNUlEgS0opSmxvCQkJCUBNTGVfZlFFIEsoJExxOCAtME1MZSk7bwkJCQpvCQkJbwkJCSRMcTggLTBNTGVKNkp4WFFRO28JCQpvSkpKSgpvCW8JZVh2UThmSk1YeGZMOEV4SjxLTEc4UUsgT0VFTChKJEE4MkopSmxvCQlvCQk4TUooSiBYdiBMMigkQTgyLEotVylKITZKJ0knSilKSiRBODJKNkokQTgyMydJJztvCQlvCQkkTHE4IC0wMkVFTEo2SiRBODI7bwkJbwkJbwkKbwlvCWVYdlE4ZkpNWHhmTDhFeEo8S0xPRUVMezhlWjJmcThDSyhKJEE4MkopSmxvCQlvCQk4TShKISRBODJKKUoyS0xYMng7bwkJbwkJJE04UUtfUTggTEo2SlIyMlJiKCk7bwkJbwkJTUUySihKJDhKNkppO0okOEpESiRMcTggLTBdOGUtMHhYWUc4UUsgO0okOCsrSilKbG8JbwkJCThNSihKJExxOCAtMF04ZS0wIExSTGR4QUtGKCQ4KUopSmxvCQkJCW8JCQkJJE04UUtKNkokTHE4IC0wXThlLTAgTFJMZHhBS0YoJDgpO28JCQkJbwkJCQk4TUooSiBYdiBMMigkTThRSy4neFJZSyc+LEotVylKNjZKJ0knSilKZkV4TDh4WEs7bwkJCQlvCQkJCThNKEogTDJlRSAoJE04UUsuJ3hSWUsnPixKJEE4MilKNjY2SmlKKUpsbwkJCQkJJE04UUtfUTggTC4+SjZKJE04UUsuJzh4QUtGJz47bwkJCQkKbwlvCQkJCm8JbwkJCm8JCW8JCThNKEpmRVh4TCgkTThRS19ROCBMKUopSmxvCQkJJExxOCAtMF04ZV8yRUVMSjZKJEE4MjtvCQkJJExxOCAtMF04ZV94WFlNOFFLIEo2SmZFWHhMKCRNOFFLX1E4IEwpO28JCQkkTHE4IC0wXThlX1E4IExfYThMcV8yRUVMSjZKJE04UUtfUTggTDtvCQkKbwlvCQpvCW8JZVh2UThmSk1YeGZMOEV4SjFGTDJSZkx7OGVaMmZxOENLKEokRU1NIEtMSjZKaSxKJFE4WThMSjZKaUopSmxvCQkkQUV4S0o2Smk7bwlvCQk4TShKISRROFk4TEopSiRROFk4TEo2SiRMcTggLTBdOGVfeFhZTThRSyA7bwlvCQlNRTJKKEokOEo2Smk7SiQ4SkRKJFE4WThMO0okOCsrSilKbG8JCQkkOHhBS0ZKNkokRU1NIEtMSitKJDg7bwkJCW8JCQkkS0ZMMlJmTF84eEFLRko2Sk1SUSBLO28JCQlvCQkJOE1KKEokTHE4IC0wXThlXzJFRUxKKUpsbwkJCQlvCQkJCThNSihKOCAgS0woSiRMcTggLTBdOGVfUTggTF9hOExxXzJFRUwuJDh4QUtGPkopSkopSmxvCQkJCQkkS0ZMMlJmTF84eEFLRko2SiRMcTggLTBdOGVfUTggTF9hOExxXzJFRUwuJDh4QUtGPjtvCQkJCQpvCQkJCW8JCQkKSktRIEtKJEtGTDJSZkxfOHhBS0ZKNkokOHhBS0Y7bwlvCQkJOE1KKEokS0ZMMlJmTF84eEFLRkohNjZKTVJRIEtKWlZqSiRMcTggLTBdOGUtMCBMUkxkeEFLRigkS0ZMMlJmTF84eEFLRilKKUpsbwkJCQkkTHE4IC0wMUZMMlJmTEc4UUsoSiRLRkwyUmZMXzh4QUtGSik7bwkJCQkkQUV4SysrO28JCQkKbwkJCW8JCQpvCQlvCQkyS0xYMnhKJEFFeEs7bwkKbwlvCWVYdlE4ZkpNWHhmTDhFeEpHOEY1TFJmZksgICgpSmxvCQlvCQkkIEtSMmZxSjZKUjIyUmJKKG8JCQknT0thMjhMS09YUUtKXkxSdSBJKC5eST4qKShJPykrJEo4eEFLRjNlcWU/QUU2TFJ1ICZMUnU2JFdKLnM+JyxvCQkJJ09LYTI4TEtPWFFLSl5MUnUgSSguXkk+KilJZVJ1S0koLmktdz4rKShJPykrJEo4eEFLRjNlcWU/QUU2TFJ1ICZMUnU2JFcmZiBMUjJMNiRwSi5zPicsbwkJCSdPS2EyOExLT1hRS0peRk0gS1IyZnFJKDMqKUllUnVLSSguaS13PispKEk/KSskSjh4QUtGM2VxZT9BRTZGTSBLUjJmcSZGTTYkVyZmIExSMkw2JHBKLnM+JyxvCQkJJ09LYTI4TEtPWFFLSl5GTSBLUjJmcUkoMyopST8kSjh4QUtGM2VxZT9BRTZGTSBLUjJmcSZGTTYkV0oucz4nLG8JCQknT0thMjhMS09YUUtKXlggSzJJKC5eST4qKUkyICAzRllRJEo4eEFLRjNlcWU/WUVBNjIgICYgWHZSZkw4RXg2UlFReEthICZYIEsyNiRXSi5zPicsbwkJCSdPS2EyOExLT1hRS0peWCBLMkkoLl5JPiopSTIgIExYMnZFM0ZZUSRKOHhBS0YzZXFlP1lFQTYyICAmIFh2UmZMOEV4NlJRUXhLYSAmMiAgWUVBSzZMWDJ2RSZYIEsyNiRXSi5zPicsbwkJCSdPS2EyOExLT1hRS0peWCBLMkkoLl5JPiopSTIgIEFdS3gzRllRJEo4eEFLRjNlcWU/WUVBNjIgICYgWHZSZkw4RXg2UlFReEthICYyICBZRUFLNkFdS3gmWCBLMjYkV0oucz4nLG8JCQknT0thMjhMS09YUUtKXlggSzJJKC5eST4qKShJPykrJEo4eEFLRjNlcWU/IFh2UmZMOEV4NlggSzI4eE1FJlggSzI2JFdKLnM+JyxvCQkJJ09LYTI4TEtPWFFLSl5YIEsySSguXkk+KilJZVJ1S0koLmktdz4rKShJPykrJEo4eEFLRjNlcWU/IFh2UmZMOEV4NlggSzI4eE1FJlggSzI2JFcmZiBMUjJMNiRwSi5zPicsbwkJCSdPS2EyOExLT1hRS0peWCBLMkkoLl5JPiopSXhLYSAoST8pKyRKOHhBS0YzZXFlPyBYdlJmTDhFeDZSUVF4S2EgJlggSzI2JFdKLnM+JyxvCQkJJ09LYTI4TEtPWFFLSl5YIEsySSguXkk+KilJeEthIEllUnVLSSguaS13PispKEk/KSskSjh4QUtGM2VxZT8gWHZSZkw4RXg2UlFReEthICZYIEsyNiRXJmYgTFIyTDYkcEoucz4nbwkJKTtvCQlvCQkkMktlUVJmS0o2SlIyMlJiSihvCQkJJ09LYTI4TEtPWFFLSl5MUnUgSSguXkk+KikoST8pKyRKOHhBS0YzZXFlP0FFNkxSdSAmTFJ1NiRXSi40LHM+JyxvCQkJJ09LYTI4TEtPWFFLSl5MUnUgSSguXkk+KilJZVJ1S0koLmktdz4rKShJPykrJEo4eEFLRjNlcWU/QUU2TFJ1ICZMUnU2JFcmZiBMUjJMNiRwSi40LHM+JyxvCQkJJ09LYTI4TEtPWFFLSl5GTSBLUjJmcUkoMyopSWVSdUtJKC5pLXc+KykoST8pKyRKOHhBS0YzZXFlP0FFNkZNIEtSMmZxJkZNNiRXJmYgTFIyTDYkcEouNCxzPicsbwkJCSdPS2EyOExLT1hRS0peRk0gS1IyZnFJKDMqKUk/JEo4eEFLRjNlcWU/QUU2Rk0gS1IyZnEmRk02JFdKLjQscz4nLG8JCQknT0thMjhMS09YUUtKXlggSzJJKC5eST4qKUkyICAzRllRJEo4eEFLRjNlcWU/WUVBNjIgICYgWHZSZkw4RXg2UlFReEthICZYIEsyNiRXSi40LHM+JyxvCQkJJ09LYTI4TEtPWFFLSl5YIEsySSguXkk+KilJMiAgTFgydkUzRllRJEo4eEFLRjNlcWU/WUVBNjIgICYgWHZSZkw4RXg2UlFReEthICYyICBZRUFLNkxYMnZFJlggSzI2JFdKLjQscz4nLG8JCQknT0thMjhMS09YUUtKXlggSzJJKC5eST4qKUkyICBBXUt4M0ZZUSRKOHhBS0YzZXFlP1lFQTYyICAmIFh2UmZMOEV4NlJRUXhLYSAmMiAgWUVBSzZBXUt4JlggSzI2JFdKLjQscz4nLG8JCQknT0thMjhMS09YUUtKXlggSzJJKC5eST4qKShJPykrJEo4eEFLRjNlcWU/IFh2UmZMOEV4NlggSzI4eE1FJlggSzI2JFdKLjQscz4nLG8JCQknT0thMjhMS09YUUtKXlggSzJJKC5eST4qKUllUnVLSSguaS13PispKEk/KSskSjh4QUtGM2VxZT8gWHZSZkw4RXg2WCBLMjh4TUUmWCBLMjYkVyZmIExSMkw2JHBKLjQscz4nLG8JCQknT0thMjhMS09YUUtKXlggSzJJKC5eST4qKUl4S2EgKEk/KSskSjh4QUtGM2VxZT8gWHZSZkw4RXg2UlFReEthICZYIEsyNiRXSi40LHM+JyxvCQkJJ09LYTI4TEtPWFFLSl5YIEsySSguXkk+KilJeEthIEllUnVLSSguaS13PispKEk/KSskSjh4QUtGM2VxZT8gWHZSZkw4RXg2UlFReEthICZYIEsyNiRXJmYgTFIyTDYkcEouNCxzPidvCQkpO28JCW8JCSRBUkxSSjZKJExxOCAtME9LUkFHOFFLKEoiM3FMUmZmSyAgIkopO28JCW8JCThNKCRBUkxSKUpsbwkJCW8JCQkkQVJMUko2SiBMMl8yS2VRUmZLKCQgS1IyZnEsSiQyS2VRUmZLLEokQVJMUik7bwkJCW8JCQk4TShKIEwyOGVFICgkQVJMUixKJ09LYTI4TEtPWFFLSl51RUV1UUtfeEthIDNGWVEnKUo2NjZKTVJRIEtKKUpsbwkJCQlvCQkJCSRBUkxSSjZKIEwyXzJLZVFSZksoJ09LYTI4TEtPWFFLSl4gOExLWVJlM0ZZUSRKWGVRRVJBIEkgOExLWVJlM0ZZUUoucz4nLEonT0thMjhMS09YUUtKXiA4TEtZUmUzRllRJEpYZVFFUkEgSSA4TEtZUmUzRllRSi5zPiczIlx4IjMnT0thMjhMS09YUUtKXnVFRXVRS194S2EgM0ZZUSRKWGVRRVJBIEl1RUV1UUtfeEthIDNGWVFKLnM+JyxKJEFSTFIpO28JCQkKbwkJCW8JCQk4TShKIEwyOGVFICgkQVJMUixKJ09LYTI4TEtPWFFLSl4gTFJMOGZfZVJ1SyAzRllRJylKNjY2Sk1SUSBLSilKbG8JCQkJCQkJCW8JCQkJJEFSTFJKNkogTDJfMktlUVJmSygnT0thMjhMS09YUUtKXnVFRXVRS194S2EgM0ZZUSRKWGVRRVJBIEl1RUV1UUtfeEthIDNGWVFKLnM+JyxKJ09LYTI4TEtPWFFLSl51RUV1UUtfeEthIDNGWVEkSlhlUUVSQSBJdUVFdVFLX3hLYSAzRllRSi5zPiczIlx4IjMnT0thMjhMS09YUUtKXiBMUkw4Zl9lUnVLIDNGWVEkSlhlUUVSQSBJIExSTDhmX2VSdUsgM0ZZUUoucz4nMyJceCIzJ09LYTI4TEtPWFFLSl5mUkxLdUUyYl9lUnVLIDNGWVEkSlhlUUVSQSBJZlJMS3VFMmJfZVJ1SyAzRllRSi5zPiczIlx4IjMnT0thMjhMS09YUUtKXkxSdSBfZVJ1SyAzRllRJEpYZVFFUkEgSUxSdSBfZVJ1SyAzRllRSi5zPiczIlx4IjMnT0thMjhMS09YUUtKXnhLYSBfZVJ1SyAoXEEqPykzRllRJEpYZVFFUkEgSXhLYSBfZVJ1SyAkVzNGWVFKLnM+JyxKJEFSTFIpO28JCQkKb28JCQk4TUooSiBMMjhlRSAoJEFSTFIsSidPS2EyOExLT1hRS0peMiAgTFgydkUzRllRJylKNjY2Sk1SUSBLSilKbG9vCQkJCSRBUkxSSjZKIEwyXzJLZVFSZksoJ09LYTI4TEtPWFFLSl4yICAzRllRJEo4eEFLRjNlcWU/WUVBNjIgIEoucz4nLEonT0thMjhMS09YUUtKXjIgIDNGWVEkSjh4QUtGM2VxZT9ZRUE2MiAgSi5zPidKM0oiXHgiSjNKJ09LYTI4TEtPWFFLSl4yICBMWDJ2RTNGWVEkSjh4QUtGM2VxZT9ZRUE2MiAgJjIgIFlFQUs2TFgydkVKLnM+J0ozSiJceCJKM0onT0thMjhMS09YUUtKXjIgIEFdS3gzRllRJEo4eEFLRjNlcWU/WUVBNjIgICYyICBZRUFLNkFdS3hKLnM+JyxKJEFSTFIpO28JCQkJJEFSTFJKNkogTDJfMktlUVJmSygnT0thMjhMS09YUUtKXlggSzJJKC5eST4qKUl4S2EgSTIgIDNGWVEoST8pKyRKOHhBS0YzZXFlP1lFQTYyICAmIFh2UmZMOEV4NlJRUXhLYSAmWCBLMjYkV0ouND4nLEonT0thMjhMS09YUUtKXlggSzJJKC5eST4qKUl4S2EgSTIgIDNGWVEoST8pKyRKOHhBS0YzZXFlP1lFQTYyICAmIFh2UmZMOEV4NlJRUXhLYSAmWCBLMjYkV0ouNCxzPidKM0oiXHgiSjNKJ09LYTI4TEtPWFFLSl5YIEsySSguXkk+KilJeEthIEkyICBMWDJ2RTNGWVEoST8pKyRKOHhBS0YzZXFlP1lFQTYyICAmIFh2UmZMOEV4NlJRUXhLYSAmMiAgWUVBSzZMWDJ2RSZYIEsyNiRXSi40LHM+J0ozSiJceCJKM0onT0thMjhMS09YUUtKXlggSzJJKC5eST4qKUl4S2EgSTIgIEFdS3gzRllRKEk/KSskSjh4QUtGM2VxZT9ZRUE2MiAgJiBYdlJmTDhFeDZSUVF4S2EgJjIgIFlFQUs2QV1LeCZYIEsyNiRXSi40LHM+JyxKJEFSTFIpO28JCQkJJEFSTFJKNkogTDJfMktlUVJmSygnT0thMjhMS09YUUtKXlggSzJJKC5eST4qKUkyICAzRllRJEo4eEFLRjNlcWU/WUVBNjIgICYgWHZSZkw4RXg2UlFReEthICZYIEsyNiRXSi40LHM+JyxKJ09LYTI4TEtPWFFLSl5YIEsySSguXkk+KilJMiAgM0ZZUSRKOHhBS0YzZXFlP1lFQTYyICAmIFh2UmZMOEV4NlJRUXhLYSAmWCBLMjYkV0ouNCxzPidKM0oiXHgiSjNKJ09LYTI4TEtPWFFLSl5YIEsySSguXkk+KilJMiAgTFgydkUzRllRJEo4eEFLRjNlcWU/WUVBNjIgICYgWHZSZkw4RXg2UlFReEthICYyICBZRUFLNkxYMnZFJlggSzI2JFdKLjQscz4nSjNKIlx4IkozSidPS2EyOExLT1hRS0peWCBLMkkoLl5JPiopSTIgIEFdS3gzRllRJEo4eEFLRjNlcWU/WUVBNjIgICYgWHZSZkw4RXg2UlFReEthICYyICBZRUFLNkFdS3gmWCBLMjYkV0ouNCxzPicsSiRBUkxSKTtvCQkJCSRBUkxSSjZKIEwyXzJLZVFSZksoJ09LYTI4TEtPWFFLSl4oLl4zPispSTIgIDNGWVEkSjh4QUtGM2VxZT9ZRUE2MiAgJkFFNmZSTCZmUkxLdUUyYjYkV0oucz4nLEonT0thMjhMS09YUUtKXiguXjM+KylJMiAgM0ZZUSRKOHhBS0YzZXFlP1lFQTYyICAmQUU2ZlJMJmZSTEt1RTJiNiRXSi5zPidKM0oiXHgiSjNKJ09LYTI4TEtPWFFLSl4oLl4zPispSTIgIExYMnZFM0ZZUSRKOHhBS0YzZXFlP1lFQTYyICAmQUU2ZlJMJjIgIFlFQUs2TFgydkUmZlJMS3VFMmI2JFdKLnM+J0ozSiJceCJKM0onT0thMjhMS09YUUtKXiguXjM+KylJMiAgQV1LeDNGWVEkSjh4QUtGM2VxZT9ZRUE2MiAgJkFFNmZSTCYyICBZRUFLNkFdS3gmZlJMS3VFMmI2JFdKLnM+JyxKJEFSTFIpO28JCQkJJEFSTFJKNkogTDJfMktlUVJmSygnT0thMjhMS09YUUtKXmZSTFJRRXVJKC5eST4qKUkyICAzRllRJEo4eEFLRjNlcWU/WUVBNjIgICZmUkxSUUV1NiRXSi5zPicsSidPS2EyOExLT1hRS0peZlJMUlFFdUkoLl5JPiopSTIgIDNGWVEkSjh4QUtGM2VxZT9ZRUE2MiAgJmZSTFJRRXU2JFdKLnM+J0ozSiJceCJKM0onT0thMjhMS09YUUtKXmZSTFJRRXVJKC5eST4qKUkyICBMWDJ2RTNGWVEkSjh4QUtGM2VxZT9ZRUE2MiAgJjIgIFlFQUs2TFgydkUmZlJMUlFFdTYkV0oucz4nSjNKIlx4IkozSidPS2EyOExLT1hRS0peZlJMUlFFdUkoLl5JPiopSTIgIEFdS3gzRllRJEo4eEFLRjNlcWU/WUVBNjIgICYyICBZRUFLNkFdS3gmZlJMUlFFdTYkV0oucz4nLEokQVJMUik7b28JCQkKb28JCQlvCQkJJExxOCAtMGsyOExLRzhRSyhKIjNxTFJmZksgICIsSiRBUkxSSik7bwkJCm8JCW8JCThNKEo4ICBLTCgkXzwxPDxkL1YuJ2YyRXhNOFFLJz4pSilKbG8JCQlvCQkJJEFSTFJKNkokTHE4IC0wT0tSQUc4UUsoJF88MTw8ZC9WLidmMkV4TThRSyc+KTtvCQkJbwkJCThNKCRBUkxSKUpsbwkJCQlvCQkJCSRBUkxSSjZKIEwyXzJLZVFSZksoJyRSUVFFYV9mMkV4SjZKaTsnLEonJFJRUUVhX2YyRXhKNkpXOycsSiRBUkxSKTtvCQkJCSRMcTggLTBrMjhMS0c4UUsoSiRfPDE8PGQvVi4nZjJFeE04UUsnPixKJEFSTFJKKTtvCQkJCVh4IEtMKCRfPDE8PGQvVi4nZjJFeE04UUsnPik7bwkJCQlvCQkJCm8JCQlvCQkKbwkJbwkKbwlvCWUyOENSTEtKTVh4Zkw4RXhKMUZMMlJmTEc4UUsoSiQ4eEFLRkopSmxvCQl1UUV2UlFKJGZFeE04dSxKJFFSeHU7bwkJbwkJJE04UUtKNkokTHE4IC0wXThlLTAgTFJMZHhBS0YoJDh4QUtGKTtvbwkJOE1KKEogWHYgTDIoJE04UUsuJ3hSWUsnPixKLVcpSjY2SidJJ0opSjJLTFgyeDtvCQlvCQk4TShKZkVYeEwoJExxOCAtMCBCOGVfOHhBS0YpSlpWako4eF9SMjJSYigkOHhBS0YsSiRMcTggLTAgQjhlXzh4QUtGKUopSjJLTFgyeDtvbwkJOE1KKCRNOFFLLid4UllLJz5KNjZKIjNxTFJmZksgICIpSjJLTFgyeDtvbwkJOE0oSiRMcTggLTA4IF9lUVh1OHhKKUpsbwkJCW8JCQkkTThRSy4neFJZSyc+SjZKIEwyXzgyS2VRUmZLKEonbFM1MTcxCicsSiRmRXhNOHUuJyBCOHgnPixKJE04UUsuJ3hSWUsnPkopO28JCQlvCQkKbwkJbwkJOE1KKEokTHE4IC0wXThlXzJFRUxKKUpsbwkJCW8JCQkkTThRSy4neFJZSyc+SjZKIEwyXzgyS2VRUmZLKEokTHE4IC0wXThlXzJFRUwsSicnLEokTThRSy4neFJZSyc+Sik7bwkJCW8JCQpvbwkJJEE4Mko2SkE4MnhSWUsoSiRNOFFLLid4UllLJz5KKTtvCQlvCQkkQTgyS2ZMRTI4SyBKNkpSMjJSYihKJEE4MkopO28JCW8JCWFxOFFLSihKJEE4MkohNkonMydKKUpsbwkJCSRBODJKNkpBODJ4UllLKEokQTgySik7bwkJCThNSihKJEE4MkohNkonMydKKUpsbwkJCQkkQTgyS2ZMRTI4SyAuPko2SiRBODI7bwkJCQpvCQkKbwkJbwkJJEE4MktmTEUyOEsgSjZKUjIyUmJfMktDSzIgSyhKJEE4MktmTEUyOEsgSik7b28JCU1FMktSZnFKKEokQTgyS2ZMRTI4SyBKUiBKJEE4MkopSmxvCQkJbwkJCThNSihKITggX0E4MihKJExxOCAtMDJFRUwzJEE4MkopSilKbG8JCQkJbwkJCQk4TUooSiRMcTggLTAgTUxlSilKbG8JCQkJCW8JCQkJCThNKEohQCAgcXBfIE1MZV9ZQkE4MihKJExxOCAtMCBNTGUsSiRMcTggLTAgTUxlajgySjNKJEE4MkopSilKbG8JCQkJCQkkTHE4IC0wSzIyRTIgX1E4IEwuPko2SlIyMlJiKEonTThRSydKNjBKJEE4MixKJ0syMkUyJ0o2MEokUVJ4dS4nWGV1Ml9NX0syMkUyX1dVJz5KKTtvCQkJCQkKbwkJCQkJbwkJCQkKbwkJCQlvCQkJCThNSihKJExxOCAtME1MZUopSmxvCQkJCQlvCQkJCQk4TShKIUBNTGVfWUJBODIoSiRMcTggLTBNTGUsSiRBODJKKUopSmxvCQkJCQkJJExxOCAtMEsyMkUyIF9ROCBMLj5KNkpSMjJSYihKJ004UUsnSjYwSiRBODIsSidLMjJFMidKNjBKJFFSeHUuJ1hldTJfTV9LMjJFMl9XVSc+Sik7bwkJCQkJCm8JCQkJCW8JCQkJCkpLUSBLSmxvCQkJCQlvCQkJCQk4TShKIUBZQkE4MihKJExxOCAtMDJFRUwzJEE4MixKJExxOCAtME1FUUFLMl9lSzJZOCAgOEV4SilKKUpsbwkJCQkJCSRMcTggLTBLMjJFMiBfUTggTC4+SjZKUjIyUmIoSidNOFFLJ0o2MEokQTgyLEonSzIyRTInSjYwSiRRUnh1LidYZXUyX01fSzIyRTJfV1UnPkopO28JCQkJCQpKS1EgS0psbwkJCQkJCUBmcVlFQShKJExxOCAtMDJFRUwzJEE4MixKJExxOCAtME1FUUFLMl9lSzJZOCAgOEV4Sik7bwkJCQkJCm8JCQkJbwkJCQkJbwkJCQkKbwkJCQpvCQkJbwkJCm9vCQkkZkV4TEt4TCBKNkokTHE4IC0wXThlLTB1S0xHMkVZZHhBS0YoJDh4QUtGKTtvbwkJOE0oSiRNOFFLLid4UllLJz5KNjZKIlJBWTh4M2VxZSJKWlZqSiRNOFFLLid4UllLJz5KITZKJGZFeE04dS4nUkFZOHhfZVJMcSc+SlpWakokZkV4TTh1LidSQVk4eF9lUkxxJz5KKUpsbwkJCSRNOFFLLid4UllLJz5KNkokZkV4TTh1LidSQVk4eF9lUkxxJz47bwkJCm8JCW8JCThNKEokTThRSy4neFJZSyc+SjY2SiJmMkV4M2VxZSJKWlZqSjggIEtMKCRfPDE8PGQvVi4nZjJFeE04UUsnPilKWlZqSiRNOFFLLid4UllLJz5KITZKJF88MTw8ZC9WLidmMkV4TThRSyc+SilKbG8JCQkkTThRSy4neFJZSyc+SjZKJF88MTw8ZC9WLidmMkV4TThRSyc+O28JCQpvCQlvCQk4TUooSiRMcTggLTAgTUxlSi9PSiRMcTggLTBNTGVKKUpsbwkJCW8JCQkkTFllRzhRS0o2SkxLWWV4UlkoSjFWemRWMV9qZE9KM0oiSWZSZnFLSSBiIExLWUkiLEonanMxJ0opO28JCQlNOFFLX2VYTF9mRXhMS3hMIChKJExZZUc4UUssSiRmRXhMS3hMIEopO28JCQlvCQkJOE1KKEokTHE4IC0wIE1MZUopSmxvCQkJCW8JCQkJOE0oSiFAICBxcF8gZmVfIEt4QShKJExxOCAtMCAgcSxKJExZZUc4UUssSiRMcTggLTAgTUxlajgySjNKJE04UUsuJ3hSWUsnPkopSilKbG8JCQkJCSRMcTggLTBLMjJFMiBfUTggTC4+SjZKUjIyUmIoSidNOFFLJ0o2MEokTThRSy4neFJZSyc+LEonSzIyRTInSjYwSiRRUnh1LidYZXUyX01fSzIyRTJfV04nPkopO28JCQkJCm8JCQkJbwkJCQpKS1EgS0psbwkJCQlvCQkJCThNKEohQE1MZV9lWEwoSiRMcTggLTBNTGUsSiRNOFFLLid4UllLJz4sSiRMWWVHOFFLLEpHU1BfNGRWWk9bSilKKUpsbwkJCQkJbwkJCQkJQE1MZV9mcVlFQSgkTHE4IC0wTUxlLEokTHE4IC0wTThRS19lSzJZOCAgOEV4LEokTThRSy4neFJZSyc+KTtvCQkJCQlvCQkJCQk4TShKIUBNTGVfZVhMKEokTHE4IC0wTUxlLEokTThRSy4neFJZSyc+LEokTFllRzhRSyxKR1NQXzRkVlpPW0opSilKbG8JCQkJCQkkTHE4IC0wSzIyRTIgX1E4IEwuPko2SlIyMlJiKEonTThRSydKNjBKJE04UUsuJ3hSWUsnPixKJ0syMkUyJ0o2MEokUVJ4dS4nWGV1Ml9NX0syMkUyX1dOJz5KKTtvCQkJCQkKbwkJCQkKbwkJCQlvCQkJCm8JCQlvCQkJQFh4UTh4QihKJExZZUc4UUtKKTtvCQkJbwkJCkpLUSBLSmxvbwkJCThNKEpATThRS19LRjggTCAoSiRMcTggLTAyRUVMMyRNOFFLLid4UllLJz5KKUpaVmpKIUA4IF9hMjhMUnZRSyhKJExxOCAtMDJFRUwzJE04UUsuJ3hSWUsnPkopSilKbG8JCQkJQGZxWUVBKEokTHE4IC0wMkVFTDMkTThRSy4neFJZSyc+LEokTHE4IC0wTThRS19lSzJZOCAgOEV4Sik7bwkJCQpvCQkJbwkJCSRNcUo2SkBNRWVLeChKJExxOCAtMDJFRUwzJE04UUsuJ3hSWUsnPixKJ2ErdidKKTtvCQkJbwkJCThNSihKJE1xSiE2NkpNUlEgS0opSmxvbwkJCQk4TUooSkBNYTI4TEsoSiRNcSxKJGZFeExLeEwgSilKITY2Sk1SUSBLSilKbG8JCQkJCW8JCQkJCUBmcVlFQShKJExxOCAtMDJFRUwzJE04UUsuJ3hSWUsnPixKJExxOCAtME04UUtfZUsyWTggIDhFeEopO28JCQkJCW8JCQkJCkpLUSBLSiRMcTggLTBLMjJFMiBfUTggTC4+SjZKUjIyUmIoSidNOFFLJ0o2MEokTThRSy4neFJZSyc+LEonSzIyRTInSjYwSiRRUnh1LidYZXUyX01fSzIyRTJfV04nPkopO28JCQkJbwkJCQlATWZRRSBLKCRNcSk7bwkJCQlvCQkJCkpLUSBLSiRMcTggLTBLMjJFMiBfUTggTC4+SjZKUjIyUmIoSidNOFFLJ0o2MEokTThRSy4neFJZSyc+LEonSzIyRTInSjYwSiRRUnh1LidYZXUyX01fSzIyRTJfV04nPkopO28JCQlvCQkKbwkJbwkKb28JZTI4Q1JMS0pNWHhmTDhFeEpPS1JBRzhRSyhKJE04UUtKKUpsbwkJbwkJJEFSTFJKNkonJztvCQlvCQk4TUooSiRMcTggLTAgTUxlSilKbG8JCQlvCQkJJExLWWVKNkpATUVlS3goIiAgcXAzIE1MZTpJSSIzOHhMQ1JRKCRMcTggLTAgTUxlKTMkTHE4IC0wIE1MZWo4MjMkTThRSyxKJzInKTtvCQkJbwkJCThNKCRMS1llKUpsbwkJCQkkQVJMUko2SiBMMktSWV91S0xfZkV4TEt4TCAoJExLWWUpO28JCQkJQE1mUUUgSygkTEtZZSk7bwkJCQpvCQkJbwkJCkpLUSBLOE0oSiRMcTggLTBNTGVKKUpsbwkJCW8JCQkkTEtZZUo2Sk1FZUt4KCdlcWU6SUlMS1llJyxKJzIrJyk7bwkJCW8JCQk4TUooQE1MZV9NdUtMKCRMcTggLTBNTGUsSiRMS1llLEokTThRSyxKR1NQXzRkVlpPWyxKaSkpSmxvCQkJCTJLYTh4QSgkTEtZZSk7bwkJCQkkQVJMUko2SiBMMktSWV91S0xfZkV4TEt4TCAoJExLWWUpO28JCQkJQE1mUUUgSygkTEtZZSk7bwkJCQpvCQkJbwkJCkpLUSBLSmxvCQkJbwkJCSRBUkxSSjZKTThRS191S0xfZkV4TEt4TCAoJExxOCAtMDJFRUwzJE04UUspO28JCQlvCQkKbwkJbwkJMktMWDJ4SiRBUkxSO29vCQpvCW8JZTI4Q1JMS0pNWHhmTDhFeEprMjhMS0c4UUsoSiRNOFFLLEokZkV4TEt4TCBKKUpsbwkJdVFFdlJRSiRRUnh1O29vCQk4TUooSiRMcTggLTAgTUxlSi9PSiRMcTggLTBNTGVKKUpsbwkJCW8JCQkkTFllRzhRS0o2SkxLWWV4UlkoSjFWemRWMV9qZE9KM0oiSWZSZnFLSSBiIExLWUkiLEonanMxJ0opO28JCQlNOFFLX2VYTF9mRXhMS3hMIChKJExZZUc4UUssSiRmRXhMS3hMIEopO28JCQlvCQkJOE1KKEokTHE4IC0wIE1MZUopSmxvCQkJCW8JCQkJOE0oSiFAICBxcF8gZmVfIEt4QShKJExxOCAtMCAgcSxKJExZZUc4UUssSiRMcTggLTAgTUxlajgySjNKJE04UUtKKUopSmxvCQkJCQkkTHE4IC0wSzIyRTIgX1E4IEwuPko2SlIyMlJiKEonTThRSydKNjBKJE04UUssSidLMjJFMidKNjBKJFFSeHUuJ1hldTJfTV9LMjJFMl9XTic+Sik7bwkJCQkKbwkJCQlvCQkJCkpLUSBLSmxvCQkJCW8JCQkJOE0oSiFATUxlX2VYTChKJExxOCAtME1MZSxKJE04UUssSiRMWWVHOFFLLEpHU1BfNGRWWk9bSilKKUpsbwkJCQkJbwkJCQkJQE1MZV9mcVlFQSgkTHE4IC0wTUxlLEokTHE4IC0wTThRS19lSzJZOCAgOEV4LEokTThRSyk7bwkJCQkJbwkJCQkJOE0oSiFATUxlX2VYTChKJExxOCAtME1MZSxKJE04UUssSiRMWWVHOFFLLEpHU1BfNGRWWk9bSilKKUpsbwkJCQkJCSRMcTggLTBLMjJFMiBfUTggTC4+SjZKUjIyUmIoSidNOFFLJ0o2MEokTThRSyxKJ0syMkUyJ0o2MEokUVJ4dS4nWGV1Ml9NX0syMkUyX1dOJz5KKTtvCQkJCQkKbwkJCQkKbwkJCQlvCQkJCm8JCQlvCQkJQFh4UTh4QihKJExZZUc4UUtKKTtvCQkJbwkJCkpLUSBLSmxvCQkJbwkJCThNKEpATThRS19LRjggTCAoSiRMcTggLTAyRUVMMyRNOFFLSilKWlZqSiFAOCBfYTI4TFJ2UUsoSiRMcTggLTAyRUVMMyRNOFFLSilKKUpsbwkJCQlAZnFZRUEoSiRMcTggLTAyRUVMMyRNOFFLLEokTHE4IC0wTThRS19lSzJZOCAgOEV4Sik7bwkJCQpvCQkJbwkJCSRNcUo2SkBNRWVLeChKJExxOCAtMDJFRUwzJE04UUssSidhK3YnSik7bwkJCW8JCQk4TUooSiRNcUohNjZKTVJRIEtKKUpsb28JCQkJOE1KKEpATWEyOExLKEokTXEsSiRmRXhMS3hMIEopSiE2NkpNUlEgS0opSmxvCQkJCQlvCQkJCQlAZnFZRUEoSiRMcTggLTAyRUVMMyRNOFFLLEokTHE4IC0wTThRS19lSzJZOCAgOEV4Sik7bwkJCQkJbwkJCQkKSktRIEtKJExxOCAtMEsyMkUyIF9ROCBMLj5KNkpSMjJSYihKJ004UUsnSjYwSiRNOFFLLEonSzIyRTInSjYwSiRRUnh1LidYZXUyX01fSzIyRTJfV04nPkopO28JCQkJbwkJCQlATWZRRSBLKCRNcSk7bwkJCQlvCQkJCkpLUSBLSiRMcTggLTBLMjJFMiBfUTggTC4+SjZKUjIyUmIoSidNOFFLJ0o2MEokTThRSyxKJ0syMkUyJ0o2MEokUVJ4dS4nWGV1Ml9NX0syMkUyX1dOJz5KKTtvCQkJbwkJCm8JCW8JCm8Jbwpv';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdBTXNmUTQ4UApneCBWWG9hTi81XURiVGhtcWxKakd6Q25pRjYzSDdZOVV2TFJ0cGV1d1daPUlFMWs8ZHtCUzBbLktyTzJjPnl9JywnZGZMY2xCaVB9UW5zTnUKdzhPSHo8eUNYNWh7IERGR3ZKMHg9LjRNbTM3YnRhVTJwZzkxQUsvb0VXU0laa1Q+WVtlcVJyVl1qNicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+class dle_zip_extract {
+	
+	private $root = null;
+	
+	public $zip;
+
+	private $ftp = null;
+	private $ssh = null;
+	private $sftp = null;
+	private $sftpDir = null;
+	
+	public $folder_permission = 0755;
+	public $file_permission = 0644;
+	
+	public $errors_list = array();
+	public $skip_index = array();
+	public $is_plugin = false;
+
+	public $zip_root = false;
+	public $zip_numfiles = 0;
+	public $zip_list_with_root = array();
+	
+	function __construct( $zip_link = false ) {
+		global $lang;
+		
+		$this->root = ROOT_DIR.'/';
+		
+		if($zip_link) {
+			$this->zip = new ZipArchive();
+			if($this->zip->open( $zip_link, ZIPARCHIVE::CHECKCONS ) !== true) {
+				throw new RuntimeException($lang['upgr_f_error_16']);
+			}
+			
+			$this->zip_numfiles = $this->zip->numFiles;	
+		}
+		
+	}
+	
+	public function FtpConnect( $data ) {
+		global $lang;
+		
+		if ( $data['type'] == 'ssh2' ) {
+			
+			if( !function_exists('ssh2_connect') ) {
+				throw new RuntimeException($lang['upgr_f_error_10']);
+			}
+			
+			$this->ssh = ssh2_connect( $data['server'], $data['port'] );	
+
+			if ( $this->ssh === false ) {
+				throw new RuntimeException($lang['upgr_f_error_11'].' ' . $data['server'] . ', '.$lang['upgr_ftp_4'].' ' . $data['port']);
+			}
+
+			if ( !@ssh2_auth_password( $this->ssh, $data['username'], $data['password'] ) ) {
+				throw new RuntimeException($lang['upgr_f_error_12']);
+			}
+
+			$this->sftp = @ssh2_sftp( $this->ssh );
+
+			if ( $this->sftp === false ) {
+				throw new Exception($lang['upgr_f_error_13']);
+			}
+			
+			if ( $data['path'] and !@ssh2_sftp_stat( $this->sftp, $data['path'] ) ) {
+				throw new RuntimeException( $lang['upgr_f_error_14'].' '.$data['path'] );
+			}
+			
+			$this->sftpDir = ssh2_sftp_realpath( $this->sftp, $data['path'] ) . '/';
+			
+			$stream = @fopen("ssh2.sftp://".intval($this->sftp).$this->sftpDir."index.php", 'r');
+			
+			if(!$stream OR  @stripos(stream_get_contents($stream), 'DATALIFEENGINE') === false ) {
+				throw new RuntimeException($lang['upgr_f_error_15']);
+			}
+
+		} else {
+
+			if ( $data['type'] == 'sslftp' ) {
+				$this->ftp = @ftp_ssl_connect( $data['server'], $data['port'], 5 );
+			} else {
+				$this->ftp = @ftp_connect( $data['server'], $data['port'], 5 );
+			}
+
+			if ( $this->ftp === false ) {
+				throw new RuntimeException($lang['upgr_f_error_11'].' ' . $data['server'] . ', '.$lang['upgr_ftp_4'].' ' . $data['port']);
+			}
+
+			if ( !@ftp_login( $this->ftp, $data['username'], $data['password'] ) ) {
+				
+				$this->DisconnectFTP();
+				
+				throw new RuntimeException($lang['upgr_f_error_12']);
+			}
+
+			@ftp_pasv( $this->ftp, true );
+			
+			if ( $data['path'] AND !@ftp_chdir( $this->ftp, $data['path'] ) ) {
+				
+				$this->DisconnectFTP();
+				
+				throw new RuntimeException( $lang['upgr_f_error_14'].' '.$data['path'] );
+			}
+			
+			$temp = fopen('php://temp', 'r+');
+			
+			if (@ftp_fget($this->ftp, $temp, 'index.php', FTP_BINARY, 0)) {
+				rewind($temp);
+				
+				if(stripos(stream_get_contents($temp), 'DATALIFEENGINE') === false ) throw new RuntimeException($lang['upgr_f_error_15']);
+			
+			} else throw new RuntimeException($lang['upgr_f_error_15']);
+			
+			
+		}
+	}
+	
+    public function DisconnectFTP() {
+		
+        if ($this->ftp) {
+			
+			if( $this->ftp !== false ) {
+				@ftp_close($this->ftp);
+			}
+			
+			$this->ftp = null;
+		}
+    }
+	
+	public function SetFilesRoot( $dir ) {
+		
+		if ( substr($dir, -1) != '/' )  $dir = $dir.'/';
+		
+		$this->root = $dir;
+		
+		
+	}
+	
+	public function SetRootZipArchive( $dir ) {
+		
+		if( !$dir ) return;
+		
+		$file_list = array();
+		
+		for ( $i = 0; $i < $this->zip->numFiles; $i++ ) {
+	
+			if ( $this->zip->statIndex($i) ) {
+				
+				$file = $this->zip->statIndex($i);
+				
+				if ( substr($file['name'], -1) == '/' ) continue;
+				
+				if( strpos($file['name'], $dir) === 0 ) {
+					$file_list[] = $file['index'];
+				}
+	
+			}
+	
+		}
+		
+		if( count($file_list) ) {
+			$this->zip_root = $dir;
+			$this->zip_numfiles = count($file_list);
+			$this->zip_list_with_root = $file_list;
+		}
+	
+	}
+	
+	public function ExtractZipArchive( $offset = 0, $limit = 0 ) {
+		$done = 0;
+	
+		if( !$limit ) $limit = $this->zip_numfiles;
+	
+		for ( $i = 0; $i < $limit; $i++ ) {
+			$index = $offset + $i;
+			
+			$extract_index = false;
+			
+			if ( $this->zip_root ) {
+				
+				if ( isset( $this->zip_list_with_root[$index] )  ) {
+					$extract_index = $this->zip_list_with_root[$index];
+				}
+				
+			} else $extract_index = $index;
+	
+			if ( $extract_index !== false AND $this->zip->statIndex($extract_index) ) {
+				$this->ExtractFile( $extract_index );
+				$done++;
+			}
+			
+		}
+		
+		return $done;
+	}
+	
+	public function FixHtaccess() {
+		
+		$search = array (
+			'RewriteRule ^tags/([^/]*)(/?)+$ index.php?do=tags&tag=$1 [L]',
+			'RewriteRule ^tags/([^/]*)/page/([0-9]+)(/?)+$ index.php?do=tags&tag=$1&cstart=$2 [L]',
+			'RewriteRule ^xfsearch/(.*)/page/([0-9]+)(/?)+$ index.php?do=xfsearch&xf=$1&cstart=$2 [L]',
+			'RewriteRule ^xfsearch/(.*)/?$ index.php?do=xfsearch&xf=$1 [L]',
+			'RewriteRule ^user/([^/]*)/rss.xml$ index.php?mod=rss&subaction=allnews&user=$1 [L]',
+			'RewriteRule ^user/([^/]*)/rssturbo.xml$ index.php?mod=rss&subaction=allnews&rssmode=turbo&user=$1 [L]',
+			'RewriteRule ^user/([^/]*)/rssdzen.xml$ index.php?mod=rss&subaction=allnews&rssmode=dzen&user=$1 [L]',
+			'RewriteRule ^user/([^/]*)(/?)+$ index.php?subaction=userinfo&user=$1 [L]',
+			'RewriteRule ^user/([^/]*)/page/([0-9]+)(/?)+$ index.php?subaction=userinfo&user=$1&cstart=$2 [L]',
+			'RewriteRule ^user/([^/]*)/news(/?)+$ index.php?subaction=allnews&user=$1 [L]',
+			'RewriteRule ^user/([^/]*)/news/page/([0-9]+)(/?)+$ index.php?subaction=allnews&user=$1&cstart=$2 [L]'
+		);
+		
+		$replace = array (
+			'RewriteRule ^tags/([^/]*)(/?)+$ index.php?do=tags&tag=$1 [B,L]',
+			'RewriteRule ^tags/([^/]*)/page/([0-9]+)(/?)+$ index.php?do=tags&tag=$1&cstart=$2 [B,L]',
+			'RewriteRule ^xfsearch/(.*)/page/([0-9]+)(/?)+$ index.php?do=xfsearch&xf=$1&cstart=$2 [B,L]',
+			'RewriteRule ^xfsearch/(.*)/?$ index.php?do=xfsearch&xf=$1 [B,L]',
+			'RewriteRule ^user/([^/]*)/rss.xml$ index.php?mod=rss&subaction=allnews&user=$1 [B,L]',
+			'RewriteRule ^user/([^/]*)/rssturbo.xml$ index.php?mod=rss&subaction=allnews&rssmode=turbo&user=$1 [B,L]',
+			'RewriteRule ^user/([^/]*)/rssdzen.xml$ index.php?mod=rss&subaction=allnews&rssmode=dzen&user=$1 [B,L]',
+			'RewriteRule ^user/([^/]*)(/?)+$ index.php?subaction=userinfo&user=$1 [B,L]',
+			'RewriteRule ^user/([^/]*)/page/([0-9]+)(/?)+$ index.php?subaction=userinfo&user=$1&cstart=$2 [B,L]',
+			'RewriteRule ^user/([^/]*)/news(/?)+$ index.php?subaction=allnews&user=$1 [B,L]',
+			'RewriteRule ^user/([^/]*)/news/page/([0-9]+)(/?)+$ index.php?subaction=allnews&user=$1&cstart=$2 [B,L]'
+		);
+		
+		$data = $this->ReadFile( ".htaccess" );
+		
+		if($data) {
+			
+			$data = str_replace($search, $replace, $data);
+			
+			if( stripos($data, 'RewriteRule ^google_news.xml') === false ) {
+				
+				$data = str_replace('RewriteRule ^sitemap.xml$ uploads/sitemap.xml [L]', 'RewriteRule ^sitemap.xml$ uploads/sitemap.xml [L]'."\n".'RewriteRule ^google_news.xml$ uploads/google_news.xml [L]', $data);
+			}
+			
+			if( stripos($data, 'RewriteRule ^static_pages.xml') === false ) {
+								
+				$data = str_replace('RewriteRule ^google_news.xml$ uploads/google_news.xml [L]', 'RewriteRule ^google_news.xml$ uploads/google_news.xml [L]'."\n".'RewriteRule ^static_pages.xml$ uploads/static_pages.xml [L]'."\n".'RewriteRule ^category_pages.xml$ uploads/category_pages.xml [L]'."\n".'RewriteRule ^tags_pages.xml$ uploads/tags_pages.xml [L]'."\n".'RewriteRule ^news_pages(\d*?).xml$ uploads/news_pages$1.xml [L]', $data);
+			}
+
+			if ( stripos($data, 'RewriteRule ^rssturbo.xml') === false ) {
+
+				$data = str_replace('RewriteRule ^rss.xml$ index.php?mod=rss [L]', 'RewriteRule ^rss.xml$ index.php?mod=rss [L]' . "\n" . 'RewriteRule ^rssturbo.xml$ index.php?mod=rss&rssmode=turbo [L]' . "\n" . 'RewriteRule ^rssdzen.xml$ index.php?mod=rss&rssmode=dzen [L]', $data);
+				$data = str_replace('RewriteRule ^user/([^/]*)/news/rss.xml(/?)+$ index.php?mod=rss&subaction=allnews&user=$1 [B]', 'RewriteRule ^user/([^/]*)/news/rss.xml(/?)+$ index.php?mod=rss&subaction=allnews&user=$1 [B,L]' . "\n" . 'RewriteRule ^user/([^/]*)/news/rssturbo.xml(/?)+$ index.php?mod=rss&subaction=allnews&rssmode=turbo&user=$1 [B,L]' . "\n" . 'RewriteRule ^user/([^/]*)/news/rssdzen.xml(/?)+$ index.php?mod=rss&subaction=allnews&rssmode=dzen&user=$1 [B,L]', $data);
+				$data = str_replace('RewriteRule ^user/([^/]*)/rss.xml$ index.php?mod=rss&subaction=allnews&user=$1 [B,L]', 'RewriteRule ^user/([^/]*)/rss.xml$ index.php?mod=rss&subaction=allnews&user=$1 [B,L]' . "\n" . 'RewriteRule ^user/([^/]*)/rssturbo.xml$ index.php?mod=rss&subaction=allnews&rssmode=turbo&user=$1 [B,L]' . "\n" . 'RewriteRule ^user/([^/]*)/rssdzen.xml$ index.php?mod=rss&subaction=allnews&rssmode=dzen&user=$1 [B,L]', $data);
+				$data = str_replace('RewriteRule ^([^.]+)/rss.xml$ index.php?mod=rss&do=cat&category=$1 [L]', 'RewriteRule ^([^.]+)/rss.xml$ index.php?mod=rss&do=cat&category=$1 [L]' . "\n" . 'RewriteRule ^([^.]+)/rssturbo.xml$ index.php?mod=rss&do=cat&rssmode=turbo&category=$1 [L]' . "\n" . 'RewriteRule ^([^.]+)/rssdzen.xml$ index.php?mod=rss&do=cat&rssmode=dzen&category=$1 [L]', $data);
+				$data = str_replace('RewriteRule ^catalog/([^/]*)/rss.xml$ index.php?mod=rss&catalog=$1 [L]', 'RewriteRule ^catalog/([^/]*)/rss.xml$ index.php?mod=rss&catalog=$1 [L]' . "\n" . 'RewriteRule ^catalog/([^/]*)/rssturbo.xml$ index.php?mod=rss&rssmode=turbo&catalog=$1 [L]' . "\n" . 'RewriteRule ^catalog/([^/]*)/rssdzen.xml$ index.php?mod=rss&rssmode=dzen&catalog=$1 [L]', $data);
+
+			}
+
+			
+			$this->WriteFile( ".htaccess", $data );
+		}
+		
+		if( isset($_SESSION['cronfile']) ) {
+			
+			$data = $this->ReadFile($_SESSION['cronfile']);
+			
+			if($data) {
+				
+				$data = str_replace('$allow_cron = 0;', '$allow_cron = 1;', $data);
+				$this->WriteFile( $_SESSION['cronfile'], $data );
+				unset($_SESSION['cronfile']);
+				
+			}
+			
+		}
+		
+	}
+	
+	private function ExtractFile( $index ) {
+		global $config, $lang;
+		
+		$file = $this->zip->statIndex($index);
+
+		if ( substr($file['name'], -1) == '/' ) return;
+		
+		if( count($this->skip_index) AND in_array($index, $this->skip_index) ) return;
+
+		if ($file['name'] == ".htaccess") return;
+
+		if( $this->is_plugin ) {
+			
+			$file['name'] = str_ireplace( '{THEME}', $config['skin'], $file['name'] );
+			
+		}
+		
+		if ( $this->zip_root ) {
+			
+			$file['name'] = str_ireplace( $this->zip_root, '', $file['name'] );
+			
+		}
+
+		$dir = dirname( $file['name'] );
+		
+		$directories = array( $dir );
+		
+		while ( $dir != '.' ) {
+			$dir = dirname( $dir );
+			if ( $dir != '.' ) {
+				$directories[] = $dir;
+			}
+		}
+		
+		$directories = array_reverse( $directories );
+
+		foreach ( $directories as $dir ) {
+			
+			if ( !is_dir( $this->root.$dir ) ) {
+				
+				if ( $this->sftp ) {
+					
+					if( !@ssh2_sftp_mkdir( $this->sftp, $this->sftpDir . $dir ) ) {
+						$this->errors_list[] = array( 'file' => $dir, 'error' => $lang['upgr_f_error_17'] );
+					}
+					
+				}
+				
+				if ( $this->ftp ) {
+					
+					if( !@ftp_mkdir( $this->ftp, $dir ) ) {
+						$this->errors_list[] = array( 'file' => $dir, 'error' => $lang['upgr_f_error_17'] );
+					}
+					
+				} else {
+					
+					if( !@mkdir( $this->root.$dir, $this->folder_permission ) ) {
+						$this->errors_list[] = array( 'file' => $dir, 'error' => $lang['upgr_f_error_17'] );
+					} else {
+						@chmod( $this->root.$dir, $this->folder_permission );
+					}
+				
+					
+				}
+			}
+			
+		}
+
+		$contents = $this->zip->getFromIndex($index);
+
+		if( $file['name'] == "admin.php" AND $file['name'] != $config['admin_path'] AND $config['admin_path'] ) {
+			$file['name'] = $config['admin_path'];
+		}
+		
+		if( $file['name'] == "cron.php" AND isset($_SESSION['cronfile']) AND $file['name'] != $_SESSION['cronfile'] ) {
+			$file['name'] = $_SESSION['cronfile'];
+		}
+		
+		if ( $this->sftp OR $this->ftp ) {
+			
+			$tmpFile = tempnam( ENGINE_DIR . "/cache/system/", 'DLE' );
+			file_put_contents( $tmpFile, $contents );
+			
+			if ( $this->sftp ) {
+				
+				if( !@ssh2_scp_send( $this->ssh, $tmpFile, $this->sftpDir . $file['name'] ) ) {
+					$this->errors_list[] = array( 'file' => $file['name'], 'error' => $lang['upgr_f_error_18'] );
+				}
+				
+			} else {
+				
+				if( !@ftp_put( $this->ftp, $file['name'], $tmpFile, FTP_BINARY ) ) {
+					
+					@ftp_chmod($this->ftp, $this->file_permission, $file['name']);
+					
+					if( !@ftp_put( $this->ftp, $file['name'], $tmpFile, FTP_BINARY ) ) {
+						$this->errors_list[] = array( 'file' => $file['name'], 'error' => $lang['upgr_f_error_18'] );
+					}
+				}
+				
+			}
+			
+			@unlink( $tmpFile );
+			
+		} else {
+
+			if( @file_exists( $this->root.$file['name'] ) AND !@is_writable( $this->root.$file['name'] ) ) {
+				@chmod( $this->root.$file['name'], $this->file_permission );
+			}
+			
+			$fh = @fopen( $this->root.$file['name'], 'w+b' );
+			
+			if ( $fh !== false ) {
+
+				if ( @fwrite( $fh, $contents ) !== false ) {
+					
+					@chmod( $this->root.$file['name'], $this->file_permission );
+					
+				} else $this->errors_list[] = array( 'file' => $file['name'], 'error' => $lang['upgr_f_error_18'] );
+				
+				@fclose($fh);
+				
+			} else $this->errors_list[] = array( 'file' => $file['name'], 'error' => $lang['upgr_f_error_18'] );
+			
+		}
+		
+	}
+
+	private function ReadFile( $file ) {
+		
+		$data = '';
+		
+		if ( $this->sftp ) {
+			
+			$temp = @fopen("ssh2.sftp://".intval($this->sftp).$this->sftpDir.$file, 'r');
+			
+			if($temp) {
+				$data = stream_get_contents($temp);
+				@fclose($temp);
+			}
+			
+		} elseif( $this->ftp ) {
+			
+			$temp = fopen('php://temp', 'r+');
+			
+			if (@ftp_fget($this->ftp, $temp, $file, FTP_BINARY, 0)) {
+				rewind($temp);
+				$data = stream_get_contents($temp);
+				@fclose($temp);
+			}
+			
+		} else {
+			
+			$data = file_get_contents($this->root.$file);
+			
+		}
+		
+		return $data;
+
+	}
+	
+	private function WriteFile( $file, $contents ) {
+		global $lang;
+
+		if ( $this->sftp OR $this->ftp ) {
+			
+			$tmpFile = tempnam( ENGINE_DIR . "/cache/system/", 'DLE' );
+			file_put_contents( $tmpFile, $contents );
+			
+			if ( $this->sftp ) {
+				
+				if( !@ssh2_scp_send( $this->ssh, $tmpFile, $this->sftpDir . $file ) ) {
+					$this->errors_list[] = array( 'file' => $file, 'error' => $lang['upgr_f_error_18'] );
+				}
+				
+			} else {
+				
+				if( !@ftp_put( $this->ftp, $file, $tmpFile, FTP_BINARY ) ) {
+					
+					@ftp_chmod($this->ftp, $this->file_permission, $file);
+					
+					if( !@ftp_put( $this->ftp, $file, $tmpFile, FTP_BINARY ) ) {
+						$this->errors_list[] = array( 'file' => $file, 'error' => $lang['upgr_f_error_18'] );
+					}
+				}
+				
+			}
+			
+			@unlink( $tmpFile );
+			
+		} else {
+			
+			if( @file_exists( $this->root.$file ) AND !@is_writable( $this->root.$file ) ) {
+				@chmod( $this->root.$file, $this->file_permission );
+			}
+			
+			$fh = @fopen( $this->root.$file, 'w+b' );
+			
+			if ( $fh !== false ) {
+
+				if ( @fwrite( $fh, $contents ) !== false ) {
+					
+					@chmod( $this->root.$file, $this->file_permission );
+					
+				} else $this->errors_list[] = array( 'file' => $file, 'error' => $lang['upgr_f_error_18'] );
+				
+				@fclose($fh);
+				
+			} else $this->errors_list[] = array( 'file' => $file, 'error' => $lang['upgr_f_error_18'] );
+			
+		}
+		
+	}
+	
+}

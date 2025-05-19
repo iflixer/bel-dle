@@ -5,9 +5,301 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: logs.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: The list of actions in the admin panel
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P2EuP2RUZDh9KjhRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUThieFpbWm9ubTdibEQvbkQ3Yi1iTjBiSWdtW0g3WHNiazdNblpiM3lnUmRiOC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tOGJUW1tkczp9fU0yNy1EN1hzT3lSfTgtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLThiUGdkMHluL1RbYihZKWJyY2NVLXJjcjZiSWdtW0g3WHNiazdNblpiM3lnUmQ4UVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVE4YjxUbnNiWWdNN2Juc2JkeWdbN1lbN01iTjBiWWdkMHluL1RbOFFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFROGJLbjI3OmIyZy9zT2RUZDgtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLThiNHM3OmI8VDdiMm5zW2JnbWJaWVtuZ0RzYm5EYltUN2JaTWhuRGJkWkQ3MjhRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUTgqfThubShiIU03bW5EN00oYid4ZTxlb3RLbGxIM3RIbCdiKWIgRmIhTTdtbkQ3TShiJ28gMzNseF90SCdiKWIpYns4CVQ3Wk03eShiIlY8PFd9dU91YlVjdmJLZ3lObk1NN0QiYik7OAlUN1pNN3liKGInb2dZWltuZ0Q6Yk9PfU9PfSdiKTs4CU1uNyhiIlZaWUFuRC9iWltbN2hkWyEiYik7OHA4OG5tKGIkaDdoTjd5X25NUydSczd5Xy95Z1JkJ11iIVFidWIpYns4CWhzLyhiIjd5eWd5IixiJDJaRC9TJ1pNTUQ3WHNfTTdEbjdNJ10sYiQyWkQvUydNTl9NN0RuN00nXWIpOzhwODg4bm1iKGJtbjI3XzdpbnNbcyhieG9sVzJSL25Eczo6UFQ3WUEoRiAgPF94dEZiT2InfTJaRC9SWi83fSdiT2IkczcyN1lbN01fMlpEL1JaLzdiT2InfVpNaG5EMmcvc08yRC8nKWIpYiliezgJeTdxUm55N19nRFk3Yih4b2xXMlIvbkRzOjpQVDdZQShGICA8X3h0RmJPYid9MlpEL1JaLzd9J2JPYiRzNzI3WVs3TV8yWkQvUlovN2JPYid9Wk1obkQyZy9zTzJELycpKTs4cDg4bm1iKG5zczdbKCRfRmw+NGxJPFMnczdaeVlUWGd5TSddKWJlSHhiJF9GbD40bEk8UydzN1p5WVRYZ3lNJ10pYns4CWJiOAkkczdaeVlUWGd5TWJRYlJ5Mk03WWdNN2IoYiRfRmw+NGxJPFMnczdaeVlUWGd5TSddYik7OAliYjgJbm0oYkBkeTcvX2haW1lUKGIifVNcfHxcLnxcYXxcInxcIXxcP3xcJHxcQHxcfXxcXFx8XCZcflwqXCtdfSIsYiRzN1p5WVRYZ3lNYiliKWIkczdaeVlUWGd5TWJRYiIiOzgJNzJzN2IkczdaeVlUWGd5TWJRYlRbaDJzZDdZbloyWVRaeXMoYnNbeW5kX1taL3MoYnNbeW5kczJac1Q3cyhiW3luaChiJHM3WnlZVFhneU1iKWIpYiksYmxIPF9QIGtXZTwsYic0PEstdydiKTs4CWJiOHBiNzJzN2IkczdaeVlUWGd5TWJRYiIiOzgJOCRzW1p5W19teWdoYlFibnNzN1soJF9GbD40bEk8UydzW1p5W19teWdoJ10pYj9ibkRbSloyKGIkX0ZsPjRsSTxTJ3NbWnlbX215Z2gnXWIpYjpiYzs4JFlnRG1uL1MnWk1obkQyZy9faFppTVowcyddYlFibkRbSloyKCRZZ0Rtbi9TJ1pNaG5EMmcvX2haaU1aMHMnXSk7OCREN1hzX2Q3eV9kWi83YlFiNmM7ODhubShiJHNbWnlbX215Z2hiLmJjYiliJHNbWnlbX215Z2hiUWJjOzhubSgkWWdEbW4vUydaTWhuRDJnL19oWmlNWjBzJ11iLmJ2Y2IpYiRZZ0Rtbi9TJ1pNaG5EMmcvX2haaU1aMHMnXWJRYnZjOzg4JFtUbnNNWls3YlFiJF88dGtsYi1iKCRZZ0Rtbi9TJ1pNaG5EMmcvX2haaU1aMHMnXWIqYnZCY2NiKmJyVSk7ODgkTU4tYXFSN3kwKGIieGxvbDxsYktGIGtiImJPYjRJbEZXRmxLdDliT2IiX1pNaG5EXzJnL3NielZsRmxiTVpbN2IuYid7JFtUbnNNWls3cCciYik7ODg3WVRnVDdaTTd5KGIiLm5iWTJac3NRXCJtWmJtWi0vMmdON2JkZ3NuW25nRC0yN21bXCJhLn1uYS5zZFpEYlkyWnNzUVwiWzdpWy1zN2huTmcyTVwiYXskMlpEL1MnZ2RbXzJnL3MnXXAufXNkWkRhIixiJDJaRC9TJ1Q3Wk03eV8yZy9fdSddYmIpOzg4JGg3RFJfWllbbko3YlFiImJZMlpzc1FcIlpZW25KN1wiIjs4JGg3RFJfWllbbko3X1pSW1RiUWIiIjs4OG5tKGIkWllbbmdEYlFRYiJaUltUIiliezgJJDJaRC9TJ2dkW18yZy9zWSddYlFiJDJaRC9TJ1pNaG5EXzJnL3NfWlJbVCddOzgJJGg3RFJfWllbbko3X1pSW1RiUWIiYlkyWnNzUVwiWllbbko3XCIiOzgJJGg3RFJfWllbbko3YlFiIiI7OHA4OAk3WVRnYi4uLlY8a284LnNZeW5kW2E4LiEtLTg4bVJEWVtuZ0RiczdaeVlUX3NSTmhuWyhkeWgpezgJTWdZUmg3RFtPRFpKbk9zW1p5W19teWdoT0paMlI3UWR5aDs4CU1nWVJoN0RbT0RaSm5Pc1JOaG5bKCk7OAl5N1tSeURibVoyczc7OHA4OH19LS1hOC59c1l5bmRbYTguTW5KYlkyWnNzUSJEWkpOWnliRFpKTlp5LU03bVpSMltiRFpKTlp5LVlnaGRnRDdEW2JEWkpOWnktaXMiYnNbMDI3USJMLW5ETTdpOmJuRFQ3eW5bOyJhOAkuUjJiWTJac3NRIkRaSmJEWkpOWnktRFpKYkpuc25OMjctaXMtTjJnWUEiYTgJCS4ybmJZMlpzc1EibVIyMi1Ybk1bVGJbN2lbLVk3RFs3eSJhLlpiTVpbWi1bZy8vMjdRIllnMjJaZHM3ImJNWltaLVtaeS83W1EiI0RaSk5aeS1tbjJbN3kiYS5uYlkyWnNzUSJtWmJtWi1OWnlzImEufW5hLn1aYS59Mm5hOAkufVIyYTgJLk1uSmJZMlpzc1EiRFpKTlp5LVlnMjJaZHM3YllnMjJaZHM3ImJuTVEiRFpKTlp5LW1uMls3eSJhOAkJLlIyYlkyWnNzUSJEWkpiRFpKTlp5LURaSiJhOAkJCS4ybnskaDdEUl9aWVtuSjdwYS5aYlR5N21RIj9oZ01RMmcvcyJiWTJac3NRIltuZCJiW25bMjdRInskMlpEL1MnWk1obkRfMmcvc19aMjInXXAiYS5uYlkyWnNzUSJtWmJtWi0vMmdON2JkZ3NuW25nRC0yN21bImEufW5heyQyWkQvUydaTWhuRF8yZy9zX1oyMiddcC59WmEufTJuYTgJCQkuMm57JGg3RFJfWllbbko3X1pSW1RwYS5aYlR5N21RIj9oZ01RMmcvcyZaWVtuZ0RRWlJbVCJiWTJac3NRIltuZCJiW25bMjdRInskMlpEL1MnWk1obkRfMmcvc19aUltUJ11wImEubmJZMlpzc1EibVpibVotMmdZQWJkZ3NuW25nRC0yN21bImEufW5heyQyWkQvUydaTWhuRF9zVF9aUltUJ11wLn1aYS59Mm5hOAkJLn1SMmE4CS59TW5KYTgufU1uSmE4OC5tZ3loYlpZW25nRFEiP2hnTVEyZy9zImJoN1tUZ01RIi83WyJiRFpoN1EiRFpKbiJibk1RIkRaSm4iYTgubkRkUltiWzBkN1EiVG5NTTdEImJEWmg3USJoZ00iYkpaMlI3USIyZy9zImE4Lm5EZFJbYlswZDdRIlRuTU03RCJiRFpoN1EiWllbbmdEImJKWjJSN1EieyRaWVtuZ0RwImE4Lm5EZFJbYlswZDdRIlRuTU03RCJiRFpoN1Eic1taeVtfbXlnaCJibk1RInNbWnlbX215Z2giYkpaMlI3USJ7JHNbWnlbX215Z2hwImE4Lk1uSmJZMlpzc1EiZFpENzJiZFpENzItTTdtWlIyWyJhOGJiLk1uSmJZMlpzc1EiZFpENzItVDdaTW5ELyJhOGJiYmJ7JDJaRC9TJ2dkW18yZy9zWSddcDgJLk1uSmJZMlpzc1EiVDdaTW5ELy03MjdoN0RbcyJhOAkJLk1uSmJZMlpzc1EibWd5aC0veWdSZGJUWnMtbTc3TU5aWUEiYnNbMDI3USJYbk1bVDpyNmNkaTsiYTgJCQkubkRkUltiRFpoN1EiczdaeVlUWGd5TSJiWzBkN1EiczdaeVlUImJNbnlRIlpSW2ciYlkyWnNzUSJtZ3loLVlnRFt5ZzIiYmQyWlk3VGcyTTd5USJ7JDJaRC9TJ3M3WnlZVF9tbjcyTSddcCJiZ0RZVFpELzdRIk1nWVJoN0RbT0RaSm5Pc1taeVtfbXlnaE9KWjJSN1FjOyJiSloyUjdRInskczdaeVlUWGd5TXAiYTgJCQkuTW5KYlkyWnNzUSJtZ3loLVlnRFt5ZzItbTc3TU5aWUEiYTgJCQliYmJiLlpiVHk3bVEiIyJiZ0RZMm5ZQVEiJChbVG5zKU9ZMmdzN3NbKCdtZ3loJylPc1JOaG5bKCk7ImEubmJZMlpzc1EibVpibVotczdaeVlUYls3aVstc25MNy1OWnM3Yls3aVstaFJbN00iYS59bmEufVphOAkJCS59TW5KYTgJCS59TW5KYTgJLn1NbkphOGJiLn1NbkphOGJiLk1uSmJZMlpzc1EiW1pOMjcteTdzZGdEc25KNyJhOGJiYmIuW1pOMjdiWTJac3NRIltaTjI3YltaTjI3LWlzYltaTjI3LXNbeW5kN01iW1pOMjctVGdKN3kiYThiYmJiYmIuW1Q3Wk1hOGJiYmJiYi5beWE4YmJiYmJiYmIuW1RheyQyWkQvUydaTU1EN1hzX01aWzcnXXAufVtUYThiYmJiYmJiYi5bVGF7JDJaRC9TJ1JzN3lfRFpoNyddcC59W1RhOGJiYmJiYmJiLltUYXRXOi59W1RhOGJiYmJiYmJiLltUYXskMlpEL1MnUnM3eV9aWVtuZ0QnXXAufVtUYThiYmJiYmIufVt5YThiYmJiYmIufVtUN1pNYTgJYmIuW05nTTBhOFY8a287ODgJbm0oYiEkMlpEL21neWhaW01aWzdtUjIyYiliJDJaRC9tZ3loWltNWls3bVIyMmJRYiJNT2hPMWJWOm46cyI7OAlubShiISQyWkQvbWd5aFpbTVpbN2IpYiQyWkQvbWd5aFpbTVpbN2JRYiJNT2hPMSI7ODgJbm1iKGIkczdaeVlUWGd5TWIpYns4OAkJJHM3WnlZVFhneU1iUWJAJE1OLWFzWm03c3EyKCRzN1p5WVRYZ3lNKTs4CQkkTVpbN2JRYk1aWzdfWXk3Wls3X215Z2hfbWd5aFpbKCQyWkQvbWd5aFpbTVpbNyxiJHM3WnlZVFhneU0pOzgJCTgJCW5tKGIkTVpbN2IpYns4CQkJJE1aWzdiUWJNWls3X1tuaDdfczdbKCRNWls3LGJjLGJjLGJjKTs4CQkJJHNbWnlbTVpbN2JRYk1aWzdfW25oN3NbWmhkXy83W2IoYiRNWls3Yik7OAkJCSQ3RE1NWls3YlFiTVpbN19bbmg3c1taaGRfLzdbYihiTVpbN19oZ01ubTAoJE1aWzcsYicrdWJNWjAnKWIpOzgJCQkkWFQ3eTdTXWJRYiJNWls3YmFRYid7JHNbWnlbTVpbN3AnYmVIeGJNWls3Yi5RYid7JDdETU1aWzdwJyI7ODgJCXBiNzJzN2J7OAkJCTgJCQkkWllbbmdEX1lnUkRbUVp5eVowKCk7OAkJCTgJCQlubShZZ1JEWygkMlpEL18yZy9zKSliezgJCQkJbWd5N1pZVCgkMlpEL18yZy9zYlpzYiRBNzBiUWFiJEpaMlI3KWJ7OAkJCQkJbm1iKGhOX3NbeW5kZ3MoJEpaMlI3LGIkczdaeVlUWGd5TSxiYyxiJzQ8Sy13JyliIVFRYm1aMnM3KWJ7OAkJCQkJCSRaWVtiUWJuRFtKWjIoc1t5X255N2QyWlk3KCJaTWhuRF8yZy9zX1pZW25nRF8iLCIiLGIkQTcwKSk7OAkJCQkJCW5tKCRaWVspYiRaWVtuZ0RfWWdSRFtTXWJRYiRaWVs7OAkJCQkJcDgJCQkJcDgJCQlwOAkJCTgJCQlubShZZ1JEWygkWllbbmdEX1lnUkRbKSliezgJCQkJOAkJCQkkWllbbmdEXzJuc1tzYlFiImIgRmJaWVtuZ0RiUSciT25oZDJnTTcoIidiIEZiWllbbmdEYlEnIixiJFpZW25nRF9ZZ1JEWylPIiciOzgJCQkJOAkJCXBiNzJzN2IkWllbbmdEXzJuc1tzUSIiOzg4CQkJJFhUN3k3U11iUWIiKERaaDdiMm5BN2InJSRzN1p5WVRYZ3lNJSdiIEZibmRiMm5BN2InJSRzN1p5WVRYZ3lNJSdiIEZiN2lbeVpzYjJuQTdiJyUkczdaeVlUWGd5TSUneyRNWls3cCRaWVtuZ0RfMm5zW3MpIjs4CQlwOAlwODgJbm0oYiRaWVtuZ0RiUVFiIlpSW1QiKWJ7ODgJCSRYVDd5N1NdYlFiIihaWVtuZ0RiUSd3RydiIEZiWllbbmdEYlEnR2MnYiBGYlpZW25nRGJRJ0d1J2IgRmJaWVtuZ0RiUSdHcidiIEZiWllbbmdEYlEnR0cnKSI7ODgJcGI3MnM3Yns4OAkJJFhUN3k3U11iUWIiKFpZW25nRGIhUSd3RydiZUh4YlpZW25nRGIhUSdHYydiZUh4YlpZW25nRGIhUSdHdSdiZUh4YlpZW25nRGIhUSdHcidiZUh4YlpZW25nRGIhUSdHRycpIjs4CXA4CTgJJFhUN3k3YlFibmhkMmdNNygiYmVIeGIiLGIkWFQ3eTcpOzg4CSRNTi1hcVI3eTAoYiJJbG9sUDxiKmJLRiBrYiJiT2I0SWxGV0ZsS3Q5Yk9iIl9aTWhuRF8yZy9zYnpWbEZsYnskWFQ3eTdwYiBGeGxGYkMxYk1aWzdieGxJUGJvdGt0PGJ7JHNbWnlbX215Z2hwLHskRDdYc19kN3lfZFovN3AiYik7ODgJJDdEW3luN3NiUWIiIjs4CTgJJG5iUWIkc1taeVtfbXlnaDs4CVhUbjI3YihiJHlnWGJRYiRNTi1hLzdbX1p5eVowKCliKWJ7OAkJJG5iKys7ODgJCSR5Z1hTJ01aWzcnXWJRYk1aWzcoYiQyWkQvbWd5aFpbTVpbN21SMjIsYiR5Z1hTJ01aWzcnXWIpOzgJCSRzW1pbUnNiUWIkMlpEL18yZy9zUyJaTWhuRF8yZy9zX1pZW25nRF8iTyR5Z1hTJ1pZW25nRCddXTs4OAkJJDdEW3luN3NiT1FiIjhiYmJiYmJiYi5beWE4YmJiYmJiYmIuW01iWTJac3NRXCJbN2lbLURnWHlaZFwiYXskeWdYUydNWls3J11wLn1bTWE4YmJiYmJiYmIuW01iWTJac3NRXCJbN2lbLURnWHlaZFwiYS5aYlR5N21RXCI/aGdNUTdNbltSczd5cyZaWVtuZ0RRN01uW1JzN3kmUnM3eVEiT1J5MjdEWWdNNygkeWdYUydEWmg3J10pTyJcImJbWnkvN1tRXCJfTjJaREFcImF7JHlnWFMnRFpoNyddcC59WmEufVtNYThiYmJiYmJiYi5bTWF7JHlnWFMnbmQnXXAufVtNYThiYmJiYmJiYi5bTWJzWzAyN1FcIlhneU0tTnk3WkE6Yk55N1pBLVoyMjtcImF7JHNbWltSc3BiLk5hIk9zW3luZHMyWnNUN3MoJHlnWFMnN2lbeVpzJ10pTyIufU5hLn1bTWE4YmJiYmJiYmIufVt5YSI7OAlwODgJbm0oYiEkN0RbeW43c2IpYns4CQk3WVRnYiIuW3lhLltNYllnMnNkWkRRXCJVXCJiWjJuL0RRXCJZN0RbN3lcImEuTnlifWEuTnlifWEiYk9iJDJaRC9TJzJnL3NfRGdbX21nUkRNJ11iT2IiLk55Yn1hLk55Yn1hLk55Yn1hLn1bTWEufVt5YSI7OAlwYjcyczdiezgJCTdZVGdiJDdEW3luN3M7OAlwODg4CSRNTi1hbXk3NygpOzg4CSR5N3NSMltfWWdSRFtiUWIkTU4tYXNSZDd5X3FSN3kwKCJJbG9sUDxiUCA0SDwoKiliWnNiWWdSRFtiS0Yga2IiYk9iV0ZsS3Q5Yk9iIl9aTWhuRF8yZy9zYnpWbEZsYnskWFQ3eTdwIik7OAkkWjIyX1lnUkRbX0Q3WHNiUWIkeTdzUjJbX1lnUkRbUydZZ1JEWyddOzg4CQl9fWJkWi9uRFpbbmdEODgJCSREZGRfRFpKYlFiIiI7OAkJOAkJbm0oYiRaMjJfWWdSRFtfRDdYc2JhYiREN1hzX2Q3eV9kWi83Yiliezg4CQkJbm0oYiRzW1p5W19teWdoYmFiY2IpYns4CQkJCSRkeTdKbmdSc2JRYiRzW1p5W19teWdoYi1iJEQ3WHNfZDd5X2RaLzc7OAkJCQkkRGRkX0RaSmJPUWIiLjJuYS5aYmdEWTJuWUFRXCIKWkpac1l5bmRbOnM3WnlZVF9zUk5oblsoJGR5N0puZ1JzKTtieTdbUnlEKG1aMnM3KTtcImJUeTdtUVwiI1wiYltuWzI3UVwieyQyWkQvUyc3TW5bX2R5N0onXXBcImEmMls7JjJbOy59WmEufTJuYSI7OAkJCXA4CQk4CQkJJDdEZFovN3NfWWdSRFtiUWJAWTduMihiJFoyMl9ZZ1JEW19EN1hzYn1iJEQ3WHNfZDd5X2RaLzdiKTs4CQkJJDdEZFovN3Nfc1taeVtfbXlnaGJRYmM7OAkJCSQ3RGRaLzdzYlFiIiI7OAkJCTgJCQlubShiJDdEZFovN3NfWWdSRFtiLlFidWNiKWJ7OAkJCQk4CQkJCW1neSgkCmJRYnU7YiQKYi5RYiQ3RGRaLzdzX1lnUkRbO2IkCmIrKyliezgJCQkJCTgJCQkJCW5tKGIkN0RkWi83c19zW1p5W19teWdoYiFRYiRzW1p5W19teWdoYiliezgJCQkJCQk4CQkJCQkJJDdEZFovN3NiT1FiIi4ybmEuWmJnRFkybllBUVwiClpKWnNZeW5kWzpzN1p5WVRfc1JOaG5bKCQ3RGRaLzdzX3NbWnlbX215Z2gpO2J5N1tSeUQobVoyczcpO1wiYlR5N21RXCIjXCJhJAoufVphLn0ybmEiOzgJCQkJCTgJCQkJCXBiNzJzN2J7OAkJCQkJCTgJCQkJCQkkN0RkWi83c2JPUWIiLjJuYlkyWnNzUVwiWllbbko3XCJhLnNkWkRhJAoufXNkWkRhLn0ybmEiOzgJCQkJCXA4CQkJCQk4CQkJCQkkN0RkWi83c19zW1p5W19teWdoYitRYiREN1hzX2Q3eV9kWi83OzgJCQkJcDgJCQkJOAkJCQkkRGRkX0RaSmJPUWIkN0RkWi83czs4CQkJOAkJCXBiNzJzN2J7OAkJCQk4CQkJCSRzW1p5W2JRYnU7OAkJCQkkN0RNYlFidWM7OAkJCQk4CQkJCW5tKGIkc1taeVtfbXlnaGJhYmNiKWJ7OAkJCQkJOAkJCQkJbm0oYigkc1taeVtfbXlnaGJ9YiREN1hzX2Q3eV9kWi83KWJhYlViKWJ7OAkJCQkJCTgJCQkJCQkkc1taeVtiUWJAWTduMihiJHNbWnlbX215Z2hifWIkRDdYc19kN3lfZFovN2IpYi1idjs4CQkJCQkJJDdETWJRYiRzW1p5W2IrYkc7OAkJCQkJCTgJCQkJCQlubShiJDdETWJhYiQ3RGRaLzdzX1lnUkRbYiliezgJCQkJCQkJJHNbWnlbYlFiJDdEZFovN3NfWWdSRFtiLWJ1Yzs4CQkJCQkJCSQ3RE1iUWIkN0RkWi83c19ZZ1JEW2ItYnU7OAkJCQkJCXA4CQkJCQkJOAkJCQkJCSQ3RGRaLzdzX3NbWnlbX215Z2hiUWIoJHNbWnlbYi1idSliKmIkRDdYc19kN3lfZFovNzs4CQkJCQk4CQkJCQlwOAkJCQk4CQkJCXA4CQkJCTgJCQkJbm0oYiRzW1p5W2JhYnJiKWJ7OAkJCQkJOAkJCQkJJDdEZFovN3NiT1FiIi4ybmEuWmJnRFkybllBUVwiClpKWnNZeW5kWzpzN1p5WVRfc1JOaG5bKGMpO2J5N1tSeUQobVoyczcpO1wiYlR5N21RXCIjXCJhdS59WmEufTJuYWIuMm5hLnNkWkRhT09PLn1zZFpEYS59Mm5hIjs4CQkJCTgJCQkJcDgJCQkJOAkJCQltZ3koJApiUWIkc1taeVs7YiQKYi5RYiQ3RE07YiQKYisrKWJ7OAkJCQkJOAkJCQkJbm0oYiQ3RGRaLzdzX3NbWnlbX215Z2hiIVFiJHNbWnlbX215Z2hiKWJ7OAkJCQkJCTgJCQkJCQkkN0RkWi83c2JPUWIiLjJuYS5aYmdEWTJuWUFRXCIKWkpac1l5bmRbOnM3WnlZVF9zUk5oblsoJDdEZFovN3Nfc1taeVtfbXlnaCk7Ynk3W1J5RChtWjJzNyk7XCJiVHk3bVFcIiNcImEkCi59WmEufTJuYSI7OAkJCQkJOAkJCQkJcGI3MnM3Yns4CQkJCQkJOAkJCQkJCSQ3RGRaLzdzYk9RYiIuMm5iWTJac3NRXCJaWVtuSjdcImEuc2RaRGEkCi59c2RaRGEufTJuYSI7OAkJCQkJcDgJCQkJCTgJCQkJCSQ3RGRaLzdzX3NbWnlbX215Z2hiK1FiJEQ3WHNfZDd5X2RaLzc7OAkJCQlwOAkJCQk4CQkJCSQ3RGRaLzdzX3NbWnlbX215Z2hiUWIoJDdEZFovN3NfWWdSRFtiLWJ1KWIqYiREN1hzX2Q3eV9kWi83OzgJCQkJJDdEZFovN3NiT1FiIi4ybmEuc2RaRGFPT08ufXNkWkRhLn0ybmEuMm5hLlpiZ0RZMm5ZQVFcIgpaSlpzWXluZFs6czdaeVlUX3NSTmhuWygkN0RkWi83c19zW1p5W19teWdoKTtieTdbUnlEKG1aMnM3KTtcImJUeTdtUVwiI1wiYSQ3RGRaLzdzX1lnUkRbLn1aYS59Mm5hIjs4CQkJCTgJCQkJJERkZF9EWkpiT1FiJDdEZFovN3M7OAkJCTgJCQlwODgJCQlubShiJFoyMl9ZZ1JEW19EN1hzYmFiJG5iKWJ7OAkJCQkkVGdYX0Q3aVtiUWIkWjIyX1lnUkRbX0Q3WHNiLWIkbjs4CQkJCW5tKGIkVGdYX0Q3aVtiYWIkRDdYc19kN3lfZFovN2IpYns4CQkJCQkkVGdYX0Q3aVtiUWIkRDdYc19kN3lfZFovNzs4CQkJCXA4CQkJCSREZGRfRFpKYk9RYiIuMm5hLlpiZ0RZMm5ZQVFcIgpaSlpzWXluZFs6czdaeVlUX3NSTmhuWygkbik7Ynk3W1J5RChtWjJzNyk7XCJiVHk3bVFcIiNcImJbblsyN1FcInskMlpEL1MnN01uW19EN2lbJ11wXCJhJi9bOyYvWzsufVphLn0ybmEiOzgJCQlwOAkJCTgJCQkkRGRkX0RaSmJRYiIuUjJiWTJac3NRXCJkWi9uRFpbbmdEYmRaL25EWltuZ0Qtc2hcImEiTyREZGRfRFpKTyIufVIyYSI7OAkJOAkJcDgJCTgJCX19YmRaL25EWltuZ0Q4CTgJN1lUZ2IuLi5WPGtvOC59W05nTTBhLn1bWk4yN2E4OAkufU1uSmE4Ln1NbkphOC5NbkpiWTJac3NRImhOLXJjImE4CXskRGRkX0RaSnA4Ln1NbkphOC59bWd5aGE4Vjxrbzs4ODdZVGdtZ2dbN3koKTs4P2E=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdkMkZtdHhJekpvRE4xTFBscldnNDdpCkhwM1puIEJ2OEF5UzxxYWJRQ2g1Ll1NNlI9e1lFOWtjWH0wTy9mW3NVanV3PlZLR1RlJywncGxSZklEU1d2TG5iWXpDRTJQb1VleGpOfUdhaU82MwprcltUcT4gPUJtSjxdZDV1N3tjWlhNMHcveS5nVnRzNEsxOFFIRjloQScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( $member_id['user_group'] != 1 ) {
+	msg( "error", $lang['addnews_denied'], $lang['db_denied'] );
+}
+
+
+if ( file_exists( DLEPlugins::Check(ROOT_DIR . '/language/' . $selected_language . '/adminlogs.lng') ) ) {
+	require_once (DLEPlugins::Check(ROOT_DIR . '/language/' . $selected_language . '/adminlogs.lng'));
+}
+
+if (isset($_REQUEST['searchword']) AND $_REQUEST['searchword']) {
+	  
+	$searchword = urldecode ( $_REQUEST['searchword'] );
+	  
+	if( @preg_match( "/[\||\<|\>|\"|\!|\?|\$|\@|\/|\\\|\&\~\*\+]/", $searchword ) ) $searchword = "";
+	else $searchword = htmlspecialchars( strip_tags( stripslashes( trim( $searchword ) ) ), ENT_COMPAT, 'UTF-8' );
+	  
+} else $searchword = "";
+	
+$start_from = isset($_REQUEST['start_from']) ? intval( $_REQUEST['start_from'] ) : 0;
+$config['adminlog_maxdays'] = intval($config['adminlog_maxdays']);
+$news_per_page = 50;
+
+if( $start_from < 0 ) $start_from = 0;
+if($config['adminlog_maxdays'] < 30 ) $config['adminlog_maxdays'] = 30;
+
+$thisdate = $_TIME - ($config['adminlog_maxdays'] * 3600 * 24);
+
+$db->query( "DELETE FROM " . USERPREFIX . "_admin_logs WHERE date < '{$thisdate}'" );
+
+echoheader( "<i class=\"fa fa-globe position-left\"></i><span class=\"text-semibold\">{$lang['opt_logs']}</span>", $lang['header_log_1']  );
+
+$menu_active = " class=\"active\"";
+$menu_active_auth = "";
+
+if( $action == "auth") {
+	$lang['opt_logsc'] = $lang['admin_logs_auth'];
+	$menu_active_auth = " class=\"active\"";
+	$menu_active = "";
+}
+
+	echo <<<HTML
+<script>
+<!--
+
+function search_submit(prm){
+	document.navi.start_from.value=prm;
+	document.navi.submit();
+	return false;
+}
+
+//-->
+</script>
+<div class="navbar navbar-default navbar-component navbar-xs" style="z-index: inherit;">
+	<ul class="nav navbar-nav visible-xs-block">
+		<li class="full-width text-center"><a data-toggle="collapse" data-target="#navbar-filter"><i class="fa fa-bars"></i></a></li>
+	</ul>
+	<div class="navbar-collapse collapse" id="navbar-filter">
+		<ul class="nav navbar-nav">
+			<li{$menu_active}><a href="?mod=logs" class="tip" title="{$lang['admin_logs_all']}"><i class="fa fa-globe position-left"></i>{$lang['admin_logs_all']}</a></li>
+			<li{$menu_active_auth}><a href="?mod=logs&action=auth" class="tip" title="{$lang['admin_logs_auth']}"><i class="fa fa-lock position-left"></i>{$lang['admin_sh_auth']}</a></li>
+		</ul>
+	</div>
+</div>
+
+<form action="?mod=logs" method="get" name="navi" id="navi">
+<input type="hidden" name="mod" value="logs">
+<input type="hidden" name="action" value="{$action}">
+<input type="hidden" name="start_from" id="start_from" value="{$start_from}">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['opt_logsc']}
+	<div class="heading-elements">
+		<div class="form-group has-feedback" style="width:250px;">
+			<input name="searchword" type="search" dir="auto" class="form-control" placeholder="{$lang['search_field']}" onchange="document.navi.start_from.value=0;" value="{$searchword}">
+			<div class="form-control-feedback">
+			    <a href="#" onclick="$(this).closest('form').submit();"><i class="fa fa-search text-size-base text-muted"></i></a>
+			</div>
+		</div>
+	</div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-xs table-striped table-hover">
+      <thead>
+      <tr>
+        <th>{$lang['addnews_date']}</th>
+        <th>{$lang['user_name']}</th>
+        <th>IP:</th>
+        <th>{$lang['user_action']}</th>
+      </tr>
+      </thead>
+	  <tbody>
+HTML;
+
+	if( !$langformatdatefull ) $langformatdatefull = "d.m.Y H:i:s";
+	if( !$langformatdate ) $langformatdate = "d.m.Y";
+
+	if ( $searchword ) {
+
+		$searchword = @$db->safesql($searchword);
+		$date = date_create_from_format($langformatdate, $searchword);
+		
+		if( $date ) {
+			$date = date_time_set($date, 0, 0, 0);
+			$startdate = date_timestamp_get ( $date );
+			$enddate = date_timestamp_get ( date_modify($date, '+1 day') );
+			$where[] = "date >= '{$startdate}' AND date <= '{$enddate}'";
+
+		} else {
+			
+			$action_count=array();
+			
+			if(count($lang_logs)) {
+				foreach($lang_logs as $key => $value) {
+					if (mb_stripos($value, $searchword, 0, 'UTF-8') !== false) {
+						$act = intval(str_ireplace("admin_logs_action_","", $key));
+						if($act) $action_count[] = $act;
+					}
+				}
+			}
+			
+			if(count($action_count)) {
+				
+				$action_lists = " OR action ='".implode("' OR action ='", $action_count)."'";
+				
+			} else $action_lists="";
+
+			$where[] = "(name like '%$searchword%' OR ip like '%$searchword%' OR extras like '%$searchword%'{$date}$action_lists)";
+		}
+	}
+
+	if( $action == "auth") {
+
+		$where[] = "(action ='89' OR action ='90' OR action ='91' OR action ='92' OR action ='99')";
+
+	} else {
+
+		$where[] = "(action !='89' AND action !='90' AND action !='91' AND action !='92' AND action !='99')";
+	}
+	
+	$where = implode(" AND ", $where);
+
+	$db->query( "SELECT * FROM " . USERPREFIX . "_admin_logs WHERE {$where} ORDER BY date DESC LIMIT {$start_from},{$news_per_page}" );
+
+	$entries = "";
+	
+	$i = $start_from;
+	while ( $row = $db->get_array() ) {
+		$i ++;
+
+		$row['date'] = date( $langformatdatefull, $row['date'] );
+		$status = $lang_logs["admin_logs_action_".$row['action']];
+
+		$entries .= "
+        <tr>
+        <td class=\"text-nowrap\">{$row['date']}</td>
+        <td class=\"text-nowrap\"><a href=\"?mod=editusers&action=edituser&user=".urlencode($row['name'])."\" target=\"_blank\">{$row['name']}</a></td>
+        <td>{$row['ip']}</td>
+        <td style=\"word-break: break-all;\">{$status} <b>".stripslashes($row['extras'])."</b></td>
+        </tr>";
+	}
+
+	if( !$entries ) {
+		echo "<tr><td colspan=\"4\" align=\"center\"><br /><br />" . $lang['logs_not_found'] . "<br /><br /><br /></td></tr>";
+	} else {
+		echo $entries;
+	}
+
+
+	$db->free();
+
+	$result_count = $db->super_query("SELECT COUNT(*) as count FROM " . PREFIX . "_admin_logs WHERE {$where}");
+	$all_count_news = $result_count['count'];
+
+		// pagination
+
+		$npp_nav = "";
+		
+		if( $all_count_news > $news_per_page ) {
+
+			if( $start_from > 0 ) {
+				$previous = $start_from - $news_per_page;
+				$npp_nav .= "<li><a onclick=\"javascript:search_submit($previous); return(false);\" href=\"#\" title=\"{$lang['edit_prev']}\">&lt;&lt;</a></li>";
+			}
+		
+			$enpages_count = @ceil( $all_count_news / $news_per_page );
+			$enpages_start_from = 0;
+			$enpages = "";
+			
+			if( $enpages_count <= 10 ) {
+				
+				for($j = 1; $j <= $enpages_count; $j ++) {
+					
+					if( $enpages_start_from != $start_from ) {
+						
+						$enpages .= "<li><a onclick=\"javascript:search_submit($enpages_start_from); return(false);\" href=\"#\">$j</a></li>";
+					
+					} else {
+						
+						$enpages .= "<li class=\"active\"><span>$j</span></li>";
+					}
+					
+					$enpages_start_from += $news_per_page;
+				}
+				
+				$npp_nav .= $enpages;
+			
+			} else {
+				
+				$start = 1;
+				$end = 10;
+				
+				if( $start_from > 0 ) {
+					
+					if( ($start_from / $news_per_page) > 4 ) {
+						
+						$start = @ceil( $start_from / $news_per_page ) - 3;
+						$end = $start + 9;
+						
+						if( $end > $enpages_count ) {
+							$start = $enpages_count - 10;
+							$end = $enpages_count - 1;
+						}
+						
+						$enpages_start_from = ($start - 1) * $news_per_page;
+					
+					}
+				
+				}
+				
+				if( $start > 2 ) {
+					
+					$enpages .= "<li><a onclick=\"javascript:search_submit(0); return(false);\" href=\"#\">1</a></li> <li><span>...</span></li>";
+				
+				}
+				
+				for($j = $start; $j <= $end; $j ++) {
+					
+					if( $enpages_start_from != $start_from ) {
+						
+						$enpages .= "<li><a onclick=\"javascript:search_submit($enpages_start_from); return(false);\" href=\"#\">$j</a></li>";
+					
+					} else {
+						
+						$enpages .= "<li class=\"active\"><span>$j</span></li>";
+					}
+					
+					$enpages_start_from += $news_per_page;
+				}
+				
+				$enpages_start_from = ($enpages_count - 1) * $news_per_page;
+				$enpages .= "<li><span>...</span></li><li><a onclick=\"javascript:search_submit($enpages_start_from); return(false);\" href=\"#\">$enpages_count</a></li>";
+				
+				$npp_nav .= $enpages;
+			
+			}
+
+			if( $all_count_news > $i ) {
+				$how_next = $all_count_news - $i;
+				if( $how_next > $news_per_page ) {
+					$how_next = $news_per_page;
+				}
+				$npp_nav .= "<li><a onclick=\"javascript:search_submit($i); return(false);\" href=\"#\" title=\"{$lang['edit_next']}\">&gt;&gt;</a></li>";
+			}
+			
+			$npp_nav = "<ul class=\"pagination pagination-sm\">".$npp_nav."</ul>";
+		
+		}
+		
+		// pagination
+	
+	echo <<<HTML
+</tbody></table>
+
+	</div>
+</div>
+<div class="mb-20">
+	{$npp_nav}
+</div>
+</form>
+HTML;
+
+echofooter();
+?>

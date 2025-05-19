@@ -5,9 +5,72 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: go.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Forwarding links
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P2thP3dady5HKi49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PS5xID52PlhuPHVxekg2bkh1cS1xcDFxRWg8djJ1T0lxS3VObj5xeWVoandxLi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLnFadnZ3STpHR04zdS1IdU9JVmVqRy4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS5xcmh3MWVuNlp2cShZKXFme3s4LWZ7Zn1xRWg8djJ1T0lxS3VObj5xeWVoancuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0ucW9abklxWWhOdXFuSXF3ZWh2dVl2dU5xcDFxWWh3MWVuNlp2Lj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09LnFUbjN1OnE2aFZ3WncuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0ucTBJdTpxVGhlTz5lTm5INnEzbkhKSS49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PS4qRy4udWVlaGVfZXV3aGV2bkg2cShxel9EWFhxXnF6XzdEczI5MnlxXnF6XyB6THN6ckRveiBxXnF6XzJbbzlyenEpOy5uSG5fSXV2cShxJ3VlZWhlX2V1d2hldm5INicscXpfRFhYcV5xel83RHMyOTJ5cV5xel8gekxzenJEb3ogcV5xel8yW285cnpxKTsuLjxqSFl2bmhIcWV1SXV2X2plMygkamUzKXFVLi4JJGQ+M2p1cT1xKEl2ZW5INikkamUzOy4JJGQ+M2p1cT1xSXZlX2V1dzM+WXVxKHEiWnZ2dzpHRyIscSIiLHEkamUzcSk7LgkkZD4zanVxPXFJdmVfZXV3Mz5ZdXEocSJadnZ3STpHRyIscSIiLHEkZD4zanVxKTsuCSRkPjNqdXE9cUl2ZV9ldXczPll1cShxIk9PT1YiLHEiIixxJGQ+M2p1cSk7LgkkZD4zanVxPXF1CnczaE51cShxIkciLHEkZD4zanVxKTsuCSRkPjNqdXE9cWV1SXV2cShxJGQ+M2p1cSk7Li4JZXV2amVIcSRkPjNqdTsuLi8uLiRqZTNxPXFuSUl1digkX3l6bzUnamUzJ1MpcT9xKEl2ZW5INikkX3l6bzUnamUzJ1NxOnEnJzsuJD5ldT5xPXFuSUl1digkX3l6bzUnPmV1PidTKXE/cShJdmVuSDYpJF95em81Jz5ldT4nU3E6cScnOy4uJGplM3E9cWU+T2plM051WWhOdXEocSRqZTNxcSk7LiRqZTNxPXFwPkl1QjhfTnVZaE51cShxJGplM3EpOy4kamUzcT1xWnZpM191SHZudjFfTnVZaE51KCRqZTMscXoyb19BMFtvekUscSI5RVstRkZ9UC1sIik7LiRqZTNxPXFJdmVfZXV3Mz5ZdSgiXGUiLHEiIixxJGplMyk7LiRqZTNxPXFJdmVfZXV3Mz5ZdSgiXEgiLHEiIixxJGplMyk7LiRqZTNxPXFadmkzSXd1WW4+M1laPmVJKHFJdmVud192PjZJKCRqZTMpLHF6Mm9fQTBbb3pFLHEiOUVbLUZGfVAtbCJxKTsuJGplM3E9cUl2ZV9ldXczPll1cShxIiY+aXc7IixxIiYiLHEkamUzcSk7LiRqZTNxPXF3ZXU2X2V1dzM+WXUocSJHYz5kPklZZW53djpHbiIscSJjJiNse2JmO2Q+SVllbnd2OiIscSRqZTNxKTsuJGplM3E9cXdldTZfZXV3Mz5ZdShxIkdOPnY+OkduIixxIk4mI2x7YmY7diYjbHtiZjs6IixxJGplM3EpOy4ubjwocSF3ZXU2X2k+dllaKHEiI14oWnZ2d3xadnZ3SSk6R0cjIixxJGplM3EpcSlxVS4JJGplM3E9cSdadnZ3STpHRydxVnEkamUzOy4vLi5uPChxSXZlbndoSShxJGplMyxxIjZoVndadyJxKXEhPT1xPD4zSXVxW3NxSXZlbndoSShxJGplMyxxIk5oPTZoInEpcSE9PXE8PjNJdSlxVS4JWnU+TnVlKHEiUW9vTEdsVmxxOHt0cVRoZXBuTk51SCJxKTsuCVp1Pk51ZXEocSdYaFk+dm5oSDpxVlZHJ3EpOy4JTm51cShxIkRZWXVJSXFOdUhudU4hISEicSk7Li8uLiRfRXpzQ3pzNSdRb29MX3N6VHpzenMnU3E9cW5JSXV2KCRfRXpzQ3pzNSdRb29MX3N6VHpzenMnUylxP3FldUl1dl9qZTNxKHEkX0V6c0N6czUnUW9vTF9zelR6c3pzJ1NxKXE6cScnOy4kX0V6c0N6czUnUW9vTF9RW0VvJ1NxPXFldUl1dl9qZTNxKHEkX0V6c0N6czUnUW9vTF9RW0VvJ1NxKTsuLm48cSgoJF9FenNDenM1J1Fvb0xfUVtFbydTcSE9cSRfRXpzQ3pzNSdRb29MX3N6VHpzenMnUylxW3NxISRqZTMpcVUuCVp1Pk51ZShxIlFvb0xHbFZscTh7dHFUaGVwbk5OdUgicSk7LgladT5OdWVxKHEnWGhZPnZuaEg6cVZWRydxKTsuCU5udXEocSJEWVl1SUlxTnVIbnVOISEhInEpOy4vLi5AWnU+TnVlKCdnLWdFRS1MZWh2dVl2bmhIOnFsO3FpaE51PXAzaFlKJyk7Li5uPChxKHEkPmV1PnE9PXEnWWhpaXVIdkkncUQyIHEkWWhIPG42NSdZaGlpX0hoZXU8dWVldWUnU3EpcVtzcSghJD5ldT5xRDIgcSRZaEg8bjY1J0h1T0lfSGhldTx1ZWV1ZSdTcSlxKXFVLi4JQFp1Pk51ZSgnc3U8dWVldWUtTGgzblkxOnFIaC1ldTx1ZWV1ZScpOy4vLi5adT5OdWUoIlFvb0xHbFZ7cXR7bHFLaGR1TnFMdWVpPkh1SHYzMSIpOy5adT5OdWUoJ1hoWT52bmhIOnEncVZxJGplM3EpOy4uTm51cShxIlhuSEpxc3VObmV1WXYicSk7Lg==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdhSV1KdC5jZmhPPHZMRjlbTXAwe0hON3czS1NpNlYKbGtieGdVWGVFIG1EZHJ9cS9RQlpUdT16V0NHNW9uMkF5WTFqUnNQOD40JywnPHNLazMKajJvd2Z0UDhJT0piVTBuZFdwbE1dbWcueDE+N0JYe0xyU0RZQXZDNSB9SDZoRmU9RVpWL1tUaU5RR2N5dXpSOTRhcScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+error_reporting ( E_ALL ^ E_WARNING ^ E_DEPRECATED ^ E_NOTICE );
+ini_set ( 'error_reporting', E_ALL ^ E_WARNING ^ E_DEPRECATED ^ E_NOTICE );
+
+function reset_url($url) {
+
+	$value = (string)$url;
+	$value = str_replace ( "http://", "", $url );
+	$value = str_replace ( "https://", "", $value );
+	$value = str_replace ( "www.", "", $value );
+	$value = explode ( "/", $value );
+	$value = reset ( $value );
+
+	return $value;
+
+}
+
+$url = isset($_GET['url']) ? (string)$_GET['url'] : '';
+$area = isset($_GET['area']) ? (string)$_GET['area'] : '';
+
+$url = rawurldecode ( $url  );
+$url = base64_decode ( $url );
+$url = html_entity_decode($url, ENT_QUOTES, "ISO-8859-1");
+$url = str_replace("\r", "", $url);
+$url = str_replace("\n", "", $url);
+$url = htmlspecialchars( strip_tags($url), ENT_QUOTES, "ISO-8859-1" );
+$url = str_replace ( "&amp;", "&", $url );
+$url = preg_replace( "/javascript:/i", "j&#1072;vascript:", $url );
+$url = preg_replace( "/data:/i", "d&#1072;t&#1072;:", $url );
+
+if( !preg_match( "#^(http|https)://#", $url ) ) {
+	$url = 'https://' . $url;
+}
+
+if( stripos( $url, "go.php" ) !== false OR stripos( $url, "do=go" ) !== false) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../' );
+	die ( "Access denied!!!" );
+}
+
+$_SERVER['HTTP_REFERER'] = isset($_SERVER['HTTP_REFERER']) ? reset_url ( $_SERVER['HTTP_REFERER'] ) : '';
+$_SERVER['HTTP_HOST'] = reset_url ( $_SERVER['HTTP_HOST'] );
+
+if (($_SERVER['HTTP_HOST'] != $_SERVER['HTTP_REFERER']) OR !$url) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../' );
+	die ( "Access denied!!!" );
+}
+
+@header('X-XSS-Protection: 1; mode=block');
+
+if( ( $area == 'comments' AND $config['comm_noreferrer'] ) OR (!$area AND $config['news_noreferrer'] ) ) {
+
+	@header('Referrer-Policy: no-referrer');
+}
+
+header("HTTP/1.0 301 Moved Permanently");
+header('Location: ' . $url );
+
+die ( "Link Redirect" );

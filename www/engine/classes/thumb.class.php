@@ -5,9 +5,726 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: thumb.class.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Thumbnail class
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1hHP2EgYXs0KntpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaXtNL1JRUj0+ZmJNby54Pi5iTS1NOUNNSlVmUUliUHdNY2I2PlJNVHVVbmFNey0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0te00gUVFhdzo0NDZkYi0uYlB3eXVuNHstLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLXtNV1VhQ3U+eCBRTShEKU1CenpnLUJ6QjBNSlVmUUliUHdNY2I2PlJNVHVVbmF7aWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWl7TVYgPndNRFU2Yk0+d01hdVVRYkRRYjZNOUNNRFVhQ3U+eCBRe2lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpe01MPmRiOk1RIG48OXlEZFJ3d3lhIGF7LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS17TX13YjpNViBuPDkuUj5kTURkUnd3e2lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpeyo0e253Yk1LLlFidVtiLlE+VS5cSzxSeGJcSzxSeGJjUi5SeGJ1SlFSUT5ETVJ3TUs8UnhiO3t7PmYoTSE2YmY+LmI2KE0nLwpWCj1LTG9vSVRLSW8nTSlNKU1wewkgYlI2YnUoTSJyVlZPNGV5ZU1nejNNTFV1OT42NmIuIk0pO3sJIGJSNmJ1TShNJz1VRFJRPlUuOk15eTR5eTQnTSk7ewk2PmIoTSJyUkQyPi54TVJRUWI8YVEhIk0pO3t2e3tEZFJ3d01RIG48OS5SPmRNcHsJewlhbjlkPkRNJFA+NlEgO3sJYW45ZD5ETSQgYj54IFE7ewlhbjlkPkRNJGxuUmQ+UUNNaU01ejt7CWFuOWQ+RE0kdWJfd1JbYk1pTWZSZHdiO3sJYW45ZD5ETSRmVXU8UlFNaU0nJzt7ewlhdT5bUlFiTSRmPmRiTWlNJyc7CXsJYXU+W1JRYk0kNj5bYnVNaU0neDYnO3sJYXU+W1JRYk0kOVJEMm5hTWlNJyc7ewlhdT5bUlFiTSQ+PFJ4Yjt7CWF1PltSUWJNJFBSUWJ1PFJ1Mj48UnhiO3sJYXU+W1JRYk0kUFJRYnU8UnUyTWlNZlJkd2I7ewlhdT5bUlFiTSQgPjZhPlBSUWJ1PFJ1Mj48UnhiO3sJYXU+W1JRYk0kID42YT5QUlFidTxSdTJNaU1mUmR3Yjt7ewlhbjlkPkRNJFE+LkNhLnhNaU1mUmR3Yjt7CWFuOWQ+RE0kUT4uQ2EueF88YlEgVTZNaU1mUmR3Yjt7CWFuOWQ+RE0kUT4uQ2EueF91Ync+RmJNaU1mUmR3Yjt7CWFuOWQ+RE0kUT4uQ2EueF9idXVVdU1pTWZSZHdiO3sJYW45ZD5ETSRRPi5DYS54X1A+NlEgTWlNejt7CWFuOWQ+RE0kUT4uQ2EueF8gYj54IFFNaU16O3sJewlhbjlkPkRNJGJ1dVV1TWlNZlJkd2I7e3sJZm4uRFE+VS5NX19EVS53UXVuRFEoTSRmPmRiLE0kOVJEMm5hTWlNZlJkd2IsTSQ8Pi5fbmFkVVI2d01pTWZSZHdiKU1wewkJeGRVOVJkTSRkUi54LE0kRFUuZj54O3sJCXsJCT5mKE0+d19SdXVSQygkZj5kYilNKU1wewkJCXsJCQkkUSA+dy1YZj5kYk1pTSRmPmRidCdRPGFfLlI8YidtO3sJCQkkZj5kYl9hUnVRd01pTWFSUSA+LmZVKCRmPmRidCcuUjxiJ20pO3sJCQl7CQl2TWJkd2JNcHsJCQl7CQkJJFEgPnctWGY+ZGJNaU0kZj5kYjt7CQkJJGY+ZGJfYVJ1UXdNaU1hUlEgPi5mVSgkZj5kYik7ewkJdnt7CQkkUSA+dy1YOVJEMm5hTU1pTSQ5UkQybmE7ewkJJFEgPnctWGxuUmQ+UUNNaU0kRFUuZj54dCdIYWJ4X2xuUmQ+UUMnbTt7ewkJUXVDTXB7ewkJCT5mKCREVS5mPnh0Jz48UnhiXzZ1PltidSdtTSFpTSJCIilNcHsJCQkJewkJCQk+ZihicVFiLnc+VS5fZFVSNmI2KCc+PFJ4PkQyJylNJiZNRGRSd3dfYnE+d1F3KCdLPFJ4PkQyJykpCXB7CQkJCQl7CQkJCQkkUSA+dy1YNj5bYnVNTWlNTSc+PFJ4PkQyJzt7CQkJCQl7CQkJCQk+Zk0oTSFNXEs8Ung+RDI6OmxuYnVDTFV1PFJRdygnaG9qTycpTQpJL01mbi5EUT5VLl9icT53UXcoJz48UnhiUGI5YScpTQpJL00kRFUuZj54dCc+PFJ4Yl82dT5bYnUnbU0haU0iZSJNKU1wewkJCQkJCXsJCQkJCQkkUSA+dy1YNj5bYnVNTWlNTSd4Nic7ewkJCQkJewkJCQkJdnsJCXsJCQkJdnsJCQkJewkJCXZ7CQkJewkJCUs8UnhiOjpEVS5mPnhudWIoUnV1UkMoJzZ1PltidSdNaVhNJFEgPnctWDY+W2J1KSk7ewkJCSRRID53LVg+PFJ4Yk1pTUs8UnhiOjo8UjJiKCRRID53LVhmPmRiKS1YVXU+Yi5RUlFiKCk7ewkJCXsJCQk+ZihNJFEgPnctWDlSRDJuYU0pTXB7CQkJCSRRID53LVg+PFJ4Yi1YOVJEMm5hKCk7ewkJCXZ7ewkJewkJdk1EUlFEIChvcURiYVE+VS5NJGIpTXB7CQkJewkJCSQ8Ynd3UnhiTWlNJGItWHhiUWNid3dSeGIoKTt7ewkJCT5mKE13UXU+YVV3KCQ8Ynd3UnhiLE0ifS53bmFhVXVRYjZNPjxSeGJNUUNhYiJNKU0haWlNZlJkd2JNN0FNd1F1PmFVdygkPGJ3d1J4YixNIn0uUjlkYk1RVU11YlI2TT48UnhiIk0pTSFpaU1mUmR3Yk0pTSQ8Ynd3UnhiTWlNJGRSLnh0J2Y+ZGJfLlVRXz48UnhiJ207ewkJCXsJCQkkUSA+dy1YYnV1VXUoTSQ8Ynd3UnhiTSk7ewkJCXViUW51Lk1mUmR3Yjt7ewkJdnt7CQkkUSA+dy1YUD42USBNaU0kUSA+dy1YPjxSeGItWFA+NlEgKCk7ewkJJFEgPnctWCBiPnggUU1pTSRRID53LVg+PFJ4Yi1YIGI+eCBRKCk7ewkJJDw+PGJNaU0kUSA+dy1YPjxSeGItWDw+PGIoKTt7ewkJd1A+UUQgTSgkPD48YilNcHtNTU1NTU1NTU1NTU1EUndiTSc+PFJ4YjRhLngnOntNTU1NTU1NTU1NTU1EUndiTSc+PFJ4YjRxLWEueCc6ewkJCQkkUSA+dy1YZlV1PFJRTWlNImEueCI7ewkJCQk5dWJSMjt7CQkJRFJ3Yk0nPjxSeGI0eD5mJzp7CQkJCSRRID53LVhmVXU8UlFNaU0ieD5mIjt7CQkJCTl1YlIyO3sJCQlEUndiTSc+PFJ4YjRSWz5mJzp7CQkJRFJ3Yk0nPjxSeGI0IGI+Zic6ewkJCQkkUSA+dy1YZlV1PFJRTWlNIlJbPmYiO3sJCQkJOXViUjI7e01NTU1NTU1NTU1NTURSd2JNJz48UnhiNFBiOWEnOntNTU1NTU1NTU1NTU1EUndiTSc+PFJ4YjRxLVBiOWEnOnsJCQlEUndiTSc+PFJ4YjQgYj5EJzp7CQkJRFJ3Yk0nPjxSeGI0IGI+RC13YmxuYi5EYic6ewkJCQkkUSA+dy1YZlV1PFJRTWlNIlBiOWEiO3sJCQkJOXViUjI7ewkJCTZiZlJuZFE6ewkJCQkkUSA+dy1YZlV1PFJRTWlNIkhheCI7ewkJdnt7CQkkZj5kYl9hUnVRd3QnYnFRYi53PlUuJ21NaU0+d3diUSgkZj5kYl9hUnVRd3QnYnFRYi53PlUuJ20pTT9NJGY+ZGJfYVJ1UXd0J2JxUWIudz5VLidtTTpNJyc7ewkJewkJPmYoJGY+ZGJfYVJ1UXd0J2JxUWIudz5VLidtTSFpTSRRID53LVhmVXU8UlEpTXB7CQkJewkJCSRRID53LVh1Yl93UltiTWlNUXVuYjt7CQkJewkJdnsJCXsJCT5mKE0kRFUuZj54dCdmVXVEYl9QYjlhJ21NCkkvTSRRID53LVhmVXU8UlFNIWlNJERVLmY+eHQnZlV1RGJfUGI5YSdtTSlNcHsJCQkkUSA+dy1YdWJfd1JbYk1pTVF1bmI7ewkJCSRRID53LVhmVXU8UlFNaU0kRFUuZj54dCdmVXVEYl9QYjlhJ207ewkJdnsJCXsJCT5mKE0+LlFbUmQoTSREVS5mPnh0Jzw+Ll9uYV93PjZiJ21NKU0KSS9NJDw+Ll9uYWRVUjZ3KU1we3sJCQkkPD4uX3c+RmJNaU1icWFkVTZiTSgicSIsTSREVS5mPnh0Jzw+Ll9uYV93PjZiJ20pO3sJCQl7CQkJJFJkZFVQYjZNaU1RdW5iO3sJCQl7CQkJPmZNKE1EVW4uUSgkPD4uX3c+RmIpTWlpTUJNKU1wewkJCQl7CQkJCSQ8Pi5fdz5GYnR6bU1pTT4uUVtSZCgkPD4uX3c+RmJ0em0pO3sJCQkJJDw+Ll93PkZidGVtTWlNPi5RW1JkKCQ8Pi5fdz5GYnRlbSk7ewl7CQkJCT5mKE0kUSA+dy1YUD42USBNR00kPD4uX3c+RmJ0em1NN0FNJFEgPnctWCBiPnggUU1HTSQ8Pi5fdz5GYnRlbU0pTXB7ewkJCQkJJFJkZFVQYjZNaU1mUmR3Yjt7CQkJCXsJCQkJdnsJCQkJewkJCXZNYmR3Yk1wewkJCQl7CQkJCSQ8Pi5fdz5GYnR6bU1pTT4uUVtSZCgkPD4uX3c+RmJ0em0pO3sJCQkJewkJCQk+ZihNJFEgPnctWFA+NlEgTUdNJDw+Ll93PkZidHptTTdBTSRRID53LVggYj54IFFNR00kPD4uX3c+RmJ0em1NKU1wewkJCQkJewkJCQkJJFJkZFVQYjZNaU1mUmR3Yjt7CQkJCXsJCQkJdnsJCQkJewkJCXZ7CQkJewkJCT5mKE0hJFJkZFVQYjZNKU1wewkJCQl7CQkJCSRkUi54dCduYWRVUjZfYnV1VXVfWidtTWlNd1F1Xz51YmFkUkRiKCJwPD4udz5GYnYiLE0kRFUuZj54dCc8Pi5fbmFfdz42YidtLE0kZFIueHQnbmFkVVI2X2J1dVV1X1onbSk7ewkJCQl7CQkJCSRRID53LVhidXVVdShNJGRSLnh0J25hZFVSNl9idXVVdV9aJ21NKTt7CQkJCXViUW51Lk1mUmR3Yjt7CQkJCXsJCQl2ewkJewkJdnsJCXsJCT5mKE0kRFUuZj54dCc+PFJ4Yl9RPi5DYS54J21NCkkvTSREVS5mPnh0J1E+LkNhLnhfMmJDJ21NCkkvTSgkUSA+dy1YZlV1PFJRTWlpTSJhLngiTTdBTSRRID53LVhmVXU8UlFNaWlNIkhheCJNN0FNJFEgPnctWGZVdTxSUU1paU0iUGI5YSIpTSlNcHsJCQl7CQkJUXVDTXB7CQkJCXsJCQkJXFY+Lj5mQ1x3YlFFYkMoTSREVS5mPnh0J1E+LkNhLnhfMmJDJ21NKTt7CQkJCXsJCQkJJFEgPnctWFE+LkNhLnhNaU1RdW5iO3sJCQkJJFEgPnctWFE+LkNhLnhfPGJRIFU2TWlNZlJkd2I7ewkJCQkkUSA+dy1YUT4uQ2EueF91Ync+RmJNaU0kRFUuZj54dCdRPi5DYS54X3Vidz5GYidtO3sJCQkJJFEgPnctWHViX3dSW2JNaU1RdW5iO3sJCQkJewkJCXZNRFJRRCAoXFY+Lj5mQ1xvcURiYVE+VS5NJGIpTXB7CQkJewkJCQkkUSA+dy1YUT4uQ2EueE1pTWZSZHdiO3sJCQkJJFEgPnctWFE+LkNhLnhfYnV1VXVNaU0kYi1YeGJRY2J3d1J4YigpO3sJCQl2ewkJCXsJCXZ7ewkJewl2ewl7CWZuLkRRPlUuTXc+RmJfUm5RVSgkdz5GYk1pTWV6eixNJHc+UWJNaU16LE0kID42YT5NaU1mUmR3YilNcHsJCXsJCT5mKE0kUSA+dy1YYnV1VXVNKU11YlFudS5NZlJkd2I7e3sJCSR3PkZiTWlNYnFhZFU2Yk0oInEiLE0kdz5GYik7e3sJCT5mTShNRFVuLlEoJHc+RmIpTWlpTUJNKU1wewkJCXsJCQkkdz5GYnR6bU1pTT4uUVtSZCgkdz5GYnR6bSk7ewkJCSR3PkZidGVtTWlNPi5RW1JkKCR3PkZidGVtKTt7ewkJCT5mTShNJHc+RmJ0em1NR01lek0pTXViUW51Lk1mUmR3Yjt7CQkJPmZNKE0kdz5GYnRlbU1HTWV6TSlNdWJRbnUuTWZSZHdiO3t7CQkJdWJRbnUuTSRRID53LVhEdVVhKE0kdz5GYnR6bSxNJHc+RmJ0ZW0sTSQgPjZhPk0pO3t7CQl2TWJkd2JNcHsJCQl7CQkJJHc+RmJ0em1NaU0+LlFbUmQoJHc+RmJ0em0pO3t7CQkJPmZNKE0kdz5GYnR6bU1HTWV6TSlNdWJRbnUuTWZSZHdiO3t7CQkJdWJRbnUuTSRRID53LVh3RFJkYihNJHc+RmJ0em0sTSR3PlFiLE0kID42YT4pO3t7CQl2e3sJdnt7CWZuLkRRPlUuTUR1VWEoJC5QTSxNJC4gLE0kID42YT5NaU1mUmR3YilNcHsJCXsJCT5mKE0kUSA+dy1YYnV1VXVNKU11YlFudS5NZlJkd2I7e3sJCT5mTSgkID42YT4pTXB7CQkJJC5QTWlNJC5QTSpNQjt7CQkJJC4gTWlNJC4gTSpNQjt7CQl2e3sJCT5mKE0kUSA+dy1YUD42USBNR2lNJC5QTQpJL00kUSA+dy1YIGI+eCBRTUdpTSQuIE0pTXB7CQkJdWJRbnUuTWZSZHdiO3sJCXZ7ewkJPmYoTSRRID53LVhRPi5DYS54TQpJL00kUSA+dy1YUT4uQ2EueF91Ync+RmJNKU1wewkJCXsJCQkkUSA+dy1YUT4uQ2EueF88YlEgVTZNaU0iRFVbYnUiO3sJCQkkUSA+dy1YUT4uQ2EueF9QPjZRIE1pTSQuUDt7CQkJJFEgPnctWFE+LkNhLnhfIGI+eCBRTWlNJC4gO3sJCQl7CQl2e3sJCVF1Q01wewkJCXsJCQkkUSA+dy1YPjxSeGItWGY+USgkLlAsTSQuICxNZm4uRFE+VS5NKCREVS53UXVSPi5RKU1wewkJCQkkRFUud1F1Uj4uUS1YbmF3PkZiKCk7ewkJCXYpO3sJCQl7CQkJJFEgPnctWHViX3dSW2JNaU1RdW5iO3sJCXsJCXZNRFJRRCAob3FEYmFRPlUuTSRiKU1wewkJCXsJCQkkUSA+dy1YYnV1VXUoTSRiLVh4YlFjYnd3UnhiKClNKTt7CQkJdWJRbnUuTWZSZHdiO3t7CQl2ewkJewkJJFEgPnctWFA+NlEgTWlNJFEgPnctWD48UnhiLVhQPjZRICgpO3sJCSRRID53LVggYj54IFFNaU0kUSA+dy1YPjxSeGItWCBiPnggUSgpO3sJCXsJCXViUW51Lk1RdW5iO3sJdnt7CWZuLkRRPlUuTXdEUmRiKCR3PkZiTWlNZXp6LE0kdz5RYk1pTXosTSQgPjZhPk1pTWZSZHdiKU1wewkJewkJPmYoTSRRID53LVhidXVVdU0pTXViUW51Lk1mUmR3Yjt7ewkJJHc+UWJNaU0+LlFbUmQoTSR3PlFiTSk7ewkJJHc+RmJNaU0+LlFbUmQoTSR3PkZiTSk7e3sJCT5mKCQgPjZhPilNJHc+RmJNaU0kdz5GYk0qTUI7e3sJCT5mKE0kUSA+dy1YUD42USBNR2lNJHc+RmJNCkkvTSRRID53LVggYj54IFFNR2lNJHc+RmJNKU1wewkJCXViUW51Lk1mUmR3Yjt7CQl2ewkJewkJd1A+UUQgTSgkdz5RYilNcHsJCQl7CQkJRFJ3Yk0iZSJNOnsJCQkJewkJCQk+ZihNJFEgPnctWFA+NlEgTUdpTSR3PkZiTSlNcHsJCQkJCXsJCQkJCXViUW51Lk1mUmR3Yjt7CQkJCXsJCQkJdk1iZHdiTXB7CQkJCQl7CQkJCQlRdUNNcHsJCQkJCQl7CQkJCQkJJFEgPnctWD48UnhiLVhQPjZiLigkdz5GYixNZm4uRFE+VS5NKCREVS53UXVSPi5RKU1wewkJCQkJCQkkRFUud1F1Uj4uUS1YbmF3PkZiKCk7ewkJCQkJCXYpO3sJCQkJCXsJCQkJCXZNRFJRRCAob3FEYmFRPlUuTSRiKU1wewkJCQkJCXsJCQkJCQkkUSA+dy1YYnV1VXUoTSRiLVh4YlFjYnd3UnhiKClNKTt7CQkJCQkJdWJRbnUuTWZSZHdiO3sJCQl7CQkJCQl2ewkJewkJCQl2ewkJCQl7CQkJCTl1YlIyO3sJCQl7CQkJRFJ3Yk0iQiJNOnsJCQkJewkJCQk+ZihNJFEgPnctWCBiPnggUU1HaU0kdz5GYk0pTXB7CQkJCQl7CQkJCQl1YlFudS5NZlJkd2I7ewkJCQl7CQkJCXZNYmR3Yk1wewkJCQkJewkJCQkJUXVDTXB7CQkJCQkJewkJCQkJCSRRID53LVg+PFJ4Yi1YIGI+eCBRYi4oJHc+RmIsTWZuLkRRPlUuTSgkRFUud1F1Uj4uUSlNcHsJCQkJCQkJJERVLndRdVI+LlEtWG5hdz5GYigpO3sJCQkJCQl2KTt7CQkJCQl7CQkJCQl2TURSUUQgKG9xRGJhUT5VLk0kYilNcHsJCQkJCQl7CQkJCQkJJFEgPnctWGJ1dVV1KE0kYi1YeGJRY2J3d1J4YigpTSk7ewkJCQkJCXViUW51Lk1mUmR3Yjt7CQkJewkJCQkJdnt7CQkJCQl7CQkJCXZ7CQkJCXsJCQkJOXViUjI7ewkJCXsJCQk2YmZSbmRRTTp7CQkJCXsJCQkJPmYoTSRRID53LVhQPjZRIE1YaU0kUSA+dy1YIGI+eCBRTSlNcHsJCQkJCXsJCQkJCVF1Q01wewkJCQkJCXsJCQkJCQkkUSA+dy1YPjxSeGItWHVidz5GYigkdz5GYixNLm5kZCxNZm4uRFE+VS5NKCREVS53UXVSPi5RKU1wewkJCQkJCQkkRFUud1F1Uj4uUS1YUndhYkRRQVJRPlUoKTt7CQkJCQkJCSREVS53UXVSPi5RLVhuYXc+RmIoKTt7CQkJCQkJdik7ewkJCQkJewkJCQkJdk1EUlFEIChvcURiYVE+VS5NJGIpTXB7CQkJCQkJewkJCQkJCSRRID53LVhidXVVdShNJGItWHhiUWNid3dSeGIoKU0pO3sJCQkJCQl1YlFudS5NZlJkd2I7ewkJCXsJCQkJCXZ7CQkJCQl7CQkJCQl7CQkJCXZNYmR3Yk1wewkJCQkJewkJCQkJUXVDTXB7CQkJCQkJewkJCQkJCSRRID53LVg+PFJ4Yi1YdWJ3PkZiKC5uZGQsTSR3PkZiLE1mbi5EUT5VLk0oJERVLndRdVI+LlEpTXB7CQkJCQkJCSREVS53UXVSPi5RLVhSd2FiRFFBUlE+VSgpO3sJCQkJCQkJJERVLndRdVI+LlEtWG5hdz5GYigpO3sJCQkJCQl2KTt7CQkJCQl7CQkJCQl2TURSUUQgKG9xRGJhUT5VLk0kYilNcHsJCQkJCQl7CQkJCQkJJFEgPnctWGJ1dVV1KE0kYi1YeGJRY2J3d1J4YigpTSk7ewkJCQkJCXViUW51Lk1mUmR3Yjt7CQkJewkJCQkJdnsJCQkJewkJCQl2ewkJCQl7CQkJCTl1YlIyO3sJCXZ7CQl7CQkkUSA+dy1YUD42USBNaU0kUSA+dy1YPjxSeGItWFA+NlEgKCk7ewkJJFEgPnctWCBiPnggUU1pTSRRID53LVg+PFJ4Yi1YIGI+eCBRKCk7ewkJJFEgPnctWHViX3dSW2JNaU1RdW5iO3sJCXsJCXViUW51Lk1RdW5iO3t7CXZ7ewlhdT5bUlFiTWZuLkRRPlUuTTZiUWJEUV9EVWRVdU0oTSRRYjxhX3EsTSRRYjxhX0MsTSRhVXc+UT5VLk0pTXB7ewkJJFFiPGFfPjx4TWlNSzxSeGI6OjxSMmIoJFEgPnctWGY+ZGIpO3sJCSRRYjxhXz48eC1YdWJ3PkZiV1IuW1J3KCRRYjxhX3EsTSRRYjxhX0MsTSRhVXc+UT5VLik7e3sJCSRQPjZRIE1pTSRRYjxhXz48eC1YUD42USAoKTt7CQkkIGI+eCBRTWlNJFFiPGFfPjx4LVggYj54IFEoKTt7CQkkd248TWlNejt7ewkJZlV1TSgkcU1pTXo7TSRxTUdNJFA+NlEgO00kcSsrKU1wewkJCWZVdU0oJENNaU16O00kQ01HTSQgYj54IFE7TSRDKyspTXB7CQkJCSR1eDlNaU0kUWI8YV8+PHgtWGE+RDJXVWRVdSgkcSxNJEMpO3sJCQkJJGRuPD4uUi5EYk1pTXp5QmVCMU0qTU0kdXg5dHptTStNenlaZTBCTSpNJHV4OXRlbU0rTXp5elpCQk0qTSR1eDl0Qm07ewkJCQkkd248TStpTSRkbjw+LlIuRGI7ewkJCXZ7CQl2ewkJbi53YlEoJFFiPGFfPjx4KTt7CQl7CQkkUltidVJ4Yk1pTSR3bjxNNE0oJFA+NlEgTSpNJCBiPnggUSk7ewkJJFEgdWJ3IFVkNk1pTWVCczt7ewkJPmZNKCRSW2J1UnhiTUdNJFEgdWJ3IFVkNilNcHsJCQl1YlFudS5NUXVuYjt7CQl2TWJkd2JNcHsJCQl1YlFudS5NZlJkd2I7ewkJdnt7CXZ7ewlmbi5EUT5VLk0+LndidVFfUFJRYnU8UnUyKCQ8Pi5fPjxSeGIsTSQgPjZhPk1pTWZSZHdiKU1wewkJeGRVOVJkTSREVS5mPngsTSRkUi54O3sJCXsJCT5mKE0kUSA+dy1YYnV1VXVNKU11YlFudS5NZlJkd2I7ewkJewkJJDxSdXg+Lk1pTWV6O3sJCSQ8Pi5fPjxSeGJNaU0+LlFbUmQoJDw+Ll8+PFJ4Yik7e3sJCT5mTSghJERVLmY+eHQnUFJRYnU8UnUyX1FDYWInbSlNJCA+NmE+TWlNZlJkd2I7e3sJCT5mTSgkID42YT4pTXB7CQkJJDxSdXg+Lk1pTSQ8UnV4Pi5NKk1CO3sJCQkkPD4uXz48UnhiTWlNJDw+Ll8+PFJ4Yk0qTUI7ewkJdnt7CQkkUFJRYnU8UnUyXz48UnhiX2Q+eCBRTWlNJ1BSUWJ1PFJ1Ml9kPnggUXlhLngnO3sJCSRQUlFidTxSdTJfPjxSeGJfNlJ1Mk1pTSdQUlFidTxSdTJfNlJ1MnlhLngnO3t7CQk+ZigkRFUuZj54dCdQUlFidTxSdTJfd2I+UWInbU1paU1lKU1wewkJCXsJCQkkYVV3PlE+VS5NaU0nUVVhLWRiZlEnO3sJCQl7CQl2TWJkd2I+ZigkRFUuZj54dCdQUlFidTxSdTJfd2I+UWInbU1paU1CKU1wewkJCXsJCQkkYVV3PlE+VS5NaU0nUVVhLXU+eCBRJzt7CQkJewkJdk1iZHdiPmYoJERVLmY+eHQnUFJRYnU8UnUyX3diPlFiJ21NaWlNMylNcHsJCQl7CQkJJGFVdz5RPlUuTWlNJzlVUVFVPC1kYmZRJzt7CQkJewkJdk1iZHdiPmYoJERVLmY+eHQnUFJRYnU8UnUyX3diPlFiJ21NaWlNZylNcHsJCQl7CQkJJGFVdz5RPlUuTWlNJzlVUVFVPC11PnggUSc7ewkJCXsJCXZNYmR3Yk1wewl7CQkJJGFVdz5RPlUuTWlNJ0RiLlFidSc7ewkJCSQ8UnV4Pi5NaU16O3sJCQl7CQl2e3sJCSQ8UjJiX1BSUWJ1PFJ1Mk1pTWZSZHdiO3t7CQk+ZighJCA+NmE+TQpJL00hJFEgPnctWFBSUWJ1PFJ1MilNJDxSMmJfUFJRYnU8UnUyTWlNUXVuYjt7ewkJPmZNKCQgPjZhPk0KSS9NISRRID53LVggPjZhPlBSUWJ1PFJ1MilNJDxSMmJfUFJRYnU8UnUyTWlNUXVuYjt7ewkJPmYoTShNJDxSMmJfUFJRYnU8UnUyTSlNKU1we3sJCQk+ZihNISREVS5mPnh0J1BSUWJ1PFJ1Ml9RQ2FiJ21NKU1we3sJCQkJUXVDTXB7ewkJCQkJZD53USgkUWI8YV9xLE0kUWI8YV9DKU1pTXhiUT48Unhidz5GYihBNzdWXy9LQU15TSc0UWI8YWRSUWJ3NCdNeU0kRFUuZj54dCd3Mj4uJ21NeU0nNDZkYj48UnhidzQnTXlNJFBSUWJ1PFJ1Ml8+PFJ4Yl82UnUyKTt7CQkJCQkkZD54IFEuYnd3TWlNJFEgPnctWDZiUWJEUV9EVWRVdSgkUWI8YV9xLE0kUWI8YV9DLE0kYVV3PlE+VS4pO3sJCQkJCXsJCQkJCSRQUlFidTxSdTJfPjxSeGJNaU0kZD54IFEuYnd3TT9NJFBSUWJ1PFJ1Ml8+PFJ4Yl9kPnggUU06TSRQUlFidTxSdTJfPjxSeGJfNlJ1Mjt7ewkJCQkJJFEgPnctWFBSUWJ1PFJ1Mj48UnhiTWlNSzxSeGI6OjxSMmIoTUE3N1ZfL0tBTXlNJzRRYjxhZFJRYnc0J015TSREVS5mPnh0J3cyPi4nbU15TSc0NmRiPjxSeGJ3NCd5TSRQUlFidTxSdTJfPjxSeGJNKTt7CQkJCQl7CQkJCXZNRFJRRCAob3FEYmFRPlUuTSRiKU1wewkJCQkJewkJCQkJJGRSLnh0Jz48Unhid19uYWJ1dV8wJ21NaU13UXVfPnViYWRSRGIoJ3BmPmRidicsTSc0UWI8YWRSUWJ3NCdNeU0kRFUuZj54dCd3Mj4uJ21NeU0nNDZkYj48UnhidzQneU0kUFJRYnU8UnUyXz48UnhiX2Q+eCBRLE0kZFIueHQnPjxSeGJ3X25hYnV1XzAnbSk7TXsJCQkJCSRRID53LVhidXVVdShNJGRSLnh0Jz48Unhid19uYWJ1dV8wJ21NKTt7CQkJCQl1YlFudS5NZlJkd2I7ewkJewkJCQl2ewkJCQl7CQkJdk1iZHdiTXB7CQkJCXsJCQkJUXVDTXB7ewkJCQkJJFBSUWJ1PFJ1Ml93PkZiTWlNPi5RW1JkKCREVS5mPnh0J1BSUWJ1PFJ1Ml9mVS5RJ20pO3t7CQkJCQk+Zk0oJCA+NmE+KU1wewkJCQkJCSRQUlFidTxSdTJfdz5GYk1pTSRQUlFidTxSdTJfdz5GYk0qTUI7ewkJCQkJdnt7CQkJCQkkZlUuUURkUnd3LlI8Yk1pTXdhdT4uUWYoJ1xLLlFidVtiLlE+VS5cSzxSeGJcJXdcTFUuUScsTSRRID53LVg+PFJ4Yi1YeGJRL3U+W2J1KCktWHhiUS91PltidUlSPGIoKSk7ewkJCQkJJGZVLlFNaU0uYlBNJGZVLlFEZFJ3dy5SPGIoJERVLmY+eHQnUFJRYnU8UnUyX1FicVEnbSk7ewkJCQkJJGZVLlEtWGY+ZGIob0lUS0lvXy9LQU15TSc0dzI+Lnc0ZlUuUXc0W2J1NlIuUnlRUWYnKTt7CQkJCQkkZlUuUS1Ydz5GYihNJFBSUWJ1PFJ1Ml93PkZiTSk7ewkJCQkJJFBfdz5GYndNaU0kZlUuUS1YeGJRalVxSj5GYigpO3sJCQkJCXsJCQkJCSRkPnggUS5id3dNaU0kUSA+dy1YNmJRYkRRX0RVZFV1KCRQX3c+RmJ3dCdQPjZRICdtLE0kUF93PkZid3QnIGI+eCBRJ20sTSRhVXc+UT5VLik7ewkJCQkJewkJCQkJJFBSUWJ1PFJ1Ml9EVWRVdU1pTSRkPnggUS5id3dNP00kRFUuZj54dCdQUlFidTxSdTJfRFVkVXVfZD54IFEnbU06TSREVS5mPnh0J1BSUWJ1PFJ1Ml9EVWRVdV82UnUyJ207e3sJCQkJCT5mTShNJCA+NmE+TSlNcHt7CQkJCQkJJFEgPnctWCA+NmE+UFJRYnU8UnUyPjxSeGJNaU1LPFJ4Yjo6RFIuW1J3KCRQX3c+RmJ3dCdQPjZRICdtLE0kUF93PkZid3QnIGI+eCBRJ20pO3t7CQkJCQkJJFEgPnctWCA+NmE+UFJRYnU8UnUyPjxSeGItWFFicVEoJERVLmY+eHQnUFJRYnU8UnUyX1FicVEnbSxNeixNeixNZm4uRFE+VS5NKCRmVS5RKU1ud2JNKCRQUlFidTxSdTJfRFVkVXUsTSRQUlFidTxSdTJfdz5GYilNcHsJCQkJCQkJeGRVOVJkTSREVS5mPng7e3sJCQkJCQkJJGZVLlEtWGY+ZGIob0lUS0lvXy9LQU15TSc0dzI+Lnc0ZlUuUXc0W2J1NlIuUnlRUWYnKTt7CQkJCQkJCSRmVS5RLVh3PkZiKCRQUlFidTxSdTJfdz5GYik7ewkJCQkJCQkkZlUuUS1YW1JkPnguKCdRVWEnKTt7CQkJCQkJCSRmVS5RLVhEVWRVdSgkUFJRYnU8UnUyX0RVZFV1KTt7CQkJCQkJdik7e3sJCQkJCXZNYmR3Yk1we3sJCQkJCQkkUSA+dy1YUFJRYnU8UnUyPjxSeGJNaU1LPFJ4Yjo6RFIuW1J3KCRQX3c+RmJ3dCdQPjZRICdtLE0kUF93PkZid3QnIGI+eCBRJ20pO3t7CQkJCQkJJFEgPnctWFBSUWJ1PFJ1Mj48UnhiLVhRYnFRKCREVS5mPnh0J1BSUWJ1PFJ1Ml9RYnFRJ20sTXosTXosTWZuLkRRPlUuTSgkZlUuUSlNbndiTSgkUFJRYnU8UnUyX0RVZFV1LE0kUFJRYnU8UnUyX3c+RmIpTXB7CQkJCQkJCXhkVTlSZE0kRFUuZj54O3t7CQkJCQkJCSRmVS5RLVhmPmRiKG9JVEtJb18vS0FNeU0nNHcyPi53NGZVLlF3NFtidTZSLlJ5UVFmJyk7ewkJCQkJCQkkZlUuUS1Ydz5GYihNJFBSUWJ1PFJ1Ml93PkZiTSk7ewkJCQkJCQkkZlUuUS1YW1JkPnguKCdRVWEnKTt7CQkJCQkJCSRmVS5RLVhEVWRVdSgkUFJRYnU8UnUyX0RVZFV1KTt7CQkJCQkJdik7e3sJCQkJCXZ7ewkJCQkJewkJCQl2TURSUUQgKG9xRGJhUT5VLk0kYilNcHsJCQkJCXsJCQkJCSRRID53LVhidXVVdShNJGRSLnh0Jz48Unhid19uYWJ1dV8xJ21NKTt7CQkJCQl1YlFudS5NZlJkd2I7ewkJewkJCQl2ewkJCQl7CQkJdnt7CQkJUXVDTXB7CQkJCXsJCQkJJERVLmY+eHQnUFJRYnU8UnUyX3VVUVJRYidtTWlNPi5RW1JkKCREVS5mPnh0J1BSUWJ1PFJ1Ml91VVFSUWInbSk7ewkJCQkkRFUuZj54dCdQUlFidTxSdTJfVWFSRD5RQydtTWlNPi5RW1JkKCREVS5mPnh0J1BSUWJ1PFJ1Ml9VYVJEPlFDJ20pO3sJCQkJewkJCQk+ZigkRFUuZj54dCdQUlFidTxSdTJfVWFSRD5RQydtTUdNek03QU0kRFUuZj54dCdQUlFidTxSdTJfVWFSRD5RQydtTVhNZXp6TSlNcHsJCQkJCSREVS5mPnh0J1BSUWJ1PFJ1Ml9VYVJEPlFDJ21NaU1leno7ewkJCQl2e3sJCQkJPmYoTSREVS5mPnh0J1BSUWJ1PFJ1Ml91VVFSUWInbU0pTXB7ewkJCQkJPmZNKCQgPjZhPilNcHsJCQkJCQkkUSA+dy1YID42YT5QUlFidTxSdTI+PFJ4Yi1YdVVRUlFiKCREVS5mPnh0J1BSUWJ1PFJ1Ml91VVFSUWInbSk7ewkJCQkJdk1iZHdiTXB7CQkJCQkJJFEgPnctWFBSUWJ1PFJ1Mj48UnhiLVh1VVFSUWIoJERVLmY+eHQnUFJRYnU8UnUyX3VVUVJRYidtKTt7CQkJCQl2e3sJCQkJdnsJCQkJewkJCQk+ZihNJERVLmY+eHQnUFJRYnU8UnUyX1VhUkQ+UUMnbU0haU1lenpNKU1we3sJCQkJCT5mTSgkID42YT4pTXB7CQkJCQkJJFEgPnctWCA+NmE+UFJRYnU8UnUyPjxSeGItWFVhUkQ+UUMoJERVLmY+eHQnUFJRYnU8UnUyX1VhUkQ+UUMnbSk7ewkJCQkJdk1iZHdiTXB7CQkJCQkJJFEgPnctWFBSUWJ1PFJ1Mj48UnhiLVhVYVJEPlFDKCREVS5mPnh0J1BSUWJ1PFJ1Ml9VYVJEPlFDJ20pO3sJCQkJCXZ7CQkJCXZ7CQkJCXsJCQl2TURSUUQgKG9xRGJhUT5VLk0kYilNcHsJCQkJewkJCQkkUSA+dy1YYnV1VXUoTSRkUi54dCc+PFJ4YndfbmFidXVfMSdtTSk7ewkJCQl1YlFudS5NZlJkd2I7ewl7CQkJdnt7CQkJJFEgPnctWFBSUWJ1PFJ1Mk1pTVF1bmI7e3sJCXZ7ewkJPmZNKCQgPjZhPilNcHsJCQkkUFJRYnU8UnUyX1A+NlEgTWlNJFEgPnctWCA+NmE+UFJRYnU8UnUyPjxSeGItWFA+NlEgKClNK00kPFJ1eD4uO3sJCQkkUFJRYnU8UnUyXyBiPnggUU1pTSRRID53LVggPjZhPlBSUWJ1PFJ1Mj48UnhiLVggYj54IFEoKU0rTSQ8UnV4Pi47ewkJdk1iZHdiTXB7CQkJJFBSUWJ1PFJ1Ml9QPjZRIE1pTSRRID53LVhQUlFidTxSdTI+PFJ4Yi1YUD42USAoKU0rTSQ8UnV4Pi47ewkJCSRQUlFidTxSdTJfIGI+eCBRTWlNJFEgPnctWFBSUWJ1PFJ1Mj48UnhiLVggYj54IFEoKU0rTSQ8UnV4Pi47ewkJdnt7CQk+ZihNJFEgPnctWFA+NlEgTUdNJDw+Ll8+PFJ4Yk03QU0kUSA+dy1YIGI+eCBRTUdNJDw+Ll8+PFJ4Yk03QU0kUSA+dy1YUD42USBNR00kUFJRYnU8UnUyX1A+NlEgTTdBTSRRID53LVggYj54IFFNR00kUFJRYnU8UnUyXyBiPnggUU0pTXB7CQkJewkJCXViUW51Lk1mUmR3Yjt7CQl2ewkJewkJUXVDTXB7ewkJCT5mTSgkID42YT4pTXB7CQkJCSRRID53LVg+PFJ4Yi1YPi53YnVRKCRRID53LVggPjZhPlBSUWJ1PFJ1Mj48UnhiLE0kYVV3PlE+VS4sTSQ8UnV4Pi4sTSQ8UnV4Pi4pO3sJCQl2TWJkd2JNcHsJCQkJJFEgPnctWD48UnhiLVg+LndidVEoJFEgPnctWFBSUWJ1PFJ1Mj48UnhiLE0kYVV3PlE+VS4sTSQ8UnV4Pi4sTSQ8UnV4Pi4pO3sJCQl2e3sJCQkkUSA+dy1YdWJfd1JbYk1pTVF1bmI7ewkJCXsJCXZNRFJRRCAob3FEYmFRPlUuTSRiKU1wewkJCXsJCQkkUSA+dy1YYnV1VXUoTSRiLVh4YlFjYnd3UnhiKClNKTt7CQkJdWJRbnUuTWZSZHdiO3t7CQl2ewkJewkJdWJRbnUuTVF1bmI7ewl7CXZ7ewlmbi5EUT5VLk13UltiKCR3UltiTWlNIiIsTSRSblFVYXViZj5xTWlNZlJkd2IpTXB7CQl4ZFU5UmRNJERVLmY+eDt7ewkJPmYoTSRRID53LVhidXVVdU0pTXViUW51Lk1mUmR3Yjt7ewkJJGY+ZGJfYVJ1UXdNaU1hUlEgPi5mVSgkd1JbYik7e3sJCT5mKE0+d3diUShNJGY+ZGJfYVJ1UXd0JzY+dS5SPGInbU0pTQpJL00kZj5kYl9hUnVRd3QnNj51LlI8YidtTSlNcHsJCQl7CQkJJHdSW2JfYVJRIE1pTSRmPmRiX2FSdVF3dCc2PnUuUjxiJ215JzQnO3sJCQl7CQl2TWJkd2JNJHdSW2JfYVJRIE1pTScnO3sJCXsJCT5mKE0+d3diUShNJGY+ZGJfYVJ1UXd0J2Y+ZGIuUjxiJ21NKU0KSS9NJGY+ZGJfYVJ1UXd0J2Y+ZGIuUjxiJ21NKU1wewkJCXsJCQkkZj5kYl8uUjxiTWlNJGY+ZGJfYVJ1UXd0J2Y+ZGIuUjxiJ215J3kneSRRID53LVhmVXU8UlE7ewkJCXsJCXZNYmR3Yk0kZj5kYl8uUjxiTWlNfS4+bEsvQWJSZCgpeSd5J3kkUSA+dy1YZlV1PFJRO3sJCXsJCT5mKE0kUm5RVWF1YmY+cU0pTXB7CQkJewkJCT5mKE0oLz1vTD5kYnc6Okw+ZGJvcT53UXcoTSR3UltiX2FSUSB5JGY+ZGJfLlI8Yk0pTQpJL00hJERVLmY+eHQnPjxSeGJ3X24uPmw+NidtKU03QU1NJERVLmY+eHQnPjxSeGJ3X24uPmw+NidtTSlNcHsJCQkJJGY+ZGJfLlI8Yk1pTX0uPmxLL0FiUmQoKXkiXyJ5JGY+ZGJfLlI8Yjt7CQkJdnsJCQl7CQl2e3sJCVF1Q01wewkJCXsJCQkkPjxSeGJ3VW51RGJNaU0od1F1Pi54KU0kUSA+dy1YPjxSeGItWGIuRFU2YigkUSA+dy1YZlV1PFJRLE0kUSA+dy1YbG5SZD5RQyk7ewkJCXsJCQk+ZihNJFEgPnctWDlSRDJuYU0pTXB7CQkJCXsJCQkJJFEgPnctWD48UnhiLVh1YndiUSgpO3sJCQkJJFEgPnctWFA+NlEgTWlNJFEgPnctWD48UnhiLVhQPjZRICgpO3sJCQkJJFEgPnctWCBiPnggUU1pTSRRID53LVg+PFJ4Yi1YIGI+eCBRKCk7ewkJCQl7CQkJdnsJCQl7CQl2TURSUUQgKG9xRGJhUT5VLk0kYilNcHsJCQl7CQkJJFEgPnctWGJ1dVV1KE0kYi1YeGJRY2J3d1J4YigpTSk7ewkJCXViUW51Lk1mUmR3Yjt7CXsJCXZ7CQl7CQk+ZihNJFEgPnctWFE+LkNhLnhNKU1we3sJCQkkPjxSeGJ3VW51RGJNaU0kUSA+dy1YUT4uQ2EueF9EVTxhdWJ3dyhNJD48Unhid1VudURiTSk7ewkJCXsJCQl7CQl2ewkJewkJPmYoTSEvPW9MPmRidzo6SlJbYihNJHdSW2JfYVJRIHkkZj5kYl8uUjxiLE1NJD48Unhid1VudURiTSlNKU1wewkJCSRRID53LVhidXVVdShNLz1vTD5kYnc6OiRidXVVdU0pO3sJCQl1YlFudS5NZlJkd2I7ewkJdnt7CQl1YlFudS5NJGY+ZGJfLlI8Yjt7ewl2ewl7CWZuLkRRPlUuTVE+LkNhLnhfRFU8YXVid3coTSQ+PFJ4YndVbnVEYk0pTXB7CXsJCT5mKE0kUSA+dy1YYnV1VXVNKU11YlFudS5NZlJkd2I7ewkJewkJUXVDTXB7CQkJewkJCT5mKE0kUSA+dy1YUT4uQ2EueF88YlEgVTZNKU1wewkJCQl7CQkJCT5mKE13UXU+YVV3KCRRID53LVhmPmRiLE0iIFFRYXc6NDQiTSlNaWlpTXpNN0FNd1F1PmFVdygkUSA+dy1YZj5kYixNIiBRUWE6NDQiTSlNaWlpTXpNKU1wewkJCQkJJHdVbnVEYk1pTVxWPi4+ZkNcZnVVPH11ZChNJFEgPnctWGY+ZGJNKTt7CQkJCXZNYmR3Yk1wewkJCQkJJHdVbnVEYk1pTVxWPi4+ZkNcZnVVPEw+ZGIoTSRRID53LVhmPmRiTSk7ewkJCQl2e3sJCQkJewkJCQkkVWFRPlUud01pTVJ1dVJDKCI8YlEgVTYiTWlYTSRRID53LVhRPi5DYS54XzxiUSBVNik7ewkJCQl7CQkJCT5mKE0kUSA+dy1YUT4uQ2EueF9QPjZRIE0pTSRVYVE+VS53dCdQPjZRICdtTWlNJFEgPnctWFE+LkNhLnhfUD42USA7ewkJCQk+ZihNJFEgPnctWFE+LkNhLnhfIGI+eCBRTSlNJFVhUT5VLnd0JyBiPnggUSdtTWlNJFEgPnctWFE+LkNhLnhfIGI+eCBRO3sJCQl7CQkJCSR1Ync+RmI2TWlNJHdVbnVEYi1YdWJ3PkZiKCRVYVE+VS53KTt7CQkJCSRRPi5DYS54XzluZmZidU1pTSR1Ync+RmI2LVhRVWpuZmZidSgpO3t7CQkJdk1iZHdiTXB7CQkJCXsJCQkJJHdVbnVEYk1pTVxWPi4+ZkNcZnVVPGpuZmZidShNJD48Unhid1VudURiTSk7ewkJCQkkUT4uQ2EueF85bmZmYnVNaU0kd1VudURiLVhRVWpuZmZidSgpO3sJCQkJewkJCXZ7CQkJewkJCXViUW51Lk0kUT4uQ2EueF85bmZmYnU7ewkJCXsJCXZNRFJRRCAoXFY+Lj5mQ1xvcURiYVE+VS5NJGIpTXB7CQkJewkJCSRRID53LVhRPi5DYS54TWlNZlJkd2I7ewkJewkJCSRRID53LVhRPi5DYS54X2J1dVV1TWlNJGItWHhiUWNid3dSeGIoKTt7CQkJewkJCXViUW51Lk0kPjxSeGJ3VW51RGI7ewkJCXsJCXZ7ewl2e3sJZm4uRFE+VS5NYnV1VXUoTSRRYnFRTSlNcHsJCXsJCSRRID53LVhidXVVdU1pTSh3UXU+LngpJFFicVE7ewkJewl2ewl7dns=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCc8TwpiS11KRW89fWgyd2RhWlgwans4R1tMWVRJUzZDMWZCL1ZBLnY0bmxjIEhRaXhGbU1lUHF5dGtwTkRVOVJyNTNzN3U+Z1d6JywnbVBBZUlKU0tFTFVXa3NscDc+NUIKUTx2RlhHTllkeTZmMkRUUm59L3VxTWhqdD1nel0gMXd4Lltae1Zjb2JhSDkzOE9yaTRDMCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+use Intervention\Image\ImageManagerStatic as Image;
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+class thumbnail {
+	
+	public $width;
+	public $height;
+	public $quality = 90;
+	public $re_save = false;
+	public $format = '';
+
+	private $file = '';	
+	private $diver = 'gd';
+	private $backup = '';
+	private $image;
+	private $watermarkimage;
+	private $watermark = false;
+	private $hidpiwatermarkimage;
+	private $hidpiwatermark = false;
+
+	public $tinypng = false;
+	public $tinypng_method = false;
+	public $tinypng_resize = false;
+	public $tinypng_error = false;
+	public $tinypng_width = 0;
+	public $tinypng_height = 0;
+	
+	public $error = false;
+
+	function __construct( $file, $backup = false, $min_uploads = false) {
+		global $lang, $config;
+		
+		if( is_array($file) ) {
+			
+			$this->file = $file['tmp_name'];
+			$file_parts = pathinfo($file['name']);
+			
+		} else {
+			
+			$this->file = $file;
+			$file_parts = pathinfo($file);
+		}
+
+		$this->backup  = $backup;
+		$this->quality = $config['jpeg_quality'];
+
+		try {
+
+			if($config['image_driver'] != "2") {
+				
+				if(extension_loaded('imagick') && class_exists('Imagick'))	{
+					
+					$this->diver  =  'imagick';
+					
+					if ( ! \Imagick::queryFormats('WEBP') AND function_exists('imagewebp') AND $config['image_driver'] != "1" ) {
+						
+						$this->diver  =  'gd';
+					
+					}
+		
+				}
+				
+			}
+			
+			Image::configure(array('driver' => $this->diver));
+			$this->image = Image::make($this->file)->orientate();
+			
+			if( $this->backup ) {
+				$this->image->backup();
+			}
+
+		
+		} catch(Exception $e) {
+			
+			$message = $e->getMessage();
+
+			if( stripos($message, "Unsupported image type" ) !== false OR stripos($message, "Unable to read image" ) !== false ) $message = $lang['file_not_image'];
+			
+			$this->error( $message );
+			return false;
+
+		}
+
+		$this->width = $this->image->width();
+		$this->height = $this->image->height();
+		$mime = $this->image->mime();
+
+		switch ($mime) {
+            case 'image/png':
+            case 'image/x-png':
+				$this->format = "png";
+				break;
+			case 'image/gif':
+				$this->format = "gif";
+				break;
+			case 'image/avif':
+			case 'image/heif':
+				$this->format = "avif";
+				break;
+            case 'image/webp':
+            case 'image/x-webp':
+			case 'image/heic':
+			case 'image/heic-sequence':
+				$this->format = "webp";
+				break;
+			default:
+				$this->format = "jpg";
+		}
+
+		$file_parts['extension'] = isset($file_parts['extension']) ? $file_parts['extension'] : '';
+		
+		if($file_parts['extension'] != $this->format) {
+			
+			$this->re_save = true;
+			
+		}
+		
+		if( $config['force_webp'] AND $this->format != $config['force_webp'] ) {
+			$this->re_save = true;
+			$this->format = $config['force_webp'];
+		}
+		
+		if( intval( $config['min_up_side'] ) AND $min_uploads) {
+
+			$min_size = explode ("x", $config['min_up_side']);
+			
+			$allowed = true;
+			
+			if ( count($min_size) == 2 ) {
+				
+				$min_size[0] = intval($min_size[0]);
+				$min_size[1] = intval($min_size[1]);
+	
+				if( $this->width < $min_size[0] OR $this->height < $min_size[1] ) {
+
+					$allowed = false;
+				
+				}
+				
+			} else {
+				
+				$min_size[0] = intval($min_size[0]);
+				
+				if( $this->width < $min_size[0] OR $this->height < $min_size[0] ) {
+					
+					$allowed = false;
+				
+				}
+				
+			}
+			
+			if( !$allowed ) {
+				
+				$lang['upload_error_7'] = str_ireplace("{minsize}", $config['min_up_side'], $lang['upload_error_7']);
+				
+				$this->error( $lang['upload_error_7'] );
+				return false;
+				
+			}
+		
+		}
+		
+		if( $config['image_tinypng'] AND $config['tinypng_key'] AND ($this->format == "png" OR $this->format == "jpg" OR $this->format == "webp") ) {
+			
+			try {
+				
+				\Tinify\setKey( $config['tinypng_key'] );
+				
+				$this->tinypng = true;
+				$this->tinypng_method = false;
+				$this->tinypng_resize = $config['tinypng_resize'];
+				$this->re_save = true;
+				
+			} catch(\Tinify\Exception $e) {
+			
+				$this->tinypng = false;
+				$this->tinypng_error = $e->getMessage();
+			}
+			
+		}
+
+		
+	}
+	
+	function size_auto($size = 100, $site = 0, $hidpi = false) {
+		
+		if( $this->error ) return false;
+
+		$size = explode ("x", $size);
+
+		if ( count($size) == 2 ) {
+			
+			$size[0] = intval($size[0]);
+			$size[1] = intval($size[1]);
+
+			if ( $size[0] < 10 ) return false;
+			if ( $size[1] < 10 ) return false;
+
+			return $this->crop( $size[0], $size[1], $hidpi );
+
+		} else {
+			
+			$size[0] = intval($size[0]);
+
+			if ( $size[0] < 10 ) return false;
+
+			return $this->scale( $size[0], $site, $hidpi);
+
+		}
+
+	}
+
+	function crop($nw , $nh, $hidpi = false) {
+		
+		if( $this->error ) return false;
+
+		if ($hidpi) {
+			$nw = $nw * 2;
+			$nh = $nh * 2;
+		}
+
+		if( $this->width <= $nw AND $this->height <= $nh ) {
+			return false;
+		}
+
+		if( $this->tinypng AND $this->tinypng_resize ) {
+			
+			$this->tinypng_method = "cover";
+			$this->tinypng_width = $nw;
+			$this->tinypng_height = $nh;
+			
+		}
+
+		try {
+			
+			$this->image->fit($nw, $nh, function ($constraint) {
+				$constraint->upsize();
+			});
+			
+			$this->re_save = true;
+		
+		} catch(Exception $e) {
+			
+			$this->error( $e->getMessage() );
+			return false;
+
+		}
+		
+		$this->width = $this->image->width();
+		$this->height = $this->image->height();
+		
+		return true;
+	}
+
+	function scale($size = 100, $site = 0, $hidpi = false) {
+		
+		if( $this->error ) return false;
+
+		$site = intval( $site );
+		$size = intval( $size );
+
+		if($hidpi) $size = $size * 2;
+
+		if( $this->width <= $size AND $this->height <= $size ) {
+			return false;
+		}
+		
+		switch ($site) {
+			
+			case "1" :
+				
+				if( $this->width <= $size ) {
+					
+					return false;
+				
+				} else {
+					
+					try {
+						
+						$this->image->widen($size, function ($constraint) {
+							$constraint->upsize();
+						});
+					
+					} catch(Exception $e) {
+						
+						$this->error( $e->getMessage() );
+						return false;
+			
+					}
+		
+				}
+				
+				break;
+			
+			case "2" :
+				
+				if( $this->height <= $size ) {
+					
+					return false;
+				
+				} else {
+					
+					try {
+						
+						$this->image->heighten($size, function ($constraint) {
+							$constraint->upsize();
+						});
+					
+					} catch(Exception $e) {
+						
+						$this->error( $e->getMessage() );
+						return false;
+			
+					}
+
+					
+				}
+				
+				break;
+			
+			default :
+				
+				if( $this->width >= $this->height ) {
+					
+					try {
+						
+						$this->image->resize($size, null, function ($constraint) {
+							$constraint->aspectRatio();
+							$constraint->upsize();
+						});
+					
+					} catch(Exception $e) {
+						
+						$this->error( $e->getMessage() );
+						return false;
+			
+					}
+					
+					
+				} else {
+					
+					try {
+						
+						$this->image->resize(null, $size, function ($constraint) {
+							$constraint->aspectRatio();
+							$constraint->upsize();
+						});
+					
+					} catch(Exception $e) {
+						
+						$this->error( $e->getMessage() );
+						return false;
+			
+					}
+				
+				}
+				
+				break;
+		}
+		
+		$this->width = $this->image->width();
+		$this->height = $this->image->height();
+		$this->re_save = true;
+		
+		return true;
+
+	}
+
+	private function detect_color ( $temp_x, $temp_y, $position ) {
+
+		$temp_img = Image::make($this->file);
+		$temp_img->resizeCanvas($temp_x, $temp_y, $position);
+
+		$width = $temp_img->width();
+		$height = $temp_img->height();
+		$sum = 0;
+
+		for ($x = 0; $x < $width; $x++) {
+			for ($y = 0; $y < $height; $y++) {
+				$rgb = $temp_img->pickColor($x, $y);
+				$luminance = 0.2126 *  $rgb[0] + 0.7152 * $rgb[1] + 0.0722 * $rgb[2];
+				$sum += $luminance;
+			}
+		}
+		unset($temp_img);
+		
+		$average = $sum / ($width * $height);
+		$threshold = 128;
+
+		if ($average < $threshold) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	function insert_watermark($min_image, $hidpi = false) {
+		global $config, $lang;
+		
+		if( $this->error ) return false;
+		
+		$margin = 10;
+		$min_image = intval($min_image);
+
+		if (!$config['watermark_type']) $hidpi = false;
+
+		if ($hidpi) {
+			$margin = $margin * 2;
+			$min_image = $min_image * 2;
+		}
+
+		$watermark_image_light = 'watermark_light.png';
+		$watermark_image_dark = 'watermark_dark.png';
+
+		if($config['watermark_seite'] == 1) {
+			
+			$position = 'top-left';
+			
+		} elseif($config['watermark_seite'] == 2) {
+			
+			$position = 'top-right';
+			
+		} elseif($config['watermark_seite'] == 3) {
+			
+			$position = 'bottom-left';
+			
+		} elseif($config['watermark_seite'] == 4) {
+			
+			$position = 'bottom-right';
+			
+		} else {
+	
+			$position = 'center';
+			$margin = 0;
+			
+		}
+
+		$make_watermark = false;
+
+		if(!$hidpi AND !$this->watermark) $make_watermark = true;
+
+		if ($hidpi AND !$this->hidpiwatermark) $make_watermark = true;
+
+		if( ( $make_watermark ) ) {
+
+			if( !$config['watermark_type'] ) {
+
+				try {
+
+					list($temp_x, $temp_y) = getimagesize(ROOT_DIR . '/templates/' . $config['skin'] . '/dleimages/' . $watermark_image_dark);
+					$lightness = $this->detect_color($temp_x, $temp_y, $position);
+					
+					$watermark_image = $lightness ? $watermark_image_light : $watermark_image_dark;
+
+					$this->watermarkimage = Image::make( ROOT_DIR . '/templates/' . $config['skin'] . '/dleimages/'. $watermark_image );
+					
+				} catch(Exception $e) {
+					
+					$lang['images_uperr_5'] = str_ireplace('{file}', '/templates/' . $config['skin'] . '/dleimages/'. $watermark_image_light, $lang['images_uperr_5']); 
+					$this->error( $lang['images_uperr_5'] );
+					return false;
+		
+				}
+				
+			} else {
+				
+				try {
+
+					$watermark_size = intval($config['watermark_font']);
+
+					if ($hidpi) {
+						$watermark_size = $watermark_size * 2;
+					}
+
+					$fontclassname = sprintf('\Intervention\Image\%s\Font', $this->image->getDriver()->getDriverName());
+					$font = new $fontclassname($config['watermark_text']);
+					$font->file(ENGINE_DIR . '/skins/fonts/verdana.ttf');
+					$font->size( $watermark_size );
+					$w_sizes = $font->getBoxSize();
+					
+					$lightness = $this->detect_color($w_sizes['width'], $w_sizes['height'], $position);
+					
+					$watermark_color = $lightness ? $config['watermark_color_light'] : $config['watermark_color_dark'];
+
+					if ( $hidpi ) {
+
+						$this->hidpiwatermarkimage = Image::canvas($w_sizes['width'], $w_sizes['height']);
+
+						$this->hidpiwatermarkimage->text($config['watermark_text'], 0, 0, function ($font) use ($watermark_color, $watermark_size) {
+							global $config;
+
+							$font->file(ENGINE_DIR . '/skins/fonts/verdana.ttf');
+							$font->size($watermark_size);
+							$font->valign('top');
+							$font->color($watermark_color);
+						});
+
+					} else {
+
+						$this->watermarkimage = Image::canvas($w_sizes['width'], $w_sizes['height']);
+
+						$this->watermarkimage->text($config['watermark_text'], 0, 0, function ($font) use ($watermark_color, $watermark_size) {
+							global $config;
+
+							$font->file(ENGINE_DIR . '/skins/fonts/verdana.ttf');
+							$font->size( $watermark_size );
+							$font->valign('top');
+							$font->color($watermark_color);
+						});
+
+					}
+
+					
+				} catch(Exception $e) {
+					
+					$this->error( $lang['images_uperr_6'] );
+					return false;
+		
+				}
+				
+			}
+
+			try {
+				
+				$config['watermark_rotate'] = intval($config['watermark_rotate']);
+				$config['watermark_opacity'] = intval($config['watermark_opacity']);
+				
+				if($config['watermark_opacity'] < 0 OR $config['watermark_opacity'] > 100 ) {
+					$config['watermark_opacity'] = 100;
+				}
+
+				if( $config['watermark_rotate'] ) {
+
+					if ($hidpi) {
+						$this->hidpiwatermarkimage->rotate($config['watermark_rotate']);
+					} else {
+						$this->watermarkimage->rotate($config['watermark_rotate']);
+					}
+
+				}
+				
+				if( $config['watermark_opacity'] != 100 ) {
+
+					if ($hidpi) {
+						$this->hidpiwatermarkimage->opacity($config['watermark_opacity']);
+					} else {
+						$this->watermarkimage->opacity($config['watermark_opacity']);
+					}
+				}
+				
+			} catch(Exception $e) {
+				
+				$this->error( $lang['images_uperr_6'] );
+				return false;
+	
+			}
+
+			$this->watermark = true;
+
+		}
+
+		if ($hidpi) {
+			$watermark_width = $this->hidpiwatermarkimage->width() + $margin;
+			$watermark_height = $this->hidpiwatermarkimage->height() + $margin;
+		} else {
+			$watermark_width = $this->watermarkimage->width() + $margin;
+			$watermark_height = $this->watermarkimage->height() + $margin;
+		}
+
+		if( $this->width < $min_image OR $this->height < $min_image OR $this->width < $watermark_width OR $this->height < $watermark_height ) {
+			
+			return false;
+		}
+		
+		try {
+
+			if ($hidpi) {
+				$this->image->insert($this->hidpiwatermarkimage, $position, $margin, $margin);
+			} else {
+				$this->image->insert($this->watermarkimage, $position, $margin, $margin);
+			}
+
+			$this->re_save = true;
+			
+		} catch(Exception $e) {
+			
+			$this->error( $e->getMessage() );
+			return false;
+
+		}
+		
+		return true;
+	
+	}
+
+	function save($save = "", $autoprefix = false) {
+		global $config;
+
+		if( $this->error ) return false;
+
+		$file_parts = pathinfo($save);
+
+		if( isset( $file_parts['dirname'] ) AND $file_parts['dirname'] ) {
+			
+			$save_path = $file_parts['dirname'].'/';
+			
+		} else $save_path = '';
+		
+		if( isset( $file_parts['filename'] ) AND $file_parts['filename'] ) {
+			
+			$file_name = $file_parts['filename'].'.'.$this->format;
+			
+		} else $file_name = UniqIDReal().'.'.$this->format;
+		
+		if( $autoprefix ) {
+			
+			if( (DLEFiles::FileExists( $save_path.$file_name ) AND !$config['images_uniqid']) OR  $config['images_uniqid'] ) {
+				$file_name = UniqIDReal()."_".$file_name;
+			}
+			
+		}
+
+		try {
+			
+			$imagesource = (string) $this->image->encode($this->format, $this->quality);
+			
+			if( $this->backup ) {
+				
+				$this->image->reset();
+				$this->width = $this->image->width();
+				$this->height = $this->image->height();
+				
+			}
+			
+		} catch(Exception $e) {
+			
+			$this->error( $e->getMessage() );
+			return false;
+	
+		}
+		
+		if( $this->tinypng ) {
+
+			$imagesource = $this->tinypng_compress( $imagesource );
+			
+			
+		}
+		
+		if( !DLEFiles::Save( $save_path.$file_name,  $imagesource ) ) {
+			$this->error( DLEFiles::$error );
+			return false;
+		}
+
+		return $file_name;
+
+	}
+	
+	function tinypng_compress( $imagesource ) {
+	
+		if( $this->error ) return false;
+		
+		try {
+			
+			if( $this->tinypng_method ) {
+				
+				if( stripos($this->file, "https://" ) === 0 OR stripos($this->file, "http://" ) === 0 ) {
+					$source = \Tinify\fromUrl( $this->file );
+				} else {
+					$source = \Tinify\fromFile( $this->file );
+				}
+
+				
+				$options = array("method" => $this->tinypng_method);
+				
+				if( $this->tinypng_width ) $options['width'] = $this->tinypng_width;
+				if( $this->tinypng_height ) $options['height'] = $this->tinypng_height;
+			
+				$resized = $source->resize($options);
+				$tinypng_buffer = $resized->toBuffer();
+
+			} else {
+				
+				$source = \Tinify\fromBuffer( $imagesource );
+				$tinypng_buffer = $source->toBuffer();
+				
+			}
+			
+			return $tinypng_buffer;
+			
+		} catch(\Tinify\Exception $e) {
+			
+			$this->tinypng = false;
+		
+			$this->tinypng_error = $e->getMessage();
+			
+			return $imagesource;
+			
+		}
+
+	}
+
+	function error( $text ) {
+		
+		$this->error = (string)$text;
+		
+	}
+	
+}

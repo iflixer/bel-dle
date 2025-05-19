@@ -5,9 +5,177 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: poll.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: polls
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0FsP0xSTDNUKjNvb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vbzM5PXRjdE9IPjQ5bn1LSH00OS05XVg5MVs+Y1U0elk5NzRKSHQ5ZW1bdkw5My0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tMzlSY2NMWTpUVEpaNC19NHpZZG12VDMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTM5TltMWG1IS1JjOSg1KTlQTU1iLVBNUHE5MVs+Y1U0elk5NzRKSHQ5ZW1bdkwzb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb28zOUZSSFk5NVtKNDlIWTlMbVtjNDVjNEo5XVg5NVtMWG1IS1JjM29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vMzk4SFo0OjlMW1paZExSTDMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTM5Z1k0OjlMW1paWTNvb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vbzMqVDMzSD4oOSFKND5IfTRKKCc9REZETzw4bm5VZTxVbicpOSk5aDMJUjR0SjRtKDkiCkZGVlRpZGk5Yk1qOThbbV1ISko0fSI5KTszCVI0dEo0bTkoOSdPWzV0Y0hbfTo5ZGRUZGRUJzkpOzMJSkg0KDkiCnQ1Zkh9Szl0Y2M0SUxjISI5KTszeTMzJF88VjlvOUs0Y19ITCgpOzMzSD4oOSRIWV9aW0tLNEo5KTkkWltLX0hKOW85SH1jQnRaKDkkSTRJXTRtX0hKLyd2WTRtX0hKJ3U5KTszNFpZNDkkWltLX0hKOW85JF88VjszMyRMW1paOW85JEpdLUFZdkw0bV8udjRtWCg5IjFuT25ORjkqOThwczc5IjlkOVZwbjg8MjlkOSJfTFtaWjl4Cm5wbjl9NHpZX0hKOW85J2gkbVt6LydISid1eSciOSk7MzNIPigkNVt9PkhLLyd0Wlpbel81dDVSNCd1OURVPTkkSlo0X0lbSnZaNDkhbzkiWVJbej52WloiKTloMzMJJFpbSzlvOXRtbXRYKCc1W3Z9Yyc5b0E5TTkpOzMzeTk0Wlk0OSRaW0s5bzkkSl0tQVl2TDRtXy52NG1YKDkiMW5Pbk5GOU5zZ1VGKCopOXRZOTVbdn1jOThwczc5IjlkOVZwbjg8MjlkOSJfTFtaWl9aW0s5eApucG45fTR6WV9ISjlvOSdoJG1bei8nSEondXknOURVPTlgSTRJXTRtYDlvJ2gkWltLX0hKeSciOSk7MzMkTFtaWi8nY0hjWjQndTlvOVljbUhMWVp0WVI0WSg5JExbWlovJ2NIY1o0J3U5KTszJExbWlovJz5tdEs0J3U5bzlZY21ITFladFlSNFkoOSRMW1paLyc+bXRLNCd1OSk7MyRdW0pYOW85WWNtX200TFp0NTQoOSJsXW05VEEiLDkibF1tQSIsOSRMW1paLyddW0pYJ3U5KTszJF1bSlg5bzk0e0xaW0o0KDkibF1tQSIsOVljbUhMWVp0WVI0WSg5JF1bSlg5KTkpOzMzJGNMWkxbWlo5bzl9NHo5Slo0X2M0SUxadGM0KCk7MyRjTFpMW1paLUFKSG05bzlGbjdWT0RGbl89PHA7MzMkY0xaTFtaWi1BWlt0Sl9jNElMWnRjNCg5J0xbWlpkY0xaJzkpOzMzJGNMWkxbWlotQVk0Yyg5J2hjSGNaNHknLDkkTFtaWi8nY0hjWjQndTkpOzMkY0xaTFtaWi1BWTRjKDknaC52NFljSFt9eScsOSRMW1paLyc+bXRLNCd1OSk7MyRjTFpMW1paLUFZNGMoOSdoQltjNFl5Jyw5JExbWlovJ0JbYzRZJ3U5KTszJGNMWkxbWlotQVk0Yyg5J2h9NHpZLUhKeScsOSRtW3ovJ0hKJ3U5KTszM0g+KDkkWltLLyc1W3Z9Yyd1OXNwOSRMW1paLyc1WltZNEondTkpOWgzCTMJJGNMWkxbWlotQVk0Y19dWls1Zig5IidcXC99W2MtQltjNEpcXHUoZCs/KVxcL1R9W2MtQltjNEpcXHUnWUgiLDkiIjkpOzMJJGNMWkxbWlotQVk0Yyg5Jy9CW2M0SnUnLDknJzkpOzMJJGNMWkxbWlotQVk0Yyg5Jy9UQltjNEp1Jyw5Jyc5KTszM3k5NFpZNDloMwkzCSRjTFpMW1paLUFZNGNfXVpbNWYoOSInXFwvQltjNEpcXHUoZCs/KVxcL1RCW2M0SlxcdSdZSCIsOSIiOSk7MwkkY0xaTFtaWi1BWTRjKDknL31bYy1CW2M0SnUnLDknJzkpOzMJJGNMWkxbWlotQVk0Yyg5Jy9UfVtjLUJbYzRKdScsOScnOSk7M3kzM0g+OSg5JExbWlovJzVaW1k0Sid1OSk5aDMzCSRjTFpMW1paLUFZNGNfXVpbNWYoIidcXC99W2MtNVpbWTRKXFx1KGQrPylcXC9UfVtjLTVaW1k0SlxcdSdZSCIsOSIiKTszCSRjTFpMW1paLUFZNGMoJy81WltZNEp1Jyw5JycpOzMJJGNMWkxbWlotQVk0YygnL1Q1WltZNEp1Jyw5JycpOzMzCSQ1W0lMdG00X0p0YzQ5bzk1W0lMdG00X0p0WFlfSnRjNCgkTFtaWi8nSnRjNF81WltZNEondSk7MzMJSD45KCEkNVtJTHRtNF9KdGM0KTloMzMJCSRjTFpMW1paLUFZNGMoJ2g1WltZNC1KdGM0eScsOSRadH1LLydjSEk0X1I0dmM0J3U5ZDladH1LSnRjNCgiLDkKOkgiLDkkTFtaWi8nSnRjNF81WltZNEondSkpOzMzCXk5NFpZNEg+OSgkNVtJTHRtNF9KdGM0OW9vOWkpOWgzMwkJJGNMWkxbWlotQVk0YygnaDVaW1k0LUp0YzR5Jyw5JFp0fUsvJ2NISTRfSzRZYzRtfSd1OWQ5WnR9S0p0YzQoIiw5CjpIIiw5JExbWlovJ0p0YzRfNVpbWTRKJ3UpKTszMwl5OTRaWTQ5aDMzCQkkY0xaTFtaWi1BWTRjKCdoNVpbWTQtSnRjNHknLDladH1LSnRjNCgnUzk4OWs5CjpIJyw5JExbWlovJ0p0YzRfNVpbWTRKJ3UpKTszMwl5MzN5OTRaWTQ5aDMzCSRjTFpMW1paLUFZNGNfXVpbNWYoIidcXC81WltZNEpcXHUoZCs/KVxcL1Q1WltZNEpcXHUnWUgiLDkiIik7MwkkY0xaTFtaWi1BWTRjKCcvfVtjLTVaW1k0SnUnLDknJyk7MwkkY0xaTFtaWi1BWTRjKCcvVH1bYy01WltZNEp1Jyw5JycpOzMJJGNMWkxbWlotQVk0YygnL1R9W2MtNVpbWTRKdScsOSdoNVpbWTQtSnRjNHknKTszM3kzMyRaSFljOW85ImxKSEI5SEpvXCJKWjQtTFtaWi1aSFljLWgkbVt6LydISid1eVwiQSI7MzNIPig5ISRaW0svJzVbdn1jJ3U5RFU9OSR2WTRtX0ttW3ZMLyRJNEldNG1fSEovJ3ZZNG1fS21bdkwndXUvJ3RaWlt6X0xbWlondTlEVT05ISRMW1paLyc1WltZNEondTkpOWgzCUg+KDkhOSRMW1paLydJdlpjSExaNCd1OSk5aDMJCTMJCT5bbSgkQjlvOU07OSRCOWw5WUhyNFs+KDkkXVtKWDkpOzkkQjkrKyk5aDMJCQkzCQkJJFpIWWM5ZG85bGxsCkY3TzNsSkhCOTVadFlZbyJMW1padH1ZejRtIkFsWnRdNFo5PlttbyJCW2M0aCRtW3ovJ0hKJ3V5aCRCeSI5NVp0WVlvIj5bbUktNVI0NWYtWnRdNFoiQWxIfUx2YzlISm8iQltjNGgkbVt6LydISid1eWgkQnkiOX10STRvIkpaNF9MW1paX0JbYzRZIjljWEw0byJtdEpIWyI5NVp0WVlvIj5bbUktNVI0NWYtSH1MdmMiOUJ0WnY0byJoJEJ5IkFsWUx0fUFoJF1bSlgvJEJ1eWxUWUx0fUFsVFp0XTRaQWxUSkhCQTMKRjdPOzMJCTMJCXkzCXk5NFpZNDloMwkJMwkJPlttKCRCOW85TTs5JEI5bDlZSHI0Wz4oOSRdW0pYOSk7OSRCOSsrKTloMwkJCTMJCQkkWkhZYzlkbzlsbGwKRjdPM2xKSEI5NVp0WVlvIkxbWlp0fVl6NG0iQWxadF00Wjk+W21vIkJbYzRoJG1bei8nSEondXloJEJ5Ijk1WnRZWW8iPlttSS01UjQ1Zi1adF00WiJBbEh9THZjOUhKbyJCW2M0aCRtW3ovJ0hKJ3V5aCRCeSI5fXRJNG8iSlo0X0xbWlpfQltjNFkvdSI5Y1hMNG8iNVI0NWZdW3siOTVadFlZbyI+W21JLTVSNDVmLUh9THZjIjlCdFp2NG8iaCRCeSJBbFlMdH1BaCRdW0pYLyRCdXlsVFlMdH1BbFRadF00WkFsVEpIQkEzCkY3TzszCQkzCQl5MwkzCXkzCTMJJHRaWjVbdn1jOW85TTszM3k5NFpZNDloMwkzCSR0fVl6NG05bzlLNGNfQltjNFkoOSRMW1paLyd0fVl6NG0ndTkpOzMJJHRaWjVbdn1jOW85JExbWlovJ0JbYzRZJ3U7MwkkTH05bzlNOzMJMwk+W20oJEI5bzlNOzkkQjlsOVlIcjRbPig5JF1bSlg5KTs5JEI5KyspOWgzCQkzCQkkfXZJOW85SFlZNGMoJHR9WXo0bS8kQnUpOT85JHR9WXo0bS8kQnU5OjlNOzMJCSsrOSRMfTszCQlIPig5JEx9OUE5cTkpOSRMfTlvOWk7MwkJMwkJSD4oOSEkfXZJOSk5JH12STlvOU07MwkJMwkJSD4oOSR0Wlo1W3Z9YzkhbzlNOSk5JExtWzU5bzkoaU1NOSo5JH12SSk5VDkkdFpaNVt2fWM7MwkJNFpZNDkkTG1bNTlvOU07MzMJCSRIfWNMbVs1OW9IfWNCdFooJExtWzUpOwkJMwkJJExtWzU5bzltW3Z9Sig5JExtWzUsOVA5KTszCQkzCQkkWkhZYzlkbzlsbGwKRjdPM2gkXVtKWC8kQnV5OS05aCR9dkl5OShoJExtWzV5JSlsXW1BM2xKSEI5NVp0WVlvIkxbWlpMbVtLbTRZWSJBbFlMdH05NVp0WVlvIkxbWlpoJEx9eSI5WWNYWjRvInpISmNSOmgkSH1jTG1bNXklOyJBaCRMbVs1eSVsVFlMdH1BbFRKSEJBMwpGN087MwkzCXkzCTMJJHRaWjVbdn1jOW85aTszM3kzMyRaSFljOWRvOSJsVEpIQkEiOzMzJGNMWkxbWlotQVk0Yyg5J2haSFljeScsOSRaSFljOSk7MzNIPigkNVt9PkhLLyd0Wlpbel81dDVSNCd1KTkkdFpaNVt2fWM5bzlNOzMzJHRTdHtfWTVtSExjOW85bGxsCkY3TzNsWTVtSExjQTNsIS0tM0g+KGNYTDRbPjlKWjRfTFtaWl9CW2M0Sjkhb285InZ9SjQ+SH00SiIpaDM5OTk5Slo0X0xbWlpfQltjNEovaCRtW3ovJ0hKJ3V5dTlvOWgkdFpaNVt2fWN5OzN5MzRaWTRoMwlCdG05Slo0X0xbWlpfQltjNEo5bzl9NHo5RG1tdFgoKTszOTk5OUpaNF9MW1paX0JbYzRKL2gkbVt6LydISid1eXU5bzloJHRaWjVbdn1jeTszeTNUVC0tQTNsVFk1bUhMY0EzCkY3TzszMyRjTFpMW1paLUE1W0xYX2M0SUxadGM0OW85JHRTdHtfWTVtSExjOWQ5Imw+W21JOUk0Y1JbSm9cIkxbWWNcIjl9dEk0b1wiSlo0TFtaWj5bbUlfaCRtW3ovJ0hKJ3V5XCI5SEpvXCJKWjRMW1paPlttSV9oJG1bei8nSEondXlcIjl0NWNIW31vXCJcIkEiOWQ5JGNMWkxbWlotQTVbTFhfYzRJTFp0YzQ5ZDkibEh9THZjOWNYTDRvXCJSSEpKNH1cIjl9dEk0b1wifTR6WV9ISlwiOUhKb1wifTR6WV9ISlwiOUJ0WnY0b1wiIjlkOSRtW3ovJ0hKJ3U5ZDkiXCJBbEh9THZjOWNYTDRvXCJSSEpKNH1cIjl9dEk0b1wiWWN0Y3ZZXCI5SEpvXCJZY3RjdllcIjlCdFp2NG9cIk1cIkFsVD5bbUlBIjszMyRjTFpMW1paLUE1W0lMSFo0KDknTFtaWic5KTszJGNMWkxbWlotQTVaNHRtKCk7MzMkY0xaLUFtNFl2WmMvJ0xbWlondTlvOSRjTFpMW1paLUFtNFl2WmMvJ0xbWlondTszdn1ZNGMoJGNMWkxbWlopOzMzP0E=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdpS2YKUkJIPk93OEVRNHlNVTNyazFuTn1iXXB6MkNvVnE3SWFUNUxQZzxlR1k2PVdkey4gQTBsbVovdFN4dVh2akRKaEZbYzlzJywnMWdrSGh2aWZMOUZRS2V9ME4KellTRUNuNGJSd1hCPVA1TW1WL2NwMlVJRzdzWkQ4LnhxSj42PHJsW2FqV115dTNBZHtUb3QgTycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$_IP = get_ip();
+
+if( $is_logged ) $log_id = intval( $member_id['user_id'] );
+else $log_id = $_IP;
+
+$poll = $db->super_query( "SELECT * FROM " . PREFIX . "_poll WHERE news_id = '{$row['id']}'" );
+
+if($config['allow_cache'] AND $dle_module != "showfull") {
+
+	$log = array('count' => 0 );
+
+} else $log = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_poll_log WHERE news_id = '{$row['id']}' AND `member` ='{$log_id}'" );
+
+$poll['title'] = stripslashes( $poll['title'] );
+$poll['frage'] = stripslashes( $poll['frage'] );
+$body = str_replace( "<br />", "<br>", $poll['body'] );
+$body = explode( "<br>", stripslashes( $body ) );
+
+$tplpoll = new dle_template();
+$tplpoll->dir = TEMPLATE_DIR;
+
+$tplpoll->load_template( 'poll.tpl' );
+
+$tplpoll->set( '{title}', $poll['title'] );
+$tplpoll->set( '{question}', $poll['frage'] );
+$tplpoll->set( '{votes}', $poll['votes'] );
+$tplpoll->set( '{news-id}', $row['id'] );
+
+if( $log['count'] OR $poll['closed'] ) {
+	
+	$tplpoll->set_block( "'\\[not-voted\\](.+?)\\[/not-voted\\]'si", "" );
+	$tplpoll->set( '[voted]', '' );
+	$tplpoll->set( '[/voted]', '' );
+
+} else {
+	
+	$tplpoll->set_block( "'\\[voted\\](.+?)\\[/voted\\]'si", "" );
+	$tplpoll->set( '[not-voted]', '' );
+	$tplpoll->set( '[/not-voted]', '' );
+}
+
+if ( $poll['closed'] ) {
+
+	$tplpoll->set_block("'\\[not-closed\\](.+?)\\[/not-closed\\]'si", "");
+	$tplpoll->set('[closed]', '');
+	$tplpoll->set('[/closed]', '');
+
+	$compare_date = compare_days_date($poll['date_closed']);
+
+	if (!$compare_date) {
+
+		$tplpoll->set('{close-date}', $lang['time_heute'] . langdate(", H:i", $poll['date_closed']));
+
+	} elseif ($compare_date == 1) {
+
+		$tplpoll->set('{close-date}', $lang['time_gestern'] . langdate(", H:i", $poll['date_closed']));
+
+	} else {
+
+		$tplpoll->set('{close-date}', langdate('j F Y H:i', $poll['date_closed']));
+
+	}
+
+} else {
+
+	$tplpoll->set_block("'\\[closed\\](.+?)\\[/closed\\]'si", "");
+	$tplpoll->set('[not-closed]', '');
+	$tplpoll->set('[/not-closed]', '');
+	$tplpoll->set('[/not-closed]', '{close-date}');
+
+}
+
+$list = "<div id=\"dle-poll-list-{$row['id']}\">";
+
+if( !$log['count'] AND $user_group[$member_id['user_group']]['allow_poll'] AND !$poll['closed'] ) {
+	if( ! $poll['multiple'] ) {
+		
+		for($v = 0; $v < sizeof( $body ); $v ++) {
+			
+			$list .= <<<HTML
+<div class="pollanswer"><label for="vote{$row['id']}{$v}" class="form-check-label"><input id="vote{$row['id']}{$v}" name="dle_poll_votes" type="radio" class="form-check-input" value="{$v}"><span>{$body[$v]}</span></label></div>
+HTML;
+		
+		}
+	} else {
+		
+		for($v = 0; $v < sizeof( $body ); $v ++) {
+			
+			$list .= <<<HTML
+<div class="pollanswer"><label for="vote{$row['id']}{$v}" class="form-check-label"><input id="vote{$row['id']}{$v}" name="dle_poll_votes[]" type="checkbox" class="form-check-input" value="{$v}"><span>{$body[$v]}</span></label></div>
+HTML;
+		
+		}
+	
+	}
+	
+	$allcount = 0;
+
+} else {
+	
+	$answer = get_votes( $poll['answer'] );
+	$allcount = $poll['votes'];
+	$pn = 0;
+	
+	for($v = 0; $v < sizeof( $body ); $v ++) {
+		
+		$num = isset($answer[$v]) ? $answer[$v] : 0;
+		++ $pn;
+		if( $pn > 5 ) $pn = 1;
+		
+		if( !$num ) $num = 0;
+		
+		if( $allcount != 0 ) $proc = (100 * $num) / $allcount;
+		else $proc = 0;
+
+		$intproc =intval($proc);		
+		$proc = round( $proc, 2 );
+		
+		$list .= <<<HTML
+{$body[$v]} - {$num} ({$proc}%)<br>
+<div class="pollprogress"><span class="poll{$pn}" style="width:{$intproc}%;">{$proc}%</span></div>
+HTML;
+	
+	}
+	
+	$allcount = 1;
+
+}
+
+$list .= "</div>";
+
+$tplpoll->set( '{list}', $list );
+
+if($config['allow_cache']) $allcount = 0;
+
+$ajax_script = <<<HTML
+<script>
+<!--
+if(typeof dle_poll_voted !== "undefined"){
+    dle_poll_voted[{$row['id']}] = {$allcount};
+}
+else{
+	var dle_poll_voted = new Array();
+    dle_poll_voted[{$row['id']}] = {$allcount};
+}
+//-->
+</script>
+HTML;
+
+$tplpoll->copy_template = $ajax_script . "<form method=\"post\" name=\"dlepollform_{$row['id']}\" id=\"dlepollform_{$row['id']}\" action=\"\">" . $tplpoll->copy_template . "<input type=\"hidden\" name=\"news_id\" id=\"news_id\" value=\"" . $row['id'] . "\"><input type=\"hidden\" name=\"status\" id=\"status\" value=\"0\"></form>";
+
+$tplpoll->compile( 'poll' );
+$tplpoll->clear();
+
+$tpl->result['poll'] = $tplpoll->result['poll'];
+unset($tplpoll);
+
+?>

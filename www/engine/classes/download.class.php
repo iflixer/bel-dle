@@ -5,9 +5,127 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: download.class.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Download files
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1VyP3VTdUNxKkNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY0NibmpHajJvPjRiMXs1b3s0Yi1iVmtieEY+Rzw0Uk9iSDRwb2piLzhGW3ViQy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tQ2JTR0d1TzpxcXBUNC17NFJPbThbcUMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUNiQkZ1azhvNVNHYihdKWIwICBmLTAgMGhieEY+Rzw0Uk9iSDRwb2piLzhGW3VDY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NDYllTb09iXUZwNGJvT2J1OEZHNF1HNHBiVmtiXUZ1azhvNVNHQ2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjQ2Jlb1Q0OmJwRlJ7VEZqcG1dVGpPT211U3VDLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1DYmdPNDpibkZSe1RGanBiPm9UNE9DY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NDKnFDQ28+KGIhcDQ+b3s0cChiJ25LWUsyN2UxMTwvNzwxJ2IpYilid0MJUzRqcDQ4KGIiWllZLnFhbWFiZiBYYmVGOFZvcHA0eyJiKTtDCVM0anA0OGIoYicyRl1qR29GezpibW1xbW1xJ2IpO0MJcG80KGIiWmpdfW97NWJqR0c0aXVHISJiKTtDSkNDXVRqT09icEZSe1RGanBid0MJQwl1W1ZUb11iJHU4RnU0OEdvNE9iY2JqODhqa2IoKTtDQwl1W1ZUb11iJDhqezU0YmNiIDtDCUMJPlt7XUdvRntiX19dRntPRzhbXUcoJHVqR1MsYiR7amk0LGIkcDhvNjQ4KWJ3Q0MJCW4yMWVvVDRPOjpve29HKCk7QwkJCUMJCW8+YihiIW4yMWVvVDRPOjplb1Q0MU5vT0dPKGIkdWpHUyxiJHA4bzY0OGIpYilid0MJCQlTNGpwNDgoYiJaWVkucWFtYWJmIFhiZUY4Vm9wcDR7ImIpO0MJCQlwbzRiKGIiWVM0Yj5vVDRiUmpPYntGR2I+Rlt7cGJGe2JHUzRiTzQ4NjQ4ImIpO0MJCUpDCQlDCQkkT29sNGJjYm4yMWVvVDRPOjp4b2w0KGIkdWpHUyxiJHA4bzY0OGIpO0MJCSRHa3U0YmNibjIxZW9UNE86OkhvaTRZa3U0KGIkdWpHUyxiJHA4bzY0OGIpO0NDCQlvPmIoYm4yMWVvVDRPOjokNDg4RjhiKXdDCQkJUzRqcDQ4KGIiWllZLnFhbWFiZiBYYmVGOFZvcHA0eyJiKTtDCQkJNF1TRmJuMjFlb1Q0Tzo6JDQ4OEY4O0MJCQlwbzRiKCk7QwkJSkMJCUMJCSRHU29PLVV1OEZ1NDhHbzRPYmNiajg4amtiKCd1akdTJ2JjVWIkdWpHUyxiJ3tqaTQnYmNVYiR7amk0LGIncG9PfSdiY1ViJHA4bzY0OCxiJ0drdTQnYmNVYiRHa3U0LGInT29sNCdiY1ViJE9vbDQpO0MJCUMJCW8+YihvT080RygkX3gxeUkxeXMnWllZLl95SzwvMSczKSlid0NDCQkJJEdTb08tVThqezU0YmNiJF94MXlJMXlzJ1pZWS5feUs8LzEnMztDCQkJJEdTb08tVThqezU0YmNiT0c4Xzg0dVRqXTQoIlZrRzRPYyIsYiIiLGIkR1NvTy1VOGp7NTQpO0MJCQkkR1NvTy1VOGp7NTRiY2JPRzhfODR1VGpdNCgiLSIsYiIiLGIkR1NvTy1VOGp7NTQpO0NDCQlKYjRUTzRid0NDCQkJJEdTb08tVThqezU0YmNiIDtDCQlKQ0MJCW8+YigkR1NvTy1VOGp7NTRiVWIkR1NvTy1VdThGdTQ4R280T3MnT29sNCczKWIkR1NvTy1VOGp7NTRiY2IgO0NDCUpDCUMJPlt7XUdvRnticEZSe1RGanBfPm9UNCgpYndDQwkJbz5iKCRHU29PLVU4ans1NClid0MJCQlTNGpwNDgoJF94MXlJMXlzJ3gxeUkxeV8ueXpZekJ6MiczYm1iImIwIGRiLmo4R29qVGJCRntHNHtHIik7QwkJSmI0VE80YndDCQkJUzRqcDQ4KCRfeDF5STF5cyd4MXlJMXlfLnl6WXpCejInM2JtYiJiMCAgYnp2Iik7QwkJSkNDCQlTNGpwNDgoYiIuOGo1aWo6YnVbVlRvXSJiKTtDCQlTNGpwNDgoYiIxTnVvODRPOmIgImIpO0MJCVM0anA0OChiIkJqXVM0LUJGe0c4RlQ6YmlbT0ctODQ2alRvcGpHNCxidUZPRy1dUzRdfWMgLGJ1ODQtXVM0XX1jICIpO2JDCQlTNGpwNDgoYiJCal1TNC1CRntHOEZUOmJ1OG82akc0IixiPmpUTzQpO0NDCQlvPihiJEdTb08tVXU4RnU0OEdvNE9zJ0drdTQnM2IpYndDCQkJUzRqcDQ4KGIiQkZ7RzR7Ry1Za3U0OmIiYm1iJEdTb08tVXU4RnU0OEdvNE9zJ0drdTQnM2IpO0MJCUpiNFRPNGJ3QwkJCVM0anA0OChiIkJGe0c0e0ctWWt1NDpianV1VG9dakdvRntxRl1HNEctT0c4NGppImIpO0MJCUpDQwkJUzRqcDQ4KGInQkZ7RzR7Ry1ub091Rk9vR29GezpiakdHal1TaTR7RztiPm9UNHtqaTRjIidibWIkR1NvTy1VdThGdTQ4R280T3Mne2ppNCczYm1iJyInYik7QwkJUzRqcDQ4KGIiQkZ7RzR7Ry1ZOGp7Tz40OC0xe11GcG97NTpiVm97ajhrImIpO0MJCVM0anA0OCgnS11dNHVHLXlqezU0TzpiVmtHNE8nKTtDQwkJbz5iKCRHU29PLVU4ans1NClid0NDCQkJUzRqcDQ4KCJCRntHNHtHLXlqezU0OmJWa0c0T2J3JEdTb08tVThqezU0Si0iYm1iKCRHU29PLVV1OEZ1NDhHbzRPcydPb2w0JzNiLWJhKWJtYiJxImJtYiRHU29PLVV1OEZ1NDhHbzRPcydPb2w0JzMpO0MJCQlTNGpwNDgoIkJGe0c0e0ctMjR7NUdTOmIiYm1iKCRHU29PLVV1OEZ1NDhHbzRPcydPb2w0JzNiLWIkR1NvTy1VOGp7NTQpKTtDCQkJQwkJSmI0VE80YndDQwkJCVM0anA0OCgiQkZ7RzR7Ry0yNHs1R1M6YiJibWIkR1NvTy1VdThGdTQ4R280T3MnT29sNCczKTtDCQlKQ0MJCVM0anA0OCgiQkZ7ezRdR29GezpiXVRGTzQiKTtDYgkJQwkJQG97b19PNEcoYidpak5fNE40XVtHb0Z7X0dvaTQnLGIgYik7QwkJQE80R19Hb2k0X1RvaW9HKCApO0MJCUMJCSRHU29PLVVfcEZSe1RGanAoKTtDCUpDCUMJPlt7XUdvRntiX3BGUntURmpwKClid0NDCQlARlZfNHtwX11UNGp7KCk7QwkJQwkJJFNqe3BUNGJjYm4yMWVvVDRPOjp5NGpweEc4NGppKGIkR1NvTy1VdThGdTQ4R280T3MndWpHUyczLGIkR1NvTy1VdThGdTQ4R280T3MncG9PfSczKTtDCUMJCW8+YihibjIxZW9UNE86OiQ0ODhGOGIpd0MJCQlTNGpwNDgoYiJaWVkucWFtYWJmIFhiZUY4Vm9wcDR7ImIpO0MJCQk0XVNGYm4yMWVvVDRPOjokNDg4Rjg7QwkJCXBvNGIoKTtDCQlKQwkJQwkJbz5iKG9PXzg0T0ZbOF00KCRTantwVDQpKWJ3QwkJCT5PNDR9KCRTantwVDQsYiRHU29PLVU4ans1NGIpO0NDCQkJUlNvVDRiKGIhPjRGPihiJFNqe3BUNGIpYilid0MJCQkJdThve0coYj44NGpwKGIkU2p7cFQ0LGIKYVEwYiliKTtDCQkJCUZWXz5UW09TKCk7QwkJCQk+VFtPUygpO0MJCQlKQwkJCUMJCQk+XVRGTzQoYiRTantwVDRiKTtDCQlKQwlKQ0NKQw==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdJb3tsdEF6a0cuU0g0Wm5bTFRkPXAxS0RCMEo8TzY3L3cgNXhZVnF1UTJYYzNGZj44fVBlOWdOaHlzUmptckNdTVVidlcKRWlhJywnVmluelhqT3l0UGhNZUhEdTdsNllkRUFKQzJ9TnN2SUd7MGdTVGIvcDlMMz1dbzRmcmtCRnFVeDVSW3dhLjwKY1o+IEtXOFFtMScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+class download {
+	
+	public $properties = array ();
+
+	public $range = 0;
+	
+	function __construct($path, $name, $driver) {
+
+		DLEFiles::init();
+			
+		if ( !DLEFiles::FileExists( $path, $driver ) ) {
+			header( "HTTP/1.1 403 Forbidden" );
+			die ( "The file was not found on the server" );
+		}
+		
+		$size = DLEFiles::Size( $path, $driver );
+		$type = DLEFiles::MimeType( $path, $driver );
+
+		if ( DLEFiles::$error ){
+			header( "HTTP/1.1 403 Forbidden" );
+			echo DLEFiles::$error;
+			die ();
+		}
+		
+		$this->properties = array ('path' => $path, 'name' => $name, 'disk' => $driver, 'type' => $type, 'size' => $size);
+		
+		if (isset($_SERVER['HTTP_RANGE'])) {
+
+			$this->range = $_SERVER['HTTP_RANGE'];
+			$this->range = str_replace("bytes=", "", $this->range);
+			$this->range = str_replace("-", "", $this->range);
+
+		} else {
+
+			$this->range = 0;
+		}
+
+		if ($this->range > $this->properties['size']) $this->range = 0;
+
+	}
+	
+	function download_file() {
+
+		if ($this->range) {
+			header($_SERVER['SERVER_PROTOCOL'] . " 206 Partial Content");
+		} else {
+			header($_SERVER['SERVER_PROTOCOL'] . " 200 OK");
+		}
+
+		header( "Pragma: public" );
+		header( "Expires: 0" );
+		header( "Cache-Control: must-revalidate, post-check=0, pre-check=0"); 
+		header( "Cache-Control: private", false);
+
+		if( $this->properties['type'] ) {
+			header( "Content-Type: " . $this->properties['type'] );
+		} else {
+			header( "Content-Type: application/octet-stream" );
+		}
+
+		header( 'Content-Disposition: attachment; filename="' . $this->properties['name'] . '"' );
+		header( "Content-Transfer-Encoding: binary" );
+		header('Accept-Ranges: bytes');
+
+		if ($this->range) {
+
+			header("Content-Range: bytes {$this->range}-" . ($this->properties['size'] - 1) . "/" . $this->properties['size']);
+			header("Content-Length: " . ($this->properties['size'] - $this->range));
+			
+		} else {
+
+			header("Content-Length: " . $this->properties['size']);
+		}
+
+		header("Connection: close");
+ 		
+		@ini_set( 'max_execution_time', 0 );
+		@set_time_limit(0);
+		
+		$this->_download();
+	}
+	
+	function _download() {
+
+		@ob_end_clean();
+		
+		$handle = DLEFiles::ReadStream( $this->properties['path'], $this->properties['disk']);
+	
+		if ( DLEFiles::$error ){
+			header( "HTTP/1.1 403 Forbidden" );
+			echo DLEFiles::$error;
+			die ();
+		}
+		
+		if (is_resource($handle)) {
+			fseek($handle, $this->range );
+
+			while ( !feof( $handle ) ) {
+				print( fread( $handle, 8192 ) );
+				ob_flush();
+				flush();
+			}
+			
+			fclose( $handle );
+		}
+	}
+
+}

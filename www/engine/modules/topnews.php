@@ -5,9 +5,488 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: topnews.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: view of the rating of articles
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0ZZPzhKOFVlKlVJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSVVWe3QvdDJRNVRWOWZrUWZUVi1WZ2pWT1c1L3FUaWxWZFQKUXRWWC5XRThWVS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tVVZKLy84bDplZQpdVC1mVGlsci5FZVUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVVWelc4ai5Ra0ovVihBKVZ9NzczLX03fUdWT1c1L3FUaWxWZFQKUXRWWC5XRThVSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlVVndKUWxWQVcKVFZRbFY4LlcvVEEvVApWZ2pWQVc4ai5Ra0ovVUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJVVZaUV1UOlYvVzhmVGlscjhKOFUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVVWTGxUOlZSUVRpVlc1Vi9KVFYudC9RZmtWVzVWdC4vUUFdVGxVSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlVKmVVVVE1KFYhClQ1UWZUCignez13PTJQWjk5cVhQcTknKVYpVnZVCUpUdApULihWInB3dzBleHJ4VjM3PFZaVy5nUQoKVGYiVik7VQlKVHQKVC5WKFYnMldBdC9RV2Y6VnJyZXJyZSdWKTtVCQpRVChWInB0QTRRZmtWdC8vVDY4LyEiVik7VURVVSQvOF0tRi5UbEVdL04nL1c4ZlRpbCduVklWCl1UX0F0QUpUKFYiL1c4ZlRpbCIsViRBV2Y1UWtOJ2w0UWYnbixWLy5FVFYpO1VVUTUoViQvOF0tRi5UbEVdL04nL1c4ZlRpbCduVklJSVY1dF1sVFYpVnZVCVUJJC9KUWxfNldmL0pWSVYKdC9UKFYnby02LQpWcDpROmwnLFYkX3dQZDlWKTtVCSQvOF0tRi5UbEVdL04nL1c4ZlRpbCduVklWJyc7VQkkLzhdLUZdV3QKXy9UNjhddC9UKFYnL1c4ZlRpbHIvOF0nVik7VVUJUTUoVmwvLlE4V2woViQvOF0tRkFXOGpfL1Q2OF10L1QsViJOYzUiVilWIUlJVjV0XWxUVltiVmwvLlE4V2woViQvOF0tRkFXOGpfL1Q2OF10L1QsViJOUTVjNSJWKVYhSUlWNXRdbFRWKVZ2VVUJCSRjNVdFZgpWSVYvLkVUO1UJCSRjNVFUXQpsVklWYzVRVF0KbF1XdAooKTtVVQkJUTUoQVdFZi8oJGM1UVRdCmwpKVZ2VQkJCSQvVDY4X2M1VklWJGM1UVRdCmw7VQkJCTVXLlR0QUpWKCQvVDY4X2M1VnRsViQ0VklGViRSKVZ2VQkJCQlRNVYobC8uUThXbCgkLzhdLUZBVzhqXy9UNjhddC9ULFYkUk43bilWSUlJVjV0XWxUKVZ2VQkJCQkJRWZsVC8oJGM1UVRdCmxOJDRuKTtVCQkJCURVCQkJRFUJCQlFZmxULygkL1Q2OF9jNSk7VQkJRFUJCVUJRFZUXWxUViRjNVdFZgpWSVY1dF1sVDtVVQkkQVdmNVFrTicvVzhfZkU2Z1QuJ25WSVZRZi9SdF0oJEFXZjVRa04nL1c4X2ZFNmdULiduKTtVCVE1VigkQVdmNVFrTicvVzhfZkU2Z1QuJ25WWVZ4VilWJEFXZjVRa04nL1c4X2ZFNmdULiduVklWeDc7VQlVCSQKZy1GeUVULmooViJPOTI5endWOHJRCixWOHIKdC9ULFY4cmxKVy4vX2wvVy5qLFY4cmM1UVRdCmwsVjhyL1EvXVQsVjhyQXQvVGtXLmosVjhydF0vX2Z0NlRWWmJbZFYiVnJWMGI5WlB1VnJWIl84V2wvVjhWMjlad1ZLW1BxViJWclYwYjlaUHVWclYiXzhXbC9fVGMvLnRsVlRWW3FWKDhyUQpJVHJmVGlsX1EKKVZzcDliOVY4cnQ4OC5XUlRJeFY9cXtWOHIKdC9UVkZJVickL0pRbF82V2YvSidWLVZQcXc5YlM9MlZ4VmRbcXdwVj1xe1Y4cgp0L1RWWVYnJC9KUWxfNldmL0onVltiezliVmhvVi50L1Fma1Z7OU96LFZBVzY2X2ZFNlZ7OU96LFZmVGlsXy5UdApWezlPeixWCnQvVFZ7OU96VjJQZFB3VjcsdiRBV2Y1UWtOJy9XOF9mRTZnVC4nbkQiVik7VQlVCWlKUV1UVihWJC5XaVZJViQKZy1Ga1QvXy5XaSgpVilWdlUJCVUJCSQuV2lOJwp0L1QnblZJVmwvLi9XL1E2VChWJC5XaU4nCnQvVCduVik7VVUJCVE1KFYhViQuV2lOJ0F0L1RrVy5qJ25WKVZ2VQkJCSQ2al9BdC9WSVYiLS0tIjtVCQkJJDZqX0F0L19dUWY0VklWIi0tLSI7VQkJRFZUXWxUVnZVCQkJVQkJCSQ2al9BdC9WSVZ0Li50alYoKTtVCQkJJDZqX0F0L19dUWY0VklWdC4udGpWKCk7VQkJCSRBdC9fXVFsL1ZJVlRjOF1XClQoVicsJyxWJC5XaU4nQXQvVGtXLmonblYpO1UJCVZVCQkJUTUoVkFXRWYvKFYkQXQvX11RbC9WKVZJSVZ4VilWdlUJCQkJVQkJCQlRNShWJEF0L19RZjVXTiRBdC9fXVFsL043bm5OJ1EKJ25WKVZ2VQkJCQkJJDZqX0F0L05uVklWJEF0L19RZjVXTiRBdC9fXVFsL043bm5OJ2Z0NlQnbjtVCQkJCQkkNmpfQXQvX11RZjRWSVZrVC9fQXQvVGtXLlFUbChWJEF0L19dUWwvTjduLFYkQVdmNVFrTidBdC9Ua1cual9sVDh0LnQvVy4nbik7VQkJCQlEVlRdbFRWdlUJCQkJCSQ2al9BdC9fXVFmNFZJViItLS0iO1UJCQkJRFUJCQlVCQkJRFZUXWxUVnZVCQkJCVUJCQkJNVcuVHRBSlYoViRBdC9fXVFsL1Z0bFYkVF1UNlRmL1YpVnZVCQkJCQlRNShWJFRdVDZUZi9WPXF7ViRBdC9fUWY1V04kVF1UNlRmL25OJ1EKJ25WKVZ2VQkJCQkJCSQ2al9BdC9OblZJViRBdC9fUWY1V04kVF1UNlRmL25OJ2Z0NlQnbjtVCQkJCQkJUTUoViRBV2Y1UWtOJ3RdXVdpX3RdL19FLl0nblYpViQ2al9BdC9fXVFmNE5uVklWIll0VkouVDVJXCIiVnJWJEFXZjVRa04nSi8vOF9KVzZUX0UuXSduVnJWa1QvX0UuXShWJFRdVDZUZi9WKVZyViJlXCJGdiRBdC9fUWY1V04kVF1UNlRmL25OJ2Z0NlQnbkRZZXRGIjtVCQkJCQkJVF1sVFYkNmpfQXQvX11RZjROblZJViJZdFZKLlQ1SVwiJDBwMF9POTJaPwpXSUF0LyZBdC9Ua1cuakkiclZrVC9fRS5dKFYkVF1UNlRmL1YpVnJWIlwiRnYkQXQvX1FmNVdOJFRdVDZUZi9uTidmdDZUJ25EWWV0RiI7VQkJCQkJRFUJCQkJRFUJCQkJVQkJCQlRNShWQVdFZi8oViQ2al9BdC9fXVFmNFYpVilWdlUJCQkJCSQ2al9BdC9fXVFmNFZJVlE2OF1XClQoViRBV2Y1UWtOJ0F0L1RrVy5qX2xUOHQudC9XLiduLFYkNmpfQXQvX11RZjRWKTtVCQkJCURWVF1sVFYkNmpfQXQvX11RZjRWSVYiLS0tIjtVCQkJCVUJCQlEVQkJCVUJCQlRNShWQVdFZi8oViQ2al9BdC9WKVYpVnZVCQkJCSQ2al9BdC9WSVZRNjhdVwpUKFYkQVdmNVFrTidBdC9Ua1cual9sVDh0LnQvVy4nbixWJDZqX0F0L1YpO1UJCQlEVlRdbFRWJDZqX0F0L1ZJViItLS0iO1UJCQlVCQlEVQkJVQkJUTUoViRBV2Y1UWtOJ3RdXVdpX3RdL19FLl0nblYpVnZVCQkJVQkJCVE1KFYkQVdmNVFrTidsVFdfL2o4VCduVklJVnhWW2JWJEFXZjVRa04nbFRXXy9qOFQnblZJSVZ9VilWdlUJCQkJVQkJCQlRNShWJC5XaU4nQXQvVGtXLmonblZ0ZgpWJEFXZjVRa04nbFRXXy9qOFQnblZJSVZ9VilWdlUJCQkJCVUJCQkJCSRBdC9sX0UuXVZJVmtUL19FLl0oViQuV2lOJ0F0L1RrVy5qJ25WKTtVCQkJCQlVCQkJCQlRNShWJEF0L2xfRS5dVilWJEF0L2xfRS5dVnJJViJlIjtVCQkJVQkJCQkJJDVFXV1fXVFmNFZJViRBV2Y1UWtOJ0ovLzhfSlc2VF9FLl0nblZyViRBdC9sX0UuXVZyViQuV2lOJ1EKJ25WclYiLSJWclYkLldpTid0XS9fZnQ2VCduVnJWInJKLzZdIjtVCQkJCVUJCQkJRFZUXWxUVnZVCQkJCQlVCQkJCQkkNUVdXV9dUWY0VklWJEFXZjVRa04nSi8vOF9KVzZUX0UuXSduVnJWJC5XaU4nUQonblZyViItIlZyViQuV2lOJ3RdL19mdDZUJ25WclYickovNl0iO1UJCQkJVQkJCQlEVQkJCVUJCQlEVlRdbFRWdlUJCQkJVQkJCQkkNUVdXV9dUWY0VklWJEFXZjVRa04nSi8vOF9KVzZUX0UuXSduVnJWCnQvVChWJ29lNmUKZScsViQuV2lOJwp0L1QnblYpVnJWJC5XaU4ndF0vX2Z0NlQnblZyViJySi82XSI7VQkJCURVCQlVCQlEVlRdbFRWdlUJCQlVCQkJJDVFXV1fXVFmNFZJViRBV2Y1UWtOJ0ovLzhfSlc2VF9FLl0nblZyViJRZgpUY3I4Sjg/ZlRpbFEKSSJWclYkLldpTidRCiduO1UJCVUJCURVCQlVCQkkLldpTidBdC9Ua1cuaiduVklWUWYvUnRdKFYkLldpTidBdC9Ua1cuaiduVik7VQkJVQkJJEFXNjh0LlRfCnQvVFZJVkFXNjh0LlRfCnRqbF8KdC9UKFYkLldpTicKdC9UJ24sViRBV2Y1UWtOJ3RdXVdpX0F0QUpUJ25WKTtVVQkJUTUoViEkQVc2OHQuVF8KdC9UVilWdlUJCQlVCQkJJC84XS1GbFQvKFYndgp0L1REJyxWJF10ZmtOJy9RNlRfSlRFL1QnblZyVl10ZmsKdC9UKFYiLFZwOlEiLFYkLldpTicKdC9UJ25WKVYpO1UJCVUJCURWVF1sVFE1KFYkQVc2OHQuVF8KdC9UVklJVnhWKVZ2VQkJCVUJCQkkLzhdLUZsVC8oVid2CnQvVEQnLFYkXXRma04nL1E2VF9rVGwvVC5mJ25WclZddGZrCnQvVChWIixWcDpRIixWJC5XaU4nCnQvVCduVilWKTtVCQlVCQlEVlRdbFRWdlUJCQlVCQkJJC84XS1GbFQvKFYndgp0L1REJyxWXXRmawp0L1QoViRBV2Y1UWtOJy9RNlRsL3Q2OF90QS9RUlQnbixWJC5XaU4nCnQvVCduVilWKTtVCQlVCQlEVVUJCSRmVGlsXwp0L1RWSVYkLldpTicKdC9UJ247VQkJJC84XS1GQVc4al8vVDY4XXQvVFZJVjguVGtfLlQ4XXRBVF9BdF1dZ3RBNFYoViIjXHYKdC9USShyKz8pXEQjUSIsViI1Vy42CnQvVCIsViQvOF0tRkFXOGpfL1Q2OF10L1RWKTtVVQkJJC84XS1GbFQvKFYndkF0L1RrVy5qRCcsViQ2al9BdC9WKTtVCQkkLzhdLUZsVC8oVid2XVFmNC1BdC9Ua1cuakQnLFYkNmpfQXQvX11RZjRWKTtVVQkJJC5XaU4nL1EvXVQnblZJVmwvLlE4bF10bEpUbChWJC5XaU4nL1EvXVQnblYpO1VVCQkkLldpTicvUS9dVCduVklWbC8uXy5UOF10QVQoViJ2IixWIiYjeH08OyIsViQuV2lOJy9RL11UJ25WKTtVVQkJJC84XS1GbFQvKFYndi9RL11URCcsVmwvLl8uVDhddEFUKCImdDY4O3Q2ODsiLFYiJnQ2ODsiLFZKLzZdbDhUQVF0XUFKdC5sKFYkLldpTicvUS9dVCduLFY5cXdfQ0xbdzlPLFYnTHdaLT4nVilWKVYpO1UJCVUJCVE1VihWOC5Ua182dC9BSihWIiNcXHYvUS9dVFZdUTZRL0lOJ1wibihyKz8pTidcIm5cXEQjUSIsViQvOF0tRkFXOGpfL1Q2OF10L1QsViQ2dC9BSlRsVilWKVZ2VQkJCSQvOF0tRmxULyhWJDZ0L0FKVGxON24sVkFdVHQuX0FXZi9UZi8oJC5XaU4nL1EvXVQnbixWJDZ0L0FKVGxOeG4pVik7VQkJRFVVVQkJJC84XS1GbFQvKFYndl1RZjREJyxWJDVFXV1fXVFmNFYpO1VVCQkkLldpTidsSlcuL19sL1cuaiduVklWbC8uUThsXXRsSlRsKFYkLldpTidsSlcuL19sL1cuaiduVik7VQkJJC5XaU4nYzVRVF0KbCduVklWbC8uUThsXXRsSlRsKFYkLldpTidjNVFUXQpsJ25WKTtVCQlVCQlRNVYobC8uUThXbFYoViQuV2lOJ2xKVy4vX2wvVy5qJ24sViJOSlEKVCJWKVYhSUlWNXRdbFRWKVZ2VQkJCVUJCQkkLldpTidsSlcuL19sL1cuaiduVklWOC5Ua18uVDhddEFUX0F0XV1ndEE0VihWIiNcTkpRClQocio/KVxuKHIrPylcTmVKUQpUXG4jUWwiLFZVCQkJCTVFZkEvUVdmVigkNnQvQUpUbClWRWxUVigkNlQ2Z1QuX1EKLFYkRWxULl9rLldFOCxWJF10ZmspVnZVCQkJCQlVCQkJCQkkNnQvQUpUbE54blZJVmwvLl8uVDhddEFUKHQuLnRqKCJJIixWIlYiKSxWIiIsViQ2dC9BSlRsTnhuKTtVCQkJCQkkNnQvQUpUbE59blZJViQ2dC9BSlRsTn1uO1UJVQkJCQkJUTUoViQ2dC9BSlRsTnhuVilWdlUJCQkJCQlVCQkJCQkJJGsuV0U4bFZJVlRjOF1XClQoVicsJyxWJDZ0L0FKVGxOeG5WKTtVCVUJCQkJCQlRNShWUWZfdC4udGooViQ2VDZnVC5fUQpOJ0VsVC5fay5XRTgnbixWJGsuV0U4bFYpVltiViQ2VDZnVC5fUQpOJ0VsVC5fay5XRTgnblZJSVYieCIpVnZVCQkJCQkJCS5UL0UuZlYkNnQvQUpUbE59bjtVCQkJCQkJRFZUXWxUVi5UL0UuZlYiWQpRUlZBXXRsbElcInlFVy9UVgpdVEpRCgpUZlwiRiJWclYkXXRma04nZlRpbF8uVGtFbCduVnJWIlllClFSRiI7VQkJCQkJCVUJCQkJCURWVF1sVFZ2VQkJCQkJCVUJCQkJCQlRNShWJEVsVC5fay5XRThOJDZUNmdULl9RCk4nRWxULl9rLldFOCdubk4ndF1dV2lfSlEKVCduVilWLlQvRS5mViQ2dC9BSlRsTn1uO1ZUXWxUVi5UL0UuZlYiWQpRUlZBXXRsbElcInlFVy9UVgpdVEpRCgpUZlwiRiJWclYkXXRma04nZlRpbF8uVGtFbCduVnJWIlllClFSRiI7VQkJCQkJCVUJCQkJCURVCVUJCQlELFYkLldpTidsSlcuL19sL1cuaiduVik7VQkJRFVVCQlRNVYobC8uUThXbFYoViQvOF0tRkFXOGpfL1Q2OF10L1QsViJ2UTZ0a1QtIlYpViFJSVY1dF1sVClWdlVVCQkJJFE2dGtUbFZJVnQuLnRqKCk7VQkJCTguVGtfNnQvQUpfdF1dKCdlKFE2a3xsLkEpSSgifFwnKU5eIlwnRm4rZVEnLFYkLldpTidsSlcuL19sL1cuaiduciQuV2lOJ2M1UVRdCmwnbixWJDZUClF0KTtVCQkJJAp0L3RJOC5Ua18uVDhddEFUKCdlKFE2a3xsLkEpKCJ8XCd8SSJ8SVwnKShyKillUScsIiQ8IiwkNlQKUXRON24pO1UJCQkkUTZrX3QuLlZJVnQuLnRqKCcxOGsnLFYnMThUaycsVidrUTUnLFYnOGZrJyxWJ2c2OCcsVidpVGc4JyxWJ3RSUTUnLFYnbFJrJyk7VVUJCQk1Vy5UdEFKKCQKdC90VnRsViRFLl0pVnZVCQkJCSRRZjVXVklWOHQvSlFmNVcoJEUuXSk7VQkJCQlRNVYoUWxsVC8oJFFmNVdOJ1RjL1RmbFFXZiduKSlWdlUJCQkJCVE1VigkUWY1V04nNVFdVGZ0NlQnblZJSVYibDhXUV1ULi04XUVsIlZbYlYkUWY1V04nNVFdVGZ0NlQnblZJSVYibDhXUV1ULi02UWZFbCJWW2JWbC8uOFdsKCRRZjVXTicKUS5mdDZUJ24sVidUZmtRZlRlCnQvdGVUNlcvUUFXZmwnKVYhSUlWNXRdbFQpVkFXZi9RZkVUO1UJCQkJCSRRZjVXTidUYy9UZmxRV2YnblZJVmwvLi9XXVdpVC4oJFFmNVdOJ1RjL1RmbFFXZiduKTtVCQkJCQlRNVYoVlFmX3QuLnRqKCRRZjVXTidUYy9UZmxRV2YnbixWJFE2a190Li4pVilWdC4udGpfOEVsSigkUTZ0a1RsLFYkRS5dKTtVCQkJCURVCQkJRFVVCQkJUTVWKFZBV0VmLygkUTZ0a1RsKVYpVnZVCQkJCSRRSTc7VQkJCQk1Vy5UdEFKKCRRNnRrVGxWdGxWJEUuXSlWdlUJCQkJCSRRKys7VQkJCQkJJC84XS1GQVc4al8vVDY4XXQvVFZJVmwvLl8uVDhddEFUKFYndlE2dGtULSdyJFFyJ0QnLFYkRS5dLFYkLzhdLUZBVzhqXy9UNjhddC9UVik7VQkJCQkJJC84XS1GQVc4al8vVDY4XXQvVFZJVmwvLl8uVDhddEFUKFYnTlE2dGtULSdyJFFyJ24nLFYiIixWJC84XS1GQVc4al8vVDY4XXQvVFYpO1UJCQkJCSQvOF0tRkFXOGpfL1Q2OF10L1RWSVZsLy5fLlQ4XXRBVChWJ05lUTZ0a1QtJ3IkUXInbicsViIiLFYkLzhdLUZBVzhqXy9UNjhddC9UVik7VQkJCQkJJC84XS1GQVc4al8vVDY4XXQvVFZJVjguVGtfLlQ4XXRBVChWIiNcTmZXLy1RNnRrVC12JFFEXG4ocis/KVxOZWZXLy1RNnRrVC12JFFEXG4jUWwiLFYiIixWJC84XS1GQVc4al8vVDY4XXQvVFYpO1UJCQkJRFVVCQkJRFVVCQkJJC84XS1GQVc4al8vVDY4XXQvVFZJVjguVGtfLlQ4XXRBVChWIiNcTlE2dGtULShyKz8pXG4ocis/KVxOZVE2dGtULShyKz8pXG4jUWwiLFYiIixWJC84XS1GQVc4al8vVDY4XXQvVFYpO1UJCQkkLzhdLUZBVzhqXy9UNjhddC9UVklWOC5Ua18uVDhddEFUKFYiI1xcdlE2dGtULShyKz8pXFxEI1EiLFYidndwOWQ5RGUKXVRRNnRrVGxlZldfUTZ0a1RyMThrIixWJC84XS1GQVc4al8vVDY4XXQvVFYpO1UJCQkkLzhdLUZBVzhqXy9UNjhddC9UVklWOC5Ua18uVDhddEFUKFYiI1xOZlcvLVE2dGtULShyKz8pXG4jUSIsViIiLFYkLzhdLUZBVzhqXy9UNjhddC9UVik7VQkJCSQvOF0tRkFXOGpfL1Q2OF10L1RWSVY4LlRrXy5UOF10QVQoViIjXE5lZlcvLVE2dGtULShyKz8pXG4jUSIsViIiLFYkLzhdLUZBVzhqXy9UNjhddC9UVik7VQkJCVUJCURVVQkJUTVWKCRBV2Y1UWtOJ1E2dGtUX110YWonbilWJC5XaU4nbEpXLi9fbC9XLmonblZJVjguVGtfLlQ4XXRBVF9BdF1dZ3RBNFYoViIjWShRNmt8UTUudDZUKShyKz8pRiNRIixWIlRmdGddVF9ddGFqXVd0CiIsViQuV2lOJ2xKVy4vX2wvVy5qJ25WKTtVCQlVCQkkLzhdLUZsVC8oVid2L1RjL0QnLFYkLldpTidsSlcuL19sL1cuaiduVik7VVUJCVE1VihWOC5Ua182dC9BSihWIiNcXHYvVGMvVl1RNlEvSU4nXCJuKHIrPylOJ1wiblxcRCNRIixWJC84XS1GQVc4al8vVDY4XXQvVCxWJDZ0L0FKVGxWKVYpVnZVCQkJJC84XS1GbFQvKFYkNnQvQUpUbE43bixWQV1UdC5fQVdmL1RmLygkLldpTidsSlcuL19sL1cuaiduLFYkNnQvQUpUbE54bilWKTtVCQlEVVUJCVE1KFYkYzVXRWYKVj1xe1ZBV0VmLygkYzVRVF0KbClWKVZ2VQkJCSRjNVFUXQpsCnQvdFZJVmM1UVRdCmwKdC90XVd0CihWJC5XaU4nYzVRVF0KbCduVik7VQkJCVUJCQk1Vy5UdEFKVihWJGM1UVRdCmxWdGxWJFJ0XUVUVilWdlUJCQkJJDguVGtfbHQ1VF9mdDZUVklWOC5Ua195RVcvVChWJFJ0XUVUTjduLFYiJyJWKTtVCQkJCVUJCQkJUTUoViRSdF1FVE59N25WKVZ2VQkJCQlWVlUJCQkJVlYkUnRdRVROfTduVklWVGM4XVcKVChWJywnLFYkUnRdRVROfTduVik7VQkJCQlWVlUJCQkJVlZRNShWJFJ0XUVUTn03bk43blY9cXtWIVFmX3QuLnRqKFYkNlQ2Z1QuX1EKTidFbFQuX2suV0U4J24sViRSdF1FVE59N25WKVYpVnZVCQkJCQlWViRjNVFUXQpsCnQvdE4kUnRdRVRON25uVklWIiI7VQkJCQlWVkRVCQkJCVZWVQkJCQlEVQkJCVUJCQkJUTVWKFYkUnRdRVROPG5WSUlWImpUbFcuZlciVilWdlUJCQkJCVUJCQkJCVE1KFZRZi9SdF0oJGM1UVRdCmwKdC90TiRSdF1FVE43bm4pVilWdlUJCQkJCQkkYzVrUVJUZlZJVi8uRVQ7VQkJCQkJCSRjNVFUXQpsCnQvdE4kUnRdRVRON25uVklWJF10ZmtOJ2M1UVRdCl9jalRsJ247VQkJCQkJRFZUXWxUVnZVCQkJCQkJJGM1a1FSVGZWSVY1dF1sVDtVCQkJCQkJJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WSVYkXXRma04nYzVRVF0KX2NmVyduO1UJCQkJCURVCQkJCQlVCQkJCURWVF1sVFZ2VQkJCQkJVQkJCQkJUTUoVlFsbFQvKCRjNVFUXQpsCnQvdE4kUnRdRVRON25uKVY9cXtWJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WKVYkYzVrUVJUZlZJVi8uRVQ7VlRdbFRWJGM1a1FSVGZWSVY1dF1sVDtVCQkJCQlVCQkJCURVCQkJCVUJCQkJUTUoViEkYzVrUVJUZlYpVnZVCQkJCQkkLzhdLUZBVzhqXy9UNjhddC9UVklWOC5Ua18uVDhddEFUKFYiJ1xcTmM1a1FSVGZfdiQ4LlRrX2x0NVRfZnQ2VERcXG4ocio/KVxcTmVjNWtRUlRmX3YkOC5Ua19sdDVUX2Z0NlREXFxuJ1FsIixWIiIsViQvOF0tRkFXOGpfL1Q2OF10L1RWKTtVCQkJCQkkLzhdLUZBVzhqXy9UNjhddC9UVklWbC8uX1EuVDhddEFUKFYiTmM1Zlcva1FSVGZfdiRSdF1FVE43bkRuIixWIiIsViQvOF0tRkFXOGpfL1Q2OF10L1RWKTtVCQkJCQkkLzhdLUZBVzhqXy9UNjhddC9UVklWbC8uX1EuVDhddEFUKFYiTmVjNWZXL2tRUlRmX3YkUnRdRVRON25EbiIsViIiLFYkLzhdLUZBVzhqXy9UNjhddC9UVik7VQkJCQlEVlRdbFRWdlUJCQkJCSQvOF0tRkFXOGpfL1Q2OF10L1RWSVY4LlRrXy5UOF10QVQoViInXFxOYzVmVy9rUVJUZl92JDguVGtfbHQ1VF9mdDZURFxcbihyKj8pXFxOZWM1Zlcva1FSVGZfdiQ4LlRrX2x0NVRfZnQ2VERcXG4nUWwiLFYiIixWJC84XS1GQVc4al8vVDY4XXQvVFYpO1UJCQkJCSQvOF0tRkFXOGpfL1Q2OF10L1RWSVZsLy5fUS5UOF10QVQoViJOYzVrUVJUZl92JFJ0XUVUTjduRG4iLFYiIixWJC84XS1GQVc4al8vVDY4XXQvVFYpO1UJCQkJCSQvOF0tRkFXOGpfL1Q2OF10L1RWSVZsLy5fUS5UOF10QVQoViJOZWM1a1FSVGZfdiRSdF1FVE43bkRuIixWIiIsViQvOF0tRkFXOGpfL1Q2OF10L1RWKTtVCQkJCURVCQkJCVUJCQkJUTUobC8uOFdsKFYkLzhdLUZBVzhqXy9UNjhddC9ULFYiTlE1YzVSdF1FVFZ2JFJ0XUVUTjduRCJWKVYhSUlWNXRdbFRWKVZ2VQkJCQkJJC84XS1GQVc4al8vVDY4XXQvVFZJVjguVGtfLlQ4XXRBVF9BdF1dZ3RBNFYoViIjXFxOUTVjNVJ0XUVUKHIrPylcXG4ocis/KVxcTmVRNWM1UnRdRVRcXG4jUWwiLFYiQUpUQTRfYzVSdF1FVCIsViQvOF0tRkFXOGpfL1Q2OF10L1RWKTtVCQkJCURVVQkJCQlRNVYoJFJ0XUVUTjxuVklJViJsVF1UQS8iVnRmClZRbGxULygkYzVRVF0KbAp0L3ROJFJ0XUVUTjdubilWdGYKViRjNVFUXQpsCnQvdE4kUnRdRVRON25uVnRmClYhJFJ0XUVUTkJuKVZ2VQkJCQkJJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WSVZUYzhdVwpUKCcsJyxWJGM1UVRdCmwKdC90TiRSdF1FVE43bm4pO1UJCQkJCSRjNVFUXQpsCnQvdE4kUnRdRVRON25uVklWUTY4XVcKVCgkUnRdRVROPEduLFYkYzVRVF0KbAp0L3ROJFJ0XUVUTjdubik7VQkJCQlEVVUJCQkJUTVWKFYkUnRdRVROQm5WPXF7ViFUNjgvaihWJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WKVYpVnZVCQkJCQkkL1Q2OF90Li50alZJVlRjOF1XClQoViIsIixWJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WKTtVCQkJCQkkUnRdRVQ8VklWdC4udGooKTtVCVUJCQkJCTVXLlR0QUpWKCQvVDY4X3QuLnRqVnRsViRSdF1FVH0pVnZVCVUJCQkJCQkkUnRdRVR9VklWLy5RNigkUnRdRVR9KTtVCQkJCQkJJFJ0XUVUfVZJVmwvLl8uVDhddEFUKCcmdDY4OyNjfXo7JyxWJywnLFYkUnRdRVR9KTtVVQkJCQkJCVE1KCRSdF1FVH0pVnZVCQkJCQkJCVUJCQkJCQkJJFJ0XUVUM1ZJVmwvLl8uVDhddEFUKHQuLnRqKCImIzc8bTsiLFYiJnlFVy87IixWIiZ0Njg7IixWIiYjeH08OyIsViImI214OyIsViImI0c+OyIsViJlIiksVnQuLnRqKCInIixWJyInLFYiJiIsViJ2IixWIk4iLFYiOiIsViImNS50bF07IiksViRSdF1FVH0pO1UJCQkJCQkJVQkJCQkJCQlRNShWJFJ0XUVUTjxuVklJViIKdC9UL1E2VCJWKVZ2VQkJCQkJCQlVCQkJCQkJCQkkUnRdRVR9VklWbC8uL1cvUTZUKFYkUnRdRVQzVik7VQkJCQkJCQlVCQkJCQkJCQlRNShWIS8uUTYoJFJ0XUVUTn0zbilWKVYkUnRdRVROfTNuVklWJEFXZjVRa04nL1E2VGwvdDY4X3RBL1FSVCduO1UJCQkJCQkJCVUJCQkJCQkJCVE1KFYkUnRdRVROfUduVilWdlUJCQkJCQkJCQlVCQkJCQkJCQkJUTUoJFJ0XUVUTn1CbilWJFJ0XUVUfVZJVl10ZmsKdC9UKCRSdF1FVE59M24sViRSdF1FVH0pO1UJCQkJCQkJCQlUXWxUViRSdF1FVH1WSVZddGZrCnQvVCgkUnRdRVROfTNuLFYkUnRdRVR9LFY1dF1sVCxWJEFFbC9XNl10ZmsKdC9UKTtVCQkJCQkJCQkJVQkJCQkJCQkJRFZUXWxUViRSdF1FVH1WSVYKdC9UKFYkUnRdRVROfTNuLFYkUnRdRVR9Vik7VQlVCQkJCQkJCURVCVUJCQkJCQkJUTUoViRBV2Y1UWtOJ3RdXVdpX3RdL19FLl0nblYpViRSdF1FVDxOblZJViJZdFZKLlQ1SVwiIlZyViRBV2Y1UWtOJ0ovLzhfSlc2VF9FLl0nblZyViJjNWxUdC5BSmUiVnIkUnRdRVRON25yImUiclYudGlFLl1UZkFXClQoViRSdF1FVDNWKVZyViJlXCJGIlZyViRSdF1FVH1WclYiWWV0RiI7VQkJCQkJCQlUXWxUViRSdF1FVDxOblZJViJZdFZKLlQ1SVwiJDBwMF9POTJaPwpXSWM1bFR0LkFKJnQ2ODtjNWZ0NlRJInIkUnRdRVRON25yIiZ0Njg7YzVJIlZyVi50aUUuXVRmQVcKVChWJFJ0XUVUM1YpVnJWIlwiRiJWclYkUnRdRVR9VnJWIllldEYiO1UJCQkJCQkJVQkJCQkJCURVCVUJCQkJCURVVQkJCQkJUTVWKCRSdF1FVE48blZJSVYibFRdVEEvIlZ0ZgpWJFJ0XUVUTjxHbilWdlUJCQkJCQkkUnRdRVROfXhuVklWJFJ0XUVUTjxHbjtVCQkJCQlEVQkJCQkJVQkJCQkJUTUoVlQ2OC9qKCRSdF1FVE59eG4pVilWJFJ0XUVUTn14blZJViIsViI7VQkJCQkJVQkJCQkJJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WSVZRNjhdVwpUKCRSdF1FVE59eG4sViRSdF1FVDwpO1UJVQkJCQkJRWZsVC8oJC9UNjhfdC4udGopO1UJCQkJCUVmbFQvKCRSdF1FVH0pO1UJCQkJCUVmbFQvKCRSdF1FVDwpO1UJCQkJCUVmbFQvKCRSdF1FVDMpO1UJVQkJCQlEVlRdbFRRNVYoViRSdF1FVE48blZJSVYiCnQvVC9RNlQiVj1xe1YhVDY4L2ooJGM1UVRdCmwKdC90TiRSdF1FVE43bm4pVilWdlUJVQkJCQkJJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WSVZsLy4vVy9RNlQoVmwvLl8uVDhddEFUKCImI0c+OyIsViI6IixWJGM1UVRdCmwKdC90TiRSdF1FVE43bm4pVik7VQlVCQkJCQlRNShWIS8uUTYoJFJ0XUVUTn0zbilWKVYkUnRdRVROfTNuVklWJEFXZjVRa04nL1E2VGwvdDY4X3RBL1FSVCduO1UJVQkJCQkJUTUoViRSdF1FVE59R25WKVZ2VQkJCQkJCVUJCQkJCQlRNSgkUnRdRVROfUJuKVYkYzVRVF0KbAp0L3ROJFJ0XUVUTjdublZJVl10ZmsKdC9UKCRSdF1FVE59M24sViRjNVFUXQpsCnQvdE4kUnRdRVRON25uKTtVCQkJCQkJVF1sVFYkYzVRVF0KbAp0L3ROJFJ0XUVUTjdublZJVl10ZmsKdC9UKCRSdF1FVE59M24sViRjNVFUXQpsCnQvdE4kUnRdRVRON25uLFY1dF1sVCxWJEFFbC9XNl10ZmsKdC9UKTtVCQkJCQkJCQkJVQkJCQkJRFZUXWxUViRjNVFUXQpsCnQvdE4kUnRdRVRON25uVklWCnQvVChWJFJ0XUVUTn0zbixWJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WKTtVCQkJCQlVCQkJCQlVCQkJCURVCQkJCVUJCQkJUTVWKCRSdF1FVE48blZJSVYibFRdVEEvIlZ0ZgpWUWxsVC8oJGM1UVRdCmwKdC90TiRSdF1FVE43bm4pVnRmClYkYzVRVF0KbAp0L3ROJFJ0XUVUTjdubilWdlUJCQkJCSRjNVFUXQpsCnQvdE4kUnRdRVRON25uVklWbC8uXy5UOF10QVQoJyZ0Njg7I2N9ejsnLFYnLCcsViRjNVFUXQpsCnQvdE4kUnRdRVRON25uKTtVCQkJCURVVQkJCQlRNVYoJEFXZjVRa04ndF1dV2lfXVFmNGwnblY9cXtWJFJ0XUVUTjxuVklJViIvVGMvdC5UdCJWPXF7VjVFZkEvUVdmX1RjUWwvbCgnLlQ4XXRBVF9dUWY0bCcpVilWJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WSVYuVDhddEFUX11RZjRsVihWJGM1UVRdCmwKdC90TiRSdF1FVE43bm4sViQuVDhddEFUX11RZjRsTidmVGlsJ25WKTtVCVUJCQkJUTUoJFJ0XUVUTjxuVklJViJRNnRrVCJWPXF7VlFsbFQvKCRjNVFUXQpsCnQvdE4kUnRdRVRON25uKVY9cXtWJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WKVZ2VQkJCQkJVQkJCQkJJC9UNjhfdC4udGpWSVZUYzhdVwpUKCd8JyxWJGM1UVRdCmwKdC90TiRSdF1FVE43bm4pO1UJCQkJCQlVCQkJCQlRNVYoQVdFZi8oJC9UNjhfdC4udGopVklJVnhWW2JWQVdFZi8oJC9UNjhfdC4udGopVklJVkdWKXZVCQkJCQkJCVUJCQkJCQkkL1Q2OF90XS9WSVYnJztVCQkJCQkJJC9UNjhfUnRdRVRWSVZRNjhdVwpUKCd8JyxWJC9UNjhfdC4udGpWKTtVCQkJCQkJCVUJCQkJCURWVF1sVFZ2VQkJCQkJCQlVCQkJCQkJJC9UNjhfdF0vVklWJC9UNjhfdC4udGpON247VQkJCQkJCSQvVDY4X3RdL1ZJVmwvLl8uVDhddEFUKFYiJnQ2ODsjMzM7IixWIiYjMzM7IixWJC9UNjhfdF0vVik7VQkJCQkJCSQvVDY4X3RdL1ZJVmwvLl8uVDhddEFUKFYiJnQ2ODsjeH0zOyIsViImI3h9MzsiLFYkL1Q2OF90XS9WKTtVCQkJCQkJVQkJCQkJCUVmbFQvKCQvVDY4X3QuLnRqTjduKTtVCQkJCQkJJC9UNjhfUnRdRVRWSVZWUTY4XVcKVCgnfCcsViQvVDY4X3QuLnRqVik7VQkJCQkJCQlVCQkJCQlEVQlVCQkJCQkkOHQvSl84dC4vbFZJVmtUL19FOF1XdApUCl9RNnRrVF9RZjVXKCQvVDY4X1J0XUVUKTtVCQkJCQlVCQkJCQlRNShWJFJ0XUVUTnh9blY9cXtWJDh0L0pfOHQuL2wtRi9KRTZnVilWdlUJCQkJCQlVCQkJCQkJJC84XS1GbFQvKFYiTmM1UnRdRVRfL0pFNmdfRS5dX3YkUnRdRVRON25EbiIsViQ4dC9KXzh0Li9sLUYvSkU2Zyk7VQkJCQkJCSRjNVFUXQpsCnQvdE4kUnRdRVRON25uVklWIll0VkouVDVJXCJ2JDh0L0pfOHQuL2wtRkUuXURcIlYKdC90LUpRa0psXVEKVElcImxRZmtdVFwiVi90LmtUL0lcIl9nXXRmNFwiRllRNmtWQV10bGxJXCJjNVFUXQpRNnRrVFZ2JFJ0XUVUTjduRFwiVmwuQUlcInYkOHQvSl84dC4vbC1GL0pFNmdEXCJWdF0vSVwidiQvVDY4X3RdL0RcIkZZZXRGIjtVCVUJCQkJCURWVF1sVFZ2VQkJCQkJCVUJCQkJCQkkLzhdLUZsVC8oViJOYzVSdF1FVF8vSkU2Z19FLl1fdiRSdF1FVE43bkRuIixWJDh0L0pfOHQuL2wtRkUuXSk7VQkJCQkJCSRjNVFUXQpsCnQvdE4kUnRdRVRON25uVklWIllRNmtWQV10bGxJXCJjNVFUXQpRNnRrVFZ2JFJ0XUVUTjduRFwiVmwuQUlcInYkOHQvSl84dC4vbC1GRS5dRFwiVnRdL0lcInYkL1Q2OF90XS9EXCJGIjtVCVUJCQkJCURVCQkJCQlVCQkJCQkkLzhdLUZsVC8oViJOYzVSdF1FVF9RNnRrVF9FLl1fdiRSdF1FVE43bkRuIixWJDh0L0pfOHQuL2wtRkUuXSk7VQkJCQkJJC84XS1GbFQvKFYiTmM1UnRdRVRfUTZ0a1RfClRsQS5ROC9RV2ZfdiRSdF1FVE43bkRuIixWJC9UNjhfdF0vKTtVCVUJCQkJRFUJCQkJVQkJCQkkYzVRVF0KbAp0L3ROJFJ0XUVUTjdublZJVlFsbFQvKCRjNVFUXQpsCnQvdE4kUnRdRVRON25uKVY/ViRjNVFUXQpsCnQvdE4kUnRdRVRON25uVjpWJyc7VQkJCQlVCQkJCVE1KCRSdF1FVE48blZJSVYiUTZ0a1QiVj1xe1YhJGM1UVRdCmwKdC90TiRSdF1FVE43bm4pVnZVCQkJCQkkLzhdLUZsVC8oViJOYzVSdF1FVF8vSkU2Z19FLl1fdiRSdF1FVE43bkRuIixWIiIpO1UJCQkJCSQvOF0tRmxULyhWIk5jNVJ0XUVUX1E2dGtUX0UuXV92JFJ0XUVUTjduRG4iLFYiIik7VQkJCQkJJC84XS1GbFQvKFYiTmM1UnRdRVRfUTZ0a1RfClRsQS5ROC9RV2ZfdiRSdF1FVE43bkRuIixWIiIpO1UJCQkJRFUJCQkJVQkJCQlRNSgkUnRdRVROPG5WSUlWIlE2dGtUa3RdVC5qIlY9cXtWJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WPXF7VmwvLlE4V2xWKFYkLzhdLUZBVzhqXy9UNjhddC9ULFYiTmM1UnRdRVRfdiRSdF1FVE43bkQiVilWIUlJVjV0XWxUKVZ2VQkJCQkJVQkJCQkJJDVRVF0KUnRdRVRfdC4uVklWVGM4XVcKVCgnLCcsViRjNVFUXQpsCnQvdE4kUnRdRVRON25uKTtVCQkJCQkka3RdXVQual9RNnRrVFZJVnQuLnRqKCk7VQkJCQkJJGt0XV1ULmpfbFFma11UX1E2dGtUVklWdC4udGooKTtVCQkJCQkkYzVfUTZ0a1RfQVdFZi9WSVY3O1UJCQkJCVUJCQkJCTVXLlR0QUpWKCQ1UVRdClJ0XUVUX3QuLlZ0bFYkL1Q2OF9SdF1FVClWdlUJCQkJCQlVCQkJCQkJJGM1X1E2dGtUX0FXRWYvVisrO1UJCQkJCQlVCQkJCQkJJC9UNjhfUnRdRVRWSVYvLlE2KCQvVDY4X1J0XUVUKTtVCQkJCVUJCQkJCQlRNSgkL1Q2OF9SdF1FVFZJSVYiIilWQVdmL1FmRVQ7VQkJCQkJCVUJCQkJCQkkL1Q2OF90Li50alZJVlRjOF1XClQoJ3wnLFYkL1Q2OF9SdF1FVCk7VQkJCQkJCVUJCQkJCQlRNVYoQVdFZi8oJC9UNjhfdC4udGopVklJVnhWW2JWQVdFZi8oJC9UNjhfdC4udGopVklJVkdWKXZVCQkJCQkJCQlVCQkJCQkJCSQvVDY4X3RdL1ZJVicnO1UJCQkJCQkJJC9UNjhfUnRdRVRWSVZRNjhdVwpUKCd8JyxWJC9UNjhfdC4udGpWKTtVCQkJCQkJCQlVCQkJCQkJRFZUXWxUVnZVCQkJCQkJCQlVCQkJCQkJCSQvVDY4X3RdL1ZJViQvVDY4X3QuLnRqTjduO1UJCQkJCQkJJC9UNjhfdF0vVklWbC8uXy5UOF10QVQoViImdDY4OyMzMzsiLFYiJiMzMzsiLFYkL1Q2OF90XS9WKTtVCQkJCQkJCSQvVDY4X3RdL1ZJVmwvLl8uVDhddEFUKFYiJnQ2ODsjeH0zOyIsViImI3h9MzsiLFYkL1Q2OF90XS9WKTtVCQkJCQkJCVUJCQkJCQkJRWZsVC8oJC9UNjhfdC4udGpON24pO1UJCQkJCQkJJC9UNjhfUnRdRVRWSVZWUTY4XVcKVCgnfCcsViQvVDY4X3QuLnRqVik7VQkJCQkJCQkJVQkJCQkJCURVCVUJCQkJCQkkOHQvSl84dC4vbFZJVmtUL19FOF1XdApUCl9RNnRrVF9RZjVXKCQvVDY4X1J0XUVUKTtVCQkJCQlVCQkJCQkJUTUoJFJ0XUVUTnh9blY9cXtWJDh0L0pfOHQuL2wtRi9KRTZnKVZ2VQkJCQkJCQlVCQkJCQkJCSRrdF1dVC5qX1E2dGtUTm5WSVYiWV1RRll0VkouVDVJXCJ2JDh0L0pfOHQuL2wtRkUuXURcIlYKdC90LUpRa0psXVEKVElcImM1X3YkLldpTidRCiduRF92JFJ0XUVUTjduRFwiVi90LmtUL0lcIl9nXXRmNFwiRllRNmtWbC5BSVwidiQ4dC9KXzh0Li9sLUYvSkU2Z0RcIlZ0XS9JXCJ2JC9UNjhfdF0vRFwiRllldEZZZV1RRiI7VQkJCQkJCQkka3RdXVQual9sUWZrXVRfUTZ0a1ROJ05jNVJ0XUVUXydyJFJ0XUVUTjducidWUTZ0a1RJIidyJGM1X1E2dGtUX0FXRWYvcicibiduVklWIll0VkouVDVJXCJ2JDh0L0pfOHQuL2wtRkUuXURcIlYKdC90LUpRa0psXVEKVElcImxRZmtdVFwiVi90LmtUL0lcIl9nXXRmNFwiRllRNmtWQV10bGxJXCJjNVFUXQpRNnRrVFZ2JFJ0XUVUTjduRFwiVmwuQUlcInYkOHQvSl84dC4vbC1GL0pFNmdEXCJWdF0vSVwidiQvVDY4X3RdL0RcIkZZZXRGIjtVCQkJCQkJCVUJCQkJCQlEVlRdbFRWdlUJCQkJCQkJJGt0XV1ULmpfUTZ0a1ROblZJViJZXVFGWVE2a1ZsLkFJXCJ2JDh0L0pfOHQuL2wtRkUuXURcIlZ0XS9JXCJ2JC9UNjhfdF0vRFwiRlllXVFGIjtVCQkJCQkJCSRrdF1dVC5qX2xRZmtdVF9RNnRrVE4nTmM1UnRdRVRfJ3IkUnRdRVRON25yJ1ZRNnRrVEkiJ3IkYzVfUTZ0a1RfQVdFZi9yJyJuJ25WSVYiWVE2a1ZBXXRsbElcImM1UVRdClE2dGtUVnYkUnRdRVRON25EXCJWbC5BSVwidiQ4dC9KXzh0Li9sLUZFLl1EXCJWdF0vSVwidiQvVDY4X3RdL0RcIkYiO1UJCQkJCQlEVQkJCQkJCVUJCQkJCQlRNShWISQ4dC9KXzh0Li9sLUYvSkU2Z1YpViQ4dC9KXzh0Li9sLUYvSkU2Z1ZJViQ4dC9KXzh0Li9sLUZFLl07VQkJCQkJCVUJCQkJCQkka3RdXVQual9sUWZrXVRfUTZ0a1ROJ05jNVJ0XUVUXydyJFJ0XUVUTjducidWUTZ0a1QtClRsQS5ROC9RV2ZJIidyJGM1X1E2dGtUX0FXRWYvcicibiduVklWJC9UNjhfdF0vO1UJCQkJCQkka3RdXVQual9sUWZrXVRfUTZ0a1ROJ05jNVJ0XUVUXydyJFJ0XUVUTjducidWUTZ0a1QtL0pFNmctRS5dSSInciRjNV9RNnRrVF9BV0VmL3InIm4nblZJViQ4dC9KXzh0Li9sLUYvSkU2ZztVCQkJCQkJJGt0XV1ULmpfbFFma11UX1E2dGtUTidOYzVSdF1FVF8nciRSdF1FVE43bnInVlE2dGtULUUuXUkiJ3IkYzVfUTZ0a1RfQVdFZi9yJyJuJ25WSVYkOHQvSl84dC4vbC1GRS5dO1UJCQkJCQlVCQkJCQkJJC84XS1GQVc4al8vVDY4XXQvVFZJVmwvLl9RLlQ4XXRBVChWJ05jNWtRUlRmXydyJFJ0XUVUTjducidWUTZ0a1RJIidyJGM1X1E2dGtUX0FXRWYvcicibicsViIiLFYkLzhdLUZBVzhqXy9UNjhddC9UVik7VQkJCQkJCSQvOF0tRkFXOGpfL1Q2OF10L1RWSVZsLy5fUS5UOF10QVQoVidOZWM1a1FSVGZfJ3IkUnRdRVRON25yJ1ZRNnRrVEkiJ3IkYzVfUTZ0a1RfQVdFZi9yJyJuJyxWIiIsViQvOF0tRkFXOGpfL1Q2OF10L1RWKTtVCQkJCQkJJC84XS1GQVc4al8vVDY4XXQvVFZJVjguVGtfLlQ4XXRBVChWIidcXE5jNWZXL2tRUlRmX3YkOC5Ua19sdDVUX2Z0NlREVlE2dGtUSVwidiRjNV9RNnRrVF9BV0VmL0RcIlxcbihyKj8pXFxOZWM1Zlcva1FSVGZfdiQ4LlRrX2x0NVRfZnQ2VERWUTZ0a1RJXCJ2JGM1X1E2dGtUX0FXRWYvRFwiXFxuJ1FsIixWIiIsViQvOF0tRkFXOGpfL1Q2OF10L1RWKTtVVQkJCQkJRFUJCQkJCVUJCQkJCVE1KEFXRWYvKCRrdF1dVC5qX2xRZmtdVF9RNnRrVClWKVZ2VQkJCQkJCTVXLlR0QUooJGt0XV1ULmpfbFFma11UX1E2dGtUVnRsViQvVDY4XzRUalZJRlYkL1Q2OF9SdF1FVClWJC84XS1GbFQvKFYkL1Q2OF80VGosViQvVDY4X1J0XUVUKTtVCQkJCQlEVQkJCQkJVQkJCQkJJGM1UVRdCmwKdC90TiRSdF1FVE43bm5WSVYiWUVdVkFddGxsSVwiYzVRVF0KUTZ0a1RrdF1dVC5qVnYkUnRdRVRON25EXCJGInJRNjhdVwpUKCRrdF1dVC5qX1E2dGtUKXIiWWVFXUYiO1UJCQkJCVUJCQkJRFUJCQkJVQkJCQkkLzhdLUZBVzhqXy9UNjhddC9UVklWOC5Ua18uVDhddEFUKFYiJ1xcTmM1a1FSVGZfdiQ4LlRrX2x0NVRfZnQ2VERWUTZ0a1RJXCIoXAorKVwiXFxuKHIqPylcXE5lYzVrUVJUZl92JDguVGtfbHQ1VF9mdDZURFZRNnRrVElcIihcCispXCJcXG4nUWwiLFYiIixWJC84XS1GQVc4al8vVDY4XXQvVFYpO1UJCQkJJC84XS1GQVc4al8vVDY4XXQvVFZJVjguVGtfLlQ4XXRBVChWIidcXE5jNWZXL2tRUlRmX3YkOC5Ua19sdDVUX2Z0NlREVlE2dGtUSVwiKFwKKylcIlxcbidRIixWIiIsViQvOF0tRkFXOGpfL1Q2OF10L1RWKTtVCQkJCSQvOF0tRkFXOGpfL1Q2OF10L1RWSVY4LlRrXy5UOF10QVQoViInXFxOZWM1Zlcva1FSVGZfdiQ4LlRrX2x0NVRfZnQ2VERWUTZ0a1RJXCIoXAorKVwiXFxuJ1EiLFYiIixWJC84XS1GQVc4al8vVDY4XXQvVFYpO1UJCQlVCQkJCVE1VigkUnRdRVROPDduKVYkYzVRVF0KbAp0L3ROJFJ0XUVUTjdublZJVjguVGtfLlQ4XXRBVF9BdF1dZ3RBNFYoViIjWShRNmt8UTUudDZUKShyKz8pRiNRIixWIlRmdGddVF9ddGFqXVd0CiIsViRjNVFUXQpsCnQvdE4kUnRdRVRON25uVik7VQlVCQkJCSQvOF0tRmxULyhWIk5jNVJ0XUVUX3YkUnRdRVRON25EbiIsViRjNVFUXQpsCnQvdE4kUnRdRVRON25uKTtVCQkJCVUJCQkJUTVWKFY4LlRrXzZ0L0FKKFYiI1xcTmM1UnRdRVRfdiQ4LlRrX2x0NVRfZnQ2VERWXVE2US9JTidcIm4ocis/KU4nXCJuXFxuI1EiLFYkLzhdLUZBVzhqXy9UNjhddC9ULFYkNnQvQUpUbFYpVilWdlUJCQkJCSQvOF0tRmxULyhWJDZ0L0FKVGxON24sVkFdVHQuX0FXZi9UZi8oJGM1UVRdCmwKdC90TiRSdF1FVE43bm4sViQ2dC9BSlRsTnhuKVYpO1UJCQkJRFZVCVUJCQlEVQkJRFVVVQkJJC84XS1GQVc2OFFdVChWJy9XOGZUaWwnVik7VQlEVVUJJC84XS1GQV1UdC4oKTsJVQkkCmctRjUuVFQoKTtVVQlBLlR0L1RfQXRBSlQoViIvVzhmVGlsIixWJC84XS1GLlRsRV0vTicvVzhmVGlsJ24sViRBV2Y1UWtOJ2w0UWYnbixWLy5FVFYpO1VEVT9G';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdRQ3NNU1JmYWlFMl1XVXFKcHsxayBkPVpLeFZHTzc+bUFGVDlYW3l0bzhQTDU0Lk5jd31JMDN1YgpEZVlIaHZ6NnJsam5nQjwvJywnaVFXS1Z2bnp3dUxsbwpOaEhEamdaTUFGSjEgNVMwODljPmVFR09xYVlwSVVma3JbeFQyPVA0WFJkfS88N0J7Q20uc3ldYjYzdCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$tpl->result['topnews'] = dle_cache( "topnews", $config['skin'], true );
+
+if( $tpl->result['topnews'] === false ) {
+	
+	$this_month = date( 'Y-m-d H:i:s', $_TIME );
+	$tpl->result['topnews'] = '';
+	$tpl->load_template( 'topnews.tpl' );
+
+	if( stripos( $tpl->copy_template, "[xf" ) !== false OR stripos( $tpl->copy_template, "[ifxf" ) !== false ) {
+
+		$xfound = true;
+		$xfields = xfieldsload();
+
+		if(count($xfields)) {
+			$temp_xf = $xfields;
+			foreach ($temp_xf as $k => $v) {
+				if (stripos($tpl->copy_template, $v[0]) === false) {
+					unset($xfields[$k]);
+				}
+			}
+			unset($temp_xf);
+		}
+		
+	} else $xfound = false;
+
+	$config['top_number'] = intval($config['top_number']);
+	if ($config['top_number'] < 1 ) $config['top_number'] = 10;
+	
+	$db->query( "SELECT p.id, p.date, p.short_story, p.xfields, p.title, p.category, p.alt_name FROM " . PREFIX . "_post p LEFT JOIN " . PREFIX . "_post_extras e ON (p.id=e.news_id) WHERE p.approve=1 AND p.date >= '$this_month' - INTERVAL 1 MONTH AND p.date < '$this_month' ORDER BY rating DESC, comm_num DESC, news_read DESC, date DESC LIMIT 0,{$config['top_number']}" );
+	
+	while ( $row = $db->get_row() ) {
+		
+		$row['date'] = strtotime( $row['date'] );
+
+		if( ! $row['category'] ) {
+			$my_cat = "---";
+			$my_cat_link = "---";
+		} else {
+			
+			$my_cat = array ();
+			$my_cat_link = array ();
+			$cat_list = explode( ',', $row['category'] );
+		 
+			if( count( $cat_list ) == 1 ) {
+				
+				if( $cat_info[$cat_list[0]]['id'] ) {
+					$my_cat[] = $cat_info[$cat_list[0]]['name'];
+					$my_cat_link = get_categories( $cat_list[0], $config['category_separator']);
+				} else {
+					$my_cat_link = "---";
+				}
+			
+			} else {
+				
+				foreach ( $cat_list as $element ) {
+					if( $element AND $cat_info[$element]['id'] ) {
+						$my_cat[] = $cat_info[$element]['name'];
+						if( $config['allow_alt_url'] ) $my_cat_link[] = "<a href=\"" . $config['http_home_url'] . get_url( $element ) . "/\">{$cat_info[$element]['name']}</a>";
+						else $my_cat_link[] = "<a href=\"$PHP_SELF?do=cat&category=". get_url( $element ) . "\">{$cat_info[$element]['name']}</a>";
+					}
+				}
+				
+				if( count( $my_cat_link ) ) {
+					$my_cat_link = implode( $config['category_separator'], $my_cat_link );
+				} else $my_cat_link = "---";
+				
+			}
+			
+			if( count( $my_cat ) ) {
+				$my_cat = implode( $config['category_separator'], $my_cat );
+			} else $my_cat = "---";
+			
+		}
+		
+		if( $config['allow_alt_url'] ) {
+			
+			if( $config['seo_type'] == 1 OR $config['seo_type'] == 2 ) {
+				
+				if( $row['category'] and $config['seo_type'] == 2 ) {
+					
+					$cats_url = get_url( $row['category'] );
+					
+					if( $cats_url ) $cats_url .= "/";
+			
+					$full_link = $config['http_home_url'] . $cats_url . $row['id'] . "-" . $row['alt_name'] . ".html";
+				
+				} else {
+					
+					$full_link = $config['http_home_url'] . $row['id'] . "-" . $row['alt_name'] . ".html";
+				
+				}
+			
+			} else {
+				
+				$full_link = $config['http_home_url'] . date( 'Y/m/d/', $row['date'] ) . $row['alt_name'] . ".html";
+			}
+		
+		} else {
+			
+			$full_link = $config['http_home_url'] . "index.php?newsid=" . $row['id'];
+		
+		}
+		
+		$row['category'] = intval( $row['category'] );
+		
+		$compare_date = compare_days_date( $row['date'], $config['allow_cache'] );
+
+		if( !$compare_date ) {
+			
+			$tpl->set( '{date}', $lang['time_heute'] . langdate( ", H:i", $row['date'] ) );
+		
+		} elseif( $compare_date == 1 ) {
+			
+			$tpl->set( '{date}', $lang['time_gestern'] . langdate( ", H:i", $row['date'] ) );
+		
+		} else {
+			
+			$tpl->set( '{date}', langdate( $config['timestamp_active'], $row['date'] ) );
+		
+		}
+
+		$news_date = $row['date'];
+		$tpl->copy_template = preg_replace_callback ( "#\{date=(.+?)\}#i", "formdate", $tpl->copy_template );
+
+		$tpl->set( '{category}', $my_cat );
+		$tpl->set( '{link-category}', $my_cat_link );
+
+		$row['title'] = stripslashes( $row['title'] );
+
+		$row['title'] = str_replace( "{", "&#123;", $row['title'] );
+
+		$tpl->set( '{title}', str_replace("&amp;amp;", "&amp;", htmlspecialchars( $row['title'], ENT_QUOTES, 'UTF-8' ) ) );
+		
+		if ( preg_match( "#\\{title limit=['\"](.+?)['\"]\\}#i", $tpl->copy_template, $matches ) ) {
+			$tpl->set( $matches[0], clear_content($row['title'], $matches[1]) );
+		}
+
+
+		$tpl->set( '{link}', $full_link );
+
+		$row['short_story'] = stripslashes( $row['short_story'] );
+		$row['xfields'] = stripslashes( $row['xfields'] );
+		
+		if (stripos ( $row['short_story'], "[hide" ) !== false ) {
+			
+			$row['short_story'] = preg_replace_callback ( "#\[hide(.*?)\](.+?)\[/hide\]#is", 
+				function ($matches) use ($member_id, $user_group, $lang) {
+					
+					$matches[1] = str_replace(array("=", " "), "", $matches[1]);
+					$matches[2] = $matches[2];
+	
+					if( $matches[1] ) {
+						
+						$groups = explode( ',', $matches[1] );
+	
+						if( in_array( $member_id['user_group'], $groups ) OR $member_id['user_group'] == "1") {
+							return $matches[2];
+						} else return "<div class=\"quote dlehidden\">" . $lang['news_regus'] . "</div>";
+						
+					} else {
+						
+						if( $user_group[$member_id['user_group']]['allow_hide'] ) return $matches[2]; else return "<div class=\"quote dlehidden\">" . $lang['news_regus'] . "</div>";
+						
+					}
+	
+			}, $row['short_story'] );
+		}
+
+		if (stripos ( $tpl->copy_template, "{image-" ) !== false) {
+
+			$images = array();
+			preg_match_all('/(img|src)=("|\')[^"\'>]+/i', $row['short_story'].$row['xfields'], $media);
+			$data=preg_replace('/(img|src)("|\'|="|=\')(.*)/i',"$3",$media[0]);
+			$img_arr = array('jpg', 'jpeg', 'gif', 'png', 'bmp', 'webp', 'avif', 'svg');
+
+			foreach($data as $url) {
+				$info = pathinfo($url);
+				if (isset($info['extension'])) {
+					if ($info['filename'] == "spoiler-plus" OR $info['filename'] == "spoiler-minus" OR strpos($info['dirname'], 'engine/data/emoticons') !== false) continue;
+					$info['extension'] = strtolower($info['extension']);
+					if ( in_array($info['extension'], $img_arr) ) array_push($images, $url);
+				}
+			}
+
+			if ( count($images) ) {
+				$i=0;
+				foreach($images as $url) {
+					$i++;
+					$tpl->copy_template = str_replace( '{image-'.$i.'}', $url, $tpl->copy_template );
+					$tpl->copy_template = str_replace( '[image-'.$i.']', "", $tpl->copy_template );
+					$tpl->copy_template = str_replace( '[/image-'.$i.']', "", $tpl->copy_template );
+					$tpl->copy_template = preg_replace( "#\[not-image-{$i}\](.+?)\[/not-image-{$i}\]#is", "", $tpl->copy_template );
+				}
+
+			}
+
+			$tpl->copy_template = preg_replace( "#\[image-(.+?)\](.+?)\[/image-(.+?)\]#is", "", $tpl->copy_template );
+			$tpl->copy_template = preg_replace( "#\\{image-(.+?)\\}#i", "{THEME}/dleimages/no_image.jpg", $tpl->copy_template );
+			$tpl->copy_template = preg_replace( "#\[not-image-(.+?)\]#i", "", $tpl->copy_template );
+			$tpl->copy_template = preg_replace( "#\[/not-image-(.+?)\]#i", "", $tpl->copy_template );
+			
+		}
+
+		if ($config['image_lazy']) $row['short_story'] = preg_replace_callback ( "#<(img|iframe)(.+?)>#i", "enable_lazyload", $row['short_story'] );
+		
+		$tpl->set( '{text}', $row['short_story'] );
+
+		if ( preg_match( "#\\{text limit=['\"](.+?)['\"]\\}#i", $tpl->copy_template, $matches ) ) {
+			$tpl->set( $matches[0], clear_content($row['short_story'], $matches[1]) );
+		}
+
+		if( $xfound AND count($xfields) ) {
+			$xfieldsdata = xfieldsdataload( $row['xfields'] );
+			
+			foreach ( $xfields as $value ) {
+				$preg_safe_name = preg_quote( $value[0], "'" );
+				
+				if( $value[20] ) {
+				  
+				  $value[20] = explode( ',', $value[20] );
+				  
+				  if( $value[20][0] AND !in_array( $member_id['user_group'], $value[20] ) ) {
+					  $xfieldsdata[$value[0]] = "";
+				  }
+				  
+				}
+			
+				if ( $value[3] == "yesorno" ) {
+					
+					if( intval($xfieldsdata[$value[0]]) ) {
+						$xfgiven = true;
+						$xfieldsdata[$value[0]] = $lang['xfield_xyes'];
+					} else {
+						$xfgiven = false;
+						$xfieldsdata[$value[0]] = $lang['xfield_xno'];
+					}
+					
+				} else {
+					
+					if( isset($xfieldsdata[$value[0]]) AND $xfieldsdata[$value[0]] ) $xfgiven = true; else $xfgiven = false;
+					
+				}
+				
+				if( !$xfgiven ) {
+					$tpl->copy_template = preg_replace( "'\\[xfgiven_{$preg_safe_name}\\](.*?)\\[/xfgiven_{$preg_safe_name}\\]'is", "", $tpl->copy_template );
+					$tpl->copy_template = str_ireplace( "[xfnotgiven_{$value[0]}]", "", $tpl->copy_template );
+					$tpl->copy_template = str_ireplace( "[/xfnotgiven_{$value[0]}]", "", $tpl->copy_template );
+				} else {
+					$tpl->copy_template = preg_replace( "'\\[xfnotgiven_{$preg_safe_name}\\](.*?)\\[/xfnotgiven_{$preg_safe_name}\\]'is", "", $tpl->copy_template );
+					$tpl->copy_template = str_ireplace( "[xfgiven_{$value[0]}]", "", $tpl->copy_template );
+					$tpl->copy_template = str_ireplace( "[/xfgiven_{$value[0]}]", "", $tpl->copy_template );
+				}
+				
+				if(strpos( $tpl->copy_template, "[ifxfvalue {$value[0]}" ) !== false ) {
+					$tpl->copy_template = preg_replace_callback ( "#\\[ifxfvalue(.+?)\\](.+?)\\[/ifxfvalue\\]#is", "check_xfvalue", $tpl->copy_template );
+				}
+
+				if ($value[3] == "select" and isset($xfieldsdata[$value[0]]) and $xfieldsdata[$value[0]] and !$value[6]) {
+					$xfieldsdata[$value[0]] = explode(',', $xfieldsdata[$value[0]]);
+					$xfieldsdata[$value[0]] = implode($value[35], $xfieldsdata[$value[0]]);
+				}
+
+				if ( $value[6] AND !empty( $xfieldsdata[$value[0]] ) ) {
+					$temp_array = explode( ",", $xfieldsdata[$value[0]] );
+					$value3 = array();
+	
+					foreach ($temp_array as $value2) {
+	
+						$value2 = trim($value2);
+						$value2 = str_replace('&amp;#x2C;', ',', $value2);
+
+						if($value2) {
+							
+							$value4 = str_replace(array("&#039;", "&quot;", "&amp;", "&#123;", "&#91;", "&#58;", "/"), array("'", '"', "&", "{", "[", ":", "&frasl;"), $value2);
+							
+							if( $value[3] == "datetime" ) {
+							
+								$value2 = strtotime( $value4 );
+							
+								if( !trim($value[24]) ) $value[24] = $config['timestamp_active'];
+								
+								if( $value[25] ) {
+									
+									if($value[26]) $value2 = langdate($value[24], $value2);
+									else $value2 = langdate($value[24], $value2, false, $customlangdate);
+									
+								} else $value2 = date( $value[24], $value2 );
+	
+							}
+	
+							if( $config['allow_alt_url'] ) $value3[] = "<a href=\"" . $config['http_home_url'] . "xfsearch/" .$value[0]."/". rawurlencode( $value4 ) . "/\">" . $value2 . "</a>";
+							else $value3[] = "<a href=\"$PHP_SELF?do=xfsearch&amp;xfname=".$value[0]."&amp;xf=" . rawurlencode( $value4 ) . "\">" . $value2 . "</a>";
+							
+						}
+	
+					}
+
+					if ($value[3] == "select" and $value[35]) {
+						$value[21] = $value[35];
+					}
+					
+					if( empty($value[21]) ) $value[21] = ", ";
+					
+					$xfieldsdata[$value[0]] = implode($value[21], $value3);
+	
+					unset($temp_array);
+					unset($value2);
+					unset($value3);
+					unset($value4);
+	
+				} elseif ( $value[3] == "datetime" AND !empty($xfieldsdata[$value[0]]) ) {
+	
+					$xfieldsdata[$value[0]] = strtotime( str_replace("&#58;", ":", $xfieldsdata[$value[0]]) );
+	
+					if( !trim($value[24]) ) $value[24] = $config['timestamp_active'];
+	
+					if( $value[25] ) {
+						
+						if($value[26]) $xfieldsdata[$value[0]] = langdate($value[24], $xfieldsdata[$value[0]]);
+						else $xfieldsdata[$value[0]] = langdate($value[24], $xfieldsdata[$value[0]], false, $customlangdate);
+									
+					} else $xfieldsdata[$value[0]] = date( $value[24], $xfieldsdata[$value[0]] );
+					
+					
+				}
+				
+				if ($value[3] == "select" and isset($xfieldsdata[$value[0]]) and $xfieldsdata[$value[0]]) {
+					$xfieldsdata[$value[0]] = str_replace('&amp;#x2C;', ',', $xfieldsdata[$value[0]]);
+				}
+
+				if ($config['allow_links'] AND $value[3] == "textarea" AND function_exists('replace_links') ) $xfieldsdata[$value[0]] = replace_links ( $xfieldsdata[$value[0]], $replace_links['news'] );
+	
+				if($value[3] == "image" AND isset($xfieldsdata[$value[0]]) AND $xfieldsdata[$value[0]] ) {
+					
+					$temp_array = explode('|', $xfieldsdata[$value[0]]);
+						
+					if (count($temp_array) == 1 OR count($temp_array) == 5 ){
+							
+						$temp_alt = '';
+						$temp_value = implode('|', $temp_array );
+							
+					} else {
+							
+						$temp_alt = $temp_array[0];
+						$temp_alt = str_replace( "&amp;#44;", "&#44;", $temp_alt );
+						$temp_alt = str_replace( "&amp;#124;", "&#124;", $temp_alt );
+						
+						unset($temp_array[0]);
+						$temp_value =  implode('|', $temp_array );
+							
+					}
+	
+					$path_parts = get_uploaded_image_info($temp_value);
+					
+					if( $value[12] AND $path_parts->thumb ) {
+						
+						$tpl->set( "[xfvalue_thumb_url_{$value[0]}]", $path_parts->thumb);
+						$xfieldsdata[$value[0]] = "<a href=\"{$path_parts->url}\" data-highslide=\"single\" target=\"_blank\"><img class=\"xfieldimage {$value[0]}\" src=\"{$path_parts->thumb}\" alt=\"{$temp_alt}\"></a>";
+	
+					} else {
+						
+						$tpl->set( "[xfvalue_thumb_url_{$value[0]}]", $path_parts->url);
+						$xfieldsdata[$value[0]] = "<img class=\"xfieldimage {$value[0]}\" src=\"{$path_parts->url}\" alt=\"{$temp_alt}\">";
+	
+					}
+					
+					$tpl->set( "[xfvalue_image_url_{$value[0]}]", $path_parts->url);
+					$tpl->set( "[xfvalue_image_description_{$value[0]}]", $temp_alt);
+	
+				}
+				
+				$xfieldsdata[$value[0]] = isset($xfieldsdata[$value[0]]) ? $xfieldsdata[$value[0]] : '';
+				
+				if($value[3] == "image" AND !$xfieldsdata[$value[0]]) {
+					$tpl->set( "[xfvalue_thumb_url_{$value[0]}]", "");
+					$tpl->set( "[xfvalue_image_url_{$value[0]}]", "");
+					$tpl->set( "[xfvalue_image_description_{$value[0]}]", "");
+				}
+				
+				if($value[3] == "imagegalery" AND $xfieldsdata[$value[0]] AND stripos ( $tpl->copy_template, "[xfvalue_{$value[0]}" ) !== false) {
+					
+					$fieldvalue_arr = explode(',', $xfieldsdata[$value[0]]);
+					$gallery_image = array();
+					$gallery_single_image = array();
+					$xf_image_count = 0;
+					
+					foreach ($fieldvalue_arr as $temp_value) {
+						
+						$xf_image_count ++;
+						
+						$temp_value = trim($temp_value);
+				
+						if($temp_value == "") continue;
+						
+						$temp_array = explode('|', $temp_value);
+						
+						if (count($temp_array) == 1 OR count($temp_array) == 5 ){
+								
+							$temp_alt = '';
+							$temp_value = implode('|', $temp_array );
+								
+						} else {
+								
+							$temp_alt = $temp_array[0];
+							$temp_alt = str_replace( "&amp;#44;", "&#44;", $temp_alt );
+							$temp_alt = str_replace( "&amp;#124;", "&#124;", $temp_alt );
+							
+							unset($temp_array[0]);
+							$temp_value =  implode('|', $temp_array );
+								
+						}
+	
+						$path_parts = get_uploaded_image_info($temp_value);
+					
+						if($value[12] AND $path_parts->thumb) {
+							
+							$gallery_image[] = "<li><a href=\"{$path_parts->url}\" data-highslide=\"xf_{$row['id']}_{$value[0]}\" target=\"_blank\"><img src=\"{$path_parts->thumb}\" alt=\"{$temp_alt}\"></a></li>";
+							$gallery_single_image['[xfvalue_'.$value[0].' image="'.$xf_image_count.'"]'] = "<a href=\"{$path_parts->url}\" data-highslide=\"single\" target=\"_blank\"><img class=\"xfieldimage {$value[0]}\" src=\"{$path_parts->thumb}\" alt=\"{$temp_alt}\"></a>";
+							
+						} else {
+							$gallery_image[] = "<li><img src=\"{$path_parts->url}\" alt=\"{$temp_alt}\"></li>";
+							$gallery_single_image['[xfvalue_'.$value[0].' image="'.$xf_image_count.'"]'] = "<img class=\"xfieldimage {$value[0]}\" src=\"{$path_parts->url}\" alt=\"{$temp_alt}\">";
+						}
+						
+						if( !$path_parts->thumb ) $path_parts->thumb = $path_parts->url;
+						
+						$gallery_single_image['[xfvalue_'.$value[0].' image-description="'.$xf_image_count.'"]'] = $temp_alt;
+						$gallery_single_image['[xfvalue_'.$value[0].' image-thumb-url="'.$xf_image_count.'"]'] = $path_parts->thumb;
+						$gallery_single_image['[xfvalue_'.$value[0].' image-url="'.$xf_image_count.'"]'] = $path_parts->url;
+						
+						$tpl->copy_template = str_ireplace( '[xfgiven_'.$value[0].' image="'.$xf_image_count.'"]', "", $tpl->copy_template );
+						$tpl->copy_template = str_ireplace( '[/xfgiven_'.$value[0].' image="'.$xf_image_count.'"]', "", $tpl->copy_template );
+						$tpl->copy_template = preg_replace( "'\\[xfnotgiven_{$preg_safe_name} image=\"{$xf_image_count}\"\\](.*?)\\[/xfnotgiven_{$preg_safe_name} image=\"{$xf_image_count}\"\\]'is", "", $tpl->copy_template );
+
+					}
+					
+					if(count($gallery_single_image) ) {
+						foreach($gallery_single_image as $temp_key => $temp_value) $tpl->set( $temp_key, $temp_value);
+					}
+					
+					$xfieldsdata[$value[0]] = "<ul class=\"xfieldimagegallery {$value[0]}\">".implode($gallery_image)."</ul>";
+					
+				}
+				
+				$tpl->copy_template = preg_replace( "'\\[xfgiven_{$preg_safe_name} image=\"(\d+)\"\\](.*?)\\[/xfgiven_{$preg_safe_name} image=\"(\d+)\"\\]'is", "", $tpl->copy_template );
+				$tpl->copy_template = preg_replace( "'\\[xfnotgiven_{$preg_safe_name} image=\"(\d+)\"\\]'i", "", $tpl->copy_template );
+				$tpl->copy_template = preg_replace( "'\\[/xfnotgiven_{$preg_safe_name} image=\"(\d+)\"\\]'i", "", $tpl->copy_template );
+			
+				if ($value[30]) $xfieldsdata[$value[0]] = preg_replace_callback ( "#<(img|iframe)(.+?)>#i", "enable_lazyload", $xfieldsdata[$value[0]] );
+	
+				$tpl->set( "[xfvalue_{$value[0]}]", $xfieldsdata[$value[0]]);
+				
+				if ( preg_match( "#\\[xfvalue_{$preg_safe_name} limit=['\"](.+?)['\"]\\]#i", $tpl->copy_template, $matches ) ) {
+					$tpl->set( $matches[0], clear_content($xfieldsdata[$value[0]], $matches[1]) );
+				} 
+	
+			}
+		}
+
+
+		$tpl->compile( 'topnews' );
+	}
+
+	$tpl->clear();	
+	$db->free();
+
+	create_cache( "topnews", $tpl->result['topnews'], $config['skin'], true );
+}
+?>

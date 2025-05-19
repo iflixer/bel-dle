@@ -5,9 +5,350 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: lostpassword.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Forgotten password recovery
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0FIP3J1cnkgKnk2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NnlaSU9hT3cKTm5aL2hsCmhuWi1abVlaRTdOYT5ucVBaa25VCk9aZWM3VnJaeS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0teVp1YWFyUDogIFVLbi1obnFQNWNWIHktLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLXlaVzdyWWMKbHVhWih0KVpCRkZ9LUJGQltaRTdOYT5ucVBaa25VCk9aZWM3VnJ5NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjZ5Wk11ClBadDdVbloKUFpyYzdhbnRhblVabVladDdyWWMKbHVheTY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2eVoyCktuOlpLN1Bhck9QUHE3Y1U1cnVyeS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0teVpMUG46WjI3Y2w3YWFuaFpyT1BQcTdjVVpjbnQ3Lm5jWXk2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NnkqIHl5Ck4oWiFVbk4KaG5VKFonSThNOHd4Mi8vPmV4Pi8nWilaKVpieQl1bk9VbmMoWiJYTU17IDk1OVp9RmdaMjdjbQpVVW5oIlopO3kJdW5PVW5jWihaJ3c3dE9hCjdoOlo1NSA1NSAnWik7eQlVCm4oWiJYT3R2CmhsWk9hYW5KcmEhIlopO3lkeXkKTihaJApQX0s3bG5VXwpoWilaYnkJSlBsKFoibmNjN2MiLFokS09obHMnCmhVbjNfVW5oCm5VJ2ksWiRLT2hscycKaFVuM19VbmgKblUnaVopO3lkeXkkWW5PY1o2WlVPYW4oJ10nLFphCkpuKCkpO3l5JFB2CmhfSzdsCmhaNlokUHYKaF9oN2FfSzdsbG5VX3VuT1VuY1o2WkhISFhNa3d5SCFVN3RhWXJuWnVhSktBeUh1YUpLWktPaGw2ImIkS09obHMnS09obFZPbG5fdDdVbidpZCJaVQpjNiJiJEtPaGxzJ1UKY250YQo3aCdpZCJBeUh1bk9VQXkJSEpuYU9adHVPY1BuYTYiVmFOLWYiQXkJSGEKYUtuQUlPYU93Ck5uWi9obApoblotWmIkS09obHMnUHYKaF9hCmFLbidpZEggYQphS25BeQlISm5hT1poT0puNiIuCm5xcjdjYSJadDdoYW5oYTYicQpVYXU2VW4uCnRuLXEKVWF1LFoKaAphCk9LLVB0T0tuNjkiQXkJSEpuYU9aaE9KbjYiWE9oVXVuS1UyYwpuaFVLWSJadDdoYW5oYTYiYWNWbiJBeQlISm5hT1poT0puNiJON2NKT2EtVW5hbnRhCjdoIlp0N2hhbmhhNiJhbktucnU3aG42aDciQXkJSEpuYU9aaE9KbjYiLgpucXI3Y2EiWnQ3aGFuaGE2IlZQbmMtUHRPS09tS242aDcsWgpoCmEKT0stUHRPS242OTVGLFpKTzMKSlZKLVB0T0tuNjk1RixacQpVYXU2VW4uCnRuLXEKVWF1IkFaeQlISm5hT1poT0puNiJPcnJLbi1KN20KS24tcW5tLU9yci10T3JPbUtuIlp0N2hhbmhhNiJZblAiQXkJSEpuYU9aaE9KbjYiT3JyS24tSjdtCktuLXFubS1PcnItUGFPYVZQLW1PYy1QYVlLbiJadDdoYW5oYTYiVW5OT1ZLYSJBeQlISm5hT1poT0puNiJjN203YVAiWnQ3aGFuaGE2Img3CmhVbjMsWmg3TjdLSzdxIkF5CWJ0UFBfTgpLblBkeVpaWlpiUVBfTgpLblBkeUggdW5PVUF5SG03VVladEtPUFA2Img3LWF1bkpuIkF5SFB0YwpyYUF5SCEtLXkuT2NaVUtuX090YV9LT2hsWlpaNlpzaTt5Lk9jWnRPS19LT2hsVk9sblpaWjZaJ2IkS09obHMnS09obFZPbG5fdDdVbidpZCc7eS5PY1pOCktuVW5OT1ZLYWFuM2E2WicnO3kuT2NaTgpLbm1haGFuM2FaWlpaNlonJzt5ICAtLUF5SCBQdGMKcmFBeXlIVQouWnRLT1BQNiJ0N2hhTwpobmMiQXlaWkhVCi5adEtPUFA2InQ3Sy1KVS19WnQ3Sy1KVS03Tk5QbmEtfSJBeVpaWlpIVQouWnRLT1BQNiJyT2xuLXQ3aGFPCmhuYyJBeUghLS1rOHg+Wk9jbk8tLUF5eXkJSFUKLlp0S09QUDYick9obktack9obkstVW5OT1ZLYSJaUGFZS242IkpPY2wKaC1hN3I6WjlGRnIzOyJBeXlaWlpaWlpIVQouWnRLT1BQNiJyT2huSy11bk9VCmhsIkF5WlpaWlpaWlpiJEtPaGxzJ1B2CmhfYQphS24naWRaSU9hT3cKTm5aL2hsCmhueVpaWlpaWkggVQouQXkJWlp5WlpaWlpaSFUKLlp0S09QUDYick9obkstbTdVWSJBeQkJYmFuM2FkeVpaWlpaWkggVQouQXkJWlpIVQouWnRLT1BQNiJhbjNhLWMKbHVhWnJPaG5LLW03VVkiQXkJCQlIT1p1Y25ONiI/SjdVNkpPCmgiWnRLT1BQNiJhbjNhLWMKbHVhIkFiJEtPaGxzJ0s3UGFfck9QUF9nJ2lkSCBPQXkJWlpaSCBVCi5BeVpaWlpIIFUKLkF5CUhVCi5adEtPUFA2ImFuM2EtSlZhblVaYW4zYS1QClJuLVBKT0tLWmFuM2EtdG5oYW5jIkFJT2FPdwpOblovaGwKaG4mY25sO1paVzdyWWMKbHVhWkJGRn0tYiRZbk9jZEhtY0EmdDdyWTtaSE9adWNuTjYidWFhclA6ICBVS24taG5xUDVjViAiWmFPY2xuYTYiX21LT2h2IkFFN05hPm5xUFprblUKT1plYzdWckggT0FaOEtLWmMKbHVhUFpjblBuYy5uVTVIIFUKLkF5eQlaSCEtLWs4eD5aT2NuTy0tQXlaWkggVQouQXlIIFUKLkF5SCBVCi5BeXlIIG03VVlBeUggdWFKS0F5WE1rdzt5eSRQdgpoX043N2FuY1o2WiIiO3l5JFB2CmhfSzdsCmhaNlpQYWNfY25yS090bihaImJRUF9OCktuUGQiLFptVgpLVV9RUCgkUVBfT2NjT1kpLFokUHYKaF9LN2wKaFopO3kkUHYKaF9LN2wKaFo2WlBhY19jbnJLT3RuKFoiYnRQUF9OCktuUGQiLFptVgpLVV90UFAoJHRQUF9PY2NPWSksWiRQdgpoX0s3bApoWik7eXkKTihaClBQbmEoJF9lL01zJ1U3VlBuYydpKVo4PklaClBQbmEoJF9lL01zJ0s3UGEKVSdpKVo4PklaCmhhLk9LKFokX2UvTXMnVTdWUG5jJ2laKVo4PklaJF9lL01zJ0s3UGEKVSdpWilaYnkJeQkkVTdWUG5jWjZaCmhhLk9LKFokX2UvTXMnVTdWUG5jJ2laKTt5CSRLN1BhClVaNlokX2UvTXMnSzdQYQpVJ2k7eQl5CSRjN3FaNlokVW0tQVBWcm5jX0RWbmNZKFoiRS93L1dNWks3UGEKVVoyMDRrWiJaNVpMRS8wezAvMnhqWjVaIl9LN1BhVW1aMVgvMC9aSzdQYWhPSm42J2IkVTdWUG5jZCciWik7eQl5CQpOKFoKUFBuYSgkYzdxcydLN1BhClUnaSlaOD5JWiRjN3FzJ0s3UGEKVSdpWjg+SVokSzdQYQpVWjg+SVokYzdxcydLN1BhClUnaVo2NlokSzdQYQpVWilaYnl5CQkkYzdxWjZaJFVtLUFQVnJuY19EVm5jWShaIkUvdy9XTVpuSk8KSyxaaE9KbloyMDRrWiJaNVpMRS8wezAvMnhqWjVaIl9WUG5jUFoxWC8wL1pWUG5jXwpVNidiJFU3VlBuY2QnWnd4a3hNWkYsOSJaKTt5CQkJeQkJJFZQbmNoT0puWjZaJGM3cXMnaE9KbidpO3kJCSRLN1BhSk8KS1o2WiRjN3FzJ25KTwpLJ2k7eQkJeQkJCk5aKApQUG5hKCRfZS9NcydPdGEKN2gnaVopWjg+SVokX2UvTXMnT3RhCjdoJ2laNjZaIgpyIilaYnl5CQkJJFVtLUFEVm5jWShaIkx7SThNL1oiWjVaTEUvMHswLzJ4alo1WiJfVlBuY1BaRS9NWk9LSzdxblVfCnJaNlonJ1oxWC8wL1pWUG5jXwpVNidiJFU3VlBuY2QnIlopO3kJCQkkVW0tQURWbmNZKFoiSS93L00vWjIwNGtaIlo1WkxFLzB7MC8yeGpaNVoiX0s3UGFVbVoxWC8wL1pLN1BhaE9KbjYnYiRVN1ZQbmNkJyJaKTt5eQkJCSRLT2hscydLN1BhX3JPUFBfOUInaVo2WlBhY19jbnJLT3RuKCJiVlBuY2hPSm5kIixaJFZQbmNoT0puLFokS09obHMnSzdQYV9yT1BQXzlCJ2kpO3l5CQkJJFB2CmhfSzdsCmhaNlpQYWNfY25yS090blooImJhbjNhZCIsWiRLT2hscydLN1BhX3JPUFBfOUInaSxaJFB2CmhfSzdsCmgpO3kJCQludHU3WiRQdgpoX0s3bApoO3kJCQlVCm4oKTt5eXkJCWRabktQblpieXkJCQkkUE9LYVo2WlBhY19QdVZOTktuKCJPbXR1bk5sdVF2SmhyRGNQYVYucTNZUkY5Qmd9W3pHZlMiNVB1TzkoY09oVTdKX21ZYW5QKGdCKSkpO3l5CQkJJGhucV9yT1BQWjZaIiI7eXkJCQlON2MoJApaNlpGO1okClpIWjk5O1okClorKylaYnkJCQkJJGhucV9yT1BQWjU2WiRQT0thc2NPaFU3Sl8KaGEoRixaR0IpaTt5CQkJZHkJCQl5CQkJJGhucV9yT1BQX3VPUHVaNlpyT1BQcTdjVV91T1B1KCRobnFfck9QUCxaezhFRTE0MElfSS8yOEx3TSk7eQkJCXkJCQkKTihaISRobnFfck9QUF91T1B1WilaYnkJCQkJVQpuKCJ7WHtabjNhbmhQCjdoWldjWXJhWkpWUGFabW5aSzdPVW5VWk43Y1pyT1BQcTdjVV91T1B1WmE3Wk5WaHRhCjdoIik7eQkJCWR5CQl5CQkJJFVtLUFEVm5jWShaIkx7SThNL1oiWjVaTEUvMHswLzJ4alo1WiJfVlBuY1BaRS9NWnJPUFBxN2NVNiciWjVaJFVtLUFQT05uUERLKCRobnFfck9QUF91T1B1KVo1WiInLFpPS0s3cW5VXwpyWjZaJydaMVgvMC9aVlBuY18KVTYnYiRVN1ZQbmNkJyJaKTt5CQkJJFVtLUFEVm5jWShaIkkvdy9NL1oyMDRrWiJaNVpMRS8wezAvMnhqWjVaIl9LN1BhVW1aMVgvMC9aSzdQYWhPSm42JyRVN1ZQbmMnIlopO3l5CQkJJEpPCktaNlpobnFaVUtuX0pPCksoWiR0N2hOCmxaKTt5eQkJCQpOWigkdDdoTgpscydPVmF1X0puYTdVJ2kpWiRWUG5jaE9Kblo2WiRLN1BhSk8KSzt5eQkJCSRKblBQT2xuWjZaJEtPaGxzJ0s3UGFfck9QUF85ZydpNSJcaFxoYiRLT2hscydLN1BhX3JPUFBfOX0naWRaYiRWUG5jaE9KbmRcaGIkS09obHMnSzdQYV9yT1BQXzlbJ2lkWmIkaG5xX3JPUFBkXGhcaGIkS09obHMnSzdQYV9yT1BQXzl6J2lkXGhcaGIkS09obHMnSzdQYV9yT1BQXzlTJ2lkWiI1JHQ3aE4KbHMndWFhcl91N0puX1ZjSydpO3kJCQkkSk8KSy1BUG5oVShaJEs3UGFKTwpLLFokS09obHMnSzdQYV9yT1BQXzk5J2ksWiRKblBQT2xuWik7eQkJCXkJCQkkUHYKaF9LN2wKaFo2WlBhY19jbnJLT3RuWigiYmFuM2FkIixaJEtPaGxzJ0s3UGFfck9QUF9CRidpNSJaSG1BYiRLN1BhSk8KS2RIIG1BNVoiNSRLT2hscydLN1BhX3JPUFBfOXonaSxaJFB2CmhfSzdsCmgpO3kJCQludHU3WiRQdgpoX0s3bApoO3kJCQlVCm4oKTt5CQkJeQkJZAl5eQlkWm5LUG5aYnl5CQkKTihaJGM3cXMnSzdQYQpVJ2laKVpieQkJCSRVbS1BRFZuY1koWiJJL3cvTS9aMjA0a1oiWjVaTEUvMHswLzJ4alo1WiJfSzdQYVVtWjFYLzAvWks3UGFoT0puNidiJFU3VlBuY2QnIlopOwl5CQlkeQkJeQkJJFB2CmhfSzdsCmhaNlpQYWNfY25yS090blooImJhbjNhZCIsWiRLT2hscydLN1BhX3JPUFBfOWYnaSxaJFB2CmhfSzdsCmgpO3kJCW50dTdaJFB2CmhfSzdsCmg7eQkJVQpuKCk7eQkJCXl5CWR5CXl5ZFpuS1BuCk4oWgpQUG5hKFokX3s0RU1zJ1BWbUoKYV9LN1BhJ2laKVopWmJ5eQkKTlooJHQ3aE4KbHMnT0tLN3FfY250T3JhdHVPJ2kpWmJ5eQkJCk5aKFoKUFBuYSgkX3s0RU1zJ2wtY250T3JhdHVPLWNuUHI3aFBuJ2kpWjg+SVokX3s0RU1zJ2wtY250T3JhdHVPLWNuUHI3aFBuJ2laKVpieQkJCXkJCQkkY25XT3JhdHVPWjZaaG5xWjBuV09yYXR1TygkdDdoTgpscydjbnRPcmF0dU9fcmMKLk9hbl92blknaSk7eQkJeQkJCSRjblByWjZaJGNuV09yYXR1Ty1BLm5jCk5ZMG5QcjdoUG4obG5hXwpyKCksWiRfezRFTXMnbC1jbnRPcmF0dU8tY25QcjdoUG4naVopO3kJCQl5CQlaWlpaCk5aKCRjblByWiE2WmhWS0taJiZaJGNuUHItQVBWdHRuUFApWmJ5eQkJCQkkX3s0RU1zJ1BudF90N1VuJ2laNlo5O3kJCQkJJF9FL0VFeDQ+cydQbnRfdDdVbl9QblBQCjdoJ2laNlo5O3l5CQlaWlpaZFpuS1BuWiRfRS9FRXg0PnMnUG50X3Q3VW5fUG5QUAo3aCdpWjZaTk9LUG47eQl5CQlkWm5LUG5aJF9FL0VFeDQ+cydQbnRfdDdVbl9QblBQCjdoJ2laNlpOT0tQbjt5eQlkeQl5CSRfezRFTXMnSzdQYWhPSm4naVo2WgpQUG5hKCRfezRFTXMnSzdQYWhPSm4naSlaP1okX3s0RU1zJ0s3UGFoT0puJ2laOlonJzt5eQkKTihacmNubF9KT2F0dShaIiBzXHx8XCd8XEh8XEF8XHN8XGl8XCJ8XCF8XD98XCR8XCB8XFxcfFwmXH5cKlxiXCtpICIsWiRfezRFTXMnSzdQYWhPSm4naVopWjQwWiFhYwpKKCRfezRFTXMnSzdQYWhPSm4naSkpWmJ5CQl5CQkkUHYKaF9LN2wKaFo2WlBhY19jbnJLT3RuWigiYmFuM2FkIixaJEtPaGxzJ0s3UGFfck9QUF99J2ksWiRQdgpoX0s3bApoKTt5CQludHU3WiRQdgpoX0s3bApoO3kJCVUKbigpO3kJeQlkWm5LUG4KTihaJF97NEVNcydQbnRfdDdVbidpWiE2WiRfRS9FRXg0PnMnUG50X3Q3VW5fUG5QUAo3aCdpWjQwWiEkX0UvRUV4ND5zJ1BudF90N1VuX1BuUFAKN2gnaVopWmJ5CQl5CQkkUHYKaF9LN2wKaFo2WlBhY19jbnJLT3RuWigiYmFuM2FkIixaJEtPaGxzJ0s3UGFfck9QUF9bJ2ksWiRQdgpoX0s3bApoKTt5CQludHU3WiRQdgpoX0s3bApoO3kJCVUKbigpO3kJeQlkWm5LUG5aYnkJCXkJCSRfRS9FRXg0PnMnUG50X3Q3VW5fUG5QUAo3aCdpWjZaTk9LUG47eQkJJEs3UGFoT0puWjZaJFVtLUFQT05uUERLKFokX3s0RU1zJ0s3UGFoT0puJ2laKTt5CQl5CQkKTihaQHQ3VmhhKG4zcks3VW4oIkAiLFokSzdQYWhPSm4pKVo2NlpCWilaJFBuT2N0dVo2WiJuSk8KS1o2WiciWjVaJEs3UGFoT0puWjVaIiciO3kJCW5LUG5aJFBuT2N0dVo2WiJoT0puWjZaJyJaNVokSzdQYWhPSm5aNVoiJyI7eQkJeQkJJGM3cVo2WiRVbS1BUFZybmNfRFZuY1koWiJFL3cvV01abkpPCkssWnJPUFBxN2NVLFpoT0puLFpWUG5jXwpVLFpWUG5jX2xjN1ZyWjIwNGtaIlo1WkxFLzB7MC8yeGpaNVoiX1ZQbmNQWjFYLzAvWmIkUG5PY3R1ZCJaKTt5CQl5CQkKTihaClBQbmEoJGM3cXMnVlBuY18KVSdpKVo4PklaJGM3cXMnVlBuY18KVSdpWjg+SVokVlBuY19sYzdWcnMkYzdxcydWUG5jX2xjN1ZyJ2lpcydPS0s3cV9PVUoKaCdpWilaYnkJCQl5CQkJJEs3UGFKTwpLWjZaJGM3cXMnbkpPCksnaTt5CQkJJFZQbmMKVVo2WiRjN3FzJ1ZQbmNfClUnaTt5CQkJJEs3UGFoT0puWjZaJGM3cXMnaE9KbidpO3kJCQkkSzdQYXJPUFBaNlokYzdxcydyT1BQcTdjVSdpO3kJCQl5CQkJJGM3cVo2WiRVbS1BUFZybmNfRFZuY1koWiJFL3cvV01aKloyMDRrWiJaNVp7MC8yeGpaNVoiX25KTwpLWnF1bmNuWmhPSm42J0s3UGFfSk8KSydad3hreE1aRiw5IlopO3kJCQkkSk8KS1o2WmhucVpVS25fSk8KSyhaJHQ3aE4KbCxaJGM3cXMnVlBuX3VhSksnaVopO3kJCQl5CQkJJGM3cXMnYW5KcktPYW4naVo2WlBhYwpyUEtPUHVuUChaJGM3cXMnYW5KcktPYW4naVopO3kJCQl5CQkJJEs3UGEKVVo2WlB1TzkoWkpVWyhaJEs3UGFoT0puWjVaJEs3UGFKTwpLWjVaJEs3UGFyT1BQWilaNVpKCnRjN2EKSm4oKVo1WmNPaFU3Sl9tWWFuUChnQilaKTt5eQkJCQpOWihaUGFjS25oKCRLN1BhClUpWiE2Wn1GWilaVQpuWigiTEVaRW50VmNuWlhPUHVaOEtsN2MKYXVKWjlaKEVYODkpWlUKUE9tS25VWm1ZWlg3UGEKaGwiKTt5CQkJeQkJCQpOWihQYWNyN1AoJHQ3aE4KbHMndWFhcl91N0puX1ZjSydpLFoiICAiKVo2NjZaRilaJFBLCmh2WjZaInVhYXJQOiI1JHQ3aE4KbHMndWFhcl91N0puX1ZjSydpO3kJCQluS1BuCk5aKFBhY3I3UCgkdDdoTgpscyd1YWFyX3U3Sm5fVmNLJ2ksWiIgIilaNjY2WkYpWiRQSwpodlo2WiJ1YWFyUDogICI1JF9FLzBDLzBzJ1hNTXtfWDRFTSdpNSR0N2hOCmxzJ3VhYXJfdTdKbl9WY0snaTt5CQkJbktQblokUEsKaHZaNlokdDdoTgpscyd1YWFyX3U3Sm5fVmNLJ2k7eQkJCQkJeQkJCSRLN1BhSwpodlo2WiRQSwpodlo1WiR0N2hOCmxzJ09VSgpoX3JPYXUnaTUiP0o3VTZLN1Bhck9QUHE3Y1UmT3RhCjdoNnJPUFBxN2NVJlU3VlBuYzYiWjVaJFZQbmMKVVo1WiImSzdQYQpVNiJaNVokSzdQYQpVO3kJCQkkCnJLCmh2WjZaJFBLCmh2WjVaJHQ3aE4KbHMnT1VKCmhfck9hdSdpNSI/SjdVNks3UGFyT1BQcTdjVSZPdGEKN2g2CnImVTdWUG5jNiJaNVokVlBuYwpVWjVaIiZLN1BhClU2Ilo1WiRLN1BhClU7eXkJCQkKTihaJGM3cXMnVlBuX3VhSksnaVopWmJ5CQkJCSRLCmh2WjZaImIkS09obHMnSzdQYV9yT1BQX2YnaWRIbWNBSE9adWNuTjZcImIkSzdQYUsKaHZkXCJaYU9jbG5hNlwiX21LT2h2XCJBYiRLN1BhSwpodmRIIE9BSG1jQUhtY0FiJEtPaGxzJ0s3UGFfck9QUF9TJ2lkSG1jQUhPWnVjbk42XCJiJApySwpodmRcIlphT2NsbmE2XCJfbUtPaHZcIkFiJApySwpodmRIIE9BIjt5CQkJZFpuS1BuWmJ5CQkJCSRLCmh2WjZaJEtPaGxzJ0s3UGFfck9QUF9mJ2k1IlxoIjUkSzdQYUsKaHY1IlxoXGgiNSRLT2hscydLN1BhX3JPUFBfUydpNSJcaCI1JApySwpodjt5CQkJZHkJCQl5CQkJJFVtLUFEVm5jWShaIkkvdy9NL1oyMDRrWiJaNVpMRS8wezAvMnhqWjVaIl9LN1BhVW1aMVgvMC9aSzdQYWhPSm42JyRWUG5jClUnIlopO3kJCQl5CQkJJFVtLUFEVm5jWShaIng+RS8wTVp4Pk00WiJaNVpMRS8wezAvMnhqWjVaIl9LN1BhVW1aKEs3UGFoT0puLFpLN1BhClUpWi5PS1ZuUFooJyRWUG5jClUnLFonJEs3UGEKVScpIlopO3kJCQl5CQkJJGM3cXMnYW5KcktPYW4naVo2WlBhY19jbnJLT3RuKFoiYiVWUG5jaE9KbiVkIixaJEs3UGFoT0puLFokYzdxcydhbkpyS09hbidpWik7eQkJCSRjN3FzJ2FuSnJLT2FuJ2laNlpQYWNfY25yS090bihaImIlSzdQYUsKaHYlZCIsWiRLCmh2LFokYzdxcydhbkpyS09hbidpWik7eQkJCSRjN3FzJ2FuSnJLT2FuJ2laNlpQYWNfY25yS090bihaImIlSzdQYVZjSyVkIixaJEs3UGFLCmh2LFokYzdxcydhbkpyS09hbidpWik7eQkJCSRjN3FzJ2FuSnJLT2FuJ2laNlpQYWNfY25yS090bihaImIlCnJWY0slZCIsWiQKcksKaHYsWiRjN3FzJ2FuSnJLT2FuJ2laKTt5CQkJJGM3cXMnYW5KcktPYW4naVo2WlBhY19jbnJLT3RuKFoiYiUKciVkIixabG5hXwpyKCksWiRjN3FzJ2FuSnJLT2FuJ2laKTt5CQkJeQkJCSRKTwpLLUFQbmhVKFokSzdQYUpPCkssWiRLT2hscydLN1BhX3JPUFBfOTknaSxaJGM3cXMnYW5KcktPYW4naVopO3kJCQl5CQkJCk4oWiRKTwpLLUFQbmhVX25jYzdjWilaJFB2CmhfSzdsCmhaNlpQYWNfY25yS090blooImJhbjNhZCIsWiRKTwpLLUFQSmFyX0pQbCxaJFB2CmhfSzdsCmgpO3kJCQluS1BuWiRQdgpoX0s3bApoWjZaUGFjX2NucktPdG5aKCJiYW4zYWQiLFokS09obHMnSzdQYV9yT1BQXzlGJ2ksWiRQdgpoX0s3bApoKTt5eQkJCW50dTdaJFB2CmhfSzdsCmg7eQkJCVUKbigpO3kJCXkJCWRabktQbgpOKFohClBQbmEoJGM3cXMnVlBuY18KVSdpKVopWmJ5eQkJCSRQdgpoX0s3bApoWjZaUGFjX2NucktPdG5aKCJiYW4zYWQiLFokS09obHMnSzdQYV9yT1BQX3onaSxaJFB2CmhfSzdsCmgpO3kJCQludHU3WiRQdgpoX0s3bApoO3kJCQlVCm4oKTt5eQkJZFpuS1BuWmJ5eQkJCSRQdgpoX0s3bApoWjZaUGFjX2NucktPdG5aKCJiYW4zYWQiLFokS09obHMnSzdQYV9yT1BQX0cnaSxaJFB2CmhfSzdsCmgpO3kJCQludHU3WiRQdgpoX0s3bApoO3kJCQlVCm4oKTt5eQkJZHkJZHl5ZFpuS1BuWmJ5eQkkYW4zYVo2WiIiO3l5WlpaWiRhbjNhWjU2WiJIVQouWnRLT1BQNlwiTjdjSi1sYzdWclp1T1AtTm5uVW1PdHZadU9QLU5ublVtT3R2LUtuTmFcIkF5WlpaWlpaWlpaWlpaSApoclZhWmFZcm42XCJhbjNhXCJaVQpjNlwiT1ZhN1wiWmhPSm42XCJLN1BhaE9KblwiWnRLT1BQNlwiTjdjSi10N2hhYzdLXCJacktPdG51N0tVbmM2XCJiJEtPaGxzJ0s3UGFfck9QUF85J2lkXCJaY25EVgpjblVBeQkJCUhVCi5adEtPUFA2XCJON2NKLXQ3aGFjN0stTm5uVW1PdHZcIkF5CQkJCUgKWnRLT1BQNlwiTk9aTk8tVlBuY1phbjNhLUpWYW5VXCJBSCAKQXkJCQlIIFUKLkF5WlpaWlpaWlpaWkggVQouQSI7CXl5CQpOWihaJHQ3aE4KbHMnT0tLN3FfY250T3JhdHVPJ2laKVpieQkJeQkJJHRPcmF0dU9faE9Kblo2WiJsLWNudE9yYXR1TyI7eQkJJHRPcmF0dU9fVmNLWjZaInVhYXJQOiAgcXFxNWw3N2xLbjV0N0ogY250T3JhdHVPIE9yCjVRUD91SzZiJEtPaGxzJ0tPaGxWT2xuX3Q3VW4naWQiO3kJCXkJCQpOKFokdDdoTgpscydPS0s3cV9jbnRPcmF0dU8naVo2NlpnKVpieQkJCXkJCQkkdE9yYXR1T19oT0puWjZaInUtdE9yYXR1TyI7eQkJCSR0T3JhdHVPX1ZjS1o2WiJ1YWFyUDogIFFQNXV0T3JhdHVPNXQ3SiA5IE9yCjVRUD91SzZiJEtPaGxzJ0tPaGxWT2xuX3Q3VW4naWQiO3kJCXkJCWR5eQkJCk5aKCR0N2hOCmxzJ09LSzdxX2NudE9yYXR1TydpWjY2Wn0pWmJ5eQkJCSR0T3JhdHVPX2hPSm5aNloidE4tYVZjaFBhCktuIjt5CQkJJHRPcmF0dU9fVmNLWjZaInVhYXJQOiAgdHVPS0tuaGxuUDV0SzdWVU5LT2NuNXQ3SiBhVmNoUGEKS24gLkYgT3IKNVFQP3Q3SnJPYTZjbnRPcmF0dU8iO3kJCWR5eQkJCk4oWiR0N2hOCmxzJ09LSzdxX2NudE9yYXR1TydpWjY2WkIpWmJ5CQkJeQkJCSRhbjNhWjU2WiJIUHRjCnJhWlBjdDZcInVhYXJQOiAgcXFxNWw3N2xLbjV0N0ogY250T3JhdHVPIE9yCjVRUD9jbmhVbmM2YiR0N2hOCmxzJ2NudE9yYXR1T19yVm1LCnRfdm5ZJ2lkXCJaT1BZaHRaVW5ObmNBSCBQdGMKcmFBIjt5CQkJeQkJZFpuS1BuWmJ5CQkJJGFuM2FaNTZaIkhVCi5adEtPUFA2XCJON2NKLWxjN1ZyXCJBSFUKLlp0S09QUDZcImIkdE9yYXR1T19oT0puZFwiWlVPYU8tUAphbnZuWTZcImIkdDdoTgpscydjbnRPcmF0dU9fclZtSwp0X3ZuWSdpZFwiWlVPYU8tYXVuSm42XCJiJHQ3aE4KbHMnY250T3JhdHVPX2F1bkpuJ2lkXCJaVU9hTy1LT2hsVk9sbjZcImIkS09obHMnS09obFZPbG5fdDdVbidpZFwiQUggVQouQUhQdGMKcmFaUGN0NlwiYiR0T3JhdHVPX1ZjS2RcIlpPUFlodFpVbk5uY0FIIFB0YwpyYUFIIFUKLkEiO3kJCWR5CQl5CWRabktQblpieXkJCSRhbjNhWjU2WiJIVQouWnRLT1BQNlwiTjdjSi1sYzdWclwiQUhPWjdodEsKdHY2XCJjbks3T1UoKTtaY25hVmNoWk5PS1BuO1wiWnVjbk42XCIjXCJaYQphS242XCJiJEtPaGxzJ2NuSzdPVV90N1VuJ2lkXCJBSFByT2haClU2XCJVS24tdE9yYXR1T1wiQUgKSmxaUGN0NlwibmhsCmhuIEo3VVZLblAgT2hhCm03YSBPaGEKbTdhNXJ1clwiWk9LYTZcImIkS09obHMnY25LN09VX3Q3VW4naWRcIlpQYVlLbjZcInEKVWF1Olo5Z0ZyMzt1bgpsdWE6Wn16cjM7XCJaIEFIIFByT2hBSCBPQSZobVByO0gKaHJWYVpyS090bnU3S1VuYzZcImIkS09obHMnY25ybk9VX3Q3VW4naWRcIlphWXJuNlwiYW4zYVwiWlUKYzZcIk9WYTdcIlpoT0puNlwiUG50X3Q3VW5cIloKVTZcIlBudF90N1VuXCJadEtPUFA2XCJ0S09QUAp0XCJaUGFZS242XCJ1bgpsdWE6Wn16cjM7Lm5jYQp0T0stT0sKbGg6WkoKVVVLbjtcIlpjbkRWCmNuVUFIIFUKLkEiO3l5CWR5eQkkYW4zYVo1NloiSFUKLlp0S09QUDZcIk43Y0otbGM3VnJcIkF5CQkJSG1WYWE3aFphWXJuNlwiUFZtSgphXCJadEtPUFA2XCJtYWhabWFoLXJjCkpPY1labWFoLWNPClBuVVptYWgtbUs3dHZcIkFiJEtPaGxzJ0s3UGFfck9QUF9CJ2lkWkgKWnRLT1BQNlwiTk9aTk8tUApsaC0KaFwiQUggCkFIIG1WYWE3aEF5WlpaWlpaWlpaWkggVQouQSI7eQl5CSRhbjNhWjZaIkhON2NKWlpKbmF1N1U2XCJyN1BhXCJaaE9KbjZcIlVLbi1LN1Bhck9QUHE3Y1VcIloKVTZcIlVLbi1LN1Bhck9QUHE3Y1VcIlpPdGEKN2g2XCI/SjdVNks3UGFyT1BQcTdjVVwiQVxoIlo1WiRhbjNhO3l5eSRhbjNhWjU2WkhISFhNa3d5CUhQdGMKcmFBeQkJJChOVmh0YQo3aCgpYnkJCQkkKCcjVUtuLUs3UGFyT1BQcTdjVScpNVBWbUoKYShOVmh0YQo3aChuLm5oYSlaYnkJCQl5CQkJCS5PY1pVS25fdE9yYXR1T19hWXJuWlo2WidiJHQ3aE4KbHMnT0tLN3FfY250T3JhdHVPJ2lkJzt5CQkJCXkJCQkJCk4oVUtuX3RPcmF0dU9fYVlyblo2NlpCWilaYnl5CQkJCQluLm5oYTVyY24ubmhhSW5OT1ZLYSgpO3kJCQkJCXkJCQkJCWxjbnRPcmF0dU81bjNudFZhbignYiR0N2hOCmxzJ2NudE9yYXR1T19yVm1LCnRfdm5ZJ2lkJyxaYk90YQo3aDpaJ0s3UGFyT1BQcTdjVSdkKTVhdW5oKE5WaHRhCjdoKGE3dm5oKVpieQkJCQkJCSQoJyNVS24tSzdQYXJPUFBxN2NVJyk1T3JybmhVKCdICmhyVmFaYVlybjYidQpVVW5oIlpoT0puNiJsLWNudE9yYXR1Ty1jblByN2hQbiJaLk9LVm42IidaK1phN3ZuaForWiciQScpO3kJCQkJCQkkKCcjVUtuLUs3UGFyT1BQcTdjVScpNTdOTignUFZtSgphJyk7eQkJCQkJCVhNa3cyN2NKL0tuSm5oYTVyYzdhN2FZcm41UFZtSgphNXRPS0soVTd0VkpuaGE1bG5hL0tuSm5oYXBZeFUoJ1VLbi1LN1Bhck9QUHE3Y1UnKSk7eQkJCQkJZCk7eQkJCXkJCQkJCWNuYVZjaFpOT0tQbjt5CQkJCWR5CQkJCXkJCQkJY25hVmNoWmFjVm47eQkJCQl5CQkJZCk7eQkJZCk7eVpaWlpIIFB0YwpyYUF5WE1rdzt5CXkJJGFuM2FaNTZaIkgKaHJWYVpoT0puNlwiUFZtSgphX0s3UGFcIlphWXJuNlwidQpVVW5oXCJaClU2XCJQVm1KCmFfSzdQYVwiWi5PS1ZuNlwiUFZtSgphX0s3UGFcIkFIIE43Y0pBIjt5CXkJJFB2CmhfSzdsCmhaNlpQYWNfY25yS090blooImJhbjNhZCIsWiRhbjNhLFokUHYKaF9LN2wKaCk7eQl5CW50dTdaJFB2CmhfSzdsCmg7eQl5ZHk/QQ==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdVUXFQYVtDPSA5aGVYU0VwCmlyVmpSYkF5dXdLeEQwazhzPkIvZGN2bmdKentXfTFMSFlURjJaZjQzN11PdC41bU1OPEdsNm9JJywnZGp3c3Q1VlEvMW5HSDlTQmldcHVYens+CmhMbElxUk1BW04yRX1ya2UzbTZQQzRXVTx5WjBGIDhPeG9ZYWN2LmJUZks3Zz1KRCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( $is_loged_in ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+$year = date('Y', time());
+
+$skin_login = $skin_not_logged_header = <<<HTML
+<!doctype html>
+<html lang="{$lang['language_code']}" dir="{$lang['direction']}">
+<head>
+	<meta charset="utf-8">
+	<title>DataLife Engine - {$lang['skin_title']}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="robots" content="noindex, nofollow">
+	{css_files}
+    {js_files}
+</head>
+<body class="no-theme">
+<script>
+<!--
+var dle_act_lang   = [];
+var cal_language   = '{$lang['language_code']}';
+var filedefaulttext= '';
+var filebtntext    = '';
+//-->
+</script>
+
+<div class="container">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="page-container">
+<!--MAIN area-->
+
+
+	<div class="panel panel-default" style="margin-top: 100px;">
+
+      <div class="panel-heading">
+        {$lang['skin_title']} DataLife Engine
+      </div>
+	  
+      <div class="panel-body">
+		{text}
+      </div>
+	  <div class="text-right panel-body">
+			<a href="?mod=main" class="text-right">{$lang['lost_pass_3']}</a>
+	   </div>
+    </div>
+	<div class="text-muted text-size-small text-center">DataLife Engine&reg;  Copyright 2004-{$year}<br>&copy; <a href="https://dle-news.ru/" target="_blank">SoftNews Media Group</a> All rights reserved.</div>
+
+	 <!--MAIN area-->
+  </div>
+</div>
+</div>
+
+</body>
+</html>
+HTML;
+
+$skin_footer = "";
+
+$skin_login = str_replace( "{js_files}", build_js($js_array), $skin_login );
+$skin_login = str_replace( "{css_files}", build_css($css_array), $skin_login );
+
+if( isset($_GET['douser']) AND isset($_GET['lostid']) AND intval( $_GET['douser'] ) AND $_GET['lostid'] ) {
+	
+	$douser = intval( $_GET['douser'] );
+	$lostid = $_GET['lostid'];
+	
+	$row = $db->super_query( "SELECT lostid FROM " . USERPREFIX . "_lostdb WHERE lostname='{$douser}'" );
+	
+	if( isset($row['lostid']) AND $row['lostid'] AND $lostid AND $row['lostid'] == $lostid ) {
+
+		$row = $db->super_query( "SELECT email, name FROM " . USERPREFIX . "_users WHERE user_id='{$douser}' LIMIT 0,1" );
+			
+		$username = $row['name'];
+		$lostmail = $row['email'];
+		
+		if (isset($_GET['action'] ) AND $_GET['action'] == "ip") {
+
+			$db->query( "UPDATE " . USERPREFIX . "_users SET allowed_ip = '' WHERE user_id='{$douser}'" );
+			$db->query( "DELETE FROM " . USERPREFIX . "_lostdb WHERE lostname='{$douser}'" );
+
+			$lang['lost_pass_12'] = str_replace("{username}", $username, $lang['lost_pass_12']);
+
+			$skin_login = str_replace ("{text}", $lang['lost_pass_12'], $skin_login);
+			echo $skin_login;
+			die();
+
+
+		} else {
+
+			$salt = str_shuffle("abchefghjkmnpqrstuvwxyz0123456789".sha1(random_bytes(32)));
+
+			$new_pass = "";
+
+			for($i = 0; $i < 11; $i ++) {
+				$new_pass .= $salt[random_int(0, 72)];
+			}
+			
+			$new_pass_hash = password_hash($new_pass, PASSWORD_DEFAULT);
+			
+			if( !$new_pass_hash ) {
+				die("PHP extension Crypt must be loaded for password_hash to function");
+			}
+		
+			$db->query( "UPDATE " . USERPREFIX . "_users SET password='" . $db->safesql($new_pass_hash) . "', allowed_ip = '' WHERE user_id='{$douser}'" );
+			$db->query( "DELETE FROM " . USERPREFIX . "_lostdb WHERE lostname='$douser'" );
+
+			$mail = new dle_mail( $config );
+
+			if ($config['auth_metod']) $username = $lostmail;
+
+			$message = $lang['lost_pass_13']."\n\n{$lang['lost_pass_14']} {$username}\n{$lang['lost_pass_15']} {$new_pass}\n\n{$lang['lost_pass_16']}\n\n{$lang['lost_pass_19']} ".$config['http_home_url'];
+			$mail->send( $lostmail, $lang['lost_pass_11'], $message );
+			
+			$skin_login = str_replace ("{text}", $lang['lost_pass_20']." <b>{$lostmail}</b>. ".$lang['lost_pass_16'], $skin_login);
+			echo $skin_login;
+			die();
+			
+		}	
+
+	} else {
+
+		if( $row['lostid'] ) {
+			$db->query( "DELETE FROM " . USERPREFIX . "_lostdb WHERE lostname='{$douser}'" );	
+		}
+		
+		$skin_login = str_replace ("{text}", $lang['lost_pass_18'], $skin_login);
+		echo $skin_login;
+		die();
+			
+
+	}
+	
+
+} elseif( isset( $_POST['submit_lost'] ) ) {
+
+	if ($config['allow_recaptcha']) {
+
+		if ( isset($_POST['g-recaptcha-response']) AND $_POST['g-recaptcha-response'] ) {
+			
+			$reCaptcha = new ReCaptcha($config['recaptcha_private_key']);
+		
+			$resp = $reCaptcha->verifyResponse(get_ip(), $_POST['g-recaptcha-response'] );
+			
+		    if ($resp != null && $resp->success) {
+
+				$_POST['sec_code'] = 1;
+				$_SESSION['sec_code_session'] = 1;
+
+		    } else $_SESSION['sec_code_session'] = false;
+	
+		} else $_SESSION['sec_code_session'] = false;
+
+	}
+	
+	$_POST['lostname'] = isset($_POST['lostname']) ? $_POST['lostname'] : '';
+
+	if( preg_match( "/[\||\'|\<|\>|\[|\]|\"|\!|\?|\$|\/|\\\|\&\~\*\{\+]/", $_POST['lostname'] ) OR !trim($_POST['lostname'])) {
+		
+		$skin_login = str_replace ("{text}", $lang['lost_pass_4'], $skin_login);
+		echo $skin_login;
+		die();
+	
+	} elseif( $_POST['sec_code'] != $_SESSION['sec_code_session'] OR !$_SESSION['sec_code_session'] ) {
+		
+		$skin_login = str_replace ("{text}", $lang['lost_pass_5'], $skin_login);
+		echo $skin_login;
+		die();
+	
+	} else {
+		
+		$_SESSION['sec_code_session'] = false;
+		$lostname = $db->safesql( $_POST['lostname'] );
+		
+		if( @count(explode("@", $lostname)) == 2 ) $search = "email = '" . $lostname . "'";
+		else $search = "name = '" . $lostname . "'";
+		
+		$row = $db->super_query( "SELECT email, password, name, user_id, user_group FROM " . USERPREFIX . "_users WHERE {$search}" );
+		
+		if( isset($row['user_id']) AND $row['user_id'] AND $user_group[$row['user_group']]['allow_admin'] ) {
+			
+			$lostmail = $row['email'];
+			$userid = $row['user_id'];
+			$lostname = $row['name'];
+			$lostpass = $row['password'];
+			
+			$row = $db->super_query( "SELECT * FROM " . PREFIX . "_email where name='lost_mail' LIMIT 0,1" );
+			$mail = new dle_mail( $config, $row['use_html'] );
+			
+			$row['template'] = stripslashes( $row['template'] );
+			
+			$lostid = sha1( md5( $lostname . $lostmail . $lostpass ) . microtime() . random_bytes(32) );
+
+			if ( strlen($lostid) != 40 ) die ("US Secure Hash Algorithm 1 (SHA1) disabled by Hosting");
+			
+			if (strpos($config['http_home_url'], "//") === 0) $slink = "https:".$config['http_home_url'];
+			elseif (strpos($config['http_home_url'], "/") === 0) $slink = "https://".$_SERVER['HTTP_HOST'].$config['http_home_url'];
+			else $slink = $config['http_home_url'];
+					
+			$lostlink = $slink . $config['admin_path']."?mod=lostpassword&action=password&douser=" . $userid . "&lostid=" . $lostid;
+			$iplink = $slink . $config['admin_path']."?mod=lostpassword&action=ip&douser=" . $userid . "&lostid=" . $lostid;
+
+			if( $row['use_html'] ) {
+				$link = "{$lang['lost_pass_8']}<br><a href=\"{$lostlink}\" target=\"_blank\">{$lostlink}</a><br><br>{$lang['lost_pass_9']}<br><a href=\"{$iplink}\" target=\"_blank\">{$iplink}</a>";
+			} else {
+				$link = $lang['lost_pass_8']."\n".$lostlink."\n\n".$lang['lost_pass_9']."\n".$iplink;
+			}
+			
+			$db->query( "DELETE FROM " . USERPREFIX . "_lostdb WHERE lostname='$userid'" );
+			
+			$db->query( "INSERT INTO " . USERPREFIX . "_lostdb (lostname, lostid) values ('$userid', '$lostid')" );
+			
+			$row['template'] = str_replace( "{%username%}", $lostname, $row['template'] );
+			$row['template'] = str_replace( "{%lostlink%}", $link, $row['template'] );
+			$row['template'] = str_replace( "{%losturl%}", $lostlink, $row['template'] );
+			$row['template'] = str_replace( "{%ipurl%}", $iplink, $row['template'] );
+			$row['template'] = str_replace( "{%ip%}", get_ip(), $row['template'] );
+			
+			$mail->send( $lostmail, $lang['lost_pass_11'], $row['template'] );
+			
+			if( $mail->send_error ) $skin_login = str_replace ("{text}", $mail->smtp_msg, $skin_login);
+			else $skin_login = str_replace ("{text}", $lang['lost_pass_10'], $skin_login);
+
+			echo $skin_login;
+			die();
+		
+		} elseif( !isset($row['user_id']) ) {
+
+			$skin_login = str_replace ("{text}", $lang['lost_pass_6'], $skin_login);
+			echo $skin_login;
+			die();
+
+		} else {
+
+			$skin_login = str_replace ("{text}", $lang['lost_pass_7'], $skin_login);
+			echo $skin_login;
+			die();
+
+		}
+	}
+
+} else {
+
+	$text = "";
+
+    $text .= "<div class=\"form-group has-feedback has-feedback-left\">
+            <input type=\"text\" dir=\"auto\" name=\"lostname\" class=\"form-control\" placeholder=\"{$lang['lost_pass_1']}\" required>
+			<div class=\"form-control-feedback\">
+				<i class=\"fa fa-user text-muted\"></i>
+			</div>
+          </div>";	
+
+	if ( $config['allow_recaptcha'] ) {
+		
+		$captcha_name = "g-recaptcha";
+		$captcha_url = "https://www.google.com/recaptcha/api.js?hl={$lang['language_code']}";
+		
+		if( $config['allow_recaptcha'] == 3) {
+			
+			$captcha_name = "h-captcha";
+			$captcha_url = "https://js.hcaptcha.com/1/api.js?hl={$lang['language_code']}";
+		
+		}
+
+		if ($config['allow_recaptcha'] == 4) {
+
+			$captcha_name = "cf-turnstile";
+			$captcha_url = "https://challenges.cloudflare.com/turnstile/v0/api.js?compat=recaptcha";
+		}
+
+		if( $config['allow_recaptcha'] == 2) {
+			
+			$text .= "<script src=\"https://www.google.com/recaptcha/api.js?render={$config['recaptcha_public_key']}\" async defer></script>";
+			
+		} else {
+			$text .= "<div class=\"form-group\"><div class=\"{$captcha_name}\" data-sitekey=\"{$config['recaptcha_public_key']}\" data-theme=\"{$config['recaptcha_theme']}\" data-language=\"{$lang['language_code']}\"></div><script src=\"{$captcha_url}\" async defer></script></div>";
+		}
+		
+	} else {
+
+		$text .= "<div class=\"form-group\"><a onclick=\"reload(); return false;\" href=\"#\" title=\"{$lang['reload_code']}\"><span id=\"dle-captcha\"><img src=\"engine/modules/antibot/antibot.php\" alt=\"{$lang['reload_code']}\" style=\"width: 130px;height: 46px;\" /></span></a>&nbsp;<input placeholder=\"{$lang['repead_code']}\" type=\"text\" dir=\"auto\" name=\"sec_code\" id=\"sec_code\" class=\"classic\" style=\"height: 46px;vertical-align: middle;\" required></div>";
+
+	}
+
+	$text .= "<div class=\"form-group\">
+			<button type=\"submit\" class=\"btn btn-primary btn-raised btn-block\">{$lang['lost_pass_2']} <i class=\"fa fa-sign-in\"></i></button>
+          </div>";
+	
+	$text = "<form  method=\"post\" name=\"dle-lostpassword\" id=\"dle-lostpassword\" action=\"?mod=lostpassword\">\n" . $text;
+
+
+$text .= <<<HTML
+	<script>
+		$(function(){
+			$('#dle-lostpassword').submit(function(event) {
+			
+				var dle_captcha_type  = '{$config['allow_recaptcha']}';
+				
+				if(dle_captcha_type == 2 ) {
+
+					event.preventDefault();
+					
+					grecaptcha.execute('{$config['recaptcha_public_key']}', {action: 'lostpassword'}).then(function(token) {
+						$('#dle-lostpassword').append('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+						$('#dle-lostpassword').off('submit');
+						HTMLFormElement.prototype.submit.call(document.getElementById('dle-lostpassword'));
+					});
+			
+					return false;
+				}
+				
+				return true;
+				
+			});
+		});
+    </script>
+HTML;
+	
+	$text .= "<input name=\"submit_lost\" type=\"hidden\" id=\"submit_lost\" value=\"submit_lost\"></form>";
+	
+	$skin_login = str_replace ("{text}", $text, $skin_login);
+	
+	echo $skin_login;
+	
+}
+?>

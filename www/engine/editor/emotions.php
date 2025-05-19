@@ -5,9 +5,129 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: emotions.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Smiles for WYSIWYG
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P10+P2hJaDdIKjdRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUTdrc1QwVGZhNDNrTkxPYUwzay1rOUprMgo0MHgzaTFrZDNYYVRrcn0KU2hrNy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tN2tJMDBoMTpISFh7My1MM2kxd31TSDctLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTdrLgpoSn1hT0kwayhtKWtBdXU4LUF1QVtrMgo0MHgzaTFrZDNYYVRrcn0KU2g3UVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVE3a1dJYTFrbQpYM2thMWtofQowM20wM1hrOUprbQpoSn1hT0kwN1FRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRN2tEYXszOmszYgowYQpMMXdoSWg3LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS03ay8xMzprMmJhezMxazQKfWtQRTJ5UEVyN1FRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRNypIN1gzNGFMMygnc3FXcWZ5RE5OeHJ5eE4nLGswfVMzKTs3WDM0YUwzKCc9dnZXX3N5PScsayd3d0h3dycpOzdYMzRhTDMoJ054cnl4Tl9zeT0nLGsnd3cnKTs3NzN9fQp9X30zaAp9MGFMTyhNKTs3YUxhXzEzMCgnWGExaHtUSl8zfX0KfTEnLGswfVMzKTs3YUxhXzEzMCgnSTBie18zfX0KfTEnLGs0VHsxMyk7NzdhTG17U1gza054cnl4Tl9zeT13J0hYVDBUSG0KTDRhT3doSWgnOzdhTG17U1gzaz12dldfc3k9a3drJ0h7VExPU1RPM0gna3drJG0KTDRhTyAne1RMTzEnemt3aydIaTM5MWEwM3d7TE8nOzc3WFQwM19YMzRUU3swXzBhYjN0CkwzXzEzMGsoayRtCkw0YU8gJ1hUMDNfVFhGUzEwJ3prKTs3N2E0aygkbQpMNGFPICdJMDBoX0kKYjNfU317J3prUVFrIiIpa2U3NwkkbQpMNGFPICdJMDBoX0kKYjNfU317J3prUWszQmh7ClgzKCIzTE9hTDNIM1hhMAp9SDNiCjBhCkwxd2hJaCIsayRfMk49b049ICduPG5fMk5mRCd6KTs3CSRtCkw0YU8gJ0kwMGhfSQpiM19TfXsnemtRa30zMTMwKCRtCkw0YU8gJ0kwMGhfSQpiM19TfXsneik7NwkkbQpMNGFPICdJMDBoX0kKYjNfU317J3prUWsiSTAwaDE6SEgidyRfMk49b049ICc8V1duXzx2MlcnenckbQpMNGFPICdJMDBoX0kKYjNfU317J3o7NzdDNzdhNChrJG0KTDRhTyAnM2IKRmEnemspa2U3NyQzYgpGYV8xbX1haDBrUWs+Pj48V2RmNwk2VH1rMDNCMF97VDEwXzNiCkZha1FrImUke1RMTyAnM2IKRmFfe1QxMCd6QyI7Nwk3CVhhMWh7VEpfM1hhMAp9X3tUMTBfM2IKRmEoKTs3CQkJNwkkKCJ3WHszLTNiCjBhbQpMa1hhNiBYVDBULTNiCkZheiIpdzNUbUkoNFNMbTBhCkwoKWU3CQk2VH1rbQpYM2tRayQoMElhMSl3WFQwVCgnM2IKRmEnKTs3CQk2VH1rM2IKRmFrUWszYgpGYUR9CmI8M0IoJCgwSWExKXdYVDBUKCczYgpGYScpKTs3CTcJCWE0KDNiCkZhKWtlNwkJCSQoMElhMSl3STBieygnPlRrCkxte2FtalEiYUwxM30wXzNYYTAKfV8zYgpGYShcJycrM2IKRmErJ1wnLGtcJycrbQpYMysnXCcpO2t9MzBTfUxrNFR7MTM7Il0nKzNiCkZhKyc+SFRdJyk7NwkJQ2szezEza2U3CQkJJCgwSWExKXd9M2IKNjMoKTs3CQlDNwk3CUMpOzc8V2RmOzc3NyQKUzBoUzBrUWs+Pj48V2RmNz5YYTZrbXtUMTFRIjNiCkZhXzkKQiJdPlhhNmtte1QxMVEie1QxMF8zYgpGYSJdPkhYYTZdNzxXZGY7NzcJJDNiCkZha1FrRjEKTF9YM20KWDNrKDRhezNfTzMwX20KTDAzTDAxayg9dnZXX3N5PWt3ayJIM0xPYUwzSFhUMFRIM2IKMGFtCkwxSDNiCkZhd0YxCkwiaylrKTs3CTcJNAp9M1RtSWsoJDNiCkZha1QxayRqM0prUV1rJDZUe1MzaylrZTcJCSRha1FrdTs3CQk3CQkkClMwaFMwa3dRayI+WGE2a217VDExUVwiM2IKRmFfbVQwM08KfUpcIl0+OV0idyR7VExPICczYgpGYV8ndyQ2VHtTMy1dbVQwM08KfUp6dyI+SDldPkhYYTZdNwkJPlhhNmtte1QxMVFcIjNiCkZhX3thMTBcIl0iOzcJCTc3CQk0Cn0zVG1JaygkNlR7UzMtXTNiCkZha1QxayQxSmI5CntrKWtlNwkJCSRhKys7NwkJCTcJCQkkClMwaFMwa3dRayI+WGE2a217VDExUVwiM2IKRmFfMUpiOQp7XCJrWFQwVC0zYgpGYVFcImUkMUpiOQp7LV1tClgzQ1wiXT5IWGE2XSI7NwkJCTcJCUM3NwkJJApTMGhTMGt3UWsiPkhYYTZdIjs3CQk3CUM3CTckClMwaFMwa3dRayI+SFhhNl0iOzcJN0NrM3sxM2tlNwk3CSRha1FrdTs3CSQzYgpGYV8xbX1haDBrUWsiIjs3CSQKUzBoUzBrUWsiPjBUOXszazEwSnszUVwiaWFYMEk6bHV1JTs5Cn1YM306a3VoQjtoVFhYYUxPOmt1aEI7XCJdPjB9XSI7NzcJJDFiYXthMzFrUWszQmh7ClgzKCIsIixrJG0KTDRhTyAnMWJhe2EzMSd6KTs3CSRtClNMMF8xYmF7YTMxa1FrbQpTTDAoJDFiYXthMzEpOzcJNwk0Cn0zVG1JKCQxYmF7YTMxa1QxayQxYmF7Myk3CWU3CQkkYSsrOzcJCSQxYmF7M2tRazB9YWIoJDFiYXszKTs3CQkkMWJfYWJUTzNrUSIiOzcJCWE0KGs0YXszXzNCYTEwMShrPXZ2V19zeT1rd2siSDNMT2FMM0hYVDBUSDNiCjBhbQpMMUgia3drJDFiYXsza3drIndoTE8iaylrKWtlNwkJCWE0KGs0YXszXzNCYTEwMShrPXZ2V19zeT1rd2siSDNMT2FMM0hYVDBUSDNiCjBhbQpMMUgia3drJDFiYXsza3drIkBBQndoTE8iaylrKWtlNwkJCQkkMWJfYWJUTzNrUWsiPmFiT2tUezBRXCJlJDFiYXszQ1wia217VDExUVwiM2IKRmFcImsxfW1RXCJlJG0KTDRhTyAnSTAwaF9JCmIzX1N9eyd6QzNMT2FMM0hYVDBUSDNiCjBhbQpMMUhlJDFiYXszQ3doTE9cImsxfW0xMzBRXCJlJG0KTDRhTyAnSTAwaF9JCmIzX1N9eyd6QzNMT2FMM0hYVDBUSDNiCjBhbQpMMUhlJDFiYXszQ0BBQndoTE9rQUJcImtIXSI7NwkJCUNrM3sxM2tlNwkJCQkkMWJfYWJUTzNrUWsiPmFiT2tUezBRXCJlJDFiYXszQ1wia217VDExUVwiM2IKRmFcImsxfW1RXCJlJG0KTDRhTyAnSTAwaF9JCmIzX1N9eyd6QzNMT2FMM0hYVDBUSDNiCjBhbQpMMUhlJDFiYXszQ3doTE9cImtIXSI7CTcJCQlDNwkJQ2szezEzYTRrKGs0YXszXzNCYTEwMShrPXZ2V19zeT1rd2siSDNMT2FMM0hYVDBUSDNiCjBhbQpMMUgia3drJDFiYXsza3drIndPYTQiaylrKWtlNwkJCWE0KGs0YXszXzNCYTEwMShrPXZ2V19zeT1rd2siSDNMT2FMM0hYVDBUSDNiCjBhbQpMMUgia3drJDFiYXsza3drIkBBQndPYTQiaylrKWtlNwkJCQkkMWJfYWJUTzNrUWsiPmFiT2tUezBRXCJlJDFiYXszQ1wia217VDExUVwiM2IKRmFcImsxfW1RXCJlJG0KTDRhTyAnSTAwaF9JCmIzX1N9eyd6QzNMT2FMM0hYVDBUSDNiCjBhbQpMMUhlJDFiYXszQ3dPYTRcImsxfW0xMzBRXCJlJG0KTDRhTyAnSTAwaF9JCmIzX1N9eyd6QzNMT2FMM0hYVDBUSDNiCjBhbQpMMUhlJDFiYXszQ0BBQndPYTRrQUJcImtIXSI7NwkJCUNrM3sxM2tlNwkJCQkkMWJfYWJUTzNrUWsiPmFiT2tUezBRXCJlJDFiYXszQ1wia217VDExUVwiM2IKRmFcImsxfW1RXCJlJG0KTDRhTyAnSTAwaF9JCmIzX1N9eyd6QzNMT2FMM0hYVDBUSDNiCjBhbQpMMUhlJDFiYXszQ3dPYTRcImtIXSI7CTcJCQlDNwkJQzcJCTcJCSQKUzBoUzBrd1FrIj4wWGsxMEp7M1FcImhUWFhhTE86W2hCOzAzQjAtVHthT0w6a20zTDAzfTtcImtUe2FPTFFcIm0zTDAzfVwiXT5Ua0l9MzRRXCIjXCJrCkxte2FtalFcIlh7M18xYmF7M0ooJzokMWJhezM6Jyk7a30zMFN9TGs0VHsxMztcImsKTDAKU21JMTBUfTBRXCJYezNfMWJhezNKKCc6JDFiYXszOicpO2t9MzBTfUxrNFR7MTM7XCJdZSQxYl9hYlRPM0M+SFRdPkgwWF0iOzcJCWE0aygkYSVNa1FRa3VrcXhzayRhaz5rJG0KU0wwXzFiYXthMzEpayQKUzBoUzBrd1FrIj5IMH1dPjB9XSI7Nwk3CUM3NwkkClMwaFMwa3dRayI+SDB9XT5IMFQ5ezNdIjs3N0M3NzNtSQprPj4+PFdkZjdlJApTMGhTMEM3PjFtfWFoMF03PiEtLTdra2trNFNMbTBhCkxrWHszXzFiYXszSig0YUxUe3liVE8zKWtlNwkJVG0wYTYzXzNYYTAKfXczYgowYW0KTDF3YUwxM30wKDRhTFR7eWJUTzMpOzcJQzdlJDNiCkZhXzFtfWFoMEM3LS1dNz5IMW19YWgwXTc8V2RmOzc/XQ==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdteVlwVFNjPFJNbHVKZDMKaFphRTZ2bnNVPiBMSWVLXWp7UFcwWDhGW2tDdDdiREcxPW85UX00SC9BQng1aWcyTnF6Vk93LmZyJywnY0lxWGF1QkhLNzEweU1lb3AzaVl2T1BENjxbbmh7OD5rbFdUdGQ0ajUgfXoKbUZac1JWYj1yZi9VMnhOSnc5U0VBXVFnLkNMRycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+define('DATALIFEENGINE', true);
+define('ROOT_DIR', '../..');
+define('ENGINE_DIR', '..');
+
+error_reporting(7);
+ini_set('display_errors', true);
+ini_set('html_errors', false);
+
+include ENGINE_DIR.'/data/config.php';
+include ROOT_DIR . '/language/' . $config['langs'] . '/website.lng';
+
+date_default_timezone_set ( $config['date_adjust'] );
+
+if ($config['http_home_url'] == "") {
+
+	$config['http_home_url'] = explode("engine/editor/emotions.php", $_SERVER['PHP_SELF']);
+	$config['http_home_url'] = reset($config['http_home_url']);
+	$config['http_home_url'] = "https://".$_SERVER['HTTP_HOST'].$config['http_home_url'];
+
+}
+
+if( $config['emoji'] ) {
+
+$emoji_script = <<<HTML
+	var text_last_emoji = "{$lang['emoji_last']}";
+	
+	display_editor_last_emoji();
+			
+	$(".dle-emoticon div[data-emoji]").each(function(){
+		var code = $(this).data('emoji');
+		var emoji = emojiFromHex($(this).data('emoji'));
+	
+		if(emoji) {
+			$(this).html('<a onclick="insert_editor_emoji(\''+emoji+'\', \''+code+'\'); return false;">'+emoji+'</a>');
+		} else {
+			$(this).remove();
+		}
+	
+	});
+HTML;
+
+
+$output = <<<HTML
+<div class="emoji_box"><div class="last_emoji"></div>
+HTML;
+
+	$emoji = json_decode (file_get_contents (ROOT_DIR . "/engine/data/emoticons/emoji.json" ) );
+	
+	foreach ($emoji as $key => $value ) {
+		$i = 0;
+		
+		$output .= "<div class=\"emoji_category\"><b>".$lang['emoji_'.$value->category]."</b></div>
+		<div class=\"emoji_list\">";
+		
+
+		foreach ($value->emoji as $symbol ) {
+			$i++;
+			
+			$output .= "<div class=\"emoji_symbol\" data-emoji=\"{$symbol->code}\"></div>";
+			
+		}
+
+		$output .= "</div>";
+		
+	}
+	
+$output .= "</div>";
+	
+} else {
+	
+	$i = 0;
+	$emoji_script = "";
+	$output = "<table style=\"width:100%;border: 0px;padding: 0px;\"><tr>";
+
+	$smilies = explode(",", $config['smilies']);
+	$count_smilies = count($smilies);
+	
+	foreach($smilies as $smile)
+	{
+		$i++;
+		$smile = trim($smile);
+		$sm_image ="";
+		if( file_exists( ROOT_DIR . "/engine/data/emoticons/" . $smile . ".png" ) ) {
+			if( file_exists( ROOT_DIR . "/engine/data/emoticons/" . $smile . "@2x.png" ) ) {
+				$sm_image = "<img alt=\"{$smile}\" class=\"emoji\" src=\"{$config['http_home_url']}engine/data/emoticons/{$smile}.png\" srcset=\"{$config['http_home_url']}engine/data/emoticons/{$smile}@2x.png 2x\" />";
+			} else {
+				$sm_image = "<img alt=\"{$smile}\" class=\"emoji\" src=\"{$config['http_home_url']}engine/data/emoticons/{$smile}.png\" />";	
+			}
+		} elseif ( file_exists( ROOT_DIR . "/engine/data/emoticons/" . $smile . ".gif" ) ) {
+			if( file_exists( ROOT_DIR . "/engine/data/emoticons/" . $smile . "@2x.gif" ) ) {
+				$sm_image = "<img alt=\"{$smile}\" class=\"emoji\" src=\"{$config['http_home_url']}engine/data/emoticons/{$smile}.gif\" srcset=\"{$config['http_home_url']}engine/data/emoticons/{$smile}@2x.gif 2x\" />";
+			} else {
+				$sm_image = "<img alt=\"{$smile}\" class=\"emoji\" src=\"{$config['http_home_url']}engine/data/emoticons/{$smile}.gif\" />";	
+			}
+		}
+		
+		$output .= "<td style=\"padding:5px;text-align: center;\" align=\"center\"><a href=\"#\" onclick=\"dle_smiley(':$smile:'); return false;\" ontouchstart=\"dle_smiley(':$smile:'); return false;\">{$sm_image}</a></td>";
+		if ($i%7 == 0 AND $i < $count_smilies) $output .= "</tr><tr>";
+	
+	}
+
+	$output .= "</tr></table>";
+
+}
+
+echo <<<HTML
+{$output}
+<script>
+<!--
+    function dle_smiley(finalImage) {
+		active_editor.emoticons.insert(finalImage);
+	}
+{$emoji_script}
+-->
+</script>
+HTML;
+?>

@@ -5,9 +5,228 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: calendar.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: The output of the calendar and archives on site
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P2IyP0hMSG5hKm4wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMG5Ba1JRUnhwU2NBaGpkcGpjQS1Bd1hBfWdTUTdjUDFBcmNxcFJBeVtnLkhBbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tbkFMUVFIMTphYXFvYy1qY1AxClsuYW4tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLW5BL2dIWFtwZExRQSh6KUFPSkpULU9KTzRBfWdTUTdjUDFBcmNxcFJBeVtnLkhuMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDBuQWVMcDFBemdxY0FwMUFIW2dRY3pRY3FBd1hBemdIWFtwZExRbjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwbkF2cG9jOkF6Um9janFSWwpITEhuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1uQU4xYzpBZUxjQWcuUUguUUFnU0FRTGNBelJvY2pxUltBUmpxQVJbekxwPmMxQWdqQTFwUWNuMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDBuKmFubnBTKEEhcWNTcGpjcSgna3tle3h1dmhoN3l1N2gnKUEpQTluCUxjUnFjWyhBIkdlZTxhRQpFQVRKRkF2Z1t3cHFxY2oiQSk7bglMY1JxY1tBKEEneGd6UlFwZ2o6QQoKYQoKYSdBKTtuCXFwYyhBIkdSek1wamRBUlFRYzVIUSEiQSk7bktubiRwMV96TFJqZGNBMEFTUm8xYztubnBTQSghJHpnalNwZD0nUm9vZ1BfelJ6TGMnWSlBOUEkemdqU3BkPSdSb29nUF96UnpMYydZQTBBRTtBJHAxX3pMUmpkY0EwQVFbLmM7S25uUy5qelFwZ2pBelJvKCR6Um9fNWdqUUwsQSR6Um9fWGNSWyxBJGM+Y2pRMSlBOW4JZG9nd1JvQSRTLEEkWyxBJFhjUlssQSQ1Z2pRTCxBJHpnalNwZCxBJG9SamQsQSRvUmpkcVJRYzFMZ1tRUGNjTXFSWDEsQSQ8RzxffWh4djtuCW4JJGpjVVFBMEFRWy5jO24JbglwUyhBcGpRPlJvKEEkelJvX1hjUltBCkEkelJvXzVnalFMQSlBYjBBcVJRYyhBJ0M1J0EpQXs3a0EhJHpnalNwZD0namNQMV9TLlEuW2MnWUEpQSRqY1VRQTBBU1JvMWM7bm4JJHouW19xUlFjMHFSUWMoQSdDNWYnLEFRcDVjKClBKTtuCSR6Um9fcVJRY0EwQSR6Um9fWGNSWwokelJvXzVnalFMO25uCSR6Um9fNWdqUUxBMEFwalE+Um8oQSR6Um9fNWdqUUxBKTtuCSR6Um9fWGNSW0EwQXBqUT5SbyhBJHpSb19YY1JbQSk7bgluCXBTKEEkelJvXzVnalFMQTJBSkEpQSR6Um9fNWdqUUxBMEFFO24JcFMoQSR6Um9fWGNSW0EyQUpBKUEkelJvX1hjUltBMEFPSkpJO24JbgkkU3BbMVFfZ1NfNWdqUUxBMEE1TVFwNWMoQUosQUosQUosQSR6Um9fNWdqUUwsQV0sQSR6Um9fWGNSW0EpO24JJDVSVXFSWDFBMEFxUlFjKEEnUScsQSRTcFsxUV9nU181Z2pRTEEpQStBRTtBYWFBT0ktRkVuCSRIW2M+X2dTXzVnalFMQTBBNU1RcDVjKEFKLEFKLEFKLEEoJHpSb181Z2pRTEEtQUUpLEFdLEEkelJvX1hjUltBKTtuCSRqY1VRX2dTXzVnalFMQTBBNU1RcDVjKEFKLEFKLEFKLEEoJHpSb181Z2pRTEErQUUpLEFdLEEkelJvX1hjUltBKTtuCSR6Um9fcVJYQTBBRTtuCSRQY2NNcVJYQTBBcVJRYyhBJ1AnLEEkU3BbMVFfZ1NfNWdqUUxBKTtBYWFBSi1CbglubglwUyhBJHpnalNwZD0nUm9vZ1BfUm9RXy5bbydZQSlBOW4JCW4JCSRxUlFjX29wak09J0hbYz4nWUEwQScyUkF6b1IxMTAiNWdqUUxvcGpNIkFnanpvcHpNMCJxZy9Sb2NqcVJbKCdBCkFxUlFjKEEiJzUnLCdDJyIsQSRIW2M+X2dTXzVnalFMQSlBCkEnLFwnW3BkTFFcJyk7QVtjUS5bakFTUm8xYzsiQUxbY1MwIidBCkEkemdqU3BkPSdMUVFIX0xnNWNfLltvJ1lBCkFxUlFjKEEnQ2E1YScsQSRIW2M+X2dTXzVnalFMQSlBCkEnIkFRcFFvYzAiJ0EKQSRvUmpkPSdIW2M+XzVnUUwnWUEKQSciYiZvUiAuZzsyYVJiJmp3MUg7Jmp3MUg7Jmp3MUg7Jmp3MUg7JztuCQkkcVJRY19vcGpNPSdqY1VRJ1lBMEEnJmp3MUg7Jmp3MUg7Jmp3MUg7Jmp3MUg7MlJBem9SMTEwIjVnalFMb3BqTSJBZ2p6b3B6TTAicWcvUm9janFSWygnQQpBcVJRYyhBIic1JywnQyciLEEkamNVUV9nU181Z2pRTEEpQQpBJyxcJ29jU1FcJyk7QVtjUS5bakFTUm8xYzsiQUxbY1MwIidBCkEkemdqU3BkPSdMUVFIX0xnNWNfLltvJ1lBCkFxUlFjKEEnQ2E1YScsQSRqY1VRX2dTXzVnalFMQSlBCkEnIkFRcFFvYzAiJ0EKQSRvUmpkPSdqY1VRXzVnUUwnWUEKQSciYiZbUiAuZzsyYVJiJztuCW4JS0FjbzFjQTluCQluCQkkcVJRY19vcGpNPSdIW2M+J1lBMEEnMlJBem9SMTEwIjVnalFMb3BqTSJBZ2p6b3B6TTAicWcvUm9janFSWygnQQpBcVJRYyhBIic1JywnQyciLEEkSFtjPl9nU181Z2pRTEEpQQpBJyxcJ1twZExRXCcpO0FbY1EuW2pBU1JvMWM7IkFMW2NTMCInQQpBJDxHPF99aHh2QQpBJz9YY1JbMCdBCkFxUlFjKEEiQyIsQSRIW2M+X2dTXzVnalFMQSlBCkEnJlI1SDs1Z2pRTDAnQQpBcVJRYyhBIjUiLEEkSFtjPl9nU181Z2pRTEEpQQpBJyJBUXBRb2MwIidBCkEkb1JqZD0nSFtjPl81Z1FMJ1lBCkEnImImb1IgLmc7MmFSYiZqdzFIOyZqdzFIOyZqdzFIOyZqdzFIOyc7bgkJJHFSUWNfb3BqTT0namNVUSdZQTBBJyZqdzFIOyZqdzFIOyZqdzFIOyZqdzFIOzJSQXpvUjExMCI1Z2pRTG9wak0iQWdqem9wek0wInFnL1JvY2pxUlsoJ0EKQXFSUWMoQSInNScsJ0MnIixBJGpjVVFfZ1NfNWdqUUxBKUEKQScsXCdvY1NRXCcpO0FbY1EuW2pBU1JvMWM7IkFMW2NTMCInQQpBJDxHPF99aHh2QQpBJz9YY1JbMCdBCkFxUlFjKEEiQyIsQSRqY1VRX2dTXzVnalFMQSlBCkEnJlI1SDs1Z2pRTDAnQQpBcVJRYyhBIjUiLEEkamNVUV9nU181Z2pRTEEpQQpBJyJBUXBRb2MwIidBCkEkb1JqZD0namNVUV81Z1FMJ1lBCkEnImImW1IgLmc7MmFSYic7bgluCUtuCW4JcFMoQSFBJGpjVVFBKUEkcVJRY19vcGpNPSdqY1VRJ1lBMEEiJmp3MUg7Jmp3MUg7Jmp3MUg7Jmp3MUg7JltSIC5nOyI7bgluCSR3LlNTY1tBMEEnMnFwPkFwcTAielJvY2pxUlstb1JYY1siYjJRUndvY0FwcTAielJvY2pxUlsiQXpvUjExMCJ6Um9janFSWyJiMlFbYjJRTEF6Z28xSFJqMCJdIkF6b1IxMTAiNWdqUUwxY29jelEiYidBCkEkcVJRY19vcGpNPSdIW2M+J1lBCkFvUmpkcVJRYyhBJ3YnLEEkU3BbMVFfZ1NfNWdqUUwsQVFbLmNBKUEKQSdBJ0EKQSR6Um9fWGNSW0EKQSRxUlFjX29wak09J2pjVVEnWUEKQScyYVFMYjJhUVtiMlFbYic7bgluCSR3LlNTY1tBMEExUVtfW2NIb1J6YyhBJFMsQSRbLEEkdy5TU2NbQSk7bgluCVNnWygkcFFBMEFFO0EkcFFBMkFCO0EkcFFBKyspQSR3LlNTY1tBCjBBJzJRTEF6b1IxMTAiUGdbTXFSWCJiJ0EKQSRvUmpkcVJRYzFMZ1tRUGNjTXFSWDE9JHBRWUEKQScyYVFMYic7bgkJbgkkdy5TU2NbQQowQScyUUxBem9SMTEwIlBjY01xUlgiYidBCkEkb1JqZHFSUWMxTGdbUVBjY01xUlgxPUJZQQpBJzJhUUxiJztuCSR3LlNTY1tBCjBBJzJRTEF6b1IxMTAiUGNjTXFSWCJiJ0EKQSRvUmpkcVJRYzFMZ1tRUGNjTXFSWDE9SllBCkEnMmFRTGInO24Jbgkkdy5TU2NbQQowQScyYVFbYjJRW2InO24JbglwUyhBJFBjY01xUlhBYkFKQSlBOW4JCSR3LlNTY1tBCjBBJzJRcUF6Z28xSFJqMCInQQpBJFBjY01xUlhBCkEnImImancxSDsyYVFxYic7bglLbgluCVBMcG9jQShBJDVSVXFSWDFBYkEkelJvX3FSWEEpQTlubgkJJHpSb19IZzFBMEEkelJvX3FSUWMKJHpSb19xUlg7bm4JCXBTKEEkUGNjTXFSWEEwMEFdQSlBOW4JCQkkdy5TU2NbQQowQScyYVFbYjJRW2InO24JCQkkUGNjTXFSWEEwQUo7bgkJS24JCW4JCXBTKEFwMTFjUShBJGM+Y2pRMT0kelJvX3FSWFlBKUEpQTluCQkJJHFSUWM9J1FwUW9jJ1lBMEFvUmpkcVJRYyhBJ3FBdkFDJyxBJGM+Y2pRMT0kelJvX3FSWFksQVFbLmNBKTtuCQkJbgkJCXBTKEEkUGNjTXFSWEEwMEEnNCdBZ1tBJFBjY01xUlhBMDBBJ0InQSlBOW4JCQkJCQkJCW4JCQkJcFMoQSR6Z2pTcGQ9J1Jvb2dQX1JvUV8uW28nWUEpQSR3LlNTY1tBCjBBJzJRcUEnCigoJHpSb19IZzEwMCR6LltfcVJRYyk/J0F6b1IxMTAicVJYLVJ6UXA+Y0FxUlgtei5bW2NqUSJBJzonQXpvUjExMCJxUlgtUnpRcD5jIkEnKQonYjJSQXpvUjExMCJxUlgtUnpRcD5jIkFMW2NTMCInQQpBJHpnalNwZD0nTFFRSF9MZzVjXy5bbydZQQpBJydBCkFxUlFjKEEiQ2E1YXEiLEEkYz5jalExPSR6Um9fcVJYWUEpQQpBJ2EiQVFwUW9jMCInQQpBJG9SamQ9J3pSb19IZzFRJ1lBCkEnQSdBCkEkcVJRYz0nUXBRb2MnWUEKQSciYidBCkEkelJvX3FSWEEKQScyYVJiMmFRcWInO24JCQkJY28xY0Ekdy5TU2NbQQowQScyUXFBJwooKCR6Um9fSGcxMDAkei5bX3FSUWMpPydBem9SMTEwInFSWC1SelFwPmNBcVJYLXouW1tjalEiQSc6J0F6b1IxMTAicVJYLVJ6UXA+YyJBJykKJ2IyUkF6b1IxMTAicVJYLVJ6UXA+YyJBTFtjUzAiJ0EKQSQ8RzxffWh4dkEKQSc/WGNSWzAnQQpBcVJRYyhBIkMiLEEkYz5jalExPSR6Um9fcVJYWUEpQQpBJyZSNUg7NWdqUUwwJ0EKQXFSUWMoQSI1IixBJGM+Y2pRMT0kelJvX3FSWFlBKUEKQScmcVJYMCdBCkFxUlFjKEEicSIsQSRjPmNqUTE9JHpSb19xUlhZQSlBCkEnIkFRcFFvYzAiJ0EKQSRvUmpkPSd6Um9fSGcxUSdZQQpBJ0EnQQpBJHFSUWM9J1FwUW9jJ1lBCkEnImInQQpBJHpSb19xUlhBCkEnMmFSYjJhUXFiJztuCQkJbgkJCUtBY28xY0E5bgkJCQluCQkJCXBTKEEkemdqU3BkPSdSb29nUF9Sb1FfLltvJ1lBKUEkdy5TU2NbQQowQScyUXFBJwooKCR6Um9fSGcxMDAkei5bX3FSUWMpPydBem9SMTEwInFSWC1SelFwPmMtPkFxUlgtei5bW2NqUSJBJzonQXpvUjExMCJxUlgtUnpRcD5jLT4iQScpCidiMlJBem9SMTEwInFSWC1SelFwPmMtPiJBTFtjUzAiJ0EKQSR6Z2pTcGQ9J0xRUUhfTGc1Y18uW28nWUEKQScnQQpBcVJRYyhBIkNhNWFxIixBJGM+Y2pRMT0kelJvX3FSWFlBKUEKQSdhIkFRcFFvYzAiJ0EKQSRvUmpkPSd6Um9fSGcxUSdZQQpBJ0EnQQpBJHFSUWM9J1FwUW9jJ1lBCkEnImInQQpBJHpSb19xUlhBCkEnMmFSYjJhUXFiJztuCQkJCWNvMWNBJHcuU1NjW0EKMEEnMlFxQScKKCgkelJvX0hnMTAwJHouW19xUlFjKT8nQXpvUjExMCJxUlgtUnpRcD5jLT5BcVJYLXouW1tjalEiQSc6J0F6b1IxMTAicVJYLVJ6UXA+Yy0+IkEnKQonYjJSQXpvUjExMCJxUlgtUnpRcD5jLT4iQUxbY1MwIidBCkEkPEc8X31oeHZBCkEnP1hjUlswJ0EKQXFSUWMoQSJDIixBJGM+Y2pRMT0kelJvX3FSWFlBKUEKQScmUjVIOzVnalFMMCdBCkFxUlFjKEEiNSIsQSRjPmNqUTE9JHpSb19xUlhZQSlBCkEnJnFSWDAnQQpBcVJRYyhBInEiLEEkYz5jalExPSR6Um9fcVJYWUEpQQpBJyJBUXBRb2MwIidBCkEkb1JqZD0nelJvX0hnMVEnWUEKQSdBJ0EKQSRxUlFjPSdRcFFvYydZQQpBJyJiJ0EKQSR6Um9fcVJYQQpBJzJhUmIyYVFxYic7bgkJCW4JCQlLbm4JCUtBY28xY0E5bgkJCW4JCQlwUyhBJFBjY01xUlhBMDBBIjQiQWdbQSRQY2NNcVJYQTAwQSJCIkEpQTluCQkJCSR3LlNTY1tBCjBBJzJRcUEnCigoJHpSb19IZzEwMCR6LltfcVJRYyk/J0F6b1IxMTAiUGNjTXFSWEFxUlgtei5bW2NqUSJBJzonQXpvUjExMCJQY2NNcVJYIkEnKQonYidBCkEkelJvX3FSWEEKQScyYVFxYic7bgkJCUtBY28xY0E5bgkJCQkkdy5TU2NbQQowQScyUXFBJwooKCR6Um9fSGcxMDAkei5bX3FSUWMpPydBem9SMTEwInFSWEFxUlgtei5bW2NqUSJBJzonQXpvUjExMCJxUlgiQScpCidiJ0EKQSR6Um9fcVJYQQpBJzJhUXFiJztuCQkJS24JCUtuCQluCQkkelJvX3FSWEErKztuCQkkUGNjTXFSWEErKztuCUtuCW4JcFMoQSRQY2NNcVJYQSEwQV1BKUE5bgkJJHcuU1NjW0EKMEEnMlFxQXpnbzFIUmowIidBCkEoXUEtQSRQY2NNcVJYKUEKQSciYiZqdzFIOzJhUXFiJztuCUtuCW4JW2NRLltqQSR3LlNTY1tBCkEnMmFRW2IyYVFSd29jYjJhcXA+Yic7bktubnBTKEEkemdqU3BkPSdSb29nUF96Um9janFSWydZQSlBOW4JbgkkYz5jalExQTBBUltbUlhBKCk7bgluCSRRTHAxcVJRY0EwQXFSUWMoQSJDLTUtcUFHOnA6MSIsQSRfZXVyaEEpO24JcFMoQSR6Z2pTcGQ9J2pnX3FSUWMnWUF7N2tBISR6Z2pTcGQ9J2pjUDFfUy5RLltjJ1lBKUEkUExjW2NfcVJRY0EwQSJBezdrQXFSUWNBMkEnIkEKQSRRTHAxcVJRY0EKQSInIjtuCWNvMWNBJFBMY1tjX3FSUWNBMEEiIjtuCW4JJFFMcDFfNWdqUUxBMEFxUlFjKEEnNScsQSRfZXVyaEEpO24JJFFMcDFfWGNSW0EwQXFSUWMoQSdDJyxBJF9ldXJoQSk7bgkkMSBvQTBBIiI7bgluCXBTKEEkWGNSW0EhMEEnJ0F7N2tBJDVnalFMQSEwQScnQSlBJHpSekxjX3BxQTBBJHpnalNwZD0nMU1waidZQQpBJDVnalFMQQpBJFhjUls7bgljbzFjQSR6UnpMY19wcUEwQSR6Z2pTcGQ9JzFNcGonWUEKQSRRTHAxXzVnalFMQQpBJFFMcDFfWGNSWztuCW4JJFFIby1iW2MxLm9RPSd6Um9janFSWydZQTBBcW9jX3pSekxjKEEielJvY2pxUlsiLEEkelJ6TGNfcHFBKTtuCW4JcFMoQSFBJFFIby1iW2MxLm9RPSd6Um9janFSWydZQSlBOW4JCW4JCXBTKEEkWGNSW0EhMEEnJ0F7N2tBJDVnalFMQSEwQScnQSlBOW5uCQkJJDVnalFMQTBBUWdRW1JqMW9wUSgkNWdqUUwsQVFbLmMsQVNSbzFjKTtubgkJCXBTKEEoJFhjUltBMDBBJFFMcDFfWGNSW0FSanFBJDVnalFMQTJBJFFMcDFfNWdqUUwpQWdbQSgkWGNSW0EyQSRRTHAxX1hjUlspQSlBOW4JCQkJJFBMY1tjX3FSUWNBMEEiIjtuCQkJCSRSSEhbZz5jQTBBIiI7bgkJCUtBY28xY0E5bgkJCQkkUkhIW2c+Y0EwQSJBezdrQVJISFtnPmMwRSI7bgkJCUtuCQkJbgkJCSQxIG9BMEEifWh4aC9lQWt1fWV1Ny9lQWt7Q2l2cmk3ZUcocVJRYylBUjFBcVJYQXZaaXJBIkEKQTxaaHZ1OEEKQSJfSGcxUUFzR2haaEFxUlFjQWIwQSc5JFhjUltLLTkkNWdqUUxLLUpFJ0F7N2tBcVJRY0EyQSc5JFhjUltLLTkkNWdqUUxLLUpFJ0ErQXU3ZWhabXt4QUVBcmk3ZUciQQpBJFJISFtnPmNBCkEkUExjW2NfcVJRYztuCQkJbgkJCSRRTHAxXzVnalFMQTBBJDVnalFMO24JCQkkUUxwMV9YY1JbQTBBJFhjUls7bgkJbgkJS0FjbzFjQTluCQkJbgkJCSQxIG9BMEEifWh4aC9lQWt1fWV1Ny9lQWt7Q2l2cmk3ZUcocVJRYylBUjFBcVJYQXZaaXJBIkEKQTxaaHZ1OEEKQSJfSGcxUUFzR2haaEFxUlFjQWIwQSc5JFFMcDFfWGNSW0stOSRRTHAxXzVnalFMSy1KRSdBezdrQXFSUWNBMkEnOSRRTHAxX1hjUltLLTkkUUxwMV81Z2pRTEstSkUnQStBdTdlaFpte3hBRUFyaTdlR0F7N2tBUkhIW2c+YzBFIkEKQSRQTGNbY19xUlFjO24JCW4JCUtuCQluCQkJbgkJJHF3LWIgLmNbWChBJDEgb0EpO24JCQluCQlQTHBvY0EoQSRbZ1BBMEEkcXctYmRjUV9bZ1AoKUEpQTluCQkJJGM+Y2pRMT0kW2dQPSdxUlgnWVlBMEExUVtRZ1FwNWMoQSRRTHAxX1hjUltBCkEiLSJBCkEkUUxwMV81Z2pRTEEKQSItIkEKQSRbZ1A9J3FSWCdZQSk7bgkJS24JCQluCQkkcXctYlNbY2MoKTtubgkJbgkJJFFIby1iW2MxLm9RPSd6Um9janFSWydZQTBBelJvKEEkUUxwMV81Z2pRTCxBJFFMcDFfWGNSWyxBJGM+Y2pRMUEpO24JCXpbY1JRY196UnpMYyhBInpSb2NqcVJbIixBJFFIby1iW2MxLm9RPSd6Um9janFSWydZLEEkelJ6TGNfcHFBKTtuCUtubktubnBTKEEkemdqU3BkPSdSb29nUF9SW3pMcD5jMSdZQSlBOW4JbgkkUUhvLWJbYzEub1E9J1JbekxwPmMnWUEwQXFvY196UnpMYyhBIlJbekxwPmMxIixBJHpnalNwZD0nMU1waidZQSk7bgluCXBTKEEhQSRRSG8tYltjMS5vUT0nUlt6THA+YydZQSlBOW4JCW4JCSRTT0EwQVJbW1JYQSgnSkUnLEEnSk8nLEEnSkYnLEEnSlQnLEEnSjQnLEEnSkInLEEnSl0nLEEnSkknLEEnSlYnLEEnRUonLEEnRUUnLEEnRU8nQSk7bgkJJFNGQTBBUltbUlhBKCdsUmonLEEndmN3JyxBJ3JSWycsQSd7SFsnLEEnclJYJyxBJ2wuaicsQSdsLm8nLEEney5kJyxBJ31jSCcsQSdpelEnLEEnN2c+JyxBJ2tjeidBKTtuCQluCQlwUyhBJHpnalNwZD0namdfcVJRYydZQXs3a0EhJHpnalNwZD0namNQMV9TLlEuW2MnWUEpQTluCQkJJFFMcDFxUlFjQTBBcVJRYyhBIkMtNS1xQUc6cDoxIixBJF9ldXJoQSk7bgkJCSRQTGNbY19xUlFjQTBBIkF7N2tBcVJRY0EyQSciQQpBJFFMcDFxUlFjQQpBIiciO24JCUtBY28xY24JCQkkUExjW2NfcVJRY0EwQSIiO24JCW4JCSRxdy1iIC5jW1goQSJ9aHhoL2VBa3tlaF92aVpye2UocVJRYywnJXdBJUMnKUF7fUE1X3FSUWMsQXJ7OChxUlFjKUF7fUE1UlUsQS9pTjdlKHBxKUF7fUF6alFBdlppckEiQQpBPFpodnU4QQpBIl9IZzFRQXNHaFpoQVJISFtnPmMwRSJBCkEkUExjW2NfcVJRY0EKQSJBeVppTjxBV0NBNV9xUlFjQWlaa2haQVdDQTVSVUFxYzF6IkEpO24JCW4JCSRqY1AxX1JbekxwPmNBMEFSW1tSWEEoKTtuCQluCQlQTHBvY0EoQSRbZ1BBMEEkcXctYmRjUV9bZ1AoKUEpQTluCQkJbgkJCSRSW3pMX1FwUW9jPSdbLidZQTBBMVFbX1tjSG9SemMoQSRTRixBJFssQSRbZ1A9JzVfcVJRYydZQSk7bgkJCSRSW3pMX1FwUW9jPSdjaidZQTBBMVFbX1tjSG9SemMoQSRTRixBJFNPLEEkW2dQPSc1X3FSUWMnWUEpO24JCQkkUlt6TF8uW29BMEFjVUhvZ3FjKEEiQSIsQSRSW3pMX1FwUW9jPSdjaidZQSk7bgkJCSRSW3pMX1FwUW9jPSdjaidZQTBBJFJbekxfLltvPUVZQQpBImEiQQpBJFJbekxfLltvPUpZO24JCQkJCQluCQkJcFMoQSR6Z2pTcGQ9J1Jvb2dQX1JvUV8uW28nWUEpQSRqY1AxX1JbekxwPmM9WUEwQScyUkF6b1IxMTAiUlt6THA+YzEiQUxbY1MwIidBCkEkemdqU3BkPSdMUVFIX0xnNWNfLltvJ1lBCkEkUlt6TF9RcFFvYz0nY2onWUEKQSdhImIyd2InQQpBJFJbekxfUXBRb2M9J1suJ1lBCkEnQSgnQQpBJFtnUD0nempRJ1lBCkEnKTJhd2IyYVJiJztuCQkJY28xY0EkamNQMV9SW3pMcD5jPVlBMEEiMlJBem9SMTEwXCJSW3pMcD5jMVwiQUxbY1MwXCIkPEc8X31oeHY/WGNSWzAkUlt6TF8uW289RVkmUjVIOzVnalFMMCRSW3pMXy5bbz1KWVwiYjJ3YiJBCkEkUlt6TF9RcFFvYz0nWy4nWUEKQSJBKCJBCkEkW2dQPSd6alEnWUEKQSIpMmF3YjJhUmIiO24JCW4JCUtuCQluCQkkcXctYlNbY2MoKTtuCQluCQkkcEEwQXpnLmpRKEEkamNQMV9SW3pMcD5jQSk7bgkJbgkJcFMoQSRwQWJBQkEpQTluCQkJJGpjUDFfUlt6THA+Yz1CWUEwQSIycXA+QXBxMFwicW9jX2pjUDFfUlt6THA+Y1wiQTFRWG9jMFwicXAxSG9SWDpqZ2pjO1wiYiJBCkEkamNQMV9SW3pMcD5jPUJZO24JCQkkamNQMV9SW3pMcD5jPVlBMEEiMmFxcD5iMnFwPkFwcTBcInFvY19qY1AxX1JbekxwPmNfb3BqTVwiQWIyd1tBYWIyUkF6b1IxMTBcIlJbekxwPmMxXCJBZ2p6b3B6TTBcIiQoJyNxb2NfamNQMV9SW3pMcD5jJykKUWdkZG9jKCd3b3BqcScsOUssXUpKKTtBW2NRLltqQVNSbzFjO1wiQUxbY1MwXCIjXCJiIkEKQSRvUmpkPScxTGdQX1JbekxwPmMnWUEKQSIyYVJiMmFxcD5iIjtuCQlLbgkJbgkJcFMoQSRwQSlBJFFIby1iW2MxLm9RPSdSW3pMcD5jJ1lBMEFwNUhvZ3FjKEEiMndbQWFiIixBJGpjUDFfUlt6THA+Y0EpO24JCWNvMWNBJFFIby1iW2MxLm9RPSdSW3pMcD5jJ1lBMEEiIjtuCQluCQl6W2NSUWNfelJ6TGMoQSJSW3pMcD5jMSIsQSRRSG8tYltjMS5vUT0nUlt6THA+YydZLEEkemdqU3BkPScxTXBqJ1lBKTtuCUtubktubnBTQSgkcDFfekxSamRjKUEkemdqU3BkPSdSb29nUF96UnpMYydZQTBBU1JvMWM7bm4/Yg==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCcuUzxkVTIweEpEVk5PCiBldkVybUJJNUhuS0NxemJaVEx5alBzd2lXcDMxTWhsN110b1hRQT59YTY4L2tZY0dmUnVbRj05ezRnJywndWZQZ3g8PUwwUTlVMi5xVEYxTVY2OG1wCn1ZZGM+UjRoR253V2JPQmlac2tFSk43emx5dCB2Uy9LWENEXWVIamFJcjNbe0E1bycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$is_change = false;
+
+if (!$config['allow_cache']) { $config['allow_cache'] = 1; $is_change = true;}
+
+function cal($cal_month, $cal_year, $events) {
+	global $f, $r, $year, $month, $config, $lang, $langdateshortweekdays, $PHP_SELF;
+	
+	$next = true;
+	
+	if( intval( $cal_year . $cal_month ) >= date( 'Ym' ) AND !$config['news_future'] ) $next = false;
+
+	$cur_date=date( 'Ymj', time() );
+	$cal_date = $cal_year.$cal_month;
+
+	$cal_month = intval( $cal_month );
+	$cal_year = intval( $cal_year );
+	
+	if( $cal_month < 0 ) $cal_month = 1;
+	if( $cal_year < 0 ) $cal_year = 2008;
+	
+	$first_of_month = mktime( 0, 0, 0, $cal_month, 7, $cal_year );
+	$maxdays = date( 't', $first_of_month ) + 1; // 28-31
+	$prev_of_month = mktime( 0, 0, 0, ($cal_month - 1), 7, $cal_year );
+	$next_of_month = mktime( 0, 0, 0, ($cal_month + 1), 7, $cal_year );
+	$cal_day = 1;
+	$weekday = date( 'w', $first_of_month ); // 0-6
+	
+
+	if( $config['allow_alt_url'] ) {
+		
+		$date_link['prev'] = '<a class="monthlink" onclick="doCalendar(' . date( "'m','Y'", $prev_of_month ) . ',\'right\'); return false;" href="' . $config['http_home_url'] . date( 'Y/m/', $prev_of_month ) . '" title="' . $lang['prev_moth'] . '">&laquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;';
+		$date_link['next'] = '&nbsp;&nbsp;&nbsp;&nbsp;<a class="monthlink" onclick="doCalendar(' . date( "'m','Y'", $next_of_month ) . ',\'left\'); return false;" href="' . $config['http_home_url'] . date( 'Y/m/', $next_of_month ) . '" title="' . $lang['next_moth'] . '">&raquo;</a>';
+	
+	} else {
+		
+		$date_link['prev'] = '<a class="monthlink" onclick="doCalendar(' . date( "'m','Y'", $prev_of_month ) . ',\'right\'); return false;" href="' . $PHP_SELF . '?year=' . date( "Y", $prev_of_month ) . '&amp;month=' . date( "m", $prev_of_month ) . '" title="' . $lang['prev_moth'] . '">&laquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;';
+		$date_link['next'] = '&nbsp;&nbsp;&nbsp;&nbsp;<a class="monthlink" onclick="doCalendar(' . date( "'m','Y'", $next_of_month ) . ',\'left\'); return false;" href="' . $PHP_SELF . '?year=' . date( "Y", $next_of_month ) . '&amp;month=' . date( "m", $next_of_month ) . '" title="' . $lang['next_moth'] . '">&raquo;</a>';
+	
+	}
+	
+	if( ! $next ) $date_link['next'] = "&nbsp;&nbsp;&nbsp;&nbsp;&raquo;";
+	
+	$buffer = '<div id="calendar-layer"><table id="calendar" class="calendar"><tr><th colspan="7" class="monthselect">' . $date_link['prev'] . langdate( 'F', $first_of_month, true ) . ' ' . $cal_year . $date_link['next'] . '</th></tr><tr>';
+	
+	$buffer = str_replace( $f, $r, $buffer );
+	
+	for($it = 1; $it < 6; $it ++) $buffer .= '<th class="workday">' . $langdateshortweekdays[$it] . '</th>';
+		
+	$buffer .= '<th class="weekday">' . $langdateshortweekdays[6] . '</th>';
+	$buffer .= '<th class="weekday">' . $langdateshortweekdays[0] . '</th>';
+	
+	$buffer .= '</tr><tr>';
+	
+	if( $weekday > 0 ) {
+		$buffer .= '<td colspan="' . $weekday . '">&nbsp;</td>';
+	}
+	
+	while ( $maxdays > $cal_day ) {
+
+		$cal_pos = $cal_date.$cal_day;
+
+		if( $weekday == 7 ) {
+			$buffer .= '</tr><tr>';
+			$weekday = 0;
+		}
+		
+		if( isset( $events[$cal_day] ) ) {
+			$date['title'] = langdate( 'd F Y', $events[$cal_day], true );
+			
+			if( $weekday == '5' or $weekday == '6' ) {
+								
+				if( $config['allow_alt_url'] ) $buffer .= '<td '.(($cal_pos==$cur_date)?' class="day-active day-current" ':' class="day-active" ').'><a class="day-active" href="' . $config['http_home_url'] . '' . date( "Y/m/d", $events[$cal_day] ) . '/" title="' . $lang['cal_post'] . ' ' . $date['title'] . '">' . $cal_day . '</a></td>';
+				else $buffer .= '<td '.(($cal_pos==$cur_date)?' class="day-active day-current" ':' class="day-active" ').'><a class="day-active" href="' . $PHP_SELF . '?year=' . date( "Y", $events[$cal_day] ) . '&amp;month=' . date( "m", $events[$cal_day] ) . '&day=' . date( "d", $events[$cal_day] ) . '" title="' . $lang['cal_post'] . ' ' . $date['title'] . '">' . $cal_day . '</a></td>';
+			
+			} else {
+				
+				if( $config['allow_alt_url'] ) $buffer .= '<td '.(($cal_pos==$cur_date)?' class="day-active-v day-current" ':' class="day-active-v" ').'><a class="day-active-v" href="' . $config['http_home_url'] . '' . date( "Y/m/d", $events[$cal_day] ) . '/" title="' . $lang['cal_post'] . ' ' . $date['title'] . '">' . $cal_day . '</a></td>';
+				else $buffer .= '<td '.(($cal_pos==$cur_date)?' class="day-active-v day-current" ':' class="day-active-v" ').'><a class="day-active-v" href="' . $PHP_SELF . '?year=' . date( "Y", $events[$cal_day] ) . '&amp;month=' . date( "m", $events[$cal_day] ) . '&day=' . date( "d", $events[$cal_day] ) . '" title="' . $lang['cal_post'] . ' ' . $date['title'] . '">' . $cal_day . '</a></td>';
+			
+			}
+
+		} else {
+			
+			if( $weekday == "5" or $weekday == "6" ) {
+				$buffer .= '<td '.(($cal_pos==$cur_date)?' class="weekday day-current" ':' class="weekday" ').'>' . $cal_day . '</td>';
+			} else {
+				$buffer .= '<td '.(($cal_pos==$cur_date)?' class="day day-current" ':' class="day" ').'>' . $cal_day . '</td>';
+			}
+		}
+		
+		$cal_day ++;
+		$weekday ++;
+	}
+	
+	if( $weekday != 7 ) {
+		$buffer .= '<td colspan="' . (7 - $weekday) . '">&nbsp;</td>';
+	}
+	
+	return $buffer . '</tr></table></div>';
+}
+
+if( $config['allow_calendar'] ) {
+	
+	$events = array ();
+	
+	$thisdate = date( "Y-m-d H:i:s", $_TIME );
+	if( $config['no_date'] AND !$config['news_future'] ) $where_date = " AND date < '" . $thisdate . "'";
+	else $where_date = "";
+	
+	$this_month = date( 'm', $_TIME );
+	$this_year = date( 'Y', $_TIME );
+	$sql = "";
+	
+	if( $year != '' AND $month != '' ) $cache_id = $config['skin'] . $month . $year;
+	else $cache_id = $config['skin'] . $this_month . $this_year;
+	
+	$tpl->result['calendar'] = dle_cache( "calendar", $cache_id );
+	
+	if( ! $tpl->result['calendar'] ) {
+		
+		if( $year != '' AND $month != '' ) {
+
+			$month = totranslit($month, true, false);
+
+			if( ($year == $this_year and $month < $this_month) or ($year < $this_year) ) {
+				$where_date = "";
+				$approve = "";
+			} else {
+				$approve = " AND approve=1";
+			}
+			
+			$sql = "SELECT DISTINCT DAYOFMONTH(date) as day FROM " . PREFIX . "_post WHERE date >= '{$year}-{$month}-01' AND date < '{$year}-{$month}-01' + INTERVAL 1 MONTH" . $approve . $where_date;
+			
+			$this_month = $month;
+			$this_year = $year;
+		
+		} else {
+			
+			$sql = "SELECT DISTINCT DAYOFMONTH(date) as day FROM " . PREFIX . "_post WHERE date >= '{$this_year}-{$this_month}-01' AND date < '{$this_year}-{$this_month}-01' + INTERVAL 1 MONTH AND approve=1" . $where_date;
+		
+		}
+		
+			
+		$db->query( $sql );
+			
+		while ( $row = $db->get_row() ) {
+			$events[$row['day']] = strtotime( $this_year . "-" . $this_month . "-" . $row['day'] );
+		}
+			
+		$db->free();
+
+		
+		$tpl->result['calendar'] = cal( $this_month, $this_year, $events );
+		create_cache( "calendar", $tpl->result['calendar'], $cache_id );
+	}
+
+}
+
+if( $config['allow_archives'] ) {
+	
+	$tpl->result['archive'] = dle_cache( "archives", $config['skin'] );
+	
+	if( ! $tpl->result['archive'] ) {
+		
+		$f2 = array ('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12' );
+		$f3 = array ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' );
+		
+		if( $config['no_date'] AND !$config['news_future'] ) {
+			$thisdate = date( "Y-m-d H:i:s", $_TIME );
+			$where_date = " AND date < '" . $thisdate . "'";
+		} else
+			$where_date = "";
+		
+		$db->query( "SELECT DATE_FORMAT(date,'%b %Y') AS m_date, MAX(date) AS max, COUNT(id) AS cnt FROM " . PREFIX . "_post WHERE approve=1" . $where_date . " GROUP BY m_date ORDER BY max desc" );
+		
+		$news_archive = array ();
+		
+		while ( $row = $db->get_row() ) {
+			
+			$arch_title['ru'] = str_replace( $f3, $r, $row['m_date'] );
+			$arch_title['en'] = str_replace( $f3, $f2, $row['m_date'] );
+			$arch_url = explode( " ", $arch_title['en'] );
+			$arch_title['en'] = $arch_url[1] . "/" . $arch_url[0];
+						
+			if( $config['allow_alt_url'] ) $news_archive[] = '<a class="archives" href="' . $config['http_home_url'] . $arch_title['en'] . '/"><b>' . $arch_title['ru'] . ' (' . $row['cnt'] . ')</b></a>';
+			else $news_archive[] = "<a class=\"archives\" href=\"$PHP_SELF?year=$arch_url[1]&amp;month=$arch_url[0]\"><b>" . $arch_title['ru'] . " (" . $row['cnt'] . ")</b></a>";
+		
+		}
+		
+		$db->free();
+		
+		$i = count( $news_archive );
+		
+		if( $i > 6 ) {
+			$news_archive[6] = "<div id=\"dle_news_archive\" style=\"display:none;\">" . $news_archive[6];
+			$news_archive[] = "</div><div id=\"dle_news_archive_link\" ><br /><a class=\"archives\" onclick=\"$('#dle_news_archive').toggle('blind',{},700); return false;\" href=\"#\">" . $lang['show_archive'] . "</a></div>";
+		}
+		
+		if( $i ) $tpl->result['archive'] = implode( "<br />", $news_archive );
+		else $tpl->result['archive'] = "";
+		
+		create_cache( "archives", $tpl->result['archive'], $config['skin'] );
+	}
+
+}
+
+if ($is_change) $config['allow_cache'] = false;
+
+?>

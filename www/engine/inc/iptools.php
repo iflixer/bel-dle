@@ -5,9 +5,285 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: iptools.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Search by IP
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PzxxP2tma089Kk9jY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY09nXXgyeDBVPmJnIFdwVVdiZy1nbjRnbEo+MkFiaX1nMWJhVXhndEVKUmtnTy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tT2dmMjJrfTo9PWFvYi1XYml9M0VSPU8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLU9ne0prNEVVcGYyZyg3KWd1ZGRyLXVkdVBnbEo+MkFiaX1nMWJhVXhndEVKUmtPY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NPZy5mVX1nN0phYmdVfWdrRUoyYjcyYmFnbjRnN0prNEVVcGYyT2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjT2dUVW9iOmdVazJKSm99M2tma08tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLU9nCn1iOmdsYnhFN2ZnbjRnWzlPY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NPKj1PVT4oZyFhYj5VV2JhKGcnXU0uTTBbVCAgQXRbQSAnZylnL1FnIWFiPlVXYmEoZycwL3R0IF1fW0EnZylnKWc4TwlmYnhhYkUoZyJ6Li45PUszS2dyZExnVEpFblVhYWJXImcpO08JZmJ4YWJFZyhnJzBKN3gyVUpXOmczMz0zMz0nZyk7TwlhVWIoZyJ6eDdIVVdwZ3gyMmJCazIhImcpO092T09VPihnIWckUn1iRV9wRUpSa2okQmJCbmJFX1VhaidSfWJFX3BFSlJrJ0REaid4YUJVV19VazJKSm99J0RnKWc4TwlCfXAoZyJiRUVKRSIsZyRveFdwaidVV2FiSV9hYldVYmEnRCxnJG94V3BqJ1VXYWJJX2FiV1ViYSdEZyk7T3ZPT1U+KGdVfX1iMihnJF9RIGUKIGwuaidVaydEZylnKWckVWtnY2ckYW4tPH14PmJ9eW8oZ2YyQm99a2I3VXhvN2Z4RX0oZ30yRVVrXzJ4cH0oZzJFVUIoZyRfUSBlCiBsLmonVWsnRGcpZylnKWcpO2dib31iZyRVa2djZyIiO09VPihnVX19YjIoZyRfUSBlCiBsLmonV3hCYidEZylnKWckV3hCYmdjZyRhbi08fXg+Yn15byhnZjJCb31rYjdVeG83ZnhFfShnfTJFVWtfMnhwfShnMkVVQihnJF9RIGUKIGwuaidXeEJiJ0RnKWcpLGcgQS5fZQovLiBsLGcnCi5ULXcnZylnKTtnYm99YmckV3hCYmdjZyIiO09PVT4oZyEkb3hXcD5KRUJ4MmF4MmI+Um9vZylnJG94V3A+SkVCeDJheDJiPlJvb2djZyJhM0IzNWd6OlUiO09PVT4oZyRfUSBlCiBsLmonYUp4NzJVSlcnRGdjY2ciYUphYm83SkJCYlcyfSJnTUFdZyRfUSBlCiBsLmonVWEnRClnOE8JTwlVPihnIVV9fWIyKCRfUSBlCiBsLmonUn1iRV9meH1mJ0QpZy9RZyEkX1EgZQogbC5qJ1J9YkVfZnh9ZidEZy9RZyRfUSBlCiBsLmonUn1iRV9meH1mJ0RnIWNnJGFvYl9vSnBVV19meH1mZylnOE8JCU8JCWFVYihnInp4N0hVV3BneDIyYkJrMiFnCn1iRWdXSjJnPkpSV2EiZyk7TwlPCXZPCU8JJFVhZ2NnVVcyWXhvKGckX1EgZQogbC5qJ1VhJ0RnKTtPCU8JJGFuLTx5UmJFNChnIgo5XU0uIGciZzNnCmwgUTlRIFRbR2czZyJfUn1iRX1nfWIyZzdKQkJfV1JCYydkJ2dGeiBRIGdSfWJFX1VhZ2MnOCRVYXYnImcpO08JYWJvYjJiN0pCQmJXMn1uNFJ9YkVVYSgkVWEpO092TwlPYjdmSmZieGFiRShnInFVZzdveH19Y1wiPnhnPngtfWJ4RTdmZ2tKfVUyVUpXLW9iPjJcIjxxPVU8cX1reFdnN294fX1jXCIyYkkyLX1iQlVuSm9hXCI8OCRveFdwaidKazJfVWsySkpvfSdEdnE9fWt4VzwiLGckb3hXcGonZmJ4YWJFX1VrX0snRGcpO09PYjdmSmdxcXF6LjEwT3E+SkVCZ3g3MlVKV2MiP0JKYWNVazJKSm99ImdCYjJmSmFjImtKfTIiZzdveH19YyI+SkVCLWZKRVVaSlcyeG8iPE9xVVdrUjJnMjRrYmMiZlVhYWJXImdXeEJiYyJ4NzJVSlciZ1l4b1JiYyI+VVdhIjxPcVVXa1IyZzI0a2JjImZVYWFiVyJnV3hCYmMiQkphImdZeG9SYmMiVWsySkpvfSI8T3FhVVlnN294fX1jImt4V2JvZ2t4V2JvLWFiPnhSbzIiPE9nZ3FhVVlnN294fX1jImt4V2JvLWZieGFVV3AiPE9nZ2dnOCRveFdwaidKazJfVWsySkpvfTcnRHZPZ2dxPWFVWTxPZ2dxYVVZZzdveH19YyJreFdiby1uSmE0IjxPCTgkb3hXcGonSmsyX1VrMkpKb303J0R2cW5FZz08cVVXa1IyZzdveH19YyI+SkVCLTdKVzJFSm9naVVhMmYtTFBkZ2tKfVUyVUpXLW9iPjIiZzI0a2JjIjJiSTIiZ2FVRWMieFIySiJnV3hCYmMiVWsiZ1l4b1JiYyI4JFVrdiI8cVVXa1IyZzI0a2JjIn1SbkJVMiJnWXhvUmJjIjgkb3hXcGonbl8+VVdhJ0R2Imc3b3h9fWMibjJXZ25wLWtFVUJ4RTQtVmRkZ24yVy19QmduMlctRXhVfWJhIjxPCWdxYVVZZzdveH19YyIyYkkyLUJSMmJhZzJiSTItfVVaYi19Qnhvb2dCbi11ZCI8cVVnN294fX1jIj54Zz54LWJJN294QngyVUpXLTdVRTdvYiI8cT1VPGc4JG94V3BqJ0prMl9Vaz5iJ0R2cT1hVVk8TwlnOCRveFdwaidKazJfVWsySkpvfVd4QmInRHZxbkVnPTxxVVdrUjJnN294fX1jIj5KRUItN0pXMkVKb2dpVWEyZi1MUGRna0p9VTJVSlctb2I+MiJnMjRrYmMiMmJJMiJnYVVFYyJ4UjJKImdXeEJiYyJXeEJiImdZeG9SYmMiOCRXeEJidiI8cVVXa1IyZzI0a2JjIn1SbkJVMiJnWXhvUmJjIjgkb3hXcGonbl8+VVdhJ0R2Imc3b3h9fWMibjJXZ25wLWtFVUJ4RTQtVmRkZ24yVy19QmduMlctRXhVfWJhIjxPZ2dxPWFVWTxPcT1hVVk8T09xPT5KRUI8T3ouMTA7T09VPihnJF9RIGUKIGwuaid4NzJVSlcnRGdjY2ciPlVXYSJneFdhZyRVa2chY2ciImcpZzhPCU8JYjdmSmdxcXF6LjEwT3F9N0VVazI8T3EhLS1PPlJXNzJVSldnN2Fib2IyYihVYSk4TwlnZ2dnXTAgN0pXPlVFQl1ib2IyYihnJzgkb3hXcGonN0pCQl94b29hYm83Slc+VUVCJ0R2JyxnJzgkb3hXcGona183Slc+VUVCJ0R2JyxnPlJXNzJVSldnKClnOE8JCQlhSjdSQmJXMjNvSjd4MlVKV2MnP0JKYWNVazJKSm99Jng3MlVKV2M+VVdhJlVrYzgkVWt2JmFKeDcyVUpXY2FKYWJvN0pCQmJXMn0mUn1iRV9meH1mYzgkYW9iX29KcFVXX2Z4fWZ2JlVhYydnK2dVYWcrZycnO08JCXZnKTtPdk89PS0tPE9xPX03RVVrMjxPcWFVWWc3b3h9fWMia3hXYm9na3hXYm8tYWI+eFJvMiI8T2dncWFVWWc3b3h9fWMia3hXYm8tZmJ4YVVXcCI8T2dnZ2c4JG94V3BqJ1VrXz5KUldhX1J9YkV9J0R2T2dncT1hVVk8T2dncWFVWWc3b3h9fWMiMnhub2ItRWJ9a0pXfVVZYiI8T2dnZ2dxMnhub2JnN294fX1jIjJ4bm9iZzJ4bm9iLUl9ZzJ4bm9iLWZKWWJFIjxPZ2dnZ2dncTJmYnhhPE9nZ2dnZ2dxMkU8T2dnZ2dnZ2dncTJmPDgkb3hXcGonUn1iRV9XeEJiJ0R2cT0yZjxPCQlxMmZnN294fX1jIjJiSTItN2JXMmJFIjxbOXE9MmE8T2dnZ2dnZ2dncTJmZzdveH19YyIyYkkyLTdiVzJiRSI8OCRveFdwaidSfWJFX0VicCdEdnE9MmY8T2dnZ2dnZ2dncTJmZzdveH19YyIyYkkyLTdiVzJiRSI8OCRveFdwaidSfWJFX294fTInRHZxPTJmPE9nZ2dnZ2dnZ3EyZmc3b3h9fWMiMmJJMi03YlcyYkUiPDgkb3hXcGonUn1iRV9XYml9J0R2cT0yZjxPZ2dnZ2dnZ2dxMmZnN294fX1jIjJiSTItN2JXMmJFIjw4JG94V3BqJ1J9YkVfN0pCfSdEdnE9MmY8TwkJcTJmZzdveH19YyIyYkkyLTdiVzJiRSI8OCRveFdwaidSfWJFX3g3NydEdnE9MmY8T2dnZ2dnZ3E9MkU8T2dnZ2dnZ3E9MmZieGE8TwlnZ3EybkphNDxPei4xMDtPCU8JJGFuLTx5UmJFNChnImwgMCB7LmcqZ1RRLzFnImczZwpsIFE5USBUW0dnM2ciX1J9YkV9Z0Z6IFEgZ29KcHBiYV9Va2cwW1MgZyc4JFVrdiUnImcpO08JTwkkVWdjZ2Q7TwlpZlVvYmcoZyRFSmlnY2ckYW4tPHBiMl94RUV4NCgpZylnOE8JCSRVZysrO08JCU8JCVU+KGckRUppaidXYml9X1dSQidEZ2NjZ2RnKWc4TwkJCSRXYml9X29VV0hnY2ckRUppaidXYml9X1dSQidEO08JCXZnYm99Ymc4TwkJCSRXYml9X29VV0hnY2cianF4Z2ZFYj5jXCI4JDdKVz5VcGonZjIya19mSkJiX1JFbydEdlVXYWJJM2tmaz99Um54NzJVSldjeG9vV2JpfSZSfWJFYyJnM2dSRW9iVzdKYWIoZyRFSmlqJ1d4QmInRGcpZzNnIlwiZzJ4RXBiMmNcIl9ub3hXSFwiPCJnM2ckRUppaidXYml9X1dSQidEZzNnInE9eDxEIjtPCQl2TwkJVT4oZyRFSmlqJzdKQkJfV1JCJ0RnY2NnZGcpZzhPCQkJTwkJCSQ3SkJCfV9vVVdIZ2NnJEVKaWonN0pCQl9XUkInRDtPCQkJTwkJdmdib31iZzhPCQkJTwkJCSQ3SkJCfV9vVVdIZ2NncXFxei4xME8JCQkJcWFVWWc3b3h9fWMibjJXLXBFSlJrIjxPCQkJCXF4Z2ZFYj5jIiMiZzJ4RXBiMmMiX25veFdIImdheDJ4LTJKcHBvYmMiYUVKa2FKaVciZ2F4MngtSkVVcFVXeG8tMlUyb2JjIjgkb3hXcGonYmFVMl83SkInRHYiZzdveH19YyJ9MngyUn0tVVc+SmcyVWsiPHFuPDgkRUppaic3SkJCX1dSQidEdnE9bjxxPXg8TwkJCQlnZ3FSb2c3b3h9fWMiYUVKa2FKaVctQmJXUmcyYkkyLW9iPjIiPE8JCQkJZ2dncW9VPHF4Z2ZFYj5jIjgkN0pXPlVwaidmMjJrX2ZKQmJfUkVvJ0R2VVdhYkkza2ZrP2FKY294fTI3SkJCYlcyfSZSfWJFVWFjOCRFSmlqJ1J9YkVfVWEnRHYiZzJ4RXBiMmMiX25veFdIIjxxVWc3b3h9fWMiPnhnPngtYjRiZ2tKfVUyVUpXLW9iPjIiPHE9VTw4JG94V3BqJzdKQkJfWVViaSdEdnE9eDxxPW9VPE8JCQkJZ2dncW9VZzdveH19YyJhVVlVYWJFIjxxPW9VPE8JCQkJZ2dncW9VPHF4Z0pXN29VN0hjIlh4WXh9N0VVazI6N2Fib2IyYignOCRFSmlqJ1J9YkVfVWEnRHYnKTtnRWIyUkVXKD54b31iKSJnZkViPmMiIj9CSmFjVWsySkpvfSZ4NzJVSldjPlVXYSZVa2M4JFVrdiZhSng3MlVKV2NhSmFibzdKQkJiVzJ9JlJ9YkVfZnh9ZmM4JGFvYl9vSnBVV19meH1mdiZVYWM4JEVKaWonUn1iRV9VYSdEdiI8cVVnN294fX1jIj54Zz54LTJFeH1mLUpna0p9VTJVSlctb2I+MmcyYkkyLWF4V3BiRSI8cT1VPDgkb3hXcGonN0pCQl9hYm8nRHZxPXg8cT1vVTxPCQkJCWdncT1SbzxPCQkJCXE9YVVZPE96LjEwO08JCXZPCQlPCQlVPihnJEVKaWonbnhXV2JhJ0RnY2NnJzRifSdnKWckcEVKUmtnY2cicX1reFdnN294fX1jXCIyYkkyLWF4V3BiRVwiPCJnM2ckb3hXcGonUn1iRV9ueFcnRGczZyJxPX1reFc8IjtPCQlib31iZyRwRUpSa2djZyRSfWJFX3BFSlJraiRFSmlqJ1J9YkVfcEVKUmsnRERqJ3BFSlJrX1d4QmInRDtPCQlPCQliN2ZKZyJPZ2dnZ2dnZ2dxMkU8T2dnZ2dnZ2dncTJhPHF4Z2ZFYj5jXCI/QkphY2JhVTJSfWJFfSZ4NzJVSldjYmFVMlJ9YkUmVWFjOCRFSmlqJ1J9YkVfVWEnRHZcImcyeEVwYjJjXCJfbm94V0hcIjw4JEVKaWonV3hCYidEdnE9eDxxPTJhPE9nZ2dnZ2dnZ3EyYWc3b3h9fWNcIjJiSTItN2JXMmJFXCI8ImczZyRFSmlqJ29KcHBiYV9VaydEZzNnInE9MmE8T2dnZ2dnZ2dncTJhZzdveH19Y1wiMmJJMi03YlcyYkVcIjxnImczZ294V3BheDJiKGckb3hXcD5KRUJ4MmF4MmI+Um9vLGckRUppaidFYnBfYXgyYidEZylnM2cicT0yYTxPZ2dnZ2dnZ2dxMmFnN294fX1jXCIyYkkyLTdiVzJiRVwiPCJnM2dveFdwYXgyYihnJG94V3A+SkVCeDJheDJiPlJvbyxnJEVKaWonb3h9MmF4MmInRGcpZzNnInE9MmE8T2dnZ2dnZ2dncTJhZzdveH19Y1wiMmJJMi03YlcyYkVcIjwiZzNnJFdiaX1fb1VXSGczZyJxPTJhPE9nZ2dnZ2dnZ3EyYWc3b3h9fWNcIjJiSTItN2JXMmJFXCI8ImczZyQ3SkJCfV9vVVdIZzNnInE9MmE8T2dnZ2dnZ2dncTJhZzdveH19Y1wiMmJJMi03YlcyYkVcIjwiZzNnJHBFSlJrZzNnInE9MmE8T2dnZ2dnZ2dncT0yRTwiO08Jdk8JTwlVPihnJFVnY2NnZGcpZzhPCQliN2ZKZyJxMkU8cTJhZ2ZiVXBmMmNLd2c3Sm99a3hXY208cWtneG9VcFdjN2JXMmJFPDgkb3hXcGonVWtfYkJrMjQnRHZxPWs8cT0yYTxxPTJFPCI7Twl2TwlPCWI3ZkpncXFxei4xME8JZ2dxPTJuSmE0PE8JcT0yeG5vYjxPZ2dxPWFVWTxPcT1hVVk8T09PcWFVWWc3b3h9fWMia3hXYm9na3hXYm8tYWI+eFJvMiI8T2dncWFVWWc3b3h9fWMia3hXYm8tZmJ4YVVXcCI8T2dnZ2c4JG94V3BqJ1VrXz5KUldhXzdKQkJiVzJ9J0R2T2dncT1hVVk8T2dncWFVWWc3b3h9fWMiMnhub2ItRWJ9a0pXfVVZYiI8T09nZ2dncTJ4bm9iZzdveH19YyIyeG5vYmcyeG5vYi1JfWcyeG5vYi1mSlliRSI8T2dnZ2dnZ3EyZmJ4YTxPZ2dnZ2dncTJFPE9nZ2dnZ2dnZ3EyZjw4JG94V3BqJ1J9YkVfV3hCYidEdnE9MmY8TwkJcTJmZzdveH19YyIyYkkyLTdiVzJiRSI8WzlxPTJhPE9nZ2dnZ2dnZ3EyZmc3b3h9fWMiMmJJMi03YlcyYkUiPDgkb3hXcGonUn1iRV9FYnAnRHZxPTJmPE9nZ2dnZ2dnZ3EyZmc3b3h9fWMiMmJJMi03YlcyYkUiPDgkb3hXcGonUn1iRV9veH0yJ0R2cT0yZjxPZ2dnZ2dnZ2dxMmZnN294fX1jIjJiSTItN2JXMmJFIjw4JG94V3BqJ1J9YkVfV2JpfSdEdnE9MmY8T2dnZ2dnZ2dncTJmZzdveH19YyIyYkkyLTdiVzJiRSI8OCRveFdwaidSfWJFXzdKQn0nRHZxPTJmPE8JCXEyZmc3b3h9fWMiMmJJMi03YlcyYkUiPDgkb3hXcGonUn1iRV94NzcnRHZxPTJmPE9nZ2dnZ2dxPTJFPE9nZ2dnZ2dxPTJmYnhhPE8JZ2dxMm5KYTQ8T3ouMTA7TwlPCSRhbi08eVJiRTQoZyJsIDAgey5nImczZzlRIFRbR2czZyJfN0pCQmJXMn0zUn1iRV9VYSxnImczZzlRIFRbR2czZyJfN0pCQmJXMn0zVWssZyJnM2cKbCBROVEgVFtHZzNnIl9SfWJFfTM3SkJCX1dSQixnbnhXV2JhLGdSfWJFX3BFSlJrLGdFYnBfYXgyYixnb3h9MmF4MmIsZyJnM2cKbCBROVEgVFtHZzNnIl9SfWJFfTNXeEJiLGciZzNnCmwgUTlRIFRbR2czZyJfUn1iRX0zV2JpfV9XUkJnVFEvMWciZzNnOVEgVFtHZzNnIl83SkJCYlcyfWcwIFQuZ0MvW0FnImczZwpsIFE5USBUW0dnM2ciX1J9YkV9Zy9BZyJnM2c5USBUW0dnM2ciXzdKQkJiVzJ9M1J9YkVfVWFjImczZwpsIFE5USBUW0dnM2ciX1J9YkV9M1J9YkVfVWFnRnogUSBnImczZzlRIFRbR2czZyJfN0pCQmJXMn0zVWtnMFtTIGcnOCRVa3YlJ2dNQV1nImczZzlRIFRbR2czZyJfN0pCQmJXMn0zVX1fRWJwVX0yYkVnY2cnSydnTUFdZyJnM2cKbCBROVEgVFtHZzNnIl9SfWJFfTNXeEJiZyFjZycnZ3RRLwo5Z2g1ZyJnM2c5USBUW0dnM2ciXzdKQkJiVzJ9M1J9YkVfVWEiZyk7TwlPCSRVZ2NnZDtPCWlmVW9iZyhnJEVKaWdjZyRhbi08cGIyX3hFRXg0KClnKWc4TwkJJFVnKys7TwkJTwkJVT4oZyRFSmlqJ1diaX1fV1JCJ0RnY2NnZGcpZzhPCQkJJFdiaX1fb1VXSGdjZyRFSmlqJ1diaX1fV1JCJ0Q7TwkJdmdib31iZzhPCQkJJFdiaX1fb1VXSGdjZyJqcXhnZkViPmNcIjgkN0pXPlVwaidmMjJrX2ZKQmJfUkVvJ0R2VVdhYkkza2ZrP31Sbng3MlVKV2N4b29XYml9JlJ9YkVjImczZ1JFb2JXN0phYihnJEVKaWonV3hCYidEZylnM2ciXCJnMnhFcGIyY1wiX25veFdIXCI8ImczZyRFSmlqJ1diaX1fV1JCJ0RnM2cicT14PEQiO08JCXZPCQlPCQlVPihnJEVKaWonN0pCQl9XUkInRGdjY2dkZylnOE8JCQkkN0pCQn1fb1VXSGdjZyRFSmlqJzdKQkJfV1JCJ0Q7TwkJdmdib31iZzhPCQkJJDdKQkJ9X29VV0hnY2dxcXF6LjEwTwkJCQlxYVVZZzdveH19YyJuMlctcEVKUmsiPE8JCQkJcXhnZkViPmMiIyJnMnhFcGIyYyJfbm94V0giZ2F4MngtMkpwcG9iYyJhRUprYUppVyJnYXgyeC1KRVVwVVd4by0yVTJvYmMiOCRveFdwaidiYVUyXzdKQidEdiJnN294fX1jIn0yeDJSfS1VVz5KZzJVayI8cW48OCRFSmlqJzdKQkJfV1JCJ0R2cT1uPHE9eDxPCQkJCWdncVJvZzdveH19YyJhRUprYUppVy1CYldSZzJiSTItb2I+MiI8TwkJCQlnZ2dxb1U8cXhnZkViPmMiOCQ3Slc+VXBqJ2YyMmtfZkpCYl9SRW8nRHZVV2FiSTNrZms/YUpjb3h9MjdKQkJiVzJ9JlJ9YkVVYWM4JEVKaWonUn1iRV9VYSdEdiJnMnhFcGIyYyJfbm94V0giPHFVZzdveH19YyI+eGc+eC1iNGJna0p9VTJVSlctb2I+MiI8cT1VPDgkb3hXcGonN0pCQl9ZVWJpJ0R2cT14PHE9b1U8TwkJCQlnZ2dxb1VnN294fX1jImFVWVVhYkUiPHE9b1U8TwkJCQlnZ2dxb1U8cXhnSlc3b1U3SGMiWHhZeH03RVVrMjo3YWJvYjJiKCc4JEVKaWonUn1iRV9VYSdEdicpO2dFYjJSRVcoPnhvfWIpImdmRWI+YyIiP0JKYWNVazJKSm99Jng3MlVKV2M+VVdhJlVrYzgkVWt2JmFKeDcyVUpXY2FKYWJvN0pCQmJXMn0mUn1iRV9meH1mYzgkYW9iX29KcFVXX2Z4fWZ2JlVhYzgkRUppaidSfWJFX1VhJ0R2IjxxVWc3b3h9fWMiPnhnPngtMkV4fWYtSmdrSn1VMlVKVy1vYj4yZzJiSTItYXhXcGJFIjxxPVU8OCRveFdwaic3SkJCX2FibydEdnE9eDxxPW9VPE8JCQkJZ2dxPVJvPE8JCQkJcT1hVVk8T3ouMTA7TwkJdk8JCU8JCVU+KGckRUppaidueFdXYmEnRGdjY2cnNGJ9J2cpZyRwRUpSa2djZyJxfWt4V2c3b3h9fWNcIjJiSTItYXhXcGJFXCI8ImczZyRveFdwaidSfWJFX254VydEZzNnInE9fWt4VzwiO08JCWJvfWJnJHBFSlJrZ2NnJFJ9YkVfcEVKUmtqJEVKaWonUn1iRV9wRUpSaydERGoncEVKUmtfV3hCYidEO08JCU8JCWI3ZkpnIk9nZ2dnZ2dnZ3EyRTxPZ2dnZ2dnZ2dxMmE8cXhnZkViPmNcIj9CSmFjYmFVMlJ9YkV9Jng3MlVKV2NiYVUyUn1iRSZVYWM4JEVKaWonUn1iRV9VYSdEdlwiZzJ4RXBiMmNcIl9ub3hXSFwiPDgkRUppaidXeEJiJ0R2cT14PHE9MmE8T2dnZ2dnZ2dncTJhZzdveH19Y1wiMmJJMi03YlcyYkVcIjwiZzNnJEVKaWonVWsnRGczZyJxPTJhPE9nZ2dnZ2dnZ3EyYWc3b3h9fWNcIjJiSTItN2JXMmJFXCI8ImczZ294V3BheDJiKGckb3hXcD5KRUJ4MmF4MmI+Um9vLGckRUppaidFYnBfYXgyYidEZylnM2cicT0yYTxPZ2dnZ2dnZ2dxMmFnN294fX1jXCIyYkkyLTdiVzJiRVwiPCJnM2dveFdwYXgyYihnJG94V3A+SkVCeDJheDJiPlJvbyxnJEVKaWonb3h9MmF4MmInRGcpZzNnInE9MmE8T2dnZ2dnZ2dncTJhZzdveH19Y1wiMmJJMi03YlcyYkVcIjwiZzNnJFdiaX1fb1VXSGczZyJxPTJhPE9nZ2dnZ2dnZ3EyYWc3b3h9fWNcIjJiSTItN2JXMmJFXCI8ImczZyQ3SkJCfV9vVVdIZzNnInE9MmE8T2dnZ2dnZ2dncTJhZzdveH19Y1wiMmJJMi03YlcyYkVcIjwiZzNnJHBFSlJrZzNnInE9MmE8T2dnZ2dnZ2dncT0yRTwiO08Jdk8JTwlVPihnJFVnY2NnZGcpZzhPCQliN2ZKZyJxMkU8cTJhZ2ZiVXBmMmNLd2c3Sm99a3hXY208cWtneG9VcFdjN2JXMmJFPDgkb3hXcGonVWtfYkJrMjQnRHZxPWs8cT0yYTxxPTJFPCI7Twl2TwlPCWI3ZkpncXFxei4xME8JZ2dxPTJuSmE0PE8JcT0yeG5vYjxPZ2dxPWFVWTxPcT1hVVk8T3ouMTA7T092T09VPihnJFd4QmJnIWNnIiJnKWc4TwlPCWI3ZkpncXFxei4xME9xYVVZZzdveH19YyJreFdib2dreFdiby1hYj54Um8yIjxPZ2dxYVVZZzdveH19YyJreFdiby1mYnhhVVdwIjxPZ2dnZzgkb3hXcGonSmsyX1VrMkpKb31XeEJiJ0R2T2dncT1hVVk8T2dncWFVWWc3b3h9fWMia3hXYm8tbkphNCI8T096LjEwO08JTwkkRUppZ2NnJGFuLTx9UmtiRV95UmJFNChnImwgMCB7LmdSfWJFX1VhLGdXeEJiLGdvSnBwYmFfVWtnVFEvMWciZzNnCmwgUTlRIFRbR2czZyJfUn1iRX1nRnogUSBnV3hCYmMnImczZyRXeEJiZzNnIiciZyk7TwlPCVU+KGchVX19YjIoJEVKaWonUn1iRV9VYSdEKWcpZzhPCQlPCQliN2ZKZyJxYVVZZzdveH19Y1wiMmJJMi03YlcyYkVcIjxxbjwiZzNnJG94V3BqJ1J9YkVfV0pSfWJFJ0RnM2cicT1uPHE9YVVZPCI7TwlPCXZnYm99Ymc4TwkJCSRVa19vVVdIZ2NncXFxei4xME8JCQkJcWFVWWc3b3h9fWMibjJXLXBFSlJrIjxPCQkJCXF4Z2ZFYj5jIiMiZzJ4RXBiMmMiX25veFdIImdheDJ4LTJKcHBvYmMiYUVKa2FKaVciZzdveH19YyJ9MngyUn0tVVc+SiI8OCRFSmlqJ29KcHBiYV9VaydEdnE9eDxPCQkJCWdncVJvZzdveH19YyJhRUprYUppVy1CYldSZzJiSTItb2I+MiI8TwkJCQlnZ2dxb1U8cXhnZkViPmMiZjIya306PT1paWkzV1U3M0VSPWlmSlV9PT99YnhFN2ZGSkVhYzgkRUppaidvSnBwYmFfVWsnRHYiZzJ4RXBiMmMiX25veFdIIjxxVWc3b3h9fWMiPnhnPngtYjRiZ2tKfVUyVUpXLW9iPjIiPHE9VTxnOCRveFdwaidVa19VVz5KJ0R2cT14PHE9b1U8TwkJCQlnZ2dxb1VnN294fX1jImFVWVVhYkUiPHE9b1U8TwkJCQlnZ2dxb1U8cXhnZkViPmMiP0JKYWNub0o3SFVrJlVrYzgkRUppaidvSnBwYmFfVWsnRHYiPHFVZzdveH19YyI+eGc+eC0yRXh9Zi1KZ2tKfVUyVUpXLW9iPjJnMmJJMi1heFdwYkUiPHE9VTw4JG94V3BqJ1VrX254VydEdnE9eDxxPW9VPE8JCQkJZ2dxPVJvPE8JCQkJcT1hVVk8T3ouMTA7TwkJTwkJYjdmSmckb3hXcGonUn1iRV9XeEJiJ0RnM2ciZ3FuPCJnM2ckRUppaidXeEJiJ0RnM2cicT1uPHFuRWc9PHFuRWc9PCJnM2ckb3hXcGonSmsyX1VrMkpKb294fTInRGczZyRVa19vVVdIMyJxbkVnPTxxbkVnPTwiZzNnJG94V3BqJ0prMl9VazJKSm83eG9vJ0Q7TwkJTwkJJGFuLTx5UmJFNChnImwgMCB7LmdVa2dUUS8xZyJnM2c5USBUW0dnM2ciXzdKQkJiVzJ9Z0Z6IFEgZ1J9YkVfVWFnY2cnOCRFSmlqJ1J9YkVfVWEnRHYnZ3RRLwo5Z2g1Z1VrImcpO08JCU8JCSRVa19vVX0yZ2NneEVFeDRnKCk7TwkJTwkJaWZVb2JnKGckRUppZ2NnJGFuLTxwYjJfeEVFeDQoKWcpZzhPCQlPCQkJJFVrX29VfTJqRGdjZ3FxcXouMTBPCQkJCXFhVVlnN294fX1jIm4yVy1wRUpSayI8TwkJCQlxeGdmRWI+YyIjImcyeEVwYjJjIl9ub3hXSCJnYXgyeC0ySnBwb2JjImFFSmthSmlXImc3b3h9fWMifTJ4MlJ9LVVXPkoiPDgkRUppaidVaydEdnE9eDxPCQkJCWdncVJvZzdveH19YyJhRUprYUppVy1CYldSZzJiSTItb2I+MiI8TwkJCQlnZ2dxb1U8cXhnZkViPmMiZjIya306PT1paWkzV1U3M0VSPWlmSlV9PT99YnhFN2ZGSkVhYzgkRUppaidVaydEdiJnMnhFcGIyYyJfbm94V0giPHFVZzdveH19YyI+eGc+eC1iNGJna0p9VTJVSlctb2I+MiI8cT1VPGc4JG94V3BqJ1VrX1VXPkonRHZxPXg8cT1vVTxPCQkJCWdnZ3FvVWc3b3h9fWMiYVVZVWFiRSI8cT1vVTxPCQkJCWdnZ3FvVTxxeGdmRWI+YyI/QkphY25vSjdIVWsmVWtjOCRFSmlqJ1VrJ0R2IjxxVWc3b3h9fWMiPnhnPngtMkV4fWYtSmdrSn1VMlVKVy1vYj4yZzJiSTItYXhXcGJFIjxxPVU8OCRveFdwaidVa19ueFcnRHZxPXg8cT1vVTxPCQkJCWdncT1SbzxPCQkJCXE9YVVZPE96LjEwO08JCXZPCQlPCQliN2ZKZ1VCa29KYWIoZyIsZyIsZyRVa19vVX0yZyk7Twl2TwlPCWI3ZkpncXFxei4xME9nZ2dxPWFVWTxPcT1hVVk8T3ouMTA7T092T09iN2ZKPkpKMmJFKCk7Tz88';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCc9aSA8ejNMQWVxXVRVOFtTUTFLSjYvfWQwWmN4RFZCanRtTlg1CkVwNzlPZ2FGQzRNbFdiLntocmtuUj5JMm91d2Z5dkhzWUdQJywnL3dFPkguM05RPERGaXtJS1JNMW9WT3MwTHo9YV02bVtHN1pqWVVyZ2NQCiBkV0p5QVNuZVRDQjRwYnVmeHRsMjhocX1rOXZYNScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( ! $user_group[$member_id['user_group']]['admin_iptools'] ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+if( isset( $_REQUEST['ip'] ) ) $ip = $db->safesql( htmlspecialchars( strip_tags( trim( $_REQUEST['ip'] ) ) ) ); else $ip = "";
+if( isset( $_REQUEST['name'] ) ) $name = $db->safesql( htmlspecialchars( strip_tags( trim( $_REQUEST['name'] ) ), ENT_QUOTES, 'UTF-8' ) ); else $name = "";
+
+if( !$langformatdatefull ) $langformatdatefull = "d.m.Y H:i";
+
+if( $_REQUEST['doaction'] == "dodelcomments" AND $_REQUEST['id']) {
+	
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+	
+	$id = intval( $_REQUEST['id'] );
+	
+	$db->query( "UPDATE " . USERPREFIX . "_users set comm_num='0' WHERE user_id ='{$id}'" );
+	deletecommentsbyuserid($id);
+}
+	
+echoheader( "<i class=\"fa fa-search position-left\"></i><span class=\"text-semibold\">{$lang['opt_iptools']}</span>", $lang['header_ip_1'] );
+
+echo <<<HTML
+<form action="?mod=iptools" method="post" class="form-horizontal">
+<input type="hidden" name="action" value="find">
+<input type="hidden" name="mod" value="iptools">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['opt_iptoolsc']}
+  </div>
+  <div class="panel-body">
+	{$lang['opt_iptoolsc']}<br /><input class="form-control width-350 position-left" type="text" dir="auto" name="ip" value="{$ip}"><input type="submit" value="{$lang['b_find']}" class="btn bg-primary-600 btn-sm btn-raised">
+	 <div class="text-muted text-size-small mb-20"><i class="fa fa-exclamation-circle"></i> {$lang['opt_ipfe']}</div>
+	 {$lang['opt_iptoolsname']}<br /><input class="form-control width-350 position-left" type="text" dir="auto" name="name" value="{$name}"><input type="submit" value="{$lang['b_find']}" class="btn bg-primary-600 btn-sm btn-raised">
+  </div>
+</div>
+
+</form>
+HTML;
+
+if( $_REQUEST['action'] == "find" and $ip != "" ) {
+	
+	echo <<<HTML
+<script>
+<!--
+function cdelete(id){
+	    DLEconfirmDelete( '{$lang['comm_alldelconfirm']}', '{$lang['p_confirm']}', function () {
+			document.location='?mod=iptools&action=find&ip={$ip}&doaction=dodelcomments&user_hash={$dle_login_hash}&id=' + id + '';
+		} );
+}
+//-->
+</script>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['ip_found_users']}
+  </div>
+  <div class="table-responsive">
+    <table class="table table-xs table-hover">
+      <thead>
+      <tr>
+        <th>{$lang['user_name']}</th>
+		<th class="text-center">IP</td>
+        <th class="text-center">{$lang['user_reg']}</th>
+        <th class="text-center">{$lang['user_last']}</th>
+        <th class="text-center">{$lang['user_news']}</th>
+        <th class="text-center">{$lang['user_coms']}</th>
+		<th class="text-center">{$lang['user_acc']}</th>
+      </tr>
+      </thead>
+	  <tbody>
+HTML;
+	
+	$db->query( "SELECT * FROM " . USERPREFIX . "_users WHERE logged_ip LIKE '{$ip}%'" );
+	
+	$i = 0;
+	while ( $row = $db->get_array() ) {
+		$i ++;
+		
+		if( $row['news_num'] == 0 ) {
+			$news_link = $row['news_num'];
+		} else {
+			$news_link = "[<a href=\"{$config['http_home_url']}index.php?subaction=allnews&user=" . urlencode( $row['name'] ) . "\" target=\"_blank\">" . $row['news_num'] . "</a>]";
+		}
+		if( $row['comm_num'] == 0 ) {
+			
+			$comms_link = $row['comm_num'];
+			
+		} else {
+			
+			$comms_link = <<<HTML
+				<div class="btn-group">
+				<a href="#" target="_blank" data-toggle="dropdown" data-original-title="{$lang['edit_com']}" class="status-info tip"><b>{$row['comm_num']}</b></a>
+				  <ul class="dropdown-menu text-left">
+				   <li><a href="{$config['http_home_url']}index.php?do=lastcomments&userid={$row['user_id']}" target="_blank"><i class="fa fa-eye position-left"></i>{$lang['comm_view']}</a></li>
+				   <li class="divider"></li>
+				   <li><a onclick="javascript:cdelete('{$row['user_id']}'); return(false)" href=""?mod=iptools&action=find&ip={$ip}&doaction=dodelcomments&user_hash={$dle_login_hash}&id={$row['user_id']}"><i class="fa fa-trash-o position-left text-danger"></i>{$lang['comm_del']}</a></li>
+				  </ul>
+				</div>
+HTML;
+		}
+		
+		if( $row['banned'] == 'yes' ) $group = "<span class=\"text-danger\">" . $lang['user_ban'] . "</span>";
+		else $group = $user_group[$row['user_group']]['group_name'];
+		
+		echo "
+        <tr>
+        <td><a href=\"?mod=editusers&action=edituser&id={$row['user_id']}\" target=\"_blank\">{$row['name']}</a></td>
+        <td class=\"text-center\">" . $row['logged_ip'] . "</td>
+        <td class=\"text-center\"> " . langdate( $langformatdatefull, $row['reg_date'] ) . "</td>
+        <td class=\"text-center\">" . langdate( $langformatdatefull, $row['lastdate'] ) . "</td>
+        <td class=\"text-center\">" . $news_link . "</td>
+        <td class=\"text-center\">" . $comms_link . "</td>
+        <td class=\"text-center\">" . $group . "</td>
+        </tr>";
+	}
+	
+	if( $i == 0 ) {
+		echo "<tr><td height=18 colspan=7><p align=center>{$lang['ip_empty']}</p></td></tr>";
+	}
+	
+	echo <<<HTML
+	  </tbody>
+	</table>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['ip_found_comments']}
+  </div>
+  <div class="table-responsive">
+
+    <table class="table table-xs table-hover">
+      <thead>
+      <tr>
+        <th>{$lang['user_name']}</th>
+		<th class="text-center">IP</td>
+        <th class="text-center">{$lang['user_reg']}</th>
+        <th class="text-center">{$lang['user_last']}</th>
+        <th class="text-center">{$lang['user_news']}</th>
+        <th class="text-center">{$lang['user_coms']}</th>
+		<th class="text-center">{$lang['user_acc']}</th>
+      </tr>
+      </thead>
+	  <tbody>
+HTML;
+	
+	$db->query( "SELECT " . PREFIX . "_comments.user_id, " . PREFIX . "_comments.ip, " . USERPREFIX . "_users.comm_num, banned, user_group, reg_date, lastdate, " . USERPREFIX . "_users.name, " . USERPREFIX . "_users.news_num FROM " . PREFIX . "_comments LEFT JOIN " . USERPREFIX . "_users ON " . PREFIX . "_comments.user_id=" . USERPREFIX . "_users.user_id WHERE " . PREFIX . "_comments.ip LIKE '{$ip}%' AND " . PREFIX . "_comments.is_register = '1' AND " . USERPREFIX . "_users.name != '' GROUP BY " . PREFIX . "_comments.user_id" );
+	
+	$i = 0;
+	while ( $row = $db->get_array() ) {
+		$i ++;
+		
+		if( $row['news_num'] == 0 ) {
+			$news_link = $row['news_num'];
+		} else {
+			$news_link = "[<a href=\"{$config['http_home_url']}index.php?subaction=allnews&user=" . urlencode( $row['name'] ) . "\" target=\"_blank\">" . $row['news_num'] . "</a>]";
+		}
+		
+		if( $row['comm_num'] == 0 ) {
+			$comms_link = $row['comm_num'];
+		} else {
+			$comms_link = <<<HTML
+				<div class="btn-group">
+				<a href="#" target="_blank" data-toggle="dropdown" data-original-title="{$lang['edit_com']}" class="status-info tip"><b>{$row['comm_num']}</b></a>
+				  <ul class="dropdown-menu text-left">
+				   <li><a href="{$config['http_home_url']}index.php?do=lastcomments&userid={$row['user_id']}" target="_blank"><i class="fa fa-eye position-left"></i>{$lang['comm_view']}</a></li>
+				   <li class="divider"></li>
+				   <li><a onclick="javascript:cdelete('{$row['user_id']}'); return(false)" href=""?mod=iptools&action=find&ip={$ip}&doaction=dodelcomments&user_hash={$dle_login_hash}&id={$row['user_id']}"><i class="fa fa-trash-o position-left text-danger"></i>{$lang['comm_del']}</a></li>
+				  </ul>
+				</div>
+HTML;
+		}
+		
+		if( $row['banned'] == 'yes' ) $group = "<span class=\"text-danger\">" . $lang['user_ban'] . "</span>";
+		else $group = $user_group[$row['user_group']]['group_name'];
+		
+		echo "
+        <tr>
+        <td><a href=\"?mod=editusers&action=edituser&id={$row['user_id']}\" target=\"_blank\">{$row['name']}</a></td>
+        <td class=\"text-center\">" . $row['ip'] . "</td>
+        <td class=\"text-center\">" . langdate( $langformatdatefull, $row['reg_date'] ) . "</td>
+        <td class=\"text-center\">" . langdate( $langformatdatefull, $row['lastdate'] ) . "</td>
+        <td class=\"text-center\">" . $news_link . "</td>
+        <td class=\"text-center\">" . $comms_link . "</td>
+        <td class=\"text-center\">" . $group . "</td>
+        </tr>";
+	}
+	
+	if( $i == 0 ) {
+		echo "<tr><td height=18 colspan=7><p align=center>{$lang['ip_empty']}</p></td></tr>";
+	}
+	
+	echo <<<HTML
+	  </tbody>
+	</table>
+  </div>
+</div>
+HTML;
+
+}
+
+if( $name != "" ) {
+	
+	echo <<<HTML
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['opt_iptoolsname']}
+  </div>
+  <div class="panel-body">
+
+HTML;
+	
+	$row = $db->super_query( "SELECT user_id, name, logged_ip FROM " . USERPREFIX . "_users WHERE name='" . $name . "'" );
+	
+	if( !isset($row['user_id']) ) {
+		
+		echo "<div class=\"text-center\"><b>" . $lang['user_nouser'] . "</b></div>";
+	
+	} else {
+			$ip_link = <<<HTML
+				<div class="btn-group">
+				<a href="#" target="_blank" data-toggle="dropdown" class="status-info">{$row['logged_ip']}</a>
+				  <ul class="dropdown-menu text-left">
+				   <li><a href="https://www.nic.ru/whois/?searchWord={$row['logged_ip']}" target="_blank"><i class="fa fa-eye position-left"></i> {$lang['ip_info']}</a></li>
+				   <li class="divider"></li>
+				   <li><a href="?mod=blockip&ip={$row['logged_ip']}"><i class="fa fa-trash-o position-left text-danger"></i>{$lang['ip_ban']}</a></li>
+				  </ul>
+				</div>
+HTML;
+		
+		echo $lang['user_name'] . " <b>" . $row['name'] . "</b><br /><br />" . $lang['opt_iptoollast'] . $ip_link."<br /><br />" . $lang['opt_iptoolcall'];
+		
+		$db->query( "SELECT ip FROM " . PREFIX . "_comments WHERE user_id = '{$row['user_id']}' GROUP BY ip" );
+		
+		$ip_list = array ();
+		
+		while ( $row = $db->get_array() ) {
+		
+			$ip_list[] = <<<HTML
+				<div class="btn-group">
+				<a href="#" target="_blank" data-toggle="dropdown" class="status-info">{$row['ip']}</a>
+				  <ul class="dropdown-menu text-left">
+				   <li><a href="https://www.nic.ru/whois/?searchWord={$row['ip']}" target="_blank"><i class="fa fa-eye position-left"></i> {$lang['ip_info']}</a></li>
+				   <li class="divider"></li>
+				   <li><a href="?mod=blockip&ip={$row['ip']}"><i class="fa fa-trash-o position-left text-danger"></i>{$lang['ip_ban']}</a></li>
+				  </ul>
+				</div>
+HTML;
+		}
+		
+		echo implode( ", ", $ip_list );
+	}
+	
+	echo <<<HTML
+   </div>
+</div>
+HTML;
+
+}
+
+echofooter();
+?>

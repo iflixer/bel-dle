@@ -5,9 +5,127 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: quote.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: comments quote
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1J2P2IgYlQ5KlR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dFRwWGVWZXJLcThwaHlMS3k4cC1wXW9wM1NxVkg4MHtweDhJS2VwMldTYWJwVC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tVHAgVlZiezo5OUkuOC15ODB7NVdhOVQtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVRwT1Nib1dLTCBWcChqKXA+WlpGLT5aPjZwM1NxVkg4MHtweDhJS2VwMldTYWJUdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHRUcDcgS3twalNJOHBLe3BiV1NWOGpWOElwXW9walNib1dLTCBWVHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0VHAxSy44OnBnYVNWODViIGJULS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1UcHp7ODpwalNZWTh5VntwZ2FTVjhUdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHRUKjlUVEtxKCFJOHFLeThJKCdYUTdRcmQxaGhIMmRIaCcpKXB9VAkgOGVJOFcocCJENzdDOU41TnBGWltwMVNXXUtJSTh5InApO1QJIDhlSThXcChwJ3JTamVWS1N5OnA1NTk1NTkncCk7VAlJSzgocCJEZWptS3lMcGVWVjhZYlYhInApO1RpVFRLcShwIUt7ezhWKCRfQWhuemgzN2YnYXs4V18gZXsgJ1ApcEpBcCEkX0FobnpoMzdmJ2F7OFdfIGV7ICdQcEpBcCRfQWhuemgzN2YnYXs4V18gZXsgJ1BwIXRwJEkuOF8uU0xLeV8gZXsgcClwfVQJSUs4cCgiOFdXU1ciKTtUaVRUJEtJcHRwS3t7OFYoJF8yaDdmJ0tJJ1ApcD9wS3lWd2UuKHAkXzJoN2YnS0knUHApcDpwWjtUJFlTSThwdHBwS3t7OFYoJF8yaDdmJ1lTSTgnUClwP3AkXzJoN2YnWVNJOCdQcDpwJyc7VFRLcSghJEtJKXBJSzgocCI4V1dTVyJwKTtUVEtxKHAkalN5cUtMZidlLi5TMF9qU1lZOHlWe18wb3tLMG9MJ1BwSkFwJFlTSThwdHQnYlknKXB9VFQJJGUuLlMwOElfVmVMe3B0cGVXV2VvKCdJS3dmZS5LTHl8e1ZvLjh8ai5le3t8SWVWZS1qU1lZOHlWVktZOHxJZVZlLWpTWVk4eVZhezhXfGpTeVY4eVY4SUtWZV0uOFAnLHAne2JleWZ7Vm8uOHxqLmV7e3xJZVZlLWF7OFdhVy58SWVWZS1hezhXeWVZOHxqU3lWOHlWOElLVmVdLjhQJyxwJ2JmZS5LTHl8e1ZvLjh8ai5le3tQJyxwJ2JXOGZqLmV7e1AnLHAnalNJOCcscCddVycscCd7VldTeUwnLHAnOFknLHAnYS4nLHAnLksnLHAnUy4nLHAnXScscCdhJyxwJ0snLHAneycscCcgVycpO1QJVAlLcShwJGF7OFdfTFdTYWJmJFk4WV04V19LSWYnYXs4V19MV1NhYidQUGYnZS4uUzBfYVcuJ1BwKXAkZS4uUzA4SV9WZUx7ZlBwdHAnZWYgVzhxfFZlV0w4Vnx7Vm8uOHxqLmV7e3xWS1YuOFAnO1QJS3EocCRhezhXX0xXU2FiZiRZOFldOFdfS0lmJ2F7OFdfTFdTYWInUFBmJ2UuLlMwX0tZZUw4J1BwKXAkZS4uUzA4SV9WZUx7ZlBwdHAnS1lMZntWby44fGouZXt7fHtXanxlLlZ8MEtJViB8IDhLTCBWUCc7VAlUCSRiZVd7OHB0cHk4MHBDZVd7ODFLLlY4VyhwJGUuLlMwOElfVmVMe3ApO1QJJGJlV3s4LVIwb3tLMG9McHRwVldhODtUCVRpcDguezhwfVQJJGJlV3s4cHRweTgwcENlV3s4MUsuVjhXKCk7VGlUVCRiZVd7OC1Se2VxOF9ZU0k4cHRwVldhODtUJGJlV3s4LVJXOFlTdzhfIFZZLnB0cHFlLns4O1RUS3EocCRZU0k4cCF0cCdiWSdwKXB9VFQJJFdTMHB0cCRJXS1Se2FiOFdfZ2E4V28oIjNocmhPN3BiU3tWX0tJLHBlYVZTVyxwVjg9VixwSWVWOHAxQUp4cCJwNXBDQWgxZHNwNXAiX2pTWVk4eVZ7cEdEaEFocEtJcHRwJ30kS0lpJyIpO1QJVAlLcXAoIUt7ezhWKCRXUzBmJ2JTe1ZfS0knUClwU1dwISRXUzBmJ2JTe1ZfS0knUClwSUs4KCI4V1dTVyIpO1RUCSRXUzBfeTgwe3B0cCRJXS1Se2FiOFdfZ2E4V28oIjNocmhPN3BlLi5TMF9qU1lZLHBlYmJXU3c4LHBlamo4e3twMUFKeHAicDVwQ0FoMWRzcDVwIl9iU3tWcHJoMTdwTUpkSHAicDVwQ0FoMWRzcDVwIl9iU3tWXzg9Vldle3BKSHAoInA1cENBaDFkc3A1cCJfYlN7VjVLSXQicDVwQ0FoMWRzcDVwIl9iU3tWXzg9VldlezV5ODB7X0tJKXBHRGhBaHBLSXQnfSRXUzBmJ2JTe1ZfS0knUGknIik7VAkkU2JWS1N5e3B0cHk4MHtfYjhXWUt7e0tTeSgkV1MwX3k4MHtmJ2Vqajh7eydQKTtUVAlLcXAoKCEkYXs4V19MV1NhYmYkWThZXThXX0tJZidhezhXX0xXU2FiJ1BQZidlLi5TMF9lSUlqJ1BwZXlJcEt7ezhWKCRTYlZLU3l7ZiRZOFldOFdfS0lmJ2F7OFdfTFdTYWInUFApcGV5SXAkU2JWS1N5e2YkWThZXThXX0tJZidhezhXX0xXU2FiJ1BQcCF0cD4pcFNXcChLe3s4VigkU2JWS1N5e2YkWThZXThXX0tJZidhezhXX0xXU2FiJ1BQKXBleUlwJFNiVktTeXtmJFk4WV04V19LSWYnYXs4V19MV1NhYidQUHB0dHBOKSlwSUs4KCI4V1dTVyIpO1RUCUtxcCghJFdTMF95ODB7ZidlLi5TMF9qU1lZJ1BwU1dwISRXUzBfeTgwe2YnZWJiV1N3OCdQKXB9VAkJSUs4KCI4V1dTVyIpO1QJaVQJVAkkV1MwZidJZVY4J1BwdHB7VldWU1ZLWTgoJFdTMGYnSWVWOCdQKTtUVGlwOC57OHB9VAkkV1MwcHRwJEldLVJ7YWI4V19nYThXbygiM2hyaE83cFk1alN5Vjh5VnBRM3BWOD1WLHBZNWpXOGVWOElfZVZwUTNwSWVWOCxwYTV5ZVk4cFEzcGVhVlNXcDFBSnhwInA1cHozaEFDQWgxZHNwNSJfalN5dzhXe2VWS1N5e19ZOHt7ZUw4e3BZcE1KZEhwInA1cHozaEFDQWgxZHNwNSJfalN5dzhXe2VWS1N5X2F7OFd7cGphcEpIcFk1alN5dzhXe2VWS1N5X0tJcHRwamE1alN5dzhXe2VWS1N5X0tJcHJoMTdwTUpkSHAicDVwejNoQUNBaDFkc3A1cCJfYXs4V3twYXBKSHBZNXs4eUk4V19LSXB0cGE1YXs4V19LSXBHRGhBaHBZNUtJcHRwJ30kS0lpJ3BRSFhwamE1YXs4V19LSXB0J30kWThZXThXX0tJZidhezhXX0tJJ1BpJyIpO1RpVFRLcXAoIUt7ezhWKCRXUzBmJ1Y4PVYnUClwSkFwISRXUzBmJ1Y4PVYnUClwSUs4KHAiOFdXU1cicCk7VFRLcShwISRqU3lxS0xmJ2UuLlMwX2pTWVk4eVZ7XzBve0swb0wnUHBRSFhwJFlTSThwIXRwJ2JZJ3ApcH1UCVQJJFY4PVZwdHAkYmVXezgtUkk4alNJOGtrT1NJOHsocCRXUzBmJ1Y4PVYnUCxwcWUuezhwKTtUCSRWOD1WcHRwe1ZXX1c4Yi5lajgocCImIzZVOyIscCI6IixwJFY4PVZwKTtUCSRWOD1WcHRwe1ZXX1c4Yi5lajgocCImI0VOOyIscCJmIixwJFY4PVZwKTtUCSRWOD1WcHRwe1ZXX1c4Yi5lajgocCImI0VbOyIscCJQIixwJFY4PVZwKTtUCSRWOD1WcHRwe1ZXX1c4Yi5lajgocCImI04+WzsiLHAifSIscCRWOD1WcCk7VAkkVjg9VnB0cHtWV19XOGIuZWo4KHAiJiNbRTsiLHAiJyIscCRWOD1WcCk7VAkkVjg9VnB0cCJmZ2FTVjh0fSRXUzBmJ2VhVlNXJ1BpUH0kVjg9VmlmOWdhU1Y4UCI7VFRpcDguezhwfVRUCSRWOD1WcHRwVzhZU3c4X2dhU1Y4e19xV1NZX1Y4PVYoe1ZXS2J7LmV7IDh7KCRXUzBmJ1Y4PVYnUCkpO1QJJFY4PVZwdHAidklLd3BqLmV7e3RcImdhU1Y4X10uU2ptcHlTeWpTeVY4eVY4SUtWZV0uOFwiUnZJS3dwai5le3t0XCJWS1YuOF9nYVNWOFwicEllVmUtalNZWTh5VlZLWTh0XCJ9JFdTMGYnSWVWOCdQaVwicEllVmUtalNZWTh5VmF7OFd0XCJ9JFdTMGYnZWFWU1cnUGlcIlIiNXBJS3FxLmV5TEllVjgoJGpTeXFLTGYnVktZOHtWZVliX2pTWVk4eVYnUCxwJFdTMGYnSWVWOCdQKTUiLHBwfSRXUzBmJ2VhVlNXJ1BpcH0kLmV5TGYnYXs4V197ZW97J1BpdjlJS3dSdklLd3BqLmV7e3RcImdhU1Y4XCJSdklLd3BqLmV7e3RcImdhU1Y4X11TSW9walN5Vjh5VjhJS1ZlXS44XCJSIjVWV0tZKCRWOD1WKTUidjlJS3dSdjlJS3dSdjlJS3dSIjtUVAkkYmVXezgtUjBve0swb0xwdHBWV2E4O1QJJFY4PVZwdHAkYmVXezgtUkk4alNJOGtrT1NJOHsoZUlJey5leyA4eygkVjg9VikscFZXYTgscFZXYTgpO1QJVAkkalNheVZfe1ZlV1ZwdHB7YV17VldfalNheVYoJFY4PVYscCJmZ2FTVjgiKTtUCSRqU2F5Vl84eUlwdHB7YV17VldfalNheVYoJFY4PVYscCJmOWdhU1Y4UCIpO1RUCUtxcCgkalNheVZfe1ZlV1ZwZXlJcCRqU2F5Vl97VmVXVnB0dHAkalNheVZfOHlJKXB9VAkJJFY4PVZwdHB7VldfS1c4Yi5lajgoImZnYVNWOFAiLHAiJi5WO0lLd3BqLmV7e3RcImdhU1Y4XCImTFY7IixwJFY4PVYpO1QJCSRWOD1WcHRwYlc4TF9XOGIuZWo4KCIjXGZnYVNWOHQoNSo/KVxQI0siLHAiJi5WO0lLd3BqLmV7e3RcIlZLVi44X2dhU1Y4XCImTFY7fSQuZXlMZidLX2dhU1Y4J1BpcFxcTiYuVjs5SUt3JkxWOyYuVjtJS3dwai5le3t0XCJnYVNWOFwiJkxWOyIscCRWOD1WKTtUCQkkVjg9VnB0cHtWV19LVzhiLmVqOCgiZjlnYVNWOFAiLHAiJi5WOzlJS3cmTFY7IixwJFY4PVYpO1QJaVRUaVRUVEtxcCh7VldLYlN7cChwJFY4PVYscCJmIEtJOCJwKXAhdHRwcWUuezhwKXB9VAlUCSRWOD1WcHRwYlc4TF9XOGIuZWo4X2plLi5dZWptcChwIiNcZiBLSTgoNSo/KVxQKDUrPylcZjkgS0k4XFAjS3siLHBUCQlxYXlqVktTeXAoJFllVmogOHspcGF7OHAoJFk4WV04V19LSSxwJGF7OFdfTFdTYWIpcH1UCQkJVAkJCSRZZVZqIDh7Zk5QcHRwe1ZXX1c4Yi5lajgoZVdXZW8oInQiLHAicCIpLHAiIixwJFllVmogOHtmTlApO1QJCQkkWWVWaiA4e2Y+UHB0cCRZZVZqIDh7Zj5QO1RUCQkJS3EocCRZZVZqIDh7Zk5QcClwfVQJCQkJVAkJCQkkTFdTYWJ7cHRwOD1iLlNJOChwJywnLHAkWWVWaiA4e2ZOUHApO1RUCQkJCUtxKHBLeV9lV1dlbyhwJFk4WV04V19LSWYnYXs4V19MV1NhYidQLHAkTFdTYWJ7cClwSkFwJFk4WV04V19LSWYnYXs4V19MV1NhYidQcHR0cCJOIilwfVQJCQkJCVc4VmFXeXAkWWVWaiA4e2ZaUDtUCQkJCWlwOC57OHBXOFZhV3lwIiI7VAkJCQlUCQkJaXA4Lns4cH1UCQkJCVQJCQkJS3EocCRhezhXX0xXU2FiZiRZOFldOFdfS0lmJ2F7OFdfTFdTYWInUFBmJ2UuLlMwXyBLSTgnUHApcFc4VmFXeXAkWWVWaiA4e2ZaUDtwOC57OHBXOFZhV3lwIiI7VAkJCQlUCQkJaVRUCWkscCRWOD1WcCk7VAlUaVRUOGogU3AkVjg9VjtUVD9S';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdWZ3lbd21JVE5zIEZSNWtBOTRKU3Z1MXFPcD42eF1MSGZiMm5yY3tVfThRWEs9aTBqCmhsdG96PDMvRVlaVy5NQ0RQN0JkR2VhJywndHFuM3ZrZAoxWGg0Pi5CUi83T288S0ZmQyAyNU1iZ05bcEdRTFlzOHtlQURpeH13Y1pFVj15VWpTejltMHJsSlBIXVQ2SVdhdScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+	die ("error");
+}
+
+$id = isset($_GET['id']) ? intval( $_GET['id'] ) : 0;
+$mode =  isset($_GET['mode']) ? $_GET['mode'] : '';
+
+if(!$id) die( "error" );
+
+if( $config['allow_comments_wysiwyg'] OR $mode =='pm') {
+
+	$allowed_tags = array('div[align|style|class|data-commenttime|data-commentuser|contenteditable]', 'span[style|class|data-userurl|data-username|contenteditable]', 'p[align|style|class]', 'pre[class]', 'code', 'br', 'strong', 'em', 'ul', 'li', 'ol', 'b', 'u', 'i', 's', 'hr');
+	
+	if( $user_group[$member_id['user_group']]['allow_url'] ) $allowed_tags[] = 'a[href|target|style|class|title]';
+	if( $user_group[$member_id['user_group']]['allow_image'] ) $allowed_tags[] = 'img[style|class|src|alt|width|height]';
+	
+	$parse = new ParseFilter( $allowed_tags );
+	$parse->wysiwyg = true;
+	
+} else {
+	$parse = new ParseFilter();
+}
+
+$parse->safe_mode = true;
+$parse->remove_html = false;
+
+if( $mode != 'pm' ) {
+
+	$row = $db->super_query("SELECT post_id, autor, text, date FROM " . PREFIX . "_comments WHERE id = '{$id}'");
+	
+	if (!isset($row['post_id']) or !$row['post_id']) die("error");
+
+	$row_news = $db->super_query("SELECT allow_comm, approve, access FROM " . PREFIX . "_post LEFT JOIN " . PREFIX . "_post_extras ON (" . PREFIX . "_post.id=" . PREFIX . "_post_extras.news_id) WHERE id='{$row['post_id']}'");
+	$options = news_permission($row_news['access']);
+
+	if ((!$user_group[$member_id['user_group']]['allow_addc'] and isset($options[$member_id['user_group']]) and $options[$member_id['user_group']] != 2) or (isset($options[$member_id['user_group']]) and $options[$member_id['user_group']] == 1)) die("error");
+
+	if (!$row_news['allow_comm'] or !$row_news['approve']) {
+		die("error");
+	}
+	
+	$row['date'] = strtotime($row['date']);
+
+} else {
+	$row = $db->super_query("SELECT m.content AS text, m.created_at AS date, u.name AS autor FROM " . USERPREFIX ."_conversations_messages m JOIN " . USERPREFIX ."_conversation_users cu ON m.conversation_id = cu.conversation_id LEFT JOIN " . USERPREFIX . "_users u ON m.sender_id = u.user_id WHERE m.id = '{$id}' AND cu.user_id ='{$member_id['user_id']}'");
+}
+
+if (!isset($row['text']) OR !$row['text']) die( "error" );
+
+if( !$config['allow_comments_wysiwyg'] AND $mode != 'pm' ) {
+	
+	$text = $parse->decodeBBCodes( $row['text'], false );
+	$text = str_replace( "&#58;", ":", $text );
+	$text = str_replace( "&#91;", "[", $text );
+	$text = str_replace( "&#93;", "]", $text );
+	$text = str_replace( "&#123;", "{", $text );
+	$text = str_replace( "&#39;", "'", $text );
+	$text = "[quote={$row['autor']}]{$text}[/quote]";
+
+} else {
+
+	$text = remove_quotes_from_text(stripslashes($row['text']));
+	$text = "<div class=\"quote_block noncontenteditable\"><div class=\"title_quote\" data-commenttime=\"{$row['date']}\" data-commentuser=\"{$row['autor']}\">". difflangdate($config['timestamp_comment'], $row['date']).",  {$row['autor']} {$lang['user_says']}</div><div class=\"quote\"><div class=\"quote_body contenteditable\">".trim($text)."</div></div></div>";
+
+	$parse->wysiwyg = true;
+	$text = $parse->decodeBBCodes(addslashes($text), true, true);
+	
+	$count_start = substr_count($text, "[quote");
+	$count_end = substr_count($text, "[/quote]");
+
+	if ($count_start and $count_start == $count_end) {
+		$text = str_ireplace("[quote]", "&lt;div class=\"quote\"&gt;", $text);
+		$text = preg_replace("#\[quote=(.*?)\]#i", "&lt;div class=\"title_quote\"&gt;{$lang['i_quote']} \\1&lt;/div&gt;&lt;div class=\"quote\"&gt;", $text);
+		$text = str_ireplace("[/quote]", "&lt;/div&gt;", $text);
+	}
+
+}
+
+
+if (stripos ( $text, "[hide" ) !== false ) {
+	
+	$text = preg_replace_callback ( "#\[hide(.*?)\](.+?)\[/hide\]#is", 
+		function ($matches) use ($member_id, $user_group) {
+			
+			$matches[1] = str_replace(array("=", " "), "", $matches[1]);
+			$matches[2] = $matches[2];
+
+			if( $matches[1] ) {
+				
+				$groups = explode( ',', $matches[1] );
+
+				if( in_array( $member_id['user_group'], $groups ) OR $member_id['user_group'] == "1") {
+					return $matches[0];
+				} else return "";
+				
+			} else {
+				
+				if( $user_group[$member_id['user_group']]['allow_hide'] ) return $matches[0]; else return "";
+				
+			}
+
+	}, $text );
+	
+}
+
+echo $text;
+
+?>

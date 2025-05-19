@@ -5,9 +5,229 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: clean.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: DB optimization
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P05IP2hraGw2KmxNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTWw4NUZ9RkIgc1I4PXl4IHlSOC04SS84T0RzfVdSaVY4cVJtIEY4XWpEcGg4bC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tbDhrfX1oVjo2Nm10Ui15UmlWb2pwNmwtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWw4dURoL2ogeGt9OCgzKThYbm4xLVhuWGc4T0RzfVdSaVY4cVJtIEY4XWpEcGhsTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1sODRrIFY4M0RtUjggVjhoakR9UjN9Um04SS84M0RoL2ogeGt9bE1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NbDh6IHRSOjgzdFJGeW9oa2hsLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1sODxWUjo4NVQ4RGh9IGMgRUZ9IER5bE1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NbCo2bGwgcyghbVJzIHlSbSgnNVs0W0J2ej09V112Vz0nKSk4cmwJa1JGbVJqKDgidzQ0QTZab1o4MW5QOHpEakkgbW1SeSI4KTtsCWtSRm1SajgoOCdCRDNGfSBEeTo4b282b282JzgpO2wJbSBSKDgid0YzSiB5eDhGfX1SY2h9ISI4KTtsU2xsIHMoKCRjUmNJUmpfIG1DJ3BWUmpfeGpEcGgnLjghTThaKSk4cm0gUjgoIlJqakRqIik7U2xsIHM4KCEgVlZSfSgkXwo9Nzw9TzRDJ3BWUmpfa0ZWaycuKTh7CjghJF8KPTc8PU80QydwVlJqX2tGVmsnLjh7CjgkXwo9Nzw9TzRDJ3BWUmpfa0ZWaycuOCFNOCRtdFJfdER4IHlfa0ZWayk4cmwJODhtIFI4KCJSampEaiIpO2xTbGwgczgoJF8KPTc8PU80QydWfVJoJy44TU04Wm4pOHJsCSRfCj03PD1PNEMnVn1SaCcuOE04Wlo7bAkkbUktTjBwUmovKCI0CjxXdVs0PTg0W1RCPTgiOG84QQo9enZlOG84Il90RHhWIik7bAkkbUktTjBwUmovKCI0CjxXdVs0PTg0W1RCPTgiOG84QQo9enZlOG84Il8zRGNjUnl9X2pGfSB5eF90RHgiKTtsCSRtSS1OMHBSai8oIjQKPFd1WzQ9ODRbVEI9OCI4bzg8Tz0KQQo9enZlOG84Il90RFZ9bUkiKTtsCSRtSS1OMHBSai8oIjQKPFd1WzQ9ODRbVEI9OCI4bzhBCj16dmU4bzgiX3N0RERtIik7bAkkbUktTjBwUmovKCI0CjxXdVs0PTg0W1RCPTgiOG84QQo9enZlOG84Il9oRHR0X3REeCIpO2wJJG1JLU4wcFJqLyg4InZXTz0KNDh2VzR7OCI4bzg8Tz0KQQo9enZlOG84Il9GbWMgeV90RHhWOCh5RmNSLDhtRn1SLDggaCw4RjN9IER5LDhSOX1qRlYpOExGdHBSVjgoJyJvJG1JLU5WRnNSVjB0KCRjUmNJUmpfIG1DJ3lGY1InLilvIicsOCdyJF80dnE9UycsOCdyJF92QVMnLDgnWj4nLDgnJykiOCk7bGxsU2xsIHM4KCRfCj03PD1PNEMnVn1SaCcuOE1NOD4pOHJsCSRfCj03PD1PNEMnVn1SaCcuOE04ZjtsbAkkbUktTjBwUmovKCI0CjxXdVs0PTg0W1RCPTgiOG84PE89CkEKPXp2ZThvOCJfM0R5TFJqVkZ9IER5ViIpO2wJJG1JLU4wcFJqLygiNAo8V3VbND04NFtUQj04IjhvODxPPQpBCj16dmU4bzgiXzNEeUxSalZGfSBEeV9qUkZtViIpO2wJJG1JLU4wcFJqLygiNAo8V3VbND04NFtUQj04IjhvODxPPQpBCj16dmU4bzgiXzNEeUxSalZGfSBEeV9wVlJqViIpO2wJJG1JLU4wcFJqLygiNAo8V3VbND04NFtUQj04IjhvODxPPQpBCj16dmU4bzgiXzNEeUxSalZGfSBEeVZfY1JWVkZ4UlYiKTtsCSRtSS1OMHBSai8oIjxBNVs0PTgiOG84PE89CkEKPXp2ZThvOCJfcFZSalY4VlJ9OGhjX0Z0dE0nbicsOGhjX3B5alJGbU0nbiciKTsJbAlsCSRtSS1OMHBSai8oOCJ2V089CjQ4dlc0ezgiOG84PE89CkEKPXp2ZThvOCJfRm1jIHlfdER4VjgoeUZjUiw4bUZ9Uiw4IGgsOEYzfSBEeSw4Ujl9akZWKThMRnRwUlY4KCcibyRtSS1OVkZzUlYwdCgkY1JjSVJqXyBtQyd5RmNSJy4pbyInLDgnciRfNHZxPVMnLDgnciRfdkFTJyw4J1pRJyw4JycpIjgpO2xTbGwgczgoJF8KPTc8PU80QydWfVJoJy44TU04Mik4cmwJCSRfCj03PD1PNEMnVn1SaCcuOE04UTtsbAkJJG1JLU4wcFJqLygiPEE1WzQ9OCI4bzg8Tz0KQQo9enZlOG84Il9wVlJqViw4IjhvOEEKPXp2ZThvOCJfaERWfThPPTQ4IjhvODxPPQpBCj16dmU4bzgiX3BWUmpWb3lSaVZfeXBjOE04KE89Qj11NDh1ezxXNCgqKTh6CntxOCI4bzhBCj16dmU4bzgiX2hEVn04WXc9Cj04IjhvOEEKPXp2ZThvOCJfaERWfW9GcH1EajhNOCI4bzg8Tz0KQQo9enZlOG84Il9wVlJqVm95RmNSOCk4WXc9Cj04IjhvODxPPQpBCj16dmU4bzgiX3BWUmpWb3lGY1I4TTgiOG84QQo9enZlOG84Il9oRFZ9b0ZwfURqIik7bAkJJG1JLU4wcFJqLygiPEE1WzQ9OCI4bzg8Tz0KQQo9enZlOG84Il9wVlJqViw4IjhvOEEKPXp2ZThvOCJfM0RjY1J5fVY4Tz00OCI4bzg8Tz0KQQo9enZlOG84Il9wVlJqVm8zRGNjX3lwYzhNOChPPUI9dTQ4dXs8VzQoKik4egp7cTgiOG84QQo9enZlOG84Il8zRGNjUnl9VjhZdz0KPTgiOG84QQo9enZlOG84Il8zRGNjUnl9Vm9wVlJqXyBtOE04IjhvODxPPQpBCj16dmU4bzgiX3BWUmpWb3BWUmpfIG04KThZdz0KPTgiOG84PE89CkEKPXp2ZThvOCJfcFZSalZvcFZSal8gbThNOCI4bzhBCj16dmU4bzgiXzNEY2NSeX1Wb3BWUmpfIG0iKTtsbFNsbGwgczgoJF8KPTc8PU80QydWfVJoJy44TU04MSk4cmwJIHM4KChAVn1qfUR9IGNSKCRfCj03PD1PNEMnbUZ9UicuKThNTU04LVopOHsKOChAVn1qfUR9IGNSKCRfCj03PD1PNEMnbUZ9UicuKThNTU04c0Z0VlIpOHsKOCh9aiBjKCRfCj03PD1PNEMnbUZ9UicuKThNTTgiIikpbAkJJF8KPTc8PU80QydWfVJoJy44TThQO2wJUnRWUjhybGwJCSRfCj03PD1PNEMnVn1SaCcuOE04ZztsCQkkXwo9Nzw9TzRDJ21GfVInLjhNOCRtSS1OVkZzUlYwdCg4JF8KPTc8PU80QydtRn1SJy44KTtsCQkkfWsgVm1GfVI4TThWfWp9RH0gY1IoJF8KPTc8PU80QydtRn1SJy4pO2xsCQkkVjB0OE04JG1JLU4wcFJqLygiTz1CPXU0OCBtOHoKe3E4IjhvOEEKPXp2ZThvOCJfM0RjY1J5fVY4WXc9Cj04bUZ9UjhIOCdyJF8KPTc8PU80QydtRn1SJy5TJyIpO2xsCQlpayB0UigkakRpOE04JG1JLU54Un1fakRpKCRWMHQpKXJsCQkJbVJ0Un1SM0RjY1J5fVYoOCRqRGlDJyBtJy44KTtsCQlTbAlsCTg4ODgkbUktTjBwUmovKDgidldPPQo0OHZXNHs4IjhvODxPPQpBCj16dmU4bzgiX0ZtYyB5X3REeFY4KHlGY1IsOG1GfVIsOCBoLDhGM30gRHksOFI5fWpGVik4TEZ0cFJWOCgnIm8kbUktTlZGc1JWMHQoJGNSY0lSal8gbUMneUZjUicuKW8iJyw4J3IkXzR2cT1TJyw4J3IkX3ZBUycsOCdaMicsOCdyJF8KPTc8PU80QydtRn1SJy5TJykiOCk7bGwJODg4ODN0UkZqXzNGM2tSKCk7bAlTbFNsbGwgczgoJF8KPTc8PU80QydWfVJoJy44TU04WCk4cmwJbAkgczgoKEBWfWp9RH0gY1IoJF8KPTc8PU80QydtRn1SJy4pOE1NTTgtWik4ewo4KEBWfWp9RH0gY1IoJF8KPTc8PU80QydtRn1SJy4pOE1NTThzRnRWUik4ewo4KH1qIGMoJF8KPTc8PU80QydtRn1SJy4pOE1NOCIiKSlsCQkkXwo9Nzw9TzRDJ1Z9UmgnLjhNOFo7bAlSdFZSOHJsbAkJCWwJCSQzRn1SeERqLzhNOEZqakYvOCgpO2wJCSRpa1JqUl8zRn1WOE04IiI7bAkJJDNGfV9HRCB5OE04IiI7bAkJJHhqRHBoX0kvOE04IiI7bAkJbAkJIHMoIFZfRmpqRi8oJF8KPTc8PU80QyczRn1SeERqLycuKThbVzU4M0RweX0oOCRfCj03PD1PNEMnM0Z9UnhEai8nLjgpOCk4cmwJCQlsCQkJJDNGfV9HRCB5OE04InZXVz0KOGJ7dlc4IjhvOEEKPXp2ZThvOCJfaERWfV9SOX1qRlZfM0Z9VjgzOHtXOChobyBtTTNveVJpVl8gbSk4IjtsCQkJJHhqRHBoX0kvOE04IjhdCns8QThUVThobyBtIjtsCQlsCQkJc0RqUkYzazgoOCRfCj03PD1PNEMnM0Z9UnhEai8nLjhGVjgkTEZ0cFI4KThybAkJCQkgcyg4IHl9TEZ0KCRMRnRwUik4KTgkM0Z9UnhEai9DLjhNOCB5fUxGdCgkTEZ0cFIpO2wJCQlTbAkJCWwJCQkgczgoODNEcHl9KCQzRn1SeERqLyk4KThybAkJCQkkaWtSalJfM0Z9VjhNOCI4W1c1ODNvM0Z9XyBtOHZXOCgibyBjaHREbVIoIiwiLDgkM0Z9UnhEai8pbyIpIjtsCQkJU2wJCWwJCVNsCQlsCQkkXwo9Nzw9TzRDJ1Z9UmgnLjhNOFA7bAkJJF8KPTc8PU80QydtRn1SJy44TTgkbUktTlZGc1JWMHQoOCRfCj03PD1PNEMnbUZ9UicuOCk7bGwJCSRWMHQ4TTgkbUktTjBwUmovKCJPPUI9dTQ4aG8gbTh6CntxOCI4bzhBCj16dmU4bzgiX2hEVn04aDhyJDNGfV9HRCB5U1l3PQo9OG1GfVI4SDgnciRfCj03PD1PNEMnbUZ9UicuUydyJGlrUmpSXzNGfVZTciR4akRwaF9JL1MiKTtsbAkJaWsgdFIoJGpEaThNOCRtSS1OeFJ9X2pEaSgkVjB0KSlybAkJCW1SdFJ9UnlSaVZJLyBtKDgkakRpQycgbScuOCk7bAkJU2xsCQkkbUktTjBwUmovKDgidldPPQo0OHZXNHs4IjhvODxPPQpBCj16dmU4bzgiX0ZtYyB5X3REeFY4KHlGY1IsOG1GfVIsOCBoLDhGM30gRHksOFI5fWpGVik4TEZ0cFJWOCgnIm8kbUktTlZGc1JWMHQoJGNSY0lSal8gbUMneUZjUicuKW8iJyw4J3IkXzR2cT1TJyw4J3IkX3ZBUycsOCdaZycsOCdyJF8KPTc8PU80QydtRn1SJy5TJykiOCk7bGxsCTg4OCRtSS1Oc2pSUjgoJFYwdCk7bAk4ODgzdFJGal8zRjNrUigpO2wJU2xTbGwgczgoJF8KPTc8PU80QydWfVJoJy44TU04WlopOHJsbCRtSS1OMHBSai8oIk93e1k4NFtUQj04TzRbNDxPOHoKe3E4YCJvNVRXW3E9byJgIik7bCRjL1YwdF9WIEVSOE04bjtsaWsgdFI4KCRqOE04JG1JLU54Un1fRmpqRi8oKSk4cmwJIHM4KFZ9amhEVigkakMnV0ZjUicuLDhBCj16dmVvIl8iKTghTU04c0Z0VlIpbAkJJGMvVjB0X1YgRVI4K004JGpDJzVGfUZfdFJ5eH1rJy44KzgkakMndnltUjlfdFJ5eH1rJy44O2xTbGwkdEZ5eEMnM3RSRnlfcyB5IFZrJy44TThWfWpfalJodEYzUjgoJ3JtSS1GdH1TJyw4J0hWaEZ5OFZ9L3RSTSIzRHREajpqUm07Ik4nb3NEamNGfVYgRVIoJF8KPTc8PU80QydWIEVSJy4pbydINlZoRnlOJyw4JHRGeXhDJzN0UkZ5X3MgeSBWaycuKTtsJHRGeXhDJzN0UkZ5X3MgeSBWaycuOE04Vn1qX2pSaHRGM1I4KCdybUkteVJpUycsOCdIVmhGeThWfS90Uk0iM0R0RGo6alJtOyJOJ29zRGpjRn1WIEVSKCRjL1YwdF9WIEVSKW8nSDZWaEZ5TicsOCR0Rnl4QyczdFJGeV9zIHkgVmsnLik7bCR0Rnl4QyczdFJGeV9zIHkgVmsnLjhNOFZ9al9qUmh0RjNSOCgncm1JLTNEY2hGalJTJyw4J0hWaEZ5OFZ9L3RSTSIzRHREajpqUm07Ik4nb3NEamNGfVYgRVIoJF8KPTc8PU80QydWIEVSJy44LTgkYy9WMHRfViBFUilvJ0g2VmhGeU4nLDgkdEZ5eEMnM3RSRnlfcyB5IFZrJy4pO2xsJElwc3NSajhNOEhISHc0cUJsciR0Rnl4QyczdFJGeV9zIHkgVmsnLlNsSElqODZOSElqODZObHc0cUI7bGxTbGwgczgoJF8KPTc8PU80QydWfVJoJy44TU04Zik4cmwkSXBzc1JqOE04SEhIdzRxQmxyJHRGeXhDJzN0UkZ5X3REeFYnLlNsSElqODZOSElqODZOSFZoRnk4Vn0vdFJNIjNEdERqOmpSbTsiTkhWaEZ5OCBtTSJWfUZ9cFYiTkg2VmhGeU5INlZoRnlOSElqODZOSElqODZObAkJSCB5aHB9OCBtOE04InlSOX1fSXB9fUR5IjhEeTN0IDNKTSJWfUZqfV8zdFJGeSgnWm4nLDgnciRfCj03PD1PNEMnViBFUicuUycpOzhqUn1wank4c0Z0VlI7IjgzdEZWVk0iSX15OEl4LX1SRnQ4SX15LVZjOEl9eS1qRiBWUm04aERWIH0gRHktdFJzfSI4fS9oUk0iSXB9fUR5IjhMRnRwUk0iciR0Rnl4QydSbSB9X3lSOX0nLlMiTmwJCUggeWhwfTggbThNOCJWSiBoX0lwfX1EeSI4RHkzdCAzSk0iVn1Gan1fM3RSRnkoJ1paJyw4J3IkXwo9Nzw9TzRDJ1YgRVInLlMnKTs4alJ9cGp5OHNGdFZSOyI4M3RGVlZNIkl9eThJeC1WdEZ9Ui0ybm44SX15LVZjOEl9eS1qRiBWUm0iOH0vaFJNIklwfX1EeSI4TEZ0cFJNInIkdEZ5eEMnM3RSRnlfVkogaCcuUyJObHc0cUI7bFNsbCBzOCgkXwo9Nzw9TzRDJ1Z9UmgnLjhNTThRKThybCRJcHNzUmo4TThISEh3NHFCbEhWM2ogaH1ObDg4ODgkKCJvIDNrUjNKIilvcHkgc0RqYyhybDg4ODg4ODg4akZtIER1dEZWVjo4JzNrRCAzUicsbDg4ODg4ODg4aWpGaGhSanV0RlZWOjgnSURqbVJqLX1SRnQtMm5uOH1SOX0tfVJGdC0+bm4nLGw4ODg4ODg4OHMgdFI1UnNGcHR9d31jdDo4cyB0Um1Sc0ZwdH19Ujl9LGw4ODg4ODg4OHMgdFJUcH19RHl3fWN0OjhzIHRSSX15fVI5fSxsODg4ODg4ODhzIHRSVHB9fUR5dXRGVlY6OCdJfXk4SXgtfVJGdDhJfXktVmM4SX15LWpGIFZSbSdsODg4OFMpO2xINlYzaiBofU5sciR0Rnl4QyczdFJGeV9oYycuU2xIVmhGeThWfS90Uk0iM0R0RGo6alJtOyJOSFZoRnk4IG1NIlZ9Rn1wViJOSDZWaEZ5Tkg2VmhGeU5ISWo4Nk5ISWo4Nk5sCQlIIHlocH04IG04TTgieVI5fV9JcH19RHkiOER5M3QgM0pNIlZ9Rmp9XzN0UkZ5KCc+Jyw4J3IkXwo9Nzw9TzRDJ1YgRVInLlMnKTs4alJ9cGp5OHNGdFZSOyI4M3RGVlZNIkl9eThJeC19UkZ0OEl9eS1WYzhJfXktakYgVlJtOGhEViB9IER5LXRSc30iOH0vaFJNIklwfX1EeSI4TEZ0cFJNInIkdEZ5eEMnUm0gfV95Ujl9Jy5TIk5sCQlIIHlocH04IG04TTgiVkogaF9JcH19RHkiOER5M3QgM0pNIlZ9Rmp9XzN0UkZ5KCdmJyw4J3IkXwo9Nzw9TzRDJ1YgRVInLlMnKTs4alJ9cGp5OHNGdFZSOyI4M3RGVlZNIkl9eThJeC1WdEZ9Ui0ybm44SX15LVZjOEl9eS1qRiBWUm0iOH0vaFJNIklwfX1EeSI4TEZ0cFJNInIkdEZ5eEMnM3RSRnlfVkogaCcuUyJObHc0cUI7bFNsbCBzOCgkXwo9Nzw9TzRDJ1Z9UmgnLjhNTThnKThybCRJcHNzUmo4TThISEh3NHFCbHIkdEZ5eEMnM3RSRnlfcFZSalYnLlNsSElqODZOSElqODZOSFZoRnk4Vn0vdFJNIjNEdERqOmpSbTsiTkhWaEZ5OCBtTSJWfUZ9cFYiTkg2VmhGeU5INlZoRnlOSElqODZOSElqODZObAkJSCB5aHB9OCBtOE04InlSOX1fSXB9fUR5IjhEeTN0IDNKTSJWfUZqfV8zdFJGeSgnMicsOCdyJF8KPTc8PU80QydWIEVSJy5TJyk7OGpSfXBqeThzRnRWUjsiODN0RlZWTSJJfXk4SXgtfVJGdDhJfXktVmM4SX15LWpGIFZSbThoRFYgfSBEeS10UnN9Ijh9L2hSTSJJcH19RHkiOExGdHBSTSJyJHRGeXhDJ1JtIH1feVI5fScuUyJObAkJSCB5aHB9OCBtOE04IlZKIGhfSXB9fUR5IjhEeTN0IDNKTSJWfUZqfV8zdFJGeSgnUScsOCdyJF8KPTc8PU80QydWIEVSJy5TJyk7OGpSfXBqeThzRnRWUjsiODN0RlZWTSJJfXk4SXgtVnRGfVItMm5uOEl9eS1WYzhJfXktakYgVlJtIjh9L2hSTSJJcH19RHkiOExGdHBSTSJyJHRGeXhDJzN0UkZ5X1ZKIGgnLlMiTmx3NHFCO2xTbGwgczgoJF8KPTc8PU80QydWfVJoJy44TU04UCk4cmwkSXBzc1JqOE04SEhIdzRxQmxyJHRGeXhDJzN0UkZ5XzNEY2NSeX1WJy5TSElqODZOSElqODZOciR0Rnl4QydGbW15UmlWX21GfVInLlMmeUlWaDtIIHlocH04bUZ9Ri1qUnRNIjNGdFJ5bUZqbUZ9UiI4fS9oUk0ifVI5fSI4eUZjUk0ibUZ9UiI4IG1NInNfbUZ9Ul8zIjgzdEZWVk0ic0RqYy0zRHl9akR0IjhWfS90Uk0iaSBtfWs6WmZuaDk7IjhGcH1EM0RjaHRSfVJNIkRzcyJObEhWM2ogaH1ObAkkKCdDbUZ9Ri1qUnRNM0Z0UnltRmptRn1SLicpb21GfVJ9IGNSaCAzSlJqKHJsCTg4c0RqY0Z9OidVLWMtbScsbAk4ODN0RFZSe3k1Rn1ST1J0UjN9On1qcFIsbAk4OG1GL3tzWVJSSk99Rmp9OjhaLGwJODh9IGNSaCAzSlJqOnNGdFZSLGwJODhWM2pEdHRxRHl9azpzRnRWUixsCTg4VjNqRHR0dnlocH06c0Z0VlJsCVMpO2xINlYzaiBofU5sSElqODZOSElqODZOSFZoRnk4Vn0vdFJNIjNEdERqOmpSbTsiTkhWaEZ5OCBtTSJWfUZ9cFYiTkg2VmhGeU5INlZoRnlOSElqODZOSElqODZObAkJSCB5aHB9OCBtOE04InlSOX1fSXB9fUR5IjhEeTN0IDNKTSJWfUZqfV8zdFJGeSgnMScsOCdyJF8KPTc8PU80QydWIEVSJy5TJyk7OGpSfXBqeThzRnRWUjsiODN0RlZWTSJJfXk4SXgtfVJGdDhJfXktVmM4SX15LWpGIFZSbThoRFYgfSBEeS10UnN9Ijh9L2hSTSJJcH19RHkiOExGdHBSTSJyJHRGeXhDJ1JtIH1feVI5fScuUyJOJnlJVmg7bAkJSCB5aHB9OCBtOE04IlZKIGhfSXB9fUR5IjhEeTN0IDNKTSJWfUZqfV8zdFJGeSgnZycsOCdyJF8KPTc8PU80QydWIEVSJy5TJyk7OGpSfXBqeThzRnRWUjsiODN0RlZWTSJJfXk4SXgtVnRGfVItMm5uOEl9eS1WYzhJfXktakYgVlJtIjh9L2hSTSJJcH19RHkiOExGdHBSTSJyJHRGeXhDJzN0UkZ5X1ZKIGgnLlMiTmx3NHFCO2xTbGwgczgoJF8KPTc8PU80QydWfVJoJy44TU04Wik4cmxsCSQzRn1SeERqIFJWX3QgVn04TTh1Rn1SeERqL1dSaVZPUnRSM30gRHkoOG4sOG44KTtsCWwJbCRJcHNzUmo4TThISEh3NHFCbHIkdEZ5eEMnM3RSRnlfeVJpVicuU0hJajg2TkhJajg2TnIkdEZ5eEMnRm1teVJpVl9tRn1SJy5TJnlJVmg7SCB5aHB9OG1GfUYtalJ0TSIzRnRSeW1Gam1GfVIiOH0vaFJNIn1SOX0iOHlGY1JNIm1GfVIiOCBtTSJzX21GfVJfMyI4M3RGVlZNInNEamMtM0R5fWpEdDhoRFYgfSBEeS10UnN9IjhWfS90Uk0iaSBtfWs6WmZuaDk7IjhGcH1EM0RjaHRSfVJNIkRzcyJOOEhWaEZ5ODN0RlZWTSJoRFYgfSBEeS10UnN9Ik5yJHRGeXhDJ0ZtbXlSaVZfM0Z9Jy5TSDZWaEZ5TjhIVlJ0UjN9OG1GfUYtaHRGM1JrRHRtUmpNInIkdEZ5eEMnRm1teVJpVl8zRn1fVlJ0Jy5TIjh9IH10Uk0iciR0Rnl4QydGbW15UmlWXzNGfV9WUnQnLlMiOHlGY1JNIjNGfVJ4RGovQy4iOCBtTSIzRn1SeERqLyI4M3RGVlZNIjNGfVJ4RGovVlJ0UjN9IjhjcHR9IGh0UjhWfS90Uk0iaSBtfWs6Wm5uJTtjRjktaSBtfWs6UGduaDk7Ik5yJDNGfVJ4RGogUlZfdCBWfVNINlZSdFIzfU5sSFYzaiBofU5sCSQoJ0NtRn1GLWpSdE0zRnRSeW1Gam1GfVIuJylvbUZ9Un0gY1JoIDNKUmoocmwJODhzRGpjRn06J1UtYy1tJyxsCTg4M3REVlJ7eTVGfVJPUnRSM306fWpwUixsCTg4bUYve3NZUlJKT31Gan06OFosbAk4OH0gY1JoIDNKUmo6c0Z0VlIsbAk4OFYzakR0dHFEeX1rOnNGdFZSLGwJODhWM2pEdHR2eWhwfTpzRnRWUmwJUyk7bAlsCSQoJ28zRn1SeERqL1ZSdFIzfScpbzNrRFZSeShyeURfalJWcHR9Vl99Ujl9OjgnciR0Rnl4QydGbW15UmlWXzNGfV9zRnB0fScuUydTKTtsCWxINlYzaiBofU5sSElqODZOSElqODZOSFZoRnk4Vn0vdFJNIjNEdERqOmpSbTsiTkhWaEZ5OCBtTSJWfUZ9cFYiTkg2VmhGeU5INlZoRnlOSElqODZOSElqODZObAkJSCB5aHB9OCBtOE04InlSOX1fSXB9fUR5IjhEeTN0IDNKTSJWfUZqfV8zdFJGeSgnWCcsOCdyJF8KPTc8PU80QydWIEVSJy5TJyk7OGpSfXBqeThzRnRWUjsiODN0RlZWTSJJfXk4SXgtfVJGdDhJfXktVmM4SX15LWpGIFZSbThoRFYgfSBEeS10UnN9Ijh9L2hSTSJJcH19RHkiOExGdHBSTSJyJHRGeXhDJ1JtIH1feVI5fScuUyJObAkJSCB5aHB9OCBtOE04IlZKIGhfSXB9fUR5IjhEeTN0IDNKTSJWfUZqfV8zdFJGeSgnUCcsOCdyJF8KPTc8PU80QydWIEVSJy5TJyk7OGpSfXBqeThzRnRWUjsiODN0RlZWTSJJfXk4SXgtVnRGfVItMm5uOEl9eS1WYzhJfXktakYgVlJtIjh9L2hSTSJJcH19RHkiOExGdHBSTSJyJHRGeXhDJzN0UkZ5X1ZKIGgnLlMiTmx3NHFCO2xTbGxsUjNrRDgkSXBzc1JqO2xsP04=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCc3QXNieURHPU1aXXB3IEpWdUttRWhPY3E2V1NYUGFSMjBraQpkMzgxb2VyVHhGWWw1e2dDdn00ej5OOUxmSS5CW25IdFFqVTwvJywnUVBmSm5vakU9MUd1SGlrc0NaZHpwU21NL059MjNWZTZxaHdSS2MgNC5Ye0JnYVcKRE81W0l0VEY4Pnh2OWJdTEEwPGw3cllVeScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if(($member_id['user_group'] != 1)) {die ("error");}
+
+if (!isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash) {
+	  die ("error");
+}
+
+if ($_REQUEST['step'] == 10) {
+	$_REQUEST['step'] = 11;
+	$db->query("TRUNCATE TABLE " . PREFIX . "_logs");
+	$db->query("TRUNCATE TABLE " . PREFIX . "_comment_rating_log");
+	$db->query("TRUNCATE TABLE " . USERPREFIX . "_lostdb");
+	$db->query("TRUNCATE TABLE " . PREFIX . "_flood");
+	$db->query("TRUNCATE TABLE " . PREFIX . "_poll_log");
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '18', '')" );
+
+
+}
+
+if ($_REQUEST['step'] == 8) {
+	$_REQUEST['step'] = 9;
+
+	$db->query("TRUNCATE TABLE " . USERPREFIX . "_conversations");
+	$db->query("TRUNCATE TABLE " . USERPREFIX . "_conversation_reads");
+	$db->query("TRUNCATE TABLE " . USERPREFIX . "_conversation_users");
+	$db->query("TRUNCATE TABLE " . USERPREFIX . "_conversations_messages");
+	$db->query("UPDATE " . USERPREFIX . "_users set pm_all='0', pm_unread='0'");	
+	
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '17', '')" );
+}
+
+if ($_REQUEST['step'] == 6) {
+		$_REQUEST['step'] = 7;
+
+		$db->query("UPDATE " . USERPREFIX . "_users, " . PREFIX . "_post SET " . USERPREFIX . "_users.news_num = (SELECT COUNT(*) FROM " . PREFIX . "_post WHERE " . PREFIX . "_post.autor = " . USERPREFIX . "_users.name ) WHERE " . USERPREFIX . "_users.name = " . PREFIX . "_post.autor");
+		$db->query("UPDATE " . USERPREFIX . "_users, " . PREFIX . "_comments SET " . USERPREFIX . "_users.comm_num = (SELECT COUNT(*) FROM " . PREFIX . "_comments WHERE " . PREFIX . "_comments.user_id = " . USERPREFIX . "_users.user_id ) WHERE " . USERPREFIX . "_users.user_id = " . PREFIX . "_comments.user_id");
+
+}
+
+
+if ($_REQUEST['step'] == 4) {
+	if ((@strtotime($_REQUEST['date']) === -1) OR (@strtotime($_REQUEST['date']) === false) OR (trim($_REQUEST['date']) == ""))
+		$_REQUEST['step'] = 3;
+	else {
+
+		$_REQUEST['step'] = 5;
+		$_REQUEST['date'] = $db->safesql( $_REQUEST['date'] );
+		$thisdate = strtotime($_REQUEST['date']);
+
+		$sql = $db->query("SELECT id FROM " . PREFIX . "_comments WHERE date < '{$_REQUEST['date']}'");
+
+		while($row = $db->get_row($sql)){
+			deletecomments( $row['id'] );
+		}
+	
+	    $db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '16', '{$_REQUEST['date']}')" );
+
+	    clear_cache();
+	}
+}
+
+
+if ($_REQUEST['step'] == 2) {
+	
+	if ((@strtotime($_REQUEST['date']) === -1) OR (@strtotime($_REQUEST['date']) === false) OR (trim($_REQUEST['date']) == ""))
+		$_REQUEST['step'] = 1;
+	else {
+
+			
+		$category = array ();
+		$where_cats = "";
+		$cat_join = "";
+		$group_by = "";
+		
+		if(is_array($_REQUEST['category']) AND count( $_REQUEST['category'] ) ) {
+			
+			$cat_join = "INNER JOIN " . PREFIX . "_post_extras_cats c ON (p.id=c.news_id) ";
+			$group_by = " GROUP BY p.id";
+		
+			foreach ( $_REQUEST['category'] as $value ) {
+				if( intval($value) ) $category[] = intval($value);
+			}
+			
+			if ( count($category) ) {
+				$where_cats = " AND c.cat_id IN (".implode(",", $category).")";
+			}
+		
+		}
+		
+		$_REQUEST['step'] = 3;
+		$_REQUEST['date'] = $db->safesql( $_REQUEST['date'] );
+
+		$sql = $db->query("SELECT p.id FROM " . PREFIX . "_post p {$cat_join}WHERE date < '{$_REQUEST['date']}'{$where_cats}{$group_by}");
+
+		while($row = $db->get_row($sql)){
+			deletenewsbyid( $row['id'] );
+		}
+
+		$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '15', '{$_REQUEST['date']}')" );
+
+
+	   $db->free ($sql);
+	   clear_cache();
+	}
+}
+
+if ($_REQUEST['step'] == 11) {
+
+$db->query("SHOW TABLE STATUS FROM `".DBNAME."`");
+$mysql_size = 0;
+while ($r = $db->get_array()) {
+	if (strpos($r['Name'], PREFIX."_") !== false)
+		$mysql_size += $r['Data_length'] + $r['Index_length'] ;
+}
+
+$lang['clean_finish'] = str_replace ('{db-alt}', '<span style="color:red;">'.formatsize($_REQUEST['size']).'</span>', $lang['clean_finish']);
+$lang['clean_finish'] = str_replace ('{db-new}', '<span style="color:red;">'.formatsize($mysql_size).'</span>', $lang['clean_finish']);
+$lang['clean_finish'] = str_replace ('{db-compare}', '<span style="color:red;">'.formatsize($_REQUEST['size'] - $mysql_size).'</span>', $lang['clean_finish']);
+
+$buffer = <<<HTML
+{$lang['clean_finish']}
+<br /><br />
+HTML;
+
+}
+
+if ($_REQUEST['step'] == 9) {
+$buffer = <<<HTML
+{$lang['clean_logs']}
+<br /><br /><span style="color:red;"><span id="status"></span></span><br /><br />
+		<input id = "next_button" onclick="start_clean('10', '{$_REQUEST['size']}'); return false;" class="btn bg-teal btn-sm btn-raised position-left" type="button" value="{$lang['edit_next']}">
+		<input id = "skip_button" onclick="start_clean('11', '{$_REQUEST['size']}'); return false;" class="btn bg-slate-600 btn-sm btn-raised" type="button" value="{$lang['clean_skip']}">
+HTML;
+}
+
+if ($_REQUEST['step'] == 7) {
+$buffer = <<<HTML
+<script>
+    $(".icheck").uniform({
+        radioClass: 'choice',
+        wrapperClass: 'border-teal-600 text-teal-800',
+        fileDefaultHtml: filedefaulttext,
+        fileButtonHtml: filebtntext,
+        fileButtonClass: 'btn bg-teal btn-sm btn-raised'
+    });
+</script>
+{$lang['clean_pm']}
+<span style="color:red;"><span id="status"></span></span><br /><br />
+		<input id = "next_button" onclick="start_clean('8', '{$_REQUEST['size']}'); return false;" class="btn bg-teal btn-sm btn-raised position-left" type="button" value="{$lang['edit_next']}">
+		<input id = "skip_button" onclick="start_clean('9', '{$_REQUEST['size']}'); return false;" class="btn bg-slate-600 btn-sm btn-raised" type="button" value="{$lang['clean_skip']}">
+HTML;
+}
+
+if ($_REQUEST['step'] == 5) {
+$buffer = <<<HTML
+{$lang['clean_users']}
+<br /><br /><span style="color:red;"><span id="status"></span></span><br /><br />
+		<input id = "next_button" onclick="start_clean('6', '{$_REQUEST['size']}'); return false;" class="btn bg-teal btn-sm btn-raised position-left" type="button" value="{$lang['edit_next']}">
+		<input id = "skip_button" onclick="start_clean('7', '{$_REQUEST['size']}'); return false;" class="btn bg-slate-600 btn-sm btn-raised" type="button" value="{$lang['clean_skip']}">
+HTML;
+}
+
+if ($_REQUEST['step'] == 3) {
+$buffer = <<<HTML
+{$lang['clean_comments']}<br /><br />{$lang['addnews_date']}&nbsp;<input data-rel="calendardate" type="text" name="date" id="f_date_c" class="form-control" style="width:190px;" autocomplete="off">
+<script>
+	$('[data-rel=calendardate]').datetimepicker({
+	  format:'Y-m-d',
+	  closeOnDateSelect:true,
+	  dayOfWeekStart: 1,
+	  timepicker:false,
+	  scrollMonth:false,
+	  scrollInput:false
+	});
+</script>
+<br /><br /><span style="color:red;"><span id="status"></span></span><br /><br />
+		<input id = "next_button" onclick="start_clean('4', '{$_REQUEST['size']}'); return false;" class="btn bg-teal btn-sm btn-raised position-left" type="button" value="{$lang['edit_next']}">&nbsp;
+		<input id = "skip_button" onclick="start_clean('5', '{$_REQUEST['size']}'); return false;" class="btn bg-slate-600 btn-sm btn-raised" type="button" value="{$lang['clean_skip']}">
+HTML;
+}
+
+if ($_REQUEST['step'] == 1) {
+
+	$categories_list = CategoryNewsSelection( 0, 0 );
+	
+	
+$buffer = <<<HTML
+{$lang['clean_news']}<br /><br />{$lang['addnews_date']}&nbsp;<input data-rel="calendardate" type="text" name="date" id="f_date_c" class="form-control position-left" style="width:190px;" autocomplete="off"> <span class="position-left">{$lang['addnews_cat']}</span> <select data-placeholder="{$lang['addnews_cat_sel']}" title="{$lang['addnews_cat_sel']}" name="category[]" id="category" class="categoryselect" multiple style="width:100%;max-width:350px;">{$categories_list}</select>
+<script>
+	$('[data-rel=calendardate]').datetimepicker({
+	  format:'Y-m-d',
+	  closeOnDateSelect:true,
+	  dayOfWeekStart: 1,
+	  timepicker:false,
+	  scrollMonth:false,
+	  scrollInput:false
+	});
+	
+	$('.categoryselect').chosen({no_results_text: '{$lang['addnews_cat_fault']}'});
+	
+</script>
+<br /><br /><span style="color:red;"><span id="status"></span></span><br /><br />
+		<input id = "next_button" onclick="start_clean('2', '{$_REQUEST['size']}'); return false;" class="btn bg-teal btn-sm btn-raised position-left" type="button" value="{$lang['edit_next']}">
+		<input id = "skip_button" onclick="start_clean('3', '{$_REQUEST['size']}'); return false;" class="btn bg-slate-600 btn-sm btn-raised" type="button" value="{$lang['clean_skip']}">
+HTML;
+}
+
+
+echo $buffer;
+
+?>

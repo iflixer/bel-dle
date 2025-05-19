@@ -5,9 +5,511 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: google.class.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Google Sitemap
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1dNP1hwWGJaKmJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycmJFNiAyIEs3M1ZFdXNEN3NWRS1FLm1FdkgzMkNWY2hFblZ3NyBFUTBIeFhFYi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tYkVwMjJYaDpaWndUVi1zVmNoPjB4WmItLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWJFW0hYbTA3RHAyRShJKUVSZGRBLVJkUmtFdkgzMkNWY2hFblZ3NyBFUTBIeFhicnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJiRWZwN2hFSUh3VkU3aEVYMEgyVkkyVndFLm1FSUhYbTA3RHAyYnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJyYkV9N1RWOkVESEhEVFY+SVQgaGg+WHBYYi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tYkVOaFY6RVFISERUVkV2NzJWZyBYYnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJyYipaYmI3c0lUeHdWX0hzSVZFdUNRcUN1XzZxNEU+RSdaSVQgaGhWaFpJSGdYSGhWMFoxVnN3SDBaIHgySFRIIHc+WHBYJztiYnhoVkVuVlQuIHBGIFx2VkhcdjcyVmcgWDtieGhWRW5WVC4gcEYgXHZWSFx9IEkySDBtO2JiNzMoRSF3VjM3c1Z3KEUnNmpmaktxfXV1Q1FxQ3UnRSlFKUUvYglwViB3VjAoRSJMZmZ6Wjw+PEVBZGxFfUgwLjd3d1ZzIkUpO2IJcFYgd1YwRShFJ0tISSAyN0hzOkU+Plo+PlonRSk7Ygl3N1YoRSJMIElCN3NERSAyMlZnWDIhIkUpO2JQYmJJVCBoaEVESEhEVFZnIFhFL2IJYglYeC5UN0lFJCBUVEhjX3gwVEVyRSIiO2IJWHguVDdJRSRwSGdWRXJFIiI7YglYeC5UN0lFJFQ3ZzcyRXJFZDtiCWIJWHguVDdJRSRzVmNoX1gwN0gwNzJtRXJFIiI7YglYeC5UN0lFJGgyIDJfWDA3SDA3Mm1FckUiIjtiCVh4LlQ3SUUkSSAyX1gwN0gwNzJtRXJFIiI7YgliCVh4LlQ3SUUkc1ZjaF9JcCBzRFYzMFYKRXJFIiI7YglYeC5UN0lFJGgyIDJfSXAgc0RWMzBWCkVyRSIiO2IJWHguVDdJRSRJIDJfSXAgc0RWMzBWCkVyRSIiO2IJYglYeC5UN0lFJFgwN0gwNzJtRXJFImQ+aSI7YglYeC5UN0lFJElwIHNEVjMwVgpFckUidyA3VG0iO2IJYglYeC5UN0lFJGhWMl83ZyBEVmhFckUzIFRoVjtiYglYeC5UN0lFJHNWY2hfWFYwXzM3VFZFckVBZGRkZDtiCWIJWHguVDdJRUUkaDcyVmcgWEVyRXN4VFQ7YglYMDcxIDJWRSR3Ll8wVmh4VDJFckVzeFRUO2IJWDA3MSAyVkUkIFRUSGNfMiBEaEVyRXN4VFQ7YmIJWDA3MSAyVkUkREhIRFRWc1ZjaEVyRSAwMCBtKCk7YmIJYgkzeHNJMjdIc0VfX0lIc2gyMHhJMigkSUhzMzdEKUUvYgkJYgkJNzNFKGgyMFhIaCgkSUhzMzdEVSdwMjJYX3BIZ1ZfeDBUJ1ksRSJaWiIpRXJyckVkKUUkSUhzMzdEVSdwMjJYX3BIZ1ZfeDBUJ1lFckUicDIyWGg6Ij4kSUhzMzdEVSdwMjJYX3BIZ1ZfeDBUJ1k7YgkJVlRoVjczRShoMjBYSGgoJElIczM3RFUncDIyWF9wSGdWX3gwVCdZLEUiWiIpRXJyckVkKUUkSUhzMzdEVSdwMjJYX3BIZ1ZfeDBUJ1lFckUicDIyWGg6WloiPiRfdnU0dHU0VSdMZmZ6X0xddmYnWT4kSUhzMzdEVSdwMjJYX3BIZ1ZfeDBUJ1k7YmIJCSQycDdoLVcgVFRIY194MFRFckUkSUhzMzdEVScgVFRIY18gVDJfeDBUJ1k7YgkJJDJwN2gtV3BIZ1ZFckUkSUhzMzdEVSdwMjJYX3BIZ1ZfeDBUJ1k7YgkJJDJwN2gtV1Q3ZzcyRXJFJElIczM3RFUnaDcyVmcgWF9UN2c3MidZO2IJCSQycDdoLVdzVmNoX1hWMF8zN1RWRXJFJElIczM3RFUnaDcyVmcgWF9zVmNoX1hWMF8zN1RWJ1k7YgkJJDJwN2gtVyBUVEhjXzIgRGhFckUkSUhzMzdEVScgVFRIY18yIERoJ1k7YmIJCSQycDdoLVdzVmNoX1gwN0gwNzJtRXJFJElIczM3RFUnaDcyVmcgWF9zVmNoX1gwN0gwNzJtJ1k7YgkJJDJwN2gtV2gyIDJfWDA3SDA3Mm1FckUkSUhzMzdEVSdoNzJWZyBYX2gyIDJfWDA3SDA3Mm0nWTtiCQkkMnA3aC1XSSAyX1gwN0gwNzJtRXJFJElIczM3RFUnaDcyVmcgWF9JIDJfWDA3SDA3Mm0nWTtiCQliCQk3MyhFJElIczM3RFUnaDcyVmcgWF9oVjJfN2cgRFZoJ1lFKUUkMnA3aC1XaFYyXzdnIERWaEVyRTIweFY7YmIJCSQycDdoLVdzVmNoX0lwIHNEVjMwVgpFckUkSUhzMzdEVSdoNzJWZyBYX3NWY2hfSXAgc0RWMzBWCidZO2IJCSQycDdoLVdoMiAyX0lwIHNEVjMwVgpFckUkSUhzMzdEVSdoNzJWZyBYX2gyIDJfSXAgc0RWMzBWCidZO2IJCSQycDdoLVdJIDJfSXAgc0RWMzBWCkVyRSRJSHMzN0RVJ2g3MlZnIFhfSSAyX0lwIHNEVjMwVgonWTtiCQliCQkkMnA3aC1XaDcyVmcgWEVyRXNWY0V2NzJWZyBYKCQycDdoLVdwSGdWKTtiCQkkMnA3aC1XaDcyVmcgWC1XaFYydiAxVnogMnAoNF1dZl82cTQ+RSdaeFhUSCB3aCcpO2IJCWIJCTczKEUkMnA3aC1XIFRUSGNfeDBURSlFL2IJCQkkMnA3aC1XaDcyVmcgWC1XaFYydjcyVmcgWGhOMFQoJDJwN2gtV3BIZ1YpO2IJCVBFVlRoVkUvYgkJCSQycDdoLVdoNzJWZyBYLVdoVjJ2NzJWZyBYaE4wVCgkMnA3aC1XcEhnVj4neFhUSCB3aCcpO2IJCVBiYgkJJDJwN2gtV2g3MlZnIFgtV2hWMnFzd1Z7QyBnVignaDcyVmcgWD57Z1QnKTtiYglQYgliCTN4c0kyN0hzRURWc1YwIDJWKClFL2IJCWIJCSQycDdoLVdEVnNWMCAyVl9oMiAyN0koKTtiCQkkMnA3aC1XRFZzVjAgMlZfSSAyVkRIMDdWaCgpO2JiCQk3M0UoJDJwN2gtVyBUVEhjXzIgRGhFKUUvYgkJCSQycDdoLVdEVnNWMCAyVl8yIERoKCk7YgkJUGJiCQkkMnA3aC1XRFZzVjAgMlZfc1ZjaCgpO2IJCSQycDdoLVdoNzJWZyBYLVdoIDFWKCk7YgkJYgkJNzMoRUlIeHMyKCQycDdoLVdESEhEVFZzVmNoKUUpRS9iCQkJYgkJCSQycDdoLVdoNzJWZyBYRXJFc1ZjRXY3MlZnIFgoJDJwN2gtV3BIZ1YpO2IJCQkkMnA3aC1XaDcyVmcgWC1XaFYydiAxVnogMnAoNF1dZl82cTQ+RSdaeFhUSCB3aCcpO2IJCQkkMnA3aC1XaDcyVmcgWC1XaFYydjcyVmcgWGhOMFQoJDJwN2gtV3BIZ1Y+J3hYVEggd2gnKTtiCQkJJDJwN2gtV2g3MlZnIFgtV2hWMnFzd1Z7QyBnVignN3N3Vns+e2dUJyk7YgkJCWIJCQkkMnA3aC1XaDcyVmcgWC1Xc1ZjaCgnREhIRFRWX3NWY2g+e2dUJyxFM3hzSTI3SHMoJGcgWClFL2IJCQkJRFRILiBURSRJSHMzN0QsRSRUIHNEO2IJCQliCQkJCTNIMFYgSXAoRSQycDdoLVdESEhEVFZzVmNoRSBoRSRzVmNoKUUvYgkJCQkJYgkJCQkJJGcgWC1XaFYyenguVDdJIDI3SHMoJElIczM3RFUncEhnVl8yNzJUVidZLEUkVCBzRFUnVCBzRHggRFZfSUh3VidZKTtiCQkJCWIJCQkJCSRnIFgtV1RISSgkc1ZjaFUnVEhJJ1kpLVdzVmNoKGIJCQkJCVViCQkJCQlFRUUnMjcyVFYnRXJXRSRzVmNoVScyNzJUVidZLGIJCQkJCUVFRSdYeC5UN0kgMjdIc193IDJWJ0VyV0V3IDJWKCdJJyxFJHNWY2hVJ1QgaDInWSksYgkJCQkJWSk7YgkJCQlQYgkJCQliCQkJUCk7YgkJCWIJCQkkMnA3aC1XaDcyVmcgWC1XaCAxVigpO2IJCQl4c1Q3c0IoNF1dZl82cTQ+RSdaeFhUSCB3aFo3c3dWez57Z1QnKTtiYgkJUGIJCWIJUGIJYgkzeHNJMjdIc0VEVnNWMCAyVl9zVmNoKClFL2IJCWIJCURUSC4gVEUkdy4sRSRJSHMzN0QsRSR4aFYwX0QwSHhYO2JiCQkkIFRUSGNfVDdoMkVyRVZ7WFRId1ZFKEUnLCcsRSR4aFYwX0QwSHhYVWtZVScgVFRIY19JIDJoJ1lFKTtiCQkkc0gyXyBUVEhjX0kgMmhFckVWe1hUSHdWRShFJywnLEUkeGhWMF9EMEh4WFVrWVUnc0gyXyBUVEhjX0kgMmgnWUUpO2IJCSRoMkhYX1Q3aDJFckUiIjtiCQkkSSAyX0ZIN3NFckUiIjtiCWIJCTczRSgkIFRUSGNfVDdoMlVkWUUhckUiIFRUIilFL2IJCQliCQkJNzNFKCRJSHMzN0RVJyBUVEhjX2d4VDI3X0kgMlZESDBtJ1kpRS9iCQkJCWIJCQkJJEkgMl9GSDdzRXJFInFDQ3U0RTldcUNFKHZ1S3VbZkU2cXZmcUNbZigiRT5FejR1fXFhRT5FIl9YSGgyX1Z7MjAgaF9JIDJoPnNWY2hfN3cpRX00XW5FIkU+RXo0dX1xYUU+RSJfWEhoMl9WezIwIGhfSSAyaEVHTHU0dUVJIDJfN3dFcUNFKCJFPkU3Z1hUSHdWRShFJywnLEUkIFRUSGNfVDdoMkUpRT5FIikpRUlFXUNFKFg+N3dyST5zVmNoXzd3KUUiO2IJCQliCQkJUEVWVGhWRS9iCQkJCWIJCQkJJGgySFhfVDdoMkVyRSJJIDJWREgwbUVxQ0UoJyJFPkU3Z1hUSHdWRShFIicsJyIsRSQgVFRIY19UN2gyRSlFPkUiJylFakM2RSI7YgkJCWIJCQlQYgkJCWIJCVBiCWIJCTczKEUkc0gyXyBUVEhjX0kgMmhVZFlFKUUvYgkJCWIJCQk3M0UoJElIczM3RFUnIFRUSGNfZ3hUMjdfSSAyVkRIMG0nWSlFL2IJCQkJYgkJCQkkaDJIWF9UN2gyRXJFIlg+N3dFQ11mRXFDRShFdnVLdVtmRTZxdmZxQ1tmKCJFPkV6NHV9cWFFPkUiX1hIaDJfVnsyMCBoX0kgMmg+c1ZjaF83dylFfTRdbkUiRT5FejR1fXFhRT5FIl9YSGgyX1Z7MjAgaF9JIDJoRUdMdTR1RUkgMl83d0VxQ0UoIkU+RTdnWFRId1ZFKEUnLCcsRSRzSDJfIFRUSGNfSSAyaEUpRT5FIilFKUVqQzZFIjtiCWIJCQkJYgkJCVBFVlRoVkUvYgkJCQliCQkJCSRoMkhYX1Q3aDJFckUiSSAyVkRIMG1FQ11mRXFDRSgnIkU+RTdnWFRId1ZFKEUiJywnIixFJHNIMl8gVFRIY19JIDJoRSlFPkUiJylFakM2RSI7YgkJCWIJCQlQYgkJCWIJCVBiCQliCQkkMnA3aHcgMlZFckV3IDJWKEUiTy1nLXdFTDo3OmgiLEUyN2dWKClFKTtiCQk3MyhFJElIczM3RFUnc0hfdyAyVidZRWpDNkUhJElIczM3RFUnc1ZjaF8zeDJ4MFYnWUUpRSRjcFYwVl93IDJWRXJFIkVqQzZFdyAyVkVNRSciRT5FJDJwN2h3IDJWRT5FIiciO2IJCVZUaFZFJGNwVjBWX3cgMlZFckUiIjtiCWIJCSQwSGNFckUkdy4tV2h4WFYwXwp4VjBtKEUidnVLdVtmRVtdTkNmKCopRSBoRUlIeHMyRX00XW5FIkU+RXo0dX1xYUU+RSJfWEhoMkVYRS8kSSAyX0ZIN3NQR0x1NHVFLyRoMkhYX1Q3aDJQIFhYMEgxVnI8LyRjcFYwVl93IDJWUCJFKTtiCWIJCTczRShFISQycDdoLVdUN2c3MkUpRSQycDdoLVdUN2c3MkVyRSQwSGNVJ0lIeHMyJ1k7YgkJYgkJNzNFKEUkMnA3aC1XVDdnNzJFV0UkMnA3aC1Xc1ZjaF9YVjBfMzdUVkUpRS9iCWIJCQkkWCBEVmhfSUh4czJFckVASVY3VChFJDBIY1UnSUh4czInWUVaRSQycDdoLVdzVmNoX1hWMF8zN1RWRSk7YgkJCWIJCQkkc0VyRWQ7YgliCQkJM0gwRSgkN0VyZDtFJDdFTUUkWCBEVmhfSUh4czI7RSQ3KyspRS9iCWIJCQkJJHNFckUkcys8O2IJYgkJCQkkMnA3aC1XRFYyX3NWY2goJHMpO2IJYgkJCVBiCWIJYgkJUEVWVGhWRS9iCWIJCQkkMnA3aC1XRFYyX3NWY2goKTtiCQliCQlQYgliCVBiCWIJM3hzSTI3SHNFRFZzVjAgMlZfSSAyVkRIMDdWaCgpRS9iCQlEVEguIFRFJHcuLEUkeGhWMF9EMEh4WDtiYgkJJDJwN2gtV1gwN0gwNzJtRXJFJDJwN2gtV0kgMl9YMDdIMDcybTtiCQkkMnA3aC1XSXAgc0RWMzBWCkVyRSQycDdoLVdJIDJfSXAgc0RWMzBWCjtiYgkJJEkgMl83czNIRXJFRFYyXzEgMGgoIkkgMlZESDBtIik7YmIJCTczRSghN2hfIDAwIG0oJEkgMl83czNIKSlFL2IJCQkkSSAyXzdzM0hFckUgMDAgbSgpO2JiCQkJJHcuLVcKeFYwbSgidnVLdVtmRSpFfTRdbkUiRT5FejR1fXFhRT5FIl9JIDJWREgwbUVdNDZ1NEU9T0VYSGg3RWp2WyIpO2JiCQkJY3A3VFZFKCQwSGNFckUkdy4tV0RWMl8wSGMoKSlFL2JiCQkJCTczRSghJDBIY1UnIEkyNzFWJ1kpRUlIczI3c3hWO2JiCQkJCSRJIDJfN3MzSFUkMEhjVSc3dydZWUVyRSAwMCBtKCk7YmIJCQkJM0gwViBJcEUoJDBIY0UgaEUkQlZtRXJXRSQxIFR4VilFL2IJCQkJCSRJIDJfN3MzSFUkMEhjVSc3dydZWVUkQlZtWUVyRSQxIFR4VjtiCQkJCVBiCQkJUGJiCQkJaFYyXzEgMGgoIkkgMlZESDBtIixFJEkgMl83czNIKTtiCQkJJHcuLVczMFZWKCk7YgkJUGIJCWIJCSQgVFRIY19UN2gyRXJFVntYVEh3VignLCcsRSR4aFYwX0QwSHhYVWtZVScgVFRIY19JIDJoJ1kpO2IJCSRzSDJfIFRUSGNfSSAyaEVyRVZ7WFRId1YoJywnLEUkeGhWMF9EMEh4WFVrWVUnc0gyXyBUVEhjX0kgMmgnWSk7YmIJCTNIMFYgSXBFKCRJIDJfN3MzSEUgaEUkSSAyaClFL2IJCQk3M0UoJEkgMmhVJ3c3aCAuVFZfN3N3VnsnWSlFeHNoVjIoRSRJIDJfN3MzSFUkSSAyaFUnN3cnWVlFKTtiCQkJYgkJCTczRSgkIFRUSGNfVDdoMlVkWUUhckUiIFRUIilFL2IJCQkJNzNFKCEkeGhWMF9EMEh4WFVrWVUnIFRUSGNfaHBIMDInWUUgc3dFITdzXyAwMCBtKCRJIDJoVSc3dydZLEUkIFRUSGNfVDdoMikpRXhzaFYyKEUkSSAyXzdzM0hVJEkgMmhVJzd3J1lZRSk7YgkJCVBiYgkJCTczRSgkc0gyXyBUVEhjX0kgMmhVZFkpRS9iCQkJCTczRSghJHhoVjBfRDBIeFhVa1lVJyBUVEhjX2hwSDAyJ1lFIHN3RTdzXyAwMCBtKCRJIDJoVSc3dydZLEUkc0gyXyBUVEhjX0kgMmgpKUV4c2hWMihFJEkgMl83czNIVSRJIDJoVSc3dydZWUUpO2IJCQlQYmIJCVBiYgkJNzMoRSFJSHhzMigkSSAyXzdzM0gpRSlFMFYyeDBzO2JiCQkkMnA3aC1XaDcyVmcgWC1XVDdzQmgoJ0kgMlZESDBtX1ggRFZoPntnVCcsRTN4c0kyN0hzKCRnIFgpRXhoVkUoJEkgMl83czNIKUUvYgkJYgkJCTNIMFYgSXBFKEUkSSAyXzdzM0hFIGhFJEkgMmhFKUUvYmIJCQkJNzMoRSQycDdoLVcgVFRIY194MFRFKUUkVEhJRXJFRFYyX3gwVChFJEkgMmhVJzd3J1lFKUU+RSJaIjtiCQkJCVZUaFZFJFRISUVyRSI3c3dWez5YcFg/d0hySSAyJkkgMlZESDBtciJFPkVEVjJfeDBURSgkSSAyaFUnN3cnWUUpO2IJCQkJYgkJCQkkZyBYLVdUSEkoJFRISSktVzMwVgooJDJwN2gtV0lwIHNEVjMwVgopLVdUIGgybkh3KHcgMlYoJ0knKSktV1gwN0gwNzJtKEUkMnA3aC1XWDA3SDA3Mm1FKTtiCQkJCWIJCQlQYgkJCWIJCVApO2IJCWIJUGIJYgkzeHNJMjdIc0VEVnNWMCAyVl9oMiAyN0koKUUvYgkJYgkJRFRILiBURSR3LjtiCQliCQkkMnA3aC1XWDA3SDA3Mm1FckUkMnA3aC1XaDIgMl9YMDdIMDcybTtiCQkkMnA3aC1XSXAgc0RWMzBWCkVyRSQycDdoLVdoMiAyX0lwIHNEVjMwVgo7YmIJCSQwVmh4VDJfSUh4czJFckUkdy4tV2h4WFYwXwp4VjBtKCJ2dUt1W2ZFW11OQ2YoKilFIGhFSUh4czJFfTRdbkUiRT5FejR1fXFhRT5FIl9oMiAyN0lFR0x1NHVFcyBnVkUhcid3VFYtMHhUVmgtWCBEVidFakM2RWg3MlZnIFhyJzwnRWpDNkVYIGhoY0gwd3InJ0VqQzZFdzdoIC5UVl83c3dWe3InZCciKTtiYgkJNzMoRSEkMFZoeFQyX0lIeHMyVSdJSHhzMidZRSlFMFYyeDBzO2JiCQk3MyhFJDJwN2gtV2hWMl83ZyBEVmhFKUUvYgkJCSQzN1RWX1ggMCBnaEVyRVUncyBnVidFcldFJ2gyIDI3SV9YIERWaD57Z1QnLEUnN2cgRFZoJ0VyV0UyMHhWWTsJYgkJUEVWVGhWRS9iCQkJJDM3VFZfWCAwIGdoRXJFJ2gyIDI3SV9YIERWaD57Z1QnO2IJCVBiYgkJJDJwN2gtV3cuXzBWaHhUMkVyRSR3Li1XCnhWMG0oRSJ2dUt1W2ZFN3csRXMgZ1YsRWg3MlZnIFgsRXc3aCAuVFZfN3N3VnssRVggaGhjSDB3RX00XW5FIkU+RXo0dX1xYUU+RSJfaDIgMjdJIkUpO2JiCQkkMnA3aC1XaDcyVmcgWC1XVDdzQmgoJDM3VFZfWCAwIGdoLEUzeHNJMjdIcygkZyBYKUUvYgkJCWIJCQlEVEguIFRFJHcuO2IJCQliCQkJY3A3VFZFKEUkMEhjRXJFJHcuLVdEVjJfMEhjKEUkMnA3aC1Xdy5fMFZoeFQyRSlFKUUvYgkJCQliCQkJCTczKEUkMEhjVSdzIGdWJ1lFcnJFIndUVi0weFRWaC1YIERWIkUpRUlIczI3c3hWO2IJCQkJNzMoRSEkMEhjVSdoNzJWZyBYJ1lFXTRFJDBIY1UndzdoIC5UVl83c3dWeydZRV00RSQwSGNVJ1ggaGhjSDB3J1kpRUlIczI3c3hWO2IJCQkJYgkJCQk3MyhFJDJwN2gtVyBUVEhjX3gwVEUpRSRUSElFckUkMEhjVSdzIGdWJ1lFPkUiPnAyZ1QiO2IJCQkJVlRoVkUkVEhJRXJFIjdzd1Z7PlhwWD93SHJoMiAyN0kmWCBEVnIiRT5FJDBIY1UncyBnVidZO2IJCQkJYgkJCQkkZyBYLVdUSEkoJFRISSktVzMwVgooJDJwN2gtV0lwIHNEVjMwVgopLVdUIGgybkh3KHcgMlYoJ0knKSktV1gwN0gwNzJtKEUkMnA3aC1XWDA3SDA3Mm1FKTtiYgkJCQk3M0UoJDJwN2gtV2hWMl83ZyBEVmgpRS9iYgkJCQkJJDdnIERWaF9oClRFckUkdy4tVwp4VjBtKEUidnVLdVtmRXMgZ1ZFfTRdbkUiRT5FejR1fXFhRT5FIl9oMiAyN0lfMzdUVmhFR0x1NHVFaDIgMjdJXzd3RXJFJy8kMEhjVSc3dydZUCdFakM2RUhzaFYwMVYwRXJFJyciRSk7YmIJCQkJCWNwN1RWRSgkN2cgRFZoXzBIY0VyRSR3Li1XRFYyXzBIYyhFJDdnIERWaF9oClRFKSlFL2JiCQkJCQkJJDdnIERWRXJFRFYyX3hYVEggd1Z3XzdnIERWXzdzM0goJDdnIERWaF8wSGNVJ3MgZ1YnWSk7YmIJCQkJCQkkZyBYLVc3ZyBEVigkN2cgRFYtV3gwVCk7YgkJCQkJCWIJCQkJCVBiCQkJCVBiCQkJCWIJCQlQYgkJCWIJCVApO2IJCWIJUGIJYgkzeHNJMjdIc0VEVnNWMCAyVl8yIERoKClFL2IJCWIJCURUSC4gVEUkdy47YgkJYgkJJDJwN2gtV1gwN0gwNzJtRXJFJDJwN2gtV0kgMl9YMDdIMDcybTtiCQkkMnA3aC1XSXAgc0RWMzBWCkVyRSQycDdoLVdJIDJfSXAgc0RWMzBWCjtiYgkJJDBWaHhUMl9JSHhzMkVyRSR3Li1XaHhYVjBfCnhWMG0oInZ1S3VbZkVbXU5DZigqKUUgaEVJSHhzMkV9NF1uRSJFPkV6NHV9cWFFPkUiXzIgRGgiKTtiYgkJNzMoRSEkMFZoeFQyX0lIeHMyVSdJSHhzMidZRSlFMFYyeDBzO2JiCQkkMnA3aC1Xdy5fMFZoeFQyRXJFJHcuLVcKeFYwbShFInZ1S3VbZkUyIERFfTRdbkUiRT5FejR1fXFhRT5FIl8yIERoRVE0XU56RT1PRTIgREVLcW5xZkVkLEVBZGRkZCJFKTtiCQliCQkkMnA3aC1XaDcyVmcgWC1XVDdzQmgoJzIgRGhfWCBEVmg+e2dUJyxFM3hzSTI3SHMoJGcgWClFL2IJCQliCQkJRFRILiBURSR3LjtiCQkJYgkJCWNwN1RWRShFJDBIY0VyRSR3Li1XRFYyXzBIYyhFJDJwN2gtV3cuXzBWaHhUMkUpRSlFL2IJCQkJYgkJCQkkMEhjVScyIEQnWUVyRWgyMF8wVlhUIElWKCAwMCBtKCImI2RsUzsiLEUiJgp4SDI7IixFIiYgZ1g7IiksRSAwMCBtKCInIixFJyInLEUiJiIpLEUkMEhjVScyIEQnWSk7YgkJCQliCQkJCTczKEUkMnA3aC1XIFRUSGNfeDBURSlFJFRISUVyRSIyIERoWiJFPkUwIGN4MFRWc0lId1YoRXdUVl9oMjAySFRIY1YwKCQwSGNVJzIgRCdZKUUpRT5FIloiO2IJCQkJVlRoVkUkVEhJRXJFIjdzd1Z7PlhwWD93SHIyIERoJjIgRHIiRT5FRTAgY3gwVFZzSUh3VihFd1RWX2gyMDJIVEhjVjAoJDBIY1UnMiBEJ1kpRSk7CWIJCQkJYgkJCQkkZyBYLVdUSEkoJFRISSktVzMwVgooJDJwN2gtV0lwIHNEVjMwVgopLVdUIGgybkh3KHcgMlYoJ0knKSktV1gwN0gwNzJtKEUkMnA3aC1XWDA3SDA3Mm1FKTtiCQkJCWIJCQlQYgkJCWIJCVApO2IJCWIJUGIJYgkzeHNJMjdIc0VEVjJfc1ZjaChFJFggRFZFckUzIFRoVkUpRS9iCQliCQlEVEguIFRFJHcuLEUkSUhzMzdELEUkeGhWMF9EMEh4WDtiCQliCQkkMnA3aC1XWDA3SDA3Mm1FckUkMnA3aC1Xc1ZjaF9YMDdIMDcybTtiCQkkMnA3aC1XSXAgc0RWMzBWCkVyRSQycDdoLVdzVmNoX0lwIHNEVjMwVgo7YgkJJFgwVjM3e19YIERWRXJFJyc7YgkJYgkJNzNFKEUkWCBEVkUpRS9iCQkJYgkJCTczKEUkWCBEVkUhckU8RSlFJFgwVjM3e19YIERWRXJFJFggRFY7YmIJCQkkWCBEVkVyRSRYIERWRS1FPDtiCQkJJFggRFZFckUkWCBEVkUqRSQycDdoLVdzVmNoX1hWMF8zN1RWO2IJCQkkMnA3aC1XVDdnNzJFckUiRUtxbnFmRS8kWCBEVlAsRS8kMnA3aC1Xc1ZjaF9YVjBfMzdUVlAiO2JiCQlQRVZUaFZFL2JiCQkJNzMoRSQycDdoLVdUN2c3MkVNRTxFKUUkMnA3aC1XVDdnNzJFckUzIFRoVjtiCQkJYgkJCTczKEUkMnA3aC1XVDdnNzJFKUUvYgkJCQliCQkJCSQycDdoLVdUN2c3MkVyRSJFS3FucWZFZCwiRT5FJDJwN2gtV1Q3ZzcyO2IJCQliCQkJUEVWVGhWRS9iCQkJCWIJCQkJJDJwN2gtV1Q3ZzcyRXJFIiI7YgkJCWIJCQlQYgkJUGIJCWIJCSQycDdodyAyVkVyRXcgMlYoRSJPLWctd0VMOjc6aCIsRTI3Z1YoKUUpO2IJCTczKEUkSUhzMzdEVSdzSF93IDJWJ1lFakM2RSEkSUhzMzdEVSdzVmNoXzN4MngwVidZRSlFJGNwVjBWX3cgMlZFckUiRWpDNkV3IDJWRU1FJyJFPkUkMnA3aHcgMlZFPkUiJyI7YgkJVlRoVkUkY3BWMFZfdyAyVkVyRSIiO2JiCQkkIFRUSGNfVDdoMkVyRVZ7WFRId1ZFKEUnLCcsRSR4aFYwX0QwSHhYVWtZVScgVFRIY19JIDJoJ1lFKTtiCQkkc0gyXyBUVEhjX0kgMmhFckVWe1hUSHdWRShFJywnLEUkeGhWMF9EMEh4WFVrWVUnc0gyXyBUVEhjX0kgMmgnWUUpO2IJCSRoMkhYX1Q3aDJFckUiIjtiCQkkSSAyX0ZIN3NFckUiIjtiYgkJNzNFKCQgVFRIY19UN2gyVWRZRSFyRSIgVFQiKUUvYgkJCWIJCQk3M0UoJElIczM3RFUnIFRUSGNfZ3hUMjdfSSAyVkRIMG0nWSlFL2IJCQkJYgkJCQkkSSAyX0ZIN3NFckUiRXFDQ3U0RTldcUNFKHZ1S3VbZkU2cXZmcUNbZigiRT5FejR1fXFhRT5FIl9YSGgyX1Z7MjAgaF9JIDJoPnNWY2hfN3cpRX00XW5FIkU+RXo0dX1xYUU+RSJfWEhoMl9WezIwIGhfSSAyaEVHTHU0dUVJIDJfN3dFcUNFKCJFPkU3Z1hUSHdWRShFJywnLEUkIFRUSGNfVDdoMkUpRT5FIikpRUlFXUNFKFg+N3dyST5zVmNoXzd3KUUiO2IJCQliCQkJUEVWVGhWRS9iCQkJCWIJCQkJJGgySFhfVDdoMkVyRSJJIDJWREgwbUVxQ0UoJyJFPkU3Z1hUSHdWRShFIicsJyIsRSQgVFRIY19UN2gyRSlFPkUiJylFakM2RSI7YgkJCWIJCQlQYgkJYgkJUGJiCQk3MyhFJHNIMl8gVFRIY19JIDJoVWRZRSlFL2IJCQliCQkJNzNFKCRJSHMzN0RVJyBUVEhjX2d4VDI3X0kgMlZESDBtJ1kpRS9iCQkJCWIJCQkJJGgySFhfVDdoMkVyRSJYPjd3RUNdZkVxQ0UoRXZ1S3VbZkU2cXZmcUNbZigiRT5FejR1fXFhRT5FIl9YSGgyX1Z7MjAgaF9JIDJoPnNWY2hfN3cpRX00XW5FIkU+RXo0dX1xYUU+RSJfWEhoMl9WezIwIGhfSSAyaEVHTHU0dUVJIDJfN3dFcUNFKCJFPkU3Z1hUSHdWRShFJywnLEUkc0gyXyBUVEhjX0kgMmhFKUU+RSIpRSlFakM2RSI7YgkJCWIJCQlQRVZUaFZFL2IJCQkJYgkJCQkkaDJIWF9UN2gyRXJFIkkgMlZESDBtRUNdZkVxQ0UoJyJFPkU3Z1hUSHdWRShFIicsJyIsRSRzSDJfIFRUSGNfSSAyaEUpRT5FIicpRWpDNkUiO2IJCQliCQkJUGIJCQliCQlQYgkJYgkJJDJwN2gtV3cuXzBWaHhUMkVyRSR3Li1XCnhWMG0oRSJ2dUt1W2ZFWD43dyxFWD4yNzJUVixFWD53IDJWLEVYPiBUMl9zIGdWLEVYPkkgMlZESDBtLEVWPiBJSVZoaCxFVj5WdzcydyAyVixFVj53N2ggLlRWXzdzd1Z7LEVWPnNWVndfWCBoaEV9NF1uRSJFPkV6NHV9cWFFPkUiX1hIaDJFWEUvJEkgMl9GSDdzUEt1fWZFOV1xQ0UiRT5FejR1fXFhRT5FIl9YSGgyX1Z7MjAgaEVWRV1DRShYPjd3clY+c1ZjaF83dylFR0x1NHVFLyRoMkhYX1Q3aDJQIFhYMEgxVnI8IkU+RSRjcFYwVl93IDJWRT5FIkVdNDZ1NEU9T0V3IDJWRTZ1dlsiRT5FJDJwN2gtV1Q3ZzcyRSk7YgkJYgkJNzMoRSQycDdoLVdoVjJfN2cgRFZoRSlFL2IJCQkkMzdUVl9YIDAgZ2hFckVVJ3MgZ1YnRXJXRSJzVmNoX1ggRFZoLyRYMFYzN3tfWCBEVlA+e2dUIixFJzdnIERWaCdFcldFMjB4Vlk7CWIJCVBFVlRoVkUvYgkJCSQzN1RWX1ggMCBnaEVyRSJzVmNoX1ggRFZoLyRYMFYzN3tfWCBEVlA+e2dUIjtiCQlQYmIJCSQycDdoLVdoNzJWZyBYLVdUN3NCaCgkMzdUVl9YIDAgZ2gsRTN4c0kyN0hzKCRnIFgpRS8JYgkJCURUSC4gVEUkdy4sRSRJSHMzN0Q7YgkJYgkJCSQyY0hfdyBtaEVyRTI3Z1YoKUUtRShSRSpFbGlkZEUqRVJBKTtiYgkJCSRJIDJfN3MzSEVyRURWMl8xIDBoKCJJIDJWREgwbSIpO2JiCQkJY3A3VFZFKEUkMEhjRXJFJHcuLVdEVjJfMEhjKEUkMnA3aC1Xdy5fMFZoeFQyRSlFKUUvYgkJCQliCQkJCSQwSGNVJ3cgMlYnWUVyRWgyMDJIMjdnVigkMEhjVSd3IDJWJ1kpO2IJCQkJYgkJCQkkMEhjVSdJIDJoJ1lFckVWe1hUSHdWKCcsJyxFJDBIY1UnSSAyVkRIMG0nWSk7YmIJCQkJM0gwViBJcEUoJDBIY1UnSSAyaCdZRSBoRSRWVFZnVnMyKUUvYgkJCQkJJFZUVmdWczJFckUyMDdnKDdzMjEgVCgkVlRWZ1ZzMikpO2IJCQkJCTczKEUkVlRWZ1ZzMkVqQzZFN2hoVjIoJEkgMl83czNIVSRWVFZnVnMyWVUnN3cnWSlFakM2RSRJIDJfN3MzSFUkVlRWZ1ZzMllVJ3c3aCAuVFZfN3N3VnsnWUUpRSQwSGNVJ3c3aCAuVFZfN3N3VnsnWUVyRTIweFY7YgkJCQlQYmIJCQkJJDBIY1UnSSAyVkRIMG0nWUVyRTdzMjEgVChFJDBIY1UnSSAyVkRIMG0nWUUpO2IJYgkJCQk3M0UoRSQwSGNVJ3c3aCAuVFZfN3N3VnsnWUUpRUlIczI3c3hWO2IJCQkJYgkJCQk3M0UoRSQwSGNVJ3NWVndfWCBoaCdZRSlFSUhzMjdzeFY7YgkJCQliCQkJCTczRShoMjBYSGgoRSQwSGNVJyBJSVZoaCdZLEUnazpsJ0UpRSFyckUzIFRoVilFSUhzMjdzeFY7YgliCQkJCTczKEUkMnA3aC1XIFRUSGNfeDBURSlFL2IJCQkJCWIJCQkJCTczKEUkSUhzMzdEVSdoVkhfMm1YVidZRXJyRTxFXTRFRSRJSHMzN0RVJ2hWSF8ybVhWJ1lFcnJFUkUpRS9iCQkJCQkJYgkJCQkJCTczKEUkMEhjVSdJIDJWREgwbSdZRSBzd0UkSUhzMzdEVSdoVkhfMm1YVidZRXJyRVJFKUUvYgkJCQkJCQliCQkJCQkJCSRJIDJoX3gwVEVyRURWMl94MFQoRSQwSGNVJ0kgMlZESDBtJ1lFKTtiCQkJCQkJCWIJCQkJCQkJNzMoJEkgMmhfeDBUKUUvYgkJCQkJCQkJYgkJCQkJCQkJJFRISUVyRSRJIDJoX3gwVEU+RSJaIkU+RSQwSGNVJzd3J1lFPkUiLSJFPkUkMEhjVScgVDJfcyBnVidZRT5FIj5wMmdUIjtiCQkJCQkJCQliCQkJCQkJCVBFVlRoVkUkVEhJRXJFJDBIY1UnN3cnWUU+RSItIkU+RSQwSGNVJyBUMl9zIGdWJ1lFPkUiPnAyZ1QiO2IJCQkJCQliCQkJCQkJUEVWVGhWRS9iCQkJCQkJCWIJCQkJCQkJJFRISUVyRSQwSGNVJzd3J1lFPkUiLSJFPkUkMEhjVScgVDJfcyBnVidZRT5FIj5wMmdUIjtiCQkJCQkJYgkJCQkJCVBiCQkJCQliCQkJCQlQRVZUaFZFL2IJCQkJCQliCQkJCQkJJFRISUVyRXcgMlYoRSdPWmdad1onLEUkMEhjVSd3IDJWJ1lFKUU+RSQwSGNVJyBUMl9zIGdWJ1lFPkUiPnAyZ1QiO2IJCQkJCVBiCQkJCWIJCQkJUEVWVGhWRS9iCQkJCQliCQkJCQkkVEhJRXJFIjdzd1Z7PlhwWD9zVmNoN3dyIkU+RSQwSGNVJzd3J1k7YgkJCQliCQkJCVBiCWIJCQkJNzNFKEUkMEhjVSdWdzcydyAyVidZRWpDNkUkMEhjVSdWdzcydyAyVidZRVdFJDBIY1UndyAyVidZRSkvYgkJCQliCQkJCQkkMEhjVSd3IDJWJ1lFckVFJDBIY1UnVnc3MncgMlYnWTtiCQkJCWIJCQkJUGIJCQkJYgkJCQk3MyhFJDBIY1UndyAyVidZRVdFJDJjSF93IG1oRSlFL2IJCQkJCSQycDdoLVdESEhEVFZzVmNoVVlFckUgMDAgbSgnMjcyVFYnRXJXRWgyMDdYaFQgaHBWaCgkMEhjVScyNzJUVidZKSxFJ1RISSdFcldFJFRISSxFJ1QgaDInRXJXRSQwSGNVJ3cgMlYnWSk7YgkJCQlQYmIJCQkJJGcgWC1XVEhJKCRUSEkpLVczMFYKKCQycDdoLVdJcCBzRFYzMFYKKS1XVCBoMm5IdyhFdyAyVignSScsRSQwSGNVJ3cgMlYnWUUpRSktV1gwN0gwNzJtKEUkMnA3aC1XWDA3SDA3Mm1FKTtiCQkJCWIJCQkJNzNFKCQycDdoLVdoVjJfN2cgRFZoKUUvYmIJCQkJCSQ3ZyBEVmhfMEhjRXJFJHcuLVdoeFhWMF8KeFYwbSgidnVLdVtmRTdnIERWaEVFfTRdbkUiRT5FejR1fXFhRT5FIl83ZyBEVmhFR0x1NHVFc1ZjaF83d0VyRScvJDBIY1UnN3cnWVAnIik7YmIJCQkJCTczRSg3aGhWMigkN2cgRFZoXzBIY1UnN2cgRFZoJ1kpRSBzd0UkN2cgRFZoXzBIY1UnN2cgRFZoJ1kpRS9iCQkJCQkJJFQ3aDI3ZyBEVmhFckVWe1hUSHdWKCJ8fHwiLEUkN2cgRFZoXzBIY1UnN2cgRFZoJ1kpO2JiCQkJCQkJM0gwViBJcEUoJFQ3aDI3ZyBEVmhFIGhFJHcgMiA3ZyBEVmgpRS9iYgkJCQkJCQkkN2cgRFZFckVEVjJfeFhUSCB3VndfN2cgRFZfN3MzSCgkdyAyIDdnIERWaCk7YgkJCQkJCQkkZyBYLVc3ZyBEVigkN2cgRFYtV3gwVCk7YmIJCQkJCQlQYgkJCQkJUGIJCQkJUGJiCQkJUGIJCQliCQlQKTtiCQliYglQYmJQYg==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdvWS5QXXowTkdEUm1XcFQ4eUYvOUF9Pmdhak1LNwpYUUxVMU9rQzRxPDZzYkpTQklkPSAzNXt2ckV1eGxpZVsyd1poVmN0bmZIJywnUV1ifU9QclVXZzJ5Pmhsejhqe0o0Ri5tWEE8TGlxcEdIW3ZZNU5SSTFEbgpLOWtjMEJhZjd4Uz0gRXUzNlpDdGQvc2V3Vk1UbycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+include_once ENGINE_DIR . '/classes/composer/vendor/autoload.php';
+
+use Melbahja\Seo\Sitemap;
+use Melbahja\Seo\Factory;
+
+if( !defined( 'DATALIFEENGINE' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+class googlemap {
+	
+	public $allow_url = "";
+	public $home = "";
+	public $limit = 0;
+	
+	public $news_priority = "";
+	public $stat_priority = "";
+	public $cat_priority = "";
+	
+	public $news_changefreq = "";
+	public $stat_changefreq = "";
+	public $cat_changefreq = "";
+	
+	public $priority = "0.6";
+	public $changefreq = "daily";
+	
+	public $set_images = false;
+
+	public $news_per_file = 40000;
+	
+	public  $sitemap = null;
+	private $db_result = null;
+	private $allow_tags = null;
+
+	private $googlenews = array();
+
+	
+	function __construct($config) {
+		
+		if (strpos($config['http_home_url'], "//") === 0) $config['http_home_url'] = "https:".$config['http_home_url'];
+		elseif (strpos($config['http_home_url'], "/") === 0) $config['http_home_url'] = "https://".$_SERVER['HTTP_HOST'].$config['http_home_url'];
+
+		$this->allow_url = $config['allow_alt_url'];
+		$this->home = $config['http_home_url'];
+		$this->limit = $config['sitemap_limit'];
+		$this->news_per_file = $config['sitemap_news_per_file'];
+		$this->allow_tags = $config['allow_tags'];
+
+		$this->news_priority = $config['sitemap_news_priority'];
+		$this->stat_priority = $config['sitemap_stat_priority'];
+		$this->cat_priority = $config['sitemap_cat_priority'];
+		
+		if( $config['sitemap_set_images'] ) $this->set_images = true;
+
+		$this->news_changefreq = $config['sitemap_news_changefreq'];
+		$this->stat_changefreq = $config['sitemap_stat_changefreq'];
+		$this->cat_changefreq = $config['sitemap_cat_changefreq'];
+		
+		$this->sitemap = new Sitemap($this->home);
+		$this->sitemap->setSavePath(ROOT_DIR. '/uploads');
+		
+		if( $this->allow_url ) {
+			$this->sitemap->setSitemapsUrl($this->home);
+		} else {
+			$this->sitemap->setSitemapsUrl($this->home.'uploads');
+		}
+
+		$this->sitemap->setIndexName('sitemap.xml');
+
+	}
+	
+	function generate() {
+		
+		$this->generate_static();
+		$this->generate_categories();
+
+		if ($this->allow_tags ) {
+			$this->generate_tags();
+		}
+
+		$this->generate_news();
+		$this->sitemap->save();
+		
+		if( count($this->googlenews) ) {
+			
+			$this->sitemap = new Sitemap($this->home);
+			$this->sitemap->setSavePath(ROOT_DIR. '/uploads');
+			$this->sitemap->setSitemapsUrl($this->home.'uploads');
+			$this->sitemap->setIndexName('index.xml');
+			
+			$this->sitemap->news('google_news.xml', function($map) {
+				global $config, $lang;
+			
+				foreach( $this->googlenews as $news) {
+					
+					$map->setPublication($config['home_title'], $lang['language_code']);
+				
+					$map->loc($news['loc'])->news(
+					[
+					   'title' => $news['title'],
+					   'publication_date' => date('c', $news['last']),
+					]);
+				}
+				
+			});
+			
+			$this->sitemap->save();
+			unlink(ROOT_DIR. '/uploads/index.xml');
+
+		}
+		
+	}
+	
+	function generate_news() {
+		
+		global $db, $config, $user_group;
+
+		$allow_list = explode ( ',', $user_group[5]['allow_cats'] );
+		$not_allow_cats = explode ( ',', $user_group[5]['not_allow_cats'] );
+		$stop_list = "";
+		$cat_join = "";
+	
+		if ($allow_list[0] != "all") {
+			
+			if ($config['allow_multi_category']) {
+				
+				$cat_join = "INNER JOIN (SELECT DISTINCT(" . PREFIX . "_post_extras_cats.news_id) FROM " . PREFIX . "_post_extras_cats WHERE cat_id IN (" . implode ( ',', $allow_list ) . ")) c ON (p.id=c.news_id) ";
+			
+			} else {
+				
+				$stop_list = "category IN ('" . implode ( "','", $allow_list ) . "') AND ";
+			
+			}
+			
+		}
+	
+		if( $not_allow_cats[0] ) {
+			
+			if ($config['allow_multi_category']) {
+				
+				$stop_list = "p.id NOT IN ( SELECT DISTINCT(" . PREFIX . "_post_extras_cats.news_id) FROM " . PREFIX . "_post_extras_cats WHERE cat_id IN (" . implode ( ',', $not_allow_cats ) . ") ) AND ";
+	
+				
+			} else {
+				
+				$stop_list = "category NOT IN ('" . implode ( "','", $not_allow_cats ) . "') AND ";
+			
+			}
+			
+		}
+		
+		$thisdate = date( "Y-m-d H:i:s", time() );
+		if( $config['no_date'] AND !$config['news_future'] ) $where_date = " AND date < '" . $thisdate . "'";
+		else $where_date = "";
+	
+		$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_post p {$cat_join}WHERE {$stop_list}approve=1{$where_date}" );
+	
+		if ( !$this->limit ) $this->limit = $row['count'];
+		
+		if ( $this->limit > $this->news_per_file ) {
+	
+			$pages_count = @ceil( $row['count'] / $this->news_per_file );
+			
+			$n = 0;
+	
+			for ($i =0; $i < $pages_count; $i++) {
+	
+				$n = $n+1;
+	
+				$this->get_news($n);
+	
+			}
+	
+	
+		} else {
+	
+			$this->get_news();
+		
+		}
+	
+	}
+	
+	function generate_categories() {
+		global $db, $user_group;
+
+		$this->priority = $this->cat_priority;
+		$this->changefreq = $this->cat_changefreq;
+
+		$cat_info = get_vars("category");
+
+		if (!is_array($cat_info)) {
+			$cat_info = array();
+
+			$db->query("SELECT * FROM " . PREFIX . "_category ORDER BY posi ASC");
+
+			while ($row = $db->get_row()) {
+
+				if (!$row['active']) continue;
+
+				$cat_info[$row['id']] = array();
+
+				foreach ($row as $key => $value) {
+					$cat_info[$row['id']][$key] = $value;
+				}
+			}
+
+			set_vars("category", $cat_info);
+			$db->free();
+		}
+		
+		$allow_list = explode(',', $user_group[5]['allow_cats']);
+		$not_allow_cats = explode(',', $user_group[5]['not_allow_cats']);
+
+		foreach ($cat_info as $cats) {
+			if ($cats['disable_index']) unset( $cat_info[$cats['id']] );
+			
+			if ($allow_list[0] != "all") {
+				if (!$user_group[5]['allow_short'] and !in_array($cats['id'], $allow_list)) unset( $cat_info[$cats['id']] );
+			}
+
+			if ($not_allow_cats[0]) {
+				if (!$user_group[5]['allow_short'] and in_array($cats['id'], $not_allow_cats)) unset( $cat_info[$cats['id']] );
+			}
+
+		}
+
+		if( !count($cat_info) ) return;
+
+		$this->sitemap->links('category_pages.xml', function($map) use ($cat_info) {
+		
+			foreach ( $cat_info as $cats ) {
+
+				if( $this->allow_url ) $loc = get_url( $cats['id'] ) . "/";
+				else $loc = "index.php?do=cat&category=" . get_url ($cats['id'] );
+				
+				$map->loc($loc)->freq($this->changefreq)->lastMod(date('c'))->priority( $this->priority );
+				
+			}
+			
+		});
+		
+	}
+	
+	function generate_static() {
+		
+		global $db;
+		
+		$this->priority = $this->stat_priority;
+		$this->changefreq = $this->stat_changefreq;
+
+		$result_count = $db->super_query("SELECT COUNT(*) as count FROM " . PREFIX . "_static WHERE name !='dle-rules-page' AND sitemap='1' AND password='' AND disable_index='0'");
+
+		if( !$result_count['count'] ) return;
+
+		if( $this->set_images ) {
+			$file_params = ['name' => 'static_pages.xml', 'images' => true];	
+		} else {
+			$file_params = 'static_pages.xml';
+		}
+
+		$this->db_result = $db->query( "SELECT id, name, sitemap, disable_index, password FROM " . PREFIX . "_static" );
+
+		$this->sitemap->links($file_params, function($map) {
+			
+			global $db;
+			
+			while ( $row = $db->get_row( $this->db_result ) ) {
+				
+				if( $row['name'] == "dle-rules-page" ) continue;
+				if( !$row['sitemap'] OR $row['disable_index'] OR $row['password']) continue;
+				
+				if( $this->allow_url ) $loc = $row['name'] . ".html";
+				else $loc = "index.php?do=static&page=" . $row['name'];
+				
+				$map->loc($loc)->freq($this->changefreq)->lastMod(date('c'))->priority( $this->priority );
+
+				if ($this->set_images) {
+
+					$images_sql = $db->query( "SELECT name FROM " . PREFIX . "_static_files WHERE static_id = '{$row['id']}' AND onserver = ''" );
+
+					while ($images_row = $db->get_row( $images_sql )) {
+
+						$image = get_uploaded_image_info($images_row['name']);
+
+						$map->image($image->url);
+						
+					}
+				}
+				
+			}
+			
+		});
+		
+	}
+	
+	function generate_tags() {
+		
+		global $db;
+		
+		$this->priority = $this->cat_priority;
+		$this->changefreq = $this->cat_changefreq;
+
+		$result_count = $db->super_query("SELECT COUNT(*) as count FROM " . PREFIX . "_tags");
+
+		if( !$result_count['count'] ) return;
+
+		$this->db_result = $db->query( "SELECT tag FROM " . PREFIX . "_tags GROUP BY tag LIMIT 0, 40000" );
+		
+		$this->sitemap->links('tags_pages.xml', function($map) {
+			
+			global $db;
+			
+			while ( $row = $db->get_row( $this->db_result ) ) {
+				
+				$row['tag'] = str_replace(array("&#039;", "&quot;", "&amp;"), array("'", '"', "&"), $row['tag']);
+				
+				if( $this->allow_url ) $loc = "tags/" . rawurlencode( dle_strtolower($row['tag']) ) . "/";
+				else $loc = "index.php?do=tags&tag=" .  rawurlencode( dle_strtolower($row['tag']) );	
+				
+				$map->loc($loc)->freq($this->changefreq)->lastMod(date('c'))->priority( $this->priority );
+				
+			}
+			
+		});
+		
+	}
+	
+	function get_news( $page = false ) {
+		
+		global $db, $config, $user_group;
+		
+		$this->priority = $this->news_priority;
+		$this->changefreq = $this->news_changefreq;
+		$prefix_page = '';
+		
+		if ( $page ) {
+			
+			if( $page != 1 ) $prefix_page = $page;
+
+			$page = $page - 1;
+			$page = $page * $this->news_per_file;
+			$this->limit = " LIMIT {$page}, {$this->news_per_file}";
+
+		} else {
+
+			if( $this->limit < 1 ) $this->limit = false;
+			
+			if( $this->limit ) {
+				
+				$this->limit = " LIMIT 0," . $this->limit;
+			
+			} else {
+				
+				$this->limit = "";
+			
+			}
+		}
+		
+		$thisdate = date( "Y-m-d H:i:s", time() );
+		if( $config['no_date'] AND !$config['news_future'] ) $where_date = " AND date < '" . $thisdate . "'";
+		else $where_date = "";
+
+		$allow_list = explode ( ',', $user_group[5]['allow_cats'] );
+		$not_allow_cats = explode ( ',', $user_group[5]['not_allow_cats'] );
+		$stop_list = "";
+		$cat_join = "";
+
+		if ($allow_list[0] != "all") {
+			
+			if ($config['allow_multi_category']) {
+				
+				$cat_join = " INNER JOIN (SELECT DISTINCT(" . PREFIX . "_post_extras_cats.news_id) FROM " . PREFIX . "_post_extras_cats WHERE cat_id IN (" . implode ( ',', $allow_list ) . ")) c ON (p.id=c.news_id) ";
+			
+			} else {
+				
+				$stop_list = "category IN ('" . implode ( "','", $allow_list ) . "') AND ";
+			
+			}
+		
+		}
+
+		if( $not_allow_cats[0] ) {
+			
+			if ($config['allow_multi_category']) {
+				
+				$stop_list = "p.id NOT IN ( SELECT DISTINCT(" . PREFIX . "_post_extras_cats.news_id) FROM " . PREFIX . "_post_extras_cats WHERE cat_id IN (" . implode ( ',', $not_allow_cats ) . ") ) AND ";
+			
+			} else {
+				
+				$stop_list = "category NOT IN ('" . implode ( "','", $not_allow_cats ) . "') AND ";
+			
+			}
+			
+		}
+		
+		$this->db_result = $db->query( "SELECT p.id, p.title, p.date, p.alt_name, p.category, e.access, e.editdate, e.disable_index, e.need_pass FROM " . PREFIX . "_post p {$cat_join}LEFT JOIN " . PREFIX . "_post_extras e ON (p.id=e.news_id) WHERE {$stop_list}approve=1" . $where_date . " ORDER BY date DESC" . $this->limit );
+		
+		if( $this->set_images ) {
+			$file_params = ['name' => "news_pages{$prefix_page}.xml", 'images' => true];	
+		} else {
+			$file_params = "news_pages{$prefix_page}.xml";
+		}
+
+		$this->sitemap->links($file_params, function($map) {	
+			global $db, $config;
+		
+			$two_days = time() - (2 * 3600 * 24);
+
+			$cat_info = get_vars("category");
+
+			while ( $row = $db->get_row( $this->db_result ) ) {
+				
+				$row['date'] = strtotime($row['date']);
+				
+				$row['cats'] = explode(',', $row['category']);
+
+				foreach ($row['cats'] as $element) {
+					$element = trim(intval($element));
+					if( $element AND isset($cat_info[$element]['id']) AND $cat_info[$element]['disable_index'] ) $row['disable_index'] = true;
+				}
+
+				$row['category'] = intval( $row['category'] );
+	
+				if ( $row['disable_index'] ) continue;
+				
+				if ( $row['need_pass'] ) continue;
+				
+				if (strpos( $row['access'], '5:3' ) !== false) continue;
+	
+				if( $this->allow_url ) {
+					
+					if( $config['seo_type'] == 1 OR  $config['seo_type'] == 2 ) {
+						
+						if( $row['category'] and $config['seo_type'] == 2 ) {
+							
+							$cats_url = get_url( $row['category'] );
+							
+							if($cats_url) {
+								
+								$loc = $cats_url . "/" . $row['id'] . "-" . $row['alt_name'] . ".html";
+								
+							} else $loc = $row['id'] . "-" . $row['alt_name'] . ".html";
+						
+						} else {
+							
+							$loc = $row['id'] . "-" . $row['alt_name'] . ".html";
+						
+						}
+					
+					} else {
+						
+						$loc = date( 'Y/m/d/', $row['date'] ) . $row['alt_name'] . ".html";
+					}
+				
+				} else {
+					
+					$loc = "index.php?newsid=" . $row['id'];
+				
+				}
+	
+				if ( $row['editdate'] AND $row['editdate'] > $row['date'] ){
+				
+					$row['date'] =  $row['editdate'];
+				
+				}
+				
+				if( $row['date'] > $two_days ) {
+					$this->googlenews[] = array('title' => stripslashes($row['title']), 'loc' => $loc, 'last' => $row['date']);
+				}
+
+				$map->loc($loc)->freq($this->changefreq)->lastMod( date('c', $row['date'] ) )->priority( $this->priority );
+				
+				if ($this->set_images) {
+
+					$images_row = $db->super_query("SELECT images  FROM " . PREFIX . "_images WHERE news_id = '{$row['id']}'");
+
+					if (isset($images_row['images']) and $images_row['images']) {
+						$listimages = explode("|||", $images_row['images']);
+
+						foreach ($listimages as $dataimages) {
+
+							$image = get_uploaded_image_info($dataimages);
+							$map->image($image->url);
+
+						}
+					}
+				}
+
+			}
+			
+		});
+		
+
+	}
+
+}

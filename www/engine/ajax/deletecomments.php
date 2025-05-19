@@ -5,9 +5,52 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: deletecomments.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: comments delete
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1UzP1M+U09kKk9NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU9YdFY0VkpUeGNYcDY4VDZjWC1YcmJYdlJ4NDljPEtYQWNMVFZYbGhSZ1NYTy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tT1g+NDRTSzpkZExxYy02YzxLMGhnZE8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLU9YSFJTYmhUOD40WChuKVh3WVlbLXdZd05YdlJ4NDljPEtYQWNMVFZYbGhSZ1NPTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1PWEU+VEtYblJMY1hUS1hTaFI0Y240Y0xYcmJYblJTYmhUOD40T01NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NT1gxVHFjOlhMY3FjNGNuUmFhYzY0SzBTPlNPLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1PWG1LYzpYblJhYWM2NEtYTGNxYzRjT01NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTypkT09UeCghTGN4VDZjTCgndGlFaUpEMXBwOWxEOXAnKSlYRk8JPmNWTGNoKFgiNUVFdWRzMHNYW1l6WDFSaHJUTExjNiJYKTtPCT5jVkxjaFgoWCdKUm5WNFRSNjpYMDBkMDBkJ1gpO08JTFRjKFgiNVZuLlQ2OFhWNDRjYVM0ISJYKTtPPU8JT1R4KFghJFRLX3FSODhjTFgpWExUYyhYImNoaFJoIlgpO09PJFRMWE1YVEtLYzQoWCRfUXBdbXB2RS8nVEwnWlgpWD9YVDY0R1ZxKFgkX1FwXW1wdkUvJ1RMJ1pYKVg6WFk7T09UeChYISRUTFgpWExUYyhYImNoaFJoIlgpO09PJGhSPFhNWCRMci1VS2dTY2hfV2djaGIoWCJ2cEpwSEVYVEwsWFNSSzRfVEwsWGdLY2hfVEwsWExWNGMsWFRLX2hjOFRLNGNoWDFRQkFYIlgwWHVRcDFEa1gwWCJfblJhYWM2NEtYCjVwUXBYVExYTVgnRiRUTD0nIlgpO09PVHhYKCRoUjwvJ1RMJ1opCUZPTwkkPlZHY19TY2hhWE1YeFZxS2M7TwkkaFI8LydMVjRjJ1pYTVhLNGg0UjRUYWMoWCRoUjwvJ0xWNGMnWlgpO09PCVR4KFgkX2xwRS8nTHFjX1ZxcVI8Xz5WSz4nWlghTVgiIlhpOXRYJF9scEUvJ0xxY19WcXFSPF8+Vks+J1pYTU1YJExxY19xUjhUNl8+Vks+WGk5dFgoKCRhY2FyY2hfVEwvJ2dLY2hfVEwnWlhNTVgkaFI8LydnS2NoX1RMJ1pYaTl0WCRoUjwvJ1RLX2hjOFRLNGNoJ1pYaTl0WCRnS2NoXzhoUmdTLyRhY2FyY2hfVEwvJ2dLY2hfOGhSZ1MnWlovJ1ZxcVI8X0xjcW4nWilYQlFYJGFjYXJjaF9UTC8nZ0tjaF84aFJnUydaWE1NWCdzJ1hCUVgkZ0tjaF84aFJnUy8kYWNhcmNoX1RMLydnS2NoXzhoUmdTJ1paLydMY3FfVnFxbidaKVgpWCQ+VkdjX1NjaGFYTVg0aGdjO09PCVR4WChYJGdLY2hfOGhSZ1MvJGFjYXJjaF9UTC8nZ0tjaF84aFJnUydaWi8nY0xUNF9xVGFUNCdaWGk5dFgoKCRoUjwvJ0xWNGMnWlgrWCgkZ0tjaF84aFJnUy8kYWNhcmNoX1RMLydnS2NoXzhoUmdTJ1paLydjTFQ0X3FUYVQ0J1pYKlhvWSkpWDNYJF9FREFwKVgpWEZPCQkkPlZHY19TY2hhWE1YeFZxS2M7Twk9T08JVHgoWCQ+VkdjX1NjaGFYKVhGTwlPCQlMY3FjNGNuUmFhYzY0SyhYJGhSPC8nVEwnWlgpO09PCQlUeFgoWCRuUjZ4VDgvJ1ZxcVI8X1ZxNF9naHEnWlhpOXRYISRuUjZ4VDgvJ0tjUl80YlNjJ1pYKVgkblNoY3hUIFhNWCJ4Z3FxXyI7WGNxS2NYJG5TaGN4VCBYTVgieGdxcV8iMCRoUjwvJ1NSSzRfVEwnWjtPTwkJbnFjVmhfblZuPmMoWFZoaFZiKFgnNmM8S18nLFgnaEtLJyxYJ0s0VjRLJyxYJ25SYWFfJzAkaFI8LydTUks0X1RMJ1osWCRuU2hjeFQgWClYKTtPCQlPCQljbj5SWCRoUjwvJ1RMJ1o7TwlPCT1YY3FLY1hMVGMoWCJjaGhSaCJYKTtPTz1YY3FLY1hMVGMoWCJjaGhSaCJYKTtPP1U=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdhbi90azR7eXg3VnpCPjVHZFlIWy52Y0VdMXc2ZkQydTxQSkFOYkwgCkNXaVVwRlRvZ2VSbTBRc2pTTTkzT3I9fUtaOGxYcUloJywnbWNbRFh0WUJmOWEzT2hIdi8wQzRrU2VUUUYybkpJWlB3N0xNNXlkeFdWcUE+RXtpNnVqb1UuUjFLcD1OPApifXpzXWdHIGw4cicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+	
+if( !$is_logged ) die( "error" );
+
+$id = isset( $_REQUEST['id'] ) ? intval( $_REQUEST['id'] ) : 0;
+
+if( !$id ) die( "error" );
+
+$row = $db->super_query( "SELECT id, post_id, user_id, date, is_register FROM " . PREFIX . "_comments WHERE id = '{$id}'" );
+
+if ($row['id'])	{
+
+	$have_perm = false;
+	$row['date'] = strtotime( $row['date'] );
+
+	if( $_GET['dle_allow_hash'] != "" AND $_GET['dle_allow_hash'] == $dle_login_hash AND (($member_id['user_id'] == $row['user_id'] AND $row['is_register'] AND $user_group[$member_id['user_group']]['allow_delc']) OR $member_id['user_group'] == '1' OR $user_group[$member_id['user_group']]['del_allc']) ) $have_perm = true;
+
+	if ( $user_group[$member_id['user_group']]['edit_limit'] AND (($row['date'] + ($user_group[$member_id['user_group']]['edit_limit'] * 60)) < $_TIME) ) {
+		$have_perm = false;
+	}
+
+	if( $have_perm ) {
+	
+		deletecomments( $row['id'] );
+
+		if ( $config['allow_alt_url'] AND !$config['seo_type'] ) $cprefix = "full_"; else $cprefix = "full_".$row['post_id'];
+
+		clear_cache( array( 'news_', 'rss', 'stats', 'comm_'.$row['post_id'], $cprefix ) );
+		
+		echo $row['id'];
+	
+	} else die( "error" );
+
+} else die( "error" );
+?>

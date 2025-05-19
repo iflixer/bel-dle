@@ -5,9 +5,121 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: message.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: notice of removal news
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3hkP1pKWkUwKkU8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PEU4aVlJWVFoXUs4bGZnaGZLOC04alA4PTldSVdLeW44NktWaFk4Q085Ulo4RS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tRThKSUlabjowMFZISy1mS3ludk9SMEUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUU4WDlaUE9oZ0pJOCh7KThwRkZ3LXBGcG84PTldSVdLeW44NktWaFk4Q085UlpFPDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDxFODJKaG44ezlWSzhobjhaTzlJS3tJS1Y4alA4ezlaUE9oZ0pJRTw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8RThCaEhLOjg1S25uWWdLdlpKWkUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUU4bW5LOjhmOUloe0s4OV04T0s1OTNZSDhmS3luRTw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8RSowRUVoXSghVktdaGZLVignaS4yLlE0QmxsV0M0V2wnKSk4a0UJSktZVktPKDgiWzIydDBHdkc4d0ZMOEI5T2poVlZLZiI4KTtFCUpLWVZLTzgoOCdROXtZSWg5Zjo4dnYwdnYwJzgpO0UJVmhLKDgiW1l7CmhmZzhZSUlLNVpJISI4KTtFfUVFaF0oOCEkaG5fSDlnZ0tWOCk4VmhLKDgiS09POU8iOCk7RWhdKDghJFJuS09fZ085UlpzJDVLNWpLT19oVnMnUm5LT19nTzlSWidhYXMnWUhIOXlfWUhIX0tWaEknYTgpOFZoSyg4IktPTzlPIjgpO0VFaF0oOCFobm5LSSgkX3JsQW1sPTJzJ1JuS09fSlluSidhKThicjghJF9ybEFtbD0ycydSbktPX0pZbkonYThicjgkX3JsQW1sPTJzJ1JuS09fSlluSidhOCE8OCRWSEtfSDlnaGZfSlluSjgpOGtFCUUJVmhLOCgiS09POU8iKTtFCUV9RQlFJFpZT25LODw4Zkt5OHRZT25LQmhISUtPKCk7RSRaWU9uSy14blldS181OVZLODw4SU9SSztFJFpZT25LLXhZSEg5eV9ST0g4PDgkUm5LT19nTzlSWnMkNUs1aktPX2hWcydSbktPX2dPOVJaJ2FhcydZSEg5eV9ST0gnYTtFJFpZT25LLXhZSEg5eV9oNVlnSzg8OCRSbktPX2dPOVJacyQ1SzVqS09faFZzJ1JuS09fZ085UlonYWFzJ1lISDl5X2g1WWdLJ2E7RSRaWU9uSy14WUhIOXlqans5VktuODw4XVlIbks7RUUkaFY4PDhobm5LSSgkX3RiPTJzJ2hWJ2EpOD84aGZJM1lIKDgkX3RiPTJzJ2hWJ2E4KTg6OEY7RSRJS3VJODw4aG5uS0koJF90Yj0ycydJS3VJJ2EpOD84JF90Yj0ycydJS3VJJ2E4OjgiIjtFJF90Yj0ycydZSEg5eVZLSEtJSydhODw4aG5uS0koJF90Yj0ycydZSEg5eVZLSEtJSydhKTg/OCRfdGI9MnMnWUhIOXlWS0hLSUsnYTg6OCIiO0VFaF0oOCEkaFY4YnI4ISRJS3VJKThWaEsoOCJLT085TyI4KTtFRSRPOXk4PDgkVmoteG5SWktPXzdSS09QKDgiPWxRbFgyOGhWLDhJaElISyw4WVJJOU84QnJiNjgiOHY4dHJsQjRUOHY4Il9aOW5JOHpbbHJsOGhWPCdrJGhWfSciOCk7RUVoXTgoOCEkTzl5cydoVidhOCk4VmhLKDgiS09POU8iOCk7RUUkSWhJSEs4PDhuSU9oWm5IWW5KS24oJE85eXMnSWhJSEsnYSk7RSRPOXlzJ1lSSTlPJ2E4PDgkVmoteG5ZXUtuN0goJE85eXMnWVJJOU8nYSk7RUUkTzl5ODw4JFZqLXhuUlpLT183UktPUCg4Ij1sUWxYMjhLNVloSCw4Zlk1Syw4Um5LT19oVjhCcmI2OCI4djhtPWxydHJsQjRUOHY4Il9SbktPbjh6W2xybDhmWTVLODw4J2skTzl5cydZUkk5TydhfSciOCk7RQkJCUVoXSg4ITgkTzl5cydSbktPX2hWJ2E4KThWaEsoOCJtbktPOGY5SThdOVJmViI4KTtFRWhdOCgkX3RiPTJzJ1lISDl5VktIS0lLJ2E4PDw4ImY5IjgpOGtFRQkkSFlmZ3MnNUtubllnS19aNSdhODw4JEhZZmdzJzVLbm5ZZ0tfWjVfdydhO0VFCSQ1S25uWWdLODw4ZGRkWzI2UUVrJE85eXMnZlk1SydhfSxFRWskSFlmZ3MnNUtubllnS19aNV9HJ2F9OCJrJEloSUhLfSI4ayRIWWZncyc1S25uWWdLX1o1X28nYX04ayQ1SzVqS09faFZzJ2ZZNUsnYX12OEVFayRIWWZncyc1S25uWWdLX1o1X00nYX1FRXM3UjlJS2FrJElLdUl9czA3UjlJS2FFWzI2UTtFRUV9OEtIbks4a0VFJDVLbm5ZZ0s4PDhkZGRbMjZRRWskTzl5cydmWTVLJ2F9LEVFayRIWWZncyc1S25uWWdLX1o1X0cnYX04ImskSWhJSEt9IjhrJEhZZmdzJzVLbm5ZZ0tfWjVfcCdhfThrJDVLNWpLT19oVnMnZlk1SydhfXY4RUVrJEhZZmdzJzVLbm5ZZ0tfWjVfTCdhfUVFczdSOUlLYWskSUt1SX1zMDdSOUlLYUVbMjZRO0VFfUVFJDVLbm5ZZ0s4PDgkVmoteG5ZXUtuN0goOCRaWU9uSy14RERfdFlPbksoOCRaWU9uSy14Wk85e0tubig4SU9oNSg4JDVLbm5ZZ0s4KTgpLDhdWUhuSzgpOCk7RSRJaDVLODw4SWg1SygpO0UkNUs1aktPX2hWcydmWTVLJ2E4PDgkVmoteG5ZXUtuN0goJDVLNWpLT19oVnMnZlk1SydhKTtFRSRWai14N1JLT1AoIjRXPWxyMjg0VzJiOCI4djhtPWxydHJsQjRUOHY4Il97OWYzS09uWUloOWZuOChuUmoxS3tJLDh7T0tZSUtWX1lJLDhSWlZZSUtWX1lJLDhuS2ZWS09faFYsOE9Le2haaEtmSV9oVik4M1lIUktuOCgnayRIWWZncyc1S25uWWdLX1o1J2F9Jyw4J2skXzI0Nmx9Jyw4J2skXzI0Nmx9Jyw4J2skNUs1aktPX2hWcydSbktPX2hWJ2F9Jyw4J2skTzl5cydSbktPX2hWJ2F9JykiKTtFJHs5ZjNLT25ZSWg5Zl9oVjg8OCRWai14aGZuS09JX2hWKCk7RSRWai14N1JLT1AoIjRXPWxyMjg0VzJiOCI4djhtPWxydHJsQjRUOHY4Il97OWYzS09uWUloOWZfUm5LT244KFJuS09faFYsOHs5ZjNLT25ZSWg5Zl9oVik4M1lIUktuOCgnayRPOXlzJ1JuS09faFYnYX0nLDgnayR7OWYzS09uWUloOWZfaFZ9Jyk4Ylc4aW10UTRYLjJsOFVscThtdGkuMmw4Um5LT19oVjg8OFMuUW1sPShSbktPX2hWKSIpO0UkVmoteDdSS09QKCI0Vz1scjI4NFcyYjgiOHY4bT1scnRybEI0VDh2OCJfezlmM0tPbllJaDlmbl81S25uWWdLbjgoezlmM0tPbllJaDlmX2hWLDhuS2ZWS09faFYsOHs5ZklLZkksOHtPS1lJS1ZfWUkpODNZSFJLbjgoJ2skezlmM0tPbllJaDlmX2hWfScsOCdrJDVLNWpLT19oVnMnUm5LT19oVidhfScsOCdrJDVLbm5ZZ0t9Jyw4J2skXzI0Nmx9JykiKTtFRSRWai14N1JLT1AoIm10aS4ybDgiOHY4bT1scnRybEI0VDh2OCJfUm5LT244PWwyOFo1X1lISDxaNV9ZSEgrRyw4WjVfUmZPS1lWPFo1X1JmT0tZVitHODh6W2xybDhSbktPX2hWPCdrJE85eXMnUm5LT19oVidhfSciKTtFRWhdKDgkezlmXWhncyc1WWhIX1o1J2E4KThrRQkJRQkJJDVZaEhfSUs1WkhZSUs4PDgkVmoteG5SWktPXzdSS09QKDgiPWxRbFgyOCo4QnJiNjgiOHY4dHJsQjRUOHY4Il9LNVloSDh6W2xybDhmWTVLPCdaNSc4UTQ2NDI4RixHIjgpO0UJCSQ1WWhIODw4Zkt5OFZIS181WWhIKDgkezlmXWhnOCw4JDVZaEhfSUs1WkhZSUtzJ1JuS19KSTVIJ2E4KTtFCQkJRQkJJG5IaGYKODw4JHs5Zl1oZ3MnSklJWl9KOTVLX1JPSCdhOHY4ImhmVkt1dlpKWj9WOTxaNSZWOVl7SWg5ZjxPS1lWWjUmWjVoVjwiOHY4JHs5ZjNLT25ZSWg5Zl9oVjtFCQkJRQkJJDVZaEhfSUs1WkhZSUtzJ0lLNVpIWUlLJ2E4PDhuSU9oWm5IWW5KS24oOCQ1WWhIX0lLNVpIWUlLcydJSzVaSFlJSydhOCk7RQkJJDVZaEhfSUs1WkhZSUtzJ0lLNVpIWUlLJ2E4PDhuSU9fT0taSFl7Syg4ImslUm5LT2ZZNUslfSIsOCRPOXlzJ2ZZNUsnYSw4JDVZaEhfSUs1WkhZSUtzJ0lLNVpIWUlLJ2E4KTtFCQkkNVloSF9JSzVaSFlJS3MnSUs1WkhZSUsnYTg8OG5JT19PS1pIWXtLKDgiayVWWUlLJX0iLDhIWWZnVllJSyg4IjE4QjhxOFs6aCIsOCRJaDVLOCksOCQ1WWhIX0lLNVpIWUlLcydJSzVaSFlJSydhOCk7RQkJJDVZaEhfSUs1WkhZSUtzJ0lLNVpIWUlLJ2E4PDhuSU9fT0taSFl7Syg4ImslXU85NVJuS09mWTVLJX0iLDgkNUs1aktPX2hWcydmWTVLJ2EsOCQ1WWhIX0lLNVpIWUlLcydJSzVaSFlJSydhOCk7RQkJJDVZaEhfSUs1WkhZSUtzJ0lLNVpIWUlLJ2E4PDhuSU9fT0taSFl7Syg4ImslSWhJSEslfSIsOCRIWWZncyc1S25uWWdLX1o1J2EsOCQ1WWhIX0lLNVpIWUlLcydJSzVaSFlJSydhOCk7RQkJJDVZaEhfSUs1WkhZSUtzJ0lLNVpIWUlLJ2E4PDhuSU9fT0taSFl7Syg4ImslUk9IJX0iLDgkbkhoZgosOCQ1WWhIX0lLNVpIWUlLcydJSzVaSFlJSydhOCk7RQkJRQkJJDVLbm5ZZ0s4PDhuSU9oWm5IWW5KS24oOG5JT2habkhZbkpLbig4JDVLbm5ZZ0spOCk7RUUJCWhdKDghJDVZaEhfSUs1WkhZSUtzJ1JuS19KSTVIJ2E4KThrRQkJCSQ1S25uWWdLODw4bklPX09LWkhZe0soOCJkak94Iiw4IlxmIiw4JDVLbm5ZZ0s4KTtFCQkJJDVLbm5ZZ0s4PDhuSU9fT0taSFl7Syg4JyY3UjlJOycsOCciJyw4JDVLbm5ZZ0s4KTtFCQkJJDVLbm5ZZ0s4PDhuSU9oWl9JWWduKDgkNUtubllnSzgpO0UJCX1FCQlFCQkkNVloSF9JSzVaSFlJS3MnSUs1WkhZSUsnYTg8OG5JT19PS1pIWXtLKDgiayVJS3VJJX0iLDgkNUtubllnSyw4JDVZaEhfSUs1WkhZSUtzJ0lLNVpIWUlLJ2E4KTtFCQlFCQkkNVloSC14bktmVig4JE85eXMnSzVZaEgnYSw4JEhZZmdzJzVZaEhfWjUnYSw4JDVZaEhfSUs1WkhZSUtzJ0lLNVpIWUlLJ2E4KTtFCQlFfUVFS3tKOTgiOQoiO0U/eA==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCd9RHd7Cl1XRVExW1RudTNTaTx0YU4gQnNkWWtvSHpJcTVsNDIuNkxYck9oVTA3eXhtPj1wY01HZnZaQTg5aktDZ1JGYmVWUEovJywnfUI0Y2tmTgpMakhYc3h2VkQ9UF16OEZbPGF7NWxXdFltRUlUQU0zQ1JyaUsvcXc+VUpTMlo2MW4ucFEgb2JlR2d1ME83ZHloOScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( !$is_logged ) die( "error" );
+if( !$user_group[$member_id['user_group']]['allow_all_edit'] ) die( "error" );
+
+if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+	
+	die ("error");
+	
+}
+	
+$parse = new ParseFilter();
+$parse->safe_mode = true;
+$parse->allow_url = $user_group[$member_id['user_group']]['allow_url'];
+$parse->allow_image = $user_group[$member_id['user_group']]['allow_image'];
+$parse->allowbbcodes = false;
+
+$id = isset($_POST['id']) ? intval( $_POST['id'] ) : 0;
+$text = isset($_POST['text']) ? $_POST['text'] : "";
+$_POST['allowdelete'] = isset($_POST['allowdelete']) ? $_POST['allowdelete'] : "";
+
+if( !$id OR !$text) die( "error" );
+
+$row = $db->super_query( "SELECT id, title, autor FROM " . PREFIX . "_post WHERE id='{$id}'" );
+
+if ( !$row['id'] ) die( "error" );
+
+$title = stripslashes($row['title']);
+$row['autor'] = $db->safesql($row['autor']);
+
+$row = $db->super_query( "SELECT email, name, user_id FROM " . USERPREFIX . "_users WHERE name = '{$row['autor']}'" );
+			
+if( ! $row['user_id'] ) die( "User not found" );
+
+if ($_POST['allowdelete'] == "no" ) {
+
+	$lang['message_pm'] = $lang['message_pm_4'];
+
+	$message = <<<HTML
+{$row['name']},
+
+{$lang['message_pm_1']} "{$title}" {$lang['message_pm_5']} {$member_id['name']}. 
+
+{$lang['message_pm_6']}
+
+[quote]{$text}[/quote]
+HTML;
+
+
+} else {
+
+$message = <<<HTML
+{$row['name']},
+
+{$lang['message_pm_1']} "{$title}" {$lang['message_pm_2']} {$member_id['name']}. 
+
+{$lang['message_pm_3']}
+
+[quote]{$text}[/quote]
+HTML;
+
+}
+
+$message = $db->safesql( $parse->BB_Parse( $parse->process( trim( $message ) ), false ) );
+$time = time();
+$member_id['name'] = $db->safesql($member_id['name']);
+
+$db->query("INSERT INTO " . USERPREFIX . "_conversations (subject, created_at, updated_at, sender_id, recipient_id) values ('{$lang['message_pm']}', '{$_TIME}', '{$_TIME}', '{$member_id['user_id']}', '{$row['user_id']}')");
+$conversation_id = $db->insert_id();
+$db->query("INSERT INTO " . USERPREFIX . "_conversation_users (user_id, conversation_id) values ('{$row['user_id']}', '{$conversation_id}') ON DUPLICATE KEY UPDATE user_id = VALUES(user_id)");
+$db->query("INSERT INTO " . USERPREFIX . "_conversations_messages (conversation_id, sender_id, content, created_at) values ('{$conversation_id}', '{$member_id['user_id']}', '{$message}', '{$_TIME}')");
+
+$db->query("UPDATE " . USERPREFIX . "_users SET pm_all=pm_all+1, pm_unread=pm_unread+1  WHERE user_id='{$row['user_id']}'");
+
+if( $config['mail_pm'] ) {
+		
+		$mail_template = $db->super_query( "SELECT * FROM " . PREFIX . "_email WHERE name='pm' LIMIT 0,1" );
+		$mail = new dle_mail( $config , $mail_template['use_html'] );
+			
+		$slink = $config['http_home_url'] . "index.php?do=pm&doaction=readpm&pmid=" . $conversation_id;
+			
+		$mail_template['template'] = stripslashes( $mail_template['template'] );
+		$mail_template['template'] = str_replace( "{%username%}", $row['name'], $mail_template['template'] );
+		$mail_template['template'] = str_replace( "{%date%}", langdate( "j F Y H:i", $time ), $mail_template['template'] );
+		$mail_template['template'] = str_replace( "{%fromusername%}", $member_id['name'], $mail_template['template'] );
+		$mail_template['template'] = str_replace( "{%title%}", $lang['message_pm'], $mail_template['template'] );
+		$mail_template['template'] = str_replace( "{%url%}", $slink, $mail_template['template'] );
+		
+		$message = stripslashes( stripslashes( $message) );
+
+		if( !$mail_template['use_html'] ) {
+			$message = str_replace( "<br>", "\n", $message );
+			$message = str_replace( '&quot;', '"', $message );
+			$message = strip_tags( $message );
+		}
+		
+		$mail_template['template'] = str_replace( "{%text%}", $message, $mail_template['template'] );
+		
+		$mail->send( $row['email'], $lang['mail_pm'], $mail_template['template'] );
+		
+}
+
+echo "ok";
+?>

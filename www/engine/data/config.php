@@ -18,17 +18,19 @@ $config = array (
 
 'start_site' => '1',
 
-'date_adjust' => 'Europe/Kyiv',
+'date_adjust' => 'UTC',
 
 'allow_alt_url' => '1',
 
 'seo_type' => '2',
 
+'seo_control' => '1',
+
 'translit_url' => '1',
 
 'langs' => 'Russian',
 
-'skin' => 'Default',
+'skin' => 'Moviex',
 
 'jquery_version' => '3',
 
@@ -140,7 +142,7 @@ $config = array (
 
 'alert_edit_now' => '1',
 
-'rating_type' => '0',
+'rating_type' => '2',
 
 'quick_edit_mode' => '0',
 
@@ -376,7 +378,7 @@ $config = array (
 
 'thumb_gallery' => '1',
 
-'image_lazy' => '0',
+'image_lazy' => '2',
 
 'tinypng_key' => '',
 
@@ -421,8 +423,6 @@ $config = array (
 'rss_dzenparams' => 'xmlns:content=&quot;http://purl.org/rss/1.0/modules/content/&quot; xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot; xmlns:media=&quot;http://search.yahoo.com/mrss/&quot; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:georss=&quot;http://www.georss.org/georss&quot;',
 
 'charset' => 'utf-8',
-
-'seo_control' => '0',
 
 'allow_complaint_mail' => '0',
 

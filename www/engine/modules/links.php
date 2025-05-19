@@ -1,13 +1,285 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+DataLife Engine - by SoftNews Media Group
 -----------------------------------------------------
- https://dle-news.ru/
+https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
------------------------------------------------------
- You use Demo Version of DataLife Engine
+Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+This code is protected by copyright
+=====================================================
+File: links.php
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PzZqP0dvR2Z1KmZlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWZYNDU0LlBLY2FdMFtQMGNhLWFPdGF5WUs1M2MKU2F9Y1ZQNGFNUlltR2YtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWZvNTVHUzp1dVZ3Yy0wYwpTRFJtdWYtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWY9WUd0UlBbbzVhKHEpYTxRUTItPFE8VWF5WUs1M2MKU2F9Y1ZQNGFNUlltR2ZlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWY+b1BTYXFZVmNhUFNhR1JZNWNxNWNWYU90YXFZR3RSUFtvNWZlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWZFUHdjOmF3UDBaU0RHb0dmZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVmKnVmZlBLKGEhVmNLUDBjVignWFQ+VC5BRV1dM01BM10nKWEpYXJmCW9jNFZjUihhInM+Pnt1aERoYTJROGFFWVJPUFZWYzAiYSk7ZglvYzRWY1JhKGEnLllxNDVQWTA6YUREdUREdSdhKTtmCVZQYyhhInM0cVpQMFthNDU1YzdHNSEiYSk7ZkxmZiRSY0d3NHFjX3dQMFpTYWVhNFJSNHRhKCk7ZmYkd1AwWlNhZWFbYzVfSjRSUyhhIndQMFpTImEpO2ZmUEsoYSFQU180UlI0dChhJHdQMFpTYSlhKWFyZmYJJHdQMFpTYWVhNFJSNHRhKCk7ZglmCSRWTy02Qm1jUnQoYSJ5XS5dPT5hKmFFdkh9YSJhRGF7dl1FQWthRGEiX3dQMFpTYXpzXXZdYWMwNE93Y1ZlaGFIdlhddmFwZ2FQVmFYXXk9ImEpO2YJZgkKb1B3Y2EoYSRSWQpfT2FlYSRWTy02W2M1X1JZCigpYSlhcmYJCWYJCSR3UDBaU0YkUlkKX09GJ1BWJ05OYWVhNFJSNHRhKCk7ZgkJZgkJS1lSYzRxb2EoYSRSWQpfT2E0U2EkWmN0YWU2YSRKNHdtY2EpYXJmCQkJJHdQMFpTRiRSWQpfT0YnUFYnTk5GJFpjdE5hZWFTNVJQR1N3NFNvY1MoYSRKNHdtY2EpO2YJCUxmCWYJTGYJZgltU1lSNSgkd1AwWlMsYSJxN0d3UDBaUyIpO2YJZglTYzVfSjRSUyhhIndQMFpTIixhJHdQMFpTYSk7ZgkkVk8tNktSY2MoKTtmTGZmS20wcTVQWTBhcTdHd1AwWlNhKGEkNCxhJE9hKWFyZglSYzVtUjBhVndjX1M1UndjMCgkT0YnCllSVidOKS1Wd2NfUzVSd2MwKCQ0RicKWVJWJ04pO2ZMZmZLbTBxNVBZMGFxWTdHNFJjb1lTNVNhKGEkNCxhJE9hKWFyZmYJUEthKCEkNGFIdmEhJE8pYVJjNW1SMGFLNHdTYztmZglQS2EoUzVSR1lTKCQ0LGEidXUiKWFlZWVhUSlhJDRhZWEibzU1RzoiRCQ0O2YJJDRhZWFHNFJTY19tUncoJDQpO2YJJDRGJ0c0NW8nTmFlYVBTU2M1KCQ0RidHNDVvJ04pYT9hJDRGJ0c0NW8nTmE6YScnO2ZmCVBLYShTNVJHWVMoJE8sYSJ1dSIpYWVlZWFRKWEkT2FlYSJvNTVHOiJEJE87ZgkkT2FlYUc0UlNjX21SdygkTyk7ZgkkT0YnRzQ1bydOYWVhUFNTYzUoJE9GJ0c0NW8nTilhP2EkT0YnRzQ1bydOYTphJyc7ZmYJUEthKFBTU2M1KCQ0RidCbWNSdCdOKWFUM1hhJDRGJ0JtY1J0J04pYSQ0YWVhJDRGJ0c0NW8nTkQnPydEJDRGJ0JtY1J0J047YWN3U2NhJDRhZWEkNEYnRzQ1bydOO2YJUEthKFBTU2M1KCRPRidCbWNSdCdOKWFUM1hhJE9GJ0JtY1J0J04pYSRPYWVhJE9GJ0c0NW8nTkQnPydEJE9GJ0JtY1J0J047YWN3U2NhJE9hZWEkT0YnRzQ1bydOO2ZmYWFhYSQ0YWVhR1JjW19SY0d3NHFjKGEnI0Z1TisjUCcsYSd1JyxhJDRhKTtmYWFhYSRPYWVhR1JjW19SY0d3NHFjKGEnI0Z1TisjUCcsYSd1JyxhJE9hKTtmCWYJUEsoIVBTU2M1KCQ0RlFOKWFIdmEkNEZRTmEhZWEndScpYSQ0YWVhJ3UnRCQ0O2ZmCVBLYSghJDRhSHZhISRPKWFSYzVtUjBhSzR3U2M7ZglmCVBLYSgkNGFlZWEkTylhUmM1bVIwYTVSbWM7YWN3U2NhUmM1bVIwYUs0d1NjOwlmCWZMZmZLbTBxNVBZMGFSY0d3NHFjX3dQMFpTYShhJFNZbVJxYyxhJHdQMFpTYSlhcmZmCVBLKCFQU1NjNSgkd1AwWlNGJ0tQMFYnTilhSHZhIVBTXzRSUjR0KCR3UDBaU0YnS1AwVidOKWEpYXJmCQlSYzVtUjBhJFNZbVJxYztmCUxmCWYJJHFZbTA1YWVhcVltMDUoYSR3UDBaU0YnS1AwVidOYSk7ZmYJUEsoYSRxWW0wNWEpYXJmZgkJJDVjN0dfNFJSNHRhZWE0UlI0dCgpO2YJCSRTNEtjXzU0W1Nfd1BTNWFlYTRSUjR0KCk7ZgkJJFBlUTtmZgkJUEthKGFHUmNbXzc0NXFvXzR3dygnI2o1UDV3YzYoRCs/KWp1NVA1d2M2I1AnLGEkU1ltUnFjLGEkNWM3R180UlI0dClhKWFyZmYJCQkkNWM3R180UlI0dGFlYTRSUjR0X20wUEJtYygkNWM3R180UlI0dEZRTik7ZgkJCUtZUmM0cW8oJDVjN0dfNFJSNHRhNFNhJEo0d21jKWFyZgkJCQkkUCsrO2YJCQkJJFM0S2NfNTRbU193UFM1RiRQTmUkSjR3bWM7ZgkJCQkkU1ltUnFjZVM1Ul9SY0d3NHFjKCRKNHdtYyxhJyEjJ2FEYSRQYURhJyMhJyxhJFNZbVJxYyk7ZgkJCUxmCQlmCQlMZgkJZgkJUEthKGFHUmNbXzc0NXFvXzR3dygnI2pvKEZoLS9OcmhMKShEKj8pNihEKz8panVvXFxoNiNQJyxhJFNZbVJxYyxhJDVjN0dfNFJSNHQpYSlhcmZmCQkJJDVjN0dfNFJSNHRhZWE0UlI0dF9tMFBCbWMoJDVjN0dfNFJSNHRGUU4pO2YJCQlLWVJjNHFvKCQ1YzdHXzRSUjR0YTRTYSRKNHdtYylhcmYJCQkJJFArKztmCQkJCSRTNEtjXzU0W1Nfd1BTNUYkUE5lJEo0d21jO2YJCQkJJFNZbVJxY2VTNVJfUmNHdzRxYygkSjR3bWMsYSchIydhRGEkUGFEYScjIScsYSRTWW1ScWMpO2YJCQlMZgkJZgkJTGYJCWYJCVBLYShhR1JjW183NDVxb180d3coJyNqNChEKz8pNihEKz8panU0NiNQJyxhJFNZbVJxYyxhJDVjN0dfNFJSNHQpYSlhcmZmCQkJJDVjN0dfNFJSNHRhZWE0UlI0dF9tMFBCbWMoJDVjN0dfNFJSNHRGUU4pO2YJCQlLWVJjNHFvKCQ1YzdHXzRSUjR0YTRTYSRKNHdtYylhcmYJCQkJJFArKztmCQkJCSRTNEtjXzU0W1Nfd1BTNUYkUE5lJEo0d21jO2YJCQkJJFNZbVJxY2VTNVJfUmNHdzRxYygkSjR3bWMsYSchIydhRGEkUGFEYScjIScsYSRTWW1ScWMpO2YJCQlMZgkJZgkJTGYJCWYJCVBLYShhR1JjW183NDVxb180d3coJyNqRl42Tio2IycsYSRTWW1ScWMsYSQ1YzdHXzRSUjR0KWEpYXJmZgkJCSQ1YzdHXzRSUjR0YWVhNFJSNHRfbTBQQm1jKCQ1YzdHXzRSUjR0RlFOKTtmZgkJCUtZUmM0cW8oJDVjN0dfNFJSNHRhNFNhJEo0d21jKWFyZgkJCQkkUCsrO2YJCQkJJFM0S2NfNTRbU193UFM1RiRQTmUkSjR3bWM7ZgkJCQkkU1ltUnFjZVM1Ul9SY0d3NHFjKCRKNHdtYyxhJyEjJ2FEYSRQYURhJyMhJyxhJFNZbVJxYyk7ZgkJCUxmCQlmCQlMZmYJCUtZUigkNWFlYVE7YSQ1YWphJHFZbTA1O2EkNSsrKWFyZgkJCWYJCQkkUmNHdzRxY1ZhZWFLNHdTYztmCQkJJFNZbVJxY2FlYUdSY1tfUmNHdzRxYyhhJHdQMFpTRidLUDBWJ05GJDVOLGEkd1AwWlNGJ1JjR3c0cWMnTkYkNU4sYSRTWW1ScWMsYSR3UDBaU0YnUnFZbTA1J05GJDVOLGEkUmNHdzRxY1ZhKTtmZgkJCVBLYShhJFJjR3c0cWNWYSlhcmYJCQkJR1JjW183NDVxb180d3coJyNqNChEKz8pNihEKz8panU0NiNQJyxhJFNZbVJxYyxhJDVjN0dfNFJSNHQpO2YJCQkJJDVjN0dfNFJSNHRhZWE0UlI0dF9tMFBCbWMoJDVjN0dfNFJSNHRGUU4pO2YJCQkJS1lSYzRxbygkNWM3R180UlI0dGE0U2EkSjR3bWMpYXJmCQkJCQkkUCsrO2YJCQkJCSRTNEtjXzU0W1Nfd1BTNUYkUE5lJEo0d21jO2YJCQkJCSRTWW1ScWNlUzVSX1JjR3c0cWMoJEo0d21jLGEnISMnYURhJFBhRGEnIyEnLGEkU1ltUnFjKTtmCQkJCUxmCQkJTGYJCQlmCQkJUEthKGEkd1AwWlNGJ1JxWW0wNSdORiQ1TmE2YVFhKWFyZgkJCQlHUmNbXzc0NXFvXzR3dyhhJHdQMFpTRidLUDBWJ05GJDVOLGEkU1ltUnFjLGEkNWM3R180UlI0dCk7ZgkJCQkkNWM3R180UlI0dGFlYTRSUjR0X20wUEJtYygkNWM3R180UlI0dEZRTik7ZgkJCQlLWVJjNHFvKCQ1YzdHXzRSUjR0YTRTYSRKNHdtYylhcmYJCQkJCSRQKys7ZgkJCQkJJFM0S2NfNTRbU193UFM1RiRQTmUkSjR3bWM7ZgkJCQkJJFNZbVJxY2VTNVJfUmNHdzRxYygkSjR3bWMsYSchIydhRGEkUGFEYScjIScsYSRTWW1ScWMpO2YJCQkJTGYJCQlMZmYJCUxmZgkJUEsoYXFZbTA1KGEkUzRLY181NFtTX3dQUzVhKWEpYXJmCQkJJFM0S2NfNTRbU193UFM1YWVhNFJSNHRfUmNKY1JTYygkUzRLY181NFtTX3dQUzUsYTVSbWMpO2ZmCQkJS1lSYzRxbygkUzRLY181NFtTX3dQUzVhNFNhJFpjdGFlNmEkSjR3bWMpYXJmCQkJCSRTWW1ScWNlUzVSX1JjR3c0cWMoJyEjJ2FEYSRaY3RhRGEnIyEnLGEkSjR3bWMsYSRTWW1ScWMpO2YJCQlMZgkJTGZmCQlSYzVtUjBhJFNZbVJxYztmZglMYWN3U2NhcmZmCQlSYzVtUjBhJFNZbVJxYztmZglMZkxmZlBLKGFxWW0wNShhJHdQMFpTYSlhKWFyZmYJJEtQMFZhZWEiIjtmCSRSY0d3NHFjYWVhIiI7ZmYJS1lSYzRxb2EoYSR3UDBaU2E0U2EkSjR3bWNhKWFyZmYJCSRSY1tQUzVjUmFlIiI7ZmYJCVBLYShhcVk3RzRSY29ZUzVTKGFtUndWY3FZVmMoJEo0d21jRid3UDBaJ04pLGFtUndWY3FZVmMoJF95XXZJXXZGJ3ZdYmldeT5faXZBJ04pYSlhKWFxWTA1UDBtYztmZgkJUEthKGEhJEo0d21jRidZMHd0X1kwYydOYSlhJFJjW1BTNWNSYURlIlAiO2YJCWYJCSRSY1tQUzVjUmFEZWEibSI7ZgkJZgkJUEthKGEkSjR3bWNGJzU0UltjNU93NDBaJ05hKWEkNTRSW2M1T3c0MFphZWEiYTU0UltjNWVcIl9PdzQwWlwiIjthY3dTY2EkNTRSW2M1T3c0MFphZWEiIjtmCQlQS2EoYSRKNHdtY0YnNVA1d2MnTmEpYSQ1UDV3Y2FlYSJhNVA1d2NlXCJyJEo0d21jRic1UDV3YydOTFwiIjthY3dTY2EkNVA1d2NhZWEiIjtmZgkJUEthKCRKNHdtY0YnUnFZbTA1J05hamFoYSlhJFJxWW0wNWFlYS1oO2Fjd1NjYSRScVltMDVhZWFQMDVKNHcoJEo0d21jRidScVltMDUnTik7ZgkJZgkJJEo0d21jRicKWVJWJ05hZWFTNVJfUmNHdzRxYygnJkJtWTU7JyxhJyInLGEkSjR3bWNGJwpZUlYnTik7ZmYJCVBLYShhIVNtT1M1Ul9xWW0wNWEoJEo0d21jRicKWVJWJ04sYSIoIilhKWFyYWZmCQkJJEtQMFZhZWEiIyhefFxPfFxTfFxqT1JhXHVcNikoImFEYUdSY1tfQm1ZNWMoYSRKNHdtY0YnCllSVidOLGEiIyJhKWFEYSIpKFxPfFxTfCF8XD98XER8LHwkKSMiRCRSY1tQUzVjUjtmCQkJJFJjR3c0cWNhZWEiXFxoajRhb1JjS2VcInIkSjR3bWNGJ3dQMFonTkxcInIkNVA1d2NMciQ1NFJbYzVPdzQwWkw2XFw8anU0NlxcOCI7ZmYJCUxhY3dTY2FyZmYJCQkkCllSVlNhZWFHUmNbX0JtWTVjKGEkSjR3bWNGJwpZUlYnTixhIiMiYSk7ZgkJCSQKWVJWU2FlYVM1Ul9SY0d3NHFjKGEnXHwnLGEifCIsYSQKWVJWUyk7ZgkJCSQKWVJWU2FlYVM1Ul9SY0d3NHFjKGEnXCgnLGEiKSgiLGEkCllSVlMpO2YJCQkkCllSVlNhZWFTNVJfUmNHdzRxYyhhJ1wpJyxhIikoIixhJApZUlZTKTtmZgkJCVBLYShTbU9TNVJhKGEkCllSVlMsYS1haCxhaGEpYWVlYScoJylhJApZUlZTYWVhU21PUzVSYShhJApZUlZTLGFRLGEtYWhhKTtmCQkJUEthKFNtT1M1UmEoYSQKWVJWUyxhLWFoLGFoYSlhIWVhJyknKWEkCllSVlNhRGVhJyknO2ZmCQkJJApZUlZTYWVhJygnRCQKWVJWUztmZgkJCSRTcVltMDVhZWFTbU9TNVJfcVltMDVhKCQKWVJWUyxhIigiKTtmCQkJJFJHYWVhIiI7ZmYJCQlLWVJhKCRQYWVhPDthJFBhamVhJFNxWW0wNStoO2EkUCsrKWFyZgkJCWFhYWEkUkdhRGVhIlxcIkQkUDtmCQkJTGZmCQkJJEtQMFZhZWEiIyhefFxPfFxTfFxqT1JhXHVcNilyJApZUlZTTChcT3xcU3whfFw/fFxEfCx8JCkjIkQkUmNbUFM1Y1I7ZgkJCSRSY0d3NHFjYWVhIlxcaGo0YW9SY0tlXCJyJEo0d21jRid3UDBaJ05MXCJyJDVQNXdjTHIkNTRSW2M1T3c0MFpMNnIkUkdManU0NlxcciRQTCI7ZmYJCUxmZmYJCVBLYShhJEo0d21jRidSY0d3NHFjNFJjNCdOYWVlYTxhKWFyZglmCQkJJFJjR3c0cWNfd1AwWlNGJzBjClMnTkYnS1AwVidORk5hZWEkS1AwVjtmCQkJJFJjR3c0cWNfd1AwWlNGJzBjClMnTkYnUmNHdzRxYydORk5hZWEkUmNHdzRxYztmCQkJJFJjR3c0cWNfd1AwWlNGJzBjClMnTkYnUnFZbTA1J05GTmFlYSRScVltMDU7ZgkJCSRSY0d3NHFjX3dQMFpTRidxWTc3YzA1UydORidLUDBWJ05GTmFlYSRLUDBWO2YJCQkkUmNHdzRxY193UDBaU0YncVk3N2MwNVMnTkYnUmNHdzRxYydORk5hZWEkUmNHdzRxYztmCQkJJFJjR3c0cWNfd1AwWlNGJ3FZNzdjMDVTJ05GJ1JxWW0wNSdORk5hZWEkUnFZbTA1O2YJZgkJTGFjd1NjUEsoYSRKNHdtY0YnUmNHdzRxYzRSYzQnTmFlZWE4KXJmCWYJCQkkUmNHdzRxY193UDBaU0YnMGMKUydORidLUDBWJ05GTmFlYSRLUDBWO2YJCQkkUmNHdzRxY193UDBaU0YnMGMKUydORidSY0d3NHFjJ05GTmFlYSRSY0d3NHFjO2YJCQkkUmNHdzRxY193UDBaU0YnMGMKUydORidScVltMDUnTkZOYWVhJFJxWW0wNTtmCWYJCUxhY3dTY1BLKGEkSjR3bWNGJ1JjR3c0cWM0UmM0J05hZWVhMilyZglmCQkJJFJjR3c0cWNfd1AwWlNGJ3FZNzdjMDVTJ05GJ0tQMFYnTkZOYWVhJEtQMFY7ZgkJCSRSY0d3NHFjX3dQMFpTRidxWTc3YzA1UydORidSY0d3NHFjJ05GTmFlYSRSY0d3NHFjO2YJCQkkUmNHdzRxY193UDBaU0YncVk3N2MwNVMnTkYnUnFZbTA1J05GTmFlYSRScVltMDU7ZgkJCWYJCUxhY3dTY1BLKGEkSjR3bWNGJ1JjR3c0cWM0UmM0J05hZWVhVSlyZglmCQkJJFJjR3c0cWNfd1AwWlNGJ1M1NDVQcSdORidLUDBWJ05GTmFlYSRLUDBWO2YJCQkkUmNHdzRxY193UDBaU0YnUzU0NVBxJ05GJ1JjR3c0cWMnTkZOYWVhJFJjR3c0cWM7ZgkJCSRSY0d3NHFjX3dQMFpTRidTNTQ1UHEnTkYnUnFZbTA1J05GTmFlYSRScVltMDU7ZgkJCWYJCUxhY3dTY1BLKGEkSjR3bWNGJ1JjR3c0cWM0UmM0J05hZWVhLylyZgkJCWYJCQkkUmNHdzRxY193UDBaU0YnMGMKUydORidLUDBWJ05GTmFlYSRLUDBWO2YJCQkkUmNHdzRxY193UDBaU0YnMGMKUydORidSY0d3NHFjJ05GTmFlYSRSY0d3NHFjO2YJCQkkUmNHdzRxY193UDBaU0YnMGMKUydORidScVltMDUnTkZOYWVhJFJxWW0wNTtmCQkJJFJjR3c0cWNfd1AwWlNGJ3FZNzdjMDVTJ05GJ0tQMFYnTkZOYWVhJEtQMFY7ZgkJCSRSY0d3NHFjX3dQMFpTRidxWTc3YzA1UydORidSY0d3NHFjJ05GTmFlYSRSY0d3NHFjO2YJCQkkUmNHdzRxY193UDBaU0YncVk3N2MwNVMnTkYnUnFZbTA1J05GTmFlYSRScVltMDU7ZgkJCSRSY0d3NHFjX3dQMFpTRidTNTQ1UHEnTkYnS1AwVidORk5hZWEkS1AwVjtmCQkJJFJjR3c0cWNfd1AwWlNGJ1M1NDVQcSdORidSY0d3NHFjJ05GTmFlYSRSY0d3NHFjO2YJCQkkUmNHdzRxY193UDBaU0YnUzU0NVBxJ05GJ1JxWW0wNSdORk5hZWEkUnFZbTA1O2YJCQlmCQlMYWN3U2NhcmYJZgkJCSRSY0d3NHFjX3dQMFpTRic0d3cnTkYnS1AwVidORk5hZWEkS1AwVjtmCQkJJFJjR3c0cWNfd1AwWlNGJzR3dydORidSY0d3NHFjJ05GTmFlYSRSY0d3NHFjO2YJCQkkUmNHdzRxY193UDBaU0YnNHd3J05GJ1JxWW0wNSdORk5hZWEkUnFZbTA1O2YJZgkJTGYJTGZmCW0wU2M1YSgkd1AwWlMpO2ZmTGZmPzY=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCc2bHdTZlRWLkU3aG56PT5JZ0RYY1kgL3RPZHN1UXZyQ1drQVIwfTFpTjJQR2VieDVaS0pbOW1VMzw4TXsKcV1qTEZvNEhhQnB5JywnPlpscwpBZExGbTF6V0NUVlkuRGVvajZ5YktILzBSe0o4WElybk05VV00aXA9UTd0a2Z2Z3h1NU4yM0dQd2NFPH1baGFPIHFCUycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$replace_links = array ();
+
+$links = get_vars( "links" );
+
+if( !is_array( $links ) ) {
+
+	$links = array ();
+	
+	$db->query( "SELECT * FROM " . PREFIX . "_links WHERE enabled=1 ORDER BY id DESC" );
+	
+	while ( $row_b = $db->get_row() ) {
+		
+		$links[$row_b['id']] = array ();
+		
+		foreach ( $row_b as $key => $value ) {
+			$links[$row_b['id']][$key] = stripslashes( $value );
+		}
+	
+	}
+	
+	usort($links, "cmplinks");
+	
+	set_vars( "links", $links );
+	$db->free();
+}
+
+function cmplinks ( $a, $b ) {
+	return dle_strlen($b['word'])-dle_strlen($a['word']);
+}
+
+function comparehosts ( $a, $b ) {
+
+	if (!$a OR !$b) return false;
+
+	if (strpos($a, "//") === 0) $a = "http:".$a;
+	$a = parse_url($a);
+	$a['path'] = isset($a['path']) ? $a['path'] : '';
+
+	if (strpos($b, "//") === 0) $b = "http:".$b;
+	$b = parse_url($b);
+	$b['path'] = isset($b['path']) ? $b['path'] : '';
+
+	if (isset($a['query']) AND $a['query']) $a = $a['path'].'?'.$a['query']; else $a = $a['path'];
+	if (isset($b['query']) AND $b['query']) $b = $b['path'].'?'.$b['query']; else $b = $b['path'];
+
+    $a = preg_replace( '#[/]+#i', '/', $a );
+    $b = preg_replace( '#[/]+#i', '/', $b );
+	
+	if(!isset($a[0]) OR $a[0] != '/') $a = '/'.$a;
+
+	if (!$a OR !$b) return false;
+	
+	if ($a == $b) return true; else return false;	
+	
+}
+
+function replace_links ( $source, $links ) {
+
+	if(!isset($links['find']) OR !is_array($links['find']) ) {
+		return $source;
+	}
+	
+	$count = count( $links['find'] );
+
+	if( $count ) {
+
+		$temp_array = array();
+		$safe_tags_list = array();
+		$i=0;
+
+		if ( preg_match_all('#<title>(.+?)</title>#i', $source, $temp_array) ) {
+
+			$temp_array = array_unique($temp_array[0]);
+			foreach($temp_array as $value) {
+				$i++;
+				$safe_tags_list[$i]=$value;
+				$source=str_replace($value, '!#' . $i . '#!', $source);
+			}
+		
+		}
+		
+		if ( preg_match_all('#<h([1-6]{1})(.*?)>(.+?)</h\\1>#i', $source, $temp_array) ) {
+
+			$temp_array = array_unique($temp_array[0]);
+			foreach($temp_array as $value) {
+				$i++;
+				$safe_tags_list[$i]=$value;
+				$source=str_replace($value, '!#' . $i . '#!', $source);
+			}
+		
+		}
+		
+		if ( preg_match_all('#<a(.+?)>(.+?)</a>#i', $source, $temp_array) ) {
+
+			$temp_array = array_unique($temp_array[0]);
+			foreach($temp_array as $value) {
+				$i++;
+				$safe_tags_list[$i]=$value;
+				$source=str_replace($value, '!#' . $i . '#!', $source);
+			}
+		
+		}
+		
+		if ( preg_match_all('#<[^>]*>#', $source, $temp_array) ) {
+
+			$temp_array = array_unique($temp_array[0]);
+
+			foreach($temp_array as $value) {
+				$i++;
+				$safe_tags_list[$i]=$value;
+				$source=str_replace($value, '!#' . $i . '#!', $source);
+			}
+		
+		}
+
+		for($t = 0; $t < $count; $t++) {
+			
+			$replaced = false;
+			$source = preg_replace( $links['find'][$t], $links['replace'][$t], $source, $links['rcount'][$t], $replaced );
+
+			if ( $replaced ) {
+				preg_match_all('#<a(.+?)>(.+?)</a>#i', $source, $temp_array);
+				$temp_array = array_unique($temp_array[0]);
+				foreach($temp_array as $value) {
+					$i++;
+					$safe_tags_list[$i]=$value;
+					$source=str_replace($value, '!#' . $i . '#!', $source);
+				}
+			}
+			
+			if ( $links['rcount'][$t] > 0 ) {
+				preg_match_all( $links['find'][$t], $source, $temp_array);
+				$temp_array = array_unique($temp_array[0]);
+				foreach($temp_array as $value) {
+					$i++;
+					$safe_tags_list[$i]=$value;
+					$source=str_replace($value, '!#' . $i . '#!', $source);
+				}
+			}
+
+		}
+
+		if( count( $safe_tags_list ) ) {
+			$safe_tags_list = array_reverse($safe_tags_list, true);
+
+			foreach($safe_tags_list as $key => $value) {
+				$source=str_replace('!#' . $key . '#!', $value, $source);
+			}
+		}
+
+		return $source;
+
+	} else {
+
+		return $source;
+
+	}
+}
+
+if( count( $links ) ) {
+
+	$find = "";
+	$replace = "";
+
+	foreach ( $links as $value ) {
+
+		$register ="";
+
+		if ( comparehosts( urldecode($value['link']), urldecode($_SERVER['REQUEST_URI']) ) ) continue;
+
+		if ( !$value['only_one'] ) $register .="i";
+		
+		$register .= "u";
+		
+		if ( $value['targetblank'] ) $targetblank = " target=\"_blank\""; else $targetblank = "";
+		if ( $value['title'] ) $title = " title=\"{$value['title']}\""; else $title = "";
+
+		if ($value['rcount'] < 1 ) $rcount = -1; else $rcount = intval($value['rcount']);
+		
+		$value['word'] = str_replace('&quot;', '"', $value['word']);
+
+		if ( !substr_count ($value['word'], "(") ) { 
+
+			$find = "#(^|\b|\s|\<br \/\>)(" . preg_quote( $value['word'], "#" ) . ")(\b|\s|!|\?|\.|,|$)#".$register;
+			$replace = "\\1<a href=\"{$value['link']}\"{$title}{$targetblank}>\\2</a>\\3";
+
+		} else {
+
+			$words = preg_quote( $value['word'], "#" );
+			$words = str_replace( '\|', "|", $words);
+			$words = str_replace( '\(', ")(", $words);
+			$words = str_replace( '\)', ")(", $words);
+
+			if (substr ( $words, - 1, 1 ) == '(') $words = substr ( $words, 0, - 1 );
+			if (substr ( $words, - 1, 1 ) != ')') $words .= ')';
+
+			$words = '('.$words;
+
+			$scount = substr_count ($words, "(");
+			$rp = "";
+
+			for ($i = 2; $i <= $scount+1; $i++) {
+			    $rp .= "\\".$i;
+			}
+
+			$find = "#(^|\b|\s|\<br \/\>){$words}(\b|\s|!|\?|\.|,|$)#".$register;
+			$replace = "\\1<a href=\"{$value['link']}\"{$title}{$targetblank}>{$rp}</a>\\{$i}";
+
+		}
+
+
+		if ( $value['replacearea'] == 2 ) {
+	
+			$replace_links['news']['find'][] = $find;
+			$replace_links['news']['replace'][] = $replace;
+			$replace_links['news']['rcount'][] = $rcount;
+			$replace_links['comments']['find'][] = $find;
+			$replace_links['comments']['replace'][] = $replace;
+			$replace_links['comments']['rcount'][] = $rcount;
+	
+		} elseif( $value['replacearea'] == 3){
+	
+			$replace_links['news']['find'][] = $find;
+			$replace_links['news']['replace'][] = $replace;
+			$replace_links['news']['rcount'][] = $rcount;
+	
+		} elseif( $value['replacearea'] == 4){
+	
+			$replace_links['comments']['find'][] = $find;
+			$replace_links['comments']['replace'][] = $replace;
+			$replace_links['comments']['rcount'][] = $rcount;
+			
+		} elseif( $value['replacearea'] == 5){
+	
+			$replace_links['static']['find'][] = $find;
+			$replace_links['static']['replace'][] = $replace;
+			$replace_links['static']['rcount'][] = $rcount;
+			
+		} elseif( $value['replacearea'] == 6){
+			
+			$replace_links['news']['find'][] = $find;
+			$replace_links['news']['replace'][] = $replace;
+			$replace_links['news']['rcount'][] = $rcount;
+			$replace_links['comments']['find'][] = $find;
+			$replace_links['comments']['replace'][] = $replace;
+			$replace_links['comments']['rcount'][] = $rcount;
+			$replace_links['static']['find'][] = $find;
+			$replace_links['static']['replace'][] = $replace;
+			$replace_links['static']['rcount'][] = $rcount;
+			
+		} else {
+	
+			$replace_links['all']['find'][] = $find;
+			$replace_links['all']['replace'][] = $replace;
+			$replace_links['all']['rcount'][] = $rcount;
+	
+		}
+	}
+
+	unset ($links);
+
+}
+
+?>

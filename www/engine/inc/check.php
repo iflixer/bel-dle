@@ -5,9 +5,305 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: check.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Performance analysis
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0g4PzljOVJKKlJsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbFJZczZ0NkZtdXlZUVRLbVR5WS1ZZlpZMj11dFB5ckFZPnl9bTZZSVY9PDlZUi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tUlljdHQ5QTpKSn1ieS1UeXJBRFY8SlItLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVJZZT05WlZtS2N0WShvKVlCQ0NVLUJDQmtZMj11dFB5ckFZPnl9bTZZSVY9PDlSbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxSWS9jbUFZbz19eVltQVk5Vj10eW90eX1ZZlpZbz05WlZtS2N0UmxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsUllXbWJ5OllvY3lvM0Q5YzlSLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1SWWlBeTpZcXlWdT1WTjZUb3lZNlQ2YlpBbUFSbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxSKkpSbXUoWSF9eXVtVHl9KFknc1gvWEZdV1FRUEldUFEnWSlZCiBZIX15dW1UeX0oWSdGCklJUXNfXVAnWSlZKVlPUgljeTZ9eVYoWSJwLy9xSkVERVlVQ3hZVz1WZm19fXlUIlkpO1IJY3k2fXlWWShZJ0Y9bzZ0bT1UOllEREpEREonWSk7Ugl9bXkoWSJwNm8zbVRLWTZ0dHlOOXQhIlkpO1IuUlJtdShZJE55TmZ5Vl9tfUwnPEF5Vl9LVj08OSduWSFsWUVZKVlPUglOQUsoWSJ5VlY9ViIsWSRiNlRLTCc2fX1UeXJBX315VG15fSduLFkkYjZUS0wnfWZffXlUbXl9J25ZKTtSLlJSUm11WShZdW1ieV95ZG1BdEEoWSAKCi9fc10gWURZJ0piNlRLPDZLeUonWURZJEF5YnlvdHl9X2I2VEs8Nkt5WURZJ0o2fU5tVG9jeW8zRGJUSydZKVkpWU9SCVZ5TTxtVnlfPVRveVkoc0ZRcWI8S21UQTo6ZWN5bzMoIAoKL19zXSBZRFknSmI2VEs8Nkt5SidZRFkkQXlieW90eX1fYjZUSzw2S3lZRFknSjZ9Tm1Ub2N5bzNEYlRLJykpO1IuUlIkVnlBPGJ0WWxZNlZWNlooKTtSUnU9Vnk2b2MoJDxBeVZfS1Y9PDlZNkFZJGg2Yjx5KVlPUlIJbXVZKFkkaDZiPHlMJzZiYj1yX282dEEnblkhbFkiNmJiIlkKIFkkaDZiPHlMJ1Q9dF82YmI9cl9vNnRBJ25ZIWxZIiJZKVlPUlIJCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtfTZUS3lWXCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSCJEQXRWX1Z5OWI2b3koIk9UNk55LiIsWSRoNmI8eUwnS1Y9PDlfVDZOeSduLCRiNlRLTCc2fU5tVF9vY3lvM194QiduKUQiOEp9bWhIIjtSUgkuUlIuUlIkZl9obXlyWWxZdTZiQXk7UlIkfWYtSE08eVZaKFkiMlFGUWUvWW19LFk2YmI9cl9obXlyQVlXIAo+WSJZRFlxIFFXXWpZRFkiX2Y2VFR5VkEiWSk7UlJyY21ieVkoWSRWPXJZbFkkfWYtSEt5dF9WPXIoKVkpWU9SCW11KCRWPXJMJzZiYj1yX2hteXJBJ24pWSRmX2hteXJZbFl0Vjx5O1IuUlJtdSgkZl9obXlyKVlPUgkJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC19NlRLeVZcIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM194ZyduLjhKfW1oSCI7CVIuUlJtdVkoWSRvPVR1bUtMJzZiYj1yX282b2N5J25ZWFBzWSRvPVR1bUtMJzZiYj1yX29jNlRLeV9BPVZ0J25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC19NlRLeVZcIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM19CMSduLjh9bWhZb2I2QUFsXCJOdC1Fa1wiWX02dDYtfW1BNmZieW89VHVtS2xcIjZiYj1yX29jNlRLeV9BPVZ0XCJZfTZ0Ni1oNmI8eWxcIkNcIkg4Sn1taEg4Sn1taEgiO1JSLlJSbXVZKFkkbz1UdW1LTCc2YmI9cl90NktBJ25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC19NlRLeVZcIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM19CNSduLjh9bWhZb2I2QUFsXCJOdC1Fa1wiWX02dDYtfW1BNmZieW89VHVtS2xcIjZiYj1yX3Q2S0FcIll9NnQ2LWg2Yjx5bFwiQ1wiSDhKfW1oSDhKfW1oSCI7UlIuUlJtdVkoWSRvPVR1bUtMJzZiYj1yXzZWb2NtaHlBJ25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC19NlRLeVZcIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM19CayduLjh9bWhZb2I2QUFsXCJOdC1Fa1wiWX02dDYtfW1BNmZieW89VHVtS2xcIjZiYj1yXzZWb2NtaHlBXCJZfTZ0Ni1oNmI8eWxcIkNcIkg4Sn1taEg4Sn1taEgiO1JSLlJSbXVZKFkkbz1UdW1LTCc2YmI9cl9vNmJ5VH02ViduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtfTZUS3lWXCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfQlUnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCI2YmI9cl9vNmJ5VH02VlwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnNmJiPXJfVnk2fV9vPTxUdCduWVhQc1khJG89VHVtS0wnbzZvY3lfbz08VHQnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LX02VEt5VlwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX0J4J24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwibzZvY3lfbz08VHRcIll9NnQ2LWg2Yjx5bFwiRVwiSDhKfW1oSDhKfW1oSCI7UlIuUlJtdVkoWSRvPVR1bUtMJzZiYj1yX29OPX0nblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LX02VEt5VlwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX0U3J24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiNmJiPXJfb049fVwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnVD1ffTZ0eSduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtfTZUS3lWXCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfRWsnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCJUPV99NnR5XCJZfTZ0Ni1oNmI8eWxcIkNcIkg4Sn1taEg4Sn1taEgiO1JSLlJSbXVZKFkkbz1UdW1LTCdWeWI2dHl9X1R5ckEnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LX02VEt5VlwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX0VVJ24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiVnliNnR5fV9UeXJBXCJZfTZ0Ni1oNmI8eWxcIkNcIkg4Sn1taEg4Sn1taEgiO1JSLlJSbXVZKFkkbz1UdW1LTCc2YmI9cl9OPGJ0bV9vNnR5Sz1WWiduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtfTZUS3lWXCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfRXgnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCI2YmI9cl9OPGJ0bV9vNnR5Sz1WWlwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZISRvPVR1bUtMJzZiYj1yX282b2N5J25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC19NlRLeVZcIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM19FQiduLjh9bWhZb2I2QUFsXCJOdC1Fa1wiWX02dDYtfW1BNmZieW89VHVtS2xcIjZiYj1yX282b2N5XCJZfTZ0Ni1oNmI8eWxcIkVcIkg4Sn1taEg4Sn1taEgiO1JSLlJSbXVZKFkkbz1UdW1LTCd1NkF0X0F5NlZvYyduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtfTZUS3lWXCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfRUMnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCJ1NkF0X0F5NlZvY1wiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wndTxiYl9BeTZWb2MnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LX02VEt5VlwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zXzcnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCJ1PGJiX0F5NlZvY1wiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnPVRibVR5X0F0NnQ8QSduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtfTZUS3lWXCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfeFUnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCI9VGJtVHlfQXQ2dDxBXCJZfTZ0Ni1oNmI8eWxcIkNcIkg4Sn1taEg4Sn1taEgiO1JSLlJSbXVZKFkkbz1UdW1LTCc8QXlWX21UX1R5ckEnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LX02VEt5VlwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX3g1J24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiPEF5Vl9tVF9UeXJBXCJZfTZ0Ni1oNmI8eWxcIkNcIkg4Sn1taEg4Sn1taEgiO1JSLlJSbXVZKFkkbz1UdW1LTCdvNnR5Sz1WWl9UeXJBbz08VHQnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LW1UdT1cIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM194ayduLjh9bWhZb2I2QUFsXCJOdC1Fa1wiWX02dDYtfW1BNmZieW89VHVtS2xcIm82dHlLPVZaX1R5ckFvPTxUdFwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnNmJiPXJfQTxmQW9WbWZ5J25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC1tVHU9XCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfeHgnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCI2YmI9cl9BPGZBb1ZtZnlcIll9NnQ2LWg2Yjx5bFwiQ1wiSDhKfW1oSDhKfW1oSCI7UlIuUlJtdVkoWSRvPVR1bUtMJzZiYj1yX0EzbVRfb2M2VEt5J25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC1tVHU9XCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfeEMnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCI2YmI9cl9BM21UX29jNlRLeVwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wndW1ieUFfNmJiPXInbllYUHNZJG89VHVtS0wndW1ieUFfbz08VHQnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LW1UdT1cIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM19CNyduLjh9bWhZb2I2QUFsXCJOdC1Fa1wiWX02dDYtfW1BNmZieW89VHVtS2xcInVtYnlBX289PFR0XCJZfTZ0Ni1oNmI8eWxcIkNcIkg4Sn1taEg4Sn1taEgiO1JSLlJSbXVZKFkkbz1UdW1LTCdWQUFfbVR1PVZOeVYnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LW1UdT1cIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM19CZyduLjh9bWhZb2I2QUFsXCJOdC1Fa1wiWX02dDYtfW1BNmZieW89VHVtS2xcIlZBQV9tVHU9Vk55VlwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnNmJiPXJfVnk2fV9vPTxUdCduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtbVR1PVwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX0JCJ24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiNmJiPXJfVnk2fV9vPTxUdFwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnNmJiPXJfdD05VHlyQSduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtbVR1PVwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX0JFJ24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiNmJiPXJfdD05VHlyQVwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnNmJiPXJfZjZUVHlWJ25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC1tVHU9XCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfRTEnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCI2YmI9cl9mNlRUeVZcIll9NnQ2LWg2Yjx5bFwiQ1wiSDhKfW1oSDhKfW1oSCI7UlIuUlJtdVkoWSRvPVR1bUtMJzZiYj1yX3VtZHl9J25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC1tVHU9XCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfRWcnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCI2YmI9cl91bWR5fVwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnNEFfTm1UJ25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC1tVHU9XCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfMSduLjh9bWhZb2I2QUFsXCJOdC1Fa1wiWX02dDYtfW1BNmZieW89VHVtS2xcIjRBX05tVFwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnNmJiPXJfVnlLbUF0VjZ0bT1UJ25ZKVlPUlIJJFZ5QTxidExuWWxZIjh9bWhZb2I2QUFsXCI2YnlWdFk2YnlWdC1tVHU9XCJZQXRaYnlsXCI5Nn19bVRLOkNEZ0JrVnlOO1lONlZLbVQtZj10dD1OOkNEZ0JrVnlOO1wiSE8kYjZUS0wnNn1ObVRfb2N5bzNfRUUnbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCI2YmI9cl9WeUttQXRWNnRtPVRcIll9NnQ2LWg2Yjx5bFwiQ1wiSDhKfW1oSDhKfW1oSCI7UlIuUlJtdVkoWSRvPVR1bUtMJzZiYj1yX0t6bTknblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LW1UdT1cIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM181J24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiNmJiPXJfS3ptOVwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnNmJiPXJfbz1OTnlUdEEnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LW1UdT1cIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM19nJ24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiNmJiPXJfbz1OTnlUdEFcIll9NnQ2LWg2Yjx5bFwiQ1wiSDhKfW1oSDhKfW1oSCI7UlIuUlJtdVkoWSRvPVR1bUtMJ0FjPXJfQTxmX282dEEnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LW1UdT1cIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM19VJ24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiQWM9cl9BPGZfbzZ0QVwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnTjZtYl85TiduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtQTxvb3lBQVwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX3hFJ24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiTjZtYl85TlwiWX02dDYtaDZiPHlsXCJDXCJIOEp9bWhIOEp9bWhIIjtSUi5SUm11WShZJG89VHVtS0wnNmJiPXJfaD10eUEnblkpWU9SUgkkVnlBPGJ0TG5ZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LUE8b295QUFcIllBdFpieWxcIjk2fX1tVEs6Q0RnQmtWeU47WU42VkttVC1mPXR0PU46Q0RnQmtWeU47XCJITyRiNlRLTCc2fU5tVF9vY3lvM19CQyduLjh9bWhZb2I2QUFsXCJOdC1Fa1wiWX02dDYtfW1BNmZieW89VHVtS2xcIjZiYj1yX2g9dHlBXCJZfTZ0Ni1oNmI8eWxcIkNcIkg4Sn1taEg4Sn1taEgiO1JSLlJSbXVZKFkkbz1UdW1LTCdBOXl5fWY2ViduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtQTxvb3lBQVwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX0U1J24uOH1taFlvYjZBQWxcIk50LUVrXCJZfTZ0Ni19bUE2ZmJ5bz1UdW1LbFwiQTl5eX1mNlZcIll9NnQ2LWg2Yjx5bFwiQ1wiSDhKfW1oSDhKfW1oSCI7UlIuUlJtdVkoWSRvPVR1bUtMJ0FjPVZ0X1Y2dG1USyduWSlZT1JSCSRWeUE8YnRMbllsWSI4fW1oWW9iNkFBbFwiNmJ5VnRZNmJ5VnQtQTxvb3lBQVwiWUF0WmJ5bFwiOTZ9fW1USzpDRGdCa1Z5TjtZTjZWS21ULWY9dHQ9TjpDRGdCa1Z5TjtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX2snbi44fW1oWW9iNkFBbFwiTnQtRWtcIll9NnQ2LX1tQTZmYnlvPVR1bUtsXCJBYz1WdF9WNnRtVEtcIll9NnQ2LWg2Yjx5bFwiQ1wiSDhKfW1oSDhKfW1oSCI7UlIuUlJtdVkoWW89PFR0KCRWeUE8YnQpWSlZT1IJJFZ5QTxidFlsWW1OOWI9fXkoIiIsWSRWeUE8YnQpO1IuWXliQXlZCSRWeUE8YnRZbFkiOH1taFlvYjZBQWxcIjZieVZ0WTZieVZ0LUE8b295QUFcIllBdFpieWxcIjk2fX1tVEs6RUM5ZDtcIkhPJGI2VEtMJzZ9Tm1UX29jeW8zX0Inbi44Sn1taEgiO1JSeW9jPWN5Nn15VihZIjhtWW9iNkFBbFwidTZZdTYtYnk2dVk5PUFtdG09VC1ieXV0XCJIOEptSDhBOTZUWW9iNkFBbFwidHlkdC1BeU5tZj1ifVwiSE8kYjZUS0wnPTl0X29jeW8zJ24uOEpBOTZUSCIsWSRiNlRLTCc9OXRfb2N5bzMnblkpO1IJUgl5b2M9WTg4OHAvPkZSOH1taFlvYjZBQWwiOTZUeWJZOTZUeWItfXl1NjxidCJIUllZOH1taFlvYjZBQWwiOTZUeWItY3k2fW1USyJIUllZWVlPJGI2VEtMJz05dF9vY3lvMyduLlJZWThKfW1oSFJZWTh9bWhZb2I2QUFsIjk2VHliLWY9fVoiSFIJTyRiNlRLTCc2fU5tVF9vY3lvM19FJ24uUllZOEp9bWhIUllZOH1taFlvYjZBQWwiOTZUeWItZj19WiJIUglPJFZ5QTxidC5SWVk4Sn1taEhSOEp9bWhIUjhBb1ZtOXRIUjghLS1SUnU8VG90bT1UWX1tQTZmYnllPVR1bUsofW1BNmZieW89VHVtSyxZfW1BNmZieWg2Yjx5KVlPUlIJc0ZRbz1UdW1WTihZJ08kYjZUS0wnfW1BNmZieV9vPVR1bUtfQiduLicsWSdPJGI2VEtMJzlfbz1UdW1WTiduLicsWXU8VG90bT1UWSgpWU9SCQlSCQkyYz1yRj02fW1USygnJyk7UlIJCSREOT1BdCgieVRLbVR5SjY0NmRKbz1UdFY9YmJ5VkQ5Yzk/Tj19bDZ9Tm1UdTxUb3RtPVQiLFlPWTZvdG09VDpZJ31tQTZmYnlvPVR1bUsnLFl9bUE2ZmJ5bz1UdW1LOll9bUE2ZmJ5bz1UdW1LLFl9bUE2ZmJ5aDZiPHk6WX1tQTZmYnloNmI8eSxZPEF5Vl9jNkFjOlknTyR9YnlfYj1LbVRfYzZBYy4nWS4sWXU8VG90bT1UKFl9NnQ2WSlPUlIJCQlwbX15Rj02fW1USygnJyk7UlIJCQltdSh9NnQ2WWxsWSc9MycpWU9SCQkJCSQoJyMnK31tQTZmYnlvPVR1bUspRHU2fXkKPHQoKTtSCQkJCXNGUXE8QWNEbVR1PSgnTyRiNlRLTCd9bUE2ZmJ5X289VHVtS19FJ24uJyk7UgkJCS5ZeWJBeVlPUgkJCQlzRlFxPEFjRHlWVj1WKH02dDYpO1IJCQkuUlIJCS4pO1JSCS5ZKTtSUi5SUiQodTxUb3RtPVQoKVlPUlIJJCgnTH02dDYtfW1BNmZieW89VHVtS24nKUR5Nm9jKHU8VG90bT1UKClPUgkJaDZWWX1tQTZmYnlvPVR1bUtZbFkkKHRjbUEpRH02dDYoJ31tQTZmYnlvPVR1bUsnKTtSCQloNlZZfW1BNmZieWg2Yjx5WWxZJCh0Y21BKUR9NnQ2KCdoNmI8eScpO1IJCVIJCSQodGNtQSlEY3ROYignOG1UOTx0WW9iNkFBbCJmdFRZZkstQWI2dHktZ0NDWWZ0VC1BTllmdFQtVjZtQXl9WTk9QW10bT1ULWJ5dXRZYnlLbXQgbTk5YnkiWXRaOXlsImY8dHQ9VCJZPVRvYm1vM2wifW1BNmZieWU9VHVtSyhcJycrfW1BNmZieW89VHVtSysnXCcsWVwnJyt9bUE2ZmJ5aDZiPHkrJ1wnKSJZaDZiPHlsIk8kYjZUS0wnfW1BNmZieV9vPVR1bUsnbi4iSCcpO1JSCQkkKHRjbUEpRDk2VnlUdCgpRDZ0dFYoJ219JyxZfW1BNmZieW89VHVtSyk7UlIJLik7Ui4pO1JKSi0tSFI4SkFvVm05dEhScC8+RjtSUnlvYz11PT10eVYoKTtSP0g=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdYSG1yW049S2ZpPnt9RmIyb1dsMUUvWjh1ZHhRSU83UHpragpjc0dwQ0I0NVUwaC42TVl5d2VSOXEgVm5BYVNdTER2SlR0PDNnJywnQT5pd0Jtb2diVU1ZZExsU2NGPTgxVHk8ZngzRUd7OU56NVhPaERRSDAyajc0VnZ9YXEgZVpDCnBQUnJdc0pLSVsuVy9udHVrNicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( $member_id['user_group'] != 1 ) {
+	msg( "error", $lang['addnews_denied'], $lang['db_denied'] );
+}
+
+
+if ( file_exists( ROOT_DIR . '/language/' . $selected_language . '/admincheck.lng' ) ) {
+	require_once (DLEPlugins::Check(ROOT_DIR . '/language/' . $selected_language . '/admincheck.lng'));
+}
+
+$result = array();
+
+foreach($user_group as $value) {
+
+	if ( $value['allow_cats'] != "all" OR $value['not_allow_cats'] != "" ) {
+
+		$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">".str_replace("{name}", $value['group_name'],$lang['admin_check_32'])."</div>";
+
+	}
+
+}
+
+$b_view = false;
+
+$db->query( "SELECT id, allow_views FROM " . PREFIX . "_banners" );
+
+while ( $row = $db->get_row() ) {
+	if($row['allow_views']) $b_view = true;
+}
+
+if($b_view) {
+		$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_36']}</div>";	
+}
+
+if ( $config['allow_cache'] AND $config['allow_change_sort'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_28']}<div class=\"mt-15\" data-disableconfig=\"allow_change_sort\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_tags'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_27']}<div class=\"mt-15\" data-disableconfig=\"allow_tags\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_archives'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_25']}<div class=\"mt-15\" data-disableconfig=\"allow_archives\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_calendar'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_24']}<div class=\"mt-15\" data-disableconfig=\"allow_calendar\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_read_count'] AND !$config['cache_count'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_23']}<div class=\"mt-15\" data-disableconfig=\"cache_count\" data-value=\"1\"></div></div>";
+
+}
+
+if ( $config['allow_cmod'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_19']}<div class=\"mt-15\" data-disableconfig=\"allow_cmod\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['no_date'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_15']}<div class=\"mt-15\" data-disableconfig=\"no_date\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['related_news'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_14']}<div class=\"mt-15\" data-disableconfig=\"related_news\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_multi_category'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_13']}<div class=\"mt-15\" data-disableconfig=\"allow_multi_category\" data-value=\"0\"></div></div>";
+
+}
+
+if ( !$config['allow_cache'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_12']}<div class=\"mt-15\" data-disableconfig=\"allow_cache\" data-value=\"1\"></div></div>";
+
+}
+
+if ( $config['fast_search'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_10']}<div class=\"mt-15\" data-disableconfig=\"fast_search\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['full_search'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_9']}<div class=\"mt-15\" data-disableconfig=\"full_search\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['online_status'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_34']}<div class=\"mt-15\" data-disableconfig=\"online_status\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['user_in_news'] ) {
+
+	$result[] = "<div class=\"alert alert-danger\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_37']}<div class=\"mt-15\" data-disableconfig=\"user_in_news\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['category_newscount'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_35']}<div class=\"mt-15\" data-disableconfig=\"category_newscount\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_subscribe'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_33']}<div class=\"mt-15\" data-disableconfig=\"allow_subscribe\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_skin_change'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_30']}<div class=\"mt-15\" data-disableconfig=\"allow_skin_change\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['files_allow'] AND $config['files_count'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_29']}<div class=\"mt-15\" data-disableconfig=\"files_count\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['rss_informer'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_26']}<div class=\"mt-15\" data-disableconfig=\"rss_informer\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_read_count'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_22']}<div class=\"mt-15\" data-disableconfig=\"allow_read_count\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_topnews'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_21']}<div class=\"mt-15\" data-disableconfig=\"allow_topnews\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_banner'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_18']}<div class=\"mt-15\" data-disableconfig=\"allow_banner\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_fixed'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_16']}<div class=\"mt-15\" data-disableconfig=\"allow_fixed\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['js_min'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_8']}<div class=\"mt-15\" data-disableconfig=\"js_min\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_registration'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_11']}<div class=\"mt-15\" data-disableconfig=\"allow_registration\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_gzip'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_7']}<div class=\"mt-15\" data-disableconfig=\"allow_gzip\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_comments'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_6']}<div class=\"mt-15\" data-disableconfig=\"allow_comments\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['show_sub_cats'] ) {
+
+	$result[] = "<div class=\"alert alert-info\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_4']}<div class=\"mt-15\" data-disableconfig=\"show_sub_cats\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['mail_pm'] ) {
+
+	$result[] = "<div class=\"alert alert-success\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_31']}<div class=\"mt-15\" data-disableconfig=\"mail_pm\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['allow_votes'] ) {
+
+	$result[] = "<div class=\"alert alert-success\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_20']}<div class=\"mt-15\" data-disableconfig=\"allow_votes\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['speedbar'] ) {
+
+	$result[] = "<div class=\"alert alert-success\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_17']}<div class=\"mt-15\" data-disableconfig=\"speedbar\" data-value=\"0\"></div></div>";
+
+}
+
+if ( $config['short_rating'] ) {
+
+	$result[] = "<div class=\"alert alert-success\" style=\"padding:0.625rem; margin-bottom:0.625rem;\">{$lang['admin_check_5']}<div class=\"mt-15\" data-disableconfig=\"short_rating\" data-value=\"0\"></div></div>";
+
+}
+
+if ( count($result) ) {
+	$result = implode("", $result);
+} else 	$result = "<div class=\"alert alert-success\" style=\"padding:10px;\">{$lang['admin_check_2']}</div>";
+
+echoheader( "<i class=\"fa fa-leaf position-left\"></i><span class=\"text-semibold\">{$lang['opt_check']}</span>", $lang['opt_check'] );
+	
+	echo <<<HTML
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['opt_check']}
+  </div>
+  <div class="panel-body">
+	{$lang['admin_check_1']}
+  </div>
+  <div class="panel-body">
+	{$result}
+  </div>
+</div>
+<script>
+<!--
+
+function disableConfig(disableconfig, disablevalue) {
+
+	DLEconfirm( '{$lang['disable_config_2']}', '{$lang['p_confirm']}', function () {
+		
+		ShowLoading('');
+
+		$.post("engine/ajax/controller.php?mod=adminfunction", { action: 'disableconfig', disableconfig: disableconfig, disablevalue: disablevalue, user_hash: '{$dle_login_hash}' }, function( data ){
+
+			HideLoading('');
+
+			if(data == 'ok') {
+				$('#'+disableconfig).fadeOut();
+				DLEPush.info('{$lang['disable_config_1']}');
+			} else {
+				DLEPush.error(data);
+			}
+
+		});
+
+	} );
+
+}
+
+$(function() {
+
+	$('[data-disableconfig]').each(function(){
+		var disableconfig = $(this).data('disableconfig');
+		var disablevalue = $(this).data('value');
+		
+		$(this).html('<input class="btn bg-slate-600 btn-sm btn-raised position-left legitRipple" type="button" onclick="disableConfig(\''+disableconfig+'\', \''+disablevalue+'\')" value="{$lang['disable_config']}">');
+
+		$(this).parent().attr('id', disableconfig);
+
+	});
+});
+//-->
+</script>
+HTML;
+
+echofooter();
+?>

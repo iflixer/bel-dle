@@ -5,9 +5,225 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
------------------------------------------------------
- You use Demo Version of DataLife Engine
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: complaint.php
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3VHPwpXCjhbKjhVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVThvdi9tL2JuT3tvN3Q+bnR7by1veUJvM0lPbUx7NT1vS3tmbi9vMVFJTQpvOC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tOG9XbW0KPTpbW2Z3ey10ezU9QVFNWzgtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLThvMEkKQlFuPldtbyhxKW9GPDxFLUY8RjlvM0lPbUx7NT1vS3tmbi9vMVFJTQo4VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU4b1NXbj1vcUlme29uPW8KUUlte3Fte2ZveUJvcUkKQlFuPldtOFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVOG82bnd7Om9xSUMKdy9udG1BClcKOFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVOCpbODhuTyghZntPbnR7ZigndmxTbGJ6Njc3TDF6TDcnKSlvaDgJV3svZntRKG8ifVNTUltlQWVvRTxYbzZJUXluZmZ7dCJvKTs4CVd7L2Z7UW8obydiSXEvbW5JdDpvQUFbQUFbJ28pOzgJZm57KG8ifS9xaW50Pm8vbW17QwptISJvKTs4cDg4bk8obyFuPT17bSgkX3g3WS43M1NzJ009e1FfVy89VydqKW9OeG8hJF94N1kuNzNTcydNPXtRX1cvPVcnam9OeG8kX3g3WS43M1NzJ009e1FfVy89VydqbyFVbyRmd3tfd0k+bnRfVy89V28pb2g4CQk4CWZue28oIntRUUlRIik7OAk4cDg4JAovUT17b1VvdHs1b1IvUT17Nm53bXtRKCk7OCQKL1E9ey11PS9Pe19DSWZ7b1VvbVFNezs4JAovUT17LXUvd3dJNV9NUXdvVW8kTT17UV8+UUlNCnMkQ3tDeXtRX25mcydNPXtRXz5RSU0KJ2pqcycvd3dJNV9NUXcnajs4JAovUT17LXUvd3dJNV9uQy8+e29VbyRNPXtRXz5RSU0KcyRDe0N5e1FfbmZzJ009e1FfPlFJTQonampzJy93d0k1X25DLz57J2o7OCQKL1E9ey11L3d3STV5eXFJZns9b1VvTy93PXs7ODgkcUl0T24+cydDL0pfcUlDCncvbnRtPSdqb1VvbnRtVC93KCRxSXRPbj5zJ0MvSl9xSUMKdy9udG09J2opb3VvPG8/b250bVQvdygkcUl0T24+cydDL0pfcUlDCncvbnRtPSdqKW86b1g7ODg4JG5mb1Vvbj09e20oJF9STjNTcyduZidqKW8/b250bVQvdyhvJF9STjNTcyduZidqbylvOm88OzgkbXtKbW9Vb249PXttKCRfUk4zU3MnbXtKbSdqKW8/b289bVFuCl9tLz49KCRfUk4zU3MnbXtKbSdqKW86bycnOzg4bk8oZnd7Xz1tUXd7dChvJG17Sm1vKW91b0Y8PDxvKW9oODgJe3FXSW8kdy90PnMne1FRSVFfcUlDCncvbnRtX1gnajtvZm57KCk7ODhwODgkbXtKbW9VbyQKL1E9ey11WlpfUi9RPXsobyQKL1E9ey11ClFJcXs9PShvbVFuQyhvJG17Sm1vKW8pLG9PL3c9e28pOzgkdEltXy93d0k1Xz1CQ3lJd29Vby9RUS9CbygiXEpGRiIsbyJcSmE8IixvIlxtIixvJ1x0JyxvJ1xRJyxvIlx0IixvIlxRIixvJ1xcJyxvIiwiLG8iWyIsbyIjIixvIjsiLG8iOiIsbyJ+IixvInMiLG8iaiIsbyJoIixvInAiLG8iKSIsbyIoIixvIioiLG8iXiIsbyIlIixvIiQiLG8iRyIsbyJ1IixvIj8iLG8iISIsbyciJyxvIiciLG8ibyIsbyImIm8pOzg4bk9vKG8kcUl0T24+cycvd3dJNV9xSUMKdy9udG1fQy9udydqbylvaDg4CSRDL253b1VvdHs1b2Z3e19DL253KG8kcUl0T24+byk7OAkkdy90PnMnQy9ud19xSUMKdy9udG1fZSdqb1VvPW1RX1F7CncvcXsobyJoPW5te3AiLG8kcUl0T24+cydXbW0KX1dJQ3tfTVF3J2osbyR3L3Q+cydDL253X3FJQwp3L250bV9lJ2pvKTs4cDg4JHcvdD5zJ3tRUUlRX3FJQwp3L250bV9hJ2pvVW89bVFfUXsKdy9xeygnaD5RSU0KcCcsbyRNPXtRXz5RSU0KcyRDe0N5e1FfbmZzJ009e1FfPlFJTQonampzJz5RSU0KX3QvQ3snaixvJHcvdD5zJ3tRUUlRX3FJQwp3L250bV9hJ2opOzg4bk9vKCRfUk4zU3MnL3Ftbkl0J2pvVVVvIgpDIilvaDg4CW5PKG8hJG49X3dJPj57Zm8pb2ZueyhvIntRUUlRIm8pOzg4CW5PKG8hJG5mbylvZm57KG8ie1FRSVEibyk7bzgJOAluTyhvISRte0ptbylob3txV0lvJHcvdD5zJ3tRUUlRX3FJQwp3L250bV9FJ2o7b2ZueygpO29wODgJJEN7Q3l7UV9uZnMndC9Deydqb1VvJGZ5LXU9L097PTR3KCRDe0N5e1FfbmZzJ3QvQ3snaik7OAk4CSRRSTVvVW8kZnktdT1NCntRXzRNe1FCKG8iMzdiNzBTbzBOLkxTKCopby89b3FJTXRtbzZ4TktvIm9Bb1J4NzZ6Y29BbyJfcUlDCncvbnRtb2R9N3g3bwpfbmZvIVVvJzwnb2xMdm9gT1FJQ2BVJ2gkQ3tDeXtRX25mcyd0L0N7J2pwJyJvKTs4OAluT28oJFFJNXMncUlNdG0nam91VW8kcUl0T24+cydDL0pfcUlDCncvbnRtPSdqbylvaG97cVdJbyR3L3Q+cyd7UVFJUV9xSUMKdy9udG1fOSdqO29mbnsoKTtvcDgJOAkkUUk1b1VvJGZ5LXU9TQp7UV80TXtRQigiMzdiNzBTb0NBbmYsb0NBcUl0bXt0bW9sM29te0ptLG9DQT17dGZ7UV9uZixvTUF0L0N7b2wzby9NbUlRbzZ4TktvIm9Bby4zN3hSeDc2emNvQW8iX3FJdFR7UT0vbW5JdD1fQ3s9PS8+ez1vQ29ETnpMbyJvQW8uMzd4Ung3Nnpjb0FvIl9xSXRUe1E9L21uSXRfTT17UT1vcU1vTkxvQ0FxSXRUe1E9L21uSXRfbmZvVW9xTUFxSXRUe1E9L21uSXRfbmZvYjc2U29ETnpMbyJvQW8uMzd4Ung3Nnpjb0FvIl9NPXtRPW9Nb05Mb0NBPXt0ZntRX25mb1VvTUFNPXtRX25mb2R9N3g3b0NBbmZvVW8naCRuZnAnb2xMdm9xTUFNPXtRX25mb1UnaCRDe0N5e1FfbmZzJ009e1FfbmYnanAnIik7ODgJbk8obyFuPT17bSgkUUk1cyduZidqKW9OeG8hJFFJNXMnbmYnailvZm57KCJOCntRL21uSXRvdEltb2x3d0k1e2YiKTs4OAluT28oJFFJNXMnPXt0ZntRX25mJ2pvVVVvJEN7Q3l7UV9uZnMnTT17UV9uZidqKW9ob3txV0lvJHcvdD5zJ3tRUUlRX3FJQwp3L250bV9GJ2o7b2ZueygpO29wODgJJGZ5LXU0TXtRQihvIjM3YjcwU29uZm82eE5LbyJvQW9SeDc2emNvQW8iX3FJQwp3L250bW9kfTd4N28KX25mVSdoJG5mcCcibyk7ODgJbk9vKCRmeS11dE1DX1FJNT0oKSlvaG97cVdJbyR3L3Q+cyd7UVFJUV9xSUMKdy9udG1fZSdqO29mbnsoKTtvcDg4CSRRSTVzJ217Sm0nam9VbyJHZm5Ub3F3Lz09VVwiNE1JbXtcInUiQT1tUW4KPXcvPVd7PShvJFFJNXMnbXtKbSdqbylBIkdbZm5UdSI7ODgJJG17Sm1vVW8kZnktdT0vT3s9NHcobyRRSTVzJ217Sm0nakEkbXtKbW8pOzgJJFFJNXMnL01tSVEnam9VbyRmeS11PS9Pez00dygkUUk1cycvTW1JUSdqKTs4OAkkZnktdTRNe1FCKG8iekwzN3hTb3pMU05vIm9Bb1J4NzZ6Y29BbyJfcUlDCncvbnRtbyhgCl9uZmAsb2BxX25mYCxvYHRfbmZgLG9gbXtKbWAsb2BPUUlDYCxvYG1JYCxvYGYvbXtgKW9UL3dNez1vKCdoJFFJNXMnbmYnanAnLG8nPCcsbyc8JyxvJ2gkbXtKbXAnLG8naCRDe0N5e1FfbmZzJ3QvQ3snanAnLG8naCRRSTVzJy9NbUlRJ2pwJyxvJ2gkX1N6SzdwJykibyk7ODgJbk9vKG8kcUl0T24+cycvd3dJNV9xSUMKdy9udG1fQy9udydqbylvaDgJCSRDL253LXU9e3RmKG8kcUl0T24+cycvZkNudF9DL253J2osbyR3L3Q+cydDL253X3FJQwp3L250bSdqLG8kdy90PnMnQy9ud19xSUMKdy9udG1fZSdqbyk7CTgJcDg4cG97dz17bk9vKCRfUk4zU3MnL3Ftbkl0J2pvVVVvInFJQ0N7dG09IilvaDg4CW5PKG8hJG49X3dJPj57Zm8pb2g4CQk4CQkkL01tV0lRb1VvJF96Ujs4CQk4CQkkZnktdTRNe1FCKG8iMzdiNzBTb25mbzZ4TktvIm9Bb1J4NzZ6Y29BbyJfcUlDCncvbnRtb2R9N3g3b2BPUUlDYFUnaCQvTW1XSVFwJyJvKTs4CQk4CQluT28oJGZ5LXV0TUNfUUk1PSgpb3VvRilvaG97cVdJbyR3L3Q+cyd7UVFJUV9xSUMKdy9udG1fZSdqO29mbnsoKTtvcDgJCTgJcG97dz17byQvTW1XSVFvVW8kZnktdT0vT3s9NHcoJEN7Q3l7UV9uZnMndC9DeydqKTs4OAluTyhvISRuZm8pb2ZueyhvIntRUUlRIm8pOzg4CW5PKCEkTT17UV8+UUlNCnMkQ3tDeXtRX25mcydNPXtRXz5RSU0KJ2pqcycvd3dJNV9xSUMKdy9udG1fcUlDQ3t0bT0nailvaG97cVdJbyR3L3Q+cyd7UVFJUV9xSUMKdy9udG1fYSdqO29mbnsoKTtvcDg4CW5PKG8hJG17Sm1vKWhve3FXSW8kdy90PnMne1FRSVFfcUlDCncvbnRtX0UnajtvZm57KCk7b3A4CTgJJFFJNW9VbyRmeS11PU0Ke1FfNE17UUIobyIzN2I3MFNvME4uTFMoKilvLz1vcUlNdG1vNnhOS28ib0FvUng3Nnpjb0FvIl9xSUMKdy9udG1vZH03eDdvcV9uZm8hVW8nPCdvbEx2b2BPUUlDYFUnaCQvTW1XSVFwJyJvKTs4OAluT28oJFFJNXMncUlNdG0nam91VW8kcUl0T24+cydDL0pfcUlDCncvbnRtPSdqbylvaG97cVdJbyR3L3Q+cyd7UVFJUV9xSUMKdy9udG1fOSdqO29mbnsoKTtvcDg4CSRRSTVvVW8kZnktdT1NCntRXzRNe1FCKG8iMzdiNzBTb25mLG8vTW1JUW82eE5LbyJvQW9SeDc2emNvQW8iX3FJQ0N7dG09b2R9N3g3b25mVSdoJG5mcCcibyk7ODgJbk8oISRRSTVzJ25mJ2opb2ZueygiTgp7US9tbkl0b3RJbW9sd3dJNXtmIik7ODgJbk9vKCRRSTVzJy9NbUlRJ2pvVVVvJC9NbVdJUSlvaG97cVdJbyR3L3Q+cyd7UVFJUV9xSUMKdy9udG1fRidqO29mbnsoKTtvcDg4CSRmeS11NE17UUIobyIzN2I3MFNvbmZvNnhOS28ib0FvUng3Nnpjb0FvIl9xSUMKdy9udG1vZH03eDdvcV9uZlUnaCRuZnAnb2xMdm9gT1FJQ2BVJ2gkL01tV0lRcCcibyk7ODgJbk9vKCRmeS11dE1DX1FJNT0oKSlvaG97cVdJbyR3L3Q+cyd7UVFJUV9xSUMKdy9udG1fZSdqO29mbnsoKTtvcDg4CSRte0ptb1VvJGZ5LXU9L097PTR3KG8kbXtKbW8pOzgJOAluTyhvISRuPV93ST4+e2ZvbEx2byRfUk4zU3MnQy9udydqbylvaDgJCTgJCSQ9e3Rme1FfQy9ud29VbyRmeS11PS9Pez00dyhtUW5DKG89bVFfUXsKdy9xeyhvJHRJbV8vd3dJNV89QkN5SXcsbycnLG89bVFuCl9tLz49KG89bVFuCj13Lz1Xez0obyRfUk4zU3MnQy9udydqbylvKW8pbylvKTs4CQk4CXBve3c9e28kPXt0ZntRX0MvbndvVW8iIjs4CTgJJGZ5LXU0TXtRQihvInpMMzd4U296TFNObyJvQW9SeDc2emNvQW8iX3FJQwp3L250bW8oYApfbmZgLG9gcV9uZmAsb2B0X25mYCxvYG17Sm1gLG9gT1FJQ2Asb2BtSWAsb2BmL217YCxvYHtDL253YClvVC93TXs9bygnPCcsbydoJFFJNXMnbmYnanAnLG8nPCcsbydoJG17Sm1wJyxvJ2gkL01tV0lRcCcsbycnLG8naCRfU3pLN3AnLG8naCQ9e3Rme1FfQy9ud3AnKSJvKTs4OAluT28obyRxSXRPbj5zJy93d0k1X3FJQwp3L250bV9DL253J2pvKW9oOAkJJEMvbnctdT17dGYobyRxSXRPbj5zJy9mQ250X0MvbncnaixvJHcvdD5zJ0MvbndfcUlDCncvbnRtJ2osbyR3L3Q+cydDL253X3FJQwp3L250bV9lJ2pvKTsJOAlwODhwb3t3PXtuT28oJF9STjNTcycvcW1uSXQnam9VVW8idHs1PSIpb2g4OAluTyhvISRuPV93ST4+e2ZvKW9oOAkJOAkJJC9NbVdJUW9VbyRfelI7OAkJOAkJJGZ5LXU0TXtRQihvIjM3YjcwU29uZm82eE5LbyJvQW9SeDc2emNvQW8iX3FJQwp3L250bW9kfTd4N29gT1FJQ2BVJ2gkL01tV0lRcCcibyk7OAkJOAkJbk9vKCRmeS11dE1DX1FJNT0oKW91b0Ypb2hve3FXSW8kdy90PnMne1FRSVFfcUlDCncvbnRtX2UnajtvZm57KCk7b3A4CQk4CXBve3c9e28kL01tV0lRb1VvJGZ5LXU9L097PTR3KCRDe0N5e1FfbmZzJ3QvQ3snaik7ODgJbk8obyEkbmZvKW9mbnsobyJ7UVFJUSJvKTs4OAluTyghJE09e1FfPlFJTQpzJEN7Q3l7UV9uZnMnTT17UV8+UUlNCidqanMnL3d3STVfcUlDCncvbnRtX3R7NT0nailvaG97cVdJbyR3L3Q+cyd7UVFJUV9xSUMKdy9udG1fYSdqO29mbnsoKTtvcDg4CW5PKG8hJG17Sm1vKWhve3FXSW8kdy90PnMne1FRSVFfcUlDCncvbnRtX0UnajtvZm57KCk7b3A4OAkkUUk1b1VvJGZ5LXU9TQp7UV80TXtRQihvIjM3YjcwU28wTi5MUygqKW8vPW9xSU10bW82eE5LbyJvQW9SeDc2emNvQW8iX3FJQwp3L250bW9kfTd4N290X25mbyFVbyc8J29sTHZvYE9RSUNgVSdoJC9NbVdJUXAnIm8pOzg4CW5PbygkUUk1cydxSU10bSdqb3VVbyRxSXRPbj5zJ0MvSl9xSUMKdy9udG09J2pvKW9ob3txV0lvJHcvdD5zJ3tRUUlRX3FJQwp3L250bV85J2o7b2ZueygpO29wODg4CSRRSTVvVW8kZnktdT1NCntRXzRNe1FCKG8iMzdiNzBTb25mLG8vTW1JUW82eE5LbyJvQW9SeDc2emNvQW8iXwpJPW1vZH03eDdvbmZVJ2gkbmZwJyJvKTs4OAluTyghJFFJNXMnbmYnailvZm57KCJOCntRL21uSXRvdEltb2x3d0k1e2YiKTs4OAkkZnktdTRNe1FCKG8iMzdiNzBTb25mbzZ4TktvIm9Bb1J4NzZ6Y29BbyJfcUlDCncvbnRtb2R9N3g3b3RfbmZVJ2gkbmZwJ29sTHZvYE9RSUNgVSdoJC9NbVdJUXAnIm8pOzg4CW5PbygkZnktdXRNQ19RSTU9KCkpb2hve3FXSW8kdy90PnMne1FRSVFfcUlDCncvbnRtX2UnajtvZm57KCk7b3A4OAkkbXtKbW9VbyRmeS11PS9Pez00dyhvJG17Sm1vKTs4OAluTyhvISRuPV93ST4+e2ZvbEx2byRfUk4zU3MnQy9udydqbylvaDgJCTgJCSQ9e3Rme1FfQy9ud29VbyRmeS11PS9Pez00dyhtUW5DKG89bVFfUXsKdy9xeyhvJHRJbV8vd3dJNV89QkN5SXcsbycnLG89bVFuCl9tLz49KG89bVFuCj13Lz1Xez0obyRfUk4zU3MnQy9udydqbylvKW8pbylvKTs4CQk4CXBve3c9e28kPXt0ZntRX0MvbndvVW8iIjs4CTgJJGZ5LXU0TXtRQihvInpMMzd4U296TFNObyJvQW9SeDc2emNvQW8iX3FJQwp3L250bW8oYApfbmZgLG9gcV9uZmAsb2B0X25mYCxvYG17Sm1gLG9gT1FJQ2Asb2BtSWAsb2BmL217YCxvYHtDL253YClvVC93TXs9bygnPCcsbyc8JyxvJ2gkUUk1cyduZidqcCcsbydoJG17Sm1wJyxvJ2gkL01tV0lRcCcsbycnLG8naCRfU3pLN3AnLG8naCQ9e3Rme1FfQy9ud3AnKSJvKTs4OAluT28obyRxSXRPbj5zJy93d0k1X3FJQwp3L250bV9DL253J2pvKW9oOAkJJEMvbnctdT17dGYobyRxSXRPbj5zJy9mQ250X0MvbncnaixvJHcvdD5zJ0MvbndfcUlDCncvbnRtJ2osbyR3L3Q+cydDL253X3FJQwp3L250bV9lJ2pvKTsJOAlwODhwb3t3PXtuT28oJF9STjNTcycvcW1uSXQnam9VVW8iSVFPSSIpb2g4OAluTyhvISRte0ptbylob3txV0lvJHcvdD5zJ3tRUUlRX3FJQwp3L250bV9FJ2o7b2ZueygpO29wODgJbk8oISRNPXtRXz5RSU0KcyRDe0N5e1FfbmZzJ009e1FfPlFJTQonampzJy93d0k1X3FJQwp3L250bV9JUU9JJ2opb2hve3FXSW8kdy90PnMne1FRSVFfcUlDCncvbnRtX2EnajtvZm57KCk7b3A4OAkkPXt3bXtKbW9VbyRfUk4zU3MnPXt3bXtKbSdqOzg4CSQ9e3dte0ptb1VvV21Dd197dG1ubUJfZntxSWZ7KCQ9e3dte0ptLG83TFNfWS5OUzczb3xvN0xTX2NLYmUsbycuUzYtVicpOzg4CW5PKGZ3e189bVF3e3QobyQ9e3dte0ptbylvdW9GOWFvKW9oOAk4CQkkPXt3bXtKbW9Vb2Z3e189TXk9bVEobyQ9e3dte0ptLG88LG9GOWFvKTs4OAlwODgJJD17d217Sm1vVW9XbUN3PQp7cW4vd3FXL1E9KG9tUW5DKG8kPXt3bXtKbW8pLG83TFNfWS5OUzczLG8nLlM2LVYnbyk7OAkkTVF3b1VvJGZ5LXU9L097PTR3KG9XbUN3PQp7cW4vd3FXL1E9KG8kCi9RPXstdXF3ey9RX01RdyhvbVFuQyhvJF9STjNTcydNUXcnam8pbyksbzdMU19ZLk5TNzMsbycuUzYtVidvKW8pOzg4CW5PKCEkPXt3bXtKbSlvZm57KG8ie1FRSVEibyk7ODgJbk8obyEkbj1fd0k+PntmbylvJC9NbVdJUW9VbyRfelI7b3t3PXtvJC9NbVdJUW9VbyRmeS11PS9Pez00dygkQ3tDeXtRX25mcyd0L0N7J2opOzgJOAluTyhvISRuPV93ST4+e2ZvbEx2byRfUk4zU3MnQy9udydqbylvaDgJCTgJCSQ9e3Rme1FfQy9ud29VbyRmeS11PS9Pez00dyhtUW5DKG89bVFfUXsKdy9xeyhvJHRJbV8vd3dJNV89QkN5SXcsbycnLG89bVFuCl9tLz49KG89bVFuCj13Lz1Xez0obyRfUk4zU3MnQy9udydqbylvKW8pbylvKTs4CQk4CXBve3c9e28kPXt0ZntRX0MvbndvVW8iIjs4OAkkUUk1b1VvJGZ5LXU9TQp7UV80TXtRQihvIjM3YjcwU28wTi5MUygqKW8vPW9xSU10bW82eE5LbyJvQW9SeDc2emNvQW8iX3FJQwp3L250bW9kfTd4N28KX25mVSc8J29sTHZvcV9uZlUnPCdvbEx2b3RfbmZVJzwnb2xMdm9gT1FJQ2BVJ2gkL01tV0lRcCcibyk7ODgJbk9vKCRRSTVzJ3FJTXRtJ2pvdVVvJHFJdE9uPnMnQy9KX3FJQwp3L250bT0nam8pb2hve3FXSW8kdy90PnMne1FRSVFfcUlDCncvbnRtXzknajtvZm57KCk7b3A4OAkkPXt3bXtKbW9VbyJHZm5Ub3F3Lz09VVwiNE1JbXtcInUiQT1tUW4KPXcvPVd7PShvJD17d217Sm1vKUEiR1tmblR1Ijs4CSRte0ptb1VvJGZ5LXU9L097PTR3KG8kPXt3bXtKbUEkbXtKbW8pOzgJOAkkZnktdTRNe1FCKG8iekwzN3hTb3pMU05vIm9Bb1J4NzZ6Y29BbyJfcUlDCncvbnRtbyhgCl9uZmAsb2BxX25mYCxvYHRfbmZgLG9gbXtKbWAsb2BPUUlDYCxvYG1JYCxvYGYvbXtgLG9ge0MvbndgKW9UL3dNez1vKCc8JyxvJzwnLG8nPCcsbydoJG17Sm1wJyxvJ2gkL01tV0lRcCcsbydoJE1Rd3AnLG8naCRfU3pLN3AnLG8naCQ9e3Rme1FfQy9ud3AnKSJvKTs4OAluT28obyRxSXRPbj5zJy93d0k1X3FJQwp3L250bV9DL253J2pvKW9oOAkJJEMvbnctdT17dGYobyRxSXRPbj5zJy9mQ250X0MvbncnaixvJHcvdD5zJ0MvbndfcUlDCncvbnRtJ2osbyR3L3Q+cydDL253X3FJQwp3L250bV9lJ2pvKTsJOAlwODhwODh7cVdJbyJJaSI7ODg/dQ==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdQbUMgSVN4LkpXNWdNcWJWTH0zS2YvQXJrc2FoamlOODxSXT1YR25FMHkyRFR6UXBbdjk2Rk9Zd1oKSHVvezc+VWV0QmNkbDE0JywnOXRtWm9UUlV4aHdZdWNMOE5IU01kYS5qN1s2e11rTwowUHpzMzxpNENiVkp2SXJ9L0Q1RjJmUWxCcEs+IGVFZz0xbnlYV0FHcScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+	die ("error");
+	
+}
+
+$parse = new ParseFilter();
+$parse->safe_mode = true;
+$parse->allow_url = $user_group[$member_id['user_group']]['allow_url'];
+$parse->allow_image = $user_group[$member_id['user_group']]['allow_image'];
+$parse->allowbbcodes = false;
+
+$config['max_complaints'] = intval($config['max_complaints']) > 0 ? intval($config['max_complaints']) : 3;
+
+
+$id = isset($_POST['id']) ? intval( $_POST['id'] ) : 0;
+$text = isset($_POST['text']) ?  strip_tags($_POST['text']) : '';
+
+if(dle_strlen( $text ) > 2000 ) {
+
+	echo $lang['error_complaint_3']; die();
+
+}
+
+$text = $parse->BB_Parse( $parse->process( trim( $text ) ), false );
+$not_allow_symbol = array ("\x22", "\x60", "\t", '\n', '\r', "\n", "\r", '\\', ",", "/", "#", ";", ":", "~", "[", "]", "{", "}", ")", "(", "*", "^", "%", "$", "<", ">", "?", "!", '"', "'", " ", "&" );
+
+if ( $config['allow_complaint_mail'] ) {
+
+	$mail = new dle_mail( $config );
+	$lang['mail_complaint_1'] = str_replace( "{site}", $config['http_home_url'], $lang['mail_complaint_1'] );
+}
+
+$lang['error_complaint_6'] = str_replace('{group}', $user_group[$member_id['user_group']]['group_name'], $lang['error_complaint_6']);
+
+if ($_POST['action'] == "pm") {
+
+	if( !$is_logged ) die( "error" );
+
+	if( !$id ) die( "error" ); 
+	
+	if( !$text ){ echo $lang['error_complaint_4']; die(); }
+
+	$member_id['name'] = $db->safesql($member_id['name']);
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_complaint WHERE p_id != '0' AND `from`='{$member_id['name']}'" );
+
+	if ($row['count'] >= $config['max_complaints'] ) { echo $lang['error_complaint_5']; die(); }
+	
+	$row = $db->super_query("SELECT m.id, m.content AS text, m.sender_id, u.name AS autor FROM " . USERPREFIX . "_conversations_messages m JOIN " . USERPREFIX . "_conversation_users cu ON m.conversation_id = cu.conversation_id LEFT JOIN " . USERPREFIX . "_users u ON m.sender_id = u.user_id WHERE m.id = '{$id}' AND cu.user_id ='{$member_id['user_id']}'");
+
+	if( !isset($row['id']) OR !$row['id']) die("Operation not Allowed");
+
+	if ($row['sender_id'] == $member_id['user_id']) { echo $lang['error_complaint_2']; die(); }
+
+	$db->query( "SELECT id FROM " . PREFIX . "_complaint WHERE p_id='{$id}'" );
+
+	if ($db->num_rows()) { echo $lang['error_complaint_1']; die(); }
+
+	$row['text'] = "<div class=\"quote\">".stripslashes( $row['text'] )."</div>";
+
+	$text = $db->safesql( $row['text'].$text );
+	$row['autor'] = $db->safesql($row['autor']);
+
+	$db->query( "INSERT INTO " . PREFIX . "_complaint (`p_id`, `c_id`, `n_id`, `text`, `from`, `to`, `date`) values ('{$row['id']}', '0', '0', '{$text}', '{$member_id['name']}', '{$row['autor']}', '{$_TIME}')" );
+
+	if ( $config['allow_complaint_mail'] ) {
+		$mail->send( $config['admin_mail'], $lang['mail_complaint'], $lang['mail_complaint_1'] );	
+	}
+
+} elseif ($_POST['action'] == "comments") {
+
+	if( !$is_logged ) {
+		
+		$author = $_IP;
+		
+		$db->query( "SELECT id FROM " . PREFIX . "_complaint WHERE `from`='{$author}'" );
+		
+		if ($db->num_rows() > 2) { echo $lang['error_complaint_1']; die(); }
+		
+	} else $author = $db->safesql($member_id['name']);
+
+	if( !$id ) die( "error" );
+
+	if(!$user_group[$member_id['user_group']]['allow_complaint_comments']) { echo $lang['error_complaint_6']; die(); }
+
+	if( !$text ){ echo $lang['error_complaint_4']; die(); }
+	
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_complaint WHERE c_id != '0' AND `from`='{$author}'" );
+
+	if ($row['count'] >= $config['max_complaints'] ) { echo $lang['error_complaint_5']; die(); }
+
+	$row = $db->super_query( "SELECT id, autor FROM " . PREFIX . "_comments WHERE id='{$id}'" );
+
+	if(!$row['id']) die("Operation not Allowed");
+
+	if ($row['autor'] == $author) { echo $lang['error_complaint_2']; die(); }
+
+	$db->query( "SELECT id FROM " . PREFIX . "_complaint WHERE c_id='{$id}' AND `from`='{$author}'" );
+
+	if ($db->num_rows()) { echo $lang['error_complaint_1']; die(); }
+
+	$text = $db->safesql( $text );
+	
+	if( !$is_logged AND $_POST['mail'] ) {
+		
+		$sender_mail = $db->safesql(trim( str_replace( $not_allow_symbol, '', strip_tags( stripslashes( $_POST['mail'] ) ) ) ) );
+		
+	} else $sender_mail = "";
+	
+	$db->query( "INSERT INTO " . PREFIX . "_complaint (`p_id`, `c_id`, `n_id`, `text`, `from`, `to`, `date`, `email`) values ('0', '{$row['id']}', '0', '{$text}', '{$author}', '', '{$_TIME}', '{$sender_mail}')" );
+
+	if ( $config['allow_complaint_mail'] ) {
+		$mail->send( $config['admin_mail'], $lang['mail_complaint'], $lang['mail_complaint_1'] );	
+	}
+
+} elseif ($_POST['action'] == "news") {
+
+	if( !$is_logged ) {
+		
+		$author = $_IP;
+		
+		$db->query( "SELECT id FROM " . PREFIX . "_complaint WHERE `from`='{$author}'" );
+		
+		if ($db->num_rows() > 2) { echo $lang['error_complaint_1']; die(); }
+		
+	} else $author = $db->safesql($member_id['name']);
+
+	if( !$id ) die( "error" );
+
+	if(!$user_group[$member_id['user_group']]['allow_complaint_news']) { echo $lang['error_complaint_6']; die(); }
+
+	if( !$text ){ echo $lang['error_complaint_4']; die(); }
+
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_complaint WHERE n_id != '0' AND `from`='{$author}'" );
+
+	if ($row['count'] >= $config['max_complaints'] ) { echo $lang['error_complaint_5']; die(); }
+
+
+	$row = $db->super_query( "SELECT id, autor FROM " . PREFIX . "_post WHERE id='{$id}'" );
+
+	if(!$row['id']) die("Operation not Allowed");
+
+	$db->query( "SELECT id FROM " . PREFIX . "_complaint WHERE n_id='{$id}' AND `from`='{$author}'" );
+
+	if ($db->num_rows()) { echo $lang['error_complaint_1']; die(); }
+
+	$text = $db->safesql( $text );
+
+	if( !$is_logged AND $_POST['mail'] ) {
+		
+		$sender_mail = $db->safesql(trim( str_replace( $not_allow_symbol, '', strip_tags( stripslashes( $_POST['mail'] ) ) ) ) );
+		
+	} else $sender_mail = "";
+	
+	$db->query( "INSERT INTO " . PREFIX . "_complaint (`p_id`, `c_id`, `n_id`, `text`, `from`, `to`, `date`, `email`) values ('0', '0', '{$row['id']}', '{$text}', '{$author}', '', '{$_TIME}', '{$sender_mail}')" );
+
+	if ( $config['allow_complaint_mail'] ) {
+		$mail->send( $config['admin_mail'], $lang['mail_complaint'], $lang['mail_complaint_1'] );	
+	}
+
+} elseif ($_POST['action'] == "orfo") {
+
+	if( !$text ){ echo $lang['error_complaint_4']; die(); }
+
+	if(!$user_group[$member_id['user_group']]['allow_complaint_orfo']) { echo $lang['error_complaint_6']; die(); }
+
+	$seltext = $_POST['seltext'];
+
+	$seltext = html_entity_decode($seltext, ENT_QUOTES | ENT_XML1, 'UTF-8');
+
+	if(dle_strlen( $seltext ) > 256 ) {
+	
+		$seltext = dle_substr( $seltext, 0, 256 );
+
+	}
+
+	$seltext = htmlspecialchars( trim( $seltext ), ENT_QUOTES, 'UTF-8' );
+	$url = $db->safesql( htmlspecialchars( $parse->clear_url( trim( $_POST['url'] ) ), ENT_QUOTES, 'UTF-8' ) );
+
+	if(!$seltext) die( "error" );
+
+	if( !$is_logged ) $author = $_IP; else $author = $db->safesql($member_id['name']);
+	
+	if( !$is_logged AND $_POST['mail'] ) {
+		
+		$sender_mail = $db->safesql(trim( str_replace( $not_allow_symbol, '', strip_tags( stripslashes( $_POST['mail'] ) ) ) ) );
+		
+	} else $sender_mail = "";
+
+	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_complaint WHERE p_id='0' AND c_id='0' AND n_id='0' AND `from`='{$author}'" );
+
+	if ($row['count'] >= $config['max_complaints'] ) { echo $lang['error_complaint_5']; die(); }
+
+	$seltext = "<div class=\"quote\">".stripslashes( $seltext )."</div>";
+	$text = $db->safesql( $seltext.$text );
+	
+	$db->query( "INSERT INTO " . PREFIX . "_complaint (`p_id`, `c_id`, `n_id`, `text`, `from`, `to`, `date`, `email`) values ('0', '0', '0', '{$text}', '{$author}', '{$url}', '{$_TIME}', '{$sender_mail}')" );
+
+	if ( $config['allow_complaint_mail'] ) {
+		$mail->send( $config['admin_mail'], $lang['mail_complaint'], $lang['mail_complaint_1'] );	
+	}
+
+}
+
+echo "ok";
+
+?>

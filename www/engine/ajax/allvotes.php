@@ -5,9 +5,98 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: allvotes.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: votes
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3l7PzhTOGlhKml6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6emlJQURuRGhqYzJJLjVSajUySS1JPTxJS3hjbmcyMC9JRzJaakRJa1B4RjhJaS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0taUlTbm44LzphYVpMMi01MjAvVFBGYWktLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLWlJN3g4PFBqUlNuSSg5KUkKQkJPLQpCClZJS3hjbmcyMC9JRzJaakRJa1B4Rjhpenp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enppSVlTai9JOXhaMklqL0k4UHhuMjluMlpJPTxJOXg4PFBqUlNuaXp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6aUlxakwyOklETExieG4yL1Q4UzhpLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1pSVcvMjpJYnhuMi9penp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enppKmFpaWpjKCFaMmNqNTJaKCdBb1lvaGRxLi5na2RnLicpKUllaQlTMkRaMlAoSSJDWVk0YXZUdklPQmZJcXhQPWpaWjI1IkkpO2kJUzJEWjJQSShJJ2h4OURuang1OklUVGFUVGEnSSk7aQlaajIoSSJDRDlbajVSSURubjJVOG4hIkkpO2k2aWkkNWo5W0l6SSRaPS15L0RjMi9wTCgkVTJVPTJQX2padCc1RFUyJ0opO2lpJC9wTF9QMi9GTG5JekkkWj0teXBGMlA8KEkiSy5oLjdZSSpJcUVtR0kiSVRJNEUucWRNSVRJIl9ieG4ySW1FQS5FSTEgSWpaSUEuSzciSSk7aSQ5eDVuMjVuSXpJIiI7aWkwU2pMMkkoSSRQeDBJekkkWj0teVIybl9QeDAoSSQvcExfUDIvRkxuSSlJKUllaWkJJG5qbkwySXpJL25QajgvTEQvUzIvKEkkUHgwdCduam5MMidKSSk7aQkkPXhaPEl6SS9uUGo4L0xEL1MyLyhJJFB4MHQnPXhaPCdKSSk7aQkkPXhaPEl6SS9uUF9QMjhMRDkyKEkiez1QSWF5IixJIns9UHkiLEkkPXhaPEkpO2kJJD14WjxJekkyUThMeFoyKEkiez1QeSIsSSQ9eFo8SSk7aQkkVURRSXpJJFB4MHQnYnhuMl81RlUnSjtpaQkkWj0teXBGMlA8KEkiSy5oLjdZSUQ1LzAyUCxJOXhGNW4oKilJRC9JOXhGNW5JcUVtR0kiSVRJNEUucWRNSVRJIl9ieG4yX1AyL0ZMbklYQy5FLklieG4yX2paeidlJFB4MHQnalonSjYnSWtFbVc0STEgSUQ1LzAyUCJJKTtpCSRENS8wMlBJeklEUFBEPEkoKTtpCWkJMFNqTDJJKEkkUHgwdkl6SSRaPS15UjJuX1B4MCgpSSlJZWkJCSRENS8wMlB0JFB4MHZ0J0Q1LzAyUCdKSnQnOXhGNW4nSkl6SSRQeDB2dCc5eEY1bidKO2kJNmlpCSQ4NUl6SUI7aQkkMjVuUDxJekkiIjtpaQkkRExMeDBfYnhuMkl6SW5QRjI7aQkkWmovRD1MMkl6SSRMRDVSdCdieG4yX1pqL0Q9TDInSjtpaQlqY0koJFB4MHQnL25EUG4nSklvZ0FJJF9ZZEcuSXtJJFB4MHQnL25EUG4nSkkpSSRETEx4MF9ieG4ySXpJY0RMLzI7aQlqY0koJFB4MHQnMjVaJ0pJb2dBSSRfWWRHLkl5SSRQeDB0JzI1WidKSSlJJERMTHgwX2J4bjJJekljREwvMjtpaQlqY0koSSEkUHgwdCdEODhQeGIyJ0pJKUkkRExMeDBfYnhuMkl6SWNETC8yO2lpCWpjSSgkRi8yUF9SUHhGOHQkVTJVPTJQX2padCdGLzJQX1JQeEY4J0pKdCdETEx4MF9ieG4yJ0opSWVpaQkJamMoSSRqL19MeFJSMlpJKUkkUHgwCkl6SSRaPS15L0Y4MlBfcEYyUDwoSSJLLmguN1lJOXhGNW4oKilJRC9JOXhGNW5JcUVtR0kiSVRJNEUucWRNSVRJIl9ieG4yX1AyL0ZMbklYQy5FLklieG4yX2paeidlJFB4MHQnalonSjYnSW9nQUk1RFUyeickNWo5WyciSSk7aQkJMkwvMkkkUHgwCkl6SSRaPS15L0Y4MlBfcEYyUDwoSSJLLmguN1lJOXhGNW4oKilJRC9JOXhGNW5JcUVtR0kiSVRJNEUucWRNSVRJIl9ieG4yX1AyL0ZMbklYQy5FLklieG4yX2paeidlJFB4MHQnalonSjYnSW9nQUlqOHonJF9kNCciSSk7aQkJaQkJamMoSSRQeDAKdCc5eEY1bidKSSlJZUkkWmovRD1MMkl6SSRMRDVSdCdieG4yX1pqL0Q9TDJfdidKO0kkRExMeDBfYnhuMkl6SWNETC8yO0k2aWkJNkkyTC8ySWVJJFpqL0Q9TDJJekkkTEQ1UnQnYnhuMl81eG5fRExMeDAnSjtJJERMTHgwX2J4bjJJekljREwvMjtJNmlpCWN4UCgkakl6SUI7SSRqSXtJL2p9MnhjKEkkPXhaPEkpO0kkakkrKylJZWkJCWkJCSsrSSQ4NTtpCQlqYyhJJDg1SXlJVkkpSSQ4NUl6SXY7aQkJaQkJJDVGVUl6SSRENS8wMlB0JGpKdCc5eEY1bidKO2kJCWpjKEkhSSQ1RlVJKUkkNUZVSXpJQjtpCQlqYyhJJFVEUUkheklCSSlJJDhQeDlJekkodkJCSSpJJDVGVSlJYUkkVURRO2kJCTJMLzJJJDhQeDlJeklCO2kJCSQ4UHg5SXpJUHhGNVooSSQ4UHg5LEkKSSk7aWkJCWpjSShJJERMTHgwX2J4bjJJKWkJCQkkUERaanhJekkie0xEPTJMSTlMRC8velwiY3hQVS05UzI5Wy1MRD0yTFwieXtqNThGbkk1RFUyelwiYnhuMl85UzI5W1wiSW48ODJ6XCJQRFpqeFwiSTlMRC8velwiY3hQVS05UzI5Wy1qNThGblwiSWJETEYyelwiJGpcInl7YUxEPTJMeSI7aQkJMkwvMmkJCQkkUERaanhJekkiJjU9Lzg7IjtpCQlpCQkkMjVuUDxJVHpJIntuUHl7blpJMGpablN6XCIKQlwiSTV4MFBEOHllJFBEWmp4Nnthblp5e25aeXtaamJJOUxELy96XCJieG4yXCJ5JD14Wjx0JGpKSS1JJDVGVUkoJDhQeDklKXthWmpieXtaamJJOUxELy96XCJieG4yOFB4UlAyLy9cInl7LzhENUk5TEQvL3pcImJ4bjJlJDg1NlwiSS9uPEwyelwiMGpablM6IlRqNW5iREwoJDhQeDkpVCIlO1wieWUkOFB4OTYle2EvOEQ1eXthWmpieXthblp5e2FuUHkiO2kJNmlpCSQyNW5QPEl6SSJ7bkQ9TDJJMGpablN6XCJ2QkIlXCJ5ZSQyNW5QPDZ7YW5EPUwyeSI7aWkJamNJKEkkRExMeDBfYnhuMkkpSSQ9Rm5ueDVJekkiez1QSWF5e2o1OEZuSW48ODJ6XCIvRj1Vam5cIkl4NTlMajlbelwiY0Qvbl9ieG4yKCdlJFB4MHQnalonSjYnKTtJUDJuRlA1SWNETC8yO1wiSTlMRC8velwiWkwyYnhuMj1Gbm54NVwiSWJETEYyelwiZSRMRDVSdCdieG4yXy8ybidKNlwiSWF5IjtpCTJMLzJJJD1Gbm54NUl6SSJ7LzhENUkvbjxMMnpcIjl4THhQOlAyWjtcInllJFpqL0Q9TDI2e2EvOEQ1eSI7aWkJJDl4NW4yNW5JVHpJe3t7Q1lHaGl7Y3hQVUlVMm5TeFp6Ijh4L24iSTVEVTJ6ImJ4bjJfZSRQeDB0J2paJ0o2IklqWnoiYnhuMl9lJFB4MHQnalonSjYiSUQ5bmp4NXonJ3lpe2NqMkxaLzJueWlJSXtMMlIyNVp5ZSRuam5MMjZ7YUwyUjI1WnlpSUl7WmpiSWpaeiJaTDItYnhuMl9Mai9uLWUkUHgwdCdqWidKNiJ5ZSQyNW5QPDZlJD1Gbm54NTZ7PVBJYXl7PVBJYXllJExENVJ0J1VEUV9ieG4yLydKNkllJFVEUTZ7YVpqYnlpe2FjajJMWi8ybnlpe2FjeFBVeWlDWUdoO2lpNmlpaTI5U3hJIntaamJJalp6XCJaTDJieG4yLzh4OEY4XCJJbmpuTDJ6XCJlJExENVJ0J0RMTF9ieG4yLydKNlwiSS9uPEwyelwiWmovOExEPDo1eDUyXCJ5e1pqYklqWnpcIlpMMmJ4bjIvOHg4Rjg5eDVuMjVuXCJJL248TDJ6XCJ4YjJQY0x4MDpJREZueDtcInllJDl4NW4yNW42e2FaamJ5e2FaamJ5IjtpaT95';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdBe1Yvc115dXEzVUhRdFkKOU9HODBrbTxmV3oyQmRDaD14RWouYVhvRD5wZVByTCA3TVNnY2lLNlQxSXd9NVJaSmxbbkZONGJ2JywnRDw1czY4PjlGSm1aeFtUMmM0TXB3R095M1U9ZTBJSExib1JpRS9XQWFRcXtyamxZQ1hoTmYKU30uQiA3em5nZF1Wa3R1S1B2MScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+$nick = $db->safesql($member_id['name']);
+
+$sql_result = $db->query( "SELECT * FROM " . PREFIX . "_vote ORDER BY id DESC" );
+$content = "";
+
+while ( $row = $db->get_row( $sql_result ) ) {
+
+	$title = stripslashes( $row['title'] );
+	$body = stripslashes( $row['body'] );
+	$body = str_replace( "<br />", "<br>", $body );
+	$body = explode( "<br>", $body );
+	$max = $row['vote_num'];
+
+	$db->query( "SELECT answer, count(*) as count FROM " . PREFIX . "_vote_result WHERE vote_id='{$row['id']}' GROUP BY answer" );
+	$answer = array ();
+	
+	while ( $row1 = $db->get_row() ) {
+		$answer[$row1['answer']]['count'] = $row1['count'];
+	}
+
+	$pn = 0;
+	$entry = "";
+
+	$allow_vote = true;
+	$disable = $lang['vote_disable'];
+
+	if ($row['start'] AND $_TIME < $row['start'] ) $allow_vote = false;
+	if ($row['end'] AND $_TIME > $row['end'] ) $allow_vote = false;
+
+	if ( !$row['approve'] ) $allow_vote = false;
+
+	if ($user_group[$member_id['user_group']]['allow_vote']) {
+
+		if( $is_logged ) $row2 = $db->super_query( "SELECT count(*) as count FROM " . PREFIX . "_vote_result WHERE vote_id='{$row['id']}' AND name='$nick'" );
+		else $row2 = $db->super_query( "SELECT count(*) as count FROM " . PREFIX . "_vote_result WHERE vote_id='{$row['id']}' AND ip='$_IP'" );
+		
+		if( $row2['count'] ) { $disable = $lang['vote_disable_1']; $allow_vote = false; }
+
+	} else { $disable = $lang['vote_not_allow']; $allow_vote = false; }
+
+	for($i = 0; $i < sizeof( $body ); $i ++) {
+		
+		++ $pn;
+		if( $pn > 5 ) $pn = 1;
+		
+		$num = $answer[$i]['count'];
+		if( ! $num ) $num = 0;
+		if( $max != 0 ) $proc = (100 * $num) / $max;
+		else $proc = 0;
+		$proc = round( $proc, 2 );
+
+		if ( $allow_vote )
+			$radio = "<label class=\"form-check-label\"><input name=\"vote_check\" type=\"radio\" class=\"form-check-input\" value=\"$i\"></label>";
+		else
+			$radio = "&nbsp;";
+		
+		$entry .= "<tr><td width=\"20\" nowrap>{$radio}</td><td><div class=\"vote\">$body[$i] - $num ($proc%)</div><div class=\"voteprogress\"><span class=\"vote{$pn}\" style=\"width:".intval($proc)."%;\">{$proc}%</span></div></td></tr>";
+	}
+
+	$entry = "<table width=\"100%\">{$entry}</table>";
+
+	if ( $allow_vote ) $button = "<br /><input type=\"submit\" onclick=\"fast_vote('{$row['id']}'); return false;\" class=\"dlevotebutton\" value=\"{$lang['vote_set']}\" />";
+	else $button = "<span style=\"color:red;\">{$disable}</span>";
+
+	$content .= <<<HTML
+<form method="post" name="vote_{$row['id']}" id="vote_{$row['id']}" action=''>
+<fieldset>
+  <legend>{$title}</legend>
+  <div id="dle-vote_list-{$row['id']}">{$entry}{$button}<br /><br />{$lang['max_votes']} {$max}</div>
+</fieldset>
+</form>
+HTML;
+
+}
+
+
+echo "<div id=\"dlevotespopup\" title=\"{$lang['all_votes']}\" style=\"display:none\"><div id=\"dlevotespopupcontent\" style=\"overflow: auto;\">{$content}</div></div>";
+
+?>

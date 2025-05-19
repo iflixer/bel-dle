@@ -22,9 +22,12 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: "%"
       MYSQL_DATABASE: dle
       MYSQL_USER: dleuser
       MYSQL_PASSWORD: dlepass
+    ports:
+      - "14588:3306"
     volumes:
       - db_data:/var/lib/mysql
 

@@ -5,9 +5,361 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: rebuild.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: News rebuild
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P1duP3NNc0ZvKkZra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra0YxPkNJQzdZWDMxQXVyWXUzMS0xOFQxcS9YSVozd1YxLjNlWUMxMgoveXMxRi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tRjFNSUlzVjpvb2VRMy11M3dWZAp5b0YtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUYxRy9zVApZck1JMSggKTFLTk40LUtOS0wxcS9YSVozd1YxLjNlWUMxMgoveXNGa2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tGMVNNWVYxIC9lMzFZVjFzCi9JMyBJM2UxOFQxIC9zVApZck1JRmtra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2trRjFKWVEzOjEKMzh5WVFlZHNNc0YtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUYxfVYzOjFaM3dWMQozOHlZUWVGa2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tGKm9GRllYKCFlM1hZdTNlKCc+dlN2N2NKQUFaMmNaQScpKTE9RglNM0NlMwooMSJ4U1Mwb2dkZzE0TjkxSi8KOFllZTN1IjEpO0YJTTNDZTMKMSgxJzcvIENJWS91OjFkZG9kZG8nMSk7RgllWTMoMSJ4QyA8WXVyMUNJSTNSc0khIjEpO0ZdRkZZWCgoJFIzUjgzCl9ZZW0neVYzCl9yCi95cydIMSFrMWcpKTE9ZVkzMSgiMwoKLwoiKTtdRkZZWDEoIVlWVjNJKCRfbEE1fUFxU20neVYzCl9NQ1ZNJ0gpMWlsMSEkX2xBNX1BcVNtJ3lWMwpfTUNWTSdIMWlsMSRfbEE1fUFxU20neVYzCl9NQ1ZNJ0gxIWsxJGVRM19RL3JZdV9NQ1ZNKTE9RkYJMTFlWTMxKCIzCgovCiIpO0ZGXUZGJF8waXFTbSdDCjNDJ0gxazFZVlYzSSgkXzBpcVNtJ0MKM0MnSCkxPzEkXzBpcVNtJ0MKM0MnSDE6MScnO0ZGWVgxKCRfMGlxU20nQwozQydIMWtrMSIKM1FDSTNlIjEpMT1GCSRlOC1XcHkzClQoMSJ9MD52U0ExIjFkMTBsQUpjYTFkMSJfcy9WSV8zVUkKQ1YxcUFTMQozUUNJM2VfWWVWaycnIjEpO0YxMTExMyBNLzEiPVwiVklDSXlWXCI6MVwiLzxcIl0iO0YJZVkzKCk7Rl1GRiRWSUMKSVgKL1IxazFZVlYzSSgkXzBpcVNtJ1ZJQwpJWAovUidIKTE/MVl1SUJDUSgkXzBpcVNtJ1ZJQwpJWAovUidIKTE6MU47RiQ4eVhYMwoxazEiIjtGJFZJM3MxazFOO0YkIC95dUlfczMKX1ZJM3MxazFnTk47RkZZWDEoJF8waXFTbSdDCjNDJ0gxa2sxIiAvUlIzdUlWIjEpMT1GCSQgL3l1SV9zMwpfVkkzczFrMUxOTjtGXUZGWVgxKCRfMGlxU20nQwozQydIMWtrMSJWSUNJWSAiMSkxPUZGCSRzQwpWMzFrMXUzdzEwQwpWM0pZUUkzCigpO0YJJHNDClYzLVczZVlJX1IvZTMxazFYQ1FWMztGCSRzQwpWMy1XQ1FRL3dfIC9lMzFrMVhDUVYzO0ZGCSQKM1Z5UUkxazEkZTgtV3B5MwpUKCJxQTdBR1MxWWUsMUkzUnNRQ0kzLDFDUVEvd184CjFKbGkuMSIxZDEwbEFKY2ExZDEiX1ZJQ0lZIDFFeEFsQTFDUVEvd184CjEhaydLJzE3Yy5jUzEiZCRWSUMKSVgKL1JkIiwxImQkIC95dUlfczMKX1ZJM3MpO0ZGCXdNWVEzKCQKL3cxazEkZTgtV3IzSV8KL3coJAozVnlRSSkpRgk9RgkJCUYJCSQKL3dtJ0kzUnNRQ0kzJ0gxazEkc0MKVjMtV2UzIC9lM2JiRy9lM1YoMSQKL3dtJ0kzUnNRQ0kzJ0gsMUkKeTMsMUkKeTMxKTtGRgkJJEkzUnNRQ0kzMWsxJHNDClYzLVdzCi8gM1ZWKDEkCi93bSdJM1JzUUNJMydIMSk7RkYJCSRJM1JzUUNJMzFrMSRlOC1XVkNYM1ZwUSgkc0MKVjMtV2JiXzBDClYzKDEkSTNSc1FDSTMxKSk7RkYJCSRlOC1XcHkzClQoMSJ9MD52U0ExIjFkMTBsQUpjYTFkMSJfVklDSVkgMXFBUzFJM1JzUUNJM2snJEkzUnNRQ0kzJzFFeEFsQTFZZWsnPSQKL3dtJ1llJ0hdJyIxKTtGRgkJJFZJM3MrKztGCV1GRgkkCjM4eVlRZSAveXVJMWsxJFZJQwpJWAovUjErMSRWSTNzO0YJJDh5WFgzCjFrMSI9XCJWSUNJeVZcIjoxXCIvPFwiLFwiCjM4eVlRZSAveXVJXCI6MT0kCjM4eVlRZSAveXVJXV0iO0YJMyBNLzEkOHlYWDMKO0YJRl0xM1FWM1lYMSgkXzBpcVNtJ0MKM0MnSDFrazEiIC9SUjN1SVYiMSkxPUYJRglZWCgxJCAvdVhZcm0nQ1FRL3dfIC9SUjN1SVZfd1RWWXdUcidIMSkxPUZGCQkkQ1FRL3czZV9JQ3JWMWsxQwoKQ1QoJ2VZQm1DUVlydXxWSVRRM3wgUUNWVnxlQ0lDLSAvUlIzdUlJWVIzfGVDSUMtIC9SUjN1SXlWMwp8IC91STN1STNlWUlDOFEzSCcsMSdWc0N1bVZJVFEzfCBRQ1ZWfGVDSUMteVYzCnkKUXxlQ0lDLXlWMwp1Q1IzfCAvdUkzdUkzZVlJQzhRM0gnLDEnc21DUVlydXxWSVRRM3wgUUNWVkgnLDEncwozbSBRQ1ZWSCcsMScgL2UzJywxJzgKJywxJ1ZJCi91cicsMSczUicsMSd5UScsMSdRWScsMScvUScsMSc4JywxJ3knLDEnWScsMSdWJywxJ00KJyk7RgkJRgkJWVgoMSR5VjMKX3IKL3lzbSRSM1I4MwpfWWVtJ3lWMwpfcgoveXMnSEhtJ0NRUS93X3kKUSdIMSkxJENRUS93M2VfSUNyVm1IMWsxJ0NtTQozWHxJQwpyM0l8VklUUTN8IFFDVlZ8SVlJUTNIJztGCQlZWCgxJHlWMwpfcgoveXNtJFIzUjgzCl9ZZW0neVYzCl9yCi95cydISG0nQ1FRL3dfWVJDcjMnSDEpMSRDUVEvdzNlX0lDclZtSDFrMSdZUnJtVklUUTN8IFFDVlZ8VgogfENRSXx3WWVJTXxNM1lyTUlIJztGCQlGCQkkc0MKVjMxazF1M3cxMEMKVjNKWVFJMwooMSRDUVEvdzNlX0lDclYxKTtGCQkkc0MKVjMtV3dUVll3VHIxazFJCnkzO0YJCSRzQwpWMy1XQ1FRL3dfIC9lMzFrMVhDUVYzO0YJCSR5VjNfTUlSUTFrMUkKeTM7RglGCV0xM1FWMzE9RgkJRgkJJHNDClYzMWsxdTN3MTBDClYzSllRSTMKKCk7RgkJJHlWM19NSVJRMWsxWENRVjM7RgkJJHNDClYzLVdDUVEvdzg4IC9lM1YxazFYQ1FWMztGCQlGCV1GCUYJJHNDClYzLVdWQ1gzX1IvZTMxazFJCnkzO0YJJHNDClYzLVcKM1IvQjNfTUlSUTFrMVhDUVYzO0YJJHNDClYzLVczZVlJX1IvZTMxazFYQ1FWMztGCSRzQwpWMy1XQ1FRL3dfeQpRMWsxJHlWMwpfcgoveXNtJFIzUjgzCl9ZZW0neVYzCl9yCi95cydISG0nQ1FRL3dfeQpRJ0g7Rgkkc0MKVjMtV0NRUS93X1lSQ3IzMWsxJHlWMwpfcgoveXNtJFIzUjgzCl9ZZW0neVYzCl9yCi95cydISG0nQ1FRL3dfWVJDcjMnSDtGRgkkCjNWeVFJMWsxJGU4LVdweTMKVCgicUE3QUdTMVllLDFJM1VJMUpsaS4xIjFkMTBsQUpjYTFkMSJfIC9SUjN1SVYxN2MuY1MxImQkVklDCklYCi9SZCIsMSJkJCAveXVJX3MzCl9WSTNzKTtGCUYJd01ZUTMoJAovdzFrMSRlOC1XcjNJXwovdygkCjNWeVFJKSkxPUYJCUYJCVlYKDEhJCAvdVhZcm0nQ1FRL3dfIC9SUjN1SVZfd1RWWXdUcidIMSkxPUYJCQlGCQkJJAovd20nSTNVSSdIMWsxJHNDClYzLVdlMyAvZTNiYkcvZTNWKDEkCi93bSdJM1VJJ0gsMVhDUVYzMSk7RgkJCUYJCV0xM1FWMzE9RgkJCSQKL3dtJ0kzVUknSDFrMSRzQwpWMy1XZTMgL2UzYmJHL2UzVigxJAovd20nSTNVSSdILDFJCnkzLDFJCnkzMSk7RgkJXUZGCQkkCi93bSdJM1VJJ0gxazEkZTgtV1ZDWDNWcFEoMSRzQwpWMy1XYmJfMEMKVjMoJHNDClYzLVdzCi8gM1ZWKDEkCi93bSdJM1VJJ0gxKSwxJHlWM19NSVJRKTEpO0YJCUYJCSRlOC1XcHkzClQoMSJ9MD52U0ExIjFkMTBsQUpjYTFkMSJfIC9SUjN1SVYxcUFTMUkzVUlrJz0kCi93bSdJM1VJJ0hdJzFFeEFsQTFZZWsnPSQKL3dtJ1llJ0hdJyIxKTtGCQlGCQkkVkkzcysrO0YJXUYJRgkgUTNDCl8gQyBNMygpO0YJJAozOHlZUWUgL3l1STFrMSRWSUMKSVgKL1IxKzEkVkkzcztGCSQ4eVhYMwoxazEiPVwiVklDSXlWXCI6MVwiLzxcIixcIgozOHlZUWUgL3l1SVwiOjE9JAozOHlZUWUgL3l1SV1dIjtGCTMgTS8xJDh5WFgzCjtGCUZdMTNRVjMxPUZGRgkkc0MKVjMxazF1M3cxMEMKVjNKWVFJMwooKTtGCSRzQwpWMy1XM2VZSV9SL2UzMWsxWENRVjM7Rgkkc0MKVjMtV0NRUS93XyAvZTMxazFYQ1FWMztGCUYJJHNDClYzVVgxazF1M3cxMEMKVjNKWVFJMwooKTtGCSRzQwpWM1VYLVczZVlJX1IvZTMxazFYQ1FWMztGCSRzQwpWM1VYLVdDUVEvd18gL2UzMWsxWENRVjM7RglGCSQKM1Z5UUkxazEkZTgtV3B5MwpUKCJxQTdBR1Mxc2RZZSwxc2RWTS8KSV9WSS8KVCwxc2RYeVFRX1ZJLwpULDFzZFVYWTNRZVYsMXNkSVlJUTMsMXNkIENJM3IvClQsMXNkQ3NzCi9CMywxc2RDUVEvd184Ciwxc2RJQ3JWLDEzZHUzd1ZfWWUxSmxpLjEiMWQxMGxBSmNhMWQxIl9zL1ZJMXMxN0FKUzF7aWNaMSIxZDEwbEFKY2ExZDEiX3MvVklfM1VJCkNWMTMxaVoxKHNkWWVrM2R1M3dWX1llKTE3Yy5jUzEiZCRWSUMKSVgKL1JkIiwxImQkIC95dUlfczMKX1ZJM3MpO0YJRgl3TVlRMygkCi93MWsxJGU4LVdyM0lfCi93KCQKM1Z5UUkpKUYJPUYJRgkJJAovd20nVk0vCklfVkkvClQnSDFrMSRzQwpWMy1XZTMgL2UzYmJHL2UzVigxJAovd20nVk0vCklfVkkvClQnSCwxSQp5MywxSQp5MzEpO0YJCSQKL3dtJ1h5UVFfVkkvClQnSDFrMSRzQwpWMy1XZTMgL2UzYmJHL2UzVigxJAovd20nWHlRUV9WSS8KVCdILDFJCnkzLDFJCnkzMSk7RglGCQkkVk0vCklfVkkvClQxazEkc0MKVjMtV3MKLyAzVlYoMSQKL3dtJ1ZNLwpJX1ZJLwpUJ0gxKTtGCQkkWHlRUV9WSS8KVDFrMSRzQwpWMy1XcwovIDNWVigxJAovd20nWHlRUV9WSS8KVCdIMSk7RgkJJF8waXFTbSdJWUlRMydIMWsxJAovd20nSVlJUTMnSDtGCQkJRgkJJFh5UVFfVkkvClQxazEkZTgtV1ZDWDNWcFEoMSRzQwpWMy1XYmJfMEMKVjMoMSRYeVFRX1ZJLwpUMSkxKTtGCQkkVk0vCklfVkkvClQxazEkZTgtV1ZDWDNWcFEoMSRzQwpWMy1XYmJfMEMKVjMoMSRWTS8KSV9WSS8KVDEpMSk7RgkJRgkJJFVYX1YzQwogTV93LwplVjFrMUMKCkNUMSgpO0YJCSRJQ3JWXyBRL3llMWsxQwoKQ1QoKTtGCQlGCQlZWCgxJAovd20nSUNyVidIMSkxPUZGCQkJJAovd20nSUNyVidIMWsxTUlSUV8zdUlZSVRfZTMgL2UzKCQKL3dtJ0lDclYnSCwxQVpTXzV9aVNBcTF8MUFaU19hLjdnLDEnfVNKLWgnKTtGRgkJCVlYMShAcwozcl9SQ0kgTSgib21cfHxcbnxcV0hvIiwxJAovd20nSUNyVidIKSkxJAovd20nSUNyVidIMWsxIiI7RgkJCTNRVjMxJAovd20nSUNyVidIMWsxTUlSUVZzMyBZQ1EgTUMKVihWSQpZc19JQ3JWKFZJCllzVlFDVk0zVihJCllSKCQKL3dtJ0lDclYnSCkpKSwxQVpTX0dpLjB2UywxJ31TSi1oJyk7RkYJCQlZWDEoJAovd20nSUNyVidIMSkxPUZGCQkJCSRJM1JzX0MKCkNUMWsxM1VzUS9lMygnLCcsMSQKL3dtJ0lDclYnSDEpO0ZGCQkJCVlYMSggL3l1SSgkSTNSc19DCgpDVCkpMT1GRgkJCQkJWC8KM0MgTTEoJEkzUnNfQwoKQ1QxQ1YxJEJDUXkzKTE9RgkJCQkJCVlYMSgxSQpZUigkQkNReTMpMSkxJElDclZfIFEveWVtSDFrMSRlOC1XVkNYM1ZwUSgxSQpZUigkQkNReTMpMSk7RgkJCQkJXUYJCQkJXUZGCQkJCVlYMSgxIC95dUkoJElDclZfIFEveWUpMSkxPUYJCQkJCUYJCQkJCSRJQ3JWXyBRL3llMWsxQwoKQ1RfeXVZcHkzKCRJQ3JWXyBRL3llKTtGCQkJCQkkCi93bSdJQ3JWJ0gxazFZUnNRL2UzKCIsMSIsMSRJQ3JWXyBRL3llKTtGRgkJCQldMTNRVjMxJAovd20nSUNyVidIMWsxIiI7RkYJCQldRkYJCV1GRgkJWVgxKCQKL3dtJ1VYWTNRZVYnSCkxPUYJRgkJCSRVWFkzUWVWMWsxVVhZM1FlVlEvQ2UoKTtGCQkJJHMvVkkzZVVYWTNRZVYxazFVWFkzUWVWZUNJQ1EvQ2UoJAovd20nVVhZM1FlVidIKTtGCQkJJFhZUTMgL3VJM3VJVjFrMUMKCkNUMSgpO0YJCQkkdTN3cy9WSTNlVVhZM1FlVjFrMUMKCkNUMSgpO0YJRgkJCVlYKDEhM1JzSVQoMSRzL1ZJM2VVWFkzUWVWMSkxKTE9RglGCQkJCVgvCjNDIE0xKCRVWFkzUWVWMUNWMSR1Q1IzMWtXMSRCQ1F5MykxPUZGCQkJCQlZWDEoJEJDUXkzbTlIMWtrMSJlQ0kzSVlSMyIxdlo+MSRzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgpMT1GRgkJCQkJCSRzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgxazFAVkkKSS9JWVIzKCRzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgpO0ZGCQkJCQkJWVgxKCRzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgxIWtrMS1nMUN1ZTEkcy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIKTE9RkYJCQkJCQkJWVgxKCRCQ1F5M21LOUgxa2sxZykxJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDFrMWVDSTMoIlAtUi1lIiwxJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISCk7RgkJCQkJCQkzUVYzWVgxKCRCQ1F5M21LOUgxa2sxSykxJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDFrMWVDSTMoIng6WSIsMSRzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgpO0YJCQkJCQkJM1FWMzEkcy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIMWsxZUNJMygiUC1SLWUxeDpZIiwxJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISCk7RkYJCQkJCQldMTNRVjMxJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDFrMSIiO0ZGCQkJCQldRkYJCQkJCVlYKDEkQkNReTNtOUgxa2sxIlQzVi8KdS8iMXZaPjFZVlYzSSgxJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDEpMSkxPUYJCQkJCQlGCQkJCQkJJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDFrMVl1SUJDUSgkcy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIKTtGCQkJCQkJRgkJCQkJXUZGCQkJCQlZWDEoJEJDUXkzbTlIMSFrMSJWM1EzIEkiMXZaPjEkQkNReTNtOUgxIWsxIllSQ3IzIjF2Wj4xJEJDUXkzbTlIMSFrMSJZUkNyM3JDUTMKVCIxdlo+MSRCQ1F5M205SDEhazEiQlllMy8iMXZaPjEkQkNReTNtOUgxIWsxIkN5ZVkvIjF2Wj4xJEJDUXkzbTlIMSFrMSJYWVEzIjF2Wj4xJEJDUXkzbTlIMSFrMSJNSVJRdFYiMXZaPjEkQkNReTNtOUgxIWsxImVDSTNJWVIzIjF2Wj4xJEJDUXkzbWhIMWtrMU4xdlo+MSRCQ1F5M21bSDFrazFOMXZaPjEkcy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIMSkxPUZGCQkJCQkJJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDFrMSRzQwpWM1VYLVdlMyAvZTNiYkcvZTNWKCRzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgsMUkKeTMsMUkKeTMpOwkJCQkJRgkJCQkJCSR1M3dzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgxazEkc0MKVjNVWC1XYmJfMEMKVjMoJHNDClYzVVgtV3MKLyAzVlYoJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISCkpO0YJCQkJRgkJCQkJXTEzUVYzWVgxKDFZVlYzSSgkcy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIKTEpMT1GCQkJCQkJRgkJCQkJCVlYKCRCQ1F5M205SDFrazEiTUlSUXRWIikxPUYJCQkJCQkJRgkJCQkJCQkkdTN3cy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIMWsxJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDtGCQkJCQkJCUYJCQkJCQldMTNRVjMxPUZGCQkJCQkJCSRzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgxazFWSQpfCjNzUUMgMygiJiM0NDsiLDEiJkNSczsjNDQ7IiwxJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISCk7RgkJCQkJCQkkcy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIMWsxVkkKXwozc1FDIDMoIiYjZ0s0OyIsMSImQ1JzOyNnSzQ7IiwxJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISCk7RkYJCQkJCQkJJHMvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDFrMU1JUlFfM3VJWUlUX2UzIC9lMygkcy9WSTNlVVhZM1FlVm0kQkNReTNtTkhILDFBWlNfNX1pU0FxLDEnfVNKLWgnKTtGCQkJCQkJCSR1M3dzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgxazFJCllSKDFNSVJRVnMzIFlDUSBNQwpWKFZJCllzX0lDclYoMVZJCllzVlFDVk0zVigkcy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIKTEpLDFBWlNfNX1pU0FxLDEnfVNKLWgnMSkpO0ZGCQkJCQkJCVlYMSgkQkNReTNtOUgxa2sxIllSQ3IzIjEvCjEkQkNReTNtOUgxa2sxIllSQ3IzckNRMwpUIjEvCjEkQkNReTNtOUgxa2sxIkJZZTMvIjEvCjEkQkNReTNtOUgxa2sxIkN5ZVkvIikxPUZGCQkJCQkJCQkkWF9DCgoxazEzVXNRL2UzKCcsJywxJHUzd3MvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISCk7RkYJCQkJCQkJCVgvCjNDIE0xKCRYX0MKCjFDVjEkSV9CQ1EpMT1GRgkJCQkJCQkJCSRJX0MxazEzVXNRL2UzKCd8JywxJElfQkNRKTtGRgkJCQkJCQkJCVlYMSggL3l1SSgkSV9DKTFrazFnMS8KMSAveXVJKCRJX0MpMWtrMUwpMT1GRgkJCQkJCQkJCQkkSV9CMWsxWVJzUS9lMygnfCcsMSRJX0MpO0YJCQkJCQkJCQldMTNRVjMxPUZGCQkJCQkJCQkJCXl1VjNJKCRJX0NtTkgpO0YJCQkJCQkJCQkJJElfQjFrMVlSc1EvZTMoJ3wnLDEkSV9DKTtGCQkJCQkJCQkJXUZGCQkJCQkJCQkJWVgxKHMKM3JfUkNJIE0oIm9tPyY7bkhvIiwxJElfQikxLwoxVkkKWXMvVigkSV9CLDEiZHNNcyIpMSFrazFYQ1FWMykxJHUzd3MvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDFrMSIiO0YJCQkJCQkJCV1GCQkJCQkJCV1GRgkJCQkJCQkkdTN3cy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIMWsxVkkKXwozc1FDIDMoQwoKQ1QoIj0iLDEibSIpLDFDCgpDVCgiJiNnSzk7IiwxIiYjZmc7IiksMSR1M3dzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgpO0YJCQkJCQkJJHUzd3MvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDFrMXMKM3JfCjNzUUMgMyhDCgpDVCgnb2VDSUM6b1knLDEnb0M4L3lJOm9ZJywxJ29COFYgCllzSTpvWScsMSdvdENCQ1YgCllzSTpvWScpLDFDCgpDVCgiZSYjZ05ESztJQyYjTGg7IiwxIiYjZ05ESzs4L3lJJiNMaDsiLDEiQjhWIApZc0kmI0xoOyIsMSJ0JiNnTkRLO0JDViAKWXNJJiNMaDsiKSwxJHUzd3MvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISCk7RkYJCQkJCQkJWVgoJEJDUXkzbTlIMWtrMSJYWVEzIikxPUYJCQkJCQkJCUYJCQkJCQkJCSR1M3dzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgxazFWSQpfCjNzUUMgMygxQwoKQ1QoIiYjZmc7IiksMUMKCkNUKCJtIiksMSR1M3dzL1ZJM2VVWFkzUWVWbSRCQ1F5M21OSEgxKTtGCQkJCQkJCQlGCQkJCQkJCQlZWCgxISRCQ1F5M21LREgxKTE9RgkJCQkJCQkJCVlYMShWSQpzL1YxKDEkdTN3cy9WSTNlVVhZM1FlVm0kQkNReTNtTkhILDEibUNJSUMgTVIzdUlrIjEpMWtrazFYQ1FWMykxJHUzd3MvVkkzZVVYWTNRZVZtJEJDUXkzbU5ISDFrMSIiO0YJCQkJCQkJCV1GCQkJCQkJCQlGCQkJCQkJCV1GRgkJCQkJCV1GCQkJCUYJCQkJCV1GCQkJCQlGCQkJCQlZWDEoMSRCQ1F5M21bSDF2Wj4xITNSc0lUKDEkdTN3cy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIMSkxKTE9RgkJCQkJCSRJM1JzX0MKCkNUMWsxM1VzUS9lMygxIiwiLDEkdTN3cy9WSTNlVVhZM1FlVm0kQkNReTNtTkhIMSk7RgkJCQkJCUYJCQkJCQlYLwozQyBNMSgkSTNSc19DCgpDVDFDVjEkQkNReTNLKTE9RgkJCQkJCQkkQkNReTNLMWsxSQpZUigkQkNReTNLKTtGCQkJCQkJCVlYKCRCQ1F5M0spMSRVWF9WM0MKIE1fdy8KZVZtSDFrMUMKCkNUKDEkZTgtV1ZDWDNWcFEoJEJDUXkzbU5IKSwxJGU4LVdWQ1gzVnBRKCRCQ1F5M0spMSk7RgkJCQkJCV1GCQkJCQlGCQkJCQldRgkJCQlGCQkJCV1GCUYJCQkJWVgxKCAveXVJMSgkdTN3cy9WSTNlVVhZM1FlVikxKTE9RgkJRgkJCQkJWC8KM0MgTTEoMSR1M3dzL1ZJM2VVWFkzUWVWMUNWMSRVWFkzUWVlQ0lDdUNSMzFrVzEkVVhZM1FlZUNJQ0JDUXkzMSkxPUYJCQkJCQlZWCgxJFVYWTNRZWVDSUNCQ1F5MzFra2sxIiIxKTE9RgkJCQkJCQkgL3VJWXV5MztGCQkJCQkJXUYJCUYJCQkJCQkkVVhZM1FlZUNJQ0JDUXkzMWsxVkkKXwozc1FDIDMoMSJ8IiwxIiYjZ0s0OyIsMSRVWFkzUWVlQ0lDQkNReTMxKTtGCQkJCQkJJFhZUTMgL3VJM3VJVm1IMWsxJGU4LVdWQ1gzVnBRKCI9JFVYWTNRZWVDSUN1Q1IzXXw9JFVYWTNRZWVDSUNCQ1F5M10iKTtGCQkJCQldRgkJCQkJRgkJCQkJJFhZUTMgL3VJM3VJVjFrMVlSc1EvZTMoMSJ8fCIsMSRYWVEzIC91STN1SVYxKTtGCQlGCQkJCV0xM1FWMwkkWFlRMyAvdUkzdUlWMWsxJyc7RgkJCUYJCQldMTNRVjMJJFhZUTMgL3VJM3VJVjFrMScnO0YJRgkJXTEzUVYzCSRYWVEzIC91STN1SVYxazEnJztGCUYJCSRlOC1XcHkzClQoMSJ9MD52U0ExIjFkMTBsQUpjYTFkMSJfcy9WSTFxQVMxVk0vCklfVkkvClRrJz0kVk0vCklfVkkvClRdJywxWHlRUV9WSS8KVGsnPSRYeVFRX1ZJLwpUXScsMVVYWTNRZVZrJz0kWFlRMyAvdUkzdUlWXScsMUlDclZrJz0kCi93bSdJQ3JWJ0hdJzFFeEFsQTFZZWsnPSQKL3dtJ1llJ0hdJyIxKTtGRgkJWVgxKDEhJAovd20ndTN3Vl9ZZSdIMSkxJGU4LVdweTMKVCgxImNacUFsUzFjWlNpMSIxZDEwbEFKY2ExZDEiX3MvVklfM1VJCkNWMSh1M3dWX1llLDFDUVEvd18KQ0kzKTFqdjd9QXEoJz0kCi93bSdZZSdIXScsMSdnJykiMSk7RkYJCSRlOC1XcHkzClQoMSI+QTdBU0ExSmxpLjEiMWQxMGxBSmNhMWQxIl9zL1ZJXzNVSQpDVl8gQ0lWMUV4QWxBMXUzd1ZfWWUxazEnPSQKL3dtJ1llJ0hdJyIxKTtGRgkJWVgoMSQKL3dtJyBDSTNyLwpUJ0gxdlo+MSQKL3dtJ0NzcwovQjMnSDEpMT1GRgkJCSQgQ0lfWWVWMWsxQwoKQ1QxKCk7RkYJCQkkIENJX1llVl9DCgoxazEzVXNRL2UzKDEiLCIsMSQKL3dtJyBDSTNyLwpUJ0gxKTtGRgkJCVgvCjNDIE0xKDEkIENJX1llVl9DCgoxQ1YxJEJDUXkzMSkxPUZGCQkJCSQgQ0lfWWVWbUgxazEiKCciMWQxJAovd20nWWUnSDFkMSInLDEnIjFkMVl1SUJDUSgxJEJDUXkzMSkxZDEiJykiO0YJCQkJRgkJCV1GRgkJCSQgQ0lfWWVWMWsxWVJzUS9lMygxIiwxIiwxJCBDSV9ZZVYxKTtGCQkJJGU4LVdweTMKVCgxImNacUFsUzFjWlNpMSIxZDEwbEFKY2ExZDEiX3MvVklfM1VJCkNWXyBDSVYxKHUzd1ZfWWUsMSBDSV9ZZSkxanY3fUFxMSIxZDEkIENJX1llVjEpO0ZGCQldRgkJRgkJJGU4LVdweTMKVCgxIj5BN0FTQTFKbGkuMSIxZDEwbEFKY2ExZDEiX1VYVjNDCiBNMUV4QWxBMXUzd1ZfWWUxazEnPSQKL3dtJ1llJ0hdJyIxKTtGRgkJWVgxKDEgL3l1SSgkVVhfVjNDCiBNX3cvCmVWKTF2Wj4xJAovd20nQ3NzCi9CMydIMSkxPUYJCQlGCQkJJEkzUnNfQwoKQ1QxazFDCgpDVCgpO0YJCQlGCQkJWC8KM0MgTTEoMSRVWF9WM0MKIE1fdy8KZVYxQ1YxJEJDUXkzMSkxPUYJCQkJRgkJCQkkSTNSc19DCgpDVG1IMWsxIignIjFkMSQKL3dtJ1llJ0gxZDEiJywxJyIxZDEkQkNReTNtTkgxZDEiJywxJyIxZDEkQkNReTNtZ0gxZDEiJykiO0YJCQldRgkJCUYJCQkkVVhfVjNDCiBNX3cvCmVWMWsxWVJzUS9lMygxIiwxIiwxJEkzUnNfQwoKQ1QxKTtGCQkJJGU4LVdweTMKVCgxImNacUFsUzFjWlNpMSIxZDEwbEFKY2ExZDEiX1VYVjNDCiBNMSh1M3dWX1llLDFJQ3J1Q1IzLDFJQ3JCQ1F5MykxanY3fUFxMSIxZDEkVVhfVjNDCiBNX3cvCmVWMSk7RgkJXUZGCQkkZTgtV3B5MwpUKDEiPkE3QVNBMUpsaS4xIjFkMTBsQUpjYTFkMSJfSUNyVjFFeEFsQTF1M3dWX1llMWsxJz0kCi93bSdZZSdIXSciMSk7RgkJRgkJWVgxKCAveXVJKCRJQ3JWXyBRL3llKTF2Wj4xJAovd20nQ3NzCi9CMydIKTE9RkYJCQkkSTNSc19DCgpDVDFrMUMKCkNUKCk7RkYJCQlYLwozQyBNMSgkSUNyVl8gUS95ZTFDVjEkQkNReTMpMT1GRgkJCQkkSTNSc19DCgpDVG1IMWsxIignIjFkMSQKL3dtJ1llJ0gxZDEiJywxJyIxZDEkQkNReTMxZDEiJykiO0YJCQldRkYJCQkkSUNyVl8gUS95ZTFrMVlSc1EvZTMoIiwxIiwxJEkzUnNfQwoKQ1QpO0YJCQkkZTgtV3B5MwpUKCJjWnFBbFMxY1pTaTEiMWQxMGxBSmNhMWQxIl9JQ3JWMSh1M3dWX1llLDFJQ3IpMWp2N31BcTEiMWQxJElDclZfIFEveWUpO0YJCV1GRgkJJFZJM3MrKztGCV1GCUYJIFEzQwpfIEMgTTMoKTtGCSQKMzh5WVFlIC95dUkxazEkVklDCklYCi9SMSsxJFZJM3M7RgkkOHlYWDMKMWsxIj1cIlZJQ0l5VlwiOjFcIi88XCIsXCIKMzh5WVFlIC95dUlcIjoxPSQKMzh5WVFlIC95dUldXSI7RgkzIE0vMSQ4eVhYMwo7Rl1GP1c=';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCd3eEJudXRSbFBLNDNxOWJYYU0+L0dDeVo3PXJZT0poQWpWaXBjClEgRVtXSGtlMlRJenZte1VERmZTZDVMTjFzb2cuNjw4fV0wJywnd0h2PG5qbVJZMjRlUzNCZlhoRG9DYXVOTHtnaXpGOEVWc09xSXJsY1c2Pl09ZEd5dFpBW0p4Nwo5VC5RNTAgcC8xTUtrYlV9UCcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if(($member_id['user_group'] != 1)) {die ("error");}
+
+if (!isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash) {
+
+	  die ("error");
+
+}
+
+$_POST['area'] = isset($_POST['area']) ? $_POST['area'] : '';
+
+if ($_POST['area'] == "related" ) {
+	$db->query( "UPDATE " . PREFIX . "_post_extras SET related_ids=''" );
+    echo "{\"status\": \"ok\"}";
+	die();
+}
+
+$startfrom = isset($_POST['startfrom']) ? intval($_POST['startfrom']) : 0;
+$buffer = "";
+$step = 0;
+$count_per_step = 100;
+
+if ($_POST['area'] == "comments" ) {
+	$count_per_step = 500;
+}
+
+if ($_POST['area'] == "static" ) {
+
+	$parse = new ParseFilter();
+	$parse->edit_mode = false;
+	$parse->allow_code = false;
+
+	$result = $db->query("SELECT id, template, allow_br FROM " . PREFIX . "_static WHERE allow_br !='2' LIMIT ".$startfrom.", ".$count_per_step);
+
+	while($row = $db->get_row($result))
+	{
+			
+		$row['template'] = $parse->decodeBBCodes( $row['template'], true, true );
+
+		$template = $parse->process( $row['template'] );
+
+		$template = $db->safesql($parse->BB_Parse( $template ));
+
+		$db->query( "UPDATE " . PREFIX . "_static SET template='$template' WHERE id='{$row['id']}'" );
+
+		$step++;
+	}
+
+	$rebuildcount = $startfrom + $step;
+	$buffer = "{\"status\": \"ok\",\"rebuildcount\": {$rebuildcount}}";
+	echo $buffer;
+	
+} elseif ($_POST['area'] == "comments" ) {
+	
+	if( $config['allow_comments_wysiwyg'] ) {
+
+		$allowed_tags = array('div[align|style|class|data-commenttime|data-commentuser|contenteditable]', 'span[style|class|data-userurl|data-username|contenteditable]', 'p[align|style|class]', 'pre[class]', 'code', 'br', 'strong', 'em', 'ul', 'li', 'ol', 'b', 'u', 'i', 's', 'hr');
+		
+		if( $user_group[$member_id['user_group']]['allow_url'] ) $allowed_tags[] = 'a[href|target|style|class|title]';
+		if( $user_group[$member_id['user_group']]['allow_image'] ) $allowed_tags[] = 'img[style|class|src|alt|width|height]';
+		
+		$parse = new ParseFilter( $allowed_tags );
+		$parse->wysiwyg = true;
+		$parse->allow_code = false;
+		$use_html = true;
+	
+	} else {
+		
+		$parse = new ParseFilter();
+		$use_html = false;
+		$parse->allowbbcodes = false;
+		
+	}
+	
+	$parse->safe_mode = true;
+	$parse->remove_html = false;
+	$parse->edit_mode = false;
+	$parse->allow_url = $user_group[$member_id['user_group']]['allow_url'];
+	$parse->allow_image = $user_group[$member_id['user_group']]['allow_image'];
+
+	$result = $db->query("SELECT id, text FROM " . PREFIX . "_comments LIMIT ".$startfrom.", ".$count_per_step);
+	
+	while($row = $db->get_row($result)) {
+		
+		if( !$config['allow_comments_wysiwyg'] ) {
+			
+			$row['text'] = $parse->decodeBBCodes( $row['text'], false );
+			
+		} else {
+			$row['text'] = $parse->decodeBBCodes( $row['text'], true, true );
+		}
+
+		$row['text'] = $db->safesql( $parse->BB_Parse($parse->process( $row['text'] ), $use_html) );
+		
+		$db->query( "UPDATE " . PREFIX . "_comments SET text='{$row['text']}' WHERE id='{$row['id']}'" );
+		
+		$step++;
+	}
+	
+	clear_cache();
+	$rebuildcount = $startfrom + $step;
+	$buffer = "{\"status\": \"ok\",\"rebuildcount\": {$rebuildcount}}";
+	echo $buffer;
+	
+} else {
+
+
+	$parse = new ParseFilter();
+	$parse->edit_mode = false;
+	$parse->allow_code = false;
+	
+	$parsexf = new ParseFilter();
+	$parsexf->edit_mode = false;
+	$parsexf->allow_code = false;
+	
+	$result = $db->query("SELECT p.id, p.short_story, p.full_story, p.xfields, p.title, p.category, p.approve, p.allow_br, p.tags, e.news_id FROM " . PREFIX . "_post p LEFT JOIN " . PREFIX . "_post_extras e ON (p.id=e.news_id) LIMIT ".$startfrom.", ".$count_per_step);
+	
+	while($row = $db->get_row($result))
+	{
+	
+		$row['short_story'] = $parse->decodeBBCodes( $row['short_story'], true, true );
+		$row['full_story'] = $parse->decodeBBCodes( $row['full_story'], true, true );
+	
+		$short_story = $parse->process( $row['short_story'] );
+		$full_story = $parse->process( $row['full_story'] );
+		$_POST['title'] = $row['title'];
+			
+		$full_story = $db->safesql( $parse->BB_Parse( $full_story ) );
+		$short_story = $db->safesql( $parse->BB_Parse( $short_story ) );
+		
+		$xf_search_words = array ();
+		$tags_cloud = array();
+		
+		if( $row['tags'] ) {
+
+			$row['tags'] = html_entity_decode($row['tags'], ENT_QUOTES | ENT_XML1, 'UTF-8');
+
+			if (@preg_match("/[\||\<|\>]/", $row['tags'])) $row['tags'] = "";
+			else $row['tags'] = htmlspecialchars(strip_tags(stripslashes(trim($row['tags']))), ENT_COMPAT, 'UTF-8');
+
+			if ($row['tags'] ) {
+
+				$temp_array = explode(',', $row['tags'] );
+
+				if (count($temp_array)) {
+
+					foreach ($temp_array as $value) {
+						if ( trim($value) ) $tags_cloud[] = $db->safesql( trim($value) );
+					}
+				}
+
+				if ( count($tags_cloud) ) {
+					
+					$tags_cloud = array_unique($tags_cloud);
+					$row['tags'] = implode(", ", $tags_cloud);
+
+				} else $row['tags'] = "";
+
+			}
+
+		}
+
+		if ($row['xfields']) {
+	
+			$xfields = xfieldsload();
+			$postedxfields = xfieldsdataload($row['xfields']);
+			$filecontents = array ();
+			$newpostedxfields = array ();
+	
+			if( !empty( $postedxfields ) ) {
+	
+				foreach ($xfields as $name => $value) {
+
+					if ($value[3] == "datetime" AND $postedxfields[$value[0]]) {
+
+						$postedxfields[$value[0]] = @strtotime($postedxfields[$value[0]]);
+
+						if ($postedxfields[$value[0]] !== -1 and $postedxfields[$value[0]]) {
+
+							if ($value[23] == 1) $postedxfields[$value[0]] = date("Y-m-d", $postedxfields[$value[0]]);
+							elseif ($value[23] == 2) $postedxfields[$value[0]] = date("H:i", $postedxfields[$value[0]]);
+							else $postedxfields[$value[0]] = date("Y-m-d H:i", $postedxfields[$value[0]]);
+
+						} else $postedxfields[$value[0]] = "";
+
+					}
+
+					if( $value[3] == "yesorno" AND isset( $postedxfields[$value[0]] ) ) {
+						
+						$postedxfields[$value[0]] = intval($postedxfields[$value[0]]);
+						
+					}
+
+					if ($value[3] != "select" AND $value[3] != "image" AND $value[3] != "imagegalery" AND $value[3] != "video" AND $value[3] != "audio" AND $value[3] != "file" AND $value[3] != "htmljs" AND $value[3] != "datetime" AND $value[8] == 0 AND $value[6] == 0 AND $postedxfields[$value[0]] ) {
+
+						$postedxfields[$value[0]] = $parsexf->decodeBBCodes($postedxfields[$value[0]], true, true);					
+						$newpostedxfields[$value[0]] = $parsexf->BB_Parse($parsexf->process($postedxfields[$value[0]]));
+				
+					} elseif ( isset($postedxfields[$value[0]]) ) {
+						
+						if($value[3] == "htmljs") {
+							
+							$newpostedxfields[$value[0]] = $postedxfields[$value[0]];
+							
+						} else {
+
+							$postedxfields[$value[0]] = str_replace("&#44;", "&amp;#44;", $postedxfields[$value[0]]);
+							$postedxfields[$value[0]] = str_replace("&#124;", "&amp;#124;", $postedxfields[$value[0]]);
+
+							$postedxfields[$value[0]] = html_entity_decode($postedxfields[$value[0]], ENT_QUOTES, 'UTF-8');
+							$newpostedxfields[$value[0]] = trim( htmlspecialchars(strip_tags( stripslashes($postedxfields[$value[0]]) ), ENT_QUOTES, 'UTF-8' ));
+
+							if ($value[3] == "image" or $value[3] == "imagegalery" or $value[3] == "video" or $value[3] == "audio") {
+
+								$f_arr = explode(',', $newpostedxfields[$value[0]]);
+
+								foreach ($f_arr as $t_val) {
+
+									$t_a = explode('|', $t_val);
+
+									if (count($t_a) == 1 or count($t_a) == 5) {
+
+										$t_v = implode('|', $t_a);
+									} else {
+
+										unset($t_a[0]);
+										$t_v = implode('|', $t_a);
+									}
+
+									if (preg_match("/[?&;<]/", $t_v) or stripos($t_v, ".php") !== false) $newpostedxfields[$value[0]] = "";
+								}
+							}
+
+							$newpostedxfields[$value[0]] = str_replace(array("{", "["), array("&#123;", "&#91;"), $newpostedxfields[$value[0]]);
+							$newpostedxfields[$value[0]] = preg_replace(array('/data:/i', '/about:/i', '/vbscript:/i', '/javascript:/i'), array("d&#1072;ta&#58;", "&#1072;bout&#58;", "vbscript&#58;", "j&#1072;vascript&#58;"), $newpostedxfields[$value[0]]);
+
+							if($value[3] == "file") {
+								
+								$newpostedxfields[$value[0]] = str_replace( array("&#91;"), array("["), $newpostedxfields[$value[0]] );
+								
+								if( !$value[27] ) {
+									if (strpos ( $newpostedxfields[$value[0]], "[attachment=" ) === false) $newpostedxfields[$value[0]] = "";
+								}
+								
+							}
+
+						}
+				
+					}
+					
+					if ( $value[6] AND !empty( $newpostedxfields[$value[0]] ) ) {
+						$temp_array = explode( ",", $newpostedxfields[$value[0]] );
+						
+						foreach ($temp_array as $value2) {
+							$value2 = trim($value2);
+							if($value2) $xf_search_words[] = array( $db->safesql($value[0]), $db->safesql($value2) );
+						}
+					
+					}
+				
+				}
+	
+				if (count ($newpostedxfields) ) {
+		
+					foreach ( $newpostedxfields as $xfielddataname => $xfielddatavalue ) {
+						if( $xfielddatavalue === "" ) {
+							continue;
+						}
+		
+						$xfielddatavalue = str_replace( "|", "&#124;", $xfielddatavalue );
+						$filecontents[] = $db->safesql("{$xfielddataname}|{$xfielddatavalue}");
+					}
+					
+					$filecontents = implode( "||", $filecontents );
+		
+				} else	$filecontents = '';
+			
+			} else	$filecontents = '';
+	
+		} else	$filecontents = '';
+	
+		$db->query( "UPDATE " . PREFIX . "_post SET short_story='{$short_story}', full_story='{$full_story}', xfields='{$filecontents}', tags='{$row['tags']}' WHERE id='{$row['id']}'" );
+
+		if ( !$row['news_id'] ) $db->query( "INSERT INTO " . PREFIX . "_post_extras (news_id, allow_rate) VALUES('{$row['id']}', '1')" );
+
+		$db->query( "DELETE FROM " . PREFIX . "_post_extras_cats WHERE news_id = '{$row['id']}'" );
+
+		if( $row['category'] AND $row['approve'] ) {
+
+			$cat_ids = array ();
+
+			$cat_ids_arr = explode( ",", $row['category'] );
+
+			foreach ( $cat_ids_arr as $value ) {
+
+				$cat_ids[] = "('" . $row['id'] . "', '" . intval( $value ) . "')";
+				
+			}
+
+			$cat_ids = implode( ", ", $cat_ids );
+			$db->query( "INSERT INTO " . PREFIX . "_post_extras_cats (news_id, cat_id) VALUES " . $cat_ids );
+
+		}
+		
+		$db->query( "DELETE FROM " . PREFIX . "_xfsearch WHERE news_id = '{$row['id']}'" );
+
+		if ( count($xf_search_words) AND $row['approve'] ) {
+			
+			$temp_array = array();
+			
+			foreach ( $xf_search_words as $value ) {
+				
+				$temp_array[] = "('" . $row['id'] . "', '" . $value[0] . "', '" . $value[1] . "')";
+			}
+			
+			$xf_search_words = implode( ", ", $temp_array );
+			$db->query( "INSERT INTO " . PREFIX . "_xfsearch (news_id, tagname, tagvalue) VALUES " . $xf_search_words );
+		}
+
+		$db->query( "DELETE FROM " . PREFIX . "_tags WHERE news_id = '{$row['id']}'" );
+		
+		if (count($tags_cloud) AND $row['approve']) {
+
+			$temp_array = array();
+
+			foreach ($tags_cloud as $value) {
+
+				$temp_array[] = "('" . $row['id'] . "', '" . $value . "')";
+			}
+
+			$tags_cloud = implode(", ", $temp_array);
+			$db->query("INSERT INTO " . PREFIX . "_tags (news_id, tag) VALUES " . $tags_cloud);
+		}
+
+		$step++;
+	}
+	
+	clear_cache();
+	$rebuildcount = $startfrom + $step;
+	$buffer = "{\"status\": \"ok\",\"rebuildcount\": {$rebuildcount}}";
+	echo $buffer;
+}
+?>

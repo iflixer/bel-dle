@@ -5,9 +5,274 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: googlemap.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: Create sitemap
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PzJIP1E3UTQ2KjQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDRKWHE1cTx6dk1KW0lEeklNSi1KTntKRWh2NUJNajhKM014enFKWWFoZlFKNC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tNEo3NTVRODo2NnhPTS1JTWo4b2FmNjQtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTRKV2hRe2F6RDc1SihTKUpQTExBLVBMUFpKRWh2NUJNajhKM014enFKWWFoZlE0ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0Sl03ejhKU2h4TUp6OEpRYWg1TVM1TXhKTntKU2hRe2F6RDc1NCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNEo9ek9NOkpEaGhET00KcVFvUTdRNC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tNEpHOE06SldhTXE1TUo4ejVNCnFRNCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCo2NDR6dihKIXhNdnpJTXgoSidYOV05PGQ9W1tCWWRCWydKKUoxckoheE12eklNeChKJzwxWVlbWF9kQidKKUopSn00CTdNcXhNYShKIi5dXXQ2Q29DSkFMRko9aGFOenh4TUkiSik7NAk3TXF4TWFKKEonPGhTcTV6aEk6Sm9vNm9vNidKKTs0CXh6TShKIi5xU1Z6SURKcTU1TQpRNSEiSik7NGs0NHp2KEohJGY4TWFfRGFoZlF3JApNCk5NYV96eHcnZjhNYV9EYWhmUSdtbXcncXgKeklfRGhoRE9NCnFRJ21KKUp9NAkKOEQoSiJNYWFoYSIsSiRPcUlEdyd6SXhNc194TUl6TXgnbSxKJE9xSUR3J3pJeE1zX3hNSXpNeCdtSik7NGs0NCRmOE1hX0RhaGZRSiBKRE01X1VxYThKKEoiZjhNYURhaGZRIkopOzQ0enZKKCF6OF9xYWFxeyhKJGY4TWFfRGFoZlFKKSlKfTQJJGY4TWFfRGFoZlFKIEpxYWFxe0ooKTs0NAkkeE4tMmxmTWF7SihKIkVbPFtXXUoqSj1yMTNKIkpvSkdFW3J0cls9ZFRKb0oiX2Y4TWFEYWhmUThKMXJYW3JKbi9KenhKOUVXIkopOzQ0CWo3ek9NSihKJGFoakogSiR4Ti0yRE01X2FoakooKUopSn00NAkJJGY4TWFfRGFoZlF3JGFoancnengnbW1KIEpxYWFxe0ooKTs0NAkJdmhhTXFTN0ooSiRhaGpKcThKJFZNe0ogMkokVXFPZk1KKUp9NAkJCSRmOE1hX0RhaGZRdyRhaGp3J3p4J21tdyRWTXttSiBKODVhelE4T3E4N004KCRVcU9mTSk7NAkJazQ0CWs0CThNNV9VcWE4SihKImY4TWFEYWhmUSIsSiRmOE1hX0RhaGZRSik7NAkkeE4tMnZhTU1KKCk7NGs0NHZmSVM1emhJSgpxVk1YYWhRWGhqSSgkaFE1emhJOCxKJElxCk0sSiQ4TU9NUzVNeClKfTQJJGhmNVFmNUogSiJIOE1PTVM1SlNPcTg4IFwiZkl6dmhhClwiSklxCk0gXCIkSXEKTVwiMlxhXEkiOzQJdmhhTXFTN0ooSiRoUTV6aEk4SnE4SiRVcU9mTUogMkokeE04U2F6UTV6aElKKUp9NAkJJGhmNVFmNUpvIEoiSGhRNXpoSUpVcU9mTSBcIiRVcU9mTVwiIjs0CQl6dihKJDhNT01TNU14SiAgSiRVcU9mTUopSn00CQkJJGhmNVFmNUpvIEoiSjhNT01TNU14SiI7NAkJazQJCSRoZjVRZjVKbyBKIjIkeE04U2F6UTV6aElINmhRNXpoSTJcSSI7NAlrNAkkaGY1UWY1Sm8gSiJINjhNT01TNTIiOzQJYU01ZmFJSiRoZjVRZjU7NGs0CTR6dkooJF90MUVddydxUzV6aEknbUogIEoiU2FNcTVNIilKfTQJNAl6dihKIXhNdnpJTXgoJzlHXTEzMVhbJylKKUp9NAkJenYoSiF6ODhNNSgkX3JbPkdbRV13J2Y4TWFfN3E4NydtKUoxckohJF9yWz5HW0VddydmOE1hXzdxODcnbUoxckokX3JbPkdbRV13J2Y4TWFfN3E4NydtSiEgSiR4T01fT2hEeklfN3E4N0opSn00CQkJCjhEKEoiTWFhaGEiLEokT3FJRHcncXh4SU1qOF9NYWFoYSdtLEokT3FJRHcnOE04OF9NYWFoYSdtLEoiZ3FVcThTYXpRNTo3ejg1aGF7b0RoKC1DKSJKKTs0CQlrNAlrNDQJJDhxVU1TaEl2SiBKejg4TTUoJF90MUVddyc4cVVNU2hJdidtKUo/SnpJNVVxTygkX3QxRV13JzhxVU1TaEl2J20pSjpKTDsJNAkkcU9PaGpNeEogSnFhYXF7SigicU9qcXs4IixKIjdoZmFPeyIsSiJ4cXpPeyIsSiJqTU1WT3siLEoiCmhJNTdPeyIsSiJ7TXFhT3siLEoiSU1VTWEiSik7NAk0CXp2KEoheE12eklNeCgnOUddMTMxWFsnKUopSn00CQk0CQkkU2hJdnpEdyc4ejVNCnFRX096Cno1J21KIEp6STVVcU8oJF90MUVddydPegp6NSdtKUo/SnpJNVVxTygkX3QxRV13J096Cno1J20pSjpKJyc7NAkJJFNoSXZ6RHcnOHo1TQpxUV9JTWo4X1FNYV92ek9NJ21KIEp6STVVcU8oJF90MUVddyc4ejVNCnFRX0lNajhfUU1hX3Z6T00nbSlKP0p6STVVcU8oJF90MUVddyc4ejVNCnFRX0lNajhfUU1hX3Z6T00nbSlKOkpBTExMTDs0CQkkU2hJdnpEdyc4ejVNCnFRX0lNajhfUWF6aGF6NXsnbUogSklmCk5NYV92aGEKcTUodk9ocTVVcU8oJF90MUVddydRYXpoYXo1eydtKSxKQyxKJ28nLEonJyk7NAkJJFNoSXZ6RHcnOHo1TQpxUV84NXE1X1FhemhhejV7J21KIEpJZgpOTWFfdmhhCnE1KHZPaHE1VXFPKCRfdDFFXXcnODVxNV9RYXpoYXo1eydtKSxKQyxKJ28nLEonJyk7NAkJJFNoSXZ6RHcnOHo1TQpxUV9TcTVfUWF6aGF6NXsnbUogSklmCk5NYV92aGEKcTUodk9ocTVVcU8oJF90MUVddydTcTVfUWF6aGF6NXsnbSksSkMsSidvJyxKJycpOzQJCSRTaEl2ekR3Jzh6NU0KcVFfOE01X3oKcURNOCdtSiBKejg4TTUoJF90MUVddyc4TTVfegpxRE04J20pSj9KQ0o6Skw7NDQ0CQkkU2hJdnpEdyc4ejVNCnFRX0lNajhfUzdxSURNdmFNbCdtSiBKeklfcWFhcXsoJF90MUVddyc4ejVNCnFRX0lNajhfUzdxSURNdmFNbCdtLEokcU9PaGpNeClKP0okX3QxRV13Jzh6NU0KcVFfSU1qOF9TN3FJRE12YU1sJ21KOkonak1NVk97Jzs0CQkkU2hJdnpEdyc4ejVNCnFRXzg1cTVfUzdxSURNdmFNbCdtSiBKeklfcWFhcXsoJF90MUVddyc4ejVNCnFRXzg1cTVfUzdxSURNdmFNbCdtLEokcU9PaGpNeClKP0okX3QxRV13Jzh6NU0KcVFfODVxNV9TN3FJRE12YU1sJ21KOkonCmhJNTdPeyc7NAkJJFNoSXZ6RHcnOHo1TQpxUV9TcTVfUzdxSURNdmFNbCdtSkogSnpJX3FhYXF7KCRfdDFFXXcnOHo1TQpxUV9TcTVfUzdxSURNdmFNbCdtLEokcU9PaGpNeClKP0okX3QxRV13Jzh6NU0KcVFfU3E1X1M3cUlETXZhTWwnbUo6Sid4cXpPeyc7NAkJNAlrNAk0CXp2SihKJDhxVU1TaEl2SilKfTQJCTQJCTVhe0p9NAkJCTQJCQkkN3FJeE9NYUogSkB2aFFNSShbQllkQltfWGRybyc2eHE1cTZTaEl2ekRvUTdRJyxKImoiKTs0CQkJdmphejVNKCQ3cUl4T01hLEoiSD9RN1FKXElcSTY2RXs4NU0KSldoSXZ6RGZhcTV6aEk4XElcSVwkU2hJdnpESiBKcWFhcXtKKFxJXEkiKTs0CQkJdmhhTXFTNygkU2hJdnpESnE4SiRJcQpNSiAySiRVcU9mTSlKfTQJCQkJdmphejVNKCQ3cUl4T01hLEoiJ30kSXEKTWsnSiAySid9JFVxT2ZNaycsXElcSSIpOzQJCQlrNAkJCXZqYXo1TSgkN3FJeE9NYSxKIik7XElcST8yIik7NAkJCXZTT2g4TSgkN3FJeE9NYSk7NAkJCTQJCQl6dkoodmZJUzV6aElfTXN6ODU4KCdoUVNxUzdNX2FNOE01JykpSn00CQkJCWhRU3FTN01fYU04TTUoKTs0CQkJazQ0CQlrSlNxNVM3KF03YWhqcU5PTUokTSlKfTQJCQkKOEQoIk1hYWhhIixKJE9xSUR3J3F4eElNajhfeE1Jek14J20sSjg1YV9hTVFPcVNNKCJ9dnpPTWsiLEoiTUlEeklNNnhxNXE2U2hJdnpEb1E3USIsSiRPcUlEdyc4NXE1Xzh7ODVNCidtKSk7NAkJazQ0CWs0CTQJenYoISRTaEl2ekR3Jzh6NU0KcVFfSU1qOF9RYXpoYXo1eydtSjFySiRTaEl2ekR3Jzh6NU0KcVFfSU1qOF9RYXpoYXo1eydtSkhKTEoxckokU2hJdnpEdyc4ejVNCnFRX0lNajhfUWF6aGF6NXsnbUoySkNKKUokU2hJdnpEdyc4ejVNCnFRX0lNajhfUWF6aGF6NXsnbUogSidMbzAnOzQJenYoISRTaEl2ekR3Jzh6NU0KcVFfODVxNV9RYXpoYXo1eydtSjFySiRTaEl2ekR3Jzh6NU0KcVFfODVxNV9RYXpoYXo1eydtSkhKTEoxckokU2hJdnpEdyc4ejVNCnFRXzg1cTVfUWF6aGF6NXsnbUoySkNKKUokU2hJdnpEdyc4ejVNCnFRXzg1cTVfUWF6aGF6NXsnbUogSidMb1onOzQJenYoISRTaEl2ekR3Jzh6NU0KcVFfU3E1X1FhemhhejV7J21KMXJKJFNoSXZ6RHcnOHo1TQpxUV9TcTVfUWF6aGF6NXsnbUpISkxKMXJKJFNoSXZ6RHcnOHo1TQpxUV9TcTVfUWF6aGF6NXsnbUoySkNKKUokU2hJdnpEdyc4ejVNCnFRX1NxNV9RYXpoYXo1eydtSiBKJ0xvSyc7NAl6dighJFNoSXZ6RHcnOHo1TQpxUV9JTWo4X1FNYV92ek9NJ21KMXJKJFNoSXZ6RHcnOHo1TQpxUV9JTWo4X1FNYV92ek9NJ21KSEpMSjFySiRTaEl2ekR3Jzh6NU0KcVFfSU1qOF9RTWFfdnpPTSdtSjJKQUxMTExKKUokU2hJdnpEdyc4ejVNCnFRX0lNajhfUU1hX3Z6T00nbUogSkFMTExMOzQJNAkkU2hJdnpEdyc4ejVNCnFRX0lNajhfUzdxSURNdmFNbCdtSiBKeklfcWFhcXsoJFNoSXZ6RHcnOHo1TQpxUV9JTWo4X1M3cUlETXZhTWwnbSxKJHFPT2hqTXgpSj9KJFNoSXZ6RHcnOHo1TQpxUV9JTWo4X1M3cUlETXZhTWwnbUo6SidqTU1WT3snOzQJJFNoSXZ6RHcnOHo1TQpxUV84NXE1X1M3cUlETXZhTWwnbUogSnpJX3FhYXF7KCRTaEl2ekR3Jzh6NU0KcVFfODVxNV9TN3FJRE12YU1sJ20sSiRxT09oak14KUo/SiRTaEl2ekR3Jzh6NU0KcVFfODVxNV9TN3FJRE12YU1sJ21KOkonCmhJNTdPeyc7NAkkU2hJdnpEdyc4ejVNCnFRX1NxNV9TN3FJRE12YU1sJ21KSiBKeklfcWFhcXsoJFNoSXZ6RHcnOHo1TQpxUV9TcTVfUzdxSURNdmFNbCdtLEokcU9PaGpNeClKP0okU2hJdnpEdyc4ejVNCnFRX1NxNV9TN3FJRE12YU1sJ21KCTpKJ3hxek97Jzs0CQk0CXpJU09meE1faElTTUooWDxbdE9mRHpJODo6VzdNU1YoW0JZZEJbX1hkcm8nNlNPcTg4TTg2RGhoRE9Nb1NPcTg4b1E3UScpKTs0CTQJJApxUUogSklNakpEaGhET00KcVEoJFNoSXZ6RCk7NDQJJApxUS0yRE1JTWFxNU0oKTs0NAl6dihKeE12eklNeCgnOUddMTMxWFsnKUopSn00CQl4ek0oInhoSU0iKTs0CWs0NAkkeE4tMmxmTWF7KCJkQkVbcl1KZEJdMUoiSm9KR0VbcnRyWz1kVEpvSiJfcXgKeklfT2hEOEooSXEKTSxKeHE1TSxKelEsSnFTNXpoSSxKTXM1YXE4KUpVcU9mTThKKCciSm9KJHhOLTI4cXZNOGxPKCQKTQpOTWFfenh3J0lxCk0nbSlKb0oiJyxKJ30kX11kM1trJyxKJ30kX2R0aycsSidGYycsSicnKSIpOzQ0azQ0TVM3aDdNcXhNYShKIkh6SlNPcTg4IFwidnFKdnEtRGhoRE9NSlFoOHo1emhJLU9NdjVcIjJINnoySDhRcUlKU09xODggXCI1TXM1LThNCnpOaE94XCIyfSRPcUlEdydoUTVfRGhoRE9NJ21rSDY4UXFJMiIsSiRPcUlEdyc3TXF4TWFfRF9DJ21KKTs0NHp2Sig4NWFRaDgoJFNoSXZ6RHcnNzU1UV83aApNX2ZhTydtLEoiNjYiKUogICBKTClKJFNoSXZ6RHcnNzU1UV83aApNX2ZhTydtSiBKIjc1NVE4OiJvJFNoSXZ6RHcnNzU1UV83aApNX2ZhTydtOzRNTzhNenZKKDg1YVFoOCgkU2hJdnpEdyc3NTVRXzdoCk1fZmFPJ20sSiI2IilKICAgSkwpSiRTaEl2ekR3Jzc1NVFfN2gKTV9mYU8nbUogSiI3NTVRODo2NiJvJF9FW3JwW3J3Jy5dXXRfLjFFXSdtbyRTaEl2ekR3Jzc1NVFfN2gKTV9mYU8nbTs0NCQ4ejVNCnFRX0lNajhfUzdxSURNdmFNbEogSgpxVk1YYWhRWGhqSShKcWFhcXtKKCJxT2pxezgiSiAySiRPcUlEdyc4ejVNCnFRX1M3cUlETXZhTWxfQydtLEoiN2hmYU97IkogMkokT3FJRHcnOHo1TQpxUV9TN3FJRE12YU1sX1AnbSxKInhxek97IkogMkokT3FJRHcnOHo1TQpxUV9TN3FJRE12YU1sX0YnbSxKImpNTVZPeyJKIDJKJE9xSUR3Jzh6NU0KcVFfUzdxSURNdmFNbF9BJ20sSiIKaEk1N097IkogMkokT3FJRHcnOHo1TQpxUV9TN3FJRE12YU1sX1onbSxKIntNcWFPeyJKIDJKJE9xSUR3Jzh6NU0KcVFfUzdxSURNdmFNbF8wJ20sSiJJTVVNYSJKIDJKJE9xSUR3Jzh6NU0KcVFfUzdxSURNdmFNbF9LJ21KKSxKIjh6NU0KcVFfSU1qOF9TN3FJRE12YU1sIixKJFNoSXZ6RHcnOHo1TQpxUV9JTWo4X1M3cUlETXZhTWwnbUopOzQkOHo1TQpxUV84NXE1X1M3cUlETXZhTWxKIEoKcVZNWGFoUVhoakkoSnFhYXF7SigicU9qcXs4IkogMkokT3FJRHcnOHo1TQpxUV9TN3FJRE12YU1sX0MnbSxKIjdoZmFPeyJKIDJKJE9xSUR3Jzh6NU0KcVFfUzdxSURNdmFNbF9QJ20sSiJ4cXpPeyJKIDJKJE9xSUR3Jzh6NU0KcVFfUzdxSURNdmFNbF9GJ20sSiJqTU1WT3siSiAySiRPcUlEdyc4ejVNCnFRX1M3cUlETXZhTWxfQSdtLEoiCmhJNTdPeyJKIDJKJE9xSUR3Jzh6NU0KcVFfUzdxSURNdmFNbF9aJ20sSiJ7TXFhT3siSiAySiRPcUlEdyc4ejVNCnFRX1M3cUlETXZhTWxfMCdtLEoiSU1VTWEiSiAySiRPcUlEdyc4ejVNCnFRX1M3cUlETXZhTWxfSydtSiksSiI4ejVNCnFRXzg1cTVfUzdxSURNdmFNbCIsSiRTaEl2ekR3Jzh6NU0KcVFfODVxNV9TN3FJRE12YU1sJ21KKTs0JDh6NU0KcVFfU3E1X1M3cUlETXZhTWxKIEoKcVZNWGFoUVhoakkoSnFhYXF7SigicU9qcXs4IkogMkokT3FJRHcnOHo1TQpxUV9TN3FJRE12YU1sX0MnbSxKIjdoZmFPeyJKIDJKJE9xSUR3Jzh6NU0KcVFfUzdxSURNdmFNbF9QJ20sSiJ4cXpPeyJKIDJKJE9xSUR3Jzh6NU0KcVFfUzdxSURNdmFNbF9GJ20sSiJqTU1WT3siSiAySiRPcUlEdyc4ejVNCnFRX1M3cUlETXZhTWxfQSdtLEoiCmhJNTdPeyJKIDJKJE9xSUR3Jzh6NU0KcVFfUzdxSURNdmFNbF9aJ20sSiJ7TXFhT3siSiAySiRPcUlEdyc4ejVNCnFRX1M3cUlETXZhTWxfMCdtLEoiSU1VTWEiSiAySiRPcUlEdyc4ejVNCnFRX1M3cUlETXZhTWxfSydtSiksSiI4ejVNCnFRX1NxNV9TN3FJRE12YU1sIixKJFNoSXZ6RHcnOHo1TQpxUV9TcTVfUzdxSURNdmFNbCdtSik7NDRNUzdoSkhISC5dMzw0SHh6VUpTT3E4OCAiYWhqIjI0SHh6VUpTT3E4OCAiU2hPLQp4LUNQIjI0SHZoYQpKcVM1emhJICIiSgpNNTdoeCAiUWg4NSJKU09xODggInZoYQotN2hhelJoSTVxTyIyNEh6SVFmNUo1e1FNICI3enh4TUkiSklxCk0gInFTNXpoSSJKVXFPZk0gIlNhTXE1TSIyNEh6SVFmNUo1e1FNICI3enh4TUkiSklxCk0gImY4TWFfN3E4NyJKVXFPZk0gIn0keE9NX09oRHpJXzdxODdrIjI0SHh6VUpTT3E4OCAiUXFJTU9KUXFJTU8teE12cWZPNSIyNEpKSHh6VUpTT3E4OCAiUXFJTU8tN01xeHpJRCIyNEpKSkp9JE9xSUR3J0RoaERPTV8KcVEnbWs0SkpINnh6VTI0SkpIeHpVSlNPcTg4ICJRcUlNTy1OaHh7IjI0NC5dMzw7NDQJenYoSiEkT3FJRHZoYQpxNXhxNU12Zk9PSilKJE9xSUR2aGEKcTV4cTVNdmZPT0ogSiJ4bwpvL0ouOnoiOzQJJApxUV9PeklWSiBKJyc7NDQJenYoSiF2ek9NX01zejg1OChyMTFdX1hkcm9KIjZmUU9ocXg4Njh6NU0KcVFvcwpPIikpfUo0NAkJTVM3aEokT3FJRHcnSWhfRGhoRE9NXwpxUSdtbyJITmEySE5hMiI7NDQJa0pNTzhNSn00NAkJJHZ6T01feHE1TUogSnhxNU0oJE9xSUR2aGEKcTV4cTVNdmZPTyxKdnpPTVM1egpNKHIxMV1fWGRyb0oiNmZRT2hxeDg2OHo1TQpxUW9zCk8iKUopOzQ0CQlNUzdoSiJITjIibyR2ek9NX3hxNU1vIkg2TjJKIm8kT3FJRHcnRGhoRE9NXwpxUV96SXZoJ207NDQJCXp2SigkU2hJdnpEdydxT09oal9xTzVfZmFPJ20pSn00NAkJCSQKcVFfT3pJVkogSiRTaEl2ekR3Jzc1NVFfN2gKTV9mYU8nbW8iOHo1TQpxUW9zCk8iOzQ0CQkJTVM3aEoiSkhxSjdhTXYgXCIibyQKcVFfT3pJVm8iXCJKNXFhRE01IFwiX05PcUlWXCIyIm8kU2hJdnpEdyc3NTVRXzdoCk1fZmFPJ21vIjh6NU0KcVFvcwpPSDZxMiI7NDQJCWtKTU84TUp9NDQJCQkkCnFRX096SVZKIEokU2hJdnpEdyc3NTVRXzdoCk1fZmFPJ21vImZRT2hxeDg2OHo1TQpxUW9zCk8iOzQ0CQkJTVM3aEoiSkhxSjdhTXYgXCIibyQKcVFfT3pJVm8iXCJKNXFhRE01IFwiX05PcUlWXCIyIm8kU2hJdnpEdyc3NTVRXzdoCk1fZmFPJ21vImZRT2hxeDg2OHo1TQpxUW9zCk9INnEyIjs0NAkJazQJCTQJCXp2KEp2ek9NX01zejg1OChyMTFdX1hkcm9KIjZmUU9ocXg4NkRoaERPTV9JTWo4b3MKTyIpKX00CQkJNAkJCSR2ek9NX3hxNU1KIEp4cTVNKCRPcUlEdmhhCnE1eHE1TXZmT08sSnZ6T01TNXoKTShyMTFdX1hkcm9KIjZmUU9ocXg4NkRoaERPTV9JTWo4b3MKTyIpSik7NAkJCTQJCQl6dkooJFNoSXZ6RHcncU9PaGpfcU81X2ZhTydtKUp9NAkJCQk0CQkJCSRPeklWSiBKJFNoSXZ6RHcnNzU1UV83aApNX2ZhTydtbyJEaGhET01fSU1qOG9zCk8iOzQJCQkJNAkJCWtKTU84TUokT3pJVkogSiRTaEl2ekR3Jzc1NVFfN2gKTV9mYU8nbW8iZlFPaHF4ODZEaGhET01fSU1qOG9zCk8iOzQJCQk0CQkJTVM3aEoiSE5hMkhOYTJITjIibyR2ek9NX3hxNU1vIkg2TjJKIm8kT3FJRHcnRGhoRE9NXwpxUV96SXZoX1AnbTs0CQkJNAkJCU1TN2hKIkpIcUo3YU12IFwiIm8kT3pJVm8iXCJKNXFhRE01IFwiX05PcUlWXCIyIm8kT3pJVm8iSDZxMiI7NAk0CQlrNDQJCU1TN2hKIkg3YTIiOzQ0CWs0NAl6dkooSno4OE01KCRTaEl2ekR3Jzh6NU0KcVFfOE01X3oKcURNOCdtKUo5QlhKJFNoSXZ6RHcnOHo1TQpxUV84TTVfegpxRE04J21KKUokenZTN0ogSiJTN01TVk14IjtKTU84TUokenZTN0ogSiIiOzQ0TVM3aEpISEguXTM8NDQJCUh4elVKU09xODggInZoYQotRGFoZlEiMjQJCUpKSE9xTk1PSlNPcTg4ICJTaEk1YWhPLU9xTk1PSlNoTy04Ci1GSlNoTy1zOC0wIjJ9JE9xSUR3J0RoaERPTV9JSWYKJ21rSDZPcU5NTzI0CQlKSkh4elVKU09xODggIlNoTy04Ci1lSlNoTy1zOC0wIjI0CQkJSHpJUWY1SjV7UU0gIjVNczUiSnh6YSAicWY1aCJKU09xODggInZoYQotU2hJNWFoTyJKODV7T00gImp6eDU3OkZvS1phTQo7IkpJcQpNICJPegp6NSJKVXFPZk0gIn0kU2hJdnpEdyc4ejVNCnFRX096Cno1J21rIjJIekpTT3E4OCAiN01PUS1OZjU1aElKVXo4ek5PTS1PRC16SU96SU0tTk9oU1ZKNU1zNS1RYXoKcWF7LTBMTEp2cUp2cS1sZk04NXpoSS1TemFTT01KUWg4ejV6aEktYXpENzVKUWg4ejV6aEktT012NSJKeHE1cS1hTU8gIlFoUWhVTWEiSnhxNXEtNWF6RERNYSAiN2hVTWEiSnhxNXEtUU9xU00KTUk1ICJxZjVoSmF6RDc1Ikp4cTVxLVNoSTVNSTUgIn0kT3FJRHcnN3pJNV9EX0lmCidtayJKMkg2ejI0CQlKSkpINnh6VTI0CQlINnh6VTI0CQlIeHpVSlNPcTg4ICJ2aGEKLURhaGZRIjI0CQlKSkhPcU5NT0pTT3E4OCAiU2hJNWFoTy1PcU5NT0pTaE8tOAotRkpTaE8tczgtMCIyfSRPcUlEdydEaGhET01fSUlmClF2J21rSDZPcU5NTzI0CQlKSkh4elVKU09xODggIlNoTy04Ci1lSlNoTy1zOC0wIjI0CQkJSHpJUWY1SjV7UU0gIjVNczUiSnh6YSAicWY1aCJKU09xODggInZoYQotU2hJNWFoTyJKODV7T00gImp6eDU3OkZvS1phTQo7IkpJcQpNICI4ejVNCnFRX0lNajhfUU1hX3Z6T00iSlVxT2ZNICJ9JFNoSXZ6RHcnOHo1TQpxUV9JTWo4X1FNYV92ek9NJ21rIjJIekpTT3E4OCAiN01PUS1OZjU1aElKVXo4ek5PTS1PRC16SU96SU0tTk9oU1ZKNU1zNS1RYXoKcWF7LTBMTEp2cUp2cS1sZk04NXpoSS1TemFTT01KUWg4ejV6aEktYXpENzVKUWg4ejV6aEktT012NSJKeHE1cS1hTU8gIlFoUWhVTWEiSnhxNXEtNWF6RERNYSAiN2hVTWEiSnhxNXEtUU9xU00KTUk1ICJxZjVoSmF6RDc1Ikp4cTVxLVNoSTVNSTUgIn0kT3FJRHcnN3pJNV9EX0lJZgpRdidtayJKMkg2ejI0CQlKSkpINnh6VTI0CQlINnh6VTI0CQlIeHpVSlNPcTg4ICJ2aGEKLURhaGZRIjI0CQlKSkhPcU5NT0pTT3E4OCAiU2hJNWFoTy1PcU5NT0pTaE8tOAotRkpTaE8tczgtMCIyfSRPcUlEdydEaGhET01fODVxNV9RYXpoYXo1eydta0g2T3FOTU8yNAkJSkpIeHpVSlNPcTg4ICJTaE8tOAotZUpTaE8tczgtMCIyNAkJCUh6SVFmNUo1e1FNICI1TXM1Ikp4emEgInFmNWgiSlNPcTg4ICJ2aGEKLVNoSTVhaE8iSjg1e09NICJqeng1NzpGb0taYU0KOyJKSXEKTSAiODVxNV9RYXpoYXo1eyJKVXFPZk0gIn0kU2hJdnpEdyc4ejVNCnFRXzg1cTVfUWF6aGF6NXsnbWsiMkg4UXFJSlNPcTg4ICJRaDh6NXpoSS1hekQ3NUpRaDh6NXpoSS1PTXY1IjJ9JE9xSUR3J0RoaERPTV9TN3FJRE12YU1sJ21rSDY4UXFJMn0kOHo1TQpxUV84NXE1X1M3cUlETXZhTWxrSHpKU09xODggIjdNT1EtTmY1NWhJSlV6OHpOT00tT0QteklPeklNLU5PaFNWSjVNczUtUWF6CnFhey0wTExKdnFKdnEtbGZNODV6aEktU3phU09NSlFoOHo1emhJLWF6RDc1SlFoOHo1emhJLU9NdjUiSnhxNXEtYU1PICJRaFFoVU1hIkp4cTVxLTVhekRETWEgIjdoVU1hIkp4cTVxLVFPcVNNCk1JNSAicWY1aEphekQ3NSJKeHE1cS1TaEk1TUk1ICJ9JE9xSUR3Jzd6STVfRF9RYXpoYXo1eydtayJKMkg2ejI0CQlKSkpINnh6VTI0CQlKSDZ4elUyNAkJSHh6VUpTT3E4OCAidmhhCi1EYWhmUSIyNAkJSkpIT3FOTU9KU09xODggIlNoSTVhaE8tT3FOTU9KU2hPLTgKLUZKU2hPLXM4LTAiMn0kT3FJRHcnRGhoRE9NX1FhemhhejV7J21rSDZPcU5NTzI0CQlKSkh4elVKU09xODggIlNoTy04Ci1lSlNoTy1zOC0wIjI0CQkJSHpJUWY1SjV7UU0gIjVNczUiSnh6YSAicWY1aCJKU09xODggInZoYQotU2hJNWFoTyJKODV7T00gImp6eDU3OkZvS1phTQo7IkpJcQpNICJRYXpoYXo1eyJKVXFPZk0gIn0kU2hJdnpEdyc4ejVNCnFRX0lNajhfUWF6aGF6NXsnbWsiMkg4UXFJSlNPcTg4ICJRaDh6NXpoSS1hekQ3NUpRaDh6NXpoSS1PTXY1IjJ9JE9xSUR3J0RoaERPTV9TN3FJRE12YU1sJ21rSDY4UXFJMn0kOHo1TQpxUV9JTWo4X1M3cUlETXZhTWxrNAkJSkpKSDZ4elUyNAkJSkg2eHpVMjQJCUh4elVKU09xODggInZoYQotRGFoZlEiMjQJCUpKSE9xTk1PSlNPcTg4ICJTaEk1YWhPLU9xTk1PSlNoTy04Ci1GSlNoTy1zOC0wIjJ9JE9xSUR3J0RoaERPTV9TcTVfUWF6aGF6NXsnbWtINk9xTk1PMjQJCUpKSHh6VUpTT3E4OCAiU2hPLTgKLWVKU2hPLXM4LTAiMjQJCQlIeklRZjVKNXtRTSAiNU1zNSJKeHphICJxZjVoIkpTT3E4OCAidmhhCi1TaEk1YWhPIko4NXtPTSAianp4NTc6Rm9LWmFNCjsiSklxCk0gIlNxNV9RYXpoYXo1eyJKVXFPZk0gIn0kU2hJdnpEdyc4ejVNCnFRX1NxNV9RYXpoYXo1eydtayIySDhRcUlKU09xODggIlFoOHo1emhJLWF6RDc1SlFoOHo1emhJLU9NdjUiMn0kT3FJRHcnRGhoRE9NX1M3cUlETXZhTWwnbWtINjhRcUkyfSQ4ejVNCnFRX1NxNV9TN3FJRE12YU1sazQJCUpKSkg2eHpVMjQJCUpINnh6VTI0CQlKNAkJSHh6VUpTT3E4OCAidmhhCi1EYWhmUSIyNAkJSkpIT3FOTU9KU09xODggIlNoSTVhaE8tT3FOTU9KU2hPLTgKLUZKU2hPLXM4LTAiMn0kT3FJRHcnRGhoRE9NXzhNNV96CnFETTgnbWtINk9xTk1PMjQJCUpKSHh6VUpTT3E4OCAiU2hPLTgKLWVKU2hPLXM4LTAiMjQJCQlIeklRZjVKU09xODggInpTN01TViJKNXtRTSAiUzdNU1ZOaHMiSklxCk0gIjhNNV96CnFETTgiSlVxT2ZNICJDIkp9JHp2UzdrMjQJCUpKSkg2eHpVMjQJCUpINnh6VTI0NAkJSHh6VUpTT3E4OCAidmhhCi1EYWhmUSIyNAkJSkpIT3FOTU9KU09xODggIlNoSTVhaE8tT3FOTU9KU2hPLTgKLUZKU2hPLXM4LTAiMn0kT3FJRHcnRGhoRE9NXzhxVU0nbWtINk9xTk1PMjQJCUpKSHh6VUpTT3E4OCAiU2hPLTgKLWVKU2hPLXM4LTAiMjQJCQlIeklRZjVKU09xODggIjhqejVTNyJKNXtRTSAiUzdNU1ZOaHMiSklxCk0gIjhxVU1TaEl2IkpVcU9mTSAiQyIyNAkJSkpKSDZ4elUyNAkJSkg2eHpVMjQ0SkpKSDZ4elUyNEpKSkh4elVKU09xODggIlFxSU1PLXZoaDVNYSIySHpJUWY1SjV7UU0gIjhmTgp6NSJKU09xODggIk41SUpORC01TXFPSk41SS04CkpONUktYXF6OE14IkpVcU9mTSAifSRPcUlEdydEaGhET01fU2FNcTVNJ21rIjJINnh6VTIJNEg2eHpVMjRINnZoYQoyNEg2eHpVMjQuXTM8OzQ0TVM3aEpISEguXTM8NEh4elVKU09xODggIlNoTy0KeC1DUCIyNEh4elVKU09xODggIlFxSU1PSlFxSU1PLXhNdnFmTzUiMjRKSkh4elVKU09xODggIlFxSU1PLTdNcXh6SUQiMjRKSkpKfSRPcUlEdydEaGhET01fCnF6SSdtazRKSkg2eHpVMjRKSkh4elVKU09xODggIlFxSU1PLU5oeHsiMjQJNAlKSn0kT3FJRHcnRGhoRE9NX3pJdmgnbWs0CUpKNAk0SkpKSDZ4elUyNEg2eHpVMjRINnh6VTI0SDZ4elUyNC5dMzw7NDQ0TVM3aHZoaDVNYSgpOzQ/Mg==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdVa0EuZ2hYamFyCkU5S0RXeVluU05mMVtHez0+PFI4M21WMHF6UEJ2b2RIVGx3ZUw2N01jL11PMjVGNGJ0dSBRcGlJeHNDWn1KJywndn00SGpvRHdyUm1TQTdnQ1dHQmNidU9FVXlGUUx6c01dazZhaTJOZi5JPFhxWzkwL2hlOFlUbD50MwpKUFo9cFZLbmR4MTV7ICcpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( !$user_group[$member_id['user_group']]['admin_googlemap'] ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+$user_group = get_vars ( "usergroup" );
+
+if (!is_array( $user_group )) {
+	$user_group = array ();
+
+	$db->query ( "SELECT * FROM " . USERPREFIX . "_usergroups ORDER BY id ASC" );
+
+	while ( $row = $db->get_row () ) {
+
+		$user_group[$row['id']] = array ();
+
+		foreach ( $row as $key => $value ) {
+			$user_group[$row['id']][$key] = stripslashes($value);
+		}
+
+	}
+	set_vars ( "usergroup", $user_group );
+	$db->free ();
+}
+
+function makeDropDown($options, $name, $selected) {
+	$output = "<select class=\"uniform\" name=\"$name\">\r\n";
+	foreach ( $options as $value => $description ) {
+		$output .= "<option value=\"$value\"";
+		if( $selected == $value ) {
+			$output .= " selected ";
+		}
+		$output .= ">$description</option>\n";
+	}
+	$output .= "</select>";
+	return $output;
+}
+	
+if ($_POST['action'] == "create") {
+	
+	if( !defined('AUTOMODE') ) {
+		if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+			msg( "error", $lang['addnews_error'], $lang['sess_error'], "javascript:history.go(-1)" );
+		}
+	}
+
+	$saveconf = isset($_POST['saveconf']) ? intval($_POST['saveconf']) : 0;	
+	$allowed = array ("always", "hourly", "daily", "weekly", "monthly", "yearly", "never" );
+	
+	if( !defined('AUTOMODE') ) {
+		
+		$config['sitemap_limit'] = intval($_POST['limit']) ? intval($_POST['limit']) : '';
+		$config['sitemap_news_per_file'] = intval($_POST['sitemap_news_per_file']) ? intval($_POST['sitemap_news_per_file']) : 40000;
+		$config['sitemap_news_priority'] = number_format(floatval($_POST['priority']), 1, '.', '');
+		$config['sitemap_stat_priority'] = number_format(floatval($_POST['stat_priority']), 1, '.', '');
+		$config['sitemap_cat_priority'] = number_format(floatval($_POST['cat_priority']), 1, '.', '');
+		$config['sitemap_set_images'] = isset($_POST['set_images']) ? 1 : 0;
+
+
+		$config['sitemap_news_changefreq'] = in_array($_POST['sitemap_news_changefreq'], $allowed) ? $_POST['sitemap_news_changefreq'] : 'weekly';
+		$config['sitemap_stat_changefreq'] = in_array($_POST['sitemap_stat_changefreq'], $allowed) ? $_POST['sitemap_stat_changefreq'] : 'monthly';
+		$config['sitemap_cat_changefreq']  = in_array($_POST['sitemap_cat_changefreq'], $allowed) ? $_POST['sitemap_cat_changefreq'] : 'daily';
+		
+	}
+	
+	if ( $saveconf ) {
+		
+		try {
+			
+			$handler = @fopen(ENGINE_DIR.'/data/config.php', "w");
+			fwrite($handler, "<?php \n\n//System Configurations\n\n\$config = array (\n\n");
+			foreach($config as $name => $value) {
+				fwrite($handler, "'{$name}' => '{$value}',\n\n");
+			}
+			fwrite($handler, ");\n\n?>");
+			fclose($handler);
+			
+			if (function_exists('opcache_reset')) {
+				opcache_reset();
+			}
+
+		} catch(Throwable $e) {
+			msg("error", $lang['addnews_denied'], str_replace("{file}", "engine/data/config.php", $lang['stat_system']));
+		}
+
+	}
+	
+	if(!$config['sitemap_news_priority'] OR $config['sitemap_news_priority'] < 0 OR $config['sitemap_news_priority'] > 1 ) $config['sitemap_news_priority'] = '0.6';
+	if(!$config['sitemap_stat_priority'] OR $config['sitemap_stat_priority'] < 0 OR $config['sitemap_stat_priority'] > 1 ) $config['sitemap_stat_priority'] = '0.5';
+	if(!$config['sitemap_cat_priority'] OR $config['sitemap_cat_priority'] < 0 OR $config['sitemap_cat_priority'] > 1 ) $config['sitemap_cat_priority'] = '0.7';
+	if(!$config['sitemap_news_per_file'] OR $config['sitemap_news_per_file'] < 0 OR $config['sitemap_news_per_file'] > 40000 ) $config['sitemap_news_per_file'] = 40000;
+	
+	$config['sitemap_news_changefreq'] = in_array($config['sitemap_news_changefreq'], $allowed) ? $config['sitemap_news_changefreq'] : 'weekly';
+	$config['sitemap_stat_changefreq'] = in_array($config['sitemap_stat_changefreq'], $allowed) ? $config['sitemap_stat_changefreq'] : 'monthly';
+	$config['sitemap_cat_changefreq']  = in_array($config['sitemap_cat_changefreq'], $allowed) ? $config['sitemap_cat_changefreq'] 	: 'daily';
+		
+	include_once (DLEPlugins::Check(ENGINE_DIR.'/classes/google.class.php'));
+	
+	$map = new googlemap($config);
+
+	$map->generate();
+
+	if( defined('AUTOMODE') ) {
+		die("done");
+	}
+
+	$db->query("INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('" . $db->safesql($member_id['name']) . "', '{$_TIME}', '{$_IP}', '38', '')");
+
+}
+
+echoheader( "<i class=\"fa fa-google position-left\"></i><span class=\"text-semibold\">{$lang['opt_google']}</span>", $lang['header_g_1'] );
+
+if (strpos($config['http_home_url'], "//") === 0) $config['http_home_url'] = "https:".$config['http_home_url'];
+elseif (strpos($config['http_home_url'], "/") === 0) $config['http_home_url'] = "https://".$_SERVER['HTTP_HOST'].$config['http_home_url'];
+
+$sitemap_news_changefreq = makeDropDown( array ("always" => $lang['sitemap_changefreq_1'], "hourly" => $lang['sitemap_changefreq_2'], "daily" => $lang['sitemap_changefreq_3'], "weekly" => $lang['sitemap_changefreq_4'], "monthly" => $lang['sitemap_changefreq_5'], "yearly" => $lang['sitemap_changefreq_6'], "never" => $lang['sitemap_changefreq_7'] ), "sitemap_news_changefreq", $config['sitemap_news_changefreq'] );
+$sitemap_stat_changefreq = makeDropDown( array ("always" => $lang['sitemap_changefreq_1'], "hourly" => $lang['sitemap_changefreq_2'], "daily" => $lang['sitemap_changefreq_3'], "weekly" => $lang['sitemap_changefreq_4'], "monthly" => $lang['sitemap_changefreq_5'], "yearly" => $lang['sitemap_changefreq_6'], "never" => $lang['sitemap_changefreq_7'] ), "sitemap_stat_changefreq", $config['sitemap_stat_changefreq'] );
+$sitemap_cat_changefreq = makeDropDown( array ("always" => $lang['sitemap_changefreq_1'], "hourly" => $lang['sitemap_changefreq_2'], "daily" => $lang['sitemap_changefreq_3'], "weekly" => $lang['sitemap_changefreq_4'], "monthly" => $lang['sitemap_changefreq_5'], "yearly" => $lang['sitemap_changefreq_6'], "never" => $lang['sitemap_changefreq_7'] ), "sitemap_cat_changefreq", $config['sitemap_cat_changefreq'] );
+
+echo <<<HTML
+<div class="row">
+<div class="col-md-12">
+<form action="" method="post" class="form-horizontal">
+<input type="hidden" name="action" value="create">
+<input type="hidden" name="user_hash" value="{$dle_login_hash}">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['google_map']}
+  </div>
+  <div class="panel-body">
+
+HTML;
+
+	if( !$langformatdatefull ) $langformatdatefull = "d.m.Y H:i";
+	$map_link = '';
+
+	if( !file_exists(ROOT_DIR. "/uploads/sitemap.xml")){ 
+
+		echo $lang['no_google_map']."<br><br>";
+
+	} else {
+
+		$file_date = date($langformatdatefull, filectime(ROOT_DIR. "/uploads/sitemap.xml") );
+
+		echo "<b>".$file_date."</b> ".$lang['google_map_info'];
+
+		if ($config['allow_alt_url']) {
+
+			$map_link = $config['http_home_url']."sitemap.xml";
+
+			echo " <a href=\"".$map_link."\" target=\"_blank\">".$config['http_home_url']."sitemap.xml</a>";
+
+		} else {
+
+			$map_link = $config['http_home_url']."uploads/sitemap.xml";
+
+			echo " <a href=\"".$map_link."\" target=\"_blank\">".$config['http_home_url']."uploads/sitemap.xml</a>";
+
+		}
+		
+		if( file_exists(ROOT_DIR. "/uploads/google_news.xml")){
+			
+			$file_date = date($langformatdatefull, filectime(ROOT_DIR. "/uploads/google_news.xml") );
+			
+			if ($config['allow_alt_url']) {
+				
+				$link = $config['http_home_url']."google_news.xml";
+				
+			} else $link = $config['http_home_url']."uploads/google_news.xml";
+			
+			echo "<br><br><b>".$file_date."</b> ".$lang['google_map_info_2'];
+			
+			echo " <a href=\"".$link."\" target=\"_blank\">".$link."</a>";
+	
+		}
+
+		echo "<hr>";
+
+	}
+
+	if ( isset($config['sitemap_set_images']) AND $config['sitemap_set_images'] ) $ifch = "checked"; else $ifch = "";
+
+echo <<<HTML
+
+		<div class="form-group">
+		  <label class="control-label col-sm-3 col-xs-6">{$lang['google_nnum']}</label>
+		  <div class="col-sm-9 col-xs-6">
+			<input type="text" dir="auto" class="form-control" style="width:3.75rem;" name="limit" value="{$config['sitemap_limit']}"><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="auto right" data-content="{$lang['hint_g_num']}" ></i>
+		   </div>
+		</div>
+		<div class="form-group">
+		  <label class="control-label col-sm-3 col-xs-6">{$lang['google_nnumpf']}</label>
+		  <div class="col-sm-9 col-xs-6">
+			<input type="text" dir="auto" class="form-control" style="width:3.75rem;" name="sitemap_news_per_file" value="{$config['sitemap_news_per_file']}"><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="auto right" data-content="{$lang['hint_g_nnumpf']}" ></i>
+		   </div>
+		</div>
+		<div class="form-group">
+		  <label class="control-label col-sm-3 col-xs-6">{$lang['google_stat_priority']}</label>
+		  <div class="col-sm-9 col-xs-6">
+			<input type="text" dir="auto" class="form-control" style="width:3.75rem;" name="stat_priority" value="{$config['sitemap_stat_priority']}"><span class="position-right position-left">{$lang['google_changefreq']}</span>{$sitemap_stat_changefreq}<i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="auto right" data-content="{$lang['hint_g_priority']}" ></i>
+		   </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-sm-3 col-xs-6">{$lang['google_priority']}</label>
+		  <div class="col-sm-9 col-xs-6">
+			<input type="text" dir="auto" class="form-control" style="width:3.75rem;" name="priority" value="{$config['sitemap_news_priority']}"><span class="position-right position-left">{$lang['google_changefreq']}</span>{$sitemap_news_changefreq}
+		   </div>
+		 </div>
+		<div class="form-group">
+		  <label class="control-label col-sm-3 col-xs-6">{$lang['google_cat_priority']}</label>
+		  <div class="col-sm-9 col-xs-6">
+			<input type="text" dir="auto" class="form-control" style="width:3.75rem;" name="cat_priority" value="{$config['sitemap_cat_priority']}"><span class="position-right position-left">{$lang['google_changefreq']}</span>{$sitemap_cat_changefreq}
+		   </div>
+		 </div>
+		 
+		<div class="form-group">
+		  <label class="control-label col-sm-3 col-xs-6">{$lang['google_set_images']}</label>
+		  <div class="col-sm-9 col-xs-6">
+			<input class="icheck" type="checkbox" name="set_images" value="1" {$ifch}>
+		   </div>
+		 </div>
+
+		<div class="form-group">
+		  <label class="control-label col-sm-3 col-xs-6">{$lang['google_save']}</label>
+		  <div class="col-sm-9 col-xs-6">
+			<input class="switch" type="checkbox" name="saveconf" value="1">
+		   </div>
+		 </div>
+
+   </div>
+   <div class="panel-footer"><input type="submit" class="btn bg-teal btn-sm btn-raised" value="{$lang['google_create']}"></div>	
+</div>
+</form>
+</div>
+HTML;
+
+echo <<<HTML
+<div class="col-md-12">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['google_main']}
+  </div>
+  <div class="panel-body">
+	
+	  {$lang['google_info']}
+	  
+	
+   </div>
+</div>
+</div>
+</div>
+HTML;
+
+
+echofooter();
+?>

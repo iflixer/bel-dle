@@ -5,9 +5,651 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: tagscloud.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: manageme tags cloud
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='PzJkP2loaS9ZKi93d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3dy9hTE1YTURTTzdhem5IU243YS1hNThhcntPWDM3PFFhcTdXU01heEV7cGlhLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL2FoWFhpUTpZWVc+Ny1uNzxRLkVwWS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS9hc3tpOEVTSGhYYShaKWFtZmZGLW1mbU5hcntPWDM3PFFhcTdXU01heEV7cGkvd3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3cvYWVoU1FhWntXN2FTUWFpRXtYN1pYN1dhNThhWntpOEVTSGhYL3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3L2FsUz43OmFYTUhRWj57cFcuaWhpLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL2F5UTc6YT1Nbk1INz03YVhNSFFhWj57cFcvd3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3cvKlkvL1NPKGEhVzdPU243VyhhJ0w2ZTZEYmx6ejN4YjN6J2EpYVBnYSFXN09TbjdXKGEnRFB4eHpMX2IzJ2EpYSlhMS8JaDdNVzdFKGEifWVlVll2LnZhRmZHYWx7RTVTV1c3biJhKTsvCWg3TVc3RWEoYSdEe1pNWFN7bjphLi5ZLi5ZJ2EpOy8JV1M3KGEifU1aNFNuSGFNWFg3PWlYISJhKTsvdS8vU08oYSEkcFE3RV9IRXtwaXQkPTc9NTdFX1NXdCdwUTdFX0hFe3BpJ2pqdCdNVz1Tbl9YTUhRWj57cFcnamEpYTEvCT1RSChhIjdFRXtFIixhJD5Nbkh0J1NuVzdVX1c3blM3VydqLGEkPk1uSHQnU25XN1VfVzduUzdXJ2phKTsvdS8vJFFYTUVYX09Fez1hd2FTUVE3WCgkX2d6Q3l6cmV0J1FYTUVYX09Fez0nailhP2FTblhdTT4oYSRfZ3pDeXpyZXQnUVhNRVhfT0V7PSdqYSlhOmFmOy8kbjc8UV9pN0VfaU1IN2F3YU5mOy8vU08oYSRRWE1FWF9PRXs9YWRhZmEpYSRRWE1FWF9PRXs9YXdhZjsvL1NPYShTUVE3WCgkX2d6Q3l6cmV0J1E3TUVaaDx7RVcnailhNjNMYSRfZ3pDeXpyZXQnUTdNRVpoPHtFVydqKWExL2FhL2FhJFE3TUVaaDx7RVdhd2FwRT5XN1p7VzdhKGEkX2d6Q3l6cmV0J1E3TUVaaDx7RVcnamEpOy9hYS9hYVNPKGFAaUU3SF89TVhaaChhIll0XHx8XGR8XDJqWSIsYSRRN01FWmg8e0VXYSlhKWEkUTdNRVpoPHtFV2F3YSIiOy9hYTc+UTdhJFE3TUVaaDx7RVdhd2FoWD0+UWk3WlNNPlpoTUVRKGFRWEVTaV9YTUhRKGFRWEVTaVE+TVFoN1EoYVhFUz0oYSRRN01FWmg8e0VXYSlhKWEpLGF6M2Vfc1BxVjZlLGEneWVsLSAnYSk7L2FhL3VhNz5RN2EkUTdNRVpoPHtFV2F3YSIiOy8vU09hKCRRN01FWmg8e0VXKWEkcEU+UTdNRVpoYXdhIiZRN01FWmg8e0VXdzEkUTdNRVpoPHtFV3UiO2E3PlE3YSRwRT5RN01FWmhhd2EiIjsvLyRRe0VYXzU4YXdhIlhNSCI7Ly9TTyhhU1FRN1goJF9nekN5enJldCdRe0VYXzU4J2opYSlhMS8JJE0+Pns8N1dfUXtFWGF3YU1FRU04KGEnWE1IJyxhJ1p7cG5YJyk7LwkvCVNPKGFTbl9NRUVNOChhKFFYRVNuSCkkX2d6Q3l6cmV0J1F7RVhfNTgnaixhJE0+Pns8N1dfUXtFWGEpYSlhMS8JCSRRe0VYXzU4YXdhKFFYRVNuSCkkX2d6Q3l6cmV0J1F7RVhfNTgnajsvCXUvCS91Ly8ke0VXN0VfNThhd2EiVzdRWiI7Ly9TTyhhU1FRN1goJF9nekN5enJldCd7RVc3RV81OCdqKWEpYTEvCSRNPj57PDdXX3tFVzdFYXdhTUVFTTgoYSdNUVonLGEnVzdRWicpOy8JLwlTTyhhU25fTUVFTTgoYShRWEVTbkgpJF9nekN5enJldCd7RVc3RV81OCdqLGEkTT4+ezw3V197RVc3RWEpYSlhMS8JCSR7RVc3RV81OGF3YShRWEVTbkgpJF9nekN5enJldCd7RVc3RV81OCdqOy8JdS8JL3UvL1NPYSgkX1ZQcmV0J01aWFN7bidqYXd3YSI9TVFRX1c3PjdYNyIpYTEvLwlTTyhhIVNRUTdYKCRfZ3pDeXpyZXQncFE3RV9oTVFoJ2opYVBnYSEkX2d6Q3l6cmV0J3BRN0VfaE1RaCdqYVBnYSRfZ3pDeXpyZXQncFE3RV9oTVFoJ2phIXdhJFc+N18+e0hTbl9oTVFoYSlhMS8JCS8JCVdTNyhhIn1NWjRTbkhhTVhYNz1pWCFheVE3RWFue1hhT3twblciYSk7LwkvCXUvLwkkUTc+N1pYN1dfWE1IUWF3YSRfVlByZXQnUTc+N1pYN1dfWE1IUSdqOy8vCVNPKGEhYSRRNz43Wlg3V19YTUhRYSlhMS8JCT1RSChhIjdFRXtFIixhJD5Nbkh0Jz1NUVFfN0VFe0UnaixhJD5Nbkh0Jz1NUVFfWE1IUV83RUUnaixhIj89e1d3WE1IUVo+e3BXJlFYTUVYX09Fez13MSRRWE1FWF9PRXs9dSJhKTsvCXUvLwlPe0U3TVpoYShhJFE3PjdaWDdXX1hNSFFhTVFhJG5NPTdhKWExLy8JCVNPKGFAaUU3SF89TVhaaChhIll0XHx8XGR8XDJqWSIsYSRuTT03YSlhKWEkbk09N2F3YSIiOy8JCTc+UTdhJG5NPTdhd2FAJFc1LTJRTU83UWs+KGFoWD0+UWk3WlNNPlpoTUVRKGFRWEVTaV9YTUhRKGFRWEVTaVE+TVFoN1EoYVhFUz0oYSRuTT03YSlhKWEpLGF6M2Vfc1BxVjZlLGEneWVsLSAnYSlhKTsvLwkJU09hKCEkbk09NylhMWE9UUgoYSI3RUV7RSIsYSQ+TW5IdCc9TVFRXzdFRXtFJ2osYSQ+TW5IdCc9TVFRX1hNSFFfN0VFX3YnaixhIj89e1d3WE1IUVo+e3BXJlFYTUVYX09Fez13MSRRWE1FWF9PRXs9dSJhKTthV1M3KCk7YXUvLwkJJFc1LTJrcDdFOGEoYSJyekR6c2Vhbjc8UV9TV2FsZ1BxYSJhLmFWZ3psYjlhLmEiX1hNSFFhUn16Z3phWE1IYXdhJzEkbk09N3UnImEpOy8vCQkkWE1IX01FRU04YXdhTUVFTThhKCk7LwkJCQkvCQk8aFM+N2EoYSRFezxhd2EkVzUtMkg3WF9FezxhKClhKWExLwkJCQkJLwkJCSRYTUhfTUVFTTh0amF3YSRFezx0J243PFFfU1cnajsvCQkJCS8JCXUvCQkkVzUtMk9FNzdhKCk7Ly8JCVNPYShae3BuWGEoYSRYTUhfTUVFTThhKSlhMS8JCQkJCS8JCQkkWE1IX01FRU04YXdhIigiYS5hUz1pPntXN2EoYSIsIixhJFhNSF9NRUVNOGEpYS5hIikiOy8JLwkJCSRRaz5fRTdRcD5YYXdhJFc1LTJrcDdFOChhInJ6RHpzZWFTVyxhWE1IUWFsZ1BxYSJhLmFWZ3psYjlhLmEiX2l7UVhhUn16Z3phU1dhYjNhMSRYTUhfTUVFTTh1ImEpOy8JLwkJCTxoUz43YShhJEV7PGF3YSRXNS0ySDdYX0V7PChhJFFrPl9FN1FwPlhhKWEpYTEvCS8JCQkJJEV7PHQnWE1IUSdqYXdhN1VpPntXNyhhIiwiLGEkRXs8dCdYTUhRJ2phKTsvCS8JCQkJJFhNSFFhd2FNRUVNOGEoKTsvCQkJCS8JCQkJT3tFN01aaGEoYSRFezx0J1hNSFEnamFNUWEkXU0+cDdhKWExLwkJCQkJLwkJCQkJJF1NPnA3YXdhWEVTPShhJF1NPnA3YSk7LwkJCQkJU09hKGFRWEVTaVE+TVFoN1EoJF1NPnA3KWF3d2FRWEVTaVE+TVFoN1EoJG5NPTcpYSlhWntuWFNucDc7LwkJCQkJJFhNSFF0amF3YSRdTT5wNzsvCQkJCXUvCS8JCQkJJFhNSFFhd2FNRUVNOF9wblNrcDcoJFhNSFEpOy8JLwkJCQlTT2EoYVp7cG5YKCRYTUhRKWEpYSRpe1FYX1hNSFFhd2FAJFc1LTJRTU83UWs+KGFTPWk+e1c3KGEiLGEiLGEkWE1IUWEpYSk7YTc+UTdhJGl7UVhfWE1IUWF3YSIiOy8JLwkJCQkkVzUtMmtwN0U4KGEieVZMNmV6YSJhLmFWZ3psYjlhLmEiX2l7UVhhcnplYVhNSFF3JzEkaXtRWF9YTUhRdSdhUn16Z3phU1d3JzEkRXs8dCdTVydqdSciYSk7LwkvCQkJCSRXNS0ya3A3RTgoYSJMekR6ZXphbGdQcWEiYS5hVmd6bGI5YS5hIl9YTUhRYVJ9emd6YW43PFFfU1dhd2EnMSRFezx0J1NXJ2p1JyJhKTsvCS8JCQkJU09hKGFae3BuWCgkWE1IUSlhKWExLwkvCQkJCQkkWE1IWj57cFdhd2FNRUVNOGEoKTsvCQkvCQkJCQlPe0U3TVpoYShhJFhNSFFhTVFhJF1NPnA3YSlhMS8JCQkJCQkJCQkvCQkJCQkJJFhNSFo+e3BXdGphd2EiKCciYS5hJEV7PHQnU1cnamEuYSInLGEnImEuYSRXNS0yUU1PN1FrPihYRVM9KGEkXU0+cDdhKSlhLmEiJykiOy8JCQkJCXUvCQkvCQkJCQkkWE1IWj57cFdhd2FTPWk+e1c3KGEiLGEiLGEkWE1IWj57cFdhKTsvCQkJCQkkVzUtMmtwN0U4KGEiYjNyemdlYWIzZVBhImEuYVZnemxiOWEuYSJfWE1IUWEobjc8UV9TVyxhWE1IKWFjNkR5enJhImEuYSRYTUhaPntwV2EpOy8JCQkJdS8JCQl1LwkvCQkJJFc1LTJrcDdFOChhIkx6RHplemFsZ1BxYSJhLmFWZ3psYjlhLmEiX1hNSFFhUn16Z3phWE1IYXdhJzEkbk09N3UnImEpOy8JCQkkVzUtMmtwN0U4KGEiYjNyemdlYWIzZVBhImEuYXlyemdWZ3psYjlhLmEiX01XPVNuXz57SFFhKG5NPTcsYVdNWDcsYVNpLGFNWlhTe24sYTdVWEVNUSlhXU0+cDdRYSgnIi4kVzUtMlFNTzdRaz4oJD03PTU3RV9TV3Qnbk09NydqKS4iJyxhJzEkX2VicXp1JyxhJzEkX2JWdScsYSdCdicsYScxJG5NPTd1JykiYSk7Ly8JCXUvLwl1Ly8JWj43TUVfWk1aaDcoKTsvCWg3TVc3RShhIkR7Wk1YU3tuOmE/PXtXd1hNSFFaPntwVyZRWE1FWF9PRXs9dzEkUVhNRVhfT0V7PXUxJHBFPlE3TUVaaHUiYSk7YVdTNygpOy8vdS8vL1NPYSgkX3h6ZXQnTVpYU3tuJ2phd3dhIlc3PjdYNyIpYTEvLwlTTyhhIVNRUTdYKCRfZ3pDeXpyZXQncFE3RV9oTVFoJ2opYVBnYSEkX2d6Q3l6cmV0J3BRN0VfaE1RaCdqYVBnYSRfZ3pDeXpyZXQncFE3RV9oTVFoJ2phIXdhJFc+N18+e0hTbl9oTVFoYSlhMS8JCS8JCVdTNyhhIn1NWjRTbkhhTVhYNz1pWCFheVE3RWFue1hhT3twblciYSk7LwkvCXUvLwlTTyhhQGlFN0hfPU1YWmgoYSJZdFx8fFxkfFwyalkiLGEkX3h6ZXQnbk09NydqYSlhKWEkX3h6ZXQnbk09NydqYXdhIiI7Lwk3PlE3YSRfeHpldCduTT03J2phd2FAJFc1LTJRTU83UWs+KGFoWD0+UWk3WlNNPlpoTUVRKGFRWEVTaV9YTUhRKGFRWEVTaVE+TVFoN1EoYVhFUz0oYSRfeHpldCduTT03J2phKWEpYSksYXozZV9zUHFWNmUsYSd5ZWwtICdhKWEpOy8vCVNPYSghJF94emV0J25NPTcnailhMWFoN01XN0UoYSJEe1pNWFN7bjphPz17V3dYTUhRWj57cFciYSk7YVdTNygpO2F1Ly8JJFc1LTJrcDdFOGEoYSJyekR6c2Vhbjc8UV9TV2FsZ1BxYSJhLmFWZ3psYjlhLmEiX1hNSFFhUn16Z3phWE1IYXdhJzEkX3h6ZXQnbk09NydqdSciYSk7LwkJCS8JJFhNSF9NRUVNOGF3YU1FRU04YSgpOy8JCQkvCTxoUz43YShhJEV7PGF3YSRXNS0ySDdYX0V7PGEoKWEpYTEvCQkJCS8JCSRYTUhfTUVFTTh0amF3YSRFezx0J243PFFfU1cnajsvCQkJLwl1LwkkVzUtMk9FNzdhKCk7Ly8JU09hKFp7cG5YYShhJFhNSF9NRUVNOGEpKWExLwkJCQkvCQkkWE1IX01FRU04YXdhIigiYS5hUz1pPntXN2EoYSIsIixhJFhNSF9NRUVNOGEpYS5hIikiOy8vCQkkUWs+X0U3UXA+WGF3YSRXNS0ya3A3RTgoYSJyekR6c2VhU1csYVhNSFFhbGdQcWEiYS5hVmd6bGI5YS5hIl9pe1FYYVJ9emd6YVNXYWIzYTEkWE1IX01FRU04dSJhKTsvLwkJPGhTPjdhKGEkRXs8YXdhJFc1LTJIN1hfRXs8KGEkUWs+X0U3UXA+WGEpYSlhMS8vCQkJJEV7PHQnWE1IUSdqYXdhN1VpPntXNyhhIiwiLGEkRXs8dCdYTUhRJ2phKTsvLwkJCSRYTUhRYXdhTUVFTThhKCk7LwkJCS8JCQlPe0U3TVpoYShhJEV7PHQnWE1IUSdqYU1RYSRdTT5wN2EpYTEvCQkJCS8JCQkJJF1NPnA3YXdhWEVTPShhJF1NPnA3YSk7LwkJCQlTT2EoYVFYRVNpUT5NUWg3USgkXU0+cDcpYXd3YVFYRVNpUT5NUWg3USgkX3h6ZXQnbk09NydqKWEpYVp7blhTbnA3Oy8JCQkJJFhNSFF0amF3YSRdTT5wNzsvCQkJdS8vCQkJJFhNSFFhd2FNRUVNOF9wblNrcDcoJFhNSFEpOy8vCQkJU09hKGFae3BuWCgkWE1IUSlhKWEkaXtRWF9YTUhRYXdhJFc1LTJRTU83UWs+KGFTPWk+e1c3KGEiLGEiLGEkWE1IUWEpYSk7YTc+UTdhJGl7UVhfWE1IUWF3YSIiOy8vCQkJJFc1LTJrcDdFOChhInlWTDZlemEiYS5hVmd6bGI5YS5hIl9pe1FYYXJ6ZWFYTUhRdycxJGl7UVhfWE1IUXUnYVJ9emd6YVNXdycxJEV7PHQnU1cnanUnImEpOy8vCQkJJFc1LTJrcDdFOChhIkx6RHplemFsZ1BxYSJhLmFWZ3psYjlhLmEiX1hNSFFhUn16Z3phbjc8UV9TV2F3YScxJEV7PHQnU1cnanUnImEpOy8vCQkJU09hKGFae3BuWCgkWE1IUSlhKWExLy8JCQkJJFhNSFo+e3BXYXdhTUVFTThhKCk7LwkvCQkJCU97RTdNWmhhKGEkWE1IUWFNUWEkXU0+cDdhKWExLwkJCQkJCQkJLwkJCQkJJFhNSFo+e3BXdGphd2EiKCciYS5hJEV7PHQnU1cnamEuYSInLGEnImEuYSRXNS0yUU1PN1FrPihYRVM9KGEkXU0+cDdhKSlhLmEiJykiOy8JCQkJdS8JLwkJCQkkWE1IWj57cFdhd2FTPWk+e1c3KGEiLGEiLGEkWE1IWj57cFdhKTsvCQkJCSRXNS0ya3A3RTgoYSJiM3J6Z2VhYjNlUGEiYS5hVmd6bGI5YS5hIl9YTUhRYShuNzxRX1NXLGFYTUgpYWM2RHl6cmEiYS5hJFhNSFo+e3BXYSk7LwkJCXUvCQl1Ly8JCSRXNS0ya3A3RTgoYSJMekR6ZXphbGdQcWEiYS5hVmd6bGI5YS5hIl9YTUhRYVJ9emd6YVhNSGF3YScxJF94emV0J25NPTcnanUnImEpOy8JCSRXNS0ya3A3RTgoYSJiM3J6Z2VhYjNlUGEiYS5heXJ6Z1ZnemxiOWEuYSJfTVc9U25fPntIUWEobk09NyxhV01YNyxhU2ksYU1aWFN7bixhN1VYRU1RKWFdTT5wN1FhKCciLiRXNS0yUU1PN1FrPigkPTc9NTdFX1NXdCduTT03J2opLiInLGEnMSRfZWJxenUnLGEnMSRfYlZ1JyxhJ0J2JyxhJzEkX3h6ZXQnbk09NydqdScpImEpOy8vCXUvLwlaPjdNRV9aTVpoNygpOy8JaDdNVzdFKGEiRHtaTVhTe246YT89e1d3WE1IUVo+e3BXJlFYTUVYX09Fez13MSRRWE1FWF9PRXs9dTEkcEU+UTdNRVpodSJhKTthV1M3KCk7L3UvL1NPYSgkX3h6ZXQnTVpYU3tuJ2phd3dhIjdXU1giKWExLy8JU08oYSFTUVE3WCgkX2d6Q3l6cmV0J3BRN0VfaE1RaCdqKWFQZ2EhJF9nekN5enJldCdwUTdFX2hNUWgnamFQZ2EkX2d6Q3l6cmV0J3BRN0VfaE1RaCdqYSF3YSRXPjdfPntIU25faE1RaGEpYTEvCQkvCQlXUzcoYSJ9TVo0U25IYU1YWDc9aVghYXlRN0VhbntYYU97cG5XImEpOy8JLwl1Ly8JU08oYUBpRTdIXz1NWFpoKGEiWXRcfHxcZHxcMmpZIixhJF94emV0J3s+V25NPTcnamEpYSlhJF94emV0J3s+V25NPTcnamF3YSIiOy8JNz5RN2EkX3h6ZXQnez5Xbk09NydqYXdhQCRXNS0yUU1PN1FrPihhaFg9PlFpN1pTTT5aaE1FUShhUVhFU2lfWE1IUShhUVhFU2lRPk1RaDdRKGFYRVM9KGEkX3h6ZXQnez5Xbk09NydqYSlhKWEpLGF6M2Vfc1BxVjZlLGEneWVsLSAnYSlhKTsvLwlTTyhhQGlFN0hfPU1YWmgoYSJZdFx8fFxkfFwyalkiLGEkX3h6ZXQnbjc8bk09NydqYSlhKWEkX3h6ZXQnbjc8bk09NydqYXdhIiI7Lwk3PlE3YSRfeHpldCduNzxuTT03J2phd2FAJFc1LTJRTU83UWs+KGFoWD0+UWk3WlNNPlpoTUVRKGFRWEVTaV9YTUhRKGFRWEVTaVE+TVFoN1EoYVhFUz0oYSRfeHpldCduNzxuTT03J2phKWEpYSksYXozZV9zUHFWNmUsYSd5ZWwtICdhKWEpOy8vCSRfeHpldCduNzxuTT03J2phd2FRWEVfRTdpPk1aN2EoIiwiLGEiYSIsYSRfeHpldCduNzxuTT03J2opOy8vCVNPYSghJF94emV0J3s+V25NPTcnamFQZ2EhJF94emV0J243PG5NPTcnailhMWFoN01XN0UoYSJEe1pNWFN7bjphPz17V3dYTUhRWj57cFciYSk7YVdTNygpO2F1Ly8JJFc1LTJrcDdFOChhImIzcnpnZWFiM2VQYSJhLmF5cnpnVmd6bGI5YS5hIl9NVz1Tbl8+e0hRYShuTT03LGFXTVg3LGFTaSxhTVpYU3tuLGE3VVhFTVEpYV1NPnA3UWEoJyIuJFc1LTJRTU83UWs+KCQ9Nz01N0VfU1d0J25NPTcnaikuIicsYScxJF9lYnF6dScsYScxJF9iVnUnLGEnQm0nLGEnMSRfeHpldCd7PlduTT03J2p1YVh7OmExJF94emV0J243PG5NPTcnanUnKSJhKTsvLwkkVzUtMmtwN0U4YShhInJ6RHpzZWFuNzxRX1NXYWxnUHFhImEuYVZnemxiOWEuYSJfWE1IUWFSfXpnemFYTUhhd2EnMSRfeHpldCd7PlduTT03J2p1JyJhKTsvCQkJLwkkWE1IX01FRU04YXdhTUVFTThhKCk7LwkJCS8JPGhTPjdhKGEkRXs8YXdhJFc1LTJIN1hfRXs8YSgpYSlhMS8JCQkJLwkJJFhNSF9NRUVNOHRqYXdhJEV7PHQnbjc8UV9TVydqOy8JCQkvCXUvCSRXNS0yT0U3N2EoKTsvLwlTT2EoWntwblhhKGEkWE1IX01FRU04YSkpYTEvCQkJCS8JCSRYTUhfTUVFTThhd2EiKCJhLmFTPWk+e1c3YShhIiwiLGEkWE1IX01FRU04YSlhLmEiKSI7Ly8JCSRRaz5fRTdRcD5YYXdhJFc1LTJrcDdFOChhInJ6RHpzZWFTVyxhWE1IUWFsZ1BxYSJhLmFWZ3psYjlhLmEiX2l7UVhhUn16Z3phU1dhYjNhMSRYTUhfTUVFTTh1ImEpOy8vCQk8aFM+N2EoYSRFezxhd2EkVzUtMkg3WF9FezwoYSRRaz5fRTdRcD5YYSlhKWExLy8JCQkkRXs8dCdYTUhRJ2phd2E3VWk+e1c3KGEiLCIsYSRFezx0J1hNSFEnamEpOy8vCQkJJFhNSFFhd2FNRUVNOGEoKTsvCQkJLwkJCU97RTdNWmhhKGEkRXs8dCdYTUhRJ2phTVFhJF1NPnA3YSlhMS8JCQkJLwkJCQkkXU0+cDdhd2FYRVM9KGEkXU0+cDdhKTsvCQkJCVNPYShhUVhFU2lRPk1RaDdRKCRdTT5wNylhd3dhUVhFU2lRPk1RaDdRKCRfeHpldCd7PlduTT03J2opYSlhJF1NPnA3YXdhUVhFU2lRPk1RaDdRKCRfeHpldCduNzxuTT03J2opOy8JCQkJJFhNSFF0amF3YSRdTT5wNzsvCQkJdS8vCQkJU09hKGFae3BuWCgkWE1IUSlhKWExYS8vCQkJCSRYTUhRYXdhTUVFTThfcG5Ta3A3KCRYTUhRKTsvCQkJCSRpe1FYX1hNSFFhd2EkVzUtMlFNTzdRaz4oUz1pPntXNyhhIixhIixhJFhNSFFhKSk7Ly8JCQl1YTc+UTdhJGl7UVhfWE1IUWF3YSIiOy8vCQkJJFc1LTJrcDdFOChhInlWTDZlemEiYS5hVmd6bGI5YS5hIl9pe1FYYXJ6ZWFYTUhRdycxJGl7UVhfWE1IUXUnYVJ9emd6YVNXdycxJEV7PHQnU1cnanUnImEpOy8vCQkJJFc1LTJrcDdFOChhIkx6RHplemFsZ1BxYSJhLmFWZ3psYjlhLmEiX1hNSFFhUn16Z3phbjc8UV9TV2F3YScxJEV7PHQnU1cnanUnImEpOy8vCQkJU09hKGFae3BuWCgkWE1IUSlhKWExLy8JCQkJJFhNSFo+e3BXYXdhTUVFTThhKCk7LwkvCQkJCU97RTdNWmhhKGEkWE1IUWFNUWEkXU0+cDdhKWExLwkJCQkJCQkJLwkJCQkJJFhNSFo+e3BXdGphd2EiKCciYS5hJEV7PHQnU1cnamEuYSInLGEnImEuYSRXNS0yUU1PN1FrPihYRVM9KGEkXU0+cDdhKSlhLmEiJykiOy8JCQkJdS8vCQkJCSRYTUhaPntwV2F3YVM9aT57VzcoYSIsYSIsYSRYTUhaPntwV2EpOy8JCQkJJFc1LTJrcDdFOChhImIzcnpnZWFiM2VQYSJhLmFWZ3psYjlhLmEiX1hNSFFhKG43PFFfU1csYVhNSClhYzZEeXpyYSJhLmEkWE1IWj57cFdhKTsvLwkJCXUvCQl1Lwl1Ly8JWj43TUVfWk1aaDcoKTsvCWg3TVc3RShhIkR7Wk1YU3tuOmE/PXtXd1hNSFFaPntwVyZRWE1FWF9PRXs9dzEkUVhNRVhfT0V7PXUxJHBFPlE3TUVaaHUiYSk7YVdTNygpOy8vdS8vN1poe2g3TVc3RShhImRTYVo+TVFRd1wiT01hT00tWE1IUWFpe1FTWFN7bi0+N09YXCIyZFlTMmRRaU1uYVo+TVFRd1wiWDdVWC1RNz1TNXs+V1wiMjEkPk1uSHQnaDdNVzdFX1haX3YnanVkWVFpTW4yIixhJD5Nbkh0J2g3TVc3RV9YWl9tJ2phKTsvLzdaaHthZGRkfWVxRC9kT3tFPWFNWlhTe253Ij89e1d3WE1IUVo+e3BXImE9N1hoe1d3Ikg3WCJhbk09N3cibk1dUyJhU1d3Im5NXVMiMi9kU25pcFhhWDhpN3ciaFNXVzduImFuTT03dyI9e1ciYV1NPnA3dyJYTUhRWj57cFciMi9kU25pcFhhWDhpN3ciaFNXVzduImFuTT03dyJRN01FWmg8e0VXImFdTT5wN3ciMSRRN01FWmg8e0VXdSIyL2RTbmlwWGFYOGk3dyJoU1dXN24iYW5NPTd3IlFYTUVYX09Fez0iYVNXdyJRWE1FWF9PRXs9ImFdTT5wN3ciMSRRWE1FWF9PRXs9dSIyL2RTbmlwWGFYOGk3dyJoU1dXN24iYW5NPTd3IlF7RVhfNTgiYVNXdyJRe0VYXzU4ImFdTT5wN3ciMSRRe0VYXzU4dSIyL2RTbmlwWGFYOGk3dyJoU1dXN24iYW5NPTd3IntFVzdFXzU4ImFTV3cie0VXN0VfNTgiYV1NPnA3dyIxJHtFVzdFXzU4dSIyL2RZT3tFPTIvL2RPe0U9YU1aWFN7bnciPz17V3dYTUhRWj57cFciYT03WGh7V3ciaXtRWCJhbk09N3cie2lYU3tuUTVNRSJhU1d3IntpWFN7blE1TUUiMi9kU25pcFhhWDhpN3ciaFNXVzduImFuTT03dyI9e1ciYV1NPnA3dyJYTUhRWj57cFciMi9kU25pcFhhWDhpN3ciaFNXVzduImFuTT03dyJwUTdFX2hNUWgiYV1NPnA3dyIxJFc+N18+e0hTbl9oTVFodSIyL2RTbmlwWGFYOGk3dyJoU1dXN24iYW5NPTd3IlFYTUVYX09Fez0iYVNXdyJRWE1FWF9PRXs9ImFdTT5wN3ciMSRRWE1FWF9PRXs9dSIyL2RXU11hWj5NUVF3ImlNbjc+YWlNbjc+LVc3T01wPlgiMi9hYWRXU11hWj5NUVF3ImlNbjc+LWg3TVdTbkgiMi9hYWFhMSQ+TW5IdCd7aVhfWE1IUVo+e3BXJ2p1LwlkV1NdYVo+TVFRdyJoN01XU25ILTc+Nz03blhRIjIvCQlkV1NdYVo+TVFRdyJPe0U9LUhFe3BpYWhNUS1PNzdXNU1aNCJhUVg4Pjd3IjxTV1hoOm1OZmlVOyIyLwkJCWRTbmlwWGFuTT03dyJRN01FWmg8e0VXImFYOGk3dyJRN01FWmgiYVdTRXciTXBYeyJhWj5NUVF3Ik97RT0tWntuWEV7PiJhaT5NWjdoez5XN0V3IjEkPk1uSHQnUTdNRVpoX09TNz5XJ2p1ImF7blpoTW5IN3ciV3tacD03blgue2lYU3tuUTVNRS5RWE1FWF9PRXs9Ll1NPnA3d2Y7ImFdTT5wN3ciMSRRN01FWmg8e0VXdSIyLwkJCWRXU11hWj5NUVF3Ik97RT0tWntuWEV7Pi1PNzdXNU1aNCIyLwkJCWFhYWFkTWFoRTdPdyIjImF7blo+U1o0dyIkKFhoU1EpLlo+e1E3UVgoJ097RT0nKS5RcDU9U1goKTsiMmRTYVo+TVFRdyJPTWFPTS1RN01FWmhhWDdVWC1RU283LTVNUTdhWDdVWC09cFg3VyIyZFlTMmRZTTIvCQkJZFlXU10yLwkJZFlXU10yLwlkWVdTXTIvYWFkWVdTXTIvfWVxRDsvLy8kWE1IUWF3YU1FRU04KCk7LyQ+U1FYYXdhTUVFTTgoKTsvLyRTYXdhJFFYTUVYX09Fez07Ly9TT2EoYSRRN01FWmg8e0VXYSlhMS9hYS9hYSRRN01FWmg8e0VXYXdhJFc1LTJRTU83UWs+KCRRN01FWmg8e0VXKTsvYWEkPGg3RTdhd2EiUn16Z3phWE1IYT5TNDdhJyUxJFE3TUVaaDx7RVd1JSdhIjsvYWEkPk1uSHQnWE1IUVo+e3BXX257WF9Pe3BuVydqYXdhJD5Nbkh0J1hNSFFfUV9ue1hfT3twblcnajsvYWEvdWE3PlE3YSQ8aDdFN2F3YSIiOy8vJFc1LTJrcDdFOCgicnpEenNlYVhNSCxhc1B5M2UoKilhNnJhWntwblhhbGdQcWEiYS5hVmd6bGI5YS5hIl9YTUhRYTEkPGg3RTd1eGdQeVZhSQphWE1IYVBnTHpnYUkKYTEkUXtFWF81OHVhMSR7RVc3RV81OHVhRGJxYmVhMSRRWE1FWF9PRXs9dSwxJG43PFFfaTdFX2lNSDd1Iik7Ly88aFM+NygkRXs8YXdhJFc1LTJIN1hfRXs8KCkpMS9hYS9hYVNPKGEkRXs8dCdYTUgnamEpYTEvCWFhJFhNSFF0JEV7PHQnWE1IJ2pqYXdhJEV7PHQnWntwblgnajsvCWFhJFNhKys7L2FhdS9hYS91LyRXNS0yT0U3NygpOy8vJEU3UXA+WF9ae3BuWGF3YSRXNS0yUXBpN0Vfa3A3RTgoInJ6RHpzZWFzUHkzZShMYnJlYjNzZWFYTUgpYU1RYVp7cG5YYWxnUHFhImEuYVZnemxiOWEuYSJfWE1IUWExJDxoN0U3dSIpOy8kTT4+X1p7cG5YX243PFFhd2EkRTdRcD5YX1p7cG5YdCdae3BuWCdqOy8vCQlZWWFpTUhTbk1YU3tuLy8JCSRuaWlfbk1dYXdhIiI7LwkJLwkJU08oYSRNPj5fWntwblhfbjc8UWEyYSRuNzxRX2k3RV9pTUg3YSlhMS8JCS8JCQlTTyhhJFFYTUVYX09Fez1hMmFmYSlhMS8JCQkJJGlFN11Te3BRYXdhJFFYTUVYX09Fez1hLWEkbjc8UV9pN0VfaU1INzsvCQkJCSRuaWlfbk1dYS53YSJkPlMyZE1he25aPlNaNHdcIltNXU1RWkVTaVg6UTdNRVpoX1FwNT1TWCgkaUU3XVN7cFEpO2FFN1hwRW4oT00+UTcpO1wiYWhFN093XCIjXCJhWFNYPjd3XCIxJD5Nbkh0JzdXU1hfaUU3XSdqdVwiMiY+WDsmPlg7ZFlNMmRZPlMyIjsvCQkJdS8JCQkvCQkJJDduaU1IN1FfWntwblhhd2FAWjdTPihhJE0+Pl9ae3BuWF9uNzxRYVlhJG43PFFfaTdFX2lNSDdhKTsvCQkJJDduaU1IN1FfUVhNRVhfT0V7PWF3YWY7LwkJCSQ3bmlNSDdRYXdhIiI7LwkJCS8JCQlTTyhhJDduaU1IN1FfWntwblhhZHdhdmZhKWExLwkJCQkvCQkJCU97RSgkW2F3YXY7YSRbYWR3YSQ3bmlNSDdRX1p7cG5YO2EkW2ErKylhMS8JCQkJCS8JCQkJCVNPKGEkN25pTUg3UV9RWE1FWF9PRXs9YSF3YSRRWE1FWF9PRXs9YSlhMS8JCQkJCQkvCQkJCQkJJDduaU1IN1FhLndhImQ+UzJkTWF7blo+U1o0d1wiW01dTVFaRVNpWDpRN01FWmhfUXA1PVNYKCQ3bmlNSDdRX1FYTUVYX09Fez0pO2FFN1hwRW4oT00+UTcpO1wiYWhFN093XCIjXCIyJFtkWU0yZFk+UzIiOy8JCQkJCS8JCQkJCXVhNz5RN2ExLwkJCQkJCS8JCQkJCQkkN25pTUg3UWEud2EiZD5TYVo+TVFRd1wiTVpYU103XCIyZFFpTW4yJFtkWVFpTW4yZFk+UzIiOy8JCQkJCXUvCQkJCQkvCQkJCQkkN25pTUg3UV9RWE1FWF9PRXs9YSt3YSRuNzxRX2k3RV9pTUg3Oy8JCQkJdS8JCQkJLwkJCQkkbmlpX25NXWEud2EkN25pTUg3UTsvCQkJLwkJCXVhNz5RN2ExLwkJCQkvCQkJCSRRWE1FWGF3YXY7LwkJCQkkN25XYXdhdmY7LwkJCQkvCQkJCVNPKGEkUVhNRVhfT0V7PWEyYWZhKWExLwkJCQkJLwkJCQkJU08oYSgkUVhNRVhfT0V7PWFZYSRuNzxRX2k3RV9pTUg3KWEyYUZhKWExLwkJCQkJCS8JCQkJCQkkUVhNRVhhd2FAWjdTPihhJFFYTUVYX09Fez1hWWEkbjc8UV9pN0VfaU1IN2EpYS1hRzsvCQkJCQkJJDduV2F3YSRRWE1FWGErYTA7LwkJCQkJCS8JCQkJCQlTTyhhJDduV2EyYSQ3bmlNSDdRX1p7cG5YYSlhMS8JCQkJCQkJJFFYTUVYYXdhJDduaU1IN1FfWntwblhhLWF2ZjsvCQkJCQkJCSQ3bldhd2EkN25pTUg3UV9ae3BuWGEtYXY7LwkJCQkJCXUvCQkJCQkJLwkJCQkJCSQ3bmlNSDdRX1FYTUVYX09Fez1hd2EoJFFYTUVYYS1hdilhKmEkbjc8UV9pN0VfaU1INzsvCQkJCQkvCQkJCQl1LwkJCQkvCQkJCXUvCQkJCS8JCQkJU08oYSRRWE1FWGEyYW1hKWExLwkJCQkJLwkJCQkJJDduaU1IN1FhLndhImQ+UzJkTWF7blo+U1o0d1wiW01dTVFaRVNpWDpRN01FWmhfUXA1PVNYKGYpO2FFN1hwRW4oT00+UTcpO1wiYWhFN093XCIjXCIydmRZTTJkWT5TMmFkPlMyZFFpTW4yLi4uZFlRaU1uMmRZPlMyIjsvCQkJCS8JCQkJdS8JCQkJLwkJCQlPe0UoJFthd2EkUVhNRVg7YSRbYWR3YSQ3blc7YSRbYSsrKWExLwkJCQkJLwkJCQkJU08oYSQ3bmlNSDdRX1FYTUVYX09Fez1hIXdhJFFYTUVYX09Fez1hKWExLwkJCQkJCS8JCQkJCQkkN25pTUg3UWEud2EiZD5TMmRNYXtuWj5TWjR3XCJbTV1NUVpFU2lYOlE3TUVaaF9RcDU9U1goJDduaU1IN1FfUVhNRVhfT0V7PSk7YUU3WHBFbihPTT5RNyk7XCJhaEU3T3dcIiNcIjIkW2RZTTJkWT5TMiI7LwkJCQkJLwkJCQkJdWE3PlE3YTEvCQkJCQkJLwkJCQkJCSQ3bmlNSDdRYS53YSJkPlNhWj5NUVF3XCJNWlhTXTdcIjJkUWlNbjIkW2RZUWlNbjJkWT5TMiI7LwkJCQkJdS8JCQkJCS8JCQkJCSQ3bmlNSDdRX1FYTUVYX09Fez1hK3dhJG43PFFfaTdFX2lNSDc7LwkJCQl1LwkJCQkvCQkJCSQ3bmlNSDdRX1FYTUVYX09Fez1hd2EoJDduaU1IN1FfWntwblhhLWF2KWEqYSRuNzxRX2k3RV9pTUg3Oy8JCQkJJDduaU1IN1FhLndhImQ+UzJkUWlNbjIuLi5kWVFpTW4yZFk+UzJkPlMyZE1he25aPlNaNHdcIltNXU1RWkVTaVg6UTdNRVpoX1FwNT1TWCgkN25pTUg3UV9RWE1FWF9PRXs9KTthRTdYcEVuKE9NPlE3KTtcImFoRTdPd1wiI1wiMiQ3bmlNSDdRX1p7cG5YZFlNMmRZPlMyIjsvCQkJCS8JCQkJJG5paV9uTV1hLndhJDduaU1IN1E7LwkJCS8JCQl1LwkJCS8JCQlTTyhhJE0+Pl9ae3BuWF9uNzxRYTJhJFNhKWExLwkJCQkkaHs8X243VVhhd2EkTT4+X1p7cG5YX243PFFhLWEkUzsvCQkJCVNPKGEkaHs8X243VVhhMmEkbjc8UV9pN0VfaU1IN2EpYTEvCQkJCQkkaHs8X243VVhhd2Ekbjc8UV9pN0VfaU1INzsvCQkJCXUvCQkJCSRuaWlfbk1dYS53YSJkPlMyZE1he25aPlNaNHdcIltNXU1RWkVTaVg6UTdNRVpoX1FwNT1TWCgkUyk7YUU3WHBFbihPTT5RNyk7XCJhaEU3T3dcIiNcImFYU1g+N3dcIjEkPk1uSHQnN1dTWF9uN1VYJ2p1XCIyJkhYOyZIWDtkWU0yZFk+UzIiOy8JCQl1LwkJCS8JCQkkbmlpX25NXWF3YSJkcD5hWj5NUVF3XCJpTUhTbk1YU3tuYWlNSFNuTVhTe24tUT1cIjIiLiRuaWlfbk1dLiJkWXA+MiI7LwkJLwkJdS8JCS8JCVlZYWlNSFNuTVhTe24vLyRTYXdhZjsvL1NPYShhWntwblgoJFhNSFEpYSlhMS8vCU97RTdNWmhhKCRYTUhRYU1RYSRYTUhhdzJhJF1NPnA3KWExLwkvCQkkPlNRWHQkWE1IanQnWE1IJ2phYWF3YSRYTUg7LwkJJD5TUVh0JFhNSGp0J1p7cG5YJ2phYXdhJF1NPnA3Oy8JLwl1Ly8JJFNhd2FmOy8JJDduWEVTN1Fhd2EiIjsvLwlPe0U3TVpoYSgkPlNRWGFNUWEkXU0+cDcpYTEvLwkJU09hKGFYRVM9KCRdTT5wN3QnWE1IJ2opYSlhMS8vCQkkU2ErKzsvCQkvCQkkcEU+X1hNSGF3YVFYRV9FN2k+TVo3KE1FRU04KCImI2ZHMDsiLGEiJmtwe1g7IixhIiZNPWk7IiksYU1FRU04KCInIixhJyInLGEiJiIpLGEkXU0+cDd0J1hNSCdqKTsvCQkvCQlTTyhhJFp7bk9TSHQnTT4+ezxfTT5YX3BFPidqYSlhJD5TbjRhd2EiZE1haEU3T3dcIiJhLmEkWntuT1NIdCdoWFhpX2h7PTdfcEU+J2phLmEiWE1IUVkiYS5hRU08cEU+N25ae1c3KGFXPjdfUVhFWHs+ezw3RSgkcEU+X1hNSClhKWEuYSJZXCJhWE1FSDdYd1wiXzU+TW40XCIyZFNhWj5NUVF3XCJPTWFPTS03ODdhaXtRU1hTe24tPjdPWFwiMmRZUzIiYS5hJD5Nbkh0J1p7PT1fXVM3PCdqYS5hImRZTTIiOy8JCTc+UTdhJD5TbjRhd2EiZE1haEU3T3dcIjEkWntuT1NIdCdoWFhpX2h7PTdfcEU+J2p1U25XN1UuaWhpP1d7d1hNSFEmTT1pO1hNSHciYS5hRU08cEU+N25ae1c3KGFXPjdfUVhFWHs+ezw3RSgkcEU+X1hNSClhKWEuYSJcImFYTUVIN1h3XCJfNT5NbjRcIjJkU2FaPk1RUXdcIk9NYU9NLTc4N2Fpe1FTWFN7bi0+N09YXCIyZFlTMiJhLmEkPk1uSHQnWns9PV9dUzc8J2phLmEiZFlNMiI7Ly8JCSQ9N25wXz5TbjRhd2FkZGR9ZXFEL2FhYWFhYWFhZFdTXWFaPk1RUXciNVhuLUhFe3BpIjIvYWFhYWFhYWFhYWRNYWhFN093IiMiYVo+TVFRdyJXRXtpV3s8bi1Ye0hIPjdhbntaez57RSJhV01YTS1Ye0hIPjd3IldFe2lXezxuImFNRVNNLTdVaU1uVzdXdyJYRXA3IjJkU2FaPk1RUXciT01hT00tNU1FUSIyZFlTMmRRaU1uYVo+TVFRdyJaTUU3WCIyZFlRaU1uMmRZTTIvYWFhYWFhYWFhYWRwPmFaPk1RUXciV0V7aVd7PG4tPTducGFYN1VYLT43T1hhV0V7aVd7PG4tPTducC1FU0hoWCIyL2FhYWFhYWFhYWFhYWQ+UzIxJD5TbjR1ZFk+UzIvYWFhYWFhYWFhYWFhZD5TMmRNYXBTV3ciMSRTdSJhWj5NUVF3IjdXU1g+U240ImFoRTdPdyI/PXtXd1hNSFFaPntwVyIyZFNhWj5NUVF3Ik9NYU9NLWk3blpTPi1Ra3BNRTcte2Fpe1FTWFN7bi0+N09YIjJkWVMyMSQ+TW5IdCc8e0VXXz43V1NYJ2p1ZFlNMmRZPlMyLwkJCWQ+U2FaPk1RUXciV1NdU1c3RSIyZFk+UzIvYWFhYWFhYWFhYWFhZD5TMmRNYXBTV3ciMSRTdSJhWj5NUVF3Ilc3Pj5TbjQiYWhFN093Ij89e1d3WE1IUVo+e3BXIjJkU2FaPk1RUXciT01hT00tWEVNUWgte2Fpe1FTWFN7bi0+N09YYVg3VVgtV01uSDdFIjJkWVMyMSQ+TW5IdCc8e0VXXz5XNz4nanVkWU0yZFk+UzIvYWFhYWFhYWFhYWRZcD4yL2FhYWFhYWFhZFlXU10yL31lcUQ7Ly8JCSRdTT5wN3QnWntwblgnamF3YW5wPTU3RV9Pe0U9TVgoYSRdTT5wN3QnWntwblgnaixhZixhJywnLGEnYScpOy8vCQkkN25YRVM3UWEud2EiZFhFMi9hYWFhYWFhYWRYVzJkV1NdYVNXd1wiWntuWDduWF8xJFN1XCIyMSRdTT5wN3QnWE1IJ2p1ZFlXU10yZFlYVzIvYWFhYWFhYWFkWFdhWj5NUVF3XCJYN1VYLVo3blg3RWFYN1VYLW57PEVNaVwiMmQ1MjEkXU0+cDd0J1p7cG5YJ2p1ZFk1MmRZWFcyL2FhYWFhYWFhZFhXMjEkPTducF8+U240dWRZWFcyL2FhYWFhYWFhZFhXMmRTbmlwWGFuTT03d1wiUTc+N1pYN1dfWE1IUXRqXCJhXU0+cDd3XCIxJF1NPnA3dCdYTUgnanVcImFYOGk3d1wiWmg3WjQ1e1VcImFaPk1RUXdcIlNaaDdaNFwiMmRZWFcyL2FhYWFhYWFhZFlYRTIiOy8vCQl1Ly8JdS8vLwlTTyhhJHtFVzdFXzU4YXd3YSJXN1FaIilhJHtFVzdFXzU4YXdhIk1RWiI7Lwk3PlE3YSR7RVc3RV81OGF3YSJXN1FaIjsvLwkkWk1FN1hhd2FNRUVNOCgnWntwblgnYXcyYScnLGEnWE1IJ2F3MmEnJyk7Ly8JU08oYSR7RVc3RV81OGF3d2EiVzdRWiJhNjNMYSRRe0VYXzU4YXd3YSJae3BuWCIpYTEvCQkkWk1FN1h0J1p7cG5YJ2phd2EiYVdFe2lwaSI7Lwl1LwkvCVNPKGEke0VXN0VfNThhd3dhIlc3UVoiYTYzTGEkUXtFWF81OGF3d2EiWE1IIilhMS8JCSRaTUU3WHQnWE1IJ2phd2EiYVdFe2lwaSI7Lwl1Ly83Wmh7YWRkZH1lcUQvZFdTXWFaPk1RUXciNXtVLVp7blg3blgiMi9hYWFhZFhNNT43YVo+TVFRdyJYTTU+N2FYTTU+Ny1VUWFYTTU+Ny1oe103RSIyL2FhYWFhYWRYaDdNVzIvYWFhYWFhZFhFMi9hYWFhYWFhYWRYaGFaPk1RUXciWDdVWC0+N09YMSRaTUU3WHQnWE1IJ2p1IjIxJD5Nbkh0J1hNSFFaPntwV19uTT03J2p1YWRNYXtuWj5TWjR3IltNXU1RWkVTaVg6e0VXN0VfUXA1PVNYKCdYTUgnLGEnMSR7RVc3RV81OHUnKTthRTdYcEVuKE9NPlE3KTsiYWhFN093IiMiMmRRaU1uYVo+TVFRdyJaTUU3WCIyZFlRaU1uZFlNMmRZWGgyL2FhYWFhYWFhZFhoYVo+TVFRdyJYN1VYLVo3blg3RTEkWk1FN1h0J1p7cG5YJ2p1ImFRWDg+N3ciPFNXWGg6YW1mZmlVOyIyMSQ+TW5IdCdYTUhRWj57cFdfWntwblgnanVhZE1he25aPlNaNHciW01dTVFaRVNpWDp7RVc3RV9RcDU9U1goJ1p7cG5YJyxhJzEke0VXN0VfNTh1Jyk7YUU3WHBFbihPTT5RNyk7ImFoRTdPdyIjIjJkUWlNbmFaPk1RUXciWk1FN1giMmRZTTJkWVFpTW5kWVhoMi9hYWFhYWFhYWRYaGFRWDg+N3ciPFNXWGg6YUYuR0pORTc9IjImbjVRaTtkWVhoMi9hYWFhYWFhYWRYaGFRWDg+N3ciPFNXWGg6YW0uTkU3PSIyZFNuaXBYYVg4aTd3IlpoN1o0NXtVImFuTT03dyI9TVFYN0VfNXtVImFYU1g+N3ciMSQ+TW5IdCc3V1NYX1E3Pk0+PidqdSJhe25aPlNaNHciW01dTVFaRVNpWDpaNDdaNF9wblpoN1o0X00+PigpImFaPk1RUXciU1poN1o0IjJkWVhoMi9hYWFhYWFkWVhFMi9hYWFhYWFkWVhoN01XMi8JYWFkWDV7VzgyLwkJMSQ3blhFUzdRdS8JYWFkWVg1e1c4Mi8JZFlYTTU+NzIvZFlXU10yL2RXU11hWj5NUVF3ImlNbjc+LU97e1g3RSIyLwlkV1NdYVo+TVFRdyJpcD4+LUVTSGhYIjIvCWRRNz43Wlhhbk09N3ciTVpYU3tuImFaPk1RUXcicG5TT3tFPSIyL2R7aVhTe25hXU0+cDd3IiIyMSQ+TW5IdCc3V1NYX1E3Pk1aWCdqdWRZe2lYU3tuMi9ke2lYU3tuYV1NPnA3dyI9TVFRX1c3PjdYNyIyMSQ+TW5IdCc3V1NYX1E3Plc3PidqdWRZe2lYU3tuMi9kWVE3PjdaWDJkU25pcFhhWj5NUVF3IjVYbmE1SC01RXs8bi1CZmZhNVhuLVE9YTVYbi1FTVNRN1dhaXtRU1hTe24tRVNIaFgiYVg4aTd3IlFwNT1TWCJhXU0+cDd3IjEkPk1uSHQnNV9RWE1FWCdqdSIyLwlkWVdTXTIvZFlXU10yL31lcUQ7Ly8vdWFhNz5RN2ExLy83Wmh7YWRkZH1lcUQvZFdTXWFaPk1RUXciaU1uNz4tNXtXOCIyL2RYTTU+N2E8U1dYaHcidmZmJSIyL2FhYWFkWEUyL2FhYWFhYWFhZFhXYVFYOD43dyJoN1NIaFg6TmZpVTsiMmRXU11hTT5TSG53Ilo3blg3RSIyMSQ+TW5IdCdYTUhRWj57cFdfbntYX097cG5XJ2p1ZFlXU10yZFlYVzIvYWFhYWRZWEUyL2RZWE01PjcyL2RZV1NdMi99ZXFEOy8vdS8vN1poe2FkZGR9ZXFEL2RZV1NdMi9kV1NdYVo+TVFRdyI9NS1tZiIyMSRuaWlfbk1ddWRZV1NdMi9kWU97RT0yL2RRWkVTaVgyYWEvZCEtLWEvYWFhYU9wblpYU3tuYVE3TUVaaF9RcDU9U1goaUU9KTEvYWFhYWFhV3tacD03blgubk1dUy5RWE1FWF9PRXs9Ll1NPnA3d2lFPTsvYWFhYWFhV3tacD03blgubk1dUy5RcDU9U1goKTsvYWFhYWFhRTdYcEVuYU9NPlE3Oy9hYWFhdS8JL2FhYWFPcG5aWFN7bmF7RVc3RV9RcDU9U1goUXtFWCxhe0VXN0UpMS9hYWFhYWFXe1pwPTduWC5uTV1TLlF7RVhfNTguXU0+cDd3UXtFWDsvCWFhV3tacD03blgubk1dUy57RVc3RV81OC5dTT5wN3d7RVc3RTsvYWFhYWFhV3tacD03blgubk1dUy5RcDU9U1goKTsvYWFhYWFhRTdYcEVuYU9NPlE3Oy9hYWFhdS8JLy8JT3BuWlhTe25hWjQ3WjRfcG5aaDdaNF9NPj4oKWExLwlhYWFhXU1FYU9FPWF3YVd7WnA9N25YLntpWFN7blE1TUU7LwlhYWFhT3tFYShdTUVhU3dmO1NkT0U9Ljc+Nz03blhRLj43bkhYaDtTKyspYTEvCWFhYWFhYWFhXU1FYTc+PW5YYXdhT0U9Ljc+Nz03blhRdFNqOy8JYWFhYWFhYWFTT2EoNz49blguWDhpN3d3J1poN1o0NXtVJylhMS8JYWFhYWFhYWFhYWFhU08oT0U9Lj1NUVg3RV81e1UuWmg3WjQ3V2F3d2FYRXA3KTFhNz49blguWmg3WjQ3V3dPTT5RNzthJCg3Pj1uWCkuaU1FN25YUSgnWEUnKS5FNz17XTdzPk1RUSgnPE1FblNuSCcpO2F1LwlhYWFhYWFhYWFhYWE3PlE3MWE3Pj1uWC5aaDdaNDdXd1hFcDc7YSQoNz49blgpLmlNRTduWFEoJ1hFJykuTVdXcz5NUVEoJzxNRW5TbkgnKTt1LwlhYWFhYWFhYXUvCWFhYWF1LwlhYWFhU08oT0U9Lj1NUVg3RV81e1UuWmg3WjQ3V2F3d2FYRXA3KTFhT0U9Lj1NUVg3RV81e1UuWmg3WjQ3V2F3YU9NPlE3O2F1LwlhYWFhNz5RNzFhT0U9Lj1NUVg3RV81e1UuWmg3WjQ3V2F3YVhFcDc7YXUvCQkvCQkkKE9FPS49TVFYN0VfNXtVKS5pTUU3blhRKCdYRScpLkU3PXtdN3M+TVFRKCc8TUVuU25IJyk7LwkJLwkJJC5wblNPe0U9LnBpV01YNygpOy8JCS8JdS8vCSQoT3BuWlhTe24oKTEvCS8JCSQoJy5YTTU+NycpLk9TblcoJ1hFYTJhWFc6Pk1RWC1aaFM+VycpLk9TblcoJ1NuaXBYdFg4aTd3Wmg3WjQ1e1VqJykue24oJ1poTW5INycsYU9wblpYU3tuKClhMS8JCQlTTygkKFhoU1EpLlNRKCc6Wmg3WjQ3VycpKWExLwkJCQkkKFhoU1EpLmlNRTduWFEoJ1hFJykuTVdXcz5NUVEoJzxNRW5TbkgnKTsvCQkJdS8JCQk3PlE3YTEvCQkJCSQoWGhTUSkuaU1FN25YUSgnWEUnKS5FNz17XTdzPk1RUSgnPE1FblNuSCcpOy8JCQl1LwkJdSk7LwkJLwkJXU1FYVhNSF9uTT03YXdhJyc7LwkJXU1FYVFNTzdfbk09N2F3YScnOy8vCQkkKCcuVzc+PlNuNCcpLlo+U1o0KE9wblpYU3tuKCkxLy8JCQlYTUhfbk09N2F3YSQoJyNae25YN25YXycrJChYaFNRKS5NWFhFKCdwU1cnKSkuWDdVWCgpOy8vCQlhYWFhTER6WntuT1NFPUw3PjdYNyhhJzEkPk1uSHQnWE1IUVo+e3BXX1c3PidqdWEmPk1rcHs7JytYTUhfbk09NysnJkVNa3B7O2ExJD5Nbkh0J1hNSFFaPntwV19XNz5fdidqdScsYScxJD5Nbkh0J2lfWntuT1NFPSdqdScsYU9wblpYU3tuYSgpYTEvLwkJCQlXe1pwPTduWC4+e1pNWFN7bnciPz17V3dYTUhRWj57cFcmUVhNRVhfT0V7PXcxJFFYTUVYX09Fez11JnBRN0VfaE1RaHcxJFc+N18+e0hTbl9oTVFodTEkcEU+UTdNRVpodSZNWlhTe253Vzc+N1g3Jm5NPTd3ImErYTduWntXN3lnYnN7PWl7bjduWChYTUhfbk09NylhK2EnJzsvLwkJCXVhKTsvLwkJCUU3WHBFbmFPTT5RNzsvCQl1KTsvLy8JCSQoJy43V1NYPlNuNCcpLlo+U1o0KE9wblpYU3tuKCkxLy8JCQlYTUhfbk09N2F3YSQoJyNae25YN25YXycrJChYaFNRKS5NWFhFKCdwU1cnKSkuWDdVWCgpOy8JCQlRTU83X25NPTdhd2FYTUhfbk09Ny5FN2k+TVo3KFkiWUgsYSIma3B7WDsiKTsvCQkJLwkJCUxEemlFez1pWCgnMSQ+TW5IdCdYTUhRWj57cFdfN1dTWF92J2p1JyxhUU1PN19uTT03LGEnMSQ+TW5IdCdYTUhRWj57cFdfN1dTWCdqdScsYU9wblpYU3tuYShFKWExLwkJCQlTT2EoWE1IX25NPTdhIXdhRSlhMQkvCQkJCQlXe1pwPTduWC4+e1pNWFN7bnciPz17V3dYTUhRWj57cFcmUVhNRVhfT0V7PXcxJFFYTUVYX09Fez11JnBRN0VfaE1RaHcxJFc+N18+e0hTbl9oTVFodTEkcEU+UTdNRVpodSZNWlhTe253N1dTWCZ7PlduTT03dyJhK2E3blp7Vzd5Z2Jzez1pe243blgoWE1IX25NPTcpYSthJyZuNzxuTT03dydhK2E3blp7Vzd5Z2Jzez1pe243blgoRSk7LwkJCQl1CQkvCQkJdSxhT00+UTcsYScxJD5Nbkh0J243PFFfUU1dNydqdSdhKTsvLwkJCUU3WHBFbmFPTT5RNzsvCQl1KTsvLwl1KTsvWVktLTIvZFlRWkVTaVgyL31lcUQ7Ly8vN1poe097e1g3RSgpOy8/Mg==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdnYgpTRFd9ei95UGNNbks2aThSSWZvbEU9c0h7MHhhQUNGMVZocmp3W0wgcDxtT1lRZFpVQmU3WEoyTjU5M3V2cS50a1Q+XTRHJywnUklZaUxkSEUKVU9WYW5KQXB5V0IwekZybUNnbzlHIEtRNHtQaFNdPWpEOHV3MmYvczxjeDZUZXQ3PjViWE59MU0uW3FabHZrMycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( !$user_group[$member_id['user_group']]['admin_tagscloud'] ) {
+	msg( "error", $lang['index_denied'], $lang['index_denied'] );
+}
+
+$start_from = isset($_REQUEST['start_from']) ? intval( $_REQUEST['start_from'] ) : 0;
+$news_per_page = 50;
+
+if( $start_from < 0 ) $start_from = 0;
+
+if (isset($_REQUEST['searchword']) AND $_REQUEST['searchword']) {
+  
+  $searchword = urldecode ( $_REQUEST['searchword'] );
+  
+  if( @preg_match( "/[\||\<|\>]/", $searchword ) ) $searchword = "";
+  else $searchword = htmlspecialchars( strip_tags( stripslashes( trim( $searchword ) ) ), ENT_COMPAT, 'UTF-8' );
+  
+} else $searchword = "";
+
+if ($searchword) $urlsearch = "&searchword={$searchword}"; else $urlsearch = "";
+
+$sort_by = "tag";
+
+if( isset($_REQUEST['sort_by']) ) {
+	$allowed_sort = array( 'tag', 'count');
+	
+	if( in_array( (string)$_REQUEST['sort_by'], $allowed_sort ) ) {
+		$sort_by = (string)$_REQUEST['sort_by'];
+	}
+	
+}
+
+$order_by = "desc";
+
+if( isset($_REQUEST['order_by']) ) {
+	$allowed_order = array( 'asc', 'desc');
+	
+	if( in_array( (string)$_REQUEST['order_by'], $allowed_order ) ) {
+		$order_by = (string)$_REQUEST['order_by'];
+	}
+	
+}
+
+if ($_POST['action'] == "mass_delete") {
+
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+
+	$selected_tags = $_POST['selected_tags'];
+
+	if( ! $selected_tags ) {
+		msg( "error", $lang['mass_error'], $lang['mass_tags_err'], "?mod=tagscloud&start_from={$start_from}" );
+	}
+
+	foreach ( $selected_tags as $name ) {
+
+		if( @preg_match( "/[\||\<|\>]/", $name ) ) $name = "";
+		else $name = @$db->safesql( htmlspecialchars( strip_tags( stripslashes( trim( $name ) ) ), ENT_COMPAT, 'UTF-8' ) );
+
+		if (!$name) { msg( "error", $lang['mass_error'], $lang['mass_tags_err_1'], "?mod=tagscloud&start_from={$start_from}" ); die(); }
+
+		$db->query ( "SELECT news_id FROM " . PREFIX . "_tags WHERE tag = '{$name}'" );
+
+		$tag_array = array ();
+				
+		while ( $row = $db->get_row () ) {
+					
+			$tag_array[] = $row['news_id'];
+				
+		}
+		$db->free ();
+
+		if (count ( $tag_array )) {
+					
+			$tag_array = "(" . implode ( ",", $tag_array ) . ")";
+	
+			$sql_result = $db->query( "SELECT id, tags FROM " . PREFIX . "_post WHERE id IN {$tag_array}" );
+	
+			while ( $row = $db->get_row( $sql_result ) ) {
+	
+				$row['tags'] = explode( ",", $row['tags'] );
+	
+				$tags = array ();
+				
+				foreach ( $row['tags'] as $value ) {
+					
+					$value = trim( $value );
+					if ( stripslashes($value) == stripslashes($name) ) continue;
+					$tags[] = $value;
+				}
+	
+				$tags = array_unique($tags);
+	
+				if ( count($tags) ) $post_tags = @$db->safesql( implode( ", ", $tags ) ); else $post_tags = "";
+	
+				$db->query( "UPDATE " . PREFIX . "_post SET tags='{$post_tags}' WHERE id='{$row['id']}'" );
+	
+				$db->query( "DELETE FROM " . PREFIX . "_tags WHERE news_id = '{$row['id']}'" );
+	
+				if ( count($tags) ) {
+	
+					$tagcloud = array ();
+		
+					foreach ( $tags as $value ) {
+									
+						$tagcloud[] = "('" . $row['id'] . "', '" . $db->safesql(trim( $value )) . "')";
+					}
+		
+					$tagcloud = implode( ", ", $tagcloud );
+					$db->query( "INSERT INTO " . PREFIX . "_tags (news_id, tag) VALUES " . $tagcloud );
+				}
+			}
+	
+			$db->query( "DELETE FROM " . PREFIX . "_tags WHERE tag = '{$name}'" );
+			$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '61', '{$name}')" );
+
+		}
+
+	}
+
+	clear_cache();
+	header( "Location: ?mod=tagscloud&start_from={$start_from}{$urlsearch}" ); die();
+
+}
+
+
+if ($_GET['action'] == "delete") {
+
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+
+	if( @preg_match( "/[\||\<|\>]/", $_GET['name'] ) ) $_GET['name'] = "";
+	else $_GET['name'] = @$db->safesql( htmlspecialchars( strip_tags( stripslashes( trim( $_GET['name'] ) ) ), ENT_COMPAT, 'UTF-8' ) );
+
+	if (!$_GET['name']) { header( "Location: ?mod=tagscloud" ); die(); }
+
+	$db->query ( "SELECT news_id FROM " . PREFIX . "_tags WHERE tag = '{$_GET['name']}'" );
+			
+	$tag_array = array ();
+			
+	while ( $row = $db->get_row () ) {
+				
+		$tag_array[] = $row['news_id'];
+			
+	}
+	$db->free ();
+
+	if (count ( $tag_array )) {
+				
+		$tag_array = "(" . implode ( ",", $tag_array ) . ")";
+
+		$sql_result = $db->query( "SELECT id, tags FROM " . PREFIX . "_post WHERE id IN {$tag_array}" );
+
+		while ( $row = $db->get_row( $sql_result ) ) {
+
+			$row['tags'] = explode( ",", $row['tags'] );
+
+			$tags = array ();
+			
+			foreach ( $row['tags'] as $value ) {
+				
+				$value = trim( $value );
+				if ( stripslashes($value) == stripslashes($_GET['name']) ) continue;
+				$tags[] = $value;
+			}
+
+			$tags = array_unique($tags);
+
+			if ( count($tags) ) $post_tags = $db->safesql( implode( ", ", $tags ) ); else $post_tags = "";
+
+			$db->query( "UPDATE " . PREFIX . "_post SET tags='{$post_tags}' WHERE id='{$row['id']}'" );
+
+			$db->query( "DELETE FROM " . PREFIX . "_tags WHERE news_id = '{$row['id']}'" );
+
+			if ( count($tags) ) {
+
+				$tagcloud = array ();
+	
+				foreach ( $tags as $value ) {
+								
+					$tagcloud[] = "('" . $row['id'] . "', '" . $db->safesql(trim( $value )) . "')";
+				}
+	
+				$tagcloud = implode( ", ", $tagcloud );
+				$db->query( "INSERT INTO " . PREFIX . "_tags (news_id, tag) VALUES " . $tagcloud );
+			}
+		}
+
+		$db->query( "DELETE FROM " . PREFIX . "_tags WHERE tag = '{$_GET['name']}'" );
+		$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '61', '{$_GET['name']}')" );
+
+	}
+
+	clear_cache();
+	header( "Location: ?mod=tagscloud&start_from={$start_from}{$urlsearch}" ); die();
+}
+
+if ($_GET['action'] == "edit") {
+
+	if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+		
+		die( "Hacking attempt! User not found" );
+	
+	}
+
+	if( @preg_match( "/[\||\<|\>]/", $_GET['oldname'] ) ) $_GET['oldname'] = "";
+	else $_GET['oldname'] = @$db->safesql( htmlspecialchars( strip_tags( stripslashes( trim( $_GET['oldname'] ) ) ), ENT_COMPAT, 'UTF-8' ) );
+
+	if( @preg_match( "/[\||\<|\>]/", $_GET['newname'] ) ) $_GET['newname'] = "";
+	else $_GET['newname'] = @$db->safesql( htmlspecialchars( strip_tags( stripslashes( trim( $_GET['newname'] ) ) ), ENT_COMPAT, 'UTF-8' ) );
+
+	$_GET['newname'] = str_replace (",", " ", $_GET['newname']);
+
+	if (!$_GET['oldname'] OR !$_GET['newname']) { header( "Location: ?mod=tagscloud" ); die(); }
+
+	$db->query( "INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('".$db->safesql($member_id['name'])."', '{$_TIME}', '{$_IP}', '62', '{$_GET['oldname']} to: {$_GET['newname']}')" );
+
+	$db->query ( "SELECT news_id FROM " . PREFIX . "_tags WHERE tag = '{$_GET['oldname']}'" );
+			
+	$tag_array = array ();
+			
+	while ( $row = $db->get_row () ) {
+				
+		$tag_array[] = $row['news_id'];
+			
+	}
+	$db->free ();
+
+	if (count ( $tag_array )) {
+				
+		$tag_array = "(" . implode ( ",", $tag_array ) . ")";
+
+		$sql_result = $db->query( "SELECT id, tags FROM " . PREFIX . "_post WHERE id IN {$tag_array}" );
+
+		while ( $row = $db->get_row( $sql_result ) ) {
+
+			$row['tags'] = explode( ",", $row['tags'] );
+
+			$tags = array ();
+			
+			foreach ( $row['tags'] as $value ) {
+				
+				$value = trim( $value );
+				if ( stripslashes($value) == stripslashes($_GET['oldname']) ) $value = stripslashes($_GET['newname']);
+				$tags[] = $value;
+			}
+
+			if ( count($tags) ) { 
+
+				$tags = array_unique($tags);
+				$post_tags = $db->safesql(implode( ", ", $tags ));
+
+			} else $post_tags = "";
+
+			$db->query( "UPDATE " . PREFIX . "_post SET tags='{$post_tags}' WHERE id='{$row['id']}'" );
+
+			$db->query( "DELETE FROM " . PREFIX . "_tags WHERE news_id = '{$row['id']}'" );
+
+			if ( count($tags) ) {
+
+				$tagcloud = array ();
+	
+				foreach ( $tags as $value ) {
+								
+					$tagcloud[] = "('" . $row['id'] . "', '" . $db->safesql(trim( $value )) . "')";
+				}
+
+				$tagcloud = implode( ", ", $tagcloud );
+				$db->query( "INSERT INTO " . PREFIX . "_tags (news_id, tag) VALUES " . $tagcloud );
+
+			}
+		}
+	}
+
+	clear_cache();
+	header( "Location: ?mod=tagscloud&start_from={$start_from}{$urlsearch}" ); die();
+
+}
+
+echoheader( "<i class=\"fa fa-tags position-left\"></i><span class=\"text-semibold\">{$lang['header_tc_1']}</span>", $lang['header_tc_2'] );
+
+echo <<<HTML
+<form action="?mod=tagscloud" method="get" name="navi" id="navi">
+<input type="hidden" name="mod" value="tagscloud">
+<input type="hidden" name="searchword" value="{$searchword}">
+<input type="hidden" name="start_from" id="start_from" value="{$start_from}">
+<input type="hidden" name="sort_by" id="sort_by" value="{$sort_by}">
+<input type="hidden" name="order_by" id="order_by" value="{$order_by}">
+</form>
+
+<form action="?mod=tagscloud" method="post" name="optionsbar" id="optionsbar">
+<input type="hidden" name="mod" value="tagscloud">
+<input type="hidden" name="user_hash" value="{$dle_login_hash}">
+<input type="hidden" name="start_from" id="start_from" value="{$start_from}">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['opt_tagscloud']}
+	<div class="heading-elements">
+		<div class="form-group has-feedback" style="width:250px;">
+			<input name="searchword" type="search" dir="auto" class="form-control" placeholder="{$lang['search_field']}" onchange="document.optionsbar.start_from.value=0;" value="{$searchword}">
+			<div class="form-control-feedback">
+			    <a href="#" onclick="$(this).closest('form').submit();"><i class="fa fa-search text-size-base text-muted"></i></a>
+			</div>
+		</div>
+	</div>
+  </div>
+HTML;
+
+
+$tags = array();
+$list = array();
+
+$i = $start_from;
+
+if ( $searchword ) {
+  
+  $searchword = $db->safesql($searchword);
+  $where = "WHERE tag like '%{$searchword}%' ";
+  $lang['tagscloud_not_found'] = $lang['tags_s_not_found'];
+  
+} else $where = "";
+
+$db->query("SELECT tag, COUNT(*) AS count FROM " . PREFIX . "_tags {$where}GROUP BY tag ORDER BY {$sort_by} {$order_by} LIMIT {$start_from},{$news_per_page}");
+
+while($row = $db->get_row()){
+  
+  if( $row['tag'] ) {
+	  $tags[$row['tag']] = $row['count'];
+	  $i ++;
+  }
+  
+}
+$db->free();
+
+$result_count = $db->super_query("SELECT COUNT(DISTINCT tag) as count FROM " . PREFIX . "_tags {$where}");
+$all_count_news = $result_count['count'];
+
+		// pagination
+
+		$npp_nav = "";
+		
+		if( $all_count_news > $news_per_page ) {
+		
+			if( $start_from > 0 ) {
+				$previous = $start_from - $news_per_page;
+				$npp_nav .= "<li><a onclick=\"javascript:search_submit($previous); return(false);\" href=\"#\" title=\"{$lang['edit_prev']}\">&lt;&lt;</a></li>";
+			}
+			
+			$enpages_count = @ceil( $all_count_news / $news_per_page );
+			$enpages_start_from = 0;
+			$enpages = "";
+			
+			if( $enpages_count <= 10 ) {
+				
+				for($j = 1; $j <= $enpages_count; $j ++) {
+					
+					if( $enpages_start_from != $start_from ) {
+						
+						$enpages .= "<li><a onclick=\"javascript:search_submit($enpages_start_from); return(false);\" href=\"#\">$j</a></li>";
+					
+					} else {
+						
+						$enpages .= "<li class=\"active\"><span>$j</span></li>";
+					}
+					
+					$enpages_start_from += $news_per_page;
+				}
+				
+				$npp_nav .= $enpages;
+			
+			} else {
+				
+				$start = 1;
+				$end = 10;
+				
+				if( $start_from > 0 ) {
+					
+					if( ($start_from / $news_per_page) > 4 ) {
+						
+						$start = @ceil( $start_from / $news_per_page ) - 3;
+						$end = $start + 9;
+						
+						if( $end > $enpages_count ) {
+							$start = $enpages_count - 10;
+							$end = $enpages_count - 1;
+						}
+						
+						$enpages_start_from = ($start - 1) * $news_per_page;
+					
+					}
+				
+				}
+				
+				if( $start > 2 ) {
+					
+					$enpages .= "<li><a onclick=\"javascript:search_submit(0); return(false);\" href=\"#\">1</a></li> <li><span>...</span></li>";
+				
+				}
+				
+				for($j = $start; $j <= $end; $j ++) {
+					
+					if( $enpages_start_from != $start_from ) {
+						
+						$enpages .= "<li><a onclick=\"javascript:search_submit($enpages_start_from); return(false);\" href=\"#\">$j</a></li>";
+					
+					} else {
+						
+						$enpages .= "<li class=\"active\"><span>$j</span></li>";
+					}
+					
+					$enpages_start_from += $news_per_page;
+				}
+				
+				$enpages_start_from = ($enpages_count - 1) * $news_per_page;
+				$enpages .= "<li><span>...</span></li><li><a onclick=\"javascript:search_submit($enpages_start_from); return(false);\" href=\"#\">$enpages_count</a></li>";
+				
+				$npp_nav .= $enpages;
+			
+			}
+			
+			if( $all_count_news > $i ) {
+				$how_next = $all_count_news - $i;
+				if( $how_next > $news_per_page ) {
+					$how_next = $news_per_page;
+				}
+				$npp_nav .= "<li><a onclick=\"javascript:search_submit($i); return(false);\" href=\"#\" title=\"{$lang['edit_next']}\">&gt;&gt;</a></li>";
+			}
+			
+			$npp_nav = "<ul class=\"pagination pagination-sm\">".$npp_nav."</ul>";
+		
+		}
+		
+		// pagination
+
+$i = 0;
+
+if ( count($tags) ) {
+
+	foreach ($tags as $tag => $value) {
+	
+		$list[$tag]['tag']   = $tag;
+		$list[$tag]['count']  = $value;
+	
+	}
+
+	$i = 0;
+	$entries = "";
+
+	foreach ($list as $value) {
+
+		if ( trim($value['tag']) ) {
+
+		$i ++;
+		
+		$url_tag = str_replace(array("&#039;", "&quot;", "&amp;"), array("'", '"', "&"), $value['tag']);
+		
+		if( $config['allow_alt_url'] ) $link = "<a href=\"" . $config['http_home_url'] . "tags/" . rawurlencode( dle_strtolower($url_tag) ) . "/\" target=\"_blank\"><i class=\"fa fa-eye position-left\"></i>" . $lang['comm_view'] . "</a>";
+		else $link = "<a href=\"{$config['http_home_url']}index.php?do=tags&amp;tag=" . rawurlencode( dle_strtolower($url_tag) ) . "\" target=\"_blank\"><i class=\"fa fa-eye position-left\"></i>" . $lang['comm_view'] . "</a>";
+
+		$menu_link = <<<HTML
+        <div class="btn-group">
+          <a href="#" class="dropdown-toggle nocolor" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-bars"></i><span class="caret"></span></a>
+          <ul class="dropdown-menu text-left dropdown-menu-right">
+            <li>{$link}</li>
+            <li><a uid="{$i}" class="editlink" href="?mod=tagscloud"><i class="fa fa-pencil-square-o position-left"></i>{$lang['word_ledit']}</a></li>
+			<li class="divider"></li>
+            <li><a uid="{$i}" class="dellink" href="?mod=tagscloud"><i class="fa fa-trash-o position-left text-danger"></i>{$lang['word_ldel']}</a></li>
+          </ul>
+        </div>
+HTML;
+
+		$value['count'] = number_format( $value['count'], 0, ',', ' ');
+
+		$entries .= "<tr>
+        <td><div id=\"content_{$i}\">{$value['tag']}</div></td>
+        <td class=\"text-center text-nowrap\"><b>{$value['count']}</b></td>
+        <td>{$menu_link}</td>
+        <td><input name=\"selected_tags[]\" value=\"{$value['tag']}\" type=\"checkbox\" class=\"icheck\"></td>
+        </tr>";
+
+		}
+
+	}
+
+
+	if( $order_by == "desc") $order_by = "asc";
+	else $order_by = "desc";
+
+	$caret = array('count' => '', 'tag' => '');
+
+	if( $order_by == "desc" AND $sort_by == "count") {
+		$caret['count'] = " dropup";
+	}
+	
+	if( $order_by == "desc" AND $sort_by == "tag") {
+		$caret['tag'] = " dropup";
+	}
+
+echo <<<HTML
+<div class="box-content">
+    <table class="table table-xs table-hover">
+      <thead>
+      <tr>
+        <th class="text-left{$caret['tag']}">{$lang['tagscloud_name']} <a onclick="javascript:order_submit('tag', '{$order_by}'); return(false);" href="#"><span class="caret"></span</a></th>
+        <th class="text-center{$caret['count']}" style="width: 200px;">{$lang['tagscloud_count']} <a onclick="javascript:order_submit('count', '{$order_by}'); return(false);" href="#"><span class="caret"></a></span</th>
+        <th style="width: 4.375rem">&nbsp;</th>
+        <th style="width: 2.5rem"><input type="checkbox" name="master_box" title="{$lang['edit_selall']}" onclick="javascript:ckeck_uncheck_all()" class="icheck"></th>
+      </tr>
+      </thead>
+	  <tbody>
+		{$entries}
+	  </tbody>
+	</table>
+</div>
+<div class="panel-footer">
+	<div class="pull-right">
+	<select name="action" class="uniform">
+<option value="">{$lang['edit_selact']}</option>
+<option value="mass_delete">{$lang['edit_seldel']}</option>
+</select><input class="btn bg-brown-600 btn-sm btn-raised position-right" type="submit" value="{$lang['b_start']}">
+	</div>
+</div>
+HTML;
+
+
+}  else {
+
+echo <<<HTML
+<div class="panel-body">
+<table width="100%">
+    <tr>
+        <td style="height:50px;"><div align="center">{$lang['tagscloud_not_found']}</div></td>
+    </tr>
+</table>
+</div>
+HTML;
+
+}
+
+echo <<<HTML
+</div>
+<div class="mb-20">{$npp_nav}</div>
+</form>
+<script>  
+<!-- 
+    function search_submit(prm){
+      document.navi.start_from.value=prm;
+      document.navi.submit();
+      return false;
+    }
+	
+    function order_submit(sort, order){
+      document.navi.sort_by.value=sort;
+	  document.navi.order_by.value=order;
+      document.navi.submit();
+      return false;
+    }
+	
+
+	function ckeck_uncheck_all() {
+	    var frm = document.optionsbar;
+	    for (var i=0;i<frm.elements.length;i++) {
+	        var elmnt = frm.elements[i];
+	        if (elmnt.type=='checkbox') {
+	            if(frm.master_box.checked == true){ elmnt.checked=false; $(elmnt).parents('tr').removeClass('warning'); }
+	            else{ elmnt.checked=true; $(elmnt).parents('tr').addClass('warning');}
+	        }
+	    }
+	    if(frm.master_box.checked == true){ frm.master_box.checked = false; }
+	    else{ frm.master_box.checked = true; }
+		
+		$(frm.master_box).parents('tr').removeClass('warning');
+		
+		$.uniform.update();
+		
+	}
+
+	$(function(){
+	
+		$('.table').find('tr > td:last-child').find('input[type=checkbox]').on('change', function() {
+			if($(this).is(':checked')) {
+				$(this).parents('tr').addClass('warning');
+			}
+			else {
+				$(this).parents('tr').removeClass('warning');
+			}
+		});
+		
+		var tag_name = '';
+		var safe_name = '';
+
+		$('.dellink').click(function(){
+
+			tag_name = $('#content_'+$(this).attr('uid')).text();
+
+		    DLEconfirmDelete( '{$lang['tagscloud_del']} &laquo;'+tag_name+'&raquo; {$lang['tagscloud_del_1']}', '{$lang['p_confirm']}', function () {
+
+				document.location="?mod=tagscloud&start_from={$start_from}&user_hash={$dle_login_hash}{$urlsearch}&action=delete&name=" + encodeURIComponent(tag_name) + '';
+
+			} );
+
+			return false;
+		});
+
+
+		$('.editlink').click(function(){
+
+			tag_name = $('#content_'+$(this).attr('uid')).text();
+			safe_name = tag_name.replace(/"/g, "&quot;");
+			
+			DLEprompt('{$lang['tagscloud_edit_1']}', safe_name, '{$lang['tagscloud_edit']}', function (r) {
+				if (tag_name != r) {	
+					document.location="?mod=tagscloud&start_from={$start_from}&user_hash={$dle_login_hash}{$urlsearch}&action=edit&oldname=" + encodeURIComponent(tag_name) + '&newname=' + encodeURIComponent(r);
+				}		
+			}, false, '{$lang['news_save']}' );
+
+			return false;
+		});
+
+	});
+//-->
+</script>
+HTML;
+
+
+echofooter();
+?>

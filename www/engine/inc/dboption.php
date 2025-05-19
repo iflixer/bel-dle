@@ -1,13 +1,314 @@
-<?php
+<?PHP
 /*
 =====================================================
  DataLife Engine - by SoftNews Media Group 
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: dboption.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: DB manage
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3swP3dBd0RIKkRWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVkQ1RVBLUG8zeFo1N1cxM1daNS01bGs1Lml4S1JaOTI1Plo2M1A1YUxpeXE1RC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tRDV0S0txMjpISDZVWi1XWjkybkx5SEQtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLUQ1R2lxa0wzMXRLNShmKTVkW1tRLWRbZE41Lml4S1JaOTI1Plo2M1A1YUxpeXFEVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZENXV0MzI1Zmk2WjUzMjVxTGlLWmZLWjY1bGs1Zmlxa0wzMXRLRFZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWRDVKM1VaOjU2bGlxSzNpV25xdHFELS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1ENWgyWjo1RWo1VFBXUDFaRFZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWRCpIRDN4KDUhNlp4M1daNig1J0VGdUZvfUo3N1JhfVI3JzUpNV0vNSE2WngzV1o2KDUnb11hYTdFX31SJzUpNSk1c0QJdFpQNlpMKDUiQXV1d0hybnI1UVs4NUppTGwzNjZaVyI1KTtECXRaUDZaTDUoNSdvaWZQSzNpVzo1bm5Ibm5IJzUpO0QJNjNaKDUiQVBmejNXMTVQS0taVHFLISI1KTtEWEREM3goNSRUWlRsWkxfMzZNJ3kyWkxfMUxpeXEnWTUhVjVyNSk1c0QJVDIxKDUiWkxMaUwiLDUkVVBXMU0nUDY2V1o5Ml82WlczWjYnWSw1JFVQVzFNJzZsXzZaVzNaNidZNSk7RFhERDN4KDUzMjJaSyg1JF8vNz1oNy51TSdMWjJLaUxaJ1k1KTUpNSRMWjJLaUxaNVY1JF8vNz1oNy51TSdMWjJLaUxaJ1k7NVpVMlo1JExaMktpTFo1VjUiIjtERDN4KDUkUGZLM2lXNVZWNSI2bGlxSzNpVyI1RlJFNTMyMlpLKCRfLzc9aDcudU0nS1AnWSk1RlJFNTMyX1BMTFBrKCRfLzc9aDcudU0nS1AnWSk1RlJFNWZpeVdLKDUkXy83PWg3LnVNJ0tQJ1k1KTUpNXNERAkzeDUoITMyMlpLKCRfLzc9aDcudU0neTJaTF90UDJ0J1kpNV0vNSEkXy83PWg3LnVNJ3kyWkxfdFAydCdZNV0vNSRfLzc9aDcudU0neTJaTF90UDJ0J1k1IVY1JDZVWl9VaTEzV190UDJ0KTVzRAkJVDIxKCJaTExpTCIsNVBMTFBrKCc8UDRQMmZMM3FLOnQzMktpTGtuMWkoLXIpJzVWezUkVVBXMU0nUDY2V1o5Ml9aTExpTCdZKSw1JFVQVzFNJzJaMjJfWkxMaUwnWSw1IjxQNFAyZkwzcUs6dDMyS2lMa24xaSgtcikiKTtECVhERAkkS1BsVVoyX1BMTDVWNVBMTFBrKCk7RAkkNmwte0l5WkxrKCIuQV1CNXVGam83LiIpO0QJOXQzVVo1KCRMaTk1VjUkNmwtezFaS19QTExQaygpKTVzRAkJM3g1KDJ5bDJLTCgkTGk5TVtZLDVbLDUyS0xVWlcody83Sn0gKSk1VlY1dy83Sn0gKTVzRAkJCSRLUGxVWjJfUExMTVk1VjUkTGk5TVtZO0QJCVhECVhECSQ2bC17eExaWigpO0RECSRQTEw1VjUkXy83PWg3LnVNJ0tQJ1k7RAlMWjJaSyg1JFBMTDUpO0RECSRLUGxVWjI1VjUiIjtECUQJeGlMWlBmdDUoJFBMTDVQMjUkNFBVNSk1c0RECQkzeCg1M1dfUExMUGsoJDRQVSw1JEtQbFVaMl9QTEwpNSk1c0QJCQkkNFBVNVY1MktMX0xacVVQZlooJ2AnLCcnLDUkNFBVKTtECQkJJEtQbFVaMjVuVjUiLDVgIjVuNSQ2bC17MlB4WjJJVSgkNFBVKTVuNSJgIjtECQlYREQJWERECTN4KCRLUGxVWjIpNXNERAkJJEtQbFVaMjVWNTJ5bDJLTCgkS1BsVVoyLDVyKTtERAkJM3g1KCRfLzc9aDcudU0nOXRQS0tpNmknWTVWVjUiaXFLM1QzdloiKTVzREQJCQkkTGk5NVY1JDZsLXsyeXFaTF9JeVpMaygiLkFdQjV1RmpvNzUudUZ1aC41QkE3Lzc1UlBUWjVWNSciNW41dy83Sn0gNW41Il9xaTJLJyIpO0QJCQkkMktpTFAxWl9aVzEzV1o1VjUkTGk5TSc3VzEzV1onWTtERAkJCTN4NSgyS0xLaVVpOVpMKCQyS2lMUDFaX1pXMTNXWik1VlY1IjNXV2k2bCIpNXNECQkJCSRJeVpMazVWNSJGUkZvcAo3NXVGam83NTUiO0QJCQlYNVpVMlo1JEl5WkxrNVY1Il13dX0+fQo3NXVGam83NTUiO0QJCVg1WlUyWjVzRAkJCSRJeVpMazVWNSIvN3dGfS81dUZqbzc1IjtECQlYREQJCSRJeVpMazVuVjUkS1BsVVoyO0RECQkkNmwte0l5WkxrKCJ9Ui43L3U1fVJ1XTUiNW41aC43L3cvN0p9IDVuNSJfUDZUM1dfVWkxMjUoV1BUWiw1NlBLWiw1M3EsNVBmSzNpVyw1Wk9LTFAyKTU0UFV5WjI1KCciNW41JDZsLXsyUHhaMklVKCRUWlRsWkxfMzZNJ1dQVFonWSk1bjUiJyw1J3MkX3V9PjdYJyw1J3MkX313WCcsNSdkOCcsNScnKSIpO0QJCUQJCSQ2bC17SXlaTGsoJEl5WkxrKTtERAkJVDIxKCIyeWZmWjIyIiw1JFVQVzFNJzZsX2l6J1ksNSRVUFcxTSc2bF9pel9yJ1ksNSI/VGk2VjZsaXFLM2lXIik7REQJWDVaVTJaNVQyMSgiWkxMaUwiLDUkVVBXMU0nNmxfWkxMJ1ksNSRVUFcxTSc2bF9aTExfcidZLDUiP1RpNlY2bGlxSzNpVyIpO0RERFhERFpmdGl0WlA2WkwoNSIwMzVmVVAyMlZcInhQNXhQLXQ2Ni1pNXFpMjNLM2lXLVVaeEtcInswSDN7MDJxUFc1ZlVQMjJWXCJLWk9LLTJaVDNsaVU2XCJ7cyRVUFcxTSdpcUtfNmwnWVgwSDJxUFd7Iiw1JFVQVzFNJzZsXzNXeGknWTUpO0REJEtQbFpVVVpXNVY1IiI7REQkNmwte0l5WkxrKDUiLkFdQjV1RmpvNy4iNSk7RDl0M1VaNSg1JExpOTVWNSQ2bC17MVpLX1BMTFBrKCk1KTVzRAkkSzNLWlU1VjUkTGk5TVtZO0QJM3goNTJ5bDJLTCg1JEszS1pVLDVbLDUyS0xVWlcoNXcvN0p9IDUpNSk1VlY1dy83Sn0gNSk1c0QJCSRLUGxaVVVaVzVuVjUiMGlxSzNpVzU0UFV5WlZcInMkSzNLWlVYXCI1MlpVWmZLWjZ7cyRLM0taVVgwSGlxSzNpV3tcVyI7RAlYRFhEJDZsLXt4TFpaKCk7RERaZnRpNTAwMEF1Pm9EMHhpTFQ1UGZLM2lXViI/VGk2VjZsaXFLM2lXJlBmSzNpV1Y2bGlxSzNpVyI1VFpLdGk2ViJxaTJLIntEMDYzNDVmVVAyMlYicVBXWlU1cVBXWlUtNlp4UHlVSyJ7RDU1MDYzNDVmVVAyMlYicVBXWlUtdFpQNjNXMSJ7RDU1NTVzJFVQVzFNJzZsXzNXeGknWVhENTUwSDYzNHtENTUwNjM0NWZVUDIyViJxUFdaVS1saTZrIntECUQJNTUwNjM0NWZVUDIyViJmaVUtVDYtOCJ7RAkJMDJaVVpmSzUyS2tVWlYiOTM2S3Q6cltbJTt0WjMxdEs6NXJbbmU4U0xaVDsiNVdQVFpWIktQTVkiNVR5VUszcVVaViJUeVVLM3FVWiJ7cyRLUGxaVVVaV1gwSDJaVVpmS3tECQkwbEx7MGxMezAzV3F5SzVLa3FaViIyeWxUM0siNTM2ViJMWjJLIjVmVVAyMlYibEtXNWwxLTJVUEtaLUNbWzVsS1ctMlQ1bEtXLUxQMzJaNiI1NFBVeVpWInMkVVBXMU0nNmxfUGZLM2lXJ1lYIjVIe0QJNTUwSDYzNHtECTU1RAk1NTA2MzQ1ZlVQMjJWImZpVS1UNi1lIntECQkwS1BsVVo1OTM2S3RWInJbWyUie0Q1NTU1NTU1NTU1MEtMe0Q1NTU1NTU1NTU1NTUwSzY1MktrVVpWIjkzNkt0OmNbcU87InswMzVmVVAyMlYieFA1eFAtTFpLOVpaSyI1MktrVVpWInhpV0stMjN2WjpOW1slInswSDN7MEhLNntENTU1NTU1NTU1NTU1MEs2NTkzNkt0ViJOJSI1V2k5TFBxViJXaTlMUHEiezA2MzQ1UFUzMVdWIlVaeEsie0Q1NTU1NTU1NTU1NTU1NTU1MDNXcXlLNTJLa1VaViJsaUw2Wkw6W3FPIjVLa3FaViJMUDYzaSI1V1BUWlYiOXRQS0tpNmkiNWZ0WmZ6WjZWImZ0WmZ6WjYiNTRQVXlaViJpcUszVDN2WiI1ZlVQMjJWIjNmdFpmeiI1SHtENTU1NTU1NTU1NTU1NTUwSDYzNHswSEs2e0Q1NTU1NTU1NTU1NTUwSzY1ZlVQMjJWImlxSzNpVyJ7MHRONWZVUDIyViJLWk9LLTJaVDNsaVU2IntzJFVQVzFNJzZsX2lxSydZWDBIdE57MDJxUFc1ZlVQMjJWIktaT0stVHlLWjY1S1pPSy0yM3ZaLTJUUFVVIntzJFVQVzFNJzZsX2lxS18zJ1lYMEgycVBXezBISzZ7RDU1NTU1NTU1NTUwSEtMe0Q1NTU1NTU1NTU1MEtMe0Q1NTU1NTU1NTU1NTUwSzZ7MDM1ZlVQMjJWInhQNXhQLVRQMTNmIjUyS2tVWlYieGlXSy0yM3ZaOlFbWyUiezBIM3swSEs2e0Q1NTU1NTU1NTU1NTUwSzY1OTM2S3RWIk4lIjVXaTlMUHFWIldpOUxQcSJ7MDYzNDVQVTMxV1YiVVp4SyJ7RDU1NTU1NTU1NTU1NTU1NTUwM1dxeUs1MktrVVpWImxpTDZaTDpbcU8iNUtrcVpWIkxQNjNpIjVXUFRaViI5dFBLS2k2aSI1NFBVeVpWIkxacVAzTCI1ZlVQMjJWIjNmdFpmeiJ7RDU1NTU1NTU1NTU1NTU1MEg2MzR7MEhLNntENTU1NTU1NTU1NTU1MEs2NWZVUDIyViJpcUszaVciezB0TjVmVVAyMlYiS1pPSy0yWlQzbGlVNiJ7cyRVUFcxTSc2bF9MWidZWDBIdE57MDJxUFc1ZlVQMjJWIktaT0stVHlLWjY1S1pPSy0yM3ZaLTJUUFVVIntzJFVQVzFNJzZsX0xaXzMnWVgwSDJxUFd7MEhLNntENTU1NTU1NTU1NTBIS0x7RDU1NTU1NTU1MEhLUGxVWntECQlECTU1MEg2MzR7RAlENTU1MEg2MzR7RDBINjM0e0QwM1dxeUs1S2txWlYidDM2NlpXIjVXUFRaViJ5MlpMX3RQMnQiNTRQVXlaViJzJDZVWl9VaTEzV190UDJ0WCJ7RDBIeGlMVHtEQXU+bztERDN4NSh4eVdmSzNpV19aTzMySzIoIjF2aXFaVyIpKTVzRAkkZmlUcV9UWkt0aTYyTXJZNVY1J2EKM3EnO0RYREQzeCg1eHlXZkszaVdfWk8zMksyKDUibHZpcVpXIjUpNSk1c0QJJGZpVHFfVFpLdGk2Mk1kWTVWNSdqCjNxZCc7RFhERCRmaVRxX1RaS3RpNjJNW1k1VjUkVVBXMU0naXFLX1dpS2ZpVHFMWjIyJ1k7RER4eVdmSzNpVzV4V18yWlVaZksoJDNLWlQyLDUkMlpVWmZLWjYpNXNECSQyWlVaZks1VjUnJztECXhpTFpQZnQ1KDUkM0taVDI1UDI1JHpaazVWezUkNFBVeVo1KTVzRAkJJDJaVVpmSzVuVjUkelprNVZWNSQyWlVaZktaNjU/NSIwaXFLM2lXNTRQVXlaVidzJHpaa1gnNTJaVVpmS1o2e3MkNFBVeVpYIjU6NSIwaXFLM2lXNTRQVXlaVidzJHpaa1gne3MkNFBVeVpYIjtECVhECUxaS3lMVzUkMlpVWmZLO0RYRCRmaVRxX1RaS3RpNjI1VjV4V18yWlVaZksoNSRmaVRxX1RaS3RpNjIsNScnNSk7RERaZnRpNTAwMEF1Pm9EMDJmTDNxS3tENTU1NXh5V2ZLM2lXNTJQNFooKXNERAkJNFBMNUxXNjRQVTVWNVdaOTVFUEtaKCluMVpLdTNUWigpO0RECQk0UEw1OTk1VjVDW1s1KjUxWktqUDJaLjN2WigpO0RECQkzeCg5OTV7NSg1JCg5M1c2aTkpbjkzNkt0KCk1KjVbbmVONSk1KTU1czU5OTVWNSQoOTNXNmk5KW45MzZLdCgpNSo1W25lTjs1NVhERAkJJCgnbGk2aycpblBxcVpXNignMDYzNDUzNlYiVGk2UFUtaTRaTFVQayI1MktrVVpWInFpMjNLM2lXOjV4M09aNjs1S2lxOjVbOzVVWnhLOjVbOzU5MzZLdDo1cltbJTs1dFozMXRLOjVyW1slOzVsUGZ6MUxpeVc2OjUjQ0NDQ0NDOzVpcVBmM0trOjVuUVs7eDNVS1pMOkZVcXRQKF1xUGYzS2tWUVspOzV2LTNXNlpPOjVlZWU7NTYzMnFVUGs6V2lXWjsiezBINjM0eycpO0QJCSQoJyNUaTZQVS1pNFpMVVBrJyluZjIyKHMneDNVS1pMJzU6NSdQVXF0UChpcVBmM0trVlFbKSdYKW54UDZafVcoJzJVaTknKTtECUQJCSQoIiM2VVpxaXF5cSIpbkxaVGk0WigpO0QJCSQoImxpNmsiKW5QcXFaVzYoIjA2MzQ1MzZWJzZVWnFpcXlxJzVLM0tVWlYncyRVUFcxTSc2bF9sUGZ6J1lYJzUyS2tVWlYnNjMycVVQazpXaVdaJ3swSDYzNHsiKTtECUQJCSQoJyM2VVpxaXF5cScpbjYzUFVpMShzRAkJCVB5S2ldcVpXOjVLTHlaLEQJCQk5MzZLdDo1OTksRAkJCUxaMjN2UGxVWjo1eFBVMlosRAkJCTYzUFVpMUdVUDIyOjUiVGk2UFV4M09aNiIsRAkJCWx5S0tpVzI6NXNECQkJCSJdeiI6NXh5V2ZLM2lXKCk1czVECQkJCQkkKEt0MzIpbjYzUFVpMSgiZlVpMloiKTtECQkJCQkkKCIjNlVacWlxeXEiKW5MWlRpNFooKTsJCQkJCQkJRAkJCQlYNUQJCQlYLEQJCQlpcVpXOjV4eVdmSzNpVyhaNFpXSyw1eTMpNXM1RAkJCQkkKCIjNlVacWlxeXEiKW50S1RVKCIwM3hMUFRaNTkzNkt0VidyW1slJzV0WjMxdEtWJ2RjWyc1MkxmVic/VGk2VjZ5VHFaTCZ5MlpMX3RQMnRWcyQ2VVpfVWkxM1dfdFAydFgmUGZLM2lXVmxQZnp5cSZmaVRxX1RaS3RpNlYiNSs1JCgiI2ZpVHFfVFpLdGk2IiluNFBVKCk1KzUiJkxXNjRQVVYiNSs1TFc2NFBVNSs1Iic1eExQVFpsaUw2WkxWJ1snNVRQTDEzVzkzNkt0VidbJzVUUEwxM1d0WjMxdEtWJ1snNTJmTGlVVTNXMVYnV2knezBIM3hMUFRaeyIpO0QJCQlYLEQJCQlsWnhpTFpHVWkyWjo1eHlXZkszaVcoWjRaV0ssNXkzKTVzNUQJCQkJJCgiIzZVWnFpcXlxIiludEtUVSgiIik7RAkJCVgsRAkJCWZVaTJaOjV4eVdmSzNpVyhaNFpXSyw1eTMpNXNECQkJCQkkKCcjVGk2UFUtaTRaTFVQaycpbnhQNlpdeUsoJzJVaTknLDV4eVdmSzNpVygpNXNECQkJNTU1NTU1NTUkKCcjVGk2UFUtaTRaTFVQaycpbkxaVGk0WigpO0QJCQk1NTU1WCk7RAkJCTVYREQJCVgpO0RECQkzeDUoJCg5M1c2aTkpbjkzNkt0KCk1ezVTOFs1JiY1JCg5M1c2aTkpbnRaMzF0SygpNXs1TjhbNSk1c0QJCQkkKCduVGk2UFV4M09aNm55My02M1BVaTEnKW5mMjIoc3FpMjNLM2lXOiJ4M09aNiJYKTtECQkJJCg1JyM2VVpxaXF5cScpbjYzUFVpMSg1ImlxSzNpVyIsNSJxaTIzSzNpVyIsNXM1VGs6NSJmWldLWkwiLDVQSzo1ImZaV0taTCIsNWl4OjU5M1c2aTk1WDUpO0QJCVhERAkJTFpLeUxXNXhQVTJaO0RENTU1NVhEMEgyZkwzcUt7RDA2MzQ1ZlVQMjJWInFQV1pVNXFQV1pVLTZaeFB5VUsie0Q1NTA2MzQ1ZlVQMjJWInFQV1pVLXRaUDYzVzEie0Q1NTU1cyRVUFcxTSc2bF9sUGZ6J1lYRDU1MEg2MzR7RDU1MDYzNDVmVVAyMlYicVBXWlUtbGk2ayJ7RAlECQlzJFVQVzFNJ2xfVFpLdGk2J1lYJldsMnE7JldsMnE7MDJaVVpmSzVmVVAyMlYieVczeGlMVCI1V1BUWlYiZmlUcV9UWkt0aTYiNTM2ViJmaVRxX1RaS3RpNiJ7cyRmaVRxX1RaS3RpNjJYMEgyWlVaZkt7JldsMnE7JldsMnE7MDNXcXlLNUtrcVpWImx5S0tpVyI1ZlVQMjJWImxLVzVsMS1LWlBVNWxLVy0yVDVsS1ctTFAzMlo2IjVpV2ZVM2Z6ViIyUDRaKCk7NUxaS3lMVzV4UFUyWjsiNTRQVXlaViJzJFVQVzFNJ2xfMlA0WidZWCI1SHtECUQ1NTUwSDYzNHtEMEg2MzR7REF1Pm87REQ2WngzV1ooNSd3RnVBJyw1J2xQZnp5cUgnNSk7RER4eVdmSzNpVzV4M1VaXzJaVVpmSygpNXNECTFVaWxQVTUkZmlXeDMxO0RECSQ2MzJ6NVY1RW83SjNVWjI6OjFaS0VaeFB5VUsuS2lMUDFaKCk7RAkkZmlXeDMxTSdsUGZ6eXFfTFpUaUtaJ1k1VjUzV0s0UFUoJGZpV3gzMU0nbFBmenlxX0xaVGlLWidZKTtECTN4NSgkZmlXeDMxTSdsUGZ6eXFfTFpUaUtaJ1k1ezUtcik1NSQ2MzJ6NVY1JGZpV3gzMU0nbFBmenlxX0xaVGlLWidZO0RECUVvN0ozVVoyOjozVzNLKCQ2MzJ6LDV4UFUyWiw1JycpO0RECSR4M1VaMjVWNUVvN0ozVVoyOjpvMzJLRTNMWmZLaUxrKHdGdUEsNVBMTFBrKCIySVUiLDUiMXYiLDUibHZkIik1KTtERAkzeDUoRW83SjNVWjI6OiRaTExpTCk1c0RECQkkeDNVWjJNJ3gzVVoyJ1k1VjVQTExQayhECQkJJ1dQVFonNVZ7NUVvN0ozVVoyOjokWkxMaUxECQkpO0RECVhERAkkVTMySzVWNVBMTFBrKCcnNVZ7NScnKTtECXhpTFpQZnQ1KDUkeDNVWjJNJ3gzVVoyJ1k1UDI1JHpaaylzRAkJM3goMzIyWksoJHpaa00nV1BUWidZKTVGUkU1JHpaa00nV1BUWidZKTVzRAkJCSRVMzJLTSR6WmtNJ1dQVFonWVk1VjUkelprTSdXUFRaJ1k7RAkJWEQJWERECUxaS3lMVzUkVTMySztEWEREJHgzVVoyNVY1eFdfMlpVWmZLKDV4M1VaXzJaVVpmSygpLDUnJzUpO0REWmZ0aTUwMDBBdT5vRDAyZkwzcUt7RDU1NTV4eVdmSzNpVzU2bFVpUDYoKXNERAkJNFBMNUxXNjRQVTVWNVdaOTVFUEtaKCluMVpLdTNUWigpOzVECQk0UEw1OTk1VjVDW1s1KjUxWktqUDJaLjN2WigpO0RECQkzeCg5OTV7NSg1JCg5M1c2aTkpbjkzNkt0KCk1KjVbbmVONSk1KTU1czU5OTVWNSQoOTNXNmk5KW45MzZLdCgpNSo1W25lTjs1NVhERAkJJCgnbGk2aycpblBxcVpXNignMDYzNDUzNlYiVGk2UFUtaTRaTFVQayI1MktrVVpWInFpMjNLM2lXOjV4M09aNjs1S2lxOjVbOzVVWnhLOjVbOzU5MzZLdDo1cltbJTs1dFozMXRLOjVyW1slOzVsUGZ6MUxpeVc2OjUjQ0NDQ0NDOzVpcVBmM0trOjVuUVs7eDNVS1pMOkZVcXRQKF1xUGYzS2tWUVspOzV2LTNXNlpPOjVlZWU7NTYzMnFVUGs6V2lXWjsiezBINjM0eycpO0QJCSQoJyNUaTZQVS1pNFpMVVBrJyluZjIyKHMneDNVS1pMJzU6NSdQVXF0UChpcVBmM0trVlFbKSdYKW54UDZafVcoJzJVaTknKTtECUQJCSQoIiM2VVpxaXF5cSIpbkxaVGk0WigpO0QJCSQoImxpNmsiKW5QcXFaVzYoIjA2MzQ1MzZWJzZVWnFpcXlxJzVLM0tVWlYncyRVUFcxTSc2bF9VaVA2J1lYJzUyS2tVWlYnNjMycVVQazpXaVdaJ3swSDYzNHsiKTtECUQJCSQoJyM2VVpxaXF5cScpbjYzUFVpMShzRAkJCVB5S2ldcVpXOjVLTHlaLEQJCQk5MzZLdDo1OTksRAkJCUxaMjN2UGxVWjo1eFBVMlosRAkJCTYzUFVpMUdVUDIyOjUiVGk2UFV4M09aNiIsRAkJCWx5S0tpVzI6NXNECQkJCSJdeiI6NXh5V2ZLM2lXKCk1czVECQkJCQkkKEt0MzIpbjYzUFVpMSgiZlVpMloiKTtECQkJCQkkKCIjNlVacWlxeXEiKW5MWlRpNFooKTsJCQkJCQkJRAkJCQlYNUQJCQlYLEQJCQlpcVpXOjV4eVdmSzNpVyhaNFpXSyw1eTMpNXM1RAkJCQkkKCIjNlVacWlxeXEiKW50S1RVKCIwM3hMUFRaNTkzNkt0VidyW1slJzV0WjMxdEtWJ2RjWyc1MkxmVic/VGk2VjZ5VHFaTCZ5MlpMX3RQMnRWcyQ2VVpfVWkxM1dfdFAydFgmUGZLM2lXVkxaMktpTFomeDNVWlYiNSs1JCgiI3gzVVoiKW40UFUoKTUrNSImTFc2NFBVViI1KzVMVzY0UFU1KzUiJzV4TFBUWmxpTDZaTFYnWyc1VFBMMTNXOTM2S3RWJ1snNVRQTDEzV3RaMzF0S1YnWyc1MmZMaVVVM1cxVidXaSd7MEgzeExQVFp7Iik7RAkJCVgsRAkJCWxaeGlMWkdVaTJaOjV4eVdmSzNpVyhaNFpXSyw1eTMpNXM1RAkJCQkkKCIjNlVacWlxeXEiKW50S1RVKCIiKTtECQkJWCxECQkJZlVpMlo6NXh5V2ZLM2lXKFo0WldLLDV5Myk1c0QJCQkJCSQoJyNUaTZQVS1pNFpMVVBrJylueFA2Wl15SygnMlVpOScsNXh5V2ZLM2lXKCk1c0QJCQk1NTU1NTU1NSQoJyNUaTZQVS1pNFpMVVBrJyluTFpUaTRaKCk7RAkJCTU1NTVYKTtECQkJNVhECQlYKTtERAkJM3g1KCQoOTNXNmk5KW45MzZLdCgpNXs1UzhbNSYmNSQoOTNXNmk5KW50WjMxdEsoKTV7NU44WzUpNXNECQkJJCgnblRpNlBVeDNPWjZueTMtNjNQVWkxJyluZjIyKHNxaTIzSzNpVzoieDNPWjYiWCk7RAkJCSQoNScjNlVacWlxeXEnNSluNjNQVWkxKDUiaXFLM2lXIiw1InFpMjNLM2lXIiw1czVUazo1ImZaV0taTCIsNVBLOjUiZlpXS1pMIiw1aXg6NTkzVzZpOTVYNSk7RAkJWERECQlMWkt5TFc1eFBVMlo7REQ1NTU1WEQwSDJmTDNxS3tEMDYzNDVmVVAyMlYicVBXWlU1cVBXWlUtNlp4UHlVSyJ7RDU1MDYzNDVmVVAyMlYicVBXWlUtdFpQNjNXMSJ7RDU1NTVzJFVQVzFNJzZsX1VpUDYnWVhENTUwSDYzNHtENTUwNjM0NWZVUDIyViJxUFdaVS1saTZrIntERAkJcyRVUFcxTSdsX0xaMktpTFonWVgmV2wycTsmV2wycTswMlpVWmZLNWZVUDIyViJ5VzN4aUxUIjVXUFRaViJ4M1VaIjUzNlYieDNVWiJ7cyR4M1VaMlgwSDJaVVpmS3smV2wycTsmV2wycTswM1dxeUs1S2txWlYibHlLS2lXIjVmVVAyMlYibEtXNWwxLTZQVzFaTDVsS1ctMlQ1bEtXLUxQMzJaNiI1aVdmVTNmelYiNmxVaVA2KCk7NUxaS3lMVzV4UFUyWjsiNTRQVXlaViJzJFVQVzFNJ2xfVWlQNidZWCI1SHtECUQ1NTUwSDYzNHtEMEg2MzR7REF1Pm87RERaZnRpeGlpS1pMKCk7RD97';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdDYzN2MDc5WTFIWksvcU5RUGZdR1d4YkVlPko8YVh9bVM1a2RSIDQ9c2x3NnlNQnpPZ0kKVXB7RGpbbnRGOFZBdWhUMi5Mb3JpJywnNjdpejxFd11nL2V0UnA1NGFjT0NuZktEOU1Gakd9SUo4IHkyTlh2UXtiUGR1W1dreFZxWmxZPgpCMC5oQTM9SFRVbXNTckwxbycpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( $member_id['user_group'] != 1 ) {
+	msg( "error", $lang['addnews_denied'], $lang['db_denied'] );
+}
+
+if( isset( $_REQUEST['restore'] ) ) $restore = $_REQUEST['restore']; else $restore = "";
+
+if( $action == "dboption" AND isset($_REQUEST['ta']) AND is_array($_REQUEST['ta']) AND count( $_REQUEST['ta'] ) ) {
+
+	if (!isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash) {
+		msg("error", array('javascript:history.go(-1)' => $lang['addnews_error']), $lang['sess_error'], "javascript:history.go(-1)");
+	}
+
+	$tables_arr = array();
+	$db->query("SHOW TABLES");
+	while ($row = $db->get_array()) {
+		if (substr($row[0], 0, strlen(PREFIX)) == PREFIX) {
+			$tables_arr[] = $row[0];
+		}
+	}
+	$db->free();
+
+	$arr = $_REQUEST['ta'];
+	reset( $arr );
+
+	$tables = "";
+	
+	foreach ($arr as $val ) {
+
+		if( in_array($val, $tables_arr) ) {
+			$val = str_replace('`','', $val);
+			$tables .= ", `" . $db->safesql($val) . "`";
+		}
+
+	}
+
+	if($tables) {
+
+		$tables = substr($tables, 1);
+
+		if ($_REQUEST['whattodo'] == "optimize") {
+
+			$row = $db->super_query("SHOW TABLE STATUS WHERE Name = '" . PREFIX . "_post'");
+			$storage_engine = $row['Engine'];
+
+			if (strtolower($storage_engine) == "innodb") {
+				$query = "ANALYZE TABLE  ";
+			} else $query = "OPTIMIZE TABLE  ";
+		} else {
+			$query = "REPAIR TABLE ";
+		}
+
+		$query .= $tables;
+
+		$db->query("INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('" . $db->safesql($member_id['name']) . "', '{$_TIME}', '{$_IP}', '23', '')");
+		
+		$db->query($query);
+
+		msg("success", $lang['db_ok'], $lang['db_ok_1'], "?mod=dboption");
+
+	} else msg("error", $lang['db_err'], $lang['db_err_1'], "?mod=dboption");
+
+
+}
+
+echoheader( "<i class=\"fa fa-hdd-o position-left\"></i><span class=\"text-semibold\">{$lang['opt_db']}</span>", $lang['db_info'] );
+
+$tabellen = "";
+
+$db->query( "SHOW TABLES" );
+while ( $row = $db->get_array() ) {
+	$titel = $row[0];
+	if( substr( $titel, 0, strlen( PREFIX ) ) == PREFIX ) {
+		$tabellen .= "<option value=\"{$titel}\" selected>{$titel}</option>\n";
+	}
+}
+$db->free();
+
+echo <<<HTML
+<form action="?mod=dboption&action=dboption" method="post">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['db_info']}
+  </div>
+  <div class="panel-body">
+	
+	  <div class="col-md-3">
+		<select style="width:100%;height: 10.938rem;" name="ta[]" multiple="multiple">{$tabellen}</select>
+		<br><br><input type="submit" id="rest" class="btn bg-slate-600 btn-sm btn-raised" value="{$lang['db_action']}" />
+	  </div>
+	  
+	  <div class="col-md-9">
+		<table width="100%">
+          <tr>
+            <td style="width:70px;"><i class="fa fa-retweet" style="font-size:500%"></i></td>
+            <td width="5%" nowrap="nowrap"><div align="left">
+                <input style="border:0px" type="radio" name="whattodo" checked="checked" value="optimize" class="icheck" />
+              </div></td>
+            <td class="option"><h5 class="text-semibold">{$lang['db_opt']}</h5><span class="text-muted text-size-small">{$lang['db_opt_i']}</span></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-magic" style="font-size:400%"></i></td>
+            <td width="5%" nowrap="nowrap"><div align="left">
+                <input style="border:0px" type="radio" name="whattodo" value="repair" class="icheck">
+              </div></td>
+            <td class="option"><h5 class="text-semibold">{$lang['db_re']}</h5><span class="text-muted text-size-small">{$lang['db_re_i']}</span></td>
+          </tr>
+        </table>
+		
+	  </div>
+	
+   </div>
+</div>
+<input type="hidden" name="user_hash" value="{$dle_login_hash}">
+</form>
+HTML;
+
+if (function_exists("gzopen")) {
+	$comp_methods[1] = 'GZip';
+}
+
+if( function_exists( "bzopen" ) ) {
+	$comp_methods[2] = 'BZip2';
+}
+
+$comp_methods[0] = $lang['opt_notcompress'];
+
+function fn_select($items, $selected) {
+	$select = '';
+	foreach ( $items as $key => $value ) {
+		$select .= $key == $selected ? "<option value='{$key}' selected>{$value}" : "<option value='{$key}'>{$value}";
+	}
+	return $select;
+}
+$comp_methods = fn_select( $comp_methods, '' );
+
+echo <<<HTML
+<script>
+    function save(){
+
+		var rndval = new Date().getTime();
+
+		var ww = 600 * getBaseSize();
+
+		if(ww > ( $(window).width() * 0.95 ) )  { ww = $(window).width() * 0.95;  }
+
+		$('body').append('<div id="modal-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #666666; opacity: .40;filter:Alpha(Opacity=40); z-index: 999; display:none;"></div>');
+		$('#modal-overlay').css({'filter' : 'alpha(opacity=40)'}).fadeIn('slow');
+	
+		$("#dlepopup").remove();
+		$("body").append("<div id='dlepopup' title='{$lang['db_back']}' style='display:none'></div>");
+	
+		$('#dlepopup').dialog({
+			autoOpen: true,
+			width: ww,
+			resizable: false,
+			dialogClass: "modalfixed",
+			buttons: {
+				"Ok": function() { 
+					$(this).dialog("close");
+					$("#dlepopup").remove();							
+				} 
+			},
+			open: function(event, ui) { 
+				$("#dlepopup").html("<iframe width='100%' height='270' src='?mod=dumper&user_hash={$dle_login_hash}&action=backup&comp_method=" + $("#comp_method").val() + "&rndval=" + rndval + "' frameborder='0' marginwidth='0' marginheight='0' scrolling='no'></iframe>");
+			},
+			beforeClose: function(event, ui) { 
+				$("#dlepopup").html("");
+			},
+			close: function(event, ui) {
+					$('#modal-overlay').fadeOut('slow', function() {
+			        $('#modal-overlay').remove();
+			    });
+			 }
+
+		});
+
+		if ($(window).width() > 830 && $(window).height() > 530 ) {
+			$('.modalfixed.ui-dialog').css({position:"fixed"});
+			$( '#dlepopup').dialog( "option", "position", { my: "center", at: "center", of: window } );
+		}
+
+		return false;
+
+    }
+</script>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['db_back']}
+  </div>
+  <div class="panel-body">
+	
+		{$lang['b_method']}&nbsp;&nbsp;<select class="uniform" name="comp_method" id="comp_method">{$comp_methods}</select>&nbsp;&nbsp;<input type="button" class="btn bg-teal btn-sm btn-raised" onclick="save(); return false;" value="{$lang['b_save']}" />
+	
+   </div>
+</div>
+HTML;
+
+define( 'PATH', 'backup/' );
+
+function file_select() {
+	global $config;
+
+	$disk = DLEFiles::getDefaultStorage();
+	$config['backup_remote'] = intval($config['backup_remote']);
+	if ($config['backup_remote'] > -1)  $disk = $config['backup_remote'];
+
+	DLEFiles::init($disk, false, '');
+
+	$files = DLEFiles::ListDirectory(PATH, array("sql", "gz", "bz2") );
+
+	if (DLEFiles::$error) {
+
+		$files['files'] = array(
+			'name' => DLEFiles::$error
+		);
+
+	}
+
+	$list = array('' => '');
+	foreach ( $files['files'] as $key){
+		if(isset($key['name']) AND $key['name']) {
+			$list[$key['name']] = $key['name'];
+		}
+	}
+
+	return $list;
+}
+
+$files = fn_select( file_select(), '' );
+
+echo <<<HTML
+<script>
+    function dbload(){
+
+		var rndval = new Date().getTime(); 
+		var ww = 600 * getBaseSize();
+
+		if(ww > ( $(window).width() * 0.95 ) )  { ww = $(window).width() * 0.95;  }
+
+		$('body').append('<div id="modal-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #666666; opacity: .40;filter:Alpha(Opacity=40); z-index: 999; display:none;"></div>');
+		$('#modal-overlay').css({'filter' : 'alpha(opacity=40)'}).fadeIn('slow');
+	
+		$("#dlepopup").remove();
+		$("body").append("<div id='dlepopup' title='{$lang['db_load']}' style='display:none'></div>");
+	
+		$('#dlepopup').dialog({
+			autoOpen: true,
+			width: ww,
+			resizable: false,
+			dialogClass: "modalfixed",
+			buttons: {
+				"Ok": function() { 
+					$(this).dialog("close");
+					$("#dlepopup").remove();							
+				} 
+			},
+			open: function(event, ui) { 
+				$("#dlepopup").html("<iframe width='100%' height='270' src='?mod=dumper&user_hash={$dle_login_hash}&action=restore&file=" + $("#file").val() + "&rndval=" + rndval + "' frameborder='0' marginwidth='0' marginheight='0' scrolling='no'></iframe>");
+			},
+			beforeClose: function(event, ui) { 
+				$("#dlepopup").html("");
+			},
+			close: function(event, ui) {
+					$('#modal-overlay').fadeOut('slow', function() {
+			        $('#modal-overlay').remove();
+			    });
+			 }
+		});
+
+		if ($(window).width() > 830 && $(window).height() > 530 ) {
+			$('.modalfixed.ui-dialog').css({position:"fixed"});
+			$( '#dlepopup' ).dialog( "option", "position", { my: "center", at: "center", of: window } );
+		}
+
+		return false;
+
+    }
+</script>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {$lang['db_load']}
+  </div>
+  <div class="panel-body">
+
+		{$lang['b_restore']}&nbsp;&nbsp;<select class="uniform" name="file" id="file">{$files}</select>&nbsp;&nbsp;<input type="button" class="btn bg-danger btn-sm btn-raised" onclick="dbload(); return false;" value="{$lang['b_load']}" />
+	
+   </div>
+</div>
+HTML;
+
+echofooter();
+?>

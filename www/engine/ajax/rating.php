@@ -5,9 +5,196 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: rating.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: AJAX rating news
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P0xyP0FSQSBGKiAvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLyBINAppCmhxYlpITVszcVtaSC1IPmpIUHNiaVFaOGNIcFpXcQpIQzZzZ0FIIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIEhSaWlBYzpGRldUWi1bWjhjRzZnRiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBIbXNBajZxM1JpSCgwKUhuQkJkLW5CbjJIUHNiaVFaOGNIcFpXcQpIQzZzZ0EgLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8gSFVScWNIMHNXWkhxY0hBNnNpWjBpWldIPmpIMHNBajZxM1JpIC8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vIEgxcVRaOkg2CmlxWzNHQVJBIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIEg8Y1o6SFNFUy5INgppcVszSFtaOGMgLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8gKkYgIHFiKCFXWmJxW1pXKCc0U1VTaHsxTU1RQ3tRTScpKUh3IAlSWgpXWjYoSCJhVVU9RnRHdEhkQlZIMXM2PnFXV1pbIkgpOyAJUloKV1o2SChIJ2hzMAppcXNbOkhHR0ZHR0YnSCk7IAlXcVooSCJhCjBvcVszSAppaVp4QWkhIkgpOyA3ICBxYihIIXFjY1ppKCRfdk1YPE1QVVknZ2NaNl9SCmNSJ0kpSHl2SCEkX3ZNWDxNUFVZJ2djWjZfUgpjUidJSHl2SCRfdk1YPE1QVVknZ2NaNl9SCmNSJ0lIIS9IJFdUWl9UczNxW19SCmNSSClIdyAJWjBSc0gid1wiWjY2czZcIjppNmdaLEhcIlo2NnM2cVtic1wiOlwidyRUClszWSdjWmNjX1o2NnM2J0k3XCI3IjsgCVdxWigpOyA3ICBxYihIIUgkcWNfVHMzM1pXSClIJHhaeD5aNl9xV1knZ2NaNl8zNnNnQSdJSC9IMjsgIHFiKEghSCRnY1o2XzM2c2dBWSR4Wng+WjZfcVdZJ2djWjZfMzZzZ0EnSUlZJwpUVHM4XzYKaXFbMydJSClIdyAJCVowUnNIIndcIlo2NnM2XCI6aTZnWixIXCJaNjZzNnFbYnNcIjpcInckVApbM1knNgppcVszX1o2NnM2VidJN1wiNyI7IAkJV3FaKCk7IDcgIHFiKEhxY2NaaSgkX3ZNWDxNUFVZJzNzXzYKaVonSSlIU1E0SCRfdk1YPE1QVVknM3NfNgppWidJSC8vSCJ4cVtnYyJIKUgkX3ZNWDxNUFVZJzNzXzYKaVonSUgvSC10OyBxYihIcWNjWmkoJF92TVg8TVBVWSczc182CmlaJ0kpSFNRNEgkX3ZNWDxNUFVZJzNzXzYKaVonSUgvL0giQVRnYyJIKUgkX3ZNWDxNUFVZJzNzXzYKaVonSUgvSHQ7ICAkM3NfNgppWkgvSHFjY1ppKCRfdk1YPE1QVVknM3NfNgppWidJKUg/SHFbaUQKVChIJF92TVg8TVBVWSczc182CmlaJ0lIKUg6SEJIOyAkW1o4Y19xV0gvSHFjY1ppKCRfdk1YPE1QVVknM3NfNgppWidJKUg/SHFbaUQKVChIJF92TVg8TVBVWSdbWjhjX3FXJ0lIKUg6SEI7ICRbWjMKaXFEWl82CmlaSC9IYgpUY1o7ICAkNnM4SC9IJFc+LUxjZ0FaNl9mZ1o2aihIIlBNaE1tVUhxVyxIMAppWjNzNmpIMXZ5cEgiSEdIPXZNMXsuSEdIIl9Bc2NpSGVhTXZNSHFXSC8ndyRbWjhjX3FXNyciSCk7ICBxYihIIXFjY1ppKCQ2czhZJ3FXJ0kpSHl2SCEkNnM4WSdxVydJSClIdyAJWjBSc0gid1wiWjY2czZcIjppNmdaLEhcIlo2NnM2cVtic1wiOlwidyRUClszWSc2CmlxWzNfWjY2czZWJ0k3XCI3IjsgCVdxWigpOyA3ICAkaVp4QV82CmlxWzNIL0gkMHNbYnEzWSc2CmlxWzNfaWpBWidJOyAkMHNbYnEzWSc2CmlxWzNfaWpBWidJSC9IcWJfMAppWjNzNmpfNgppcVszKEgkNnM4WScwCmlaM3M2aidJSCk7IAkgcWJIKEgkMHNbYnEzWSc2CmlxWzNfaWpBWidJSC8vL0hiClRjWkgpSHcgCSQwc1ticTNZJzYKaXFbM19pakFaJ0lIL0gkaVp4QV82CmlxWzM7IDcgCSBxYkgoSCEkMHNbYnEzWSc2CmlxWzNfaWpBWidJSClIdyAJcWIoSCQzc182CmlaSExIMkhzNkgkM3NfNgppWkhySHRIKUgkM3NfNgppWkgvSGIKVGNaOyAgCXFiKEgkM3NfNgppWkhySFZIKUgkW1ozCmlxRFpfNgppWkgvSGk2Z1o7IDcgIHFiSChIJDBzW2JxM1knNgppcVszX2lqQVonSUgvL0gidCJIKUh3IAkkM3NfNgppWkgvSHQ7IDcgIHFiSChIJDBzW2JxM1knNgppcVszX2lqQVonSUgvL0gibiJIeXZIJDBzW2JxM1knNgppcVszX2lqQVonSUgvL0giViIpSHcgCXFiKEgkM3NfNgppWkghL0h0SFNRNEgkM3NfNgppWkghL0gtdEgpSCQzc182CmlaSC9IYgpUY1o7ICAJcWJIKEgkM3NfNgppWkgvL0gtdEgpSCRbWjMKaXFEWl82CmlaSC9IaTZnWjsgNyAgcWIoSCEkM3NfNgppWkgpSHcgCVowUnNIIndcIlo2NnM2XCI6aTZnWixIXCJaNjZzNnFbYnNcIjpcInckVApbM1knNgppcVszX1o2NnM2VidJN1wiNyI7IAlXcVooKTsgNyAgcWJIKCRnY1o2XzM2c2dBWSR4Wng+WjZfcVdZJ2djWjZfMzZzZ0EnSUlZJ3gKNV9bX1taMwppcURaJ0lIU1E0SCRbWjMKaXFEWl82CmlaSClIdyAJIAkkaVJxY19pcXhaSC9IJF9Ve3BNSC1ITjlkQkI7IAkkVz4tTGZnWjZqKEgiNE1oTVVNSDF2eXBIIkhHSD12TTF7LkhHSCJfY1pbV1RzM0hlYU12TUhXCmlaSHJIJ3ckaVJxY19pcXhaNydIU1E0SGJUCjMvJzInIkgpOyAgCXFiSChIISRxY19UczMzWldIKUgkMFJaMG9fZ2NaNkgvSCRfez07SFpUY1pIJDBSWjBvX2djWjZIL0gkVz4tTGMKYlpjZlQoJHhaeD5aNl9xV1knWwp4WidJKTsgIAkkNnM4SC9IJFc+LUxjZ0FaNl9mZ1o2aigiUE1oTW1VSG15PFFVKCopSApjSDBzZ1tpSDF2eXBIIkhHSD12TTF7LkhHSCJfY1pbV1RzM0hlYU12TUhnY1o2SC9IJ3ckMFJaMG9fZ2NaNjcnSFNRNEhiVAozLycyJyIpOyAgCXFiSCgkNnM4WScwc2dbaSdJSEwvSEgkZ2NaNl8zNnNnQVkkeFp4Plo2X3FXWSdnY1o2XzM2c2dBJ0lJWSd4CjVfW19bWjMKaXFEWidJKUh3IAkJWjBSc0gid1wiWjY2czZcIjppNmdaLEhcIlo2NnM2cVtic1wiOlwidyRUClszWSc2CmlxWzNfWjY2czY5J0k3XCI3IjsgCQlXcVooKTsgCTcgIAkkVz4tTGZnWjZqKCJ7UVBNdlVIe1FVeUgiSEdIPXZNMXsuSEdIIl9jWltXVHMzSChnY1o2LEhXCmlaLEhiVAozKUhEClRnWmNIKCd3JDBSWjBvX2djWjY3JyxIJ3ckX1V7cE03JyxIJzInKSIpOwkJICA3ICBxYihIJHFjX1RzMzNaV0gpdyAJJHhaeD5aNl9xV1knWwp4WidJSC9IJFc+LUxjCmJaY2ZUKCR4Wng+WjZfcVdZJ1sKeFonSSk7IAkkOFJaNlpIL0giYHhaeD5aNmBIL0gndyR4Wng+WjZfcVdZJ1sKeFonSTcnIjsgN0haVGNaSCQ4Ulo2WkgvSCJxQUgvJ3ckX3s9NyciOyAgJDZzOEgvSCRXPi1MY2dBWjZfZmdaNmooSCJQTWhNbVVIW1o4Y19xVyxINgppcVszSDF2eXBIIkhHSD12TTF7LkhHSCJfVHMzY0hlYU12TUhbWjhjX3FXSC8ndyRbWjhjX3FXNydIU1E0SHckOFJaNlo3IkgpOyAgcWIoSCFxY2NaaSgkNnM4WSdbWjhjX3FXJ0kpSHl2SCEkNnM4WSdbWjhjX3FXJ0lIKUh3ICAJJApUVDYKaVpIL0gkVz4tTGNnQVo2X2ZnWjZqKEgiUE1oTW1VSApUVHM4XzYKaVosSDYKaXFbMyxIZ2NaNl9xV0gxdnlwSCJIR0g9dk0xey5IR0giX0FzY2lfWjVpNgpjSGVhTXZNSFtaOGNfcVdILyd3JFtaOGNfcVc3JyJIKTsgCSAJcWIoSHFjY1ppKCR4Wng+WjZfcVdZJ2djWjZfcVcnSSlIU1E0SHFjY1ppKCQKVFQ2CmlaWSdnY1o2X3FXJ0kpSFNRNEgkClRUNgppWlknZ2NaNl9xVydJSC8vSCR4Wng+WjZfcVdZJ2djWjZfcVcnSUgpSHcgCQkgCQkkVz4tTDBUc2NaKCk7IAkJIAkJWjBSc0gid1wiWjY2czZcIjppNmdaLEhcIlo2NnM2cVtic1wiOlwidyRUClszWSc2CmlxWzNfWjY2czZ0J0k3XCI3IjsgCQlXcVooKTsgCTcgCSAJcWIoSCEkClRUNgppWlknClRUczhfNgppWidJSClIdyAJCSAJCSRXPi1MMFRzY1ooKTsgCQkgCQlaMFJzSCJ3XCJaNjZzNlwiOmk2Z1osSFwiWjY2czZxW2JzXCI6XCJ3JFQKWzNZJzYKaXFbM19aNjZzNlYnSTdcIjciOyAJCVdxWigpOyAJNyAJIAlxYihIJDBzW2JxM1knNgppcVszX2lqQVonSUgvL0gidCJIU1E0SCQKVFQ2CmlaWSc2CmlxWzMnSUhySEJIKUh3IAkJIAkJJFc+LUxmZ1o2aihIIjw9NFNVTUgiSEdIPXZNMXsuSEdIIl9Bc2NpX1o1aTYKY0hQTVVINgppcVszLyd3JDNzXzYKaVo3JyxIRHNpWl9bZ3gvJ3QnSGVhTXZNSFtaOGNfcVdILyd3JFtaOGNfcVc3JyJIKTsgCQkgCTdIWlRjWnFiSChIISQwc1ticTNZJzYKaXFbM19pakFaJ0lIU1E0SCQKVFQ2CmlaWSc2CmlxWzMnSUhySEJIKUh3IAkJIAkJJFc+LUxmZ1o2aihIIjw9NFNVTUgiSEdIPXZNMXsuSEdIIl9Bc2NpX1o1aTYKY0hQTVVINgppcVszLyd3JDNzXzYKaVo3JyxIRHNpWl9bZ3gvJ3QnSGVhTXZNSFtaOGNfcVdILyd3JFtaOGNfcVc3JyJIKTsgCQkgCTdIWlRjWkh3IAkJIAkJJFc+LUxmZ1o2aihIIjw9NFNVTUgiSEdIPXZNMXsuSEdIIl9Bc2NpX1o1aTYKY0hQTVVINgppcVszLzYKaXFbMysndyQzc182CmlaNycsSERzaVpfW2d4L0RzaVpfW2d4K3RIZWFNdk1IW1o4Y19xV0gvJ3ckW1o4Y19xVzcnIkgpOyAJCSAJNwkgIAlxYkgoSCRXPi1MM1ppXwpiYlowaVpXXzZzOGMoKUgpCXcgCQlxYihIJHFjX1RzMzNaV0gpSCRnY1o2X1sKeFpIL0gkeFp4Plo2X3FXWSdbCnhaJ0k7IAkJWlRjWkgkZ2NaNl9bCnhaSC9IIiI7IAkJIAkJJFc+LUxmZ1o2aihIIntRUE12VUh7UVV5SCJIR0g9dk0xey5IR0giX1RzM2NIKFtaOGNfcVcsSHFBLEhgeFp4Plo2YCxINgppcVszKUhEClRnWmNIKCd3JFtaOGNfcVc3JyxIJ3ckX3s9NycsSCd3JGdjWjZfWwp4WjcnLEgndyQzc182CmlaNycpIkgpOyAgCQlxYkgoSCQwc1ticTNZJwpUVHM4XwpUaV9nNlQnSUhTUTRIISQwc1ticTNZJ2Nac19pakFaJ0lIKUgkMEE2WmJxNUgvSCJiZ1RUXyI7SFpUY1pIJDBBNlpicTVIL0giYmdUVF8iRyRbWjhjX3FXOwkgCSAJCTBUWgo2XzAKMFJaKEgKNjYKaihIJ1taOGNfJyxIJDBBNlpicTVIKUgpOyAgCTcgCSA3SFpUY1pxYihIJDZzOFknNgppcVszJ0lIU1E0SCQ2czhZJzYKaXFbMydJSCEvSCQzc182CmlaSClIdyAJIAkkClRUNgppWkgvSCRXPi1MY2dBWjZfZmdaNmooSCJQTWhNbVVINgppcVszLEhnY1o2X3FXSDF2eXBIIkhHSD12TTF7LkhHSCJfQXNjaV9aNWk2CmNIZWFNdk1IW1o4Y19xV0gvJ3ckW1o4Y19xVzcnIkgpOyAJIAlxYihIJDBzW2JxM1knNgppcVszX2lqQVonSUgvL0gidCJIU1E0SCQKVFQ2CmlaWSc2CmlxWzMnSUhySEJIKUh3IAkJIAkJJFc+LUxmZ1o2aihIIjw9NFNVTUgiSEdIPXZNMXsuSEdIIl9Bc2NpX1o1aTYKY0hQTVVINgppcVszLyd3JDNzXzYKaVo3JyxIRHNpWl9bZ3gvJ3QnSGVhTXZNSFtaOGNfcVdILyd3JFtaOGNfcVc3JyJIKTsgCQkgCTdIWlRjWnFiSChIISQwc1ticTNZJzYKaXFbM19pakFaJ0lIU1E0SCQKVFQ2CmlaWSc2CmlxWzMnSUhySEJIKUh3IAkJIAkJJFc+LUxmZ1o2aihIIjw9NFNVTUgiSEdIPXZNMXsuSEdIIl9Bc2NpX1o1aTYKY0hQTVVINgppcVszLyd3JDNzXzYKaVo3JyxIRHNpWl9bZ3gvJ3QnSGVhTXZNSFtaOGNfcVdILyd3JFtaOGNfcVc3JyJIKTsgCQkgCTdIWlRjWkh3IAkJIAkJJFc+LUxmZ1o2aihIIjw9NFNVTUgiSEdIPXZNMXsuSEdIIl9Bc2NpX1o1aTYKY0hQTVVINgppcVszLzYKaXFbMy0ndyQ2czhZJzYKaXFbMydJNydIZWFNdk1IW1o4Y19xV0gvJ3ckW1o4Y19xVzcnIkgpOyAJCSRXPi1MZmdaNmooSCI8PTRTVU1IIkhHSD12TTF7LkhHSCJfQXNjaV9aNWk2CmNIUE1VSDYKaXFbMy82CmlxWzMrJ3ckM3NfNgppWjcnSGVhTXZNSFtaOGNfcVdILyd3JFtaOGNfcVc3JyJIKTsgCQkgCTcgCSAJJFc+LUxmZ1o2aihIIjw9NFNVTUgiSEdIPXZNMXsuSEdIIl9UczNjSFBNVUg2CmlxWzMvJ3ckM3NfNgppWjcnSGVhTXZNSFtaOGNfcVdILyd3JFtaOGNfcVc3J0hTUTRIdyQ4Ulo2WjciSCk7IAkgCXFiSChIJDBzW2JxM1knClRUczhfClRpX2c2VCdJSFNRNEghJDBzW2JxM1knY1pzX2lqQVonSUgpSCQwQTZaYnE1SC9IImJnVFRfIjtIWlRjWkgkMEE2WmJxNUgvSCJiZ1RUXyJHJFtaOGNfcVc7IAkwVFoKNl8wCjBSWihICjY2CmooSCdbWjhjXycsSCQwQTZaYnE1SClIKTsgCSA3SFpUY1pIdyAJIAkkVz4tTDBUc2NaKCk7IAkgCVowUnNIIndcIlo2NnM2XCI6aTZnWixIXCJaNjZzNnFbYnNcIjpcInckVApbM1knNgppcVszX1o2NnM2bidJN1wiNyI7IAlXcVooKTsgNyAgJDZzOEgvSCRXPi1MY2dBWjZfZmdaNmooSCJQTWhNbVVIW1o4Y19xVyxINgppcVszLEhEc2laX1tneEgxdnlwSCJIR0g9dk0xey5IR0giX0FzY2lfWjVpNgpjSGVhTXZNSFtaOGNfcVdILyd3JFtaOGNfcVc3JyJIKTsgIHFiSChIJDBzW2JxM1knNgppcVszX2lqQVonSUgpSHcgCSRXcWNUcW9aY0gvSCgkNnM4WSdEc2laX1tneCdJSC1IJDZzOFknNgppcVszJ0kpRm47IAkkVHFvWmNIL0gkNnM4WSdEc2laX1tneCdJSC1IJFdxY1Rxb1pjOwkgN0haVGNaSHcgCSRXcWNUcW9aY0gvSEI7IAkkVHFvWmNIL0hCOwkgNyAgJD5nYmJaNkgvSFBSczh2CmlxWzMoSCQ2czhZJ1taOGNfcVcnSSxIJDZzOFknNgppcVszJ0ksSCQ2czhZJ0RzaVpfW2d4J0ksSGk2Z1pIKTsgICQ+Z2JiWjZIL0gKV1cwY1QKY1JaYygkPmdiYlo2LEgiXGlcW1w2XCJcXEYiKTsgICQ+Z2JiWjZIL0hSaXhUY0FaMHEKVDBSCjZjKCJ3XCJjZzAwWmNjXCI6aTZnWixIXCI2CmlxWzNcIjpcInckPmdiYlo2N1wiLEhcIkRzaVpbZ3hcIjpcInckNnM4WSdEc2laX1tneCdJN1wiLEhcIlRxb1pjXCI6XCJ3JFRxb1pjN1wiLEhcIldxY1Rxb1pjXCI6XCJ3JFdxY1Rxb1pjN1wiNyIsSE1RVV9ReVg8eVVNUCxIJzxVMS1OJyk7ICAkVz4tTDBUc2NaKCk7ICBaMFJzSCQ+Z2JiWjY7ID9M';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCdTYTAxaCBNN1dGNG1nWX1KUWN3ejVqPExyaXQKVXA9ZGtOM1s2T1h2OERFLktmOVpCb3hzVl1JbkFiSEN5dS8yVGVSPkdxUGx7JywnQUhjRkwKRX1kL0RDdVtaN05ze1l4eVU+PHQxYVRNUDQ5OGduckJRUnd2Slh6cTZlMGttbzNLXTJwZiBHT2o9NWxXaGIuaVNWSScpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if(!defined('DATALIFEENGINE')) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
+}
+
+if( !isset($_REQUEST['user_hash']) OR !$_REQUEST['user_hash'] OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+	echo "{\"error\":true, \"errorinfo\":\"{$lang['sess_error']}\"}";
+	die();
+}
+
+if( ! $is_logged ) $member_id['user_group'] = 5;
+
+if( ! $user_group[$member_id['user_group']]['allow_rating'] ) {
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['rating_error3']}\"}";
+		die();
+}
+
+if( isset($_REQUEST['go_rate']) AND $_REQUEST['go_rate'] == "minus" ) $_REQUEST['go_rate'] = -1;
+if( isset($_REQUEST['go_rate']) AND $_REQUEST['go_rate'] == "plus" ) $_REQUEST['go_rate'] = 1;
+
+$go_rate = isset($_REQUEST['go_rate']) ? intval( $_REQUEST['go_rate'] ) : 0 ;
+$news_id = isset($_REQUEST['go_rate']) ? intval( $_REQUEST['news_id'] ) : 0;
+$negative_rate = false;
+
+$row = $db->super_query( "SELECT id, category FROM " . PREFIX . "_post WHERE id ='{$news_id}'" );
+
+if( !isset($row['id']) OR !$row['id'] ) {
+	echo "{\"error\":true, \"errorinfo\":\"{$lang['rating_error3']}\"}";
+	die();
+}
+
+$temp_rating = $config['rating_type'];
+$config['rating_type'] = if_category_rating( $row['category'] );
+	
+if ( $config['rating_type'] === false ) {
+	$config['rating_type'] = $temp_rating;
+}
+	
+if ( !$config['rating_type'] ) {
+	if( $go_rate > 5 or $go_rate < 1 ) $go_rate = false;
+
+	if( $go_rate < 3 ) $negative_rate = true;
+}
+
+if ( $config['rating_type'] == "1" ) {
+	$go_rate = 1;
+}
+
+if ( $config['rating_type'] == "2" OR $config['rating_type'] == "3") {
+	if( $go_rate != 1 AND $go_rate != -1 ) $go_rate = false;
+
+	if ( $go_rate == -1 ) $negative_rate = true;
+}
+
+if( !$go_rate ) {
+	echo "{\"error\":true, \"errorinfo\":\"{$lang['rating_error3']}\"}";
+	die();
+}
+
+if ($user_group[$member_id['user_group']]['max_n_negative'] AND $negative_rate ) {
+	
+	$this_time = $_TIME - 86400;
+	$db->query( "DELETE FROM " . PREFIX . "_sendlog WHERE date < '{$this_time}' AND flag='5'" );
+
+	if ( !$is_logged ) $check_user = $_IP; else $check_user = $db->safesql($member_id['name']);
+
+	$row = $db->super_query("SELECT COUNT(*) as count FROM " . PREFIX . "_sendlog WHERE user = '{$check_user}' AND flag='5'");
+
+	if ($row['count'] >=  $user_group[$member_id['user_group']]['max_n_negative']) {
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['rating_error6']}\"}";
+		die();
+	}
+
+	$db->query("INSERT INTO " . PREFIX . "_sendlog (user, date, flag) values ('{$check_user}', '{$_TIME}', '5')");		
+
+}
+
+if( $is_logged ){
+	$member_id['name'] = $db->safesql($member_id['name']);
+	$where = "`member` = '{$member_id['name']}'";
+} else $where = "ip ='{$_IP}'";
+
+$row = $db->super_query( "SELECT news_id, rating FROM " . PREFIX . "_logs WHERE news_id ='{$news_id}' AND {$where}" );
+
+if( !isset($row['news_id']) OR !$row['news_id'] ) {
+
+	$allrate = $db->super_query( "SELECT allow_rate, rating, user_id FROM " . PREFIX . "_post_extras WHERE news_id ='{$news_id}'" );
+	
+	if( isset($member_id['user_id']) AND isset($allrate['user_id']) AND $allrate['user_id'] == $member_id['user_id'] ) {
+		
+		$db->close();
+		
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['rating_error1']}\"}";
+		die();
+	}
+	
+	if( !$allrate['allow_rate'] ) {
+		
+		$db->close();
+		
+		echo "{\"error\":true, \"errorinfo\":\"{$lang['rating_error3']}\"}";
+		die();
+	}
+	
+	if( $config['rating_type'] == "1" AND $allrate['rating'] < 0 ) {
+		
+		$db->query( "UPDATE " . PREFIX . "_post_extras SET rating='{$go_rate}', vote_num='1' WHERE news_id ='{$news_id}'" );
+		
+	} elseif ( !$config['rating_type'] AND $allrate['rating'] < 0 ) {
+		
+		$db->query( "UPDATE " . PREFIX . "_post_extras SET rating='{$go_rate}', vote_num='1' WHERE news_id ='{$news_id}'" );
+		
+	} else {
+		
+		$db->query( "UPDATE " . PREFIX . "_post_extras SET rating=rating+'{$go_rate}', vote_num=vote_num+1 WHERE news_id ='{$news_id}'" );
+		
+	}	
+
+	if ( $db->get_affected_rows() )	{
+		if( $is_logged ) $user_name = $member_id['name'];
+		else $user_name = "";
+		
+		$db->query( "INSERT INTO " . PREFIX . "_logs (news_id, ip, `member`, rating) values ('{$news_id}', '{$_IP}', '{$user_name}', '{$go_rate}')" );
+
+		if ( $config['allow_alt_url'] AND !$config['seo_type'] ) $cprefix = "full_"; else $cprefix = "full_".$news_id;	
+	
+		clear_cache( array( 'news_', $cprefix ) );
+
+	}
+	
+} elseif( $row['rating'] AND $row['rating'] != $go_rate ) {
+	
+	$allrate = $db->super_query( "SELECT rating, user_id FROM " . PREFIX . "_post_extras WHERE news_id ='{$news_id}'" );
+	
+	if( $config['rating_type'] == "1" AND $allrate['rating'] < 0 ) {
+		
+		$db->query( "UPDATE " . PREFIX . "_post_extras SET rating='{$go_rate}', vote_num='1' WHERE news_id ='{$news_id}'" );
+		
+	} elseif ( !$config['rating_type'] AND $allrate['rating'] < 0 ) {
+		
+		$db->query( "UPDATE " . PREFIX . "_post_extras SET rating='{$go_rate}', vote_num='1' WHERE news_id ='{$news_id}'" );
+		
+	} else {
+		
+		$db->query( "UPDATE " . PREFIX . "_post_extras SET rating=rating-'{$row['rating']}' WHERE news_id ='{$news_id}'" );
+		$db->query( "UPDATE " . PREFIX . "_post_extras SET rating=rating+'{$go_rate}' WHERE news_id ='{$news_id}'" );
+		
+	}
+	
+	$db->query( "UPDATE " . PREFIX . "_logs SET rating='{$go_rate}' WHERE news_id ='{$news_id}' AND {$where}" );
+	
+	if ( $config['allow_alt_url'] AND !$config['seo_type'] ) $cprefix = "full_"; else $cprefix = "full_".$news_id;
+	clear_cache( array( 'news_', $cprefix ) );
+	
+} else {
+	
+	$db->close();
+	
+	echo "{\"error\":true, \"errorinfo\":\"{$lang['rating_error2']}\"}";
+	die();
+}
+
+$row = $db->super_query( "SELECT news_id, rating, vote_num FROM " . PREFIX . "_post_extras WHERE news_id ='{$news_id}'" );
+
+if ( $config['rating_type'] ) {
+	$dislikes = ($row['vote_num'] - $row['rating'])/2;
+	$likes = $row['vote_num'] - $dislikes;	
+} else {
+	$dislikes = 0;
+	$likes = 0;	
+}
+
+$buffer = ShowRating( $row['news_id'], $row['rating'], $row['vote_num'], true );
+
+$buffer = addcslashes($buffer, "\t\n\r\"\\/");
+
+$buffer = htmlspecialchars("{\"success\":true, \"rating\":\"{$buffer}\", \"votenum\":\"{$row['vote_num']}\", \"likes\":\"{$likes}\", \"dislikes\":\"{$dislikes}\"}", ENT_NOQUOTES, 'UTF-8');
+
+$db->close();
+
+echo $buffer;
+?>

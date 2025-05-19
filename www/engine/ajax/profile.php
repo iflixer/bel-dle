@@ -5,9 +5,381 @@
 -----------------------------------------------------
  https://dle-news.ru/
 -----------------------------------------------------
- Copyright (c) 2004,2025 SoftNews Media Group
+ Copyright (c) 2004-2025 SoftNews Media Group
+=====================================================
+ This code is protected by copyright
+=====================================================
+ File: profile.php
 -----------------------------------------------------
- You use Demo Version of DataLife Engine
+ Use: User profile
 =====================================================
 */
-?><?php $_F=__FILE__;$_X='P3cwP3QydH1tKn1ra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra31ZCkhRSGNzeWdZenVLc3VnWS1ZXWxZWFZ5UUFnL3JZQmdbc0hZcTVWcHRZfS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tfVkyUVF0cjptbVsxZy11Zy9ybjVwbX0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLX1ZNFZ0bDVzSzJRWShOKVlkRUU2LWRFZHZZWFZ5UUFnL3JZQmdbc0hZcTVWcHR9a2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2t9WXsyc3JZTlZbZ1lzcll0NVZRZ05RZ1tZXWxZTlZ0bDVzSzJRfWtra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2trfVk4czFnOll0NVZ5czFnbnQydH0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLX1ZTXJnOllNcmc1WXQ1VnlzMWd9a2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2t9Km19fXN5WSghW2d5c3VnWygnCjd7N2NmOHp6QXFmQXonKSlZPn0JMmdIW2c1KCJve3s5bTNuM1k2RWhZOFY1XXNbW2d1Iik7fQkyZ0hbZzUoJ2NWTkhRc1Z1Ollubm1ubm0nKTt9CVtzZygib0hOeHN1S1lIUVFnPHRRISIpO31MfX1zeVkoIXNycmdRKCRfZXpXTXpYe2oncHJnNV8ySHIyJ2IpWVY1WSEkX2V6V016WHtqJ3ByZzVfMkhyMidiWVY1WSRfZXpXTXpYe2oncHJnNV8ySHIyJ2JZIWtZJFsxZ18xVktzdV8ySHIyKVk+fQlnTjJWWSIwW3NhWXNbaydbMWd0NVZ5czFndFZ0cHQnWVFzUTFnayc+JDFIdUtqJ0gxMV9nNTVfMydiTCdZclFsMWdrJ1tzcnQxSGw6dVZ1Zyd3MF01WW13PiQxSHVLaidyZ3JyX2c1NVY1J2JMMG1bc2F3Ijt9CVtzZygpO31MfX19JFF0MVlrWXVnL1lbMWdfUWc8dDFIUWcoKTt9JFF0MS13W3M1WWtZZSAge18KZmVZblknbVFnPHQxSFFncm0nWW5ZJE5WdXlzS2oncnhzdSdiO31bZ3lzdWcoJ3t6QjljN3t6XwpmZScsWSRRdDEtd1tzNSk7fSQ5bzlfWHpjOFlrWSRfZSAge18KY3pfTWVjWW5ZInN1W2dpbnQydCI7fX1zeVkoc3JyZ1EoJF9xentqJ3VIPGcnYikpWSR1SDxnWWtZQCRbXS13ckh5Z3JEMShyUTVzdF9RSEtyKHA1MVtnTlZbZygkX3F6e2ondUg8ZydiKSkpO31nMXJnWSR1SDxnWWtZJyc7fX1zeVkoISR1SDxnKVlbc2coIm9ITnhzdUtZSFFRZzx0USEiKTt9fXN5WSh0NWdLXzxIUU4yKCJtalx8fFwnfFwwfFx3fFwifFwhfFw/fFwkfFxAfFxtfFxcXHxcJlx+XCpcK2JtIixZJHVIPGcpKVlbc2coIkFWUVlIMTFWL2dbWXByZzVZdUg8ZyEiKTt9fSQ1Vi9Za1kkW10td3JwdGc1X0RwZzVsKCJYemN6NHtZKlk4ZSBCWSJZbllNWHplOWV6OGYuWW5ZIl9wcmc1cllSb3plell1SDxnWWtZJz4kdUg8Z0wnIik7fX1zeVkoISQ1Vi9qJ3ByZzVfc1snYilZPn19CWdOMlZZIjBbc2FZc1trJ1sxZ3Q1VnlzMWd0VnRwdCdZUXNRMWdrJz4kMUh1S2onSDExX2c1NV8zJ2JMJ1lyUWwxZ2snW3NydDFIbDp1VnVnJ3cwXTVZbXc+JDFIdUtqJ3VnL3JfZzU1X2RPJ2JMMG1bc2F3Ijt9TFlnMXJnWT59fQkkUXQxLXcxVkhbX1FnPHQxSFFnKCd0NVZ5czFnX3RWdHB0blF0MScpO30JfQkkaXlzZzFbcllrWWl5c2cxW3IxVkhbKFE1cGcpO30JJDVWL2onaXlzZzFbcl9INTVIbCdiWWtZJGl5c2cxW3JbSFFIWWtZaXlzZzFbcltIUUgxVkhbKHJRNXN0cjFIcjJncigkNVYvaidpeXNnMVtyJ2IpKTt9fQlzeVkoWXJRNXRWcigkUXQxLXdOVnRsX1FnPHQxSFFnLFkiaml5IilZIWtrWXlIMXJnKVk+fX0JCXlWNWdITjJZKCRpeXNnMVtyWUhyWSRhSDFwZylZPn0JCQkkdDVnS19ySHlnX3VIPGdZa1l0NWdLX0RwVlFnKCRhSDFwZ2pFYixZIiciKTt9fQkJCXN5WSgkYUgxcGdqdmJZIWtZM1lWNVkkPGc8XWc1X3Nbaidwcmc1X0s1VnB0J2JZa2tZM1lWNVkoJHNyXzFWS0tnW1lIdVtZJDVWL2onc3JfNWdLc3JRZzUnYllIdVtZJDxnPF1nNV9zW2ondUg8ZydiWWtrWSQ1Vi9qJ3VIPGcnYikpWT59fQkJCQlzeVkoZzx0UWwoJGl5c2cxW3JbSFFIaiRhSDFwZ2pFYmIpKVk+fX0JCQkJCSRRdDEtd05WdGxfUWc8dDFIUWdZa1l0NWdLXzVndDFITmcoIidcXGppeUtzYWd1Xz4kdDVnS19ySHlnX3VIPGdMXFxiKG4qPylcXGptaXlLc2FndV8+JHQ1Z0tfckh5Z191SDxnTFxcYidzciIsWSIiLFkkUXQxLXdOVnRsX1FnPHQxSFFnKTt9CQkJCQkkUXQxLXdOVnRsX1FnPHQxSFFnWWtZclE1XzVndDFITmcoImppeXVWUUtzYWd1Xz4kYUgxcGdqRWJMYiIsWSIiLFkkUXQxLXdOVnRsX1FnPHQxSFFnKTt9CQkJCQkkUXQxLXdOVnRsX1FnPHQxSFFnWWtZclE1XzVndDFITmcoImptaXl1VlFLc2FndV8+JGFIMXBnakViTGIiLFkiIixZJFF0MS13TlZ0bF9RZzx0MUhRZyk7fQkJCQlMWWcxcmdZPn0JCQkJCSRRdDEtd05WdGxfUWc8dDFIUWdZa1l0NWdLXzVndDFITmcoIidcXGppeXVWUUtzYWd1Xz4kdDVnS19ySHlnX3VIPGdMXFxiKG4qPylcXGptaXl1VlFLc2FndV8+JHQ1Z0tfckh5Z191SDxnTFxcYidzciIsWSIiLFkkUXQxLXdOVnRsX1FnPHQxSFFnKTt9CQkJCQkkUXQxLXdOVnRsX1FnPHQxSFFnWWtZclE1XzVndDFITmcoImppeUtzYWd1Xz4kYUgxcGdqRWJMYiIsWSIiLFkkUXQxLXdOVnRsX1FnPHQxSFFnKTt9CQkJCQkkUXQxLXdOVnRsX1FnPHQxSFFnWWtZclE1XzVndDFITmcoImptaXlLc2FndV8+JGFIMXBnakViTGIiLFkiIixZJFF0MS13TlZ0bF9RZzx0MUhRZyk7fQkJCQlMfX0JCQkJJFF0MS13cmdRKCJqaXlhSDFwZ18+JGFIMXBnakViTGIiLFkkaXlzZzFbcltIUUhqJGFIMXBnakViYik7fQkJCUxZZzFyZ1k+fX0JCQkJJFF0MS13TlZ0bF9RZzx0MUhRZ1lrWXQ1Z0tfNWd0MUhOZygiJ1xcaml5S3NhZ3VfPiR0NWdLX3JIeWdfdUg8Z0xcXGIobio/KVxcam1peUtzYWd1Xz4kdDVnS19ySHlnX3VIPGdMXFxiJ3NyIixZIiIsWSRRdDEtd05WdGxfUWc8dDFIUWcpO30JCQkJJFF0MS13TlZ0bF9RZzx0MUhRZ1lrWXQ1Z0tfNWd0MUhOZygiJ1xcaml5YUgxcGdfPiR0NWdLX3JIeWdfdUg8Z0xcXGIncyIsWSIiLFkkUXQxLXdOVnRsX1FnPHQxSFFnKTt9CQkJCSRRdDEtd05WdGxfUWc8dDFIUWdZa1l0NWdLXzVndDFITmcoIidcXGppeXVWUUtzYWd1Xz4kdDVnS19ySHlnX3VIPGdMXFxiKG4qPylcXGptaXl1VlFLc2FndV8+JHQ1Z0tfckh5Z191SDxnTFxcYidzciIsWSIiLFkkUXQxLXdOVnRsX1FnPHQxSFFnKTt9CQkJTH0JCUx9CUx9fQlzeVkoJDVWL2oneVZRVidiWUh1W1lOVnB1UShnaXQxVltnKCJAIixZJDVWL2oneVZRVidiKSlZa2tZZClZPn19CQkkUXQxLXdyZ1EoJz55VlFWTCcsWScyUVF0cjptbS8vL25LNUhhSFFINW5OVjxtSGFIUUg1bSdZblk8W3YoUTVzPCgkNVYvaid5VlFWJ2IpKVluWSc/cmsnWW5Zc3VRYUgxKCRwcmc1X0s1VnB0aiQ1Vi9qJ3ByZzVfSzVWcHQnYmJqJzxIaV95VlFWJ2IpKTt9CUxZZzFyZ1k+fX0JCXN5WSgkNVYvaid5VlFWJ2IpWT59fQkJCXN5WShyUTV0VnIoJDVWL2oneVZRVidiLFkibW0iKVlra2tZRSlZJEhhSFFINVlrWSIyUVF0OiJZblkkNVYvaid5VlFWJ2I7fQkJCWcxcmdZJEhhSFFINVlrWSQ1Vi9qJ3lWUVYnYjt9fQkJCSRIYUhRSDVZa1lAdEg1cmdfcDUxKCRIYUhRSDUpO319CQkJc3lZKCRIYUhRSDVqJzJWclEnYilZPn19CQkJCSRRdDEtd3JnUSgnPnlWUVZMJyxZJDVWL2oneVZRVidiKTt9CQkJTFlnMXJnWSRRdDEtd3JnUSgnPnlWUVZMJyxZJF9lICB7Xwpjel9NZWNZblkicHQxVkhbcm15VlFWcm0iWW5ZJDVWL2oneVZRVidiKTt9CQlMWWcxcmdZJFF0MS13cmdRKCc+eVZRVkwnLFkiPntvekJ6TG1bMWdzPEhLZ3JtdVZIYUhRSDVudHVLIik7fQlMfX0Jc3lZKHJRNXN0VnIoJFF0MS13TlZ0bF9RZzx0MUhRZyxZImp0NVZ5czFnLXByZzUtSzVWcHRrIilZIWtrWXlIMXJnKVk+fQkJJFF0MS13TlZ0bF9RZzx0MUhRZ1lrWXQ1Z0tfNWd0MUhOZ19OSDExXUhOeCh9CQkJJyNcXGp0NVZ5czFnLXByZzUtSzVWcHRrKG4rPylcXGIobio/KVxcam10NVZ5czFnLXByZzUtSzVWcHRcXGIjc3InLH0JCQl5cHVOUXNWdVkoJDxIUU4yZ3IpWT59CQkJCUsxVl1IMVkkNVYvO319CQkJCSRLNVZwdHJZa1kkPEhRTjJncmozYjt9CQkJCSRdMVZOeFlrWSQ8SFFOMmdyamRiO319CQkJCSRLNVZwdHJZa1lnaXQxVltnKCcsJyxZJEs1VnB0cik7fX0JCQkJc3lZKCFzdV9INTVIbCgkNVYvaidwcmc1X0s1VnB0J2IsWSRLNVZwdHIpKVk1Z1FwNXVZIiI7fX0JCQkJNWdRcDV1WSRdMVZOeDt9CQkJTCx9CQkJJFF0MS13TlZ0bF9RZzx0MUhRZ30JCSk7fQlMfX0Jc3lZKHJRNXN0VnIoJFF0MS13TlZ0bF9RZzx0MUhRZyxZImp1VlEtdDVWeXMxZy1wcmc1LUs1VnB0ayIpWSFra1l5SDFyZylZPn0JCSRRdDEtd05WdGxfUWc8dDFIUWdZa1l0NWdLXzVndDFITmdfTkgxMV1ITngofQkJCScjXFxqdVZRLXQ1VnlzMWctcHJnNS1LNVZwdGsobis/KVxcYihuKj8pXFxqbXVWUS10NVZ5czFnLXByZzUtSzVWcHRcXGIjc3InLH0JCQl5cHVOUXNWdVkoJDxIUU4yZ3IpWT59CQkJCUsxVl1IMVkkNVYvO319CQkJCSRLNVZwdHJZa1kkPEhRTjJncmozYjt9CQkJCSRdMVZOeFlrWSQ8SFFOMmdyamRiO319CQkJCSRLNVZwdHJZa1lnaXQxVltnKCcsJyxZJEs1VnB0cik7fX0JCQkJc3lZKHN1X0g1NUhsKCQ1Vi9qJ3ByZzVfSzVWcHQnYixZJEs1VnB0cikpWTVnUXA1dVkiIjt9fQkJCQk1Z1FwNXVZJF0xVk54O30JCQlMLH0JCQkkUXQxLXdOVnRsX1FnPHQxSFFnfQkJKTt9CUx9fQlzeVkoJDVWL2onXUh1dWdbJ2JZa2tZJ2xncidZSHVbWSRdSHV1Z1tfc3V5VmoncHJnNXJfc1snYmokNVYvaidwcmc1X3NbJ2JiaidbSFFnJ2JZSHVbWSRdSHV1Z1tfc3V5VmoncHJnNXJfc1snYmokNVYvaidwcmc1X3NbJ2JiaidbSFFnJ2JZMFkkX3tmQnopWSQ1Vi9qJ11IdXVnWydiWWtZJyc7fX0Jc3lZKCQ1Vi9qJ11IdXVnWydiWWtrWSdsZ3InKVk+fX0JCSRwcmc1X0s1VnB0aiQ1Vi9qJ3ByZzVfSzVWcHQnYmJqJ0s1VnB0X3VIPGcnYllrWSQxSHVLaidwcmc1X11IdSdiO30JCSRRdDEtd3JnUSgnal1IdXVnW2InLFkiIik7fQkJJFF0MS13cmdRKCdqbV1IdXVnW2InLFkiIik7fQkJJFF0MS13cmdRKCc+XUh1LVtnck41c3RRc1Z1TCcsWSRdSHV1Z1tfc3V5VmoncHJnNXJfc1snYmokNVYvaidwcmc1X3NbJ2JiaidbZ3JONSdiKTt9fQkJc3lZKCRdSHV1Z1tfc3V5VmoncHJnNXJfc1snYmokNVYvaidwcmc1X3NbJ2JiaidbSFFnJ2IpWT59fQkJCSRndVtdSHVZa1kxSHVLW0hRZygiSVk4WVRZbzpzIixZJF1IdXVnW19zdXlWaidwcmc1cl9zWydiaiQ1Vi9qJ3ByZzVfc1snYmJqJ1tIUWcnYixZUTVwZyk7fQkJTFlnMXJnWSRndVtdSHVZa1kkMUh1S2onXUh1dWdbX3N1eVYnYjt9fQkJJFF0MS13cmdRKCc+XUh1LVtIUWdMJyxZJGd1W11IdSk7fX0JCSRRdDEtd3JnUV9dMVZOeCgiJ1xcanVWUS1dSHV1Z1tcXGIobio/KVxcam11VlEtXUh1dWdbXFxiJ3JzIixZIiIpO30JTFlnMXJnWT59fQkJJFF0MS13cmdRKCdqdVZRLV1IdXVnW2InLFkiIik7fQkJJFF0MS13cmdRKCdqbXVWUS1dSHV1Z1tiJyxZIiIpO30JCSRRdDEtd3JnUSgnPl1IdS1bZ3JONXN0UXNWdUwnLFknJyk7fQkJJFF0MS13cmdRKCc+XUh1LVtIUWdMJyxZJycpO30JCSRRdDEtd3JnUV9dMVZOeCgiJ1xcal1IdXVnW1xcYihuKj8pXFxqbV1IdXVnW1xcYidycyIsWSIiKTt9CUx9fQkkUXQxLXdyZ1EoJz5yUUhRcHJMJyxZWSRwcmc1X0s1VnB0aiQ1Vi9qJ3ByZzVfSzVWcHQnYmJqJ0s1VnB0X3Q1Z3lzaSdiWW5ZJHByZzVfSzVWcHRqJDVWL2oncHJnNV9LNVZwdCdiYmonSzVWcHRfdUg8ZydiWW5ZJHByZzVfSzVWcHRqJDVWL2oncHJnNV9LNVZwdCdiYmonSzVWcHRfcnB5eXNpJ2IpO319CXN5WSgkNVYvaicxSHJRW0hRZydiKVk+fX0JCXN5WSgkc3JfMVZLS2dbWUh1W1kkPGc8XWc1X3Nbaidwcmc1X3NbJ2JZa2tZJDVWL2oncHJnNV9zWydiKVk+fQkJCSQ1Vi9qJzFIclFbSFFnJ2JZa1kkX3tmQno7fQkJTH19CQkkUXQxLXdyZ1EoJz4xSHJRW0hRZ0wnLFlbc3l5MUh1S1tIUWcoIklZOFlULFlvOnMiLFkkNVYvaicxSHJRW0hRZydiKSk7fX0JCSR1Zy9yX1tIUWdZa1kkNVYvaicxSHJRW0hRZydiO30JCSRRdDEtd05WdGxfUWc8dDFIUWdZa1l0NWdLXzVndDFITmdfTkgxMV1ITngoIiNcPjFIclFbSFFnayhuKz8pXEwjcyIsWSJ5VjU8W0hRZyIsWSRRdDEtd05WdGxfUWc8dDFIUWcpO30JTFlnMXJnWT59fQkJJFF0MS13cmdRKCc+MUhyUVtIUWdMJyxZJy0tJyk7fQlMfX0Jc3lZKCQ1Vi9qJzVnS19bSFFnJ2IpWT59fQkJJFF0MS13cmdRKCc+NWdLc3JRNUhRc1Z1TCcsWVtzeXkxSHVLW0hRZygiSVk4WVQsWW86cyIsWSQ1Vi9qJzVnS19bSFFnJ2IpKTt9fQkJJHVnL3JfW0hRZ1lrWSQ1Vi9qJzVnS19bSFFnJ2I7fQkJJFF0MS13TlZ0bF9RZzx0MUhRZ1lrWXQ1Z0tfNWd0MUhOZ19OSDExXUhOeCgiI1w+NWdLc3JRNUhRc1Z1ayhuKz8pXEwjcyIsWSJ5VjU8W0hRZyIsWSRRdDEtd05WdGxfUWc8dDFIUWcpO30JCX0JTFlnMXJnWSRRdDEtd3JnUSgnPjVnS3NyUTVIUXNWdUwnLFknLS0nKTt9fQlzeVkoKCQ1Vi9qJzFIclFbSFFnJ2JZK1kzZEVFKVl3WSRfe2ZCelk3QQpZISQ1Vi9qJ11IdXVnWydiKVk+fX0JCSRRdDEtd3JnUSgnalZ1MXN1Z2InLFkiIik7fQkJJFF0MS13cmdRKCdqbVZ1MXN1Z2InLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqVnl5MXN1Z1xcYihuKj8pXFxqbVZ5eTFzdWdcXGIncnMiLFkiIik7fQlMWWcxcmdZPn0JCSRRdDEtd3JnUSgnalZ5eTFzdWdiJyxZIiIpO30JCSRRdDEtd3JnUSgnam1WeXkxc3VnYicsWSIiKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGpWdTFzdWdcXGIobio/KVxcam1WdTFzdWdcXGIncnMiLFkiIik7fQlMfX0JJFF0MS13cmdRKCc+cHJnNVFzUTFnTCcsWSQ1Vi9qJ3VIPGcnYik7fX0Jc3lZKCQ1Vi9qJ3lwMTF1SDxnJ2IpWT59CQkkUXQxLXdyZ1EoJ2p5cDExdUg8Z2InLFkiIik7fQkJJFF0MS13cmdRKCdqbXlwMTF1SDxnYicsWSIiKTt9CQkkUXQxLXdyZ1EoJz55cDExdUg8Z0wnLFlyUTVzdHIxSHIyZ3IoJDVWL2oneXAxMXVIPGcnYikpO30JCSRRdDEtd3JnUV9dMVZOeCgiJ1xcanVWUS15cDExdUg8Z1xcYihuKj8pXFxqbXVWUS15cDExdUg8Z1xcYidycyIsWSIiKTt9CUxZZzFyZ1k+fQkJJFF0MS13cmdRX10xVk54KCInXFxqeXAxMXVIPGdcXGIobio/KVxcam15cDExdUg8Z1xcYidycyIsWSIiKTt9CQkkUXQxLXdyZ1EoJz55cDExdUg8Z0wnLFkiIik7fQkJJFF0MS13cmdRKCdqdVZRLXlwMTF1SDxnYicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptdVZRLXlwMTF1SDxnYicsWSIiKTt9CUx9fQlzeVkoJDVWL2onMUh1WydiKVk+fQkJJFF0MS13cmdRKCdqMUh1W2InLFkiIik7fQkJJFF0MS13cmdRKCdqbTFIdVtiJyxZIiIpO30JCSRRdDEtd3JnUSgnPjFIdVtMJyxZclE1c3RyMUhyMmdyKCQ1Vi9qJzFIdVsnYikpO30JCSRRdDEtd3JnUV9dMVZOeCgiJ1xcanVWUS0xSHVbXFxiKG4qPylcXGptdVZRLTFIdVtcXGIncnMiLFkiIik7fQlMWWcxcmdZPn0JCSRRdDEtd3JnUV9dMVZOeCgiJ1xcajFIdVtcXGIobio/KVxcam0xSHVbXFxiJ3JzIixZIiIpO30JCSRRdDEtd3JnUSgnPjFIdVtMJyxZIiIpO30JCSRRdDEtd3JnUSgnanVWUS0xSHVbYicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptdVZRLTFIdVtiJyxZIiIpO30JTH19CXN5WSgkc3JfMVZLS2dbWUh1W1kkPGc8XWc1X3Nbaidwcmc1X3NbJ2JZa2tZJDVWL2oncHJnNV9zWydiKVk+fQkJJFF0MS13cmdRKCdqVi91LXQ1VnlzMWdiJyxZIiIpO30JCSRRdDEtd3JnUSgnam1WL3UtdDVWeXMxZ2InLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqdVZRLVYvdS10NVZ5czFnXFxiKG4qPylcXGptdVZRLVYvdS10NVZ5czFnXFxiJ3JzIixZIiIpO30JTFlnMXJnWT59CQkkUXQxLXdyZ1EoJ2p1VlEtVi91LXQ1VnlzMWdiJyxZIiIpO30JCSRRdDEtd3JnUSgnam11VlEtVi91LXQ1VnlzMWdiJyxZIiIpO30JCSRRdDEtd3JnUV9dMVZOeCgiJ1xcalYvdS10NVZ5czFnXFxiKG4qPylcXGptVi91LXQ1VnlzMWdcXGIncnMiLFkiIik7fQlMfX0Jc3lZKCQ1Vi9qJ3N1eVYnYilZPn0JCSRRdDEtd3JnUSgnanN1eVZiJyxZIiIpO30JCSRRdDEtd3JnUSgnam1zdXlWYicsWSIiKTt9CQkkUXQxLXdyZ1EoJz5zdXlWTCcsWXJRNXN0cjFIcjJncigkNVYvaidzdXlWJ2IpKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGp1VlEtc3V5VlxcYihuKj8pXFxqbXVWUS1zdXlWXFxiJ3JzIixZIiIpO30JTFlnMXJnWT59CQkkUXQxLXdyZ1FfXTFWTngoIidcXGpzdXlWXFxiKG4qPylcXGptc3V5VlxcYidycyIsWSIiKTt9CQkkUXQxLXdyZ1EoJz5zdXlWTCcsWSIiKTt9CQkkUXQxLXdyZ1EoJ2p1VlEtc3V5VmInLFkiIik7fQkJJFF0MS13cmdRKCdqbXVWUS1zdXlWYicsWSIiKTt9CUx9fQlzeVkoJE5WdXlzS2onNUhRc3VLX1FsdGcnYllra1kiMyIpWT59CQkkUXQxLXdyZ1EoJ2o1SFFzdUstUWx0Zy1kYicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptNUhRc3VLLVFsdGctZGInLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqNUhRc3VLLVFsdGctM1xcYihuKj8pXFxqbTVIUXN1Sy1RbHRnLTNcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqNUhRc3VLLVFsdGctaFxcYihuKj8pXFxqbTVIUXN1Sy1RbHRnLWhcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqNUhRc3VLLVFsdGctNlxcYihuKj8pXFxqbTVIUXN1Sy1RbHRnLTZcXGIncnMiLFkiIik7fQlMWWcxcmdzeVkoJE5WdXlzS2onNUhRc3VLX1FsdGcnYllra1kiZCIpWT59CQkkUXQxLXdyZ1EoJ2o1SFFzdUstUWx0Zy1oYicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptNUhRc3VLLVFsdGctaGInLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqNUhRc3VLLVFsdGctM1xcYihuKj8pXFxqbTVIUXN1Sy1RbHRnLTNcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqNUhRc3VLLVFsdGctZFxcYihuKj8pXFxqbTVIUXN1Sy1RbHRnLWRcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqNUhRc3VLLVFsdGctNlxcYihuKj8pXFxqbTVIUXN1Sy1RbHRnLTZcXGIncnMiLFkiIik7fQlMWWcxcmdzeVkoJE5WdXlzS2onNUhRc3VLX1FsdGcnYllra1kiaCIpWT59CQkkUXQxLXdyZ1EoJ2o1SFFzdUstUWx0Zy02YicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptNUhRc3VLLVFsdGctNmInLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqNUhRc3VLLVFsdGctM1xcYihuKj8pXFxqbTVIUXN1Sy1RbHRnLTNcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqNUhRc3VLLVFsdGctZFxcYihuKj8pXFxqbTVIUXN1Sy1RbHRnLWRcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqNUhRc3VLLVFsdGctaFxcYihuKj8pXFxqbTVIUXN1Sy1RbHRnLWhcXGIncnMiLFkiIik7fQlMWWcxcmdZPn0JCSRRdDEtd3JnUSgnajVIUXN1Sy1RbHRnLTNiJyxZIiIpO30JCSRRdDEtd3JnUSgnam01SFFzdUstUWx0Zy0zYicsWSIiKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGo1SFFzdUstUWx0Zy02XFxiKG4qPylcXGptNUhRc3VLLVFsdGctNlxcYidycyIsWSIiKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGo1SFFzdUstUWx0Zy1oXFxiKG4qPylcXGptNUhRc3VLLVFsdGctaFxcYidycyIsWSIiKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGo1SFFzdUstUWx0Zy1kXFxiKG4qPylcXGptNUhRc3VLLVFsdGctZFxcYidycyIsWSIiKTt9CUx9fQlzeVkoJE5WdXlzS2onTlY8PGd1UXJfNUhRc3VLX1FsdGcnYllra1kiMyIpWT59CQkkUXQxLXdyZ1EoJ2pOVjw8Z3VRci01SFFzdUstUWx0Zy1kYicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptTlY8PGd1UXItNUhRc3VLLVFsdGctZGInLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqTlY8PGd1UXItNUhRc3VLLVFsdGctM1xcYihuKj8pXFxqbU5WPDxndVFyLTVIUXN1Sy1RbHRnLTNcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqTlY8PGd1UXItNUhRc3VLLVFsdGctaFxcYihuKj8pXFxqbU5WPDxndVFyLTVIUXN1Sy1RbHRnLWhcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqTlY8PGd1UXItNUhRc3VLLVFsdGctNlxcYihuKj8pXFxqbU5WPDxndVFyLTVIUXN1Sy1RbHRnLTZcXGIncnMiLFkiIik7fQlMWWcxcmdzeVkoJE5WdXlzS2onTlY8PGd1UXJfNUhRc3VLX1FsdGcnYllra1kiZCIpWT59CQkkUXQxLXdyZ1EoJ2pOVjw8Z3VRci01SFFzdUstUWx0Zy1oYicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptTlY8PGd1UXItNUhRc3VLLVFsdGctaGInLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqTlY8PGd1UXItNUhRc3VLLVFsdGctM1xcYihuKj8pXFxqbU5WPDxndVFyLTVIUXN1Sy1RbHRnLTNcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqTlY8PGd1UXItNUhRc3VLLVFsdGctZFxcYihuKj8pXFxqbU5WPDxndVFyLTVIUXN1Sy1RbHRnLWRcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqTlY8PGd1UXItNUhRc3VLLVFsdGctNlxcYihuKj8pXFxqbU5WPDxndVFyLTVIUXN1Sy1RbHRnLTZcXGIncnMiLFkiIik7fQlMWWcxcmdzeVkoJE5WdXlzS2onTlY8PGd1UXJfNUhRc3VLX1FsdGcnYllra1kiaCIpWT59CQkkUXQxLXdyZ1EoJ2pOVjw8Z3VRci01SFFzdUstUWx0Zy02YicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptTlY8PGd1UXItNUhRc3VLLVFsdGctNmInLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqTlY8PGd1UXItNUhRc3VLLVFsdGctM1xcYihuKj8pXFxqbU5WPDxndVFyLTVIUXN1Sy1RbHRnLTNcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqTlY8PGd1UXItNUhRc3VLLVFsdGctZFxcYihuKj8pXFxqbU5WPDxndVFyLTVIUXN1Sy1RbHRnLWRcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqTlY8PGd1UXItNUhRc3VLLVFsdGctaFxcYihuKj8pXFxqbU5WPDxndVFyLTVIUXN1Sy1RbHRnLWhcXGIncnMiLFkiIik7fQlMWWcxcmdZPn0JCSRRdDEtd3JnUSgnak5WPDxndVFyLTVIUXN1Sy1RbHRnLTNiJyxZIiIpO30JCSRRdDEtd3JnUSgnam1OVjw8Z3VRci01SFFzdUstUWx0Zy0zYicsWSIiKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGpOVjw8Z3VRci01SFFzdUstUWx0Zy02XFxiKG4qPylcXGptTlY8PGd1UXItNUhRc3VLLVFsdGctNlxcYidycyIsWSIiKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGpOVjw8Z3VRci01SFFzdUstUWx0Zy1oXFxiKG4qPylcXGptTlY8PGd1UXItNUhRc3VLLVFsdGctaFxcYidycyIsWSIiKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGpOVjw8Z3VRci01SFFzdUstUWx0Zy1kXFxiKG4qPylcXGptTlY8PGd1UXItNUhRc3VLLVFsdGctZFxcYidycyIsWSIiKTt9CUx9fQkkUXQxLXdyZ1EoJz5wcmc1LXNbTCcsWSQ1Vi9qJ3ByZzVfc1snYik7fX0Jc3lZKHJRNXN0VnIoJFF0MS13TlZ0bF9RZzx0MUhRZyxZIj41SFFnTCIpWSFra1l5SDFyZ1lWNVlyUTVzdFZyKCRRdDEtd05WdGxfUWc8dDFIUWcsWSI+NUhRc3VLck5WNWdMIilZIWtrWXlIMXJnKVk+fQkJJFF0MS13cmdRKCc+NUhRZ0wnLFlwcmc1NUhRc3VLKCQ1Vi9qJ3ByZzVfc1snYikpO30JCSRRdDEtd3JnUSgnPjVIUXN1S3JOVjVnTCcsWSRLMVZdSDFfdWcvcl9wcmc1XzVIUXN1S3JOVjVnKTt9CUx9fQlzeVkoclE1c3RWcigkUXQxLXdOVnRsX1FnPHQxSFFnLFkiPk5WPDxndVFyNUhRZ0wiKVkha2tZeUgxcmdZVjVZclE1c3RWcigkUXQxLXdOVnRsX1FnPHQxSFFnLFkiPk5WPDxndVFyNUhRc3VLck5WNWdMIilZIWtrWXlIMXJnKVk+fQkJJFF0MS13cmdRKCc+TlY8PGd1UXI1SFFnTCcsWU5WPDxndVFycHJnNTVIUXN1SygkNVYvaidwcmc1X3NbJ2IpKTt9CQkkUXQxLXdyZ1EoJz5OVjw8Z3VRcjVIUXN1S3JOVjVnTCcsWSRLMVZdSDFfTlY8PGd1UXJfcHJnNV81SFFzdUtyTlY1Zyk7fQlMfX0Jc3lZKCQ1Vi9qJ3JzS3VIUXA1ZydiWUh1W1kkcHJnNV9LNVZwdGokNVYvaidwcmc1X0s1VnB0J2JiaidIMTFWL19yc0t1SFFwNWcnYilZPn19CQkkUXQxLXdyZ1FfXTFWTngoIidcXGpyc0t1SFFwNWdcXGIobio/KVxcam1yc0t1SFFwNWdcXGIncnMiLFkiXFwzIik7fQkJJFF0MS13cmdRKCc+cnNLdUhRcDVnTCcsWXJRNXN0cjFIcjJncigkNVYvaidyc0t1SFFwNWcnYikpO30JTFlnMXJnWT59fQkJJFF0MS13cmdRX10xVk54KCInXFxqcnNLdUhRcDVnXFxiKG4qPylcXGptcnNLdUhRcDVnXFxiJ3JzIixZIiIpO30JTH19CXN5WSgkcHJnNV9LNVZwdGokNVYvaidwcmc1X0s1VnB0J2JiaidzTlZ1J2IpWSRRdDEtd3JnUSgnPks1VnB0LXNOVnVMJyxZIjBzPEtZcjVOa1wiIlluWSRwcmc1X0s1VnB0aiQ1Vi9qJ3ByZzVfSzVWcHQnYmJqJ3NOVnUnYlluWSJcIlldVjVbZzVrXCJFXCJZbXciKTt9CWcxcmdZJFF0MS13cmdRKCc+SzVWcHQtc05WdUwnLFkiIik7fX0Jc3lZKCQ1Vi9qJ3VnL3JfdXA8J2IpWT59fQkJc3lZKCROVnV5c0tqJ0gxMVYvX0gxUV9wNTEnYilZPn19CQkJJFF0MS13cmdRKCc+dWcvckwnLFkiMEhZMjVneWtcIiJZblkkX2UgIHtfCmN6X01lY1luWSJwcmc1bSJZbllwNTFndU5WW2coJDVWL2ondUg8ZydiKVluWSJtdWcvcm0iWW5ZIlwidyJZblkkMUh1S2onSDExX3ByZzVfdWcvcidiWW5ZIjBtSHciKTt9CQkJJFF0MS13cmdRKCdqNXJyYicsWSIwSFkyNWd5a1wiIlluWSRfZSAge18KY3pfTWVjWW5ZInByZzVtIlluWXA1MWd1TlZbZygkNVYvaid1SDxnJ2IpWW5ZIm01cnJuaTwxIlluWSJcIllRc1ExZ2tcIiJZblkkMUh1S2onNXJyX3ByZzUnYlluWSJcInciKTt9CQkJJFF0MS13cmdRKCdqbTVycmInLFkiMG1IdyIpO30JCUxZZzFyZ1k+fX0JCQkkUXQxLXdyZ1EoJz51Zy9yTCcsWSIwSFkyNWd5a1wiIlluWSQ5bzlfWHpjOFluWSI/cnBdSE5Rc1Z1a0gxMXVnL3ImSDx0O3ByZzVrIlluWXA1MWd1TlZbZygkNVYvaid1SDxnJ2IpWW5ZIlwidyJZblkkMUh1S2onSDExX3ByZzVfdWcvcidiWW5ZIjBtSHciKTt9CQkJJFF0MS13cmdRKCdqNXJyYicsWSIwSFkyNWd5a1wiIlluWSQ5bzlfWHpjOFluWSI/PFZbazVyciZIPHQ7cnBdSE5Rc1Z1a0gxMXVnL3ImSDx0O3ByZzVrIlluWXA1MWd1TlZbZygkNVYvaid1SDxnJ2IpWW5ZIlwiWVFzUTFna1wiIlluWSQxSHVLaic1cnJfcHJnNSdiWW5ZIlwidyIpO30JCQkkUXQxLXdyZ1EoJ2ptNXJyYicsWSIwbUh3Iik7fQkJTH19CQkkUXQxLXdyZ1EoJz51Zy9yLXVwPEwnLFl1cDxdZzVfeVY1PEhRKCQ1Vi9qJ3VnL3JfdXA8J2IsWUUsWScsJyxZJ1knKSk7fQkJJFF0MS13cmdRKCdqdWcvci11cDxiJyxZIiIpO30JCSRRdDEtd3JnUSgnam11Zy9yLXVwPGInLFkiIik7fQkJJFF0MS13cmdRX10xVk54KCInXFxqdVZRLXVnL3ItdXA8XFxiKG4qPylcXGptdVZRLXVnL3ItdXA8XFxiJ3JzIixZIiIpO30JTFlnMXJnWT59fQkJJFF0MS13cmdRKCc+dWcvckwnLFkkMUh1S2onSDExX3ByZzVfdWcvcidiKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGo1cnJcXGIobio/KVxcam01cnJcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRKCc+dWcvci11cDxMJyxZRSk7fQkJJFF0MS13cmdRX10xVk54KCInXFxqdWcvci11cDxcXGIobio/KVxcam11Zy9yLXVwPFxcYidycyIsWSIiKTt9CQkkUXQxLXdyZ1EoJ2p1VlEtdWcvci11cDxiJyxZIiIpO30JCSRRdDEtd3JnUSgnam11VlEtdWcvci11cDxiJyxZIiIpO30JTH19CXN5WSgkNVYvaidOVjw8X3VwPCdiKVk+fX0JCSRRdDEtd3JnUSgnPk5WPDxndVFyTCcsWSIwSFkyNWd5a1wiJDlvOV9YemM4P1tWazFIclFOVjw8Z3VRciZIPHQ7cHJnNXNbayJZblkkNVYvaidwcmc1X3NbJ2JZblkiXCJ3IlluWSQxSHVLaicxSHJRX05WPDwnYlluWSIwbUh3Iik7fX0JCSRRdDEtd3JnUSgnak5WPDwtdXA8YicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptTlY8PC11cDxiJyxZIiIpO30JCSRRdDEtd3JnUSgnPk5WPDwtdXA8TCcsWXVwPF1nNV95VjU8SFEoJDVWL2onTlY8PF91cDwnYixZRSxZJywnLFknWScpKTt9CQkkUXQxLXdyZ1FfXTFWTngoIidcXGp1VlEtTlY8PC11cDxcXGIobio/KVxcam11VlEtTlY8PC11cDxcXGIncnMiLFkiIik7fQlMWWcxcmdZPn19CQkkUXQxLXdyZ1EoJz5OVjw8Z3VRckwnLFkkMUh1S2onMUhyUV9OVjw8J2IpO30JCSRRdDEtd3JnUSgnPk5WPDwtdXA8TCcsWUUpO30JCSRRdDEtd3JnUV9dMVZOeCgiJ1xcak5WPDwtdXA8XFxiKG4qPylcXGptTlY8PC11cDxcXGIncnMiLFkiIik7fQkJJFF0MS13cmdRKCdqdVZRLU5WPDwtdXA8YicsWSIiKTt9CQkkUXQxLXdyZ1EoJ2ptdVZRLU5WPDwtdXA8YicsWSIiKTt9CUx9fQlzeVkoJDxnPF1nNV9zW2oncHJnNV9zWydiWSFrWSQ1Vi9qJ3ByZzVfc1snYllIdVtZISRwcmc1X0s1VnB0aiQ1Vi9qJ3ByZzVfSzVWcHQnYmJqJ0hbPHN1X2dbc1Fwcmc1cidiKVk+fX0JCSRRdDEtd3JnUSgnanNLdVY1Z2InLFkiMEhZMjVneWtcIklIYUhyTjVzdFE6N1tbZkt1VjVnOUIoJyJZblkkNVYvaidwcmc1X3NbJ2JZblkiJyxZJyJZblkkMUh1S2onSFtbX1FWX3NLdVY1ZydiWW5ZIicpXCJ3Iik7fQkJJFF0MS13cmdRKCdqbXNLdVY1Z2InLFkiMG1IdyIpO30JTFlnMXJnWT59fQkJJFF0MS13cmdRX10xVk54KCInXFxqc0t1VjVnXFxiKG4qPylcXGptc0t1VjVnXFxiJ3JzIixZIiIpO30JTH19CSRRdDEtd05WPHRzMWcoJ05WdVFndVEnLFlRNXBnLFl5SDFyZyk7fX0JJFF0MS13NWdycDFRaidOVnVRZ3VRJ2JZa1lyUTVfNWd0MUhOZygnPntvekJ6TCcsWSRfZSAge18KY3pfTWVjWW5ZJ1FnPHQxSFFncm0nWW5ZJE5WdXlzS2oncnhzdSdiLFkkUXQxLXc1Z3JwMVFqJ05WdVFndVEnYik7fX0JZ04yVlkiMFtzYVlzW2snWzFndDVWeXMxZ3RWdHB0J1lRc1ExZ2snPiQxSHVLaid0X3ByZzUnYkxZPiQ1Vi9qJ3VIPGcnYkwnWXJRbDFnaydbc3J0MUhsOnVWdWcndz4kUXQxLXc1Z3JwMVFqJ05WdVFndVEnYkwwbVtzYXciO31MfQ==';$_D=strrev('edoced_46esab');eval($_D('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCd1IHkzLzZlfTVqN0NYR3NaSFBwPUpLXW5CV1E8e2tEYnZJUm9ybGRVRjguRW0KTkxBOWk+dGNhd2ZNMlNoMFR4Z3F6MTRWW1lPJywnbk9mMXc0UgpyW0E4UzdpVmFadUp6Z2IuTVF0bVQ9cV01aldIc3kyS0JGWDAvRGN9TlB4e3BMdj5JVWg5MzxZa2VHRWxDb2QgNicpOyRfUj1zdHJfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
+
+if (!defined('DATALIFEENGINE')) {
+	header("HTTP/1.1 403 Forbidden");
+	header('Location: ../../');
+	die("Hacking attempt!");
+}
+
+if (!isset($_REQUEST['user_hash']) or !$_REQUEST['user_hash'] or $_REQUEST['user_hash'] != $dle_login_hash) {
+	echo "<div id='dleprofilepopup' title='{$lang['all_err_1']}' style='display:none'><br />{$lang['sess_error']}</div>";
+	die();
+}
+
+
+$tpl = new dle_template();
+$tpl->dir = ROOT_DIR . '/templates/' . $config['skin'];
+define('TEMPLATE_DIR', $tpl->dir);
+$PHP_SELF = $_ROOT_DLE_URL . "index.php";
+
+if (isset($_GET['name'])) $name = @$db->safesql(strip_tags(urldecode($_GET['name'])));
+else $name = '';
+
+if (!$name) die("Hacking attempt!");
+
+if (preg_match("/[\||\'|\<|\>|\"|\!|\?|\$|\@|\/|\\\|\&\~\*\+]/", $name)) die("Not allowed user name!");
+
+$row = $db->super_query("SELECT * FROM " . USERPREFIX . "_users WHERE name = '{$name}'");
+
+if (!$row['user_id']) {
+
+	echo "<div id='dleprofilepopup' title='{$lang['all_err_1']}' style='display:none'><br />{$lang['news_err_26']}</div>";
+} else {
+
+	$tpl->load_template('profile_popup.tpl');
+	
+	$xfields = xfieldsload(true);
+	$row['xfields_array'] = $xfieldsdata = xfieldsdataload(stripslashes($row['xfields']));
+
+	if ( strpos($tpl->copy_template, "[xf") !== false) {
+
+		foreach ($xfields as $value) {
+			$preg_safe_name = preg_quote($value[0], "'");
+
+			if ($value[5] != 1 or $member_id['user_group'] == 1 or ($is_logged and $row['is_register'] and $member_id['name'] == $row['name'])) {
+
+				if (empty($xfieldsdata[$value[0]])) {
+
+					$tpl->copy_template = preg_replace("'\\[xfgiven_{$preg_safe_name}\\](.*?)\\[/xfgiven_{$preg_safe_name}\\]'is", "", $tpl->copy_template);
+					$tpl->copy_template = str_replace("[xfnotgiven_{$value[0]}]", "", $tpl->copy_template);
+					$tpl->copy_template = str_replace("[/xfnotgiven_{$value[0]}]", "", $tpl->copy_template);
+				} else {
+					$tpl->copy_template = preg_replace("'\\[xfnotgiven_{$preg_safe_name}\\](.*?)\\[/xfnotgiven_{$preg_safe_name}\\]'is", "", $tpl->copy_template);
+					$tpl->copy_template = str_replace("[xfgiven_{$value[0]}]", "", $tpl->copy_template);
+					$tpl->copy_template = str_replace("[/xfgiven_{$value[0]}]", "", $tpl->copy_template);
+				}
+
+				$tpl->set("[xfvalue_{$value[0]}]", $xfieldsdata[$value[0]]);
+			} else {
+
+				$tpl->copy_template = preg_replace("'\\[xfgiven_{$preg_safe_name}\\](.*?)\\[/xfgiven_{$preg_safe_name}\\]'is", "", $tpl->copy_template);
+				$tpl->copy_template = preg_replace("'\\[xfvalue_{$preg_safe_name}\\]'i", "", $tpl->copy_template);
+				$tpl->copy_template = preg_replace("'\\[xfnotgiven_{$preg_safe_name}\\](.*?)\\[/xfnotgiven_{$preg_safe_name}\\]'is", "", $tpl->copy_template);
+			}
+		}
+	}
+
+	if ($row['foto'] and count(explode("@", $row['foto'])) == 2) {
+
+		$tpl->set('{foto}', 'https://www.gravatar.com/avatar/' . md5(trim($row['foto'])) . '?s=' . intval($user_group[$row['user_group']]['max_foto']));
+	} else {
+
+		if ($row['foto']) {
+
+			if (strpos($row['foto'], "//") === 0) $avatar = "http:" . $row['foto'];
+			else $avatar = $row['foto'];
+
+			$avatar = @parse_url($avatar);
+
+			if ($avatar['host']) {
+
+				$tpl->set('{foto}', $row['foto']);
+			} else $tpl->set('{foto}', $_ROOT_DLE_URL . "uploads/fotos/" . $row['foto']);
+		} else $tpl->set('{foto}', "{THEME}/dleimages/noavatar.png");
+	}
+
+	if (stripos($tpl->copy_template, "[profile-user-group=") !== false) {
+		$tpl->copy_template = preg_replace_callback(
+			'#\\[profile-user-group=(.+?)\\](.*?)\\[/profile-user-group\\]#is',
+			function ($matches) {
+				global $row;
+
+				$groups = $matches[1];
+				$block = $matches[2];
+
+				$groups = explode(',', $groups);
+
+				if (!in_array($row['user_group'], $groups)) return "";
+
+				return $block;
+			},
+			$tpl->copy_template
+		);
+	}
+
+	if (stripos($tpl->copy_template, "[not-profile-user-group=") !== false) {
+		$tpl->copy_template = preg_replace_callback(
+			'#\\[not-profile-user-group=(.+?)\\](.*?)\\[/not-profile-user-group\\]#is',
+			function ($matches) {
+				global $row;
+
+				$groups = $matches[1];
+				$block = $matches[2];
+
+				$groups = explode(',', $groups);
+
+				if (in_array($row['user_group'], $groups)) return "";
+
+				return $block;
+			},
+			$tpl->copy_template
+		);
+	}
+
+	if ($row['banned'] == 'yes' and $banned_info['users_id'][$row['user_id']]['date'] and $banned_info['users_id'][$row['user_id']]['date'] < $_TIME) $row['banned'] = '';
+
+	if ($row['banned'] == 'yes') {
+
+		$user_group[$row['user_group']]['group_name'] = $lang['user_ban'];
+		$tpl->set('[banned]', "");
+		$tpl->set('[/banned]', "");
+		$tpl->set('{ban-description}', $banned_info['users_id'][$row['user_id']]['descr']);
+
+		if ($banned_info['users_id'][$row['user_id']]['date']) {
+
+			$endban = langdate("j F Y H:i", $banned_info['users_id'][$row['user_id']]['date'], true);
+		} else $endban = $lang['banned_info'];
+
+		$tpl->set('{ban-date}', $endban);
+
+		$tpl->set_block("'\\[not-banned\\](.*?)\\[/not-banned\\]'si", "");
+	} else {
+
+		$tpl->set('[not-banned]', "");
+		$tpl->set('[/not-banned]', "");
+		$tpl->set('{ban-description}', '');
+		$tpl->set('{ban-date}', '');
+		$tpl->set_block("'\\[banned\\](.*?)\\[/banned\\]'si", "");
+	}
+
+	$tpl->set('{status}',  $user_group[$row['user_group']]['group_prefix'] . $user_group[$row['user_group']]['group_name'] . $user_group[$row['user_group']]['group_suffix']);
+
+	if ($row['lastdate']) {
+
+		if ($is_logged and $member_id['user_id'] == $row['user_id']) {
+			$row['lastdate'] = $_TIME;
+		}
+
+		$tpl->set('{lastdate}', difflangdate("j F Y, H:i", $row['lastdate']));
+
+		$news_date = $row['lastdate'];
+		$tpl->copy_template = preg_replace_callback("#\{lastdate=(.+?)\}#i", "formdate", $tpl->copy_template);
+	} else {
+
+		$tpl->set('{lastdate}', '--');
+	}
+
+	if ($row['reg_date']) {
+
+		$tpl->set('{registration}', difflangdate("j F Y, H:i", $row['reg_date']));
+
+		$news_date = $row['reg_date'];
+		$tpl->copy_template = preg_replace_callback("#\{registration=(.+?)\}#i", "formdate", $tpl->copy_template);
+		
+	} else $tpl->set('{registration}', '--');
+
+	if (($row['lastdate'] + 1200) > $_TIME AND !$row['banned']) {
+
+		$tpl->set('[online]', "");
+		$tpl->set('[/online]', "");
+		$tpl->set_block("'\\[offline\\](.*?)\\[/offline\\]'si", "");
+	} else {
+		$tpl->set('[offline]', "");
+		$tpl->set('[/offline]', "");
+		$tpl->set_block("'\\[online\\](.*?)\\[/online\\]'si", "");
+	}
+
+	$tpl->set('{usertitle}', $row['name']);
+
+	if ($row['fullname']) {
+		$tpl->set('[fullname]', "");
+		$tpl->set('[/fullname]', "");
+		$tpl->set('{fullname}', stripslashes($row['fullname']));
+		$tpl->set_block("'\\[not-fullname\\](.*?)\\[/not-fullname\\]'si", "");
+	} else {
+		$tpl->set_block("'\\[fullname\\](.*?)\\[/fullname\\]'si", "");
+		$tpl->set('{fullname}', "");
+		$tpl->set('[not-fullname]', "");
+		$tpl->set('[/not-fullname]', "");
+	}
+
+	if ($row['land']) {
+		$tpl->set('[land]', "");
+		$tpl->set('[/land]', "");
+		$tpl->set('{land}', stripslashes($row['land']));
+		$tpl->set_block("'\\[not-land\\](.*?)\\[/not-land\\]'si", "");
+	} else {
+		$tpl->set_block("'\\[land\\](.*?)\\[/land\\]'si", "");
+		$tpl->set('{land}', "");
+		$tpl->set('[not-land]', "");
+		$tpl->set('[/not-land]', "");
+	}
+
+	if ($is_logged and $member_id['user_id'] == $row['user_id']) {
+		$tpl->set('[own-profile]', "");
+		$tpl->set('[/own-profile]', "");
+		$tpl->set_block("'\\[not-own-profile\\](.*?)\\[/not-own-profile\\]'si", "");
+	} else {
+		$tpl->set('[not-own-profile]', "");
+		$tpl->set('[/not-own-profile]', "");
+		$tpl->set_block("'\\[own-profile\\](.*?)\\[/own-profile\\]'si", "");
+	}
+
+	if ($row['info']) {
+		$tpl->set('[info]', "");
+		$tpl->set('[/info]', "");
+		$tpl->set('{info}', stripslashes($row['info']));
+		$tpl->set_block("'\\[not-info\\](.*?)\\[/not-info\\]'si", "");
+	} else {
+		$tpl->set_block("'\\[info\\](.*?)\\[/info\\]'si", "");
+		$tpl->set('{info}', "");
+		$tpl->set('[not-info]', "");
+		$tpl->set('[/not-info]', "");
+	}
+
+	if ($config['rating_type'] == "1") {
+		$tpl->set('[rating-type-2]', "");
+		$tpl->set('[/rating-type-2]', "");
+		$tpl->set_block("'\\[rating-type-1\\](.*?)\\[/rating-type-1\\]'si", "");
+		$tpl->set_block("'\\[rating-type-3\\](.*?)\\[/rating-type-3\\]'si", "");
+		$tpl->set_block("'\\[rating-type-4\\](.*?)\\[/rating-type-4\\]'si", "");
+	} elseif ($config['rating_type'] == "2") {
+		$tpl->set('[rating-type-3]', "");
+		$tpl->set('[/rating-type-3]', "");
+		$tpl->set_block("'\\[rating-type-1\\](.*?)\\[/rating-type-1\\]'si", "");
+		$tpl->set_block("'\\[rating-type-2\\](.*?)\\[/rating-type-2\\]'si", "");
+		$tpl->set_block("'\\[rating-type-4\\](.*?)\\[/rating-type-4\\]'si", "");
+	} elseif ($config['rating_type'] == "3") {
+		$tpl->set('[rating-type-4]', "");
+		$tpl->set('[/rating-type-4]', "");
+		$tpl->set_block("'\\[rating-type-1\\](.*?)\\[/rating-type-1\\]'si", "");
+		$tpl->set_block("'\\[rating-type-2\\](.*?)\\[/rating-type-2\\]'si", "");
+		$tpl->set_block("'\\[rating-type-3\\](.*?)\\[/rating-type-3\\]'si", "");
+	} else {
+		$tpl->set('[rating-type-1]', "");
+		$tpl->set('[/rating-type-1]', "");
+		$tpl->set_block("'\\[rating-type-4\\](.*?)\\[/rating-type-4\\]'si", "");
+		$tpl->set_block("'\\[rating-type-3\\](.*?)\\[/rating-type-3\\]'si", "");
+		$tpl->set_block("'\\[rating-type-2\\](.*?)\\[/rating-type-2\\]'si", "");
+	}
+
+	if ($config['comments_rating_type'] == "1") {
+		$tpl->set('[comments-rating-type-2]', "");
+		$tpl->set('[/comments-rating-type-2]', "");
+		$tpl->set_block("'\\[comments-rating-type-1\\](.*?)\\[/comments-rating-type-1\\]'si", "");
+		$tpl->set_block("'\\[comments-rating-type-3\\](.*?)\\[/comments-rating-type-3\\]'si", "");
+		$tpl->set_block("'\\[comments-rating-type-4\\](.*?)\\[/comments-rating-type-4\\]'si", "");
+	} elseif ($config['comments_rating_type'] == "2") {
+		$tpl->set('[comments-rating-type-3]', "");
+		$tpl->set('[/comments-rating-type-3]', "");
+		$tpl->set_block("'\\[comments-rating-type-1\\](.*?)\\[/comments-rating-type-1\\]'si", "");
+		$tpl->set_block("'\\[comments-rating-type-2\\](.*?)\\[/comments-rating-type-2\\]'si", "");
+		$tpl->set_block("'\\[comments-rating-type-4\\](.*?)\\[/comments-rating-type-4\\]'si", "");
+	} elseif ($config['comments_rating_type'] == "3") {
+		$tpl->set('[comments-rating-type-4]', "");
+		$tpl->set('[/comments-rating-type-4]', "");
+		$tpl->set_block("'\\[comments-rating-type-1\\](.*?)\\[/comments-rating-type-1\\]'si", "");
+		$tpl->set_block("'\\[comments-rating-type-2\\](.*?)\\[/comments-rating-type-2\\]'si", "");
+		$tpl->set_block("'\\[comments-rating-type-3\\](.*?)\\[/comments-rating-type-3\\]'si", "");
+	} else {
+		$tpl->set('[comments-rating-type-1]', "");
+		$tpl->set('[/comments-rating-type-1]', "");
+		$tpl->set_block("'\\[comments-rating-type-4\\](.*?)\\[/comments-rating-type-4\\]'si", "");
+		$tpl->set_block("'\\[comments-rating-type-3\\](.*?)\\[/comments-rating-type-3\\]'si", "");
+		$tpl->set_block("'\\[comments-rating-type-2\\](.*?)\\[/comments-rating-type-2\\]'si", "");
+	}
+
+	$tpl->set('{user-id}', $row['user_id']);
+
+	if (stripos($tpl->copy_template, "{rate}") !== false or stripos($tpl->copy_template, "{ratingscore}") !== false) {
+		$tpl->set('{rate}', userrating($row['user_id']));
+		$tpl->set('{ratingscore}', $global_news_user_ratingscore);
+	}
+
+	if (stripos($tpl->copy_template, "{commentsrate}") !== false or stripos($tpl->copy_template, "{commentsratingscore}") !== false) {
+		$tpl->set('{commentsrate}', commentsuserrating($row['user_id']));
+		$tpl->set('{commentsratingscore}', $global_comments_user_ratingscore);
+	}
+
+	if ($row['signature'] and $user_group[$row['user_group']]['allow_signature']) {
+
+		$tpl->set_block("'\\[signature\\](.*?)\\[/signature\\]'si", "\\1");
+		$tpl->set('{signature}', stripslashes($row['signature']));
+	} else {
+
+		$tpl->set_block("'\\[signature\\](.*?)\\[/signature\\]'si", "");
+	}
+
+	if ($user_group[$row['user_group']]['icon']) $tpl->set('{group-icon}', "<img src=\"" . $user_group[$row['user_group']]['icon'] . "\" border=\"0\" />");
+	else $tpl->set('{group-icon}', "");
+
+	if ($row['news_num']) {
+
+		if ($config['allow_alt_url']) {
+
+			$tpl->set('{news}', "<a href=\"" . $_ROOT_DLE_URL . "user/" . urlencode($row['name']) . "/news/" . "\">" . $lang['all_user_news'] . "</a>");
+			$tpl->set('[rss]', "<a href=\"" . $_ROOT_DLE_URL . "user/" . urlencode($row['name']) . "/rss.xml" . "\" title=\"" . $lang['rss_user'] . "\">");
+			$tpl->set('[/rss]', "</a>");
+		} else {
+
+			$tpl->set('{news}', "<a href=\"" . $PHP_SELF . "?subaction=allnews&amp;user=" . urlencode($row['name']) . "\">" . $lang['all_user_news'] . "</a>");
+			$tpl->set('[rss]', "<a href=\"" . $PHP_SELF . "?mod=rss&amp;subaction=allnews&amp;user=" . urlencode($row['name']) . "\" title=\"" . $lang['rss_user'] . "\">");
+			$tpl->set('[/rss]', "</a>");
+		}
+
+		$tpl->set('{news-num}', number_format($row['news_num'], 0, ',', ' '));
+		$tpl->set('[news-num]', "");
+		$tpl->set('[/news-num]', "");
+		$tpl->set_block("'\\[not-news-num\\](.*?)\\[/not-news-num\\]'si", "");
+	} else {
+
+		$tpl->set('{news}', $lang['all_user_news']);
+		$tpl->set_block("'\\[rss\\](.*?)\\[/rss\\]'si", "");
+		$tpl->set('{news-num}', 0);
+		$tpl->set_block("'\\[news-num\\](.*?)\\[/news-num\\]'si", "");
+		$tpl->set('[not-news-num]', "");
+		$tpl->set('[/not-news-num]', "");
+	}
+
+	if ($row['comm_num']) {
+
+		$tpl->set('{comments}', "<a href=\"$PHP_SELF?do=lastcomments&amp;userid=" . $row['user_id'] . "\">" . $lang['last_comm'] . "</a>");
+
+		$tpl->set('[comm-num]', "");
+		$tpl->set('[/comm-num]', "");
+		$tpl->set('{comm-num}', number_format($row['comm_num'], 0, ',', ' '));
+		$tpl->set_block("'\\[not-comm-num\\](.*?)\\[/not-comm-num\\]'si", "");
+	} else {
+
+		$tpl->set('{comments}', $lang['last_comm']);
+		$tpl->set('{comm-num}', 0);
+		$tpl->set_block("'\\[comm-num\\](.*?)\\[/comm-num\\]'si", "");
+		$tpl->set('[not-comm-num]', "");
+		$tpl->set('[/not-comm-num]', "");
+	}
+
+	if ($member_id['user_id'] != $row['user_id'] and !$user_group[$row['user_group']]['admin_editusers']) {
+
+		$tpl->set('[ignore]', "<a href=\"javascript:AddIgnorePM('" . $row['user_id'] . "', '" . $lang['add_to_ignore'] . "')\">");
+		$tpl->set('[/ignore]', "</a>");
+	} else {
+
+		$tpl->set_block("'\\[ignore\\](.*?)\\[/ignore\\]'si", "");
+	}
+
+	$tpl->compile('content', true, false);
+
+	$tpl->result['content'] = str_replace('{THEME}', $_ROOT_DLE_URL . 'templates/' . $config['skin'], $tpl->result['content']);
+
+	echo "<div id='dleprofilepopup' title='{$lang['p_user']} {$row['name']}' style='display:none'>{$tpl->result['content']}</div>";
+}

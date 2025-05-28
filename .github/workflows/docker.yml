@@ -28,12 +28,24 @@ jobs:
           echo "commit=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
           echo "tag=$(git describe --tags --always)" >> $GITHUB_OUTPUT
 
-      - name: Build and push Docker image
+      - name: Build and push Docker image FPM
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: ./Dockerfile.fpm
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bel-dle-fpm:latest
+          build-args: |
+            SOURCE_COMMIT=${{ steps.vars.outputs.commit }}
+            SOURCE_TAG=${{ steps.vars.outputs.tag }}
+
+      - name: Build and push Docker image NGINX
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile.nginx
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bel-dle-nginx:latest
           build-args: |
             SOURCE_COMMIT=${{ steps.vars.outputs.commit }}
             SOURCE_TAG=${{ steps.vars.outputs.tag }}

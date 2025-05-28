@@ -1,6 +1,8 @@
-# Dockerfile
+# Dockerfile prod fpm
 FROM php:8.4-fpm
 
+# Docker Hub не передаёт автоматически эти значения в build-arg — 
+# ты должен явно указать их в настройках “Build settings” → “Build args”.
 ARG SOURCE_COMMIT
 ARG SOURCE_TAG
 LABEL org.opencontainers.image.revision=$SOURCE_COMMIT

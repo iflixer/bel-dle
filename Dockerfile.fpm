@@ -1,6 +1,11 @@
 # Dockerfile
 FROM php:8.4-fpm
 
+ARG SOURCE_COMMIT
+ARG SOURCE_TAG
+LABEL org.opencontainers.image.revision=$SOURCE_COMMIT
+LABEL org.opencontainers.image.version=$SOURCE_TAG
+
 # Устанавливаем расширения
 RUN apt-get update && apt-get install -y \
     libzip-dev zip unzip curl libonig-dev libpng-dev libjpeg-dev libfreetype6-dev \
@@ -9,4 +14,10 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install gd \
     && docker-php-ext-install exif 
 
+COPY ./www /var/www/html
+
 WORKDIR /var/www/html
+
+RUN echo "$(date +%s)" > /etc/container_build_timestamp
+RUN echo $SOURCE_COMMIT >> /etc/container_SOURCE_COMMIT
+RUN echo $SOURCE_TAG >> /etc/container_SOURCE_TAG

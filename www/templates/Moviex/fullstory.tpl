@@ -52,7 +52,7 @@
 						<div class="col-12 col-xl-3 col-md-3">
 							<div class="details__film-cover">
 								<div class="fposter">
-									<img src="{image-1}" loading="lazy" alt="{title}">
+									<img src="[xfvalue_poster_url]" loading="lazy" alt="{title}">
 									<div class="label-b">1 сезон 8 серия</div>
 								</div>
 								[not-group=5]
@@ -72,7 +72,7 @@
 									<li class="stats"><img src="{THEME}/img/icons/info2.svg" loading="lazy">{comments-num}</li>
 								</ul>
 								<ul class="details__film-list">
-									<li><span>Год:</span> <a href="#">2023</a></li>
+									<li><span>Год:</span> <a href="#">[xfvalue_year]</a></li>
 									<li><span>Страна:</span> <a href="#">США</a></li>
 									<li><span>Режиссер:</span> Адам Вингард</li>
 									<li><span>Сценарист:</span> Джош Шеффер</li>
@@ -102,7 +102,9 @@
 					</div>
 					[complaint]<div class="repport">Не работает?</div>[/complaint]	
 					<div class="tabs-block__content d-none video-responsive">
-						<iframe data-src="https://www.youtube.com/embed/LFswH2TrAg0" width="100%" height="350" frameborder="0" scrolling="no" allowfullscreen></iframe>
+						<!-- <iframe data-src="https://www.youtube.com/embed/LFswH2TrAg0" width="100%" height="350" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
+					<iframe src="//cdn0.cdnhubstream.pro/show/kinopoisk/[xfvalue_kinopoisk_id]" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+					
 					</div>
 					<div class="tabs-block__content d-none video-responsive">
 						<iframe data-src="https://www.youtube.com/embed/0JozMHDUoi4" width="100%" height="350" frameborder="0" scrolling="no" allowfullscreen></iframe>

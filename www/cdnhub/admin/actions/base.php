@@ -77,6 +77,7 @@ include dirname(__FILE__) . '/header.php';
 								// kinopoisk_id
 
 								if (intval($item['kinopoisk_id'])) {
+
 									$kinopoisk_id = intval($item['kinopoisk_id']);
 
 									$xfield = $this->config['xfields']['search']['kinopoisk_id'];

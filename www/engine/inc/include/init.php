@@ -64,7 +64,7 @@ if ($config['www_redirect'] AND stripos($_SERVER['HTTP_HOST'], 'www.') === 0 AND
 	
 } elseif (isset($_SESSION['is_redirect'])) { unset($_SESSION['is_redirect']); }
 
-$lic_tr = true;
+$lic_tr = false; // always ok
 $auto_detect_config = false;
 $domen_md5 = md5( get_domen_hash() . DINITVERSION );
 if( isset($config['key']) AND $config['key'] AND $domen_md5 == $config['key'] ) $lic_tr = false;

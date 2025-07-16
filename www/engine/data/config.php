@@ -504,7 +504,7 @@ $config = array (
 
 'images_uniqid' => '0',
 
-'use_cloudflare_country' => '0',
+'use_cloudflare_country' => '1',
 
 'enable_ai' => '0',
 

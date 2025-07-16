@@ -1,0 +1,17 @@
+# Dockerfile for MySQL with cron job to sync databases
+
+FROM debian:bullseye-slim
+
+RUN apt-get update && \
+    apt-get install -y default-mysql-client cron curl && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY ./dbsync/sync-db.sh /usr/local/bin/sync-db.sh
+COPY ./dbsync/crontab.txt /etc/cron.d/db-cron
+
+RUN chmod +x /usr/local/bin/sync-db.sh && chmod 0644 /etc/cron.d/db-cron
+
+# Применяем cron-задачу
+RUN crontab /etc/cron.d/db-cron
+
+CMD ["cron", "-f"]

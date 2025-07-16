@@ -1,0 +1,24 @@
+FROM php:8.2-cli
+
+# Установим cron и другие утилиты
+RUN apt-get update && apt-get install -y \
+    cron \
+    nano \
+    curl \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Скопируем crontab файл в контейнер
+COPY ./config/crontab /etc/cron.d/my-cron
+
+# Назначим права
+RUN chmod 0644 /etc/cron.d/my-cron
+
+# Зарегистрируем crontab
+RUN crontab /etc/cron.d/my-cron
+
+# Создадим лог-файл
+RUN touch /var/log/cron.log
+
+# Запуск cron в фоне + tail логов, чтобы контейнер не завершался
+CMD cron && tail -f /var/log/cron.log

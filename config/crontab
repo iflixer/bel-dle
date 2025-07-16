@@ -1,0 +1,1 @@
+*/5 * * * * /usr/bin/wget --no-check-certificate -t 1 -O - 'http://nginx/cdnhub.php?key=7a67b8d987fbbc750cb1b84f55793aa7'  >> /var/log/cron.log 2>&1

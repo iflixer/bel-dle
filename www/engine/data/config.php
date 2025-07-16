@@ -6,7 +6,7 @@ $config = array (
 
 'home_title' => 'DataLife Engine',
 
-'http_home_url' => 'https://nginx.bel-dle.orb.local/',
+'http_home_url' => 'https://site1.futemaxlive.com/',
 
 'www_redirect' => '1',
 
@@ -28,9 +28,11 @@ $config = array (
 
 'translit_url' => '1',
 
+'own_404' => '1',
+
 'langs' => 'Russian',
 
-'skin' => 'Moviex',
+'skin' => 'piratka',
 
 'jquery_version' => '3',
 
@@ -39,6 +41,8 @@ $config = array (
 'admin_path' => 'admin.php',
 
 'display_php_errors' => '1',
+
+'disable_frame' => '1',
 
 'own_ip' => '',
 
@@ -208,6 +212,8 @@ $config = array (
 
 'allow_comments_wysiwyg' => '1',
 
+'allow_cache' => '1',
+
 'cache_type' => '0',
 
 'memcache_server' => 'localhost:11211',
@@ -234,8 +240,6 @@ $config = array (
 
 'related_news' => '1',
 
-'no_date' => '1',
-
 'allow_fixed' => '1',
 
 'speedbar' => '1',
@@ -246,7 +250,7 @@ $config = array (
 
 'allow_topnews' => '1',
 
-'allow_read_count' => '1',
+'allow_read_count' => '0',
 
 'read_count_time' => '5',
 
@@ -293,8 +297,6 @@ $config = array (
 'file_chunk_size' => '1.5',
 
 'files_antileech' => '1',
-
-'files_count' => '1',
 
 'admin_mail' => 'ivan.drago@gmail.com',
 
@@ -406,15 +408,9 @@ $config = array (
 
 'mobile_news' => '10',
 
-'allow_rss' => '1',
-
 'rss_mtype' => '0',
 
 'rss_number' => '10',
-
-'allow_yandex_dzen' => '1',
-
-'allow_yandex_turbo' => '1',
 
 'rss_params' => 'xmlns:content=&quot;http://purl.org/rss/1.0/modules/content/&quot; xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot; xmlns:media=&quot;http://search.yahoo.com/mrss/&quot; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;',
 
@@ -442,15 +438,17 @@ $config = array (
 
 'js_min' => '0',
 
+'no_date' => '0',
+
 'allow_cmod' => '0',
 
 'cache_count' => '0',
 
 'comments_ajax' => '0',
 
-'allow_cache' => '0',
-
 'allow_gzip' => '0',
+
+'files_count' => '0',
 
 'use_admin_mail' => '0',
 
@@ -464,6 +462,8 @@ $config = array (
 
 'allow_smart_video' => '0',
 
+'allow_rss' => '0',
+
 'comments_lazyload' => '0',
 
 'allow_social' => '0',
@@ -476,13 +476,13 @@ $config = array (
 
 'bbimages_in_wysiwyg' => '0',
 
-'own_404' => '0',
-
-'disable_frame' => '0',
-
 'allow_admin_social' => '0',
 
 'decline_date' => '0',
+
+'allow_yandex_dzen' => '0',
+
+'allow_yandex_turbo' => '0',
 
 'last_viewed' => '0',
 
@@ -534,7 +534,7 @@ $config = array (
 
 'files_access' => 'private',
 
-'cache_id' => '1',
+'cache_id' => 'exn7h',
 
 'sitemap_set_images' => '1',
 

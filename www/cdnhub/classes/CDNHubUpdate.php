@@ -53,6 +53,7 @@ class CDNHubUpdate
 		if (!$this->config['on'])
 			return false;
 
+
 		if (!$this->config['update']['movies']['on'] && !$this->config['update']['serials']['on'])
 			return false;
 
@@ -224,6 +225,7 @@ class CDNHubUpdate
 			if ($entry['update_id'] > $last_update_id)
 				$need_update[] = $entry;
 		}
+
 
 		if (!$need_update)
 			return false;

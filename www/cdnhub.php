@@ -28,8 +28,10 @@ require_once ENGINE_DIR . '/modules/functions.php';
 
 require_once ROOT_DIR . '/cdnhub/init.php';
 
-if (!$cdnhub->config['cronkey'] || $_GET['key'] != $cdnhub->config['cronkey'])
+if (!$cdnhub->config['cronkey'] || $_GET['key'] != $cdnhub->config['cronkey']) {
+	echo "Access denied!";
 	exit;
+}
 
 if (intval($cdnhub->config['update']['type']))
 	$cdnhub->update();

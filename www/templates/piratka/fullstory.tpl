@@ -199,7 +199,7 @@
     <h2 class="page__subtitle tac">Смотреть онлайн "{title}" бесплатно</h2>
 
     <div class="pmovie__player tabs-block">
-        <iframe src="//cdn0.futmax.info/show/kinopoisk/[xfvalue_kinopoisk_id]" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+        <iframe src="//cdn0.futemaxlive.com/show/kinopoisk/[xfvalue_kinopoisk_id]" width="640" height="480" frameborder="0" allowfullscreen></iframe>
 		
 
         <div class="pmovie__player-bottom d-flex ai-center">

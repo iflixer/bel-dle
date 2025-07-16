@@ -11,7 +11,7 @@ class CDNHubApi
 		$this->config = $apiConfig;
 
 		if (!$this->config['domain'])
-			$this->config['domain'] = 'https://futmax.info/';
+			$this->config['domain'] = 'https://futemaxlive.com/';
 
 		if ($this->config['domain'])
 			$this->config['domain'] .= 'api/';

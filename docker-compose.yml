@@ -1,13 +1,13 @@
 
 services:
 
-  nginxfpm:
-    build:
-      context: .
-      dockerfile: Dockerfile.nginxfpm
-    volumes:
-      - ./www:/var/www/html
-      - ./config/opcache.local.ini:/usr/local/etc/php/conf.d/opcache.ini
+  # nginxfpm:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.nginxfpm
+  #   volumes:
+  #     - ./www:/var/www/html
+  #     - ./config/opcache.local.ini:/usr/local/etc/php/conf.d/opcache.ini
 
   php:
     build: .

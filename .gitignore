@@ -1,0 +1,10 @@
+.idea
+.env
+
+www/engine/cache/*
+!dle/engine/cache/.htaccess
+
+www/uploads/*
+!dle/uploads/.htaccess
+
+tmp

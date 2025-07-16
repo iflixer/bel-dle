@@ -32,7 +32,7 @@ $config = array (
 
 'langs' => 'Russian',
 
-'skin' => 'piratka',
+'skin' => 'Moviex',
 
 'jquery_version' => '3',
 

@@ -36,12 +36,12 @@
 						[/rating-type-4]
 						
 						<div class="details__imdb">
-							<span>8.9</span>
-							<span>34679</span>
+							<span>[xfvalue_rating_imdb]</span>
+							<span>[xfvalue_rating_imdb_num]</span>
 						</div>
 						<div class="details__kp">
-							<span>7.4</span>
-							<span>24576</span>
+							<span>[xfvalue_rating_kinopoisk]</span>
+							<span>[xfvalue_rating_kinopoisk_num]</span>
 						</div>
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 						<div class="col-12 col-xl-3 col-md-3">
 							<div class="details__film-cover">
 								<div class="fposter">
-									<img src="[xfvalue_poster_url]" loading="lazy" alt="{title}">
+									<img src="[xfvalue_poster]" loading="lazy" alt="{title}">
 									<div class="label-b">1 сезон 8 серия</div>
 								</div>
 								[not-group=5]
@@ -66,18 +66,20 @@
 						<div class="col-12 col-xl-9 col-md-9">
 							<div class="details__film-content">
 								<ul class="details__film-info">
-									<li class="quality"><a href="#">HD 720</a></li>
+									<li class="quality"><a href="#">[xfvalue_quality]</a></li>
 									<li class="quality">0+</li>
 									<li class="stats"><img src="{THEME}/img/icons/info1.svg" loading="lazy">{views}</li>
 									<li class="stats"><img src="{THEME}/img/icons/info2.svg" loading="lazy">{comments-num}</li>
 								</ul>
 								<ul class="details__film-list">
 									<li><span>Год:</span> <a href="#">[xfvalue_year]</a></li>
-									<li><span>Страна:</span> <a href="#">США</a></li>
+									<li><span>Жанр:</span> [xfvalue_genre]</li>
+									<li><span>Оригинальное название:</span> [xfvalue_name_foreign]</li>
+									<li><span>Страна:</span> [xfvalue_country]</li>
 									<li><span>Режиссер:</span> Адам Вингард</li>
 									<li><span>Сценарист:</span> Джош Шеффер</li>
 									<li>
-									<span>Актеры:</span>  <a href="#">Александр Скарсагрд</a>, <a href="#">Милли Бобби Браун</a>, 
+									<span>Актеры:</span>  НЕТ!!! <a href="#">Александр Скарсагрд</a>, <a href="#">Милли Бобби Браун</a>, 
 									<a href="#">Ребекка Холл</a>, <a href="#">Брайан Тайри Генри</a>, <a href="#">Сюн Огури</a>, <a href="#">Эйса Гонсалес</a> 
 									</li>
 									<li><span>Перевод:</span>  Дубляж </li>

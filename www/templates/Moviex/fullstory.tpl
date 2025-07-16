@@ -105,7 +105,7 @@
 					[complaint]<div class="repport">Не работает?</div>[/complaint]	
 					<div class="tabs-block__content d-none video-responsive">
 						<!-- <iframe data-src="https://www.youtube.com/embed/LFswH2TrAg0" width="100%" height="350" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
-					<iframe src="//cdn0.cdnhubstream.pro/show/kinopoisk/[xfvalue_kinopoisk_id]" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+					<iframe src="//cdn0.futmax.info/show/kinopoisk/[xfvalue_kinopoisk_id]" width="640" height="480" frameborder="0" allowfullscreen></iframe>
 					
 					</div>
 					<div class="tabs-block__content d-none video-responsive">

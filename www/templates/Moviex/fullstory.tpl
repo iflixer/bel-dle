@@ -66,28 +66,30 @@
 						<div class="col-12 col-xl-9 col-md-9">
 							<div class="details__film-content">
 								<ul class="details__film-info">
-									<li class="quality"><a href="#">[xfvalue_quality]</a></li>
-									<li class="quality">0+</li>
+									<li class="quality">качество:<a href="#">[xfvalue_quality_custom]</a></li>
+									<li class="quality">возраст:<a href="#">[xfvalue_age_rating]+</a></li>
 									<li class="stats"><img src="{THEME}/img/icons/info1.svg" loading="lazy">{views}</li>
 									<li class="stats"><img src="{THEME}/img/icons/info2.svg" loading="lazy">{comments-num}</li>
 								</ul>
 								<ul class="details__film-list">
+									<li><span>Последний сезон:</span> [xfvalue_season_pretty]</li>
+									<li><span>Последняя серия:</span> [xfvalue_episode_pretty]</li>
+									<li><span>imdb_id:</span> [xfvalue_imdb_id]</li>
+									<li><span>kinopoisk_id:</span> [xfvalue_kinopoisk_id]</li>
 									<li><span>Год:</span> <a href="#">[xfvalue_year]</a></li>
-									<li><span>Жанр:</span> [xfvalue_genre]</li>
+									<li><span>Жанр:</span> [xfvalue_genres]</li>
 									<li><span>Оригинальное название:</span> [xfvalue_name_foreign]</li>
 									<li><span>Страна:</span> [xfvalue_country]</li>
-									<li><span>Режиссер:</span> Адам Вингард</li>
-									<li><span>Сценарист:</span> Джош Шеффер</li>
+									<li><span>Режиссер:</span> </li>
+									<li><span>Сценарист:</span> </li>
 									<li>
-									<span>Актеры:</span>  НЕТ!!! <a href="#">Александр Скарсагрд</a>, <a href="#">Милли Бобби Браун</a>, 
-									<a href="#">Ребекка Холл</a>, <a href="#">Брайан Тайри Генри</a>, <a href="#">Сюн Огури</a>, <a href="#">Эйса Гонсалес</a> 
-									</li>
-									<li><span>Перевод:</span>  Дубляж </li>
-									<li><span>Продолжительность:</span> 181 мин.</li>
-									<li><span>Дата выхода:</span> 10 августа 2023</li>
+									<span>Актеры:</span></li>
+									<li><span>Переводы:</span>  [xfvalue_translations] </li>
+									<li><span>Продолжительность:</span> </li>
+									<li><span>Дата выхода:</span> </li>
 								</ul>
 								<div class="details__film-text">
-									{full-story}
+									[xfvalue_description]
 								</div>
 							</div>
 						</div>
@@ -103,14 +105,15 @@
 						<span>Трейлер</span>
 					</div>
 					[complaint]<div class="repport">Не работает?</div>[/complaint]	
-					<div class="tabs-block__content d-none video-responsive">
+					<div class="tabs-block__content d-none video-responsive" style="padding-top:0">
 						<!-- <iframe data-src="https://www.youtube.com/embed/LFswH2TrAg0" width="100%" height="350" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
-					<iframe src="//cdn0.futemaxlive.com/show/kinopoisk/[xfvalue_kinopoisk_id]" width="640" height="480" frameborder="0" allowfullscreen></iframe>
+						 [cdnhub-found]{cdnhub-player}[/cdnhub-found]
+					<!-- <iframe src="//cdn0.futemaxlive.com/show/kinopoisk/[xfvalue_kinopoisk_id]" width="640" height="480" frameborder="0" allowfullscreen></iframe> -->
 					
 					</div>
-					<div class="tabs-block__content d-none video-responsive">
+					<!-- <div class="tabs-block__content d-none video-responsive">
 						<iframe data-src="https://www.youtube.com/embed/0JozMHDUoi4" width="100%" height="350" frameborder="0" scrolling="no" allowfullscreen></iframe>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
